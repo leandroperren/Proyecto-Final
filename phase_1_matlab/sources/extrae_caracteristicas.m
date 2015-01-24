@@ -62,6 +62,13 @@ while ~feof(Dat)
         
         %calculo el factor cresta
         crest(idx) = crestFactor(frame);
+		
+		%cociente energia/zcr
+        if (zcr(idx)==0)
+            enezcr(idx) = 0;
+        else
+            enezcr(idx) = ene(idx)/zcr(idx);
+        end
         
         %incremento el indice de los vectores
         idx = idx+1;
