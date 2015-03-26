@@ -31,13 +31,13 @@ P=[ene'; zcr'; rms'; cres'; enezcr'];
 T=salida';
 
 %Genero la red neuronal.
-net = newff([0 1; 0 1; 0 1; 0 1; 0 1],[5 1],{'logsig' 'logsig'});
+net = newff(minmax(P),[4 1],{'logsig' 'logsig'});
 
 %Defino parámetros para el entrenamiento.
 net.trainParam.epochs = 2000;
 
 %Entreno la red neuronal (Entreno con los 150 primeros y el resto para pruebas).
-net = train(net,P(:,1:150),T(1:150));
+[net error]= train(net,P(:,1:150),T(1:150));
 
 %Prueba la red con datos no usados en el entrenamiento.
  Y = sim(net,P(:,150:227));
@@ -51,3 +51,36 @@ net = train(net,P(:,1:150),T(1:150));
  stem(T(150:227));
  xlabel('Nro frame');
  ylabel('Resultado deseado');
+
+%calculo los porcentajes de aciertos
+cantidad = length(Y);
+acierto = 0;
+falsos_positivos = 0;
+falsos_negativos = 0;
+T=T(150:227);
+for i=1:1:length(Y)
+    %mapeo las salidas a 0 y 1 (función signo).
+    if (Y(i)<= 0.5)
+        Y(i) = 0;
+    else
+        Y(i) = 1;
+    end
+    %calculo los falsos positivos
+    if ((Y(i) == 1) && (T(i) == 0))
+        falsos_positivos = falsos_positivos +1;
+    end
+    %calculo los falsos negativos
+    if ((Y(i) == 0) && (T(i) == 1))
+        falsos_negativos = falsos_negativos +1;
+    end
+    %calculo la cantidad de aciertos
+    if (Y(i)==T(i))
+        acierto=acierto+1;
+    end
+end
+disp('Aciertos:');
+(acierto/cantidad)*100
+disp('Falsos positivos:');
+(falsos_positivos/cantidad)*100
+disp('Falsos negativos:');
+(falsos_negativos/cantidad)*100
