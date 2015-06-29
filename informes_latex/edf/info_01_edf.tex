@@ -1,0 +1,321 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{calc}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{
+a4paper,
+layout=a4paper,
+left=2.5cm,
+right=2cm,
+bottom=1.5cm,
+top=2.5cm }
+\renewcommand{\baselinestretch}{1.2}
+
+\setcounter{chapter}{1}
+
+\usepackage{color}
+\definecolor{light-grey}{gray}{0.3}
+\usepackage{xcolor,colortbl}
+\usepackage{mathrsfs} 
+
+\pagestyle{fancy}
+% Header
+\lhead{\textsc{\footnotesize Informe de Avance}}
+\rhead{\textit{\footnotesize Resultados con Señales EDF}}
+% Footer
+\lfoot{\footnotesize \textit{Meurzet, Matías - Perren, Leandro}}
+\cfoot{}
+\rfoot{\footnotesize \thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\usepackage{cite} % para contraer referencias
+\usepackage{enumerate} % enumerados
+
+
+\begin{document}
+
+\title{{\color{light-grey} INFORME DE AVANCE}\\ \Huge{\textbf{Resultados con Señales EDF}}}
+\author{
+Matías Meurzet$^{1}$, Leandro Perren$^{2}$\\ \\
+\small{Ingeniería Informática, Universidad Nacional del Litoral}\\
+\small{Santa Fe de la Vera Cruz, 3000, Santa Fe, Argentina}\\
+\small{\texttt{$^{1}$matiasmeurzet@gmail.com, $^{2}$leandroperren@gmail.com}}
+}
+\date{\small{\today}}
+
+\maketitle
+
+
+% primera pagina con el indice, aunque sea pequeño
+\tableofcontents
+\thispagestyle{empty}
+\listoffigures
+\thispagestyle{empty}
+\listoftables
+\thispagestyle{empty}
+%\newpage
+
+
+% parte 1 - introduccion
+\chapter*{Introducción}
+\addcontentsline{toc}{chapter}{Introducción} % esto añade el capitulo en el índice
+\thispagestyle{fancy}
+
+El presente informe, muestra un análisis comparativo entre distintas características, tanto temporales como frecuenciales. En éste caso, las señales utilizadas fueron provistas por un profesional de la salud, extraídas desde un estudio particular, llamado \textit{``Estudio del Sueño''}. Éstas señales capturadas, se presentan en un formato particular, conocido como \textbf{European Data Format} (\textbf{EDF} de aquí en adelante). Las mismas cuentan con una gran cantidad de información, proveniente de distintas fuentes, como por ejemplo, pulso cardíaco, movimiento ocular, respiración, ronquido, entre otras.\\
+
+Las características extraídas se comparan entre distintos episodios previamente seleccionados como ronquidos, agrupando los resultados obtenidos por sexo. Con éstos resultados se tomarán las decisiones necesarias para determinar cuales características son relevantes para éste estudio, seleccionando aquellas que sean representativas de los ronquidos y que se diferencien de ruidos, entendiéndose por éstos ultimos todo tipo de señal que no sea del interés bajo estudio.\\
+
+Con todas las características obtenidas se conformará un Base de Datos, con la que se entrenarán distintos clasificadores, que en principio podrían ser \textbf{Redes Neuronales} (o NN, del inglés \textit{Neural Networks}), permitiendo distinguir entre distintas clases o tipos de Ronquido. \\
+
+De ésta manera, se obtendrá un punto de partida para trabajar luego con señales de audio caseras, obtenidas desde un dispositivo móvil, como por ejemplo un \textit{smartphone} o \textit{tablet}.\\
+
+Por último, con respecto a las características frecuenciales, las señales empleadas tienen muy baja frecuencia de muestreo y por lo tanto la resolución frecuencial no es buena.\\
+
+A continuación se detallará la estructura básica para señales EDF, y más tarde los experimentos realizados y los resultados en base a los objetivos previamente mencionados.\\
+
+
+\section{Estructura de Señales EDF}
+
+El Formato de Datos Europeo (o EDF, del inglés \textbf{European Data Format}) es un formato simple y flexible para intercambiar y almacenar señales biológicas y físicas multi-canal.\\
+
+Un archivo de datos contiene una grabación poligráfica digitalizada ininterrumpida. El archivo de datos consiste de una \textbf{cabecera} de la grabación, seguida por los \textbf{datos} grabados. La cabecera es de longitud variable e identifica al paciente y especifica además las características técnicas de las señales grabadas. Por otro lado, los datos grabados contienen consecutivamente épocas de duración fija de cada grabación poligráfica.\\
+
+En éste caso de estudio, las señales provienen de estudios \textbf{Polisomnográficos} (del griego \textit{poly}, ``muchos''; \textit{somno}, ``sueño''; y \textit{graphy},``escritura''), la cual es una prueba de múltiples parámetros usada en el \textit{estudio del sueño}. Entre los parámetros monitoreados, se encuentran \textit{electroencefalografía} (\textbf{EEG}), \textit{electrooculografía} (\textbf{EOG}), \textit{electromiografía} (\textbf{EMG}), \textit{electrocardiografía}, \textit{oximetría de pulso}, \textit{esfuerzo respiratorio}, \textit{$CO_{2}$ trascutáneo} y registro de \textit{sonidos para evaluar ronquidos}.\\
+
+A continuación se presentan las tablas con los contenidos de la cabecera y los datos de los archivos EDF.\\
+
+\begin{table}[H] % cabecera EDF
+\centering
+\footnotesize
+\begin{tabular}{|c|l|}
+	\hline
+    \rowcolor{black}
+	\multicolumn{2}{|c|}{\textbf{\color{white}{HEADER RECORD}}} \\
+	\hline
+	8 ascii 		& versión de éste formato de datos \\
+	80 ascii 		& identificación local de paciente \\
+	80 ascii 		& identificación local de grabación \\
+	8 ascii 		& fecha de inicio de grabación (dd.mm.yy) \\
+	8 ascii 		& tiempo de inicio de grabación (hh.mm.ss) \\
+	8 ascii 		& número de bytes en cabecera de grabación \\
+	44 ascii 		& reservado \\
+	8 ascii 		& número de datos grabados (-1 si es desconocido) \\
+	8 ascii 		& duración de un dato grabado, en segundos \\
+	4 ascii 	    & número de señales (ns) en datos grabados \\
+	ns * 16 ascii	& ns * etiqueta (e.g. EEG Fpz-Cz o temp Cuerpo) \\
+	ns * 80 ascii   & ns * transducer type (e.g. AgAgCl electrode) \\
+	ns * 8 ascii 	& ns * dimensión física (e.g. uV o gradosC) \\ 
+	ns * 8 ascii 	& ns * mínimo físico (e.g. -500 or 34) \\
+	ns * 8 ascii 	& ns * máximo físico (e.g. 500 or 40) \\
+	ns * 8 ascii 	& ns * mínimo digital (e.g. -2048) \\
+	ns * 8 ascii 	& ns * máximo digital (e.g. 2047) \\
+	ns * 80 ascii   & ns * pre-filtrado (e.g. HP:0.1Hz LP:75Hz) \\
+	ns * 8 ascii 	& ns * nr de muestras en cada dato grabado \\
+	ns * 32 ascii   & ns * reservado\\
+	\hline	
+\end{tabular}
+\caption{Cabecera archivo EDF}
+\label{tabla:header}
+\end{table}
+
+
+\begin{table}[H] % datos EDF
+\centering
+\footnotesize
+\begin{tabular}{|c|l|}
+	\hline
+    \rowcolor{black}
+	\multicolumn{2}{|c|}{\textbf{\color{white}{DATA RECORD}}} \\
+	\hline
+	nr de muestras[1] * integer		& primer señal in la grabación de datos \\
+	nr de muestras[2] * integer 	& segunda señal \\
+	.. 								& .. \\
+	.. 								& .. \\
+	nr de muestras[ns] * integer 	& última señal \\
+	\hline	
+\end{tabular}
+\caption{Datos archivo EDF}
+\label{tabla:data}
+\end{table}
+
+
+
+\section{Estructura General}
+
+La estructura general, es una combinación de métodos y técnicas de \textit{Procesamiento Digital de Señales} y de \textit{Inteligencia Computacional}.\\
+
+El procedimiento comienza con la lectura de una grabación polisomnográfica, a la cual se le extrae la señal correspondiente a ``Ronquido''. De ésta señal, se realizará una lectura frame a frame, que luego podrán ser detectados como eventos relacionados a ronquidos (SRR, por Sonidos Relacionados a Ronquidos). De cada SRR, se extraerán diferentes características acústicas, para poder ser éstas utilizadas dentro de un clasificador entrenado, etiquetando el frame leído y asignándolo hacia un grupo determinado.\\
+
+Dentro del procedimiento antes descripto, se observan dos (2) etapas esenciales y críticas para el éxito del mismo. En primer lugar, se encuentra la \textbf{Detección de Eventos SRR}, y en segundo lugar, está el \textbf{Clasificador Entrenado}. Los mismos serán aplicados a todos los experimentos actuales y futuros, los cuales serán analizados a continuación.\\
+
+\subsection{Detección de Eventos SRR}
+
+Todos los cálculos y procesamientos necesarios al momento de experimentar con señales EDF, fueron realizados mediante el software matemático \textbf{MatLab}\textsuperscript{\textregistered}, debido a la gran versatilidad y potencialidad que éste ofrece facilitando un prototipado rápido y alta capacidad en la generación de gráficos.\\
+
+Los ronquidos fueron extraídos desde las señales EDF de dos (2) formas diferenciadas. En primer lugar, la extracción fue realizada manualmente, mediante una simple inspección visual de los distintos canales de datos graficados, de los cuales solo son de interés el canal de \textit{ronquido} y el canal de \textit{respiración} (ver Figura \ref{fig:ronquidoFlujo}). Con ambos canales se puede hacer una buena corroboración de los eventos SRR seleccionados, esto es, cuando está presente una señal de excitación en el canal de ronquido y simultáneamente existe otra en el canal de respiración, efectivamente se tratará de un ronquido, que será comprobado con la detección automática.\\
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\columnwidth]{images/ronquido_respiracion.png}
+	\caption[Ronquido y Respiración solapados]{Canal de Ronquido y Flujo Respiratorio solapados}
+	\label{fig:ronquidoFlujo}
+\end{figure}
+
+En la anterior imagen, se pueden observar dos casos bien diferenciados. Por un lado, entre las muestras \textit{200-300, 300-350 o 450-600} (ver Figura \ref{fig:ronquido}) está presente un flujo respiratorio (línea entrecortada del gráfico) y a su vez se presenta actividad en el canal de ronquido (línea contigua), por lo tanto, se puede afirmar que la actividad de éste último canal es un ronquido propiamente dicho, es decir, una Señal Relacionada con Ronquidos (SRR). Por otro lado, entre las muestras \textit{850-1350} (ver Figura \ref{fig:no-ronquido}) hay actividad presente en el canal de flujo, pero en el canal de ronquido la actividad es muy baja y en ocasiones nula. En éste caso se puede aseverar que hay ausencia de ronquido entre las muestras comprendidas, es decir, una Señal no Relacionada con Ronquidos (no-SRR).\\
+
+% imagen con muestras de ronquidos
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\columnwidth]{images/ronquido.png}
+	\caption[Presencia de Ronquido]{Señal Relacionada con Ronquidos (SRR)}
+	\label{fig:ronquido}
+\end{figure}
+
+% imagen con muestras sin ronquidos
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.7\columnwidth]{images/no_ronquido.png}
+	\caption[Ausencia de Ronquido]{Señal no Relacionada con Ronquidos (no-SRR)}
+	\label{fig:no-ronquido}
+\end{figure}
+
+La detección de los posibles eventos SRR, se realiza mediante dos (2) conceptos ampliamente utilizados en el estudio de Señales Digitales, éstos son la Norma 2 de la señal (ver Ecuación \ref{eq:normaDos}), conocida como \textbf{Energía} de la misma (ver Ecuaciones \ref{eq:energiaUno} y \ref{eq:energiaDos}), y por otro lado, la \textit{Tasa de Cruces por Cero} o \textbf{ZCR} (del inglés, Zero Crossing Rate). A continuación se definen ambos conceptos:\\
+
+La norma 2 es definida como:
+\begin{equation}
+    \left \| x \right \|_{2} = \sqrt{ \left({ \displaystyle\sum^N_{n=1} \left | x_{n} \right |^{2} }\right) } \quad \mbox{\hspace{2cm} n = 1, 2, ..., N}
+\label{eq:normaDos}
+\end{equation}
+
+
+la cual está relacionada con la Energía de una señal de la siguiente manera:
+\begin{equation}
+    E(x) = \left \| x \right \|_{2}^2
+\label{eq:energiaUno}
+\end{equation}
+
+por lo tanto, reemplazando \ref{eq:normaDos} en \ref{eq:energiaUno} se obtiene:
+\begin{equation}
+    E(x) = \displaystyle\sum^N_{n=1} \left | x_{n} \right |^{2}
+\label{eq:energiaDos}
+\end{equation}
+
+Por otro lado, la ZCR es definida como:
+\begin{equation}
+    ZCR_{frame} = \frac{1}{N} \sum_{n=1}^{N} \mathscr{F} (\textbf{A})
+\label{eq:zcr}
+\end{equation}
+
+donde el operador funcional $\mathscr{F} (\textbf{A})$ se define de la siguiente manera:
+\begin{equation}
+    \textbf{A} = s_n \cdot s_{n-1}
+\label{eq:}
+\end{equation}
+
+\begin{equation}
+    \mathscr{F} (\textbf{A}) = \left\lbrace
+    \begin{array}{ll}
+    \textup{1 } & \mbox{si } \textbf{A} < 0 \\
+    \textup{0 } & \mbox{e.o.c. (en otro caso)}
+    \end{array}
+    \right.
+\label{eq:}
+\end{equation}
+
+\vspace{1cm}
+
+En el caso particular de la energía, es ampliamente recomendada la utilización de ventanas temporales, ya que intrínsecamente se utiliza una ventana cuadrada para limitar la duración de la señal bajo análisis, de igual tamaño al frame. El problema con la ventana cuadrada, radica en que su equivalencia frecuencial a la convolución con una función \textit{sinc}, generando la aparición de un ``rizado'' en el espectro, el cual es un efecto indeseado \cite{IntroSeniales}.\\
+
+Para evitar el efecto antes mencionado, es que surge la posibilidad de utilizar otro tipo de ventanas, que presenten lóbulos laterales de menor amplitud en su espectro frecuencial. Entre las más comunes y utilizadas, se pueden mencionar las siguientes:
+
+\begin{enumerate}[I)]
+	\item Ventana rectangular:
+        $$ \omega_R[n] = 1 $$
+        
+    \item Ventana de Hanning:
+        $$ \omega_R[n] = \frac{1}{2} - \frac{1}{2}\cos(2\pi n/N) $$
+        
+    \item Ventana de Hamming:
+        $$ \omega_R[n] = \frac{27}{50} - \frac{23}{50}\cos(2\pi n/N) $$
+        
+    \item Ventana de Bartlett:
+        $$ \omega_R[n] = \left\lbrace
+                \begin{array}{ll}
+                    2n/N & \mbox{si } 0 < n \leq N/2 \\
+                    2 - 2n/N & \mbox{si } N/2 < n \leq N
+                \end{array}
+                \right. $$
+    
+    \item Ventana de Blackman:
+        $$ \omega_R[n] = \frac{21}{50} - \frac{1}{2}\cos(2\pi n/N) + \frac{2}{25}\cos(4\pi n/N) $$
+\end{enumerate}
+
+
+A continuación se presentan los gráficos correspondientes de las ventanas presentadas, junto a sus respectivos espectros de frecuencia.\\
+
+\textbf{INSERTAR EL GRAFICO DE LAS VENTANAS CON SU ESPECTRO, PARA DESPUES DETERMINAR CUAL SE ELIGE}\\
+
+
+Se extrajeron manualmente de las señales, una determinada cantidad de ronquidos de diferentes longitudes (en duración temporal) en base a la relación de su energía junto a su tasa de cruces por cero, que hayan superado un umbral (determinado experimentalmente por observación), y observando que en ese mismo período de tiempo la señal esté acompañada de flujo respiratorio.\\
+
+Luego para dichos ronquidos se fueron tomando ventanas de 100ms (10 muestras $\to$ muestreo de 100Hz) solapadas 50\% y se le extrajeron las siguientes características temporales:
+
+\begin{itemize}
+	\item ZCR (Tasa de Cruces por Cero o del inglés Zero Crossing Rate)
+    \item Energía
+    \item RMS (Raíz Cuadrática Media o del inglés Root Mean Square)
+    \item Factor Cresta
+\end{itemize}
+
+Los resultados obtenidos se encuentran graficados a continuación, observando el correspondiente valor de la característica de cada ventana desplazada en el tiempo.\\
+
+
+
+\section{Convenciones}
+
+Con respecto a la cantidad de decimales, se tomarán hasta cuatro (4) digitos después de la coma.
+El criterio para el valor del último dígito será por redondeo (no por truncamiento), para así de ésta manera conservar parte del valor que queda fuera de consideración.\\
+
+
+\begin{verbatim}
+float round4(float input) {
+    float multiplicador = 10.0*10.0*10.0*10.0;
+    return round(entrada*multiplicador + 0.5) / multiplicador;
+}
+\end{verbatim}
+
+
+\subsection{Ejemplo}
+
+\begin{center}
+
+		\textbf{round4(}5,55189745874166178\textbf{)} $\to$ 5,5519 \\
+		\textbf{round4(}0,16244587451598334\textbf{)} $\to$ 0,1624 \\
+
+\end{center}
+
+\vspace{1cm}
+
+\section{Gráfico de Prueba}
+
+\begin{figure}[H] % test de graficos
+\includegraphics[width=\columnwidth]{images/snore_01_w.png}%
+\caption{Señal de Audio para Roncador Simple o SNR}%
+\label{fig:roncador_simple:png}%
+\end{figure}
+
+La imagen anterior ejemplifica un caso de señal para ronquidos simples o SNR.
+
+
+% bibliografía y citas
+\bibliographystyle{acm}
+\bibliography{bibliografia}
+
+\end{document}
