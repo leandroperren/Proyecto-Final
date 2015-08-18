@@ -2,4 +2,9 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Ronquido y Respiraci\'on solapados}}{7}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Presencia de Ronquido}}{8}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Ausencia de Ronquido}}{8}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Se\~nal de Audio para Roncador Simple o SNR}}{11}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Ventana Cuadrada y su Espectro en Frecuencia}}{10}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Ventana de Hanning y su Espectro en Frecuencia}}{10}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Ventana de Hamming y su Espectro en Frecuencia}}{11}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Ventana de Bartlett y su Espectro en Frecuencia}}{11}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Ventana de Blackman y su Espectro en Frecuencia}}{12}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Se\~nal de Audio para Roncador Simple o SNR}}{13}
