@@ -231,19 +231,40 @@ donde el operador funcional $\mathscr{F} (\textbf{A})$ se define de la siguiente
 
 \vspace{1cm}
 
-En el caso particular de la energía, es ampliamente recomendada la utilización de ventanas temporales, ya que intrínsecamente se utiliza una ventana cuadrada para limitar la duración de la señal bajo análisis, de igual tamaño al frame. El problema con la ventana cuadrada, radica en que su equivalencia frecuencial a la convolución con una función \textit{sinc}, generando la aparición de un ``rizado'' en el espectro, el cual es un efecto indeseado \cite{IntroSeniales}.\\
+En el caso particular de la energía, es ampliamente recomendada la utilización de ventanas temporales, ya que intrínsecamente se utiliza una ventana cuadrada para limitar la duración de la señal bajo análisis, de igual tamaño al frame. El problema con la ventana cuadrada, radica en su equivalencia frecuencial como una convolución con una función \textit{sinc}, generando la aparición de un ``rizado'' en el espectro, el cual es un efecto indeseado \cite{IntroSeniales}.\\
 
 Para evitar el efecto antes mencionado, es que surge la posibilidad de utilizar otro tipo de ventanas, que presenten lóbulos laterales de menor amplitud en su espectro frecuencial. Entre las más comunes y utilizadas, se pueden mencionar las siguientes:
 
 \begin{enumerate}[I)]
-	\item Ventana rectangular:
+	\item Ventana Rectangular:
         $$ \omega_R[n] = 1 $$
+        % imagen con ventana rectangular y espectro de frecuencia
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\columnwidth]{images/win_spec_01.png}
+			\caption[Ventana Cuadrada y su Espectro en Frecuencia]{Ventana Cuadrada}
+			\label{fig:win-rec}
+		\end{figure}
         
     \item Ventana de Hanning:
         $$ \omega_R[n] = \frac{1}{2} - \frac{1}{2}\cos(2\pi n/N) $$
-        
+        % imagen con ventana Hanning y espectro de frecuencia
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\columnwidth]{images/win_spec_02.png}
+			\caption[Ventana de Hanning y su Espectro en Frecuencia]{Ventana de Hanning}
+			\label{fig:win-han}
+		\end{figure}
+
     \item Ventana de Hamming:
         $$ \omega_R[n] = \frac{27}{50} - \frac{23}{50}\cos(2\pi n/N) $$
+        % imagen con ventana Hamming y espectro de frecuencia
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\columnwidth]{images/win_spec_03.png}
+			\caption[Ventana de Hamming y su Espectro en Frecuencia]{Ventana de Hamming}
+			\label{fig:win-ham}
+		\end{figure}
         
     \item Ventana de Bartlett:
         $$ \omega_R[n] = \left\lbrace
@@ -252,16 +273,29 @@ Para evitar el efecto antes mencionado, es que surge la posibilidad de utilizar 
                     2 - 2n/N & \mbox{si } N/2 < n \leq N
                 \end{array}
                 \right. $$
+        % imagen con ventana Bartlett y espectro de frecuencia
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\columnwidth]{images/win_spec_04.png}
+			\caption[Ventana de Bartlett y su Espectro en Frecuencia]{Ventana de Bartlett}
+			\label{fig:win-bart}
+		\end{figure}
     
     \item Ventana de Blackman:
         $$ \omega_R[n] = \frac{21}{50} - \frac{1}{2}\cos(2\pi n/N) + \frac{2}{25}\cos(4\pi n/N) $$
+		% imagen con ventana Blackman y espectro de frecuencia
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\columnwidth]{images/win_spec_05.png}
+			\caption[Ventana de Blackman y su Espectro en Frecuencia]{Ventana de Blackman}
+			\label{fig:win-black}
+		\end{figure}
+
 \end{enumerate}
 
+Como se puede apreciar en las imágenes anteriores, cada tipo de ventana presenta ventajas y desventajas para su uso en señales digitales. Por ejemplo, la ventana Rectangular (ver Imagen \ref{fig:win-rec}) tiene el lóbulo central de menor ancho (espectro frecuencial) respecto de las demás ventanas, pero sus lóbulos laterales decaen muy lentamente. Por otro lado, observando, por ejemplo la ventana de Blackman(ver Imagen \ref{fig:win-black}), sus lóbulos laterales decaen con gran rapidez y magnitud (dB), pero su lóbulo central posee un ancho de banda tres veces mayor al de la ventana rectangular.\\
 
-A continuación se presentan los gráficos correspondientes de las ventanas presentadas, junto a sus respectivos espectros de frecuencia.\\
-
-\textbf{INSERTAR EL GRAFICO DE LAS VENTANAS CON SU ESPECTRO, PARA DESPUES DETERMINAR CUAL SE ELIGE}\\
-
+\textbf{\textcolor{red}{De aqui en adelante, no sirve nada (parte vieja)}}\\
 
 Se extrajeron manualmente de las señales, una determinada cantidad de ronquidos de diferentes longitudes (en duración temporal) en base a la relación de su energía junto a su tasa de cruces por cero, que hayan superado un umbral (determinado experimentalmente por observación), y observando que en ese mismo período de tiempo la señal esté acompañada de flujo respiratorio.\\
 
