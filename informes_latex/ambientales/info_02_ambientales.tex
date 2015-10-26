@@ -4,6 +4,9 @@
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,activeacute]{babel}
+\usepackage{float}
+\usepackage[pdftex]{graphicx} % LaTeX
+\DeclareGraphicsExtensions{.bmp,.png,.pdf,.jpg}
 
 \title{Informe de resultados: señales reales}
 \author{Leandro Perren - Matias Meurzet}
@@ -28,4 +31,185 @@ El objetivo es poder evaluar caracteristicas temporales (energia, zcr, rms, fact
 Una vez extraídas las características necesarias se podrá, entrenar y evaluar distintos modelos/clasificadores con la intención de construir una aplicación para dispositivos móviles capaz de detectar episodios de ronquidos y diferenciarlo de otras interferencias (tos, vehículos, voces, música, etc.) que pudieran acoplarse en la grabación del sueño de la persona.
 
 \section{Procedimiento}
+Para realizar las tareas antes mencionadas se procedió primeramente a grabar tanto ronquidos como ruidos por medio de los micrófonos de dispositivos móviles con sistema operativo Android (Tablet y celular) y utilizando la aplicación llamada "`Easy Voice Recorder"'. Estas señales se grabaron con una frecuencia de 16000Hz, luego se utilizó el software Audacity para editar dichas señales extrayendo manualmente episodios de ronquidos como así también ruidos. En el caso de estos últimos se grabaron y editaron manualmente distintos posibles ruidos que podrían presentarse durante una grabación en ambientes normales. Una vez obtenidas estas señales se extrajeron las características temporales (energía, zcr, rms, factor cresta, energía/zcr), tanto de los ronquidos como de los ruidos para poder obtener resultados y estadísticas que nos permitan evaluar las mismas como características representativas. Luego se generó una base de datos de características con las que se entrenarán los clasificadores.
+
+
+\subsection{Análisis de ronquidos}
+Durante el proceso de obtencion de las señales (ronquidos) se llevaron a cabo distintas extracciones, las cuales fueron enumeradas como extraccion 1,2,3,etc, cada una de estas extracciones consiste de una grabación de una persona mientras duerme con el fin de captar en ella los ronquidos que pudieran producirse. 
+Posteriormente cada una de estas extracciones fue analizada manualmente mediante el software Audacity y se extrajeron algunos segmentos de ronquidos presentes en la grabación creando distintos archivos llamados "`ronquido\_16000Hz\_nro"' todos de formato .wav los cuales contienen un episodio de ronquido cada uno. 
+
+\begin{enumerate}
+\item{Datos de la extracción 1}
+Esta primera extracción consiste de una grabación con una frecuencia de muestreo de 16000Hz de una persona de sexo masculino. De la misma se extrajeron 5 episodios los cuales fueron guardados en formato .wav y fueron nombrados como "`ronquido\_16000Hz\_1"', "`ronquido\_16000Hz\_2"', "`ronquido\_16000Hz\_3"', "`ronquido\_16000Hz\_4"' y "`ronquido\_16000Hz\_5"'.
+\item{Datos de la extracción 2}
+Esta segunda extracción consiste de una grabación con una frecuencia de muestreo de 16000Hz de una persona de sexo masculino. De la misma se extrajeron 3 episodios los cuales fueron guardados en formato .wav y fueron nombrados como "`ronquido\_16000Hz\_6"', "`ronquido\_16000Hz\_7"' y "`ronquido\_16000Hz\_8"'.
+\end{enumerate}
+
+\subsection{Análisis de ruidos}
+De igual manera a lo realizado en el caso de los ronquidos para la obtención de ruidos se llevaron a cabo extracciones que consistieron en grabar una serie de sonidos ambientales que no son ronquidos y que comunmente se pueden encontrar en señales grabadas en entornos cotidianos. Se realizaron grabaciones a una persona hablando en una radio, una persona tosiendo y el sonido de un telefono. De estas grabaciones se extrajeron fragmentos de dichos sonidos y se guardaron los mismos con los siguientes nombres, "`ruido\_16000Hz\_habla"' ,"`ruido\_16000Hz\_tos"', "`ruido\_16000Hz\_telefono"'.
+
+\section{Extracción de caracteristicas}
+Estos archivos creados cuyo contenido son ronquidos y otros sonidos fueron utilizados para extraerles características temporales con el fin determinar si las mismas son representativas de los ronquidos y que nos permitan diferenciarlos de otros sonidos (voz, musica, tos, vehiculos, etc).
+Las caracteristicas temporales extraídas en este trabajo son energía, zcr, rms, factor cresta, energía/zcr. Estas características fueron calculadas tomando para cada archivo ventanas deslizantes de 100ms cada una con un solapamiento del 50\%.
+A continuación se detalla la manera en que se calcula cada una de estas carcaterísticas y los resultados obtenidos para cada una de ellas.
+
+\subsection{Energía}
+El cálculo de la energía se realizó de acuerdo a la siguiente fórmula:
+
+\begin{equation}
+e_{n}=\sum_{i=1}^{N}x_{i}^2/N
+\end{equation}
+
+Donde $ \text{e}_{\text{n}}$ representa la energía del frame n correspondiente a una ventana de 100ms, $ \text{x}_{\text{i}}$ representa la amplitud de la muestra i-esima del frame n y N es la cantidad de muestras que tiene el frame en cuestión.\\
+
+Como se puede observar en las figuras 1 y 2 se calculó la energía para los cinco ronquidos de la extracción 1 (ver Figura 1.) y para los 3 de la extracción 2 (ver Figura 2.), correspondientes ambos a una persona de sexo masculino. En la figura 3 se puede observar los gráficos de la energía para las señales de sonidos no deseados, las cuales corresponden a una persona tosiendo, un sonido de teléfono y por último el sonido de personas hablando. En todos estos gráficos se representó la energía para cada frame usando ventanas deslizante de 100ms con solapamiento de 50\%.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_1_energia.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_2_energia.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_3_energia.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_4_energia.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_5_energia.png}
+	\caption[Energia ronquidos]{Energia de los ronquidos de la extracción 1}
+	\label{fig:ronquidoEnergia}
+	\includegraphics[width=0.3\columnwidth]{images/ronquido_6_energia.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_7_energia.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_8_energia.png}
+	\caption[Energia ronquidos]{Energia de los ronquidos de la extracción 2}
+	\label{fig:ronquidoEnergia}
+	\includegraphics[width=0.3\columnwidth]{images/ruido_tos_energia.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_telefono_energia.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_habla_energia.png}
+	\caption[Energia ruidos]{Energia de los ruidos: tos, telfono, habla}
+	\label{fig:ronquidoEnergia}
+\end{figure}
+
+
+
+\subsection{ZCR}
+La tasa de cruces por ceros (zero-crossing rate) es una medida de la cantidad de cambios de signos que sufre una señal, o lo que es igual el numero de veces que la señal toma el valor cero, y por lo tanto nos sirve de medida de la frecuencia que tiene la misma. El calculo del ZCR se realizó usando la siguiente formula:
+ 
+\begin{equation}
+zcr = \sum_{i=2}^{N}x_{i}*x_{i-1}
+\end{equation}
+
+En las figuras 4 y 5 se encuentran graficados los resultados del calculó del ZCR para los cinco ronquidos de la extracción 1 (ver Figura 4.) y para los 3 de la extracción 2 (ver Figura 5.). En la figura 6 se pueden observar los gráficos del ZCR para las señales de sonidos no deseados, las cuales corresponden a una persona tosiendo, un sonido de teléfono y por último el sonido de personas hablando. En todos estos gráficos se representó el ZCR para cada frame usando ventanas deslizante de 100ms con solapamiento de 50\%.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_1_zcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_2_zcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_3_zcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_4_zcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_5_zcr.png}
+	\caption[ZCR ronquidos]{ZCR de los ronquidos de la extracción 1}
+	\label{fig:ronquidoZCR}
+	\includegraphics[width=0.3\columnwidth]{images/ronquido_6_zcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_7_zcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_8_zcr.png}
+	\caption[ZCR ronquidos]{ZCR de los ronquidos de la extracción 2}
+	\label{fig:ronquidoZCR}
+	\includegraphics[width=0.3\columnwidth]{images/ruido_tos_zcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_telefono_zcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_habla_zcr.png}
+	\caption[ZCR ruidos]{ZCR de los ruidos: tos, telfono, habla}
+	\label{fig:ronquidoZCR}
+\end{figure} 
+ 
+\subsection{Root Mean Square}
+El valor Root Mean Square se calcula tomando la raiz cuadrada de la media aritmética de los valores al cuadrado de cada muestra. Nos permite obtener un valor promedio de la señal sin tener en cuenta los efectos del signo de las muestras.
+ 
+\begin{equation}
+rms_{n}=\sqrt{\sum_{i=1}^{N}x_{i}^2/N}
+\end{equation}
+
+Donde $ \text{rms}_{\text{n}}$ representa el RMS del frame n correspondiente a una ventana de 100ms, $ \text{x}_{\text{i}}$ representa la amplitud de la muestra i-esima del frame n y N es la cantidad de muestras que tiene el frame en cuestión.\\
+
+En la figura 7 y 8 se pueden observar los resultados del calculo del RMS para los ronquidos de las extracciones 1 y 2, y en la figura 9 podemos observar lo mismo para los tres ruidos.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_1_rms.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_2_rms.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_3_rms.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_4_rms.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_5_rms.png}
+	\caption[RMS ronquidos]{RMS de los ronquidos de la extracción 1}
+	\label{fig:ronquidoRMS}
+	\includegraphics[width=0.3\columnwidth]{images/ronquido_6_rms.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_7_rms.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_8_rms.png}
+	\caption[RMS ronquidos]{RMS de los ronquidos de la extracción 2}
+	\label{fig:ronquidoRMS}
+	\includegraphics[width=0.3\columnwidth]{images/ruido_tos_rms.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_telefono_rms.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_habla_rms.png}
+	\caption[RMS ruidos]{RMS de los ruidos: tos, telfono, habla}
+	\label{fig:ronquidoRMS}
+\end{figure} 
+
+\subsection{Factor cresta}
+El factor cresta es una medida obtenida haciendo el cociente entre el máximo valor absoluto de una señal dividido por su root mean square, dando un valor mayor en aquellas señales que tienen una serie de valores picos donde las magnitudes en esos valores tienden a ser mucho mayores que en el resto. 
+ 
+\begin{equation}
+cresta_{n}=\max{|x_{n}|}/rms_n
+\end{equation}
+
+Donde $ \text{x_n} $ representa cada muestra del frame n y $ \text{rms_n} $ es el root mean square del frame n.\\
+
+En las figuras 10 y 11 se pueden observar los resultados del calculo del Factor Cresta para los ronquidos de las extracciones 1 y 2, y en la figura 12 podemos observar lo mismo para los tres ruidos. 
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_1_cresta.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_2_cresta.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_3_cresta.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_4_cresta.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_5_cresta.png}
+	\caption[Factor cresta ronquidos]{Factor cresta de los ronquidos de la extracción 1}
+	\label{fig:ronquidoCresta}
+	\includegraphics[width=0.3\columnwidth]{images/ronquido_6_cresta.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_7_cresta.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_8_cresta.png}
+	\caption[Factor cresta ronquidos]{Factor cresta de los ronquidos de la extracción 2}
+	\label{fig:ronquidoCresta}
+	\includegraphics[width=0.3\columnwidth]{images/ruido_tos_cresta.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_telefono_cresta.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_habla_cresta.png}
+	\caption[Factor cresta ruidos]{Factor cresta de los ruidos: tos, telfono, habla}
+	\label{fig:ronquidoCresta}
+\end{figure} 
+
+\subsection{Energia/ZCR}
+Esta medida es el resultado de calcular el cociente entre la energía de un frame y su ZCR. El uso de esta medida es muy comun en el análisis de voz para diferenciar sonidos sordos de sonoros, ya que los sonidos sordos  
+se caracterizan por tener baja energia y un alto ZCR y lo inverso se da en los sonidos sonoros, por lo que este cociente refuerza este efecto.
+\begin{equation}
+EnergiaZCR_{n}=e_{n}/ZCR_n
+\end{equation}
+
+Donde $ \text{e_n} $ y $\text{ZCR_n} $ es la energia y el ZCR del frame n. En las figuras 13 y 14 se pueden observar los resultados del calculo de Energia/ZCR para los ronquidos de las extracciones 1 y 2, y en la figura 15 podemos observar lo mismo para los tres ruidos. 
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_1_enezcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_2_enezcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_3_enezcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_4_enezcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_5_enezcr.png}
+	\caption[Energia/ZCR ronquidos]{Energía/ZCR de los ronquidos de la extracción 1}
+	\label{fig:ronquidoEneZCR}
+	\includegraphics[width=0.3\columnwidth]{images/ronquido_6_enezcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_7_enezcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ronquido_8_enezcr.png}
+	\caption[Energia/ZCR ronquidos]{Energía/ZCR de los ronquidos de la extracción 2}
+	\label{fig:ronquidoEneZCR}
+	\includegraphics[width=0.3\columnwidth]{images/ruido_tos_enezcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_telefono_enezcr.png}
+		\includegraphics[width=0.3\columnwidth]{images/ruido_habla_enezcr.png}
+	\caption[Energia/ZCR ruidos]{Energía/ZCR de los ruidos: tos, telefono, habla}
+	\label{fig:ronquidoEneZCR}
+\end{figure} 
+
+
 \end{document}

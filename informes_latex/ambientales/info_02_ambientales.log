@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.27)  29 JUN 2015 19:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.27)  20 OCT 2015 19:09
 entering extended mode
 **info_02_ambientales.tex
 (C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\ambientales\info_02_ambientales.tex
@@ -95,64 +95,669 @@ Package babel Info: Making < an active character on input line 630.
 Package babel Info: Making > an active character on input line 630.
 Package babel Info: Making ' an active character on input line 657.
 ))
-No file info_02_ambientales.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 11.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count90
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\ambientales\info_02_ambientales.aux
+
+LaTeX Warning: Label `fig:ronquidoEnergia' multiply defined.
+
+
+LaTeX Warning: Label `fig:ronquidoEnergia' multiply defined.
+
+
+LaTeX Warning: Label `fig:ronquidoZCR' multiply defined.
+
+
+LaTeX Warning: Label `fig:ronquidoZCR' multiply defined.
+
+
+LaTeX Warning: Label `fig:ronquidoRMS' multiply defined.
+
+
+LaTeX Warning: Label `fig:ronquidoRMS' multiply defined.
+
+
+LaTeX Warning: Label `fig:ronquidoCresta' multiply defined.
+
+
+LaTeX Warning: Label `fig:ronquidoCresta' multiply defined.
+
+
+LaTeX Warning: Label `fig:ronquidoEneZCR' multiply defined.
+
+
+LaTeX Warning: Label `fig:ronquidoEneZCR' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 14.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 14.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen106
+\scratchbox=\box28
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen107
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
+\everyMPtoPDFconversion=\toks19
+)
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 17.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 14.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 17.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 14.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 17.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 14.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 17.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 17.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 17.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 14.
+(Font)              <6> on input line 17.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\ambientale
-s\info_02_ambientales.aux) ) 
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 53.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 53.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 53.
+
+[2]
+! Undefined control sequence.
+l.63 Donde $ \text
+                  {e}_{\text{n}}$ representa la energía del frame n correspo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.63 Donde $ \text{e}_{\text
+                            {n}}$ representa la energía del frame n correspo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.63 ...spondiente a una ventana de 100ms, $ \text
+                                                  {x}_{\text{i}}$ representa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.63 ... a una ventana de 100ms, $ \text{x}_{\text
+                                                  {i}}$ representa la amplit...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+<images/ronquido_1_energia.png, id=12, 421.575pt x 316.18124pt>
+File: images/ronquido_1_energia.png Graphic file (type png)
+ <use images/ronquido_1_energia.png>
+Package pdftex.def Info: images/ronquido_1_energia.png used on input line 69.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_2_energia.png, id=13, 421.575pt x 316.18124pt>
+File: images/ronquido_2_energia.png Graphic file (type png)
+ <use images/ronquido_2_energia.png>
+Package pdftex.def Info: images/ronquido_2_energia.png used on input line 70.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_3_energia.png, id=14, 421.575pt x 316.18124pt>
+File: images/ronquido_3_energia.png Graphic file (type png)
+ <use images/ronquido_3_energia.png>
+Package pdftex.def Info: images/ronquido_3_energia.png used on input line 71.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_4_energia.png, id=15, 421.575pt x 316.18124pt>
+File: images/ronquido_4_energia.png Graphic file (type png)
+ <use images/ronquido_4_energia.png>
+Package pdftex.def Info: images/ronquido_4_energia.png used on input line 72.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_5_energia.png, id=16, 421.575pt x 316.18124pt>
+File: images/ronquido_5_energia.png Graphic file (type png)
+ <use images/ronquido_5_energia.png>
+Package pdftex.def Info: images/ronquido_5_energia.png used on input line 73.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_6_energia.png, id=17, 421.575pt x 316.18124pt>
+File: images/ronquido_6_energia.png Graphic file (type png)
+ <use images/ronquido_6_energia.png>
+Package pdftex.def Info: images/ronquido_6_energia.png used on input line 76.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_7_energia.png, id=18, 421.575pt x 316.18124pt>
+File: images/ronquido_7_energia.png Graphic file (type png)
+ <use images/ronquido_7_energia.png>
+Package pdftex.def Info: images/ronquido_7_energia.png used on input line 77.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_8_energia.png, id=19, 421.575pt x 316.18124pt>
+File: images/ronquido_8_energia.png Graphic file (type png)
+ <use images/ronquido_8_energia.png>
+Package pdftex.def Info: images/ronquido_8_energia.png used on input line 78.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_tos_energia.png, id=20, 421.575pt x 316.18124pt>
+File: images/ruido_tos_energia.png Graphic file (type png)
+ <use images/ruido_tos_energia.png>
+Package pdftex.def Info: images/ruido_tos_energia.png used on input line 81.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_telefono_energia.png, id=21, 421.575pt x 316.18124pt>
+File: images/ruido_telefono_energia.png Graphic file (type png)
+ <use images/ruido_telefono_energia.png>
+Package pdftex.def Info: images/ruido_telefono_energia.png used on input line 82.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_habla_energia.png, id=22, 421.575pt x 316.18124pt>
+File: images/ruido_habla_energia.png Graphic file (type png)
+ <use images/ruido_habla_energia.png>
+Package pdftex.def Info: images/ruido_habla_energia.png used on input line 83.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+ [3] [4 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_energia.png (PNG copy)> <C
+:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_energia.png (PNG copy)> <C:/Users/Le
+andro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_3_energia.png (PNG copy)> <C:/Users/Leandro/Desk
+top/Proyecto-final/informes_latex/ambientales/images/ronquido_4_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyec
+to-final/informes_latex/ambientales/images/ronquido_5_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/i
+nformes_latex/ambientales/images/ronquido_6_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_la
+tex/ambientales/images/ronquido_7_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambien
+tales/images/ronquido_8_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/imag
+es/ruido_tos_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_te
+lefono_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_en
+ergia.png (PNG copy)>] <images/ronquido_1_zcr.png, id=36, 421.575pt x 316.18124pt>
+File: images/ronquido_1_zcr.png Graphic file (type png)
+ <use images/ronquido_1_zcr.png>
+Package pdftex.def Info: images/ronquido_1_zcr.png used on input line 101.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_2_zcr.png, id=37, 421.575pt x 316.18124pt>
+File: images/ronquido_2_zcr.png Graphic file (type png)
+ <use images/ronquido_2_zcr.png>
+Package pdftex.def Info: images/ronquido_2_zcr.png used on input line 102.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_3_zcr.png, id=38, 421.575pt x 316.18124pt>
+File: images/ronquido_3_zcr.png Graphic file (type png)
+ <use images/ronquido_3_zcr.png>
+Package pdftex.def Info: images/ronquido_3_zcr.png used on input line 103.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_4_zcr.png, id=39, 421.575pt x 316.18124pt>
+File: images/ronquido_4_zcr.png Graphic file (type png)
+ <use images/ronquido_4_zcr.png>
+Package pdftex.def Info: images/ronquido_4_zcr.png used on input line 104.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_5_zcr.png, id=40, 421.575pt x 316.18124pt>
+File: images/ronquido_5_zcr.png Graphic file (type png)
+ <use images/ronquido_5_zcr.png>
+Package pdftex.def Info: images/ronquido_5_zcr.png used on input line 105.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_6_zcr.png, id=41, 421.575pt x 316.18124pt>
+File: images/ronquido_6_zcr.png Graphic file (type png)
+ <use images/ronquido_6_zcr.png>
+Package pdftex.def Info: images/ronquido_6_zcr.png used on input line 108.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_7_zcr.png, id=42, 421.575pt x 316.18124pt>
+File: images/ronquido_7_zcr.png Graphic file (type png)
+ <use images/ronquido_7_zcr.png>
+Package pdftex.def Info: images/ronquido_7_zcr.png used on input line 109.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_8_zcr.png, id=43, 422.32782pt x 316.18124pt>
+File: images/ronquido_8_zcr.png Graphic file (type png)
+ <use images/ronquido_8_zcr.png>
+Package pdftex.def Info: images/ronquido_8_zcr.png used on input line 110.
+(pdftex.def)             Requested size: 103.50105pt x 77.48679pt.
+
+<images/ruido_tos_zcr.png, id=44, 421.575pt x 316.18124pt>
+File: images/ruido_tos_zcr.png Graphic file (type png)
+ <use images/ruido_tos_zcr.png>
+Package pdftex.def Info: images/ruido_tos_zcr.png used on input line 113.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_telefono_zcr.png, id=45, 421.575pt x 316.18124pt>
+File: images/ruido_telefono_zcr.png Graphic file (type png)
+ <use images/ruido_telefono_zcr.png>
+Package pdftex.def Info: images/ruido_telefono_zcr.png used on input line 114.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_habla_zcr.png, id=46, 421.575pt x 316.18124pt>
+File: images/ruido_habla_zcr.png Graphic file (type png)
+ <use images/ruido_habla_zcr.png>
+Package pdftex.def Info: images/ruido_habla_zcr.png used on input line 115.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+ [5 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_zcr.png (PNG copy)> <C:/Users/
+Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_zcr.png (PNG copy)> <C:/Users/Leandro/Deskto
+p/Proyecto-final/informes_latex/ambientales/images/ronquido_3_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-fin
+al/informes_latex/ambientales/images/ronquido_4_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_la
+tex/ambientales/images/ronquido_5_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientale
+s/images/ronquido_6_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronqu
+ido_7_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_8_zcr.png 
+(PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_tos_zcr.png (PNG copy)> <C:
+/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_telefono_zcr.png (PNG copy)> <C:/Users/Lea
+ndro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_zcr.png (PNG copy)>]
+! Undefined control sequence.
+l.127 Donde $ \text
+                   {rms}_{\text{n}}$ representa el RMS del frame n correspon...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.127 Donde $ \text{rms}_{\text
+                               {n}}$ representa el RMS del frame n correspon...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.127 ...pondiente a una ventana de 100ms, $ \text
+                                                  {x}_{\text{i}}$ representa...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.127 ...a una ventana de 100ms, $ \text{x}_{\text
+                                                  {i}}$ representa la amplit...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+<images/ronquido_1_rms.png, id=50, 421.575pt x 316.18124pt>
+File: images/ronquido_1_rms.png Graphic file (type png)
+ <use images/ronquido_1_rms.png>
+Package pdftex.def Info: images/ronquido_1_rms.png used on input line 133.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_2_rms.png, id=51, 421.575pt x 316.18124pt>
+File: images/ronquido_2_rms.png Graphic file (type png)
+ <use images/ronquido_2_rms.png>
+Package pdftex.def Info: images/ronquido_2_rms.png used on input line 134.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_3_rms.png, id=52, 421.575pt x 316.18124pt>
+File: images/ronquido_3_rms.png Graphic file (type png)
+ <use images/ronquido_3_rms.png>
+Package pdftex.def Info: images/ronquido_3_rms.png used on input line 135.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_4_rms.png, id=53, 421.575pt x 316.18124pt>
+File: images/ronquido_4_rms.png Graphic file (type png)
+ <use images/ronquido_4_rms.png>
+Package pdftex.def Info: images/ronquido_4_rms.png used on input line 136.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_5_rms.png, id=54, 421.575pt x 316.18124pt>
+File: images/ronquido_5_rms.png Graphic file (type png)
+ <use images/ronquido_5_rms.png>
+Package pdftex.def Info: images/ronquido_5_rms.png used on input line 137.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_6_rms.png, id=55, 421.575pt x 316.18124pt>
+File: images/ronquido_6_rms.png Graphic file (type png)
+ <use images/ronquido_6_rms.png>
+Package pdftex.def Info: images/ronquido_6_rms.png used on input line 140.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_7_rms.png, id=56, 421.575pt x 316.18124pt>
+File: images/ronquido_7_rms.png Graphic file (type png)
+ <use images/ronquido_7_rms.png>
+Package pdftex.def Info: images/ronquido_7_rms.png used on input line 141.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_8_rms.png, id=57, 421.575pt x 316.18124pt>
+File: images/ronquido_8_rms.png Graphic file (type png)
+ <use images/ronquido_8_rms.png>
+Package pdftex.def Info: images/ronquido_8_rms.png used on input line 142.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_tos_rms.png, id=58, 421.575pt x 316.18124pt>
+File: images/ruido_tos_rms.png Graphic file (type png)
+ <use images/ruido_tos_rms.png>
+Package pdftex.def Info: images/ruido_tos_rms.png used on input line 145.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_telefono_rms.png, id=59, 421.575pt x 316.18124pt>
+File: images/ruido_telefono_rms.png Graphic file (type png)
+ <use images/ruido_telefono_rms.png>
+Package pdftex.def Info: images/ruido_telefono_rms.png used on input line 146.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_habla_rms.png, id=60, 421.575pt x 316.18124pt>
+File: images/ruido_habla_rms.png Graphic file (type png)
+ <use images/ruido_habla_rms.png>
+Package pdftex.def Info: images/ruido_habla_rms.png used on input line 147.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+ [6 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_rms.png (PNG copy)> <C:/Users/
+Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_rms.png (PNG copy)> <C:/Users/Leandro/Deskto
+p/Proyecto-final/informes_latex/ambientales/images/ronquido_3_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-fin
+al/informes_latex/ambientales/images/ronquido_4_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_la
+tex/ambientales/images/ronquido_5_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientale
+s/images/ronquido_6_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronqu
+ido_7_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_8_rms.png 
+(PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_tos_rms.png (PNG copy)> <C:
+/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_telefono_rms.png (PNG copy)> <C:/Users/Lea
+ndro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_rms.png (PNG copy)>]
+! Undefined control sequence.
+l.159 Donde $ \text
+                   {x_n} $ representa cada muestra del frame n y $ \text{rms...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.159 ...esenta cada muestra del frame n y $ \text
+                                                  {rms_n} $ es el root mean ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+<images/ronquido_1_cresta.png, id=64, 421.575pt x 316.18124pt>
+File: images/ronquido_1_cresta.png Graphic file (type png)
+ <use images/ronquido_1_cresta.png>
+Package pdftex.def Info: images/ronquido_1_cresta.png used on input line 165.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_2_cresta.png, id=65, 422.32782pt x 316.18124pt>
+File: images/ronquido_2_cresta.png Graphic file (type png)
+ <use images/ronquido_2_cresta.png>
+Package pdftex.def Info: images/ronquido_2_cresta.png used on input line 166.
+(pdftex.def)             Requested size: 103.50105pt x 77.48679pt.
+
+<images/ronquido_3_cresta.png, id=66, 422.32782pt x 316.18124pt>
+File: images/ronquido_3_cresta.png Graphic file (type png)
+ <use images/ronquido_3_cresta.png>
+Package pdftex.def Info: images/ronquido_3_cresta.png used on input line 167.
+(pdftex.def)             Requested size: 103.50105pt x 77.48679pt.
+
+<images/ronquido_4_cresta.png, id=67, 421.575pt x 316.18124pt>
+File: images/ronquido_4_cresta.png Graphic file (type png)
+ <use images/ronquido_4_cresta.png>
+Package pdftex.def Info: images/ronquido_4_cresta.png used on input line 168.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_5_cresta.png, id=68, 421.575pt x 316.18124pt>
+File: images/ronquido_5_cresta.png Graphic file (type png)
+ <use images/ronquido_5_cresta.png>
+Package pdftex.def Info: images/ronquido_5_cresta.png used on input line 169.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_6_cresta.png, id=69, 421.575pt x 316.18124pt>
+File: images/ronquido_6_cresta.png Graphic file (type png)
+ <use images/ronquido_6_cresta.png>
+Package pdftex.def Info: images/ronquido_6_cresta.png used on input line 172.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_7_cresta.png, id=70, 421.575pt x 316.18124pt>
+File: images/ronquido_7_cresta.png Graphic file (type png)
+ <use images/ronquido_7_cresta.png>
+Package pdftex.def Info: images/ronquido_7_cresta.png used on input line 173.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_8_cresta.png, id=71, 421.575pt x 316.18124pt>
+File: images/ronquido_8_cresta.png Graphic file (type png)
+ <use images/ronquido_8_cresta.png>
+Package pdftex.def Info: images/ronquido_8_cresta.png used on input line 174.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_tos_cresta.png, id=72, 421.575pt x 316.18124pt>
+File: images/ruido_tos_cresta.png Graphic file (type png)
+ <use images/ruido_tos_cresta.png>
+Package pdftex.def Info: images/ruido_tos_cresta.png used on input line 177.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_telefono_cresta.png, id=73, 421.575pt x 316.18124pt>
+File: images/ruido_telefono_cresta.png Graphic file (type png)
+ <use images/ruido_telefono_cresta.png>
+Package pdftex.def Info: images/ruido_telefono_cresta.png used on input line 178.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_habla_cresta.png, id=74, 421.575pt x 316.18124pt>
+File: images/ruido_habla_cresta.png Graphic file (type png)
+ <use images/ruido_habla_cresta.png>
+Package pdftex.def Info: images/ruido_habla_cresta.png used on input line 179.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+ [7]
+! Undefined control sequence.
+l.191 Donde $ \text
+                   {e_n} $ y $\text{ZCR_n} $ es la energia y el ZCR del fram...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \text 
+                      
+l.191 Donde $ \text{e_n} $ y $\text
+                                   {ZCR_n} $ es la energia y el ZCR del fram...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<images/ronquido_1_enezcr.png, id=79, 421.575pt x 316.18124pt>
+File: images/ronquido_1_enezcr.png Graphic file (type png)
+ <use images/ronquido_1_enezcr.png>
+Package pdftex.def Info: images/ronquido_1_enezcr.png used on input line 195.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_2_enezcr.png, id=80, 421.575pt x 316.18124pt>
+File: images/ronquido_2_enezcr.png Graphic file (type png)
+ <use images/ronquido_2_enezcr.png>
+Package pdftex.def Info: images/ronquido_2_enezcr.png used on input line 196.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_3_enezcr.png, id=81, 421.575pt x 316.18124pt>
+File: images/ronquido_3_enezcr.png Graphic file (type png)
+ <use images/ronquido_3_enezcr.png>
+Package pdftex.def Info: images/ronquido_3_enezcr.png used on input line 197.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_4_enezcr.png, id=82, 421.575pt x 316.18124pt>
+File: images/ronquido_4_enezcr.png Graphic file (type png)
+ <use images/ronquido_4_enezcr.png>
+Package pdftex.def Info: images/ronquido_4_enezcr.png used on input line 198.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_5_enezcr.png, id=83, 421.575pt x 316.18124pt>
+File: images/ronquido_5_enezcr.png Graphic file (type png)
+ <use images/ronquido_5_enezcr.png>
+Package pdftex.def Info: images/ronquido_5_enezcr.png used on input line 199.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_6_enezcr.png, id=84, 421.575pt x 316.18124pt>
+File: images/ronquido_6_enezcr.png Graphic file (type png)
+ <use images/ronquido_6_enezcr.png>
+Package pdftex.def Info: images/ronquido_6_enezcr.png used on input line 202.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_7_enezcr.png, id=85, 421.575pt x 316.18124pt>
+File: images/ronquido_7_enezcr.png Graphic file (type png)
+ <use images/ronquido_7_enezcr.png>
+Package pdftex.def Info: images/ronquido_7_enezcr.png used on input line 203.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ronquido_8_enezcr.png, id=86, 421.575pt x 316.18124pt>
+File: images/ronquido_8_enezcr.png Graphic file (type png)
+ <use images/ronquido_8_enezcr.png>
+Package pdftex.def Info: images/ronquido_8_enezcr.png used on input line 204.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_tos_enezcr.png, id=87, 422.32782pt x 316.18124pt>
+File: images/ruido_tos_enezcr.png Graphic file (type png)
+ <use images/ruido_tos_enezcr.png>
+Package pdftex.def Info: images/ruido_tos_enezcr.png used on input line 207.
+(pdftex.def)             Requested size: 103.50105pt x 77.48679pt.
+
+<images/ruido_telefono_enezcr.png, id=88, 421.575pt x 316.18124pt>
+File: images/ruido_telefono_enezcr.png Graphic file (type png)
+ <use images/ruido_telefono_enezcr.png>
+Package pdftex.def Info: images/ruido_telefono_enezcr.png used on input line 208.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+
+<images/ruido_habla_enezcr.png, id=89, 421.575pt x 316.18124pt>
+File: images/ruido_habla_enezcr.png Graphic file (type png)
+ <use images/ruido_habla_enezcr.png>
+Package pdftex.def Info: images/ruido_habla_enezcr.png used on input line 209.
+(pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
+ [8 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_cresta.png (PNG copy)> <C:/Use
+rs/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_cresta.png (PNG copy)> <C:/Users/Leandro/
+Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_3_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Pro
+yecto-final/informes_latex/ambientales/images/ronquido_4_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final
+/informes_latex/ambientales/images/ronquido_5_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_l
+atex/ambientales/images/ronquido_6_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambien
+tales/images/ronquido_7_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/image
+s/ronquido_8_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_tos
+_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_telefono_cresta
+.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_cresta.png (PNG 
+copy)>] [9 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_enezcr.png (PNG copy)> 
+<C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_enezcr.png (PNG copy)> <C:/Users/L
+eandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_3_enezcr.png (PNG copy)> <C:/Users/Leandro/Desk
+top/Proyecto-final/informes_latex/ambientales/images/ronquido_4_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyect
+o-final/informes_latex/ambientales/images/ronquido_5_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/inf
+ormes_latex/ambientales/images/ronquido_6_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex
+/ambientales/images/ronquido_7_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientale
+s/images/ronquido_8_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ru
+ido_tos_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_telefono
+_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_enezcr.pn
+g (PNG copy)>]
+(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\ambientales\info_02_ambientales.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1182 strings out of 493921
- 15004 string characters out of 3144870
- 67372 words of memory out of 3000000
- 4511 multiletter control sequences out of 15000+200000
- 30429 words of font info for 30 fonts, out of 3000000 for 9000
+ 2439 strings out of 493921
+ 36716 string characters out of 3144870
+ 82285 words of memory out of 3000000
+ 5666 multiletter control sequences out of 15000+200000
+ 44213 words of font info for 40 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 24i,6n,27p,391b,206s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb
->
-Output written on info_02_ambientales.pdf (1 page, 106006 bytes).
+ 27i,6n,27p,1049b,227s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips
+/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi7
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb>
+Output written on info_02_ambientales.pdf (9 pages, 382157 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 276 words of extra memory for PDF output out of 10000 (max. 10000000)
 
