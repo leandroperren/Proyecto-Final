@@ -1,19 +1,13 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.27)  20 OCT 2015 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  2 NOV 2015 20:01
 entering extended mode
 **info_02_ambientales.tex
-(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\ambientales\info_02_ambientales.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
-, bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
-ian, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
- kannada, kurmanji, latin, latvian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, ngerman
--x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
-ian, spanish, swedish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usenglishmax, w
-elsh, loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(info_02_ambientales.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -26,8 +20,7 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -62,80 +55,77 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2015/08/03 3.9m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
-Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-spanish\spanish.ldf"
+Language: spanish.ldf 2014/04/24 v5.0n Spanish support from the babel system
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2015/08/03 3.9m Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-\es@datefmt=\count88
 \es@quottoks=\toks14
-\es@quotdepth=\count89
-Package babel Info: Making " an active character on input line 492.
-Package babel Info: Making . an active character on input line 585.
-Package babel Info: Making < an active character on input line 630.
-Package babel Info: Making > an active character on input line 630.
-Package babel Info: Making ' an active character on input line 657.
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+\es@quotdepth=\count88
+Package babel Info: Making " an active character on input line 516.
+Package babel Info: Making . an active character on input line 617.
+Package babel Info: Making < an active character on input line 662.
+Package babel Info: Making > an active character on input line 662.
+Package babel Info: Making ' an active character on input line 680.
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count90
+\c@float@type=\count89
 \float@exts=\toks15
 \float@box=\box26
 \@float@everytoks=\toks16
 \@floatcapt=\box27
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count91
+\Gread@gobject=\count90
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
-)
-(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\ambientales\info_02_ambientales.aux
+) (info_02_ambientales.aux
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+
 
 LaTeX Warning: Label `fig:ronquidoEnergia' multiply defined.
 
@@ -180,38 +170,40 @@ LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 14.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count92
+\scratchcounter=\count91
 \scratchdimen=\dimen106
 \scratchbox=\box28
-\nofMPsegments=\count93
-\nofMParguments=\count94
+\nofMPsegments=\count92
+\nofMParguments=\count93
 \everyMPshowfont=\toks18
-\MPscratchCnt=\count95
+\MPscratchCnt=\count94
 \MPscratchDim=\dimen107
-\MPnumerator=\count96
-\makeMPintoPDFobject=\count97
+\MPnumerator=\count95
+\makeMPintoPDFobject=\count96
 \everyMPtoPDFconversion=\toks19
 )
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 17.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 17.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 17.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMX+lmex on input line 17.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -222,15 +214,14 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 17.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Leandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 53.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 53.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 53.
-
-[2]
+ [2]
 ! Undefined control sequence.
 l.63 Donde $ \text
                   {e}_{\text{n}}$ representa la energía del frame n correspo...
@@ -337,17 +328,11 @@ File: images/ruido_habla_energia.png Graphic file (type png)
  <use images/ruido_habla_energia.png>
 Package pdftex.def Info: images/ruido_habla_energia.png used on input line 83.
 (pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
- [3] [4 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_energia.png (PNG copy)> <C
-:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_energia.png (PNG copy)> <C:/Users/Le
-andro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_3_energia.png (PNG copy)> <C:/Users/Leandro/Desk
-top/Proyecto-final/informes_latex/ambientales/images/ronquido_4_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyec
-to-final/informes_latex/ambientales/images/ronquido_5_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/i
-nformes_latex/ambientales/images/ronquido_6_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_la
-tex/ambientales/images/ronquido_7_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambien
-tales/images/ronquido_8_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/imag
-es/ruido_tos_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_te
-lefono_energia.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_en
-ergia.png (PNG copy)>] <images/ronquido_1_zcr.png, id=36, 421.575pt x 316.18124pt>
+ [3] [4 <./images/ronquido_1_energia.png (PNG copy)> <./images/ronquido_2_energia.png (PNG copy)> <./images/ronquido_3_e
+nergia.png (PNG copy)> <./images/ronquido_4_energia.png (PNG copy)> <./images/ronquido_5_energia.png (PNG copy)> <./imag
+es/ronquido_6_energia.png (PNG copy)> <./images/ronquido_7_energia.png (PNG copy)> <./images/ronquido_8_energia.png (PNG
+ copy)> <./images/ruido_tos_energia.png (PNG copy)> <./images/ruido_telefono_energia.png (PNG copy)> <./images/ruido_hab
+la_energia.png (PNG copy)>] <images/ronquido_1_zcr.png, id=36, 421.575pt x 316.18124pt>
 File: images/ronquido_1_zcr.png Graphic file (type png)
  <use images/ronquido_1_zcr.png>
 Package pdftex.def Info: images/ronquido_1_zcr.png used on input line 101.
@@ -412,16 +397,10 @@ File: images/ruido_habla_zcr.png Graphic file (type png)
  <use images/ruido_habla_zcr.png>
 Package pdftex.def Info: images/ruido_habla_zcr.png used on input line 115.
 (pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
- [5 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_zcr.png (PNG copy)> <C:/Users/
-Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_zcr.png (PNG copy)> <C:/Users/Leandro/Deskto
-p/Proyecto-final/informes_latex/ambientales/images/ronquido_3_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-fin
-al/informes_latex/ambientales/images/ronquido_4_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_la
-tex/ambientales/images/ronquido_5_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientale
-s/images/ronquido_6_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronqu
-ido_7_zcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_8_zcr.png 
-(PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_tos_zcr.png (PNG copy)> <C:
-/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_telefono_zcr.png (PNG copy)> <C:/Users/Lea
-ndro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_zcr.png (PNG copy)>]
+ [5 <./images/ronquido_1_zcr.png (PNG copy)> <./images/ronquido_2_zcr.png (PNG copy)> <./images/ronquido_3_zcr.png (PNG 
+copy)> <./images/ronquido_4_zcr.png (PNG copy)> <./images/ronquido_5_zcr.png (PNG copy)> <./images/ronquido_6_zcr.png (P
+NG copy)> <./images/ronquido_7_zcr.png (PNG copy)> <./images/ronquido_8_zcr.png (PNG copy)> <./images/ruido_tos_zcr.png 
+(PNG copy)> <./images/ruido_telefono_zcr.png (PNG copy)> <./images/ruido_habla_zcr.png (PNG copy)>]
 ! Undefined control sequence.
 l.127 Donde $ \text
                    {rms}_{\text{n}}$ representa el RMS del frame n correspon...
@@ -528,16 +507,10 @@ File: images/ruido_habla_rms.png Graphic file (type png)
  <use images/ruido_habla_rms.png>
 Package pdftex.def Info: images/ruido_habla_rms.png used on input line 147.
 (pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
- [6 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_rms.png (PNG copy)> <C:/Users/
-Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_rms.png (PNG copy)> <C:/Users/Leandro/Deskto
-p/Proyecto-final/informes_latex/ambientales/images/ronquido_3_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-fin
-al/informes_latex/ambientales/images/ronquido_4_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_la
-tex/ambientales/images/ronquido_5_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientale
-s/images/ronquido_6_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronqu
-ido_7_rms.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_8_rms.png 
-(PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_tos_rms.png (PNG copy)> <C:
-/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_telefono_rms.png (PNG copy)> <C:/Users/Lea
-ndro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_rms.png (PNG copy)>]
+ [6 <./images/ronquido_1_rms.png (PNG copy)> <./images/ronquido_2_rms.png (PNG copy)> <./images/ronquido_3_rms.png (PNG 
+copy)> <./images/ronquido_4_rms.png (PNG copy)> <./images/ronquido_5_rms.png (PNG copy)> <./images/ronquido_6_rms.png (P
+NG copy)> <./images/ronquido_7_rms.png (PNG copy)> <./images/ronquido_8_rms.png (PNG copy)> <./images/ruido_tos_rms.png 
+(PNG copy)> <./images/ruido_telefono_rms.png (PNG copy)> <./images/ruido_habla_rms.png (PNG copy)>]
 ! Undefined control sequence.
 l.159 Donde $ \text
                    {x_n} $ representa cada muestra del frame n y $ \text{rms...
@@ -712,50 +685,39 @@ File: images/ruido_habla_enezcr.png Graphic file (type png)
  <use images/ruido_habla_enezcr.png>
 Package pdftex.def Info: images/ruido_habla_enezcr.png used on input line 209.
 (pdftex.def)             Requested size: 103.50105pt x 77.62187pt.
- [8 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_cresta.png (PNG copy)> <C:/Use
-rs/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_cresta.png (PNG copy)> <C:/Users/Leandro/
-Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_3_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Pro
-yecto-final/informes_latex/ambientales/images/ronquido_4_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final
-/informes_latex/ambientales/images/ronquido_5_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_l
-atex/ambientales/images/ronquido_6_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambien
-tales/images/ronquido_7_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/image
-s/ronquido_8_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_tos
-_cresta.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_telefono_cresta
-.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_cresta.png (PNG 
-copy)>] [9 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_1_enezcr.png (PNG copy)> 
-<C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_2_enezcr.png (PNG copy)> <C:/Users/L
-eandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ronquido_3_enezcr.png (PNG copy)> <C:/Users/Leandro/Desk
-top/Proyecto-final/informes_latex/ambientales/images/ronquido_4_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyect
-o-final/informes_latex/ambientales/images/ronquido_5_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/inf
-ormes_latex/ambientales/images/ronquido_6_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex
-/ambientales/images/ronquido_7_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientale
-s/images/ronquido_8_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ru
-ido_tos_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_telefono
-_enezcr.png (PNG copy)> <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/ambientales/images/ruido_habla_enezcr.pn
-g (PNG copy)>]
-(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\ambientales\info_02_ambientales.aux)
+ [8 <./images/ronquido_1_cresta.png (PNG copy)> <./images/ronquido_2_cresta.png (PNG copy)> <./images/ronquido_3_cresta.
+png (PNG copy)> <./images/ronquido_4_cresta.png (PNG copy)> <./images/ronquido_5_cresta.png (PNG copy)> <./images/ronqui
+do_6_cresta.png (PNG copy)> <./images/ronquido_7_cresta.png (PNG copy)> <./images/ronquido_8_cresta.png (PNG copy)> <./i
+mages/ruido_tos_cresta.png (PNG copy)> <./images/ruido_telefono_cresta.png (PNG copy)> <./images/ruido_habla_cresta.png 
+(PNG copy)>] [9 <./images/ronquido_1_enezcr.png (PNG copy)> <./images/ronquido_2_enezcr.png (PNG copy)> <./images/ronqui
+do_3_enezcr.png (PNG copy)> <./images/ronquido_4_enezcr.png (PNG copy)> <./images/ronquido_5_enezcr.png (PNG copy)> <./i
+mages/ronquido_6_enezcr.png (PNG copy)> <./images/ronquido_7_enezcr.png (PNG copy)> <./images/ronquido_8_enezcr.png (PNG
+ copy)> <./images/ruido_tos_enezcr.png (PNG copy)> <./images/ruido_telefono_enezcr.png (PNG copy)> <./images/ruido_habla
+_enezcr.png (PNG copy)>] (info_02_ambientales.aux
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2439 strings out of 493921
- 36716 string characters out of 3144870
- 82285 words of memory out of 3000000
- 5666 multiletter control sequences out of 15000+200000
+ 2630 strings out of 493673
+ 38723 string characters out of 3143953
+ 91165 words of memory out of 3000000
+ 5911 multiletter control sequences out of 15000+200000
  44213 words of font info for 40 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 27i,6n,27p,1049b,227s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips
-/lm/lm-rm.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmmi7
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/lm/lmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb>
-Output written on info_02_ambientales.pdf (9 pages, 382157 bytes).
+ 1025 hyphenation exceptions out of 8191
+ 27i,7n,30p,1049b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
+c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
+t.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
+mmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb>
+Output written on info_02_ambientales.pdf (9 pages, 384228 bytes).
 PDF statistics:
  134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
