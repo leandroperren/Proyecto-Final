@@ -17,7 +17,7 @@
 \maketitle
 
 \section{Introducción} 
-En este documento se presenta los resultados de obtener señales grabadas en ambientes reales cotidianos, tanto de ronquidos como de otros sonidos (aquí los definiremos como ruidos) que no son ronquidos y que pueden estar presentes en las señales obtenidas en entornos reales cotidianos, como por ejemplo:
+En este documento se presentan los resultados de obtener señales grabadas en ambientes reales cotidianos, tanto de ronquidos como de otros sonidos (aquí los definiremos como ruidos) que no son ronquidos y que pueden estar presentes en las señales obtenidas en entornos reales cotidianos, como por ejemplo:
 
 \begin{enumerate}
 \item Ambientales
@@ -28,14 +28,14 @@ En este documento se presenta los resultados de obtener señales grabadas en ambi
 \end{enumerate}
 
 El objetivo es poder evaluar caracteristicas temporales (energia, zcr, rms, factor cresta) en las señales grabadas en entornos reales cotidianos.  
-Una vez extraídas las características necesarias se podrá, entrenar y evaluar distintos modelos/clasificadores con la intención de construir una aplicación para dispositivos móviles capaz de detectar episodios de ronquidos y diferenciarlo de otras interferencias (tos, vehículos, voces, música, etc.) que pudieran acoplarse en la grabación del sueño de la persona.
+Una vez extraídas las características necesarias se podrá, entrenar y evaluar distintos modelos/clasificadores con la intención de construir una aplicación para dispositivos móviles capaz de detectar episodios de ronquidos y diferenciarlos de otras interferencias (tos, vehículos, voces, música, etc.) que pudieran acoplarse en la grabación del sueño de la persona.
 
 \section{Procedimiento}
 Para realizar las tareas antes mencionadas se procedió primeramente a grabar tanto ronquidos como ruidos por medio de los micrófonos de dispositivos móviles con sistema operativo Android (Tablet y celular) y utilizando la aplicación llamada "`Easy Voice Recorder"'. Estas señales se grabaron con una frecuencia de 16000Hz, luego se utilizó el software Audacity para editar dichas señales extrayendo manualmente episodios de ronquidos como así también ruidos. En el caso de estos últimos se grabaron y editaron manualmente distintos posibles ruidos que podrían presentarse durante una grabación en ambientes normales. Una vez obtenidas estas señales se extrajeron las características temporales (energía, zcr, rms, factor cresta, energía/zcr), tanto de los ronquidos como de los ruidos para poder obtener resultados y estadísticas que nos permitan evaluar las mismas como características representativas. Luego se generó una base de datos de características con las que se entrenarán los clasificadores.
 
 
 \subsection{Análisis de ronquidos}
-Durante el proceso de obtencion de las señales (ronquidos) se llevaron a cabo distintas extracciones, las cuales fueron enumeradas como extraccion 1,2,3,etc, cada una de estas extracciones consiste de una grabación de una persona mientras duerme con el fin de captar en ella los ronquidos que pudieran producirse. 
+Durante el proceso de obtencion de las señales (ronquidos) se llevaron a cabo distintas extracciones, las cuales fueron enumeradas como extraccion 1 y 2, cada una de estas extracciones consiste de una grabación de una persona mientras duerme con el fin de captar en ella los ronquidos que pudieran producirse. 
 Posteriormente cada una de estas extracciones fue analizada manualmente mediante el software Audacity y se extrajeron algunos segmentos de ronquidos presentes en la grabación creando distintos archivos llamados "`ronquido\_16000Hz\_nro"' todos de formato .wav los cuales contienen un episodio de ronquido cada uno. 
 
 \begin{enumerate}
@@ -214,17 +214,69 @@ Donde $ \text{e_n} $ y $\text{ZCR_n} $ es la energia y el ZCR del frame n. En la
 \subsection{Tabla de comparación de características entre ronquidos y diferentes ruidos }
 Habiendo enumerado y detallado el calculo de cada una de las características temporales usadas en este trabajo, se realizó el calculo de la media y la varianza para cada característica. El resultado de estos calculos podemos verlo en la siguiente tabla.
 
-\begin{table}[htb]
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-Tipo señal & Sexo & Energia & ZCR & RMS & F. Cresta & Energía/ZCR \\
+Tipo señal & \multicolumn{2}{c|}{Energia} & \multicolumn{2}{c|}{ZCR} & \multicolumn{2}{c|}{RMS} \\
 \hline \hline
+& Media & Varianza & Media & Varianza & Media & Varianza \\ \hline
+Ronquido 1 & 1.4824e-006 & 7.3062e-013 & 0.1187 & 5.0813e-005 & 0.0464 & 2.3648e-004 \\ \hline
+Ronquido 2 & 3.5131e-007 & 5.0034e-014 & 0.1095 & 4.2967e-005 & 0.0227 & 4.7432e-005 \\ \hline
+Ronquido 3 & 2.9647e-006 & 3.7739e-012 & 0.0983 & 1.8845e-004 & 0.0646 & 6.4752e-004 \\ \hline
+Ronquido 4 & 4.5723e-007 & 1.1735e-013 & 0.1032 & 8.9711e-005 & 0.0256 & 8.3111e-005 \\ \hline  
+Ronquido 5 & 5.6499e-006 & 8.0302e-012 & 0.0728 & 2.0309e-005 & 0.0914 & 7.6039e-004 \\ \hline
+Ronquido 6 & 9.7302e-007 & 1.4449e-013 & 0.0819 & 8.8927e-005 & 0.0387 & 6.2551e-005 \\ \hline    
+Ronquido 7 & 5.8264e-007 & 2.8707e-014 & 0.0668 & 2.8193e-004 & 0.0302 & 1.9703e-005 \\ \hline 
+Ronquido 8 & 6.5582e-007 & 4.6976e-013 & 0.0631 & 1.7632e-004 & 0.0297 & 1.7543e-004 \\ \hline
+Ruido telefono & 1.2261e-006 & 6.0263e-015 & 0.2663 & 1.8814e-004 & 0.0443 & 2.0889e-006 \\ \hline 
+Ruido habla & 8.5400e-008 & 4.2314e-015 & 0.1510 & 0.0019 & 0.0109 & 1.7872e-005 \\ \hline
+Ruido tos & 4.4394e-005 & 1.3986e-009 & 0.1209 & 0.0030 & 0.2450 & 0.0124 \\ \hline 
 \end{tabular}
 \caption{Comparación entre características temporales.}
 \label{tabla:comparacion}
 \end{center}
 \end{table}
-   
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Tipo señal & \multicolumn{2}{c|}{F. Cresta} & \multicolumn{2}{c|}{Energía/ZCR} \\ 
+\hline \hline
+& Media & Varianza & Media & Varianza \\ \hline
+Ronquido 1 & 3.7394 & 0.2565 & 1.2521e-005 & 5.0502e-011 \\ \hline
+Ronquido 2 & 3.6741 & 0.2079 & 3.1830e-006 & 3.9167e-012 \\ \hline
+Ronquido 3 & 4.1288 & 0.1606 & 3.2874e-005 & 5.9082e-010 \\ \hline
+Ronquido 4 & 4.4144 & 1.1021 & 4.3764e-006 & 1.0342e-011 \\ \hline  
+Ronquido 5 & 4.2944 & 0.6827 & 7.8678e-005 & 1.6449e-009 \\ \hline
+Ronquido 6 & 4.3660 & 0.5877 & 1.2099e-005 & 2.5444e-011 \\ \hline    
+Ronquido 7 & 4.3985 & 0.4867 & 9.2240e-006 & 1.1552e-011 \\ \hline 
+Ronquido 8 & 3.8218 & 0.7375 & 1.0471e-005 & 1.0884e-010 \\ \hline
+Ruido telefono & 2.2721 & 0.0155 & 4.6062e-006 & 5.3290e-014 \\ \hline 
+Ruido habla & 4.1869 & 0.7475 & 6.5134e-007 & 3.5590e-013 \\ \hline
+Ruido tos & 3.7534 & 0.7477 & 4.9615e-004 & 2.0231e-007 \\ \hline   
+\end{tabular}
+\caption{Comparación entre características temporales.}
+\label{tabla:comparacion}
+\end{center}
+\end{table}
+
+En la figura 16 se encuentran representados distintos gráficos de barras donde cada gráfico representa una característica y las barras del 1 al 8 corresponden a los ocho ronquidos utilizados en el trabajo y las barras 9,10 y 11 corresponden a los ruidos telefono, habla y tos.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{images/barras1.png}
+		\includegraphics[width=1\columnwidth]{images/barras2.png}
+	\caption[Comparación]{Comparación características temporales}
+	\label{fig:comparación}
+\end{figure} 
+
+Analisando estos resultados por característica podemos ver que en el caso de la energía y el RMS arrojan resultados similares entre si, ya que la diferencia entre estas carcaterísticas esta en que el RMS ignora los efectos de los valores negativos de la señal. En ambos casos podemos observar una menor variación de la media entre los ronquidos, en cambio si observamos las barras 10 y 11 (habla, tos) vemos una diferencia abrupta entre ellas y con los ronquidos. Esta diferencia visible entre las medias correspondientes a los ruidos y a las de los ronquidos permiten concluir que la energía es una característica representativa y podremos tenerla en cuenta a la hora de entrenar un clasificador.
+En el caso del ZCR los resultados son mas visibles pudiendose ver como las barras 9,10,11 correspondientes a los tres ruidos presentan valores mas altos que en las de los ronquidos, con lo cual esta característica también es representativa y podrá ser utilizada en la diferenciación de ronquido con otras señales no deseadas.
+Respecto del factor cresta tal como podemos apreciar en el gráfico de barras esta característica presenta valores casi similares tanto entre los ronquidos como en los ruidos, el único valor visiblemente diferente se da con la barra 9 correspondiente al sonido de un telefono, dados esta poca variación esta característica no será tenida en cuenta ya que no aporta diferencias entre los ronquidos de los ruidos.
+Con el cociente energía/ZCR podemos observar como para el caso de los ruidos (barras 9,10 y 11) tenemos valores diferentes entre si y a su vez distintos respectos de los ronquidos, por ejemplo se puede ver que tanto el 9 y el 10 son mas pequeños que el resto y que en el caso del 11 es mucho mayor. Esto se debe a que el cociente permite potenciar haciendo que valores como el 9 cuya energía es similar al ronquido 1 pero que sin embargo el tener un zcr mayor hace que el cociente para el 9 sea menor al cociente del ronquido 1. Por lo tanto como a nivel de la enegía no podíamos distinguir un ronquido como el 1 de un ruido como el 9 este cociente si permite distinguir entre ellos, es por esto que esta característica sera utilizada para este trabajo.  
+
 
 \end{document}

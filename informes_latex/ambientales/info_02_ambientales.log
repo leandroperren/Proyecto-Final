@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  4 NOV 2015 09:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  5 NOV 2015 11:38
 entering extended mode
 **info_02_ambientales.tex
 (info_02_ambientales.tex
@@ -155,6 +155,9 @@ LaTeX Warning: Label `fig:ronquidoEneZCR' multiply defined.
 
 
 LaTeX Warning: Label `fig:ronquidoEneZCR' multiply defined.
+
+
+LaTeX Warning: Label `tabla:comparacion' multiply defined.
 
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -689,11 +692,27 @@ Package pdftex.def Info: images/ruido_habla_enezcr.png used on input line 209.
 png (PNG copy)> <./images/ronquido_4_cresta.png (PNG copy)> <./images/ronquido_5_cresta.png (PNG copy)> <./images/ronqui
 do_6_cresta.png (PNG copy)> <./images/ronquido_7_cresta.png (PNG copy)> <./images/ronquido_8_cresta.png (PNG copy)> <./i
 mages/ruido_tos_cresta.png (PNG copy)> <./images/ruido_telefono_cresta.png (PNG copy)> <./images/ruido_habla_cresta.png 
-(PNG copy)>] [9 <./images/ronquido_1_enezcr.png (PNG copy)> <./images/ronquido_2_enezcr.png (PNG copy)> <./images/ronqui
-do_3_enezcr.png (PNG copy)> <./images/ronquido_4_enezcr.png (PNG copy)> <./images/ronquido_5_enezcr.png (PNG copy)> <./i
-mages/ronquido_6_enezcr.png (PNG copy)> <./images/ronquido_7_enezcr.png (PNG copy)> <./images/ronquido_8_enezcr.png (PNG
- copy)> <./images/ruido_tos_enezcr.png (PNG copy)> <./images/ruido_telefono_enezcr.png (PNG copy)> <./images/ruido_habla
-_enezcr.png (PNG copy)>] (info_02_ambientales.aux
+(PNG copy)>]
+Overfull \hbox (60.25002pt too wide) in paragraph at lines 219--236
+ [] 
+ []
+
+[9 <./images/ronquido_1_enezcr.png (PNG copy)> <./images/ronquido_2_enezcr.png (PNG copy)> <./images/ronquido_3_enezcr.p
+ng (PNG copy)> <./images/ronquido_4_enezcr.png (PNG copy)> <./images/ronquido_5_enezcr.png (PNG copy)> <./images/ronquid
+o_6_enezcr.png (PNG copy)> <./images/ronquido_7_enezcr.png (PNG copy)> <./images/ronquido_8_enezcr.png (PNG copy)> <./im
+ages/ruido_tos_enezcr.png (PNG copy)> <./images/ruido_telefono_enezcr.png (PNG copy)> <./images/ruido_habla_enezcr.png (
+PNG copy)>] <images/barras1.png, id=96, 1445.4pt x 724.95844pt>
+File: images/barras1.png Graphic file (type png)
+ <use images/barras1.png>
+Package pdftex.def Info: images/barras1.png used on input line 270.
+(pdftex.def)             Requested size: 345.0pt x 173.03119pt.
+
+<images/barras2.png, id=97, 1445.4pt x 724.95844pt>
+File: images/barras2.png Graphic file (type png)
+ <use images/barras2.png>
+Package pdftex.def Info: images/barras2.png used on input line 271.
+(pdftex.def)             Requested size: 345.0pt x 173.03119pt.
+ [10] [11 <./images/barras1.png (PNG copy)> <./images/barras2.png (PNG copy)>] [12] (info_02_ambientales.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 )
@@ -702,13 +721,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2630 strings out of 493673
- 38723 string characters out of 3143953
- 91164 words of memory out of 3000000
- 5911 multiletter control sequences out of 15000+200000
+ 2642 strings out of 493673
+ 38953 string characters out of 3143953
+ 98175 words of memory out of 3000000
+ 5921 multiletter control sequences out of 15000+200000
  44213 words of font info for 40 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,7n,30p,1049b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,30p,1049b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
 c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
 t.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx1
@@ -717,9 +736,9 @@ mmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Progr
 m/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb>
-Output written on info_02_ambientales.pdf (9 pages, 384380 bytes).
+Output written on info_02_ambientales.pdf (12 pages, 412880 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
+ 145 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 276 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 words of extra memory for PDF output out of 10000 (max. 10000000)
 
