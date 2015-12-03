@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.11)  9 JUN 2015 23:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.11)  18 AUG 2015 20:46
 entering extended mode
 **info_01_edf.tex
-(C:\Users\matute\Desktop\informes_en_latex\info_01_edf.tex
+(D:\Proyecto-Final\informes_latex\edf\info_01_edf.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
 , bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
@@ -206,7 +206,7 @@ Package: cite 2015/02/27  v 5.5
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks23
 )
-(C:\Users\matute\Desktop\informes_en_latex\info_01_edf.aux
+(D:\Proyecto-Final\informes_latex\edf\info_01_edf.aux
 
 LaTeX Warning: Label `eq:' multiply defined.
 
@@ -292,20 +292,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (C:\Users\matute\Desktop\informes_en_latex\info_01_edf.toc
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (D:\Proyecto-Final\informes_latex\edf\info_01_edf.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 )
 \tf@toc=\write3
  [1
 
-]
-(C:\Users\matute\Desktop\informes_en_latex\info_01_edf.lof)
+] (D:\Proyecto-Final\informes_latex\edf\info_01_edf.lof)
 \tf@lof=\write4
- [2
 
-]
-(C:\Users\matute\Desktop\informes_en_latex\info_01_edf.lot)
+[2
+
+] (D:\Proyecto-Final\informes_latex\edf\info_01_edf.lot)
 \tf@lot=\write5
  [3
 
@@ -435,7 +434,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <C:/Users/matute/Desktop/informes_en_latex/images/ronquido_respiracion.png (PNG copy)>]
+[7 <D:/Proyecto-Final/informes_latex/edf/images/ronquido_respiracion.png (PNG copy)>]
 <images/no_ronquido.png, id=42, 423.08063pt x 316.18124pt>
 File: images/no_ronquido.png Graphic file (type png)
  <use images/no_ronquido.png>
@@ -452,8 +451,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <C:/Users/matute/Desktop/informes_en_latex/images/ronquido.png (PNG copy)> <C:/Users/matute/Desktop/informes_en_latex
-/images/no_ronquido.png (PNG copy)>]
+[8 <D:/Proyecto-Final/informes_latex/edf/images/ronquido.png (PNG copy)> <D:/Proyecto-Final/informes_latex/edf/images/no
+_ronquido.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
@@ -475,17 +474,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 263--264
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--285
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--286
 
  []
 
@@ -495,35 +499,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10] <images/snore_01_w.png, id=57, 686.565pt x 345.54094pt>
+[10] <images/snore_01_w.png, id=56, 686.565pt x 345.54094pt>
 File: images/snore_01_w.png Graphic file (type png)
  <use images/snore_01_w.png>
-Package pdftex.def Info: images/snore_01_w.png used on input line 309.
+Package pdftex.def Info: images/snore_01_w.png used on input line 310.
 (pdftex.def)             Requested size: 469.47049pt x 236.27757pt.
 
-(C:\Users\matute\Desktop\informes_en_latex\info_01_edf.bbl
+(D:\Proyecto-Final\informes_latex\edf\info_01_edf.bbl
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <C:/Users/matute/Desktop/informes_en_latex/images/snore_01_w.png (PNG copy)>]) [12
+[11 <D:/Proyecto-Final/informes_latex/edf/images/snore_01_w.png (PNG copy)>]) [12
 
 ]
-(C:\Users\matute\Desktop\informes_en_latex\info_01_edf.aux)
+(D:\Proyecto-Final\informes_latex\edf\info_01_edf.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  3362 strings out of 493921
- 44972 string characters out of 3144873
+ 44897 string characters out of 3144873
  120065 words of memory out of 3000000
  6595 multiletter control sequences out of 15000+200000
  13589 words of font info for 51 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 34i,13n,43p,868b,359s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,13n,43p,868b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
@@ -536,7 +540,7 @@ type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb>
-Output written on info_01_edf.pdf (13 pages, 263531 bytes).
+Output written on info_01_edf.pdf (13 pages, 263638 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
