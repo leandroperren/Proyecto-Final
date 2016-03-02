@@ -27,10 +27,10 @@ Resumen
 \item Introducción
 \begin{enumerate}
 \item Motivación.
-\item Alcances y objetivos.
+\item Estado del arte.
 \item Organización de la tesis.
 \end{enumerate}
-\item Extracción de características
+\item Método de detección de ronquidos por medio del T0.
 \begin{enumerate}
 \item Procedimiento
 \item Cálculo del T0 y comparación entre segmentos de distintas señales
@@ -42,16 +42,13 @@ Resumen
 \item Análisis de sonidos no deseados (ruidos)
 \item Mejora a través de funciones de recorte
 \item Cantidad mínima de ronquidos por segmento
+\item Tasas de aciertos del método en Matlab.
 \end{enumerate}
 \item Desarrollo de aplicación Android
 \begin{enumerate}
 \item Análisis y definición de requerimientos
 \item Diseño del sistema y del software
 \item Integración y prueba del sistema
-\end{enumerate}
-\item Resultados
-\begin{enumerate}
-\item Tasas de aciertos del método en Matlab.
 \item Tasas de aciertos aplicación Android.
 \end{enumerate}
 \item Conclusión
@@ -63,8 +60,8 @@ Resumen
 
 \section*{Resumen}
 
-En la actualidad existen distintas herramientas para la detección de ronquidos de manera doméstica, las cuales van desde elementos diseñados especialmente como almohadas inteligentes o pulseras hasta diferentes aplicaciones para dispositivos móviles. Todos ellos consisten del análisis de una señal capturada por medio del micrófono del dispositivo. La problemática con estos métodos es que solamente realizan un análisis de la señal en busca de cambios bruscos del nivel de energía, lo cual hace que las aplicaciones sean poco robustas a los ruidos que se pueden presentar en un entorno cotidiano bajo condiciones normales. El objetivo de esta tesis es desarrollar una aplicación Android capaz de detectar episodios de ronquidos mediante la captura por medio del micrófono del dispositivo y que sea robusta frente al ruido. 
-Es por esto que se propone un método basado en el cálculo del T0 por medio de la autocorrelacion. Este método usado por la aplicacion recorrera por ventaneo en tiempo real toda la  señal capturada por el dispositivo y determinara si el T0 de esa ventana cae dentro de un rango determinado para que sea considerado ronquido. Este rango de T0 se determina mediante la extracción de una gran cantidad de ronquidos sacados de señales EDF provistas por un especialista de trastornos de sueño y que consisten de señales limpias de personas de ambos sexos. La base de este método propuesto esta en la naturaleza cuasi-periódica que los ronquidos presentan y que los ruidos no, a su vez la ventaja de utilizar el T0 se basa en que únicamente se analiza temporalmente la señal y que podemos utilizar señales de baja frecuencia (100Hz) lo que genera un costo computacional, de almacenamiento y de consumo de energía mucho menor que el de otros metodos que utilizan además carácteristicas frecuenciales.
+En la actualidad existen distintas herramientas para la detección de ronquidos de uso doméstico, las cuales van desde elementos diseñados especialmente como almohadas inteligentes o pulseras hasta diferentes aplicaciones para dispositivos móviles. Todos ellos consisten del análisis de una señal capturada por medio del micrófono del dispositivo. La problemática con estos métodos es que solamente realizan un análisis de la señal en busca de cambios bruscos del nivel de energía, lo cual hace que las aplicaciones sean poco robustas a los ruidos que se pueden presentar en un entorno cotidiano bajo condiciones normales. El objetivo de esta tesis es desarrollar una aplicación Android capaz de detectar episodios de ronquidos mediante la captura por medio del micrófono del dispositivo y que sea robusta frente al ruido. 
+Es por esto que se propone un método basado en el cálculo del T0 por medio de la autocorrelacion. Este método usado por la aplicacion recorrera por ventaneo en tiempo real toda la  señal capturada por el dispositivo y determinara si el T0 de esa ventana cae dentro de un rango determinado para que sea considerado ronquido. Este rango de T0 se determina mediante la extracción de una gran cantidad de ronquidos sacados de señales EDF provistas por un especialista de trastornos de sueño y que consisten de señales limpias de personas de ambos sexos. La base de este método propuesto esta en la naturaleza cuasi-periódica que los ronquidos presentan y que los ruidos no, a su vez la ventaja de utilizar el T0 se basa en que únicamente se analiza temporalmente la señal y que se puede utilizar señales de baja frecuencia (100Hz) lo que genera un costo computacional, de almacenamiento y de consumo de energía mucho menor que el de otros metodos que utilizan además carácteristicas frecuenciales.
 \newpage
 
 \section{Introducción}
@@ -88,10 +85,24 @@ Desde esta problemática, surge la posibilidad de poder desarrollar una aplicació
 
 La importancia de la mecánica de la respiración [5] y de la fisiología y anatomía de la vía aérea superior (VAS) [5]: fosas nasales, faringe y laringe, reside en el conocimiento funcional del aparato respiratorio para comprender por qué se produce el ronquido. El funcionamiento incorrecto de alguna de sus partes provoca la oclusión intermitente de la VAS que predispone el desarrollo de la roncopatía. La informática [12][13] es una ciencia que estudia métodos, procesos y técnicas con el fin de almacenar, procesar y transmitir información y datos en formato digital. Los campos aplicables para este estudio van desde la ciencia de la computación hasta la ingeniería de software para el desarrollo de una solución integral de computo y comunicación capaz de procesar información de manera automática. El procesamiento de señales [10] permite la manipulación matemática de la señal para modificarla, mejorarla y extraer información en algún sentido con el fin de obtener las características necesarias para una posterior clasificación. 
 
-Los métodos y técnicas que se desarrolan en esta tesis presentan el desafío de lograr una detección y clasi?cación de ronquidos con la mayor tasa de aciertos posible. Para ello es preciso realizar un estudio exhaustivo de las características temporales de diferentes ronquidos de manera tal que la detección y clasi?cación, aún en presencia de ruido, presenten una gran robustez. Al estudiar los diferentes ronquidos se debe tener presente las condiciones del entorno en el que se capture la señal, ya que esto tendrá incidencia directa en la amplia variedad de ruidos que pueden afectarla. Otros posibles aspectos a considerar son las características personales de quien se capture la señal, es decir: edad, género, índice de masa corporal, adicciones como alcoholismo y tabaquismo, entre otras, ya que in?uyen en las características del ronquido mismo.  
+El método que se desarrola en esta tesis presenta el desafío de lograr una detección y clasificación de ronquidos con la mayor tasa de aciertos posible. Para ello es preciso realizar un estudio exhaustivo de las características temporales de diferentes ronquidos de manera tal que la detección y clasificación, aún en presencia de ruido, presenten una gran robustez. Al estudiar los diferentes ronquidos se debe tener presente las condiciones del entorno en el que se capture la señal, ya que esto tendrá incidencia directa en la amplia variedad de ruidos que pueden afectarla. Otros posibles aspectos a considerar son las características personales de quien se capture la señal, es decir: edad, género, índice de masa corporal, adicciones como alcoholismo y tabaquismo, entre otras, ya que influyen en las características del ronquido mismo.  
 
-Se pretende mediante este trabajo proporcionar una alternativa inteligente respecto a los métodos actuales de detección de ronquidos, además de ser un punto inicial para futuros desarrollos tecnológicos, no necesariamente software sobre teléfonos inteligentes (smartphones), sino también para otros dispositivos que pretendan incorporar inteligencia a ?n de detectar el ronquido para llevar a cabo alguna acción determinada. A su vez se espera que sirva de base sólida para futuros trabajos que logren ampliar su alcance llevándolo a la detección y clasificación de otros trastornos como es el caso del SAOS[5]. Además la realización de este trabajo tendrá un aporte personal de suma importancia al enfrentar la resolución de un problema real de ingeniería, para la obtención de una primera experiencia concreta y por este medio lograr la finalización de carrera habiendo aplicado los conocimientos adquiridos durante la misma.
+Se pretende mediante este trabajo proporcionar una alternativa inteligente respecto a los métodos actuales de detección de ronquidos, además de ser un punto inicial para futuros desarrollos tecnológicos, no necesariamente software sobre teléfonos inteligentes (smartphones), sino también para otros dispositivos que pretendan incorporar inteligencia a fin de detectar el ronquido para llevar a cabo alguna acción determinada. A su vez se espera que sirva de base sólida para futuros trabajos que logren ampliar su alcance llevándolo a la detección y clasificación de otros trastornos como es el caso del SAOS[5]. 
 
-\subsection{Alcances y objetivos}
+\subsection{Estado del arte}
+Aca segun mi parecer deberiamos analizar brevemente alguna de las apps disponibles y describir algunos de los papers que utilizan señales de estudios de sueños (IEEE).
+
+\subsection{Organización de la tesis}
+Esta tesis presenta la siguiente estructura:
+\begin{itemize}
+\item En el presente capítulo se describió la motivación de este desarrollo y el problema que será abordado. Se presenta una revisión
+del estado del arte de dispositivos y aplicaciones destinados a detectar ronquidos, como también se describen trabajos investigativos orientados a la detección de los mismos utilizando señales obtenidas en estudios de sueños. Finalmente, se describe la estructura de capítulos.
+\item En el capítulo 2 se describe el método de detección desarrollado en esta tesis. Primeramente se describe la extracción de ronquidos y calculo del T0 de las señales limpias EDF y se determinan en base a ellos una serie de parámetros. Para finalizar se presentan las tasas de acierto del algoritmo detector desarrollado en Matlab utilizando las señales limpias EDF.    
+\item En el capítulo 3 se presenta el desarrollo de la aplicación Android. Primeramente se desarrollan las distintas etapas propuestas por la Ingeniería de Software. Luego se calculan las tasas de aciertos de la aplicación realizando distintas pruebas tanto con señales limpias (EDF) como en entornos cotidianos propensos a un alto contenido de ruidos.
+\item El capítulo 4 dispone de las conclusiones particulares y generales como también de propuestas de futuros trabajos que podrían derivar del presente.
+\end{itemize}
+
+\section{Método de detección de ronquidos por medio del T0}
+\subsection{Procedimiento}
 
 \end{document}
