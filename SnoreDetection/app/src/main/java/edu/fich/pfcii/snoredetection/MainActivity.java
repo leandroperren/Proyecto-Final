@@ -12,7 +12,6 @@ import com.getbase.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnAddRecord;
     FloatingActionButton fabAdd;
 
     @Override
@@ -37,34 +36,15 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        //Comenzar una nueva grabación si es que no elegimos alguna del listado.
-
-        //Referencio al boton para agregar una grabacion nueva
-        btnAddRecord = (Button)findViewById(R.id.btnAddRecord);
-
-        //Iniciar la actividad AddRecord
-        btnAddRecord.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0)
-            {
-                Intent intentAddRecord = new Intent(MainActivity.this, RecordActivity.class);
-                startActivity(intentAddRecord);
-            }
-        });
-
         // Enlazar el Floating Action Button (FAB)
         fabAdd = (FloatingActionButton)findViewById(R.id.fabAdd);
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /**
-                 *  @@@@ NOTA: from <matiasm>, to <leandrop>
-                 *
-                 *  Cambiar lo que esta implementado aca por lo que se quiere hacer:
-                 *  como por ejemplo, lanzar otra activity.
-                 *
-                 *  Aca se hizo un Toast para ver que este bien implementado el FAB
-                 */
-                Toast.makeText(MainActivity.this, "Ejemplo FAB", Toast.LENGTH_SHORT).show();
+                //Inicio la actividad para agregar nueva grabación
+                Intent intentAddRecord = new Intent(MainActivity.this, RecordActivity.class);
+                startActivity(intentAddRecord);
+
             }
         });
 
