@@ -13,17 +13,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_iniciar"
-        android:id="@+id/btnIniciar"
-        android:layout_above="@+id/btnDetener"
+        android:id="@+id/btnStart"
+        android:layout_above="@+id/btnStop"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_detener"
-        android:id="@+id/btnDetener"
+        android:id="@+id/btnStop"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/btnIniciar"
-        android:layout_alignStart="@+id/btnIniciar"
+        android:layout_alignLeft="@+id/btnStart"
+        android:layout_alignStart="@+id/btnStart"
         android:layout_marginBottom="49dp" />
+
+    <TextView
+    android:id="@+id/TxtResultado"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="Iniciar grabación"
+    android:layout_weight="1.0"
+    android:textSize="20dip"
+    android:layout_marginTop="50dp"/>
 </RelativeLayout>
