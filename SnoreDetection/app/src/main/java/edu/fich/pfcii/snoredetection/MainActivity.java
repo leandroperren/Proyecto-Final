@@ -6,10 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.getbase.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnAddRecord;
+    FloatingActionButton fabAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,23 @@ public class MainActivity extends AppCompatActivity {
             {
                 Intent intentAddRecord = new Intent(MainActivity.this, RecordActivity.class);
                 startActivity(intentAddRecord);
+            }
+        });
+
+        // Enlazar el Floating Action Button (FAB)
+        fabAdd = (FloatingActionButton)findViewById(R.id.fabAdd);
+        fabAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 *  @@@@ NOTA: from <matiasm>, to <leandrop>
+                 *
+                 *  Cambiar lo que esta implementado aca por lo que se quiere hacer:
+                 *  como por ejemplo, lanzar otra activity.
+                 *
+                 *  Aca se hizo un Toast para ver que este bien implementado el FAB
+                 */
+                Toast.makeText(MainActivity.this, "Ejemplo FAB", Toast.LENGTH_SHORT).show();
             }
         });
 
