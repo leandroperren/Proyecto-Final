@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,32 +7,53 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="edu.fich.pfcii.snoredetection.RecordActivity">
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/microphone"
+        android:contentDescription="Microphone"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00ffffff"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+    android:id="@+id/TxtResultado"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Iniciar grabación"
+        android:textSize="45sp"
+        android:gravity="center_horizontal"
+        android:fontFamily="sans-serif-thin"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="35dp" />
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
         android:text="@string/btn_iniciar"
         android:id="@+id/btnStart"
         android:layout_above="@+id/btnStop"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_record"
+        android:layout_gravity="center_horizontal" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
         android:text="@string/btn_detener"
         android:id="@+id/btnStop"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/btnStart"
         android:layout_alignStart="@+id/btnStart"
-        android:layout_marginBottom="49dp" />
+        android:layout_marginBottom="49dp"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_stop"
+        android:layout_gravity="center_horizontal" />
 
-    <TextView
-    android:id="@+id/TxtResultado"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="Iniciar grabación"
-    android:layout_weight="1.0"
-    android:textSize="20dip"
-    android:layout_marginTop="50dp"/>
-</RelativeLayout>
+</LinearLayout>
