@@ -8,12 +8,11 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="edu.fich.pfcii.snoredetection.RecordActivity"
-    android:theme="Theme">
+    tools:context="edu.fich.pfcii.snoredetection.RecordActivity">
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/microphone"
         android:contentDescription="Microphone"
         android:layout_alignParentTop="true"
@@ -26,7 +25,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Iniciar grabación"
-        android:textSize="45sp"
+        android:textSize="35sp"
         android:gravity="center_horizontal"
         android:fontFamily="sans-serif-thin"
         android:layout_marginTop="15dp"
@@ -40,7 +39,7 @@
         android:layout_above="@+id/btnStop"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="25dp"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:drawableLeft="@drawable/ic_record"
         android:layout_gravity="center_horizontal" />
 
@@ -53,7 +52,7 @@
         android:layout_alignLeft="@+id/btnStart"
         android:layout_alignStart="@+id/btnStart"
         android:layout_marginBottom="49dp"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:drawableLeft="@drawable/ic_stop"
         android:layout_gravity="center_horizontal" />
 
