@@ -24,7 +24,9 @@
         <activity
             android:name=".OnBoardingActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".RecordActivity"></activity>
+        <activity android:name=".RecordActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="Iniciar Nueva Grabacion"></activity>
         <service android:name=".T0IntentService"></service>
     </application>
 
