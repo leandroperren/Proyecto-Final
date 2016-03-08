@@ -3,6 +3,8 @@
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,activeacute]{babel}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
 
 \setlength{\parskip}{10pt}
 \renewcommand\theenumii{\theenumi.\arabic{enumii}}
@@ -14,6 +16,7 @@
 % cuerpo del documento
 
 \maketitle
+\tableofcontents
 
 \newpage
 
@@ -32,7 +35,6 @@ Resumen
 \end{enumerate}
 \item Método de detección de ronquidos por medio del T0.
 \begin{enumerate}
-\item Procedimiento
 \item Cálculo del T0 y comparación entre segmentos de distintas señales
 \begin{enumerate}
 \item Análisis señales correspondientes a hombres
@@ -103,6 +105,29 @@ del estado del arte de dispositivos y aplicaciones destinados a detectar ronquid
 \end{itemize}
 
 \section{Método de detección de ronquidos por medio del T0}
-\subsection{Procedimiento}
+
+Para este trabajo se dispuso de una cantidad de 23 señales de formato EDF, correspondientes a estudios de sueño, tanto de personas de sexo masculino como femenino. Las mismas se obtuvieron por medio de un médico especialista en trastornos de sueño y, consisten de la grabación del sueño de toda una noche (7hs promedio). 
+
+De acuerdo a la extracción y análisis de distintos segmentos de las señales que fueron etiquetados como ronquidos por el sistema médico Apnealink, se pudo observar que estos segmentos contienen una serie de concentraciones de energía separados entre sí, de manera que presentan cierta repetitividad o periodicidad, tal como se aprecia en el segmento de la siguiente figura:
+
+\includegraphics[width=11cm]{figure1}
+
+Dada la baja tasa de muestreo que presenta la señal en cuestión, surge la idea de que es posible medir la periodicidad de eventos de ronquido recién expuestos, a través del T0 (Período Fundamental), partiendo de la hipótesis de que aquellos segmentos que contienen sonidos no deseados (todo lo que no sea ronquido), no presentan este patrón repetitivo, permitiendo así poder hacer uso de ésta característica para diferenciarlos entre sí.
+
+Con el fin de utilizar el T0 para diferenciar segmentos de ronquidos de aquellos que no lo son, resulta necesario analizar si el T0 es una característica representativa de los ronquidos, en el sentido de que deberían presentar cierta homogeneidad en los valores obtenidos de segmentos provenientes de diferentes señales. Es por esto que en las siguientes secciones se presentan los resultados obtenidos de extraer segmentos de ronquidos de diferentes duraciones y de distintas señales de ambos sexos a los cuales se le calcula el correspondiente T0 y se determina si los mismos presentan cierta homogeneidad.
+
+
+
+\subsection{Cálculo del T0 y comparación entre segmentos de distintas señales}
+Se comenzó tomando las señales *.EDF, las cuales contienen de manera complementaria un archivo de extensión *.CSV, el cual contiene el etiquetado de la señal, realizado por el sistema médico Apnealink. Este etiquetado permite utilizar las señales de manera tal de extraer segmentos que contengan realmente eventos de ronquidos.
+Todas estas señales fueron registradas por dicho sistema a una frecuencia de muestreo de 100 Hz. Por dicha causa, se procedió solamente al análisis temporal, dejando de lado el análisis frecuencial, ya que allí las técnicas convencionales no resultan factibles de utilizar.
+
+Debido a que se dispone de señales de personas de ambos sexos resulta interesante realizar el análisis separadamente a fin de determinar si existen diferencias notables en los ronquidos producidos por hombres o mujeres ya que esto podría implicar la necesidad de indicar el género en la aplicación a desarrollar en esta tésis. Por otra parte también se procede a extraer segmentos de diferentes duraciones con el objetivo de determinar si la variación de la misma implica variaciones importantes en los valores de T0 y asi poder determinar un valor óptimo de duración del segmento. 
+
+
+\subsection*{Análisis señales correspondientes a hombres}
+En esta sección se presentan los resultados obtenidos de los análisis realizados a señales de hombres. Para ello se toman 5 señales *.EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extraen manualmente segmentos de ronquidos de distintas duraciones, de 30 segundos, 1, 2, 3 y 5 minutos, puntualmente se extraen 5 segmentos de cada una de estas duraciones. Posteriormente por medio de un script desarrollado en Matlab el cual utiliza el método de autocorrelación se procede a calcular para cada uno de estos segmentos su valor de T0 y su inversa F0 (frecuencia fundamental). 
+
+Posteriormente, todos estos valores de T0 obtenidos de los distintos segmentos permiten hacer dos análisis comparativos fundamentales. Por un lado comparar los T0 de distintos segmentos de una misma señal y por otro comparar segmentos de distintas señales, ya que es necesario que en ambos casos exista homogeneidad.
 
 \end{document}
