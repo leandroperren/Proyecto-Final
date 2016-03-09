@@ -1,11 +1,12 @@
 \documentclass{article}
-% pre\'ambulo
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,activeacute]{babel}
+\usepackage{multirow}
+\usepackage{float}
 \usepackage{graphicx}
-\graphicspath{ {images/} }
 
+\graphicspath{ {images/} }
 \setlength{\parskip}{10pt}
 \renewcommand\theenumii{\theenumi.\arabic{enumii}}
 
@@ -108,9 +109,13 @@ del estado del arte de dispositivos y aplicaciones destinados a detectar ronquid
 
 Para este trabajo se dispuso de una cantidad de 23 señales de formato EDF, correspondientes a estudios de sueño, tanto de personas de sexo masculino como femenino. Las mismas se obtuvieron por medio de un médico especialista en trastornos de sueño y, consisten de la grabación del sueño de toda una noche (7hs promedio). 
 
-De acuerdo a la extracción y análisis de distintos segmentos de las señales que fueron etiquetados como ronquidos por el sistema médico Apnealink, se pudo observar que estos segmentos contienen una serie de concentraciones de energía separados entre sí, de manera que presentan cierta repetitividad o periodicidad, tal como se aprecia en el segmento de la siguiente figura:
+De acuerdo a la extracción y análisis de distintos segmentos de las señales que fueron etiquetados como ronquidos por el sistema médico Apnealink, se pudo observar que estos segmentos contienen una serie de concentraciones de energía separados entre sí, de manera que presentan cierta repetitividad o periodicidad, tal como se aprecia en el segmento de la Figura 1.
 
-\includegraphics[width=11cm]{figure1}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{figure1}	
+	\caption[Energia ronquidos]{Segmento de 1 minuto etiquetado como ronquidos.}
+\end{figure}
 
 Dada la baja tasa de muestreo que presenta la señal en cuestión, surge la idea de que es posible medir la periodicidad de eventos de ronquido recién expuestos, a través del T0 (Período Fundamental), partiendo de la hipótesis de que aquellos segmentos que contienen sonidos no deseados (todo lo que no sea ronquido), no presentan este patrón repetitivo, permitiendo así poder hacer uso de ésta característica para diferenciarlos entre sí.
 
@@ -122,12 +127,62 @@ Con el fin de utilizar el T0 para diferenciar segmentos de ronquidos de aquellos
 Se comenzó tomando las señales *.EDF, las cuales contienen de manera complementaria un archivo de extensión *.CSV, el cual contiene el etiquetado de la señal, realizado por el sistema médico Apnealink. Este etiquetado permite utilizar las señales de manera tal de extraer segmentos que contengan realmente eventos de ronquidos.
 Todas estas señales fueron registradas por dicho sistema a una frecuencia de muestreo de 100 Hz. Por dicha causa, se procedió solamente al análisis temporal, dejando de lado el análisis frecuencial, ya que allí las técnicas convencionales no resultan factibles de utilizar.
 
-Debido a que se dispone de señales de personas de ambos sexos resulta interesante realizar el análisis separadamente a fin de determinar si existen diferencias notables en los ronquidos producidos por hombres o mujeres ya que esto podría implicar la necesidad de indicar el género en la aplicación a desarrollar en esta tésis. Por otra parte también se procede a extraer segmentos de diferentes duraciones con el objetivo de determinar si la variación de la misma implica variaciones importantes en los valores de T0 y asi poder determinar un valor óptimo de duración del segmento. 
+Debido a que se dispone de señales de personas de ambos sexos resulta interesante realizar el análisis separadamente a fin de determinar si existen diferencias notables en los ronquidos producidos por hombres o mujeres ya que esto podría implicar la necesidad de indicar el género en la aplicación a desarrollar en esta tésis. 
+Por otra parte también se procede a extraer segmentos de diferentes duraciones con el objetivo de determinar si la variación de la misma implica variaciones importantes en los valores de T0 y asi poder determinar un valor óptimo de duración del segmento. 
 
 
 \subsection*{Análisis señales correspondientes a hombres}
-En esta sección se presentan los resultados obtenidos de los análisis realizados a señales de hombres. Para ello se toman 5 señales *.EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extraen manualmente segmentos de ronquidos de distintas duraciones, de 30 segundos, 1, 2, 3 y 5 minutos, puntualmente se extraen 5 segmentos de cada una de estas duraciones. Posteriormente por medio de un script desarrollado en Matlab el cual utiliza el método de autocorrelación se procede a calcular para cada uno de estos segmentos su valor de T0 y su inversa F0 (frecuencia fundamental). 
+En esta sección se presentan los resultados obtenidos de los análisis realizados a señales de hombres. Para ello se toman 5 señales *.EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extraen manualmente segmentos de ronquidos de distintas duraciones, de 30 segundos, 1, 2, 3 y 5 minutos, puntualmente se extraen 5 segmentos de cada una de estas duraciones. Posteriormente por medio de un script desarrollado en Matlab el cual utiliza el método de autocorrelación se procede a calcular para cada uno de estos segmentos su valor de T0 y su inversa F0 (frecuencia fundamental). En la Figura 2 se encuentran representados en la parte superior un segmento de 1 minuto el cual contiene ronquidos y en la parte inferior su correspondiente autocorrelación. 
+Se puede observar en la gráfica de la autocorrelación la existencia de un valor pico en torno a los 4 segundos, este valor pico corresponde al T0 de los ronquidos contenidos en el segmento. 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{figure2}	
+	\caption[Energia ronquidos]{Segmento con ronquidos y su autocorrelación.}
+\end{figure}
 
-Posteriormente, todos estos valores de T0 obtenidos de los distintos segmentos permiten hacer dos análisis comparativos fundamentales. Por un lado comparar los T0 de distintos segmentos de una misma señal y por otro comparar segmentos de distintas señales, ya que es necesario que en ambos casos exista homogeneidad.
+En el Cuadro 1 podemos ver los valores del T0 y F0 de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos, al final se encuentran la media y desvío estándar para los T0 y F0.
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Ronquido & Hora (HH:MM:SS) & T0 (s) & F0 (Hz) \\
+\hline \hline
+1 & 03:33:59 & 4.15 & 0.24 \\ \hline
+2 & 02:12:12 & 4.68 & 0.21 \\ \hline
+3 & 02:11:04 & 4.86 & 0.21 \\ \hline
+4 & 03:24:43 & 3.96 & 0.25 \\ \hline
+5 & 04:33:24 & 3.79 & 0.26 \\ \hline
+\multicolumn{2}{|r|}{Media} & 4.29 & 0.23 \\ \hline
+\multicolumn{2}{|r|}{Desvío Estándar} & 0.46 & 0.023 \\ \hline
+\end{tabular}
+\caption{T0 y F0 de segmentos de 1 minuto de duración.}
+\label{tabla:Ronquidos}
+\end{center}
+\end{table}
+
+Como primer punto se analiza que sucede con los T0 entre segmentos de una misma señal. Si se observa el valor del Desvío Estándar para los T0 de los segmentos con ronquidos presentados en el Cuadro 1, podemos observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. Debido a que se extrajeron segmentos de distintas señales se puede observar en el Cuadro 2 los valores del Desvío Estandar de los T0 de cada señal y para cada duración de segmentos. Viendo estos datos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual estamos asegurándonos que la caracteristica T0 es homogénea entre segmentos de ronquidos de una misma señal. 
+Por lo tanto, se hace evidente el poder utilizar esta característica (T0) para detectar distintos segmentos de ronquidos a lo largo de una grabación, en distintos momentos de la misma.
+ 
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Señal & \multicolumn{5}{|c|}{Desvio estandar del T0} \\
+\hline \hline
+& 1 min & 30 seg & 2 min & 3 min & 5 min \\ \hline
+Paciente 1 & 0.46 & 0.47 & 0.46 & 0.43 & 0.24 \\ \hline
+Paciente 2 & 0.35 & 0.22 & 0.27 & 0.14 & 0.31 \\ \hline
+Paciente 3 & 0.25 & 0.12 & 0.20 & 0.21 & 0.26 \\ \hline
+Paciente 4 & 0.52 & 0.61 & 0.62 & 0.70 & 0.85 \\ \hline
+Paciente 5 & 0.09 & 0.24 & 0.17 & 0.17 & 0.08 \\ \hline
+\end{tabular}
+\caption{Desvíos estándar de los T0 de cada señal para distintas duraciones.}
+\label{tabla:Ronquidos}
+\end{center}
+\end{table}
+
+A continuación se analiza que sucede con los valores del T0 comparandolo entre segmentos de distintas señales...
 
 \end{document}
