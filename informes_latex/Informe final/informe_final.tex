@@ -21,7 +21,7 @@
 
 \newpage
 
-\section*{Indice}
+\section*{Estructura del informe (Dps se elimina)}
 
 Agradecimientos
 
@@ -119,7 +119,7 @@ De acuerdo a la extracción y análisis de distintos segmentos de las señales que 
 
 Dada la baja tasa de muestreo que presenta la señal en cuestión, surge la idea de que es posible medir la periodicidad de eventos de ronquido recién expuestos, a través del T0 (Período Fundamental), partiendo de la hipótesis de que aquellos segmentos que contienen sonidos no deseados (todo lo que no sea ronquido), no presentan este patrón repetitivo, permitiendo así poder hacer uso de ésta característica para diferenciarlos entre sí.
 
-Con el fin de utilizar el T0 para diferenciar segmentos de ronquidos de aquellos que no lo son, resulta necesario analizar si el T0 es una característica representativa de los ronquidos, en el sentido de que deberían presentar cierta homogeneidad en los valores obtenidos de segmentos provenientes de diferentes señales. Es por esto que en las siguientes secciones se presentan los resultados obtenidos de extraer segmentos de ronquidos de diferentes duraciones y de distintas señales de ambos sexos a los cuales se le calcula el correspondiente T0 y se determina si los mismos presentan cierta homogeneidad.
+Con el fin de utilizar el T0 para diferenciar segmentos de ronquidos de aquellos que no lo son, resulta necesario analizar si el T0 es una característica representativa de los ronquidos, en el sentido de que deberían presentar cierta homogeneidad en los valores obtenidos de segmentos provenientes de diferentes señales. Es por esto que en las siguientes secciones se presentan los resultados obtenidos de extraer segmentos de ronquidos de diferentes duraciones y de distintas señales de ambos sexos a los cuales se le calcula el correspondiente T0.
 
 
 
@@ -131,9 +131,9 @@ Debido a que se dispone de señales de personas de ambos sexos resulta interesant
 Por otra parte se procedió a extraer segmentos de diferentes duraciones con el objetivo de determinar si la variación de la misma implica variaciones importantes en los valores de T0 y asi poder determinar un valor óptimo de duración del segmento. 
 
 
-\subsection*{Análisis señales correspondientes a hombres}
+\subsection*{Análisis de señales correspondientes a hombres}
 En esta sección se presentan los resultados obtenidos de los análisis realizados a señales de hombres. Para ello se tomarón 5 señales *.EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extrajeron manualmente segmentos de ronquidos de distintas duraciones, de 30 segundos, 1, 2, 3 y 5 minutos, puntualmente se extrajeron 5 segmentos de cada una de estas duraciones. Posteriormente por medio de un script desarrollado en Matlab el cual utiliza el método de autocorrelación se calculó para cada uno de estos segmentos su valor de T0 y su inversa F0 (frecuencia fundamental). En la Figura 2 se encuentran representados en la parte superior un segmento de 1 minuto el cual contiene ronquidos y en la parte inferior su correspondiente autocorrelación. 
-Se puede observar en la gráfica de la autocorrelación la existencia de un valor pico en torno a los 4 segundos, este valor pico corresponde al T0 de los ronquidos contenidos en el segmento. 
+Se puede observar en la gráfica de la autocorrelación la existencia de un valor pico en torno a los 4 segundos correspondiente al T0 de los ronquidos contenidos en el segmento. 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{figure2}	
@@ -162,8 +162,6 @@ Ronquido & Hora (HH:MM:SS) & T0 (s) & F0 (Hz) \\
 \end{table}
 
 Como primer punto se analiza que sucede con los T0 entre segmentos de una misma señal. Si se observa el valor del Desvío Estándar para los T0 de los segmentos con ronquidos presentados en el Cuadro 1, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. Debido a que se extrajeron segmentos de distintas señales se puede observar en el Cuadro 2 los valores del Desvío Estandar de los T0 de cada señal y para cada duración de segmentos. Viendo estos datos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual se está asegurando que la caracteristica T0 es homogénea entre segmentos de ronquidos de una misma señal. 
-Por lo tanto, se hace evidente el poder utilizar esta característica (T0) para detectar distintos segmentos de ronquidos a lo largo de una grabación, en distintos momentos de la misma.
- 
 
 \begin{table}[H]
 \begin{center}
@@ -183,6 +181,73 @@ Paciente 5 & 0.09 & 0.24 & 0.17 & 0.17 & 0.08 \\ \hline
 \end{center}
 \end{table}
 
-A continuación se analiza que sucede con los valores del T0 comparandolo entre segmentos de distintas señales...
+Siguiendo el análisis se observa ahora que sucede con los valores del T0 entre segmentos extraídos de diferentes señales, ya que si bien esta característica presentaba cierta homogeneidad entre los segmentos de una misma señal, podrían existir severas diferencias con segmentos provenientes de distntas señales y por ende de distintas personas y asi no se podría generalizar el uso del T0 como detector de ronquidos. Para ello se calculó el valor de la media y el desvío estándar de los T0 de todos los segmentos de 1 minuto de duración con ronquidos independientemente de la señal a la que pertenezcan. En el cuadro 3 se presentan los resultados del T0 de todos los segmentos de 1 minuto de duración y debajo su media y desvío estándar, mientras que en el Cuadro 4 se presentan las medias y desvios estandar del mismo análisis pero para todas las duraciones de segmentos 30 segundos, 2,3 y 5 minutos. 
+
+Se puede observar en el cuadro 4 que las medias son todas cercanas a los 4 segundos y que los desvíos estándar son inferiores a 1 segundo. Esto permite asegurar que la característica es representativa, no solo dentro de los segmentos de ronquidos de una misma señal, sino que también entre segmentos de distintas señales, por lo que no existirian problemas en la distinción via ésta característica usando cualquier grabación, siempre y cuando los valores de T0 en los segmentos de ruidos difieran suficientemente como para distinguirlos, este aspecto se analizará en secciones posteriores.
+
+Por último, se hace una evaluación acerca de la duración más apropiada de los segmentos. Como recientemente se ha mencionado y, como se podía observar en el Cuadro 4, los valores de las medias y los desvíos de todos los segmentos de ronquidos tomando distintas duraciones resultan similares entre si, por lo tanto, se concluye que la duración óptima a utilizar, será la de 5 minutos, ya que se genera un ahorro en tiempo de procesamiento y cálculo. También es importante explicar que no se consideran tamaños de segmentos de mayor duración, ya que a los efectos de llevar esto a una aplicación que sea capaz de etiquetar los momentos donde se producen ronquidos, al tomar duraciones de 8, 10 o más minutos se estaría perdiendo precisión en el presente análisis.
+
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Señal & Hora inicio & T0 (s) & F0 (Hz) \\ 
+\hline \hline
+Paciente 1 & 03:33:59 & 4.15 & 0.24 \\ \hline
+& 02:12:12 & 4.68 & 0.21 \\ \hline
+& 02:11:04 & 4.86 & 0.21 \\ \hline
+& 03:24:43 & 3.96 & 0.25 \\ \hline
+& 04:33:24 & 3.79 & 0.26 \\ \hline
+Paciente 2 & 22:25:37 & 3.52 & 0.28 \\ \hline
+& 22:28:24 & 3.73 & 0.27 \\ \hline
+& 22:30:03 & 4.15 & 0.24 \\ \hline
+& 22:52:37 & 3.22 & 0.31 \\ \hline
+& 23:16:03 & 3.82 & 0.26 \\ \hline
+Paciente 3 & 01:43:47 & 3.77 & 0.27 \\ \hline
+& 02:06:04 & 4.26 & 0.23 \\ \hline
+& 02:31:09 & 3.95 & 0.25 \\ \hline
+& 03:10:34 & 3.58 & 0.28 \\ \hline
+& 04:52:01 & 3.93 & 0.25 \\ \hline
+Paciente 4 & 01:30:03 & 5.83 & 0.17 \\ \hline
+& 03:48:38 & 4.92 & 0.20 \\ \hline
+& 03:53:09 & 4.74 & 0.21 \\ \hline
+& 22:25:30 & 4.88 & 0.20 \\ \hline
+& 00:28:31 & 4.46 & 0.22 \\ \hline
+Paciente 5 & 04:21:07 & 3.90 & 0.2564 \\ \hline
+& 04:22:42 & 3.91 & 0.2558 \\ \hline
+& 04:57:37 & 3.82 & 0.2618 \\ \hline
+& 23:11:57 & 3.77 & 0.2653 \\ \hline
+& 23:42:54 & 3.68 & 0.2717 \\ \hline
+\multicolumn{2}{|r|}{Media} & 4.13 & 0.24 \\ \hline
+\multicolumn{2}{|r|}{Desvío} & 0.58 & 0.0319 \\ \hline
+\end{tabular}
+\caption{T0 y F0 de segmentos con ronquidos de 1 minuto en distintas señales de hombres.}
+\label{tabla:Ronquidos}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Duración segmentos & Media & Desvío Estándar\\ 
+\hline \hline
+30 segundos & 4.05 & 0.64 \\ \hline
+1 minuto & 4.13 & 0.58 \\ \hline
+2 minutos & 4.13 & 0.71 \\ \hline
+3 minutos & 4.11 & 0.69 \\ \hline
+5 minutos & 4.18 & 0.71 \\ \hline
+\end{tabular}
+\caption{Medias y desvíos estándar de los T0 para distintas duraciones.}
+\label{tabla:Ronquidos}
+\end{center}
+\end{table}
+
+\subsection*{Análisis de señales correspondientes a mujeres}
+Idem análisis anterior pero con mujeres
+
+\subsection{Comparación de T0 entre hombres y mujeres}
 
 \end{document}
