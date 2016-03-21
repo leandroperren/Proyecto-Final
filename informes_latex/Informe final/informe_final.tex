@@ -314,5 +314,47 @@ Mujeres & 4.40 & 0.52 \\ \hline
 Se puede observar que los valores promedios en ambos casos (mujeres y hombres), son prácticamente similares y, los correspondientes desvíos estándar, indican también cierta similitud, aunque en el caso de los hombres son levementes mayores. De todas maneras esta pequeña diferencia, no implica inconvenientes a la hora de la detección. De esta manera se descarta la necesidad de que un usuario de la aplicación Android tenga que indicar el género antes de comenzar su uso.
 
 \subsection{Análisis de sonidos no deseados (ruidos)}
+Dentro de esta sección se describen los resultados obtenidos del análisis realizado a sonidos no deseados. Por sonido no deseado, debe entenderse como todo aquel sonido que se puede acoplar en una grabación en entornos cotidianos y, que no se trata de un ronquido. Es por ésto, que a los fines del presente trabajo, serán considerados como ruidos: sonidos de vehículos, murmullos o personas hablando, música, etcétera.
+
+Haste el momento se demostro que los valores del T0 para segmentos con ronquidos extraídos de diferentes señales tanto de mujeres como hombres, presentan cierta similitud permitiendo concluir que el T0 es una característica representativa de los segmentos con ronquidos. Pero esto no es suficiente para poder utilizar esta característica en una aplicación que permite detectar estos segmentos diferenciandolos de aquellos que contienen solo ruidos. Esto se debe a que aquellos sonidos no deseados que se pudieran capturar durante la grabación pudiesen tener un T0 similar que llegue a caer dentro del rango establecido y asi ser considerados como ronquidos.
+Para ello se demostrará en la presente sección que bajo condiciones normales los sonidos no deseados que se pueden capturar por medio del micrófono de un dispositivo movil presentan valores del T0 fuera del rango representativo de los ronquidos.
+
+Se comenzó capturando distintas señales por medio de dispositivos móviles como una tablet y dos celulares. Para esto se instaló en los dispositivos la aplicación Easy Voice Recorder por medio de la cual se grabaron archivos en formato .WAV. Estas grabaciones se llevaron a cabo en ambientes bajo condiciones normales durante las horas del día ya que es mayor la cantidad de ruidos presentes, todas se capturaron a una frecuencia de muestreo de 8000 Hz que es la mínima frecuencia de muestreo que admite la aplicación, pero fueron submuestreadas a 100Hz de manera que tengan igual frecuencia de muestreo que las EDF. Luego se analizaron manualmente con el software Audacity extrayendo segmentos de 1 y 5 minutos que contenían distintos ruidos, por ejemplo: sonidos de vehículos en la calle, personas hablando, ladridos de perros, música proveniente de una radio y sonido de máquinas de obreros trabajando.
+
+En la parte superior de la figura 3 se puede observar un segmento de 1 minuto el cual contiene ruido ambiental, proveniente del exterior, tal como máquinas de personas trabajando, tráfico de vehículos y personas hablando, mientras que en la gráfica de la parte inferior se encuentra su autocorrelación. 
+A su vez el segmento graficado en la figura 4 consiste del sonido de un vehículo que proviene de la calle, la figura 5 contiene el sonido de transito de vehiculos proveniente del exterior, primero una motocicleta y luego un automóvil que estaciona y sale al cabo de un tiempo y la figura 6 contiene el sonido de dos perros ladrando, todas ellas acompañadas en la parte inferior de su correspondiente autocorrelación.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{figure3}	
+	\caption[Energia ronquidos]{Sonido de maquinas trabajando, personas hablando y vehículos.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{figure4}	
+	\caption[Energia ronquidos]{Sonido de un automovil circulando.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{figure5}	
+	\caption[Energia ronquidos]{Sonido de dos vehículos circulando.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{figure6}	
+	\caption[Energia ronquidos]{Sonido de perros ladrando.}
+\end{figure}
+
+Como se puede ver en las figuras 3, 4 ,5 y 6, en los cuatro gráficos de la autocorrelación (parte inferior) no existen en ellos la presencia de un valor pico que sobresale del resto a diferencia de lo que sucede en los segmentos con ronquidos, donde claramente existe un valor pico correspondiente al T0, esto se ve reflejado claramente en la figura 7. Esto se debe a que en los segmentos con ronquidos, las señales presentan una naturaleza cuasi-periódica debido a la presencia de una serie de ronquidos de manera contínua, y a que los mismos tienen una apariencia similar entre sí; ésto no ocurre en los ruidos antes analizados, donde tienden a concentrar su energía en un momento determinado (por ejemplo, el caso de vehículos). 
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{figure7}	
+	\caption[Energia ronquidos]{Autocorrelacion de ronquidos y autocorrelación sonido ambiental.}
+\end{figure}
 
 \end{document}
+
