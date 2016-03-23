@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  21 MAR 2016 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  23 MAR 2016 16:09
 entering extended mode
 **informe_final.tex
 (informe_final.tex
@@ -253,12 +253,29 @@ File: images/figure6.png Graphic file (type png)
 Package pdftex.def Info: images/figure6.png used on input line 347.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
 
-<images/figure7.png, id=60, 1445.4pt x 813.0375pt>
+<images/figure7.png, id=60, 1199.98312pt x 596.98032pt>
 File: images/figure7.png Graphic file (type png)
  <use images/figure7.png>
 Package pdftex.def Info: images/figure7.png used on input line 355.
-(pdftex.def)             Requested size: 345.0pt x 194.05367pt.
- [16 <./images/figure5.png (PNG copy)> <./images/figure6.png (PNG copy)>] [17 <./images/figure7.png>] (informe_final.aux
+(pdftex.def)             Requested size: 345.0pt x 171.63506pt.
+ [16 <./images/figure5.png (PNG copy)> <./images/figure6.png (PNG copy)>] <images/figure8.png, id=64, 1445.4pt x 724.958
+44pt>
+File: images/figure8.png Graphic file (type png)
+ <use images/figure8.png>
+Package pdftex.def Info: images/figure8.png used on input line 363.
+(pdftex.def)             Requested size: 345.0pt x 173.03119pt.
+
+<images/figure9.png, id=65, 1445.4pt x 724.95844pt>
+File: images/figure9.png Graphic file (type png)
+ <use images/figure9.png>
+Package pdftex.def Info: images/figure9.png used on input line 369.
+(pdftex.def)             Requested size: 345.0pt x 173.03119pt.
+ [17 <./images/figure7.png> <./images/figure8.png (PNG copy)>] <images/figure10.png, id=69, 1445.4pt x 724.95844pt>
+File: images/figure10.png Graphic file (type png)
+ <use images/figure10.png>
+Package pdftex.def Info: images/figure10.png used on input line 375.
+(pdftex.def)             Requested size: 345.0pt x 173.03119pt.
+ [18 <./images/figure9.png (PNG copy)> <./images/figure10.png (PNG copy)>] [19] (informe_final.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 )
@@ -267,10 +284,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2399 strings out of 493673
- 31400 string characters out of 3143953
+ 2414 strings out of 493673
+ 31711 string characters out of 3143953
  100429 words of memory out of 3000000
- 5720 multiletter control sequences out of 15000+200000
+ 5732 multiletter control sequences out of 15000+200000
  47208 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,8n,30p,1217b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -278,9 +295,9 @@ Here is how much of TeX's memory you used:
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr
 17.pfb>
-Output written on informe_final.pdf (17 pages, 364000 bytes).
+Output written on informe_final.pdf (19 pages, 383281 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

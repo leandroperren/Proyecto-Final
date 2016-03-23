@@ -7,3 +7,4 @@
 \contentsline {subsection}{\numberline {2.1}Cálculo del T0 y comparación entre segmentos de distintas señales}{8}
 \contentsline {subsection}{\numberline {2.2}Comparación de T0 entre hombres y mujeres}{13}
 \contentsline {subsection}{\numberline {2.3}Análisis de sonidos no deseados (ruidos)}{13}
+\contentsline {subsection}{\numberline {2.4}Mejora a través de funciones de recorte}{19}
