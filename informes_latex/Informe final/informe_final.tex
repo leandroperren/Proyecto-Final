@@ -59,9 +59,45 @@ Se pretende mediante este trabajo proporcionar una alternativa inteligente respe
 \subsection{Estado del arte}
 Aca segun mi parecer deberiamos analizar brevemente alguna de las apps disponibles y describir algunos de los papers que utilizan señales de estudios de sueños (IEEE).
 
+\subsection{Objetivos}
+\subsection*{Objetivos Generales} 
+
+Desarrollar una aplicación Android capaz de detectar segmentos con ronquidos a partir de una grabación de audio digital capturada por medio del micrófono del dispositivo presentando alta robustez frente a ruidos en condiciones ambientales normales.
+
+\subsection*{Objetivos Específicos}
+\begin{itemize}
+\item Analizar bibliografía relevante acerca de métodos, técnicas y herramientas informáticas que resulten de utilidad para esta problemática.
+\item Estudiar características temporales de diferentes ronquidos. 
+\item Desarrollar método para la extracción de características. 
+\item Desarrollar método conveniente para la detección/clasificación. 
+\item Desarrollar una aplicación Android capaz de detectar segmentos de ronquidos. 
+\item Realizar pruebas sobre señales limpias. 
+\item Realizar pruebas sobre señales contaminadas. 
+\item Lograr una tasa de aciertos en la detección de ronquidos superior a la que presentan ciertas aplicaciones. 
+\end{itemize}
+
 \subsection{Alcances}
 
-\subsection{Objetivos}
+Para el estudio de las características temporales se trabajó con señales EDF obtenidas mediante el sistema médico ApneaLink, las cuales tienen características equivalentes, pudiendo mencionar: 
+ 
+\begin{itemize}
+\item Frecuencia de muestreo (en Hz). 
+\item Presición en bits para cuantificación. 
+\item Duración en horas similares (con desvío de +/- 2 horas) 
+\end{itemize}
+
+El análisis de las características temporales se limitó al cálculo del T0 (período fundamental), se consideraron posibles diferencias entre ronquidos de personas de distintos sexos, dejando de lado otras características de los individuos como el peso y la edad, ya que no se dispone de esa información en las señales EDF. A su vez, el método de detección se desarrolló específicamente para ronquidos y se dejó de lado el caso particular de los SAOS y demás trastornos de sueño. 
+
+La aplicación Android permite capturar una señal digital por medio del micrófono del dispositivo, la cual será analizada tomando ventanas de 5 minutos determinando si en dicho segmento se producen ronquidos. La aplicación permite acceder a dos tipos de reportes, uno gráfico y otro en modo texto donde se presentan los resultados. En ellos se indican la hora en que se producen los eventos y una estimación de la intesidad determinando tres niveles. A su vez la aplicación permite enviar via correo electrónico estos reportes a un médico que pudiera estar interesado en los análisis.
+
+El desarrollo de esta aplicación movil cumple con las siguientes características: 
+\begin{itemize}
+\item Robustez 
+\item Sencillez
+\item Eficiencia
+\item Óptimo consumo de batería
+\item Uso óptimo de la capacidad de almacenamiento
+\end{itemize} 
 
 \subsection{Organización de la tesis}
 Esta tesis presenta la siguiente estructura:

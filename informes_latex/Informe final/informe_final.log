@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  31 MAR 2016 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  31 MAR 2016 18:00
 entering extended mode
 **informe_final.tex
 (informe_final.tex
@@ -216,66 +216,66 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {C:/Users/Leandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 \tf@toc=\write3
- [2] [3] [4] [5] [6]
-<images/figure1.png, id=25, 746.03719pt x 210.7875pt>
+ [2] [3] [4] [5] [6] [7]
+<images/figure1.png, id=29, 746.03719pt x 210.7875pt>
 File: images/figure1.png Graphic file (type png)
  <use images/figure1.png>
-Package pdftex.def Info: images/figure1.png used on input line 84.
+Package pdftex.def Info: images/figure1.png used on input line 120.
 (pdftex.def)             Requested size: 345.0pt x 97.47482pt.
- [7 <./images/figure1.png>]
-<images/figure2.png, id=30, 1445.4pt x 724.95844pt>
+ [8 <./images/figure1.png>]
+<images/figure2.png, id=33, 1445.4pt x 724.95844pt>
 File: images/figure2.png Graphic file (type png)
  <use images/figure2.png>
-Package pdftex.def Info: images/figure2.png used on input line 104.
+Package pdftex.def Info: images/figure2.png used on input line 140.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
- [8] [9 <./images/figure2.png (PNG copy)>]
-[10] [11] [12] [13] <images/figure3.png, id=50, 1445.4pt x 724.95844pt>
+ [9] [10 <./images/figure2.png (PNG copy)>]
+[11] [12] [13] [14] [15] <images/figure3.png, id=56, 1445.4pt x 724.95844pt>
 File: images/figure3.png Graphic file (type png)
  <use images/figure3.png>
-Package pdftex.def Info: images/figure3.png used on input line 293.
-(pdftex.def)             Requested size: 345.0pt x 173.03119pt.
- [14]
-<images/figure4.png, id=54, 1445.4pt x 724.95844pt>
-File: images/figure4.png Graphic file (type png)
- <use images/figure4.png>
-Package pdftex.def Info: images/figure4.png used on input line 299.
+Package pdftex.def Info: images/figure3.png used on input line 329.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
 
-<images/figure5.png, id=55, 1445.4pt x 724.95844pt>
+<images/figure4.png, id=57, 1445.4pt x 724.95844pt>
+File: images/figure4.png Graphic file (type png)
+ <use images/figure4.png>
+Package pdftex.def Info: images/figure4.png used on input line 335.
+(pdftex.def)             Requested size: 345.0pt x 173.03119pt.
+
+<images/figure5.png, id=58, 1445.4pt x 724.95844pt>
 File: images/figure5.png Graphic file (type png)
  <use images/figure5.png>
-Package pdftex.def Info: images/figure5.png used on input line 305.
+Package pdftex.def Info: images/figure5.png used on input line 341.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
- [15 <./images/figure3.png (PNG copy)> <./images/figure4.png (PNG copy)>] <images/figure6.png, id=59, 1445.4pt x 724.958
+ [16 <./images/figure3.png (PNG copy)> <./images/figure4.png (PNG copy)>] <images/figure6.png, id=62, 1445.4pt x 724.958
 44pt>
 File: images/figure6.png Graphic file (type png)
  <use images/figure6.png>
-Package pdftex.def Info: images/figure6.png used on input line 311.
+Package pdftex.def Info: images/figure6.png used on input line 347.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
 
-<images/figure7.png, id=60, 1199.98312pt x 596.98032pt>
+<images/figure7.png, id=63, 1199.98312pt x 596.98032pt>
 File: images/figure7.png Graphic file (type png)
  <use images/figure7.png>
-Package pdftex.def Info: images/figure7.png used on input line 319.
+Package pdftex.def Info: images/figure7.png used on input line 355.
 (pdftex.def)             Requested size: 345.0pt x 171.63506pt.
- [16 <./images/figure5.png (PNG copy)> <./images/figure6.png (PNG copy)>] <images/figure8.png, id=64, 1445.4pt x 724.958
+ [17 <./images/figure5.png (PNG copy)> <./images/figure6.png (PNG copy)>] <images/figure8.png, id=67, 1445.4pt x 724.958
 44pt>
 File: images/figure8.png Graphic file (type png)
  <use images/figure8.png>
-Package pdftex.def Info: images/figure8.png used on input line 327.
+Package pdftex.def Info: images/figure8.png used on input line 363.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
 
-<images/figure9.png, id=65, 1445.4pt x 724.95844pt>
+<images/figure9.png, id=68, 1445.4pt x 724.95844pt>
 File: images/figure9.png Graphic file (type png)
  <use images/figure9.png>
-Package pdftex.def Info: images/figure9.png used on input line 333.
+Package pdftex.def Info: images/figure9.png used on input line 369.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
- [17 <./images/figure7.png> <./images/figure8.png (PNG copy)>] <images/figure10.png, id=69, 1445.4pt x 724.95844pt>
+ [18 <./images/figure7.png> <./images/figure8.png (PNG copy)>] <images/figure10.png, id=72, 1445.4pt x 724.95844pt>
 File: images/figure10.png Graphic file (type png)
  <use images/figure10.png>
-Package pdftex.def Info: images/figure10.png used on input line 339.
+Package pdftex.def Info: images/figure10.png used on input line 375.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
- [18 <./images/figure9.png (PNG copy)> <./images/figure10.png (PNG copy)>] [19] (informe_final.aux
+ [19 <./images/figure9.png (PNG copy)> <./images/figure10.png (PNG copy)>] [20] (informe_final.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 )
@@ -286,7 +286,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2414 strings out of 493673
  31711 string characters out of 3143953
- 100429 words of memory out of 3000000
+ 96429 words of memory out of 3000000
  5732 multiletter control sequences out of 15000+200000
  47208 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -295,9 +295,9 @@ Here is how much of TeX's memory you used:
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr
 17.pfb>
-Output written on informe_final.pdf (19 pages, 387585 bytes).
+Output written on informe_final.pdf (20 pages, 391145 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
