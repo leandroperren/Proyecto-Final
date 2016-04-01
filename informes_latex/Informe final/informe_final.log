@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  31 MAR 2016 18:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  1 APR 2016 17:47
 entering extended mode
 **informe_final.tex
 (informe_final.tex
@@ -217,65 +217,141 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 {C:/Users/Leandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 \tf@toc=\write3
  [2] [3] [4] [5] [6] [7]
-<images/figure1.png, id=29, 746.03719pt x 210.7875pt>
+[8] [9] <images/figure1.png, id=35, 746.03719pt x 210.7875pt>
 File: images/figure1.png Graphic file (type png)
  <use images/figure1.png>
-Package pdftex.def Info: images/figure1.png used on input line 120.
+Package pdftex.def Info: images/figure1.png used on input line 126.
 (pdftex.def)             Requested size: 345.0pt x 97.47482pt.
- [8 <./images/figure1.png>]
-<images/figure2.png, id=33, 1445.4pt x 724.95844pt>
+ [10 <./images/figure1.png>]
+<images/figure2.png, id=39, 1445.4pt x 724.95844pt>
 File: images/figure2.png Graphic file (type png)
  <use images/figure2.png>
-Package pdftex.def Info: images/figure2.png used on input line 140.
+Package pdftex.def Info: images/figure2.png used on input line 146.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
- [9] [10 <./images/figure2.png (PNG copy)>]
-[11] [12] [13] [14] [15] <images/figure3.png, id=56, 1445.4pt x 724.95844pt>
+ [11] [12 <./images/figure2.png (PNG copy)>] [13] [14] [15] [16] <images/figure3.png, id=59, 1445.4pt x 724.95844pt>
 File: images/figure3.png Graphic file (type png)
  <use images/figure3.png>
-Package pdftex.def Info: images/figure3.png used on input line 329.
+Package pdftex.def Info: images/figure3.png used on input line 335.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
-
-<images/figure4.png, id=57, 1445.4pt x 724.95844pt>
+ [17]
+<images/figure4.png, id=63, 1445.4pt x 724.95844pt>
 File: images/figure4.png Graphic file (type png)
  <use images/figure4.png>
-Package pdftex.def Info: images/figure4.png used on input line 335.
+Package pdftex.def Info: images/figure4.png used on input line 341.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
 
-<images/figure5.png, id=58, 1445.4pt x 724.95844pt>
+<images/figure5.png, id=64, 1445.4pt x 724.95844pt>
 File: images/figure5.png Graphic file (type png)
  <use images/figure5.png>
-Package pdftex.def Info: images/figure5.png used on input line 341.
+Package pdftex.def Info: images/figure5.png used on input line 347.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
- [16 <./images/figure3.png (PNG copy)> <./images/figure4.png (PNG copy)>] <images/figure6.png, id=62, 1445.4pt x 724.958
+ [18 <./images/figure3.png (PNG copy)> <./images/figure4.png (PNG copy)>] <images/figure6.png, id=68, 1445.4pt x 724.958
 44pt>
 File: images/figure6.png Graphic file (type png)
  <use images/figure6.png>
-Package pdftex.def Info: images/figure6.png used on input line 347.
+Package pdftex.def Info: images/figure6.png used on input line 353.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
 
-<images/figure7.png, id=63, 1199.98312pt x 596.98032pt>
+<images/figure7.png, id=69, 1199.98312pt x 596.98032pt>
 File: images/figure7.png Graphic file (type png)
  <use images/figure7.png>
-Package pdftex.def Info: images/figure7.png used on input line 355.
+Package pdftex.def Info: images/figure7.png used on input line 361.
 (pdftex.def)             Requested size: 345.0pt x 171.63506pt.
- [17 <./images/figure5.png (PNG copy)> <./images/figure6.png (PNG copy)>] <images/figure8.png, id=67, 1445.4pt x 724.958
+ [19 <./images/figure5.png (PNG copy)> <./images/figure6.png (PNG copy)>] <images/figure8.png, id=74, 1445.4pt x 724.958
 44pt>
 File: images/figure8.png Graphic file (type png)
  <use images/figure8.png>
-Package pdftex.def Info: images/figure8.png used on input line 363.
+Package pdftex.def Info: images/figure8.png used on input line 369.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
 
-<images/figure9.png, id=68, 1445.4pt x 724.95844pt>
+<images/figure9.png, id=75, 1445.4pt x 724.95844pt>
 File: images/figure9.png Graphic file (type png)
  <use images/figure9.png>
-Package pdftex.def Info: images/figure9.png used on input line 369.
+Package pdftex.def Info: images/figure9.png used on input line 375.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
- [18 <./images/figure7.png> <./images/figure8.png (PNG copy)>] <images/figure10.png, id=72, 1445.4pt x 724.95844pt>
+ [20 <./images/figure7.png> <./images/figure8.png (PNG copy)>] <images/figure10.png, id=79, 1445.4pt x 724.95844pt>
 File: images/figure10.png Graphic file (type png)
  <use images/figure10.png>
-Package pdftex.def Info: images/figure10.png used on input line 375.
+Package pdftex.def Info: images/figure10.png used on input line 381.
 (pdftex.def)             Requested size: 345.0pt x 173.03119pt.
- [19 <./images/figure9.png (PNG copy)> <./images/figure10.png (PNG copy)>] [20] (informe_final.aux
+ [21 <./images/figure9.png (PNG copy)> <./images/figure10.png (PNG copy)>]
+Overfull \hbox (90.99953pt too wide) in paragraph at lines 409--410
+\T1/lmr/m/n/10 ta: 26 abril 2013]. Dis-po-ni-ble en: <http://es.pneumowiki.org/mediawiki/index.php?title=Ronquido> 
+ []
+
+
+Overfull \hbox (22.66495pt too wide) in paragraph at lines 413--414
+\T1/lmr/m/n/10 2013]. Dis-po-ni-ble en: <http://www.nlm.nih.gov/medlineplus/spanish/snoring.html> 
+ []
+
+[22]
+Overfull \hbox (0.36021pt too wide) in paragraph at lines 421--422
+\T1/lmr/m/n/10 2013]. Dis-po-ni-ble en: <http://www.apple.com/es/iphone/from-the-app-store/> 
+ []
+
+! Misplaced alignment tab character &.
+l.434 ...le en:<http://buscon.rae.es/drae/?type=3&
+                                                  val=informática&val_aux=&o...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.434 ...scon.rae.es/drae/?type=3&val=informática&
+                                                  val_aux=&origen=REDRAE>
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.434 ....rae.es/drae/?type=3&val=informática&val_
+                                                  aux=&origen=REDRAE>
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced alignment tab character &.
+l.434 ...es/drae/?type=3&val=informática&val_aux=&
+                                                  origen=REDRAE>
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.435 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (167.58339pt too wide) in paragraph at lines 433--435
+\T1/lmr/m/n/10 ción [con-sul-ta: 1 ma-yo 2013]. In-for-ma-ti-ca. Dis-po-ni-ble en:<http://buscon.rae.es/drae/?type=3val=
+informáticaval$[]\OML/lmm/m/it/10 ux \OT1/lmr/m/n/10 =
+ []
+
+! Misplaced alignment tab character &.
+l.440 ...uctive sleep apnea. Medical Engineering &
+                                                   Physics. Elsevier. 2013.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[23] [24] (informe_final.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 )
@@ -284,20 +360,22 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2414 strings out of 493673
- 31711 string characters out of 3143953
- 96429 words of memory out of 3000000
- 5732 multiletter control sequences out of 15000+200000
+ 2425 strings out of 493673
+ 31852 string characters out of 3143953
+ 101429 words of memory out of 3000000
+ 5743 multiletter control sequences out of 15000+200000
  47208 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,8n,30p,1217b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr
-17.pfb>
-Output written on informe_final.pdf (20 pages, 391145 bytes).
+ 27i,8n,30p,4498b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.en
+c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
+lmr17.pfb>
+Output written on informe_final.pdf (24 pages, 412861 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

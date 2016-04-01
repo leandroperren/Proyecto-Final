@@ -2,21 +2,21 @@
 \contentsline {section}{\numberline {1}Introducción}{4}
 \contentsline {subsection}{\numberline {1.1}Motivación}{4}
 \contentsline {subsection}{\numberline {1.2}Estado del arte}{6}
-\contentsline {subsection}{\numberline {1.3}Objetivos}{6}
-\contentsline {subsection}{\numberline {1.4}Alcances}{6}
-\contentsline {subsection}{\numberline {1.5}Organización de la tesis}{7}
-\contentsline {section}{\numberline {2}Método de detección de ronquidos por medio del T0}{8}
-\contentsline {subsection}{\numberline {2.1}Cálculo del T0 y comparación entre segmentos de distintas señales}{9}
-\contentsline {subsection}{\numberline {2.2}Comparación de T0 entre hombres y mujeres}{14}
-\contentsline {subsection}{\numberline {2.3}Análisis de sonidos no deseados (ruidos)}{15}
-\contentsline {subsection}{\numberline {2.4}Mejora a través de funciones de recorte}{20}
-\contentsline {subsection}{\numberline {2.5}Cantidad mínima de ronquidos por segmento}{20}
-\contentsline {subsection}{\numberline {2.6}Tasas de aciertos del método en Matlab}{20}
-\contentsline {section}{\numberline {3}Desarrollo de aplicación Android}{20}
-\contentsline {subsection}{\numberline {3.1}Análisis y definición de requerimientos}{20}
-\contentsline {subsection}{\numberline {3.2}Diseño del sistema y del software}{20}
-\contentsline {subsection}{\numberline {3.3}Integración y prueba del sistema}{20}
-\contentsline {subsection}{\numberline {3.4}Tasas de aciertos aplicación Android}{20}
-\contentsline {section}{\numberline {4}Conclusión}{20}
-\contentsline {section}{\numberline {5}Bibliografia}{20}
-\contentsline {section}{\numberline {6}Anexos}{20}
+\contentsline {subsection}{\numberline {1.3}Objetivos}{8}
+\contentsline {subsection}{\numberline {1.4}Alcances}{8}
+\contentsline {subsection}{\numberline {1.5}Organización de la tesis}{9}
+\contentsline {section}{\numberline {2}Método de detección de ronquidos por medio del T0}{10}
+\contentsline {subsection}{\numberline {2.1}Cálculo del T0 y comparación entre segmentos de distintas señales}{11}
+\contentsline {subsection}{\numberline {2.2}Comparación de T0 entre hombres y mujeres}{16}
+\contentsline {subsection}{\numberline {2.3}Análisis de sonidos no deseados (ruidos)}{16}
+\contentsline {subsection}{\numberline {2.4}Mejora a través de funciones de recorte}{22}
+\contentsline {subsection}{\numberline {2.5}Cantidad mínima de ronquidos por segmento}{22}
+\contentsline {subsection}{\numberline {2.6}Tasas de aciertos del método en Matlab}{22}
+\contentsline {section}{\numberline {3}Desarrollo de aplicación Android}{22}
+\contentsline {subsection}{\numberline {3.1}Análisis y definición de requerimientos}{22}
+\contentsline {subsection}{\numberline {3.2}Diseño del sistema y del software}{22}
+\contentsline {subsection}{\numberline {3.3}Integración y prueba del sistema}{22}
+\contentsline {subsection}{\numberline {3.4}Tasas de aciertos aplicación Android}{22}
+\contentsline {section}{\numberline {4}Conclusión}{22}
+\contentsline {section}{\numberline {5}Bibliografia}{22}
+\contentsline {section}{\numberline {6}Anexos}{24}
