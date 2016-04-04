@@ -3,14 +3,10 @@ package edu.fich.pfcii.snoredetection;
 import android.app.IntentService;
 import android.content.Intent;
 
-import java.util.ArrayList;
-import java.util.Vector;
-
 
 public class T0IntentService extends IntentService {
 
     public static final String ACTION_PROGRESO = "edu.fich.pfcii.snoredetection.PROGRESO";
-//    ArrayList<Float> autocorrelation = new ArrayList<>();
 
     public T0IntentService() {
         super("T0IntentService");
@@ -75,7 +71,7 @@ public class T0IntentService extends IntentService {
         // Normalizar el maximo del T0 (a fines de saber que % de energia posee respecto a la energia maxima)
         max /= energia;
 
-        // Devuelver los valores al hilo principal
+        // Devuelver los valores al hilo de grabacion
         Intent bcIntent = new Intent();
         bcIntent.setAction(ACTION_PROGRESO);
         bcIntent.putExtra("tcero", t0);

@@ -9,7 +9,6 @@ import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,10 +35,9 @@ public class RecordActivity extends AppCompatActivity {
     /// PARTE NUEVA
     static final int SAMPLES_PER_SECOND_AT_8K = 480000;
     static final int SIZE_SEGMENTO = 5*SAMPLES_PER_SECOND_AT_8K;
-    float[] fragmento2 = new float[SIZE_SEGMENTO];
-    float[] filtrada2  = new float[SIZE_SEGMENTO];
-    float[] muestras2  = new float[30000];
+    static final int SIZE_AT_100HZ = SIZE_SEGMENTO/80;
 
+    private TextView resultados_parciales;
 
     // Vector para señal filtrada
 //    ArrayList<Float> filtrada;
@@ -51,9 +49,15 @@ public class RecordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
 
+        // Recuperar la variable isRecording si existe
+        if (null != savedInstanceState) {
+            // Si la variable fue guardada anteriormente se asigna a isRecording
+            isRecording = savedInstanceState.getBoolean("IS_RECORDING");
+        }
+
         // Setear el estado (activado o desavtivado) de los botones iniciar y detener
         setButtonHandlers();
-        enableButtons(false);
+        enableButtons(isRecording);
 
         // Calcular el tamaño del buffer por medio de la clase AudioRecord
         bufferSize = AudioRecord.getMinBufferSize(
@@ -64,7 +68,11 @@ public class RecordActivity extends AppCompatActivity {
         // Registrar el IntentService
         IntentFilter filter = new IntentFilter();
         filter.addAction(T0IntentService.ACTION_PROGRESO);
+
+        resultados_parciales = (TextView)findViewById(R.id.datos);
+
         receiver = new BroadcastReceiver() {
+
             // Analizar los datos recibidos y determino si es ronquido o no
             public void onReceive(Context context, Intent intent) {
                 if (intent.getAction().equals(T0IntentService.ACTION_PROGRESO)) {
@@ -72,8 +80,6 @@ public class RecordActivity extends AppCompatActivity {
                     float t0 = intent.getFloatExtra("tcero", 0);
                     float max = intent.getFloatExtra("maximo", 0);
                     energia.add(intent.getFloatExtra("energia", 0));
-
-                    String resultado = ((TextView)findViewById(R.id.datos)).getText().toString();
 
                     //Etiqueto el fragmento como ronquido o no ronquido
                     String ronquido;
@@ -83,8 +89,11 @@ public class RecordActivity extends AppCompatActivity {
                         ronquido = "No ronquido";
                     }
 
-                    //Imprimo provisoriamente los resultados en el TextView, porteriormente se mostraran los resultados de mejor manera
-                    ((TextView)findViewById(R.id.datos)).setText(resultado + "\n" + t0 +"--"+ max +"--"+ ronquido);
+                    // Imprimir en pantalla provisoriamente los resultados en el TextView
+                    resultados_parciales.setText(
+                            resultados_parciales.getText().toString()
+                            + "\n"
+                            + t0 + "\t" + max + "\t" + ronquido);
                 }
             }
         };
@@ -133,7 +142,9 @@ public class RecordActivity extends AppCompatActivity {
 
         recordingThread.start();
 
-        ((TextView)findViewById(R.id.datos)).setText("T0(seg)\tAmplitud (Normalizada)\tEtiqueta");
+        resultados_parciales.setText(
+                resultados_parciales.getText().toString()
+                + "\nT0\tAmplitud\tEtiqueta");
     }
 
     // Esta funcion es la ejecutada por el hilo de la captura
@@ -147,6 +158,9 @@ public class RecordActivity extends AppCompatActivity {
 //        fragmento = new ArrayList<>();
 //        filtrada  = new ArrayList<>();
 
+        final float[] fragmento2 = new float[SIZE_SEGMENTO];
+        final float[] filtrada2  = new float[SIZE_SEGMENTO];
+        final float[] muestras2  = new float[SIZE_AT_100HZ];
 
         int j = 0;
 
@@ -169,7 +183,7 @@ public class RecordActivity extends AppCompatActivity {
                     value = 0;
                 }
 
-                // Obtener el fragmento correspondiente a la ventana de 1 minuto de duración
+                // Construir el fragmento correspondiente a ventana de 5 minutos
 //                if (j < (5*480000)) {
                 if (j < window_size) {
 //                    fragmento.add(value);
@@ -272,6 +286,7 @@ public class RecordActivity extends AppCompatActivity {
 
     // Funcion para detener el hilo de grabación
     private void stopRecording() {
+        // Si el recorder no esta seteado e inicializado, se pone a FALSE la variable isRecording
         if (null != recorder){
             isRecording = false;
 
@@ -280,8 +295,10 @@ public class RecordActivity extends AppCompatActivity {
                 recorder.stop();
 
             recorder.release();
-
             recorder = null;
+
+            // Interrupcion del hilo de grabacion para liberar recursos
+            Thread.currentThread().interrupt();
             recordingThread = null;
         }
     }
@@ -292,12 +309,9 @@ public class RecordActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch(v.getId()){
                 case R.id.btnStart:{
-                    Context context = getApplicationContext();
-                    Toast.makeText(context, "Grabación iniciada", Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(RecordActivity.this, "Grabando...", Toast.LENGTH_LONG).show();
                     enableButtons(true);
                     startRecording();
-
                     break;
                 }
                 case R.id.btnStop:{
@@ -312,6 +326,12 @@ public class RecordActivity extends AppCompatActivity {
             }
         }
     };
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean("IS_RECORDING", isRecording);
+    }
 
     @Override
     protected void onDestroy() {
