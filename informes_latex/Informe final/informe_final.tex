@@ -25,7 +25,7 @@ top=2.5cm }
 \pagestyle{fancy}
 % Header
 \lhead{\textsc{\footnotesize Tesis de Grado}}
-\rhead{\textit{\footnotesize Ingeniería Informática}}
+\rhead{\textit{\footnotesize \leftmark}}
 % Footer
 \lfoot{\footnotesize \textit{Meurzet, Matías - Perren, Leandro}}
 \cfoot{}
@@ -53,18 +53,27 @@ Meurzet, Matias$^{1}$, Perren, Leandro$^{2}$\\ \\
 \date{\small{\today}}
 
 \maketitle
+
+% Indices de contenido, figuras y tablas respectivamente
 \tableofcontents
+\thispagestyle{empty}
+\listoffigures
+\thispagestyle{empty}
+\listoftables
+\thispagestyle{empty}
 
 \newpage
 
 \chapter*{Resumen}
 
-En la actualidad existen distintas herramientas de uso doméstico para la detección de ronquidos, las cuales van desde elementos diseñados especialmente, como almohadas inteligentes o pulseras, hasta diferentes aplicaciones para dispositivos móviles. Todas ellas consisten del análisis de una señal capturada por medio del micrófono del dispositivo. \\
-La problemática con estos métodos es que solamente realizan un análisis de la señal en busca de cambios bruscos del nivel de energía, esto hace que las aplicaciones sean poco robustas a los ruidos que se pueden presentar en un entorno cotidiano bajo condiciones normales. \\
-En esta tesis se propone desarrollar una aplicación Android capaz de detectar episodios de ronquidos capturados por medio del micrófono del dispositivo y que sea robusta frente al ruido. 
-Para ello se presenta un método basado en el cálculo del $T_0$ por medio de la autocorrelacion, este método recorrerá por ventaneo en tiempo real toda la  señal capturada por el dispositivo y determinará si el $T_0$ de esa ventana cae dentro de un rango determinado para que sea considerado ronquido. Este rango de $T_0$ se determina mediante la extracción de una gran cantidad de ronquidos de señales limpias de formato *EDF provistas por un especialista de trastornos de sueño y que  contienen la grabación de toda una noche de sueño, 6 o 7 horas de duración, correspondientes a personas de ambos sexos. \\
-La base del método que se propone esta en la naturaleza cuasi-periódica que los ronquidos presentan y que los ruidos no, a su vez la ventaja de utilizar el $T_0$ se basa en que únicamente se analiza temporalmente la señal y que se puede utilizar señales de baja frecuencia (100Hz) lo que genera un costo computacional, de almacenamiento y de consumo de energía mucho menor que el de otros metodos que utilizan además carácteristicas frecuenciales. \\
-Los resultados que se obtuvieron de las pruebas de la aplicación arrojaron buenas tasas de aciertos superando el 80\% y en algunos casos llegando cerca del 100\%, tanto para pruebas realizadas sobre señales limpias como para señales capturadas en entornos cotidianos conteniendo una gran cantidad de ruidos.
+\thispagestyle{empty}
+
+En la actualidad existen distintas herramientas de uso doméstico para la detección de ronquidos, las cuales van desde elementos diseñados especialmente, como almohadas inteligentes o pulseras, hasta diferentes aplicaciones para dispositivos móviles. Todas ellas consisten del análisis de una señal capturada por medio del micrófono de tal dispositivo. \\
+La problemática con estos métodos es que solamente realizan un análisis de la señal en busca de cambios bruscos del nivel de energía, esto hace que las aplicaciones sean poco robustas a los ruidos que se pueden presentar en un entorno cotidiano bajo condiciones normales, entendiéndose por tal escenario a una habiatación personal donde hay movimiento de gente y ruidos provocados por ellos mismos, además de los provenientes de distintos objetos, tanto internos como externos a la habitación. \\
+En la presente tesis se propone desarrollar una aplicación Android capaz de detectar episodios de ronquidos capturados por medio del micrófono del dispositivo y que sea robusta frente al ruido. 
+Para ello se presenta un método basado en el cálculo del Pitch ($T_0$ de aquí en adelante) por medio de la autocorrelacion, este método recorrerá por ventaneo en tiempo real toda la  señal capturada por el dispositivo y determinará si el $T_0$ de esa ventana se encuentra dentro de un rango determinado para que sea considerado ronquido. Este rango de $T_0$ se determina mediante la extracción de una gran cantidad de ronquidos de señales limpias de formato \textbf{*.EDF} provistas por un especialista de trastornos de sueño y que  contienen la grabación de toda una noche de sueño (6 o 7 horas de duración), correspondientes a personas de ambos sexos. \\
+La base del método que se propone esta en la naturaleza cuasi-periódica que los ronquidos presentan y que los ruidos no, a su vez la ventaja de utilizar el $T_0$ se basa en que únicamente se analiza temporalmente la señal y que se puede utilizar señales de baja frecuencia (100Hz) lo que genera un costo computacional, de almacenamiento y de consumo energético mucho menor al de otros metodos que utilizan además carácteristicas frecuenciales. \\
+Los resultados que se obtuvieron de las pruebas de la aplicación arrojaron buenas tasas de aciertos, superando el 80\% y en algunos casos llegando a valores cercanos al 100\%, tanto para pruebas realizadas sobre señales limpias como para señales capturadas en entornos cotidianos conteniendo una gran cantidad de ruidos.
 
 \newpage
 
@@ -458,6 +467,7 @@ Debido a que se demostró que el T0 es una característica representativa de los r
 \chapter{Conclusión}
 
 \chapter*{Bibliografia}
+\addcontentsline{toc}{chapter}{Bibliografía} % esto añade el capitulo en el índice
 [1] PNEUMOWIKI, a enciclopedia de Neumología de contenido libre [consulta: 26 abril 2013]. Disponible en: \url{<http://es.pneumowiki.org/mediawiki/index.php?title=Ronquido>}
 
 [2] RONCAR.ES, el ronquido simple y la apnea del sueño [consulta: 26 abril 2013]. Disponible en: \url{<http://roncopatia.roncar.es/>}
@@ -500,5 +510,8 @@ Disponible en: \url{<http://buscon.rae.es/drae/?type=3&val=informática&val_aux=&
 [20] Dream Watcher - Anti Ronquidos. Aplicación para detectar ronquidos [consulta: 20 noviembre 2015]. Disponible en: \url{<https://play.google.com/store/apps/details?id=com.arcadexxi.dreamwatcher>}
 
 \chapter*{Anexos}
+\addcontentsline{toc}{chapter}{Anexos} % esto añade el capitulo en el índice
+\addcontentsline{toc}{section}{Anexo A} % asi se añade una seccion al índice
+\addcontentsline{toc}{section}{Anexo B}
 
 \end{document}
