@@ -1,24 +1,28 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {1}Introducci\'on}{3}
-\contentsline {section}{\numberline {1.1}Motivaci\'on}{3}
-\contentsline {section}{\numberline {1.2}Estado del arte}{5}
-\contentsline {section}{\numberline {1.3}Objetivos}{7}
-\contentsline {subsection}{\numberline {1.3.1}Objetivos Generales}{7}
-\contentsline {subsection}{\numberline {1.3.2}Objetivos Espec\IeC {\'\i }ficos}{7}
-\contentsline {section}{\numberline {1.4}Alcances}{8}
-\contentsline {section}{\numberline {1.5}Organizaci\'on de la tesis}{8}
-\contentsline {chapter}{\numberline {2}M\'etodo de detecci\'on de ronquidos por medio de Pitch($T_0$)}{10}
-\contentsline {section}{\numberline {2.1}C\'alculo de $T_0$ y comparaci\'on entre segmentos de distintas se\~nales}{11}
-\contentsline {subsection}{\numberline {2.1.1}An\'alisis de se\~nales correspondientes a hombres}{11}
-\contentsline {subsection}{\numberline {2.1.2}An\'alisis de se\~nales correspondientes a mujeres}{15}
-\contentsline {section}{\numberline {2.2}Comparaci\'on de $T_0$ entre Hombres y Mujeres}{16}
-\contentsline {section}{\numberline {2.3}An\'alisis de sonidos no deseados (ruidos)}{16}
-\contentsline {section}{\numberline {2.4}Mejora a trav\'es de funciones de recorte}{22}
-\contentsline {section}{\numberline {2.5}Cantidad m\IeC {\'\i }nima de ronquidos por segmento}{22}
-\contentsline {section}{\numberline {2.6}Tasas de aciertos del m\'etodo en Matlab}{22}
-\contentsline {chapter}{\numberline {3}Desarrollo de aplicaci\'on Android}{23}
-\contentsline {section}{\numberline {3.1}An\'alisis y definici\'on de requerimientos}{23}
-\contentsline {section}{\numberline {3.2}Dise\~no del sistema y del software}{23}
-\contentsline {section}{\numberline {3.3}Integraci\'on y prueba del sistema}{23}
-\contentsline {section}{\numberline {3.4}Tasas de aciertos aplicaci\'on Android}{23}
-\contentsline {chapter}{\numberline {4}Conclusi\'on}{24}
+\contentsline {chapter}{\numberline {1}Introducci\'on}{5}
+\contentsline {section}{\numberline {1.1}Motivaci\'on}{5}
+\contentsline {section}{\numberline {1.2}Estado del arte}{7}
+\contentsline {section}{\numberline {1.3}Objetivos}{9}
+\contentsline {subsection}{\numberline {1.3.1}Objetivos Generales}{9}
+\contentsline {subsection}{\numberline {1.3.2}Objetivos Espec\IeC {\'\i }ficos}{9}
+\contentsline {section}{\numberline {1.4}Alcances}{10}
+\contentsline {section}{\numberline {1.5}Organizaci\'on de la tesis}{10}
+\contentsline {chapter}{\numberline {2}M\'etodo de detecci\'on de ronquidos por medio de Pitch($T_0$)}{12}
+\contentsline {section}{\numberline {2.1}C\'alculo de $T_0$ y comparaci\'on entre segmentos de distintas se\~nales}{13}
+\contentsline {subsection}{\numberline {2.1.1}An\'alisis de se\~nales correspondientes a hombres}{13}
+\contentsline {subsection}{\numberline {2.1.2}An\'alisis de se\~nales correspondientes a mujeres}{17}
+\contentsline {section}{\numberline {2.2}Comparaci\'on de $T_0$ entre Hombres y Mujeres}{18}
+\contentsline {section}{\numberline {2.3}An\'alisis de sonidos no deseados (ruidos)}{18}
+\contentsline {section}{\numberline {2.4}Mejora a trav\'es de funciones de recorte}{24}
+\contentsline {section}{\numberline {2.5}Cantidad m\IeC {\'\i }nima de ronquidos por segmento}{24}
+\contentsline {section}{\numberline {2.6}Tasas de aciertos del m\'etodo en Matlab}{24}
+\contentsline {chapter}{\numberline {3}Desarrollo de aplicaci\'on Android}{25}
+\contentsline {section}{\numberline {3.1}An\'alisis y definici\'on de requerimientos}{25}
+\contentsline {section}{\numberline {3.2}Dise\~no del sistema y del software}{25}
+\contentsline {section}{\numberline {3.3}Integraci\'on y prueba del sistema}{25}
+\contentsline {section}{\numberline {3.4}Tasas de aciertos aplicaci\'on Android}{25}
+\contentsline {chapter}{\numberline {4}Conclusi\'on}{26}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{27}
+\contentsline {chapter}{Anexos}{29}
+\contentsline {section}{Anexo A}{29}
+\contentsline {section}{Anexo B}{29}
