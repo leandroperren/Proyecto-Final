@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {1.3.1}Objetivos Generales}{7}
 \contentsline {subsection}{\numberline {1.3.2}Objetivos Espec\IeC {\'\i }ficos}{7}
 \contentsline {section}{\numberline {1.4}Alcances}{8}
-\contentsline {section}{\numberline {1.5}Organizaci\'on de la tesis}{8}
+\contentsline {section}{\numberline {1.5}Organizaci\'on de la tesis}{9}
 \contentsline {chapter}{\numberline {2}M\'etodo de detecci\'on de ronquidos por medio de Pitch($T_0$)}{10}
 \contentsline {section}{\numberline {2.1}C\'alculo de $T_0$ y comparaci\'on entre segmentos de distintas se\~nales}{11}
 \contentsline {subsection}{\numberline {2.1.1}An\'alisis de se\~nales correspondientes a hombres}{11}
