@@ -18,7 +18,9 @@ top=2.5cm }
 \renewcommand{\baselinestretch}{1.2}
 
 \usepackage{color}
-\definecolor{light-grey}{gray}{0.3}
+\definecolor{light-grey}{gray}{0.9}
+\definecolor{medium-grey}{gray}{0.5}
+\definecolor{charcoal}{gray}{0.3}
 \usepackage{xcolor,colortbl}
 \usepackage{mathrsfs} 
 
@@ -38,18 +40,33 @@ top=2.5cm }
 \usepackage{url} % direcciones url web para citas y referencias bibliograficas
 
 %\renewcommand\theenumii{\theenumi.\arabic{enumii}}
+\usepackage{titling}
+
+\pretitle{
+	\begin{center}
+	\LARGE
+	\vspace{-3cm}
+	\includegraphics[scale=0.5]{img/fich_logo_classic}\\[\bigskipamount]
+}
+\posttitle{	\end{center}}
 
 
 \begin{document}
-% cuerpo del documento
 
-\title{{\color{light-grey} TESIS DE GRADO}\\ \Huge{\textbf{Desarrollo de métodos inteligentes para la detección y clasificación de ronquidos\\ CAMBIAR!}}}
-\author{
-Meurzet, Matias$^{1}$, Perren, Leandro$^{2}$\\ \\
-\small{Ingeniería Informática, Universidad Nacional del Litoral}\\
-\small{Santa Fe de la Vera Cruz, 3000, Santa Fe, Argentina}\\
-\small{\texttt{$^{1}$matiasmeurzet@gmail.com, $^{2}$leandroperren@gmail.com}}
+% cuerpo del documento
+\title{
+	\Large{\textcolor{charcoal}{Universidad Nacional del Litoral}\\
+	Facultad de Ingeniería y Ciencias Hídricas}\\ \vspace{10mm}
+	\huge{\textbf{Desarrollo de métodos inteligentes para la detección y clasificación de ronquidos\\ CAMBIAR!}}\\ \vspace{10mm}
+	\Large{Ingeniería en Informática Aplicada} \vspace{10mm}
 }
+
+\author{
+	\textbf{Autores:} Meurzet, Matías - Perren, Leandro\\
+	\textbf{Director y Co-Director:} Milone, Diego - Albornoz, Marcelo \\ \\
+	\small{Santa Fe de la Vera Cruz, 3000, Santa Fe, Argentina}
+}
+
 \date{\small{\today}}
 
 \maketitle
@@ -173,8 +190,9 @@ Esta tesis presenta la siguiente estructura:
 %	CAPITULO 2 - METODOS
 %
 %==============================================================================
-\chapter{Método de detección de ronquidos por medio de Pitch($T_0$)}
+\chapter{Desarrollo de la propuesta}
 
+\section{Método de detección de ronquidos por medio de Pitch($T_0$)}
 Para este trabajo se dispuso de una cantidad de 23 señales de formato EDF provistas por un médico especializado en trastornos de sueño. Cada una de ellas contiene la grabación de una persona mientras duerme con una duración promedio de 7 hs. Estas señales se registraron a una frecuencia de muestreo de 100Hz por medio del sistema médico Apnealink el cual realiza un análisis de la señal generando un archivo de extensión CSV, donde el propio sistema etiqueta los eventos de ronquidos indicando la hora en que se producen.  Mediante este archivo se pudo localizar en la señal los momentos de ronquidos y extraer algunos segmentos de ellos para poder analizarlos. 
 
 De acuerdo a la extracción y análisis de distintos segmentos, se pudo observar que estos contienen una serie de concentraciones de energía separados entre sí, de manera que presentan cierta repetitividad o periodicidad, tal como se aprecia en el segmento de la Figura \ref{figura:segmento_1_minuto}.
@@ -499,15 +517,24 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 
 \section{Tasas de aciertos del método en Matlab}
 
+
 \chapter{Desarrollo de aplicación Android}
 
 \section{Análisis y definición de requerimientos}
+\subsection{Requerimientos funcionales}
+\subsection{Requerimientos no funcionales}
 
 \section{Diseño del sistema y del software}
+\subsection{Casos de Uso}
+\subsection{Diagramas de secuencia}
+\subsection{Diseño de Clases}
 
 \section{Integración y prueba del sistema}
 
+\section{Optimizaciones de la aplicación Android}
+
 \section{Tasas de aciertos aplicación Android}
+
 
 \chapter{Conclusión}
 
