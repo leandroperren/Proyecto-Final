@@ -541,6 +541,70 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 \end{figure}
 
 \section{Cantidad mínima de ronquidos por segmento}
+A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a traves del T0. Por un lado se analiza que efectos tiene en el valor del T0 la existencia de subsegmentos que no contengan ronquidos contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 5 minutos con ronquidos y se extrajeron subsegmentos de distintas duraciones, de 1,2,3 y 4 minutos que no contenían ronquidos. Luego se volvió a calcular el T0 sin estos subsegmentos a fin de demostrar si esos subsegmentos sin ronquidos tienen algun tipo de implicancia. Tal como se puede apreciar en el Cuadro \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3 o 4 minutos, el T0 detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa). 
+
+El otro aspecto consiste en determinar el mínimo indispensable de eventos necesarios para que el T0 sea detectado sin sufrir grandes desvíos respecto de la media. 
+Para ello se analizó una parte del segmento, en particular con una duración de 15 segundos, en los cuales había 4 episodios de ronquido presentes, luego se procedió a quitar de a un evento a la vez y volver a calcular el T0 y así observar si presentan diferencias. Si se observa el Cuadro \ref{tabla:cantidad_minima_t0}, se puede concluir que la cantidad mínima de eventos necesarios para la correcta detección es de 2 ya que con un solo evento el T0 da un valor de 2.58 segundos, lo cual esta por debajo de los 4 segundos promedio. 
+
+En conclusión, no existe restricción alguna en cuanto a la duración de sub­segmentos sin ronquidos, siempre y cuando en alguna parte del segmento completo, existan  al menos 2 eventos de ronquido.  
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			T0 & Descripción\\ 
+			\hline \hline
+			4.24 & Señal completa \\ \hline
+			4.34 & Último minuto eliminado \\ \hline
+			4.24 & Minuto 4 eliminado \\ \hline
+			4.24 & Minuto 3 eliminado \\ \hline
+			4.24 & Minuto 2 eliminado \\ \hline
+			4.24 & Minuto 1 eliminado \\ \hline
+			\hline \hline
+			4.19 & Últimos 2 minutos eliminados \\ \hline
+			4.34 & Minutos 1 y 5 eliminados \\ \hline
+			4.34 & Minutos 2 y 5 eliminados \\ \hline
+			4.34 & Minutos 3 y 5 eliminados \\ \hline
+			4.19 & Minutos 4 y 5 eliminados \\ \hline
+			4.24 & Minutos 1 y 4 eliminados \\ \hline
+			4.24 & Minutos 2 y 4 eliminados \\ \hline
+			4.24 & Minutos 3 y 4 eliminados \\ \hline
+	    4.19 & Minutos 5 y 4 eliminados \\ \hline
+			4.24 & Minutos 1 y 3 eliminados \\ \hline
+			4.24 & Minutos 2 y 3 eliminados \\ \hline
+			4.24 & minutos 1 y 2 eliminados \\ \hline
+			\hline \hline
+			4.19 & Últimos 3 minutos eliminados \\ \hline
+			4.24 & Minutos 1,2,3 \\ \hline
+			4.24 & Minutos 2,3,4 \\ \hline
+			4.19 & Minutos 3,4,5 \\ \hline
+			\hline \hline
+			4.50 & Últimos 4 minutos eliminados \\ \hline
+			4.24 & Minutos 1,2,3 y 4 \\ \hline
+			\hline \hline
+		\end{tabular}
+		\caption{T0 de segmentos eliminando subsegmentos sin ronquidos.}
+		\label{tabla:subsegmentos_t0}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			T0 & Descripción\\ 
+			\hline \hline
+			4.24 & Últimos 15 segundos \\ \hline
+			4.24 & Últimos 15 segundos (contiene 4 eventos de ronquido) \\ \hline
+			4.24 & Últimos 15 segundos con 3 eventos \\ \hline
+			4.12 & Últimos 15 segundos con 2 eventos \\ \hline
+			2.58 & Últimos 15 segundos con 1 eventos \\ \hline
+			\hline \hline
+		\end{tabular}
+		\caption{Mínima cantidad de eventos por segmento.}
+		\label{tabla:cantidad_minima_t0}
+	\end{center}
+\end{table}    
 
 \section{Tasas de aciertos del método en Matlab}
 
