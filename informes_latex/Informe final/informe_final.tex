@@ -17,11 +17,11 @@ bottom=2.5cm,
 top=2.5cm }
 \renewcommand{\baselinestretch}{1.2}
 
-\usepackage{color}
+\usepackage{xcolor,colortbl}
 \definecolor{light-grey}{gray}{0.9}
 \definecolor{medium-grey}{gray}{0.5}
-\definecolor{charcoal}{gray}{0.3}
-\usepackage{xcolor,colortbl}
+\definecolor{charcoal}{HTML}{333333}
+
 \usepackage{mathrsfs} 
 
 \pagestyle{fancy}
@@ -53,7 +53,11 @@ top=2.5cm }
 
 \begin{document}
 
-% cuerpo del documento
+%==============================================================================
+%
+%	PORTADA DE TESIS
+%
+%==============================================================================
 \title{
 	\Large{\textcolor{charcoal}{Universidad Nacional del Litoral}\\
 	Facultad de Ingeniería y Ciencias Hídricas}\\ \vspace{10mm}
@@ -71,28 +75,46 @@ top=2.5cm }
 
 \maketitle
 
-% Indices de contenido, figuras y tablas respectivamente
+
+%==============================================================================
+%
+%	INDICES DE CONTENIDO, FIGURAS Y TABLAS RESPECTIVAMENTE
+%
+%==============================================================================
 \tableofcontents
 \thispagestyle{empty}
+
 \listoffigures
 \thispagestyle{empty}
+
 \listoftables
 \thispagestyle{empty}
 
+
+%==============================================================================
+%
+%	RESUMEN
+%
+%==============================================================================
 \newpage
 
 \chapter*{Resumen}
-
 \thispagestyle{empty}
 
-En la actualidad existen distintas herramientas de uso doméstico para la detección de ronquidos, las cuales van desde elementos diseñados especialmente, como almohadas inteligentes o pulseras, hasta diferentes aplicaciones para dispositivos móviles. Todas ellas consisten del análisis de una señal capturada por medio del micrófono de tal dispositivo. \\
-La problemática con estos métodos es que solamente realizan un análisis de la señal en busca de cambios bruscos del nivel de energía, esto hace que las aplicaciones sean poco robustas a los ruidos que se pueden presentar en un entorno cotidiano bajo condiciones normales, entendiéndose por tal escenario a una habiatación personal donde hay movimiento de gente y ruidos provocados por ellos mismos, además de los provenientes de distintos objetos, tanto internos como externos a la habitación. \\
-En la presente tesis se propone desarrollar una aplicación Android capaz de detectar episodios de ronquidos capturados por medio del micrófono del dispositivo y que sea robusta frente al ruido. 
-Para ello se presenta un método basado en el cálculo del Pitch ($T_0$ de aquí en adelante) por medio de la autocorrelacion, este método recorrerá por ventaneo en tiempo real toda la  señal capturada por el dispositivo y determinará si el $T_0$ de esa ventana se encuentra dentro de un rango determinado para que sea considerado ronquido. Este rango de $T_0$ se determina mediante la extracción de una gran cantidad de ronquidos de señales limpias de formato \textbf{*.EDF} provistas por un especialista de trastornos de sueño y que  contienen la grabación de toda una noche de sueño (6 o 7 horas de duración), correspondientes a personas de ambos sexos. \\
-La base del método que se propone esta en la naturaleza cuasi-periódica que los ronquidos presentan y que los ruidos no, a su vez la ventaja de utilizar el $T_0$ se basa en que únicamente se analiza temporalmente la señal y que se puede utilizar señales de baja frecuencia (100Hz) lo que genera un costo computacional, de almacenamiento y de consumo energético mucho menor al de otros metodos que utilizan además carácteristicas frecuenciales. \\
+En la actualidad existen distintas herramientas de uso doméstico para la detección de ronquidos, las cuales van desde elementos diseñados especialmente, como almohadas inteligentes o pulseras, hasta diferentes aplicaciones para dispositivos móviles. Todas ellas consisten del análisis de una señal capturada por medio del micrófono de tal dispositivo.
+
+La problemática con estos métodos es que solamente realizan un análisis de la señal en busca de cambios bruscos del nivel de energía, esto hace que las aplicaciones sean poco robustas a los ruidos que se pueden presentar en un entorno cotidiano bajo condiciones normales, entendiéndose por tal escenario a una habiatación personal donde hay movimiento de gente y ruidos provocados por ellos mismos, además de los provenientes de distintos objetos, tanto internos como externos a la habitación.
+
+En la presente tesis se propone desarrollar una aplicación Android capaz de detectar episodios de ronquidos capturados por medio del micrófono del dispositivo y que sea robusta frente al ruido.
+
+Para ello se presenta un método basado en el cálculo del Pitch ($T_0$ de aquí en adelante) por medio de la autocorrelacion, este método recorrerá por ventaneo en tiempo real toda la  señal capturada por el dispositivo y determinará si el $T_0$ de esa ventana se encuentra dentro de un rango determinado para que sea considerado ronquido. Este rango de $T_0$ se determina mediante la extracción de una gran cantidad de ronquidos de señales limpias de formato \textbf{*.EDF} provistas por un especialista de trastornos de sueño y que  contienen la grabación de toda una noche de sueño (6 o 7 horas de duración), correspondientes a personas de ambos sexos.
+
+La base del método que se propone esta en la naturaleza cuasi-periódica que los ronquidos presentan y que los ruidos no, a su vez la ventaja de utilizar el $T_0$ se basa en que únicamente se analiza temporalmente la señal y que se puede utilizar señales de baja frecuencia (100Hz) lo que genera un costo computacional, de almacenamiento y de consumo energético mucho menor al de otros metodos que utilizan además carácteristicas frecuenciales.
+
 Los resultados que se obtuvieron de las pruebas de la aplicación arrojaron buenas tasas de aciertos, superando el 80\% y en algunos casos llegando a valores cercanos al 100\%, tanto para pruebas realizadas sobre señales limpias como para señales capturadas en entornos cotidianos conteniendo una gran cantidad de ruidos.
 
 \newpage
+
 
 %==============================================================================
 %
@@ -102,12 +124,13 @@ Los resultados que se obtuvieron de las pruebas de la aplicación arrojaron buena
 \setcounter{chapter}{0}
 
 \chapter{Introducción}
+\thispagestyle{empty}
 \section{Motivación} 
 El ronquido es un sonido respiratorio producido durante el sueño pudiendo ser inspiratorio, espiratorio o bien ocupar todo el ciclo respiratorio. El surgimiento se debe a que el flujo de aire encuentra una obstrucción al pasar por detrás de la boca y la nariz, en donde la lengua y la parte superior de la garganta se encuentran con el paladar blando y la úvula. El choque de estas estructuras sumado al paso de la respiración determina la presencia del ronquido [1].
 
 La importancia de la detección de esta patología excede el simple hecho de evitar roncar por las noches, esta situación puede ocasionar trastornos sociales al impedir el sueño de aquellos que rodeen al roncador, así como también producir el conocido Síndrome de Apneas Obstructivas del Sueño (SAOS). De acuerdo con lo anteriormente mencionado, se pueden encontrar 2 (dos) tipos o clases de ronquidos: simple, el cual no molesta a los acompañantes, o bien alto habitual (o social), debido a que suele afectar a un eventual acompañante o conviviente. Ambos casos no presentan resistencias de la vía aérea superior [2][3]. 
 
-Actualmente existen numerosas herramientas y dispositivos que permiten detectar esta patología en una persona. Dentro de éstas se encuentran diferentes aplicaciones disponibles para dispositivos móviles (smartphones) que cuenten con sistema operativo (OS) Android [6] o AppleiOS[7],ejemplos de las mismas son las aplicaciones SnoreClock y AntiSnore para Android y, AntiRonquidos y SnoreLab para dispositivos iPhone. Otros dispositivos que se encuentran disponibles hoy en día y que suelen ser menos frecuentes y más costosos son, por ejemplo, Snore-detection pillow [9] o almohada detectora de ronquidos, las pulseras detectoras, las cuales son colocadas en la muñeca como si se tratara de un reloj, además de una cama inteligente (The Starry Night Sleep Technology Bed) [8] que dispone de un dispositivo de detección y ajuste de la posición de la cabeza para que los sonidos cesen. Algunos de los dispositivos mencionados para la detección de esta patología (principalmente dispositivos móviles) están basados en un simple análisis de la señal de audio digital, capturada por el dispositivo, buscando cambios bruscos que superen un umbral dado de energía, indicando así la presencia de ronquido.
+Actualmente existen numerosas herramientas y dispositivos que permiten detectar esta patología en una persona. Dentro de éstas se encuentran diferentes aplicaciones disponibles para dispositivos móviles (smartphones) que cuenten con sistema operativo (OS) Android [6] o AppleiOS [7], ejemplos de las mismas son las aplicaciones SnoreClock y AntiSnore para Android y, AntiRonquidos y SnoreLab para dispositivos iPhone. Otros dispositivos que se encuentran disponibles hoy en día y que suelen ser menos frecuentes y más costosos son, por ejemplo, Snore-detection pillow [9] o almohada detectora de ronquidos, las pulseras detectoras, las cuales son colocadas en la muñeca como si se tratara de un reloj, además de una cama inteligente (The Starry Night Sleep Technology Bed) [8] que dispone de un dispositivo de detección y ajuste de la posición de la cabeza para que los sonidos cesen. Algunos de los dispositivos mencionados para la detección de esta patología (principalmente dispositivos móviles) están basados en un simple análisis de la señal de audio digital, capturada por el dispositivo, buscando cambios bruscos que superen un umbral dado de energía, indicando así la presencia de ronquido.
 
 La problemática de los métodos actuales mencionados, radica en el hecho de que no cualquier sonido que supere cierto umbral de energía es un ronquido. Este problema se puede presentar de manera habitual cuando un individuo realiza la grabación en un ambiente natural como una habitación, en la cual se pueden adicionar muchos ruidos. Se entiende como ruido toda aquella información no deseada que se encuentre contenida en la señal bajo análisis, generando inconvenientes, pudiendo ser estos tanto externos (colectivos, motos, vecinos, etc.) como internos (charlas, música, TV, cierre brusco de puerta, etc.) incorporando una gran cantidad de energía a la señal, siendo eventualmente detectados como ronquido. 
 
@@ -122,18 +145,22 @@ Desde esta problemática, se propone desarrollar una aplicación para dispositivos
 
 La importancia de la mecánica de la respiración [5] y de la fisiología y anatomía de la vía aérea superior (VAS) [5]: fosas nasales, faringe y laringe, reside en el conocimiento funcional del aparato respiratorio para comprender por qué se produce el ronquido. El funcionamiento incorrecto de alguna de sus partes provoca la oclusión intermitente de la VAS que predispone el desarrollo de la roncopatía. La informática [12][13] es una ciencia que estudia métodos, procesos y técnicas con el fin de almacenar, procesar y transmitir información y datos en formato digital. Los campos aplicables para este estudio van desde la ciencia de la computación hasta la ingeniería de software para el desarrollo de una solución integral de computo y comunicación capaz de procesar información de manera automática. El procesamiento de señales [10] permite la manipulación matemática de la señal para modificarla, mejorarla y extraer información en algún sentido con el fin de obtener las características necesarias para una posterior detección. 
 
-El método que se desarrola en esta tesis presenta el desafío de lograr una detección de ronquidos con la mayor tasa de aciertos posible. Para ello fue preciso realizar un estudio exhaustivo de las características temporales de diferentes ronquidos de manera tal que la detección, aún en presencia de ruido, presente una gran robustez. Al estudiar los diferentes ronquidos se debió tener presente las condiciones del entorno en el que se captura la señal, ya que esto tiene incidencia directa en la amplia variedad de ruidos que pueden afectarla. 
+El método que se desarrolla en esta tesis presenta el desafío de lograr una detección de ronquidos con la mayor tasa de aciertos posible. Para ello fue preciso realizar un estudio exhaustivo de las características temporales de diferentes ronquidos de manera tal que la detección, aún en presencia de ruido, presente una gran robustez. Al estudiar los diferentes ronquidos se debió tener presente las condiciones del entorno en el que se captura la señal, ya que esto tiene incidencia directa en la amplia variedad de ruidos que pueden afectarla. 
 
-Se pretende mediante este trabajo proporcionar una alternativa inteligente respecto a los métodos actuales de detección de ronquidos, además de ser un punto inicial para futuros desarrollos tecnológicos, no necesariamente software sobre teléfonos inteligentes (smartphones), sino también para otros dispositivos que pretendan incorporar inteligencia a fin de detectar el ronquido para llevar a cabo alguna acción determinada. A su vez se espera que sirva de base sólida para futuros trabajos que logren ampliar su alcance llevándolo a la detección y clasificación de otros trastornos como es el caso del SAOS[5]. 
+Se pretende mediante este trabajo proporcionar una alternativa inteligente respecto a los métodos actuales de detección de ronquidos, además de ser un punto inicial para futuros desarrollos tecnológicos, no necesariamente software sobre teléfonos inteligentes (smart\-phones), sino también para otros dispositivos que pretendan incorporar inteligencia a fin de detectar el ronquido para llevar a cabo alguna acción determinada. A su vez se espera que sirva de base sólida para futuros trabajos que logren ampliar su alcance llevándolo a la detección y clasificación de otros trastornos como es el caso del SAOS[5]. 
 
 \section{Estado del arte}
 En esta sección se describe el estado actual de trabajos y aplicaciones que tienden a cumplir objetivos similares a los que se persiguen en esta tesis. Para ello primero se describen una serie de trabajos investigativos de caracter científicos en los cuales se trabaja en base a señales capturadas en estudios de sueños, mediante las cuales se extraen y analizan segmentos de ronquidos y tienen por objeto caracterizar a los mismos tanto temporalmente como frecuencialmente. Por otra parte se analiza el desempeño de algunas de las aplicaciones Android disponibles actualmente indicando sus falencias y posibles mejoras. 
 
-Comenzando por los trabajos investigativos, "`José Antonio Fiz Fernández, Jordi Solá Soler y Raimon Jané Campos"' [14] describen al estado del arte actual de los procedimientos de análisis del ronquido. Los métodos que se mencionan son los cuestionarios del ronquido, nasoendoscopía durante el sueño inducido, maniobras de Müller, manometría de la vía aérea superior, rinomanometría y rinomanometría acústica, técnicas de imagen, medidas acústicas, monitores-analizadores de ronquido y finaliza con otros métodos para analizar el ronquido. De todas ellas lo más interesante son las medidas acústicas, donde se realizan 3 análisis: intensidad, frecuencia y regularidad del ronquido. Por otro lado "`Dirk Pevernagie, Ronald M. Aarts y Micheline De Meyer"' [15] hacen una revisión de los conocimientos científicos con respecto a la evaluación acústica del ronquido, y de ésta manera hacer frente a tópicos como por ejemplo características físicas de los sonidos de ronquidos generados en la vía aérea superior, principios de la medición acústica del sonido, análisis avanzado y modelado de sonidos de ronquidos, evaluación acústica de ronquidos respecto a resultados clínicos y además de cuestiones sin resolver que se plantean para futuras investigaciones. La información más relevante para este trabajo se encuentra en la medición acústica del sonido, donde se extraen características de los mismos, y por otro lado también el apartado de análisis avanzado y modelado, donde se utilizan métodos avanzados como por ejemplo codificación por predicción lineal (LPC, del inglés Linear Predictive Coding), transformada de Fourier para análisis espectral, análisis de onditas (wavelets), modelos ocultos de Markov, análisis en la distribución de energía, determinación del pitch (como el tono) y por último la utilización de estadísticas de alto orden. En otro trabajo "`Ali  Azarbarzina, Zahra  Moussavi"' [16] analizaron grabaciones en audio digital de distintos roncadores, en específico 42 con distintos grados de severidad de apneas (leve, moderado y grave) y 15 roncadores sin apneas. A partir de allí, extrajeron diversas características con las que se determina una norma de variación y se comparan entre pacientes con y sin OSAS (Síndrome de Apnea Obstructora del Sueño). Entre las características extraídas se encuentran la densidad espectral de potencia (PSD) calculada con el método de Welch y con ventanas de Hanning, además para cada segmento, potencia promedio, tasa de cruces por cero (ZCR), frecuencia del pico espectral con la menor frecuencia (Fo), frecuencia del pico con máxima potencia (Fp) y entropía espectral (SE) usada para ver que tan plano es la PSD. Además se realiza un análisis estadístico mediante medianas de las características del sonido de ronquido para cada clase de episodio, como por ejemplo no-apneico, hipopneico y post-apneico. Por otro lado también se realiza un análisis de regresión y clasificación donde se introduce un Indice de Apnea-Hipopnea (AHI) y asume 2 grupos de roncadores, con y sin apneas, introduciendo además otro indicador que es la norma de variación total (TVi) para cada característica individual. Por último se verifican los métodos mediante validación cruzada de la forma leave-one-out. En este otro estudio "`Andrew Keong Ng, Tong San Koh, Kathiravelu Puvanendran y Udantha Ranjith Abeyratne"' [17] hacen un pre-procesamiento de la señal acústica capturada, realizando una transformación invariante del dominio mediante wavelets (onditas) y de ésta manera se realiza una mejora de la señal de ronquido a través de un nivel de umbral de correlación dependiente (LCD) y la identificación de ronquido a través de un detector de actividad de ronquido (SA). Por último "`Ali Azarbarzin y Zahra M. K. Moussavi"' [18] proponen la utilización de un algoritmo automático y sin supervisión para la detección de ronquidos. Uno de los algoritmos utilizados es el de cuadro vertical (V-Box) que se encarga de identificar los episodios de actividad sonora. De estos episodios se extrae la distribución de energía en la sub banda de 500Hz y otras características como cruces por cero (ZCR), transformada de Fourier de tiempo corto (STFT), matriz de covarianza y un vector con la media de las características de los ronquidos. Con estos datos se utiliza un algoritmo de clustering borroso de c-medias (FCM, del inglés Fuzzy c-Means clustering) para etiquetar los episodios de sonido como ronquido, respiración y ruido. 
+Comenzando por los trabajos investigativos, \textit{``José Antonio Fiz Fernández, Jordi Solá Soler y Raimon Jané Campos''} [14] describen al estado del arte actual de los procedimientos de análisis del ronquido. Los métodos que se mencionan son los cuestionarios del ronquido, nasoendoscopía durante el sueño inducido, maniobras de Müller, manometría de la vía aérea superior, rinomanometría y rinomanometría acústica, técnicas de imagen, medidas acústicas, monitores-analizadores de ronquido y finaliza con otros métodos para analizar el ronquido. De todas ellas lo más interesante son las medidas acústicas, donde se realizan 3 análisis: intensidad, frecuencia y regularidad del ronquido. 
+Por otro lado \textit{``Dirk Pevernagie, Ronald M. Aarts y Micheline De Meyer"} [15] hacen una revisión de los conocimientos científicos con respecto a la evaluación acústica del ronquido, y de ésta manera hacer frente a tópicos como por ejemplo características físicas de los sonidos de ronquidos generados en la vía aérea superior, principios de la medición acústica del sonido, análisis avanzado y modelado de sonidos de ronquidos, evaluación acústica de ronquidos respecto a resultados clínicos y además de cuestiones sin resolver que se plantean para futuras investigaciones. La información más relevante para este trabajo se encuentra en la medición acústica del sonido, donde se extraen características de los mismos, y por otro lado también el apartado de análisis avanzado y modelado, donde se utilizan métodos avanzados como por ejemplo codificación por predicción lineal (LPC, del inglés Linear Predictive Coding), transformada de Fourier para análisis espectral, análisis de onditas (wavelets), modelos ocultos de Markov, análisis en la distribución de energía, determinación del pitch (como el tono) y por último la utilización de estadísticas de alto orden. 
+En otro trabajo \textit{``Ali  Azarbarzina, Zahra  Moussavi"} [16] analizaron grabaciones en audio digital de distintos roncadores, en específico 42 con distintos grados de severidad de apneas (leve, moderado y grave) y 15 roncadores sin apneas. A partir de allí, extrajeron diversas características con las que se determina una norma de variación y se comparan entre pacientes con y sin OSAS (Síndrome de Apnea Obstructora del Sueño). Entre las características extraídas se encuentran la densidad espectral de potencia (PSD) calculada con el método de Welch y con ventanas de Hanning, además para cada segmento, potencia promedio, tasa de cruces por cero (ZCR), frecuencia del pico espectral con la menor frecuencia (Fo), frecuencia del pico con máxima potencia (Fp) y entropía espectral (SE) usada para ver que tan plano es la PSD. Además se realiza un análisis estadístico mediante medianas de las características del sonido de ronquido para cada clase de episodio, como por ejemplo no-apneico, hipopneico y post-apneico. Por otro lado también se realiza un análisis de regresión y clasificación donde se introduce un Indice de Apnea-Hipopnea (AHI) y asume 2 grupos de roncadores, con y sin apneas, introduciendo además otro indicador que es la norma de variación total (TVi) para cada característica individual. Por último se verifican los métodos mediante validación cruzada de la forma leave-one-out. 
+En otro estudio \textit{``Andrew Keong Ng, Tong San Koh, Kathiravelu Puvanendran y Udantha Ranjith Abeyratne"} [17] hacen un pre-procesamiento de la señal acústica capturada, realizando una transformación invariante del dominio mediante wavelets (onditas) y de ésta manera se realiza una mejora de la señal de ronquido a través de un nivel de umbral de correlación dependiente (LCD) y la identificación de ronquido a través de un detector de actividad de ronquido (SA). 
+Por último \textit{``Ali Azarbarzin y Zahra M. K. Moussavi"} [18] proponen la utilización de un algoritmo automático y sin supervisión para la detección de ronquidos. Uno de los algoritmos utilizados es el de cuadro vertical (V-Box) que se encarga de identificar los episodios de actividad sonora. De estos episodios se extrae la distribución de energía en la sub banda de 500Hz y otras características como cruces por cero (ZCR), transformada de Fourier de tiempo corto (STFT), matriz de covarianza y un vector con la media de las características de los ronquidos. Con estos datos se utiliza un algoritmo de clustering borroso de c-medias (FCM, del inglés Fuzzy c-Means clustering) para etiquetar los episodios de sonido como ronquido, respiración y ruido. 
 
 La mayoría de los trabajos que se mencionan en el párrafo anterior si bien presentan métodos y procedimientos interesantes no pueden ser aplicados totalmente a los fines de esta tésis, en principio no estan enfocados directamente a la detección de episodios de ronquidos sino mas bien a caracterizar ronquidos ya extraidos de señales de altas resoluciones lo que les permite extraer en su mayoria caracteristicas frecuenciales (formantes, wavelets, Fourier, etc.), al mismo tiempo que algunos trabajos realizan comparaciones entre ronquidos simples y ronquidos apneicos lo cual excede el alcance de este trabajo o bien describen diferencias puntuales de ciertas características dependiendo si el ronquido se produce en alguna parte especial de la via aérea superior. Aun así se rescatan cuestiones interesantes que tienen que ver con la naturaleza cuasi-periódica de los ronquidos permitiendo trabajar temporalmente con carcaterísticas como la energía y el pitch (período fundamental) y también rescatar procedimientos relacionados al ventaneo que se describe en algun trabajo.
 
-En cuanto a las aplicaciones, a continucación se describen algunas desarrolladas para Android disponibles al momento en la PlayStore. Una de ellas se llama SnoreClock, la misma presenta una interface sencilla que dispone de los controles elementales para comenzar, detener, reproducir, avanzar y retroceder la grabación. La aplicación presenta una gráfica en tiempo real de lo que va capturando, una vez finalizada la captura se puede recorrer la señal y hasta reproducir segmentos de la misma. Los segmentos que etiqueta como posibles ronquidos los marca en la gráfica en color rojo. El problema de esta aplicación es que etiqueta como posibles ronquidos todo el sonido que supere un determinado umbral de energía durante un cierto período de tiempo, tal como lo define en la información oficial de la app: "`SnoreClock registra todo el ruido mientras duermes y muestra con barras rojas los momentos en los que es posible que hayas roncado"'[19]. Es por esto que el funcionamiento no es para nada preciso reconociendo que resalta momentos en los que posiblemente el usuario ha roncado. Otra aplicación disponible se llama Dream Watcher - Anti ronquidos [20], esta realiza una monitorización de ronquidos y ruidos nocturnos. Dream Watcher va analizando la señal mientras la captura extrayendo aquellos episodios que detecta como posibles ronquidos guardando esos segmentos separadamente como archivos de audios los cuales pueden ser reproducidos. Además se puede ver su gráfica en la que se resalta un umbral marcado en color rojo donde cada vez que la señal supera esa linea cuenta un ronquido. Esta aplicación presenta el mismo problema que la anterior ya que cualquier ruido en el ambiente se lo marca como ronquido, es por esto que en la información oficial de la App sugiere que el segmento esta disponible para escucharse de manera que sea el usuario quien decida si es un ronquido o no en base a lo que el escucha. 
+En cuanto a las aplicaciones, a continucación se describen algunas desarrolladas para Android disponibles al momento en la \textit{PlayStore}. Una de ellas es \textbf{\textit{SnoreClock}}, la misma presenta una interface sencilla que dispone de los controles elementales para comenzar, detener, reproducir, avanzar y retroceder la grabación. La aplicación presenta una gráfica en tiempo real de lo que va capturando, una vez finalizada la captura se puede recorrer la señal y hasta reproducir segmentos de la misma. Los segmentos que etiqueta como posibles ronquidos los marca en la gráfica en color rojo. El problema de esta aplicación es que etiqueta como posibles ronquidos todo el sonido que supere un determinado umbral de energía durante un cierto período de tiempo, tal como lo define en la información oficial de la app: \textit{``SnoreClock registra todo el ruido mientras duermes y muestra con barras rojas los momentos en los que es posible que hayas roncado"} [19]. Es por esto que el funcionamiento no es para nada preciso reconociendo que resalta momentos en los que posiblemente el usuario ha roncado. Otra aplicación disponible es \textbf{\textit{Dream Watcher - Anti ronquidos}} [20], donde la misma realiza una monitorización de ronquidos y ruidos nocturnos. Dream Watcher va analizando la señal mientras la captura, extrayendo aquellos episodios que detecta como posibles ronquidos guardando esos segmentos separadamente como archivos de audios los cuales pueden ser reproducidos. Además se puede ver su gráfica en la que se resalta un umbral marcado en color rojo donde cada vez que la señal supera esa linea cuenta un ronquido. Esta aplicación presenta el mismo problema que la anterior ya que cualquier ruido en el ambiente se lo marca como ronquido, es por esto que en la información oficial de la App sugiere que el segmento esta disponible para escucharse de manera que sea el usuario quien decida si es un ronquido o no en base a lo que el escucha. 
 
 \section{Objetivos}
 \subsection{Objetivos Generales} 
@@ -162,9 +189,9 @@ Por el lado del método de detección, para el estudio de las características temp
 	\item Duración en horas similares (con desvío de +/- 2 horas) 
 \end{itemize}
 
-El análisis de las características temporales se limitó al cálculo del $T_0$ (período fundamental), se consideraron posibles diferencias entre ronquidos de personas de distintos sexos, dejando de lado otras características de los individuos como el peso y la edad, ya que no se dispone de esa información en las señales EDF. A su vez, el método de detección se desarrolló específicamente para ronquidos y se dejó de lado el caso particular de los SAOS y demás trastornos de sueño. 
+El análisis de las características temporales se limitó al cálculo del $T_0$ (período fundamental), se consideraron posibles diferencias entre ronquidos de personas de distintos sexos, dejando de lado otras características de los individuos como el peso y la edad, ya que no se dispone de esa información en las señales EDF. A su vez, el método de detección se desarrolló específicamente para ronquidos y se dejó de lado el caso particular de los SAOS y demás trastornos del sueño, ya que se trabajó solamente con el canal de ronquido de tales grabaciones.
 
-Por el lado de la aplicación Android, esta permite capturar una señal digital por medio del micrófono del dispositivo, la cual será analizada tomando ventanas de 5 minutos determinando si en dicho segmento se producen ronquidos. La aplicación permite acceder a dos tipos de reportes, uno gráfico y otro en modo texto donde se presentan los resultados. En ellos se indican la hora en que se producen los eventos y una estimación de la intesidad determinando tres niveles. A su vez la aplicación permite enviar via correo electrónico estos reportes a un médico que pudiera estar interesado en los análisis.
+Por el lado de la aplicación Android, esta permite capturar una señal digital por medio del micrófono del dispositivo, la cual será analizada tomando ventanas de 5 minutos determinando si en dicho segmento se producen ronquidos. La aplicación permite acceder a dos tipos de reportes, uno gráfico y otro en modo texto donde se presentan los resultados. En ellos se indican la hora en que se producen los eventos y una estimación de la intesidad determinando dos niveles. A su vez la aplicación permite enviar via correo electrónico estos reportes a un médico que pudiera estar interesado en los análisis.
 
 El desarrollo de esta aplicación movil cumple con las siguientes características: 
 \begin{itemize}
@@ -172,15 +199,15 @@ El desarrollo de esta aplicación movil cumple con las siguientes características
 	\item Sencillez
 	\item Eficiencia
 	\item Óptimo consumo de batería
-	\item Uso óptimo de la capacidad de almacenamiento
+	\item Óptimo uso de la capacidad de almacenamiento
 \end{itemize} 
 
 \section{Organización de la tesis}
 Esta tesis presenta la siguiente estructura:
 \begin{itemize}
-	\item En el presente capítulo se describió la motivación de este desarrollo y el problema que será abordado. Se presenta una revisión del estado del arte de dispositivos y aplicaciones destinados a detectar ronquidos, como también se describen trabajos investigativos orientados a la detección de los mismos utilizando señales obtenidas en estudios de sueños. Luego se presentan los objetivos y alcances y finalmente, se describe la estructura de capítulos.
-	\item En el capítulo 2 se describe el método de detección desarrollado en esta tesis. Primeramente se describe la extracción de ronquidos y calculo del $T_0$ de las señales limpias EDF y se determina en base a ellos un rango de decisión. Posteriormente se capturan diferentes sonidos no deseados y se comparan los T0 con los de los segmentos de ronquidos. Para finalizar se presentan las tasas de acierto del algoritmo detector desarrollado en Matlab utilizando las señales limpias EDF.
-	\item En el capítulo 3 se presenta el desarrollo de la aplicación Android. Primeramente se desarrollan las distintas etapas propuestas por la Ingeniería de Software. Luego se calculan las tasas de aciertos de la aplicación realizando distintas pruebas tanto con señales limpias (EDF) como en entornos cotidianos propensos a un alto contenido de ruidos.
+	\item En el presente capítulo se describió la motivación de este desarrollo y el problema que será abordado. Se presenta una revisión del estado del arte de dispositivos y aplicaciones destinados a detectar ronquidos, como también se describen trabajos investigativos orientados a la detección de los mismos utilizando señales obtenidas en estudios del sueño. Luego se presentan los objetivos y alcances, y finalmente, se describe la estructura de capítulos.
+	\item En el capítulo 2 se describe el método de detección desarrollado en esta tesis. Primeramente se describe la extracción de ronquidos y calculo del $T_0$ de las señales limpias EDF (canal de Ronquido) y se determina en base a ellos un rango de decisión. Posteriormente se capturan diferentes sonidos no deseados y se comparan los $T_0$ con los de los segmentos de ronquidos. Para finalizar se presentan las tasas de acierto del algoritmo detector desarrollado en Matlab utilizando las señales limpias EDF.
+	\item En el capítulo 3 se presenta el desarrollo de la aplicación Android. Primeramente se desarrollan las distintas etapas propuestas por la Ingeniería de Software. Luego se calculan las tasas de aciertos de la aplicación realizando distintas pruebas tanto con señales limpias (canal de Ronquido en EDF) como en entornos cotidianos propensos a un alto contenido de ruidos.
 	\item El capítulo 4 dispone de las conclusiones particulares y generales como también de propuestas de futuros trabajos que podrían derivar del presente.
 \end{itemize}
 
@@ -191,7 +218,7 @@ Esta tesis presenta la siguiente estructura:
 %
 %==============================================================================
 \chapter{Desarrollo de la propuesta}
-
+\thispagestyle{empty}
 \section{Método de detección de ronquidos por medio de Pitch($T_0$)}
 Para este trabajo se dispuso de una cantidad de 23 señales de formato EDF provistas por un médico especializado en trastornos de sueño. Cada una de ellas contiene la grabación de una persona mientras duerme con una duración promedio de 7 hs. Estas señales se registraron a una frecuencia de muestreo de 100Hz por medio del sistema médico Apnealink el cual realiza un análisis de la señal generando un archivo de extensión CSV, donde el propio sistema etiqueta los eventos de ronquidos indicando la hora en que se producen.  Mediante este archivo se pudo localizar en la señal los momentos de ronquidos y extraer algunos segmentos de ellos para poder analizarlos. 
 
@@ -200,7 +227,7 @@ De acuerdo a la extracción y análisis de distintos segmentos, se pudo observar q
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\columnwidth]{img/figure1}	
-	\caption[Energia ronquidos]{Segmento de 1 minuto etiquetado como ronquidos.}
+	\caption{Segmento de 1 minuto etiquetado como ronquidos.}
 	\label{figura:segmento_1_minuto}
 \end{figure}
 
@@ -220,7 +247,7 @@ Se puede observar en la Figura \ref{figura:segmento_ronquido_autocorr} de la aut
 
 \begin{figure}[H]
 	\includegraphics[width=1\columnwidth]{img/figure2}	
-	\caption[Energia ronquidos]{Segmento con ronquidos y su autocorrelación.}
+	\caption{Segmento con ronquidos y su autocorrelación.}
 	\label{figura:segmento_ronquido_autocorr}
 \end{figure}
 
@@ -401,8 +428,8 @@ Se puede observar que los valores promedios en ambos casos (mujeres y hombres), 
 \section{Análisis de sonidos no deseados (ruidos)}
 Dentro de esta sección se describen los resultados obtenidos del análisis realizado a sonidos no deseados. Por sonido no deseado, debe entenderse como todo aquel sonido que se puede acoplar en una grabación en entornos cotidianos y, que no se trata de un ronquido. Es por ésto, que a los fines del presente trabajo, se consideran como ruidos los sonidos de vehículos, murmullos o personas hablando, música, etcétera.
 
-Hasta el momento se demostró que los valores del T0 para segmentos con ronquidos extraídos de diferentes señales tanto de mujeres como hombres, presentan cierta similitud permitiendo concluir que el T0 es una característica representativa de los segmentos con ronquidos. De todas maneras, esto no es suficiente para poder utilizar esta característica en una aplicación que permita detectar estos segmentos diferenciandolos de aquellos que contienen solo ruidos. Esto se debe a que aquellos sonidos no deseados que se pudieran capturar durante la grabación podrían tener un T0 similar que llegue a caer dentro del rango establecido para ser considerados como ronquidos.
-Para ello se demostrará en la presente sección que bajo condiciones normales los sonidos no deseados que se pueden capturar por medio del micrófono de un dispositivo movil presentan valores del T0 fuera del rango representativo de los ronquidos.
+Hasta el momento se demostró que los valores del $T_0$ para segmentos con ronquidos extraídos de diferentes señales tanto de mujeres como hombres, presentan cierta similitud permitiendo concluir que el $T_0$ es una característica representativa de los segmentos con ronquidos. De todas maneras, esto no es suficiente para poder utilizar esta característica en una aplicación que permita detectar estos segmentos diferenciandolos de aquellos que contienen solo ruidos. Esto se debe a que aquellos sonidos no deseados que se pudieran capturar durante la grabación podrían tener un $T_0$ similar que llegue a caer dentro del rango establecido para ser considerados como ronquidos.
+Para ello se demostrará en la presente sección que bajo condiciones normales los sonidos no deseados que se pueden capturar por medio del micrófono de un dispositivo movil presentan valores del $T_0$ fuera del rango representativo de los ronquidos.
 
 Se comenzó capturando distintas señales por medio de dispositivos móviles como una tablet y dos celulares. Para esto se instaló en los dispositivos la aplicación Easy Voice Recorder por medio de la cual se grabaron archivos en formato .WAV. Estas grabaciones se llevaron a cabo en ambientes bajo condiciones normales durante las horas del día ya que es mayor la cantidad de ruidos presentes, todas se capturaron a una frecuencia de muestreo de 8000 Hz que es la mínima frecuencia de muestreo que admite la aplicación, pero fueron submuestreadas a 100Hz de manera que tengan igual frecuencia de muestreo que las EDF. Luego se analizaron manualmente con el software Audacity extrayendo segmentos de 1 y 5 minutos que contenían distintos ruidos, por ejemplo: sonidos de vehículos en la calle, personas hablando, ladridos de perros, música proveniente de una radio y sonido de máquinas de obreros trabajando.
 
@@ -412,37 +439,37 @@ A su vez el segmento graficado en la Figura \ref{figura:ruido2_1_minuto} consist
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure3}	
-	\caption[Energia ronquidos]{Sonido de maquinas trabajando, personas hablando y vehículos.}
+	\caption{Sonido de maquinas trabajando, personas hablando y vehículos.}
 	\label{figura:ruido1_1_minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure4}	
-	\caption[Energia ronquidos]{Sonido de un automovil circulando.}
+	\caption{Sonido de un automovil circulando.}
 	\label{figura:ruido2_1_minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure5}	
-	\caption[Energia ronquidos]{Sonido de dos vehículos circulando.}
+	\caption{Sonido de dos vehículos circulando.}
 	\label{figura:ruido3_1_minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure6}	
-	\caption[Energia ronquidos]{Sonido de perros ladrando.}
+	\caption{Sonido de perros ladrando.}
 	\label{figura:ruido4_1_minuto}
 \end{figure}
 
-Como se puede ver en las figuras \ref{figura:ruido1_1_minuto}, \ref{figura:ruido2_1_minuto}, \ref{figura:ruido3_1_minuto} y \ref{figura:ruido4_1_minuto}, en los cuatro gráficos de la autocorrelación (parte inferior) no existen en ellos la presencia de un valor pico que sobresalga del resto como si sucede en los segmentos con ronquidos, donde claramente existe un valor pico correspondiente al T0, esto se ve reflejado claramente en la comparación de las autocorrelaciones graficadas en la Figura \ref{figura:autocorrelacion_ruido_ronquidos}. Esto se debe a que en los segmentos con ronquidos, las señales presentan una naturaleza cuasi-periódica debido a la presencia de una serie de ronquidos de manera contínua, y a que los mismos tienen una apariencia similar entre sí; ésto no ocurre en los ruidos antes analizados, donde tienden a concentrar su energía en un momento determinado (por ejemplo, el caso de vehículos). 
+Como se puede ver en las figuras \ref{figura:ruido1_1_minuto}, \ref{figura:ruido2_1_minuto}, \ref{figura:ruido3_1_minuto} y \ref{figura:ruido4_1_minuto}, en los cuatro gráficos de la autocorrelación (parte inferior) no existen en ellos la presencia de un valor pico que sobresalga del resto como si sucede en los segmentos con ronquidos, donde claramente existe un valor pico correspondiente al $T_0$, esto se ve reflejado claramente en la comparación de las autocorrelaciones graficadas en la Figura \ref{figura:autocorrelacion_ruido_ronquidos}. Esto se debe a que en los segmentos con ronquidos, las señales presentan una naturaleza cuasi-periódica debido a la presencia de una serie de ronquidos de manera contínua, y a que los mismos tienen una apariencia similar entre sí; ésto no ocurre en los ruidos antes analizados, donde tienden a concentrar su energía en un momento determinado (por ejemplo, el caso de vehículos). 
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure7}	
-	\caption[Energia ronquidos]{Autocorrelacion de ronquidos y autocorrelación sonido ambiental.}
+	\caption{Autocorrelacion de ronquidos y autocorrelación de sonido ambiental.}
 	\label{figura:autocorrelacion_ruido_ronquidos}
 \end{figure}
 
@@ -451,65 +478,65 @@ Debido a que los segmentos analizados recientemente eran todos de 1 minuto de du
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure8}	
-	\caption[Energia ronquidos]{Sonido de un automovil circulando.}
+	\caption{Sonido de un automovil circulando en 5 minutos.}
 	\label{figura:ruido1_5minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure9}	
-	\caption[Energia ronquidos]{Sonido de dos vehículos circulando.}
+	\caption{Sonido de dos vehículos circulando en 5 minutos.}
 	\label{figura:ruido2_5minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure10}	
-	\caption[Energia ronquidos]{Sonido de dos vehículos circulando y ladridos de perros.}
+	\caption{Sonido de dos vehículos circulando y ladridos de perros en 5 minutos.}
 	\label{figura:ruido3_5minuto}
 \end{figure}
 
-Tomando duraciones de 5 minutos se puede ver que en algunos segmentos se juntan distintos sonidos no deseados que antes (segmentos de 1 minuto de duración) se trataron separadamente como se puede ver en la Figura \ref{figura:ruido3_5minuto}. Esto es interesante para ver que sucede con el T0 en segmentos con muchos y diferentes ruidos. 
-Si se observan las gráficas de autocorrelación de las Figuras \ref{figura:ruido1_5minuto} y \ref{figura:ruido2_5minuto} se ve que el aumento del tamaño del segmento no implica cambios ya que no se observa ningún pico sobresaliente, lo mismo sucede para el caso de la Figura \ref{figura:ruido3_5minuto} que contiene distintos ruidos en un mismo segmento. Estos resultados permiten distinguir claramente estos segmentos de aquellos con ronquidos ya que los segmentos con ruidos no presentan un valor de T0 sobresaliente en torno a los 4 segundos que era el valor promedio que se encontró en los segmentos con ronquidos. 
+Tomando duraciones de 5 minutos se puede ver que en algunos segmentos se juntan distintos sonidos no deseados que antes (segmentos de 1 minuto de duración) se trataron separadamente como se puede ver en la Figura \ref{figura:ruido3_5minuto}. Esto es interesante para ver que sucede con el $T_0$ en segmentos con muchos y diferentes ruidos. 
+Si se observan las gráficas de autocorrelación de las Figuras \ref{figura:ruido1_5minuto} y \ref{figura:ruido2_5minuto} se ve que el aumento del tamaño del segmento no implica cambios ya que no se observa ningún pico sobresaliente, lo mismo sucede para el caso de la Figura \ref{figura:ruido3_5minuto} que contiene distintos ruidos en un mismo segmento. Estos resultados permiten distinguir claramente estos segmentos de aquellos con ronquidos ya que los segmentos con ruidos no presentan un valor de $T_0$ sobresaliente en torno a los 4 segundos que era el valor promedio que se encontró en los segmentos con ronquidos. 
 
-Debido a que se demostró que el T0 es una característica representativa de los ronquidos tanto de mujeres como de hombres y que los análisis de segmentos de ruidos presentan valores del T0 distinguibles se puede concluir que el T0 es una buena característica a utilizar para la detección de los segmentos con ronquidos pudiendo diferenciarlos de sonidos no deseados que puedan encontrarse en grabaciones en entornos cotidianos y asi lograr la robustez que se necesita.
+Debido a que se demostró que el $T_0$ es una característica representativa de los ronquidos tanto de mujeres como de hombres y que los análisis de segmentos de ruidos presentan valores del $T_0$ distinguibles se puede concluir que el $T_0$ es una buena característica a utilizar para la detección de los segmentos con ronquidos pudiendo diferenciarlos de sonidos no deseados que puedan encontrarse en grabaciones en entornos cotidianos y asi lograr la robustez que se necesita.
 
 \section{Mejora a través de funciones de recorte}
 La utilización de funciones de recorte permite acentuar los máximos temporales de la señal (correspondientes al periodo fundamental), de forma que la discriminación del pitch se visualize con mayor claridad en el tramo analizado.
 
 En la Figura \ref{figura:funciones_recorte}, se observan tres funciones de recorte diferentes. Donde CL es el umbral de decisión donde aplicar el descarte, y el eje x representa el valor de la muestra del segmento al que se le aplica el recorte.
 
-A efectos de decidir cuál de las funciones de recortes antes descritas tiene mejor desempeño, se procedió a calcular la autocorrelación para un segmento con ronquidos, tras aplicar a dicho segmento cada una de las funciones de recorte por separado. En la Figura \ref{figura:autocor_funciones_recorte} se muestra una gráfica con los tres resultados posibles tras aplicar cada una de las funciones de recortes, claramente se puede visualizar que la función de recorte 3 es la que arroja los mejores resultados ya que se observan mas resaltados los picos que produce la autocorrelación (T0, 2T0, 3T0, etcétera). Para los casos que se observaron recientemente, el valor del umbral CL se calculó tomando el 10\% del máximo valor del segmento. De esta manera la función de recorte anulará todas las muestras del segmento cuyo valor esté debajo del 10\% del valor máximo, para así fortalecer o dar más importancia a los valores temporales máximos. De todas maneras el valor óptimo del umbral CL se determina en etapas posteriores cuando se evalua el algoritmo detector.
+A efectos de decidir cuál de las funciones de recortes antes descritas tiene mejor desempeño, se procedió a calcular la autocorrelación para un segmento con ronquidos, tras aplicar a dicho segmento cada una de las funciones de recorte por separado. En la Figura \ref{figura:autocor_funciones_recorte} se muestra una gráfica con los tres resultados posibles tras aplicar cada una de las funciones de recortes, claramente se puede visualizar que la función de recorte 3 es la que arroja los mejores resultados ya que se observan mas resaltados los picos que produce la autocorrelación ($T_0$, 2$T_0$, 3$T_0$, etcétera). Para los casos que se observaron recientemente, el valor del umbral CL se calculó tomando el 10\% del máximo valor del segmento. De esta manera la función de recorte anulará todas las muestras del segmento cuyo valor esté debajo del 10\% del valor máximo, para así fortalecer o dar más importancia a los valores temporales máximos. De todas maneras el valor óptimo del umbral CL se determina en etapas posteriores cuando se evalua el algoritmo detector.
 
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=1\columnwidth]{img/figure11}	
-	\caption[Energia ronquidos]{Funciones de recorte}
+		\includegraphics[scale=0.6]{img/figure11}	
+	\caption{Funciones de recorte}
 	\label{figura:funciones_recorte}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure12}	
-	\caption[Energia ronquidos]{Autocorrelaciones aplicando las tres funciones de recorte}
+	\caption{Autocorrelaciones aplicando las tres funciones de recorte}
 	\label{figura:autocor_funciones_recorte}
 \end{figure}
 
-En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto de realce producido por la función de recorte, en segmentos donde los valores pico para encontrar el T0, no son visualmente claros. A su vez en la Figura \ref{figura:autocor_funciones_recorte3} se muestra el efecto producido al aplicar la función de recorte a segmentos de sonidos no deseados. Observando estas dos gráficas, es visible que tanto en el caso de ronquidos, como en el de ruidos (sonidos no deseados), el efecto producido por la función de recorte, acentúa valores correspondientes a los períodos T0, logrando en los casos de ronquidos que aquellos casos donde no eran visibles con facilidad, se puedan observarse claramente. Además, es notorio que en los casos de ruidos, no hay existencia de picos destacándose y menos aún, no existe homogeneidad alguna con respecto a la forma que gráficamente produce la autocorrelación.
+En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto de realce producido por la función de recorte, en segmentos donde los valores pico para encontrar el $T_0$, no son visualmente claros. A su vez en la Figura \ref{figura:autocor_funciones_recorte3} se muestra el efecto producido al aplicar la función de recorte a segmentos de sonidos no deseados. Observando estas dos gráficas, es visible que tanto en el caso de ronquidos, como en el de ruidos (sonidos no deseados), el efecto producido por la función de recorte, acentúa valores correspondientes a los períodos $T_0$, logrando en los casos de ronquidos que aquellos casos donde no eran visibles con facilidad, se puedan observarse claramente. Además, es notorio que en los casos de ruidos, no hay existencia de picos destacándose y menos aún, no existe homogeneidad alguna con respecto a la forma que gráficamente produce la autocorrelación.
 
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure13}	
-	\caption[Energia ronquidos]{Autocorrelación de ronquidos sin y con función de recorte}
+	\caption{Autocorrelación de ronquidos sin y con función de recorte}
 	\label{figura:autocor_funciones_recorte2}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure14}	
-	\caption[Energia ronquidos]{Autocorrelación de sonido ambiental sin y con función de recorte}
+	\caption{Autocorrelación de sonido ambiental sin y con función de recorte}
 	\label{figura:autocor_funciones_recorte3}
 \end{figure}
 
@@ -519,7 +546,7 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 
 
 \chapter{Desarrollo de aplicación Android}
-
+\thispagestyle{empty}
 \section{Análisis y definición de requerimientos}
 \subsection{Requerimientos funcionales}
 \subsection{Requerimientos no funcionales}
@@ -536,9 +563,10 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 \section{Tasas de aciertos aplicación Android}
 
 
-\chapter{Conclusión}
-
+\chapter{Conclusión y Trabajos Futuros}
+\thispagestyle{empty}
 \chapter*{Bibliografia}
+\thispagestyle{empty}
 \addcontentsline{toc}{chapter}{Bibliografía} % esto añade el capitulo en el índice
 [1] PNEUMOWIKI, a enciclopedia de Neumología de contenido libre [consulta: 26 abril 2013]. Disponible en: \url{<http://es.pneumowiki.org/mediawiki/index.php?title=Ronquido>}
 
@@ -582,6 +610,7 @@ Disponible en: \url{<http://buscon.rae.es/drae/?type=3&val=informática&val_aux=&
 [20] Dream Watcher - Anti Ronquidos. Aplicación para detectar ronquidos [consulta: 20 noviembre 2015]. Disponible en: \url{<https://play.google.com/store/apps/details?id=com.arcadexxi.dreamwatcher>}
 
 \chapter*{Anexos}
+\thispagestyle{empty}
 \addcontentsline{toc}{chapter}{Anexos} % esto añade el capitulo en el índice
 \addcontentsline{toc}{section}{Anexo A} % asi se añade una seccion al índice
 \addcontentsline{toc}{section}{Anexo B}
