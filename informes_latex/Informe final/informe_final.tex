@@ -177,14 +177,10 @@ En cuanto a las aplicaciones, a continucación se describen algunas desarrolladas
 Desarrollar una aplicación Android capaz de detectar segmentos con ronquidos a partir de una grabación de audio digital capturada por medio del micrófono del dispositivo presentando alta robustez frente a ruidos en condiciones ambientales normales.
 
 \subsection{Objetivos Específicos}
-\begin{itemize}
-	\item Analizar bibliografía relevante acerca de métodos, técnicas y herramientas informáticas que resulten de utilidad para esta problemática.
-	\item Estudiar características temporales de diferentes ronquidos. 
-	\item Desarrollar método para la extracción de características. 
-	\item Desarrollar método conveniente para la detección/clasificación. 
-	\item Desarrollar una aplicación Android capaz de detectar segmentos de ronquidos. 
-	\item Realizar pruebas sobre señales limpias. 
-	\item Realizar pruebas sobre señales contaminadas. 
+\begin{itemize}  
+  \item Caracterizar temporalmente distintos segmentos de ronquidos.
+	\item Desarrollar un método para la detección/clasificación de ronquidos. 
+	\item Incorporar el método a una aplicación Android capaz de detectar segmentos de ronquidos.
 	\item Lograr una tasa de aciertos en la detección de ronquidos superior a la que presentan ciertas aplicaciones. 
 \end{itemize}
 
@@ -216,9 +212,9 @@ El desarrollo de esta aplicación movil cumplirá con las siguientes característic
 Esta tesis presenta la siguiente estructura:
 \begin{itemize}
 	\item En el presente capítulo se describió la motivación de este desarrollo y el problema que será abordado. Se presenta una revisión del estado del arte de dispositivos y aplicaciones destinados a detectar ronquidos, como también se describen trabajos investigativos orientados a la detección de los mismos utilizando señales obtenidas en estudios del sueño. Luego se presentan los objetivos y alcances, y finalmente, se describe la estructura de capítulos.
-	\item En el capítulo 2 se describe el método de detección desarrollado en esta tesis. Primeramente se describe la extracción de ronquidos y calculo del $T_0$ de las señales limpias EDF (canal de Ronquido) y se determina en base a ellos un rango de decisión. Posteriormente se capturan diferentes sonidos no deseados y se comparan los $T_0$ con los de los segmentos de ronquidos. Para finalizar se presentan las tasas de acierto del algoritmo detector desarrollado en Matlab utilizando las señales limpias EDF.
-	\item En el capítulo 3 se presenta el desarrollo de la aplicación Android. Primeramente se desarrollan las distintas etapas propuestas por la Ingeniería de Software. Luego se calculan las tasas de aciertos de la aplicación realizando distintas pruebas tanto con señales limpias (canal de Ronquido en EDF) como en entornos cotidianos propensos a un alto contenido de ruidos.
-	\item El capítulo 4 dispone de las conclusiones particulares y generales como también de propuestas de futuros trabajos que podrían derivar del presente.
+	\item En el Capítulo 2 se describe el método de detección desarrollado en este proyecto final. Primeramente se describe la extracción de ronquidos y calculo del $T_0$ de las señales limpias EDF (canal de Ronquido) y se determina en base a ellos un rango de decisión. Posteriormente se capturan diferentes sonidos no deseados y se comparan los $T_0$ con los de los segmentos de ronquidos. Para finalizar se presentan las tasas de acierto del algoritmo detector desarrollado en Matlab utilizando las señales limpias EDF.
+	\item En el Capítulo 3 se presenta el desarrollo de la aplicación Android. Primeramente se desarrollan las distintas etapas propuestas por la Ingeniería de Software. Luego se calculan las tasas de aciertos de la aplicación realizando distintas pruebas tanto con señales limpias (canal de Ronquido en EDF) como en entornos cotidianos propensos a un alto contenido de ruidos.
+	\item El Capítulo 4 dispone de las conclusiones particulares y generales como también de propuestas de futuros trabajos que podrían derivar del presente.
 \end{itemize}
 
 
