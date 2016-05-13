@@ -2,8 +2,8 @@
 \contentsline {chapter}{\numberline {1}Introducci\'on}{6}
 \contentsline {section}{\numberline {1.1}Motivaci\'on}{6}
 \contentsline {section}{\numberline {1.2}Estado del arte}{8}
-\contentsline {section}{\numberline {1.3}Objetivos}{11}
-\contentsline {subsection}{\numberline {1.3.1}Objetivos Generales}{11}
+\contentsline {section}{\numberline {1.3}Objetivos}{10}
+\contentsline {subsection}{\numberline {1.3.1}Objetivos Generales}{10}
 \contentsline {subsection}{\numberline {1.3.2}Objetivos Espec\IeC {\'\i }ficos}{11}
 \contentsline {section}{\numberline {1.4}Alcances}{11}
 \contentsline {section}{\numberline {1.5}Organizaci\'on del Proyecto Final}{12}
@@ -14,8 +14,8 @@
 \contentsline {subsection}{\numberline {2.2.2}An\'alisis de se\~nales correspondientes a mujeres}{18}
 \contentsline {section}{\numberline {2.3}Comparaci\'on de $T_0$ entre Hombres y Mujeres}{19}
 \contentsline {section}{\numberline {2.4}An\'alisis de sonidos no deseados (ruidos)}{19}
-\contentsline {section}{\numberline {2.5}Mejora a trav\'es de funciones de recorte}{25}
-\contentsline {section}{\numberline {2.6}Cantidad m\IeC {\'\i }nima de ronquidos por segmento}{28}
+\contentsline {section}{\numberline {2.5}Mejora a trav\'es de funciones de recorte}{24}
+\contentsline {section}{\numberline {2.6}Cantidad m\IeC {\'\i }nima de ronquidos por segmento}{27}
 \contentsline {section}{\numberline {2.7}Tasas de aciertos del m\'etodo en Matlab}{30}
 \contentsline {chapter}{\numberline {3}Desarrollo de aplicaci\'on Android}{31}
 \contentsline {section}{\numberline {3.1}An\'alisis y definici\'on de requerimientos}{31}
