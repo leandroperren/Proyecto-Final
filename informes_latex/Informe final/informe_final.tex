@@ -613,6 +613,11 @@ En conclusión, no existe restricción alguna en cuanto a la duración de sub­segme
 \end{table}    
 
 \section{Tasas de aciertos del método en Matlab}
+Debido a que se utilizó Matlab para calcular el  T0 de los segmentos extraídos de las señales EDF, es que surge la posibilidad de desarrollar un script en Matlab, que sirva a modo de aplicación de referencia, que recorra una señal tomando frames de 5 minutos de duración y que calculando el T0 determine si el segmento poseé ronquidos.
+
+Mediante los resultados que se obtuvieron utilizando este script, se pudo determinar que el método es aplicable antes de realizar la aplicación definitiva sobre la plataforma Android, al mismo tiempo que se pudo comparar estos resultados a fin de validar el correcto desarrollo en Android de funciones como la autocorrelación, que en Matlab ya se encuentran disponibles (como por ejemplo la función xcorr).
+
+En el Cuadro \ref{tabla:clasificador_matlab} se presentan los resultados que se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del T0 para ser ronquido entre [3.05s - 5.90 s]. En las distintas columnas se encuentran los valores de verdaderos positivos, verdaderos negativos, falsos positivos, falsos negativos, valor predictivo positivo, valor predictivo negativo, sensibilidad y especificidad, calculados para cada una de las señales EDF utilizadas hasta el momento.
 
 
 \chapter{Desarrollo de aplicación Android}
@@ -684,6 +689,29 @@ En conclusión, no existe restricción alguna en cuanto a la duración de sub­segme
 \thispagestyle{empty}
 \addcontentsline{toc}{chapter}{Anexos} % esto añade el capitulo en el índice
 \addcontentsline{toc}{section}{Anexo A} % asi se añade una seccion al índice
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			Paciente 1 & 12 & 19 & 11 & 6 & 52.1\% & 76\% & 66.6\% & 63.3\% \\ \hline
+			Paciente 2 & 46 & 0 & 0 & 2 & 100\% & 0\% & 95.8\% & --\\ \hline
+			Paciente 3 & 42 & 3 & 0 & 3 & 100\% & 50\% & 93.3\% & 100\% \\ \hline
+			Paciente 4 & 39 & 1 & 0 & 8 & 100\% & 11.1\% & 82.9\% & 100\% \\ \hline
+			Paciente 5 & 28 & 18 & 1 & 1 & 96.5\% & 94.7\% & 96.5\% & 94.7\% \\ \hline
+			Paciente 6 & 9 & 33 & 5 & 1 & 64.3\% & 97.6\% & 90\% & 86.8\% \\ \hline
+			Paciente 7 & 38 & 1 & 0 & 9 & 100\% & 10\% & 80.8\% & 100\% \\ \hline
+			Paciente 8 & 37 & 8 & 1 & 2 & 97.3\% & 80\% & 94.8\% & 88.8\% \\ \hline
+			Paciente 9 & 7 & 19 & 12 & 10 & 36.8\% & 65.5\% & 41.1\% & 61.3\% \\ \hline
+			Paciente 10 & 47 & 0 & 0 & 1 & 100\% & 0\% & 97.9\% & -- \\ \hline
+		\end{tabular}
+		\caption{Resultados de pruebas sobre clasificador/detector en Matlab.}
+		\label{tabla:clasificador_matlab}
+	\end{center}
+\end{table}    
+
 \addcontentsline{toc}{section}{Anexo B}
 
 \end{document}
