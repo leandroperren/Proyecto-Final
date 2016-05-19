@@ -624,10 +624,9 @@ A fin de analizar el desempeño del algoritmo se revisan a continuación los casos
 En el Cuadro \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9.
 Observando estos T0, se puede ver que los mismos tienen valores inferiores a los 3 segundos, por lo tanto estos valores caen fuera del rango [3.05-5.90s] utilizado por el algoritmo para etiquetarlos como segmentos con ronquidos, de todas maneras representan una minoría.
 
-En el Cuadro \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de T0 similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que la señal EDF en esos segmentos sin estar etiquetados como ronquidos presentan algunos picos aislados, esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Igual que en el punto anterior y debido a que es un fenómeno presentado en algunas señales se tendrá en cuenta a la hora de la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
+En el Cuadro \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de T0 similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que la señal EDF en esos segmentos sin estar etiquetados como ronquidos presentan algunos picos aislados, esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Igual que en el punto anterior y debido a que es un fenómeno presentado en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
 
-Una vez analizados los valores de falsos positivos y falsos negativos con las señales trabajadas hasta el momento, se procedió a determinar tasas de aciertos usando señales no utilizadas en pruebas (no vistas por el sistema). En el Cuadro \ref{tabla:clasificador_matlab_verificacion} se presentan los valores obtenidos para estas señales (verificación).
-
+Una vez analizados los valores de falsos positivos y falsos negativos con las señales trabajadas hasta el momento, se procedió a determinar tasas de aciertos usando señales no utilizadas en pruebas (no vistas por el sistema). En el Cuadro \ref{tabla:clasificador_matlab_verificacion} se presentan los valores obtenidos para estas señales (verificación), en ellos se puede observar que los valores de sensibilidad y especificidad superan el 80\%, llegando en algunos casos muy cerca del 100\%, por lo tanto se puede concluir que el método utilizando señales limpias es factible y que puede ser implementado en lenguaje Android.
 
 
 \chapter{Desarrollo de aplicación Android}
@@ -760,6 +759,24 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 		\label{tabla:falsos_positivos_matlab}
 	\end{center}
 \end{table}
+
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			Paciente 11 & 20 & 21 & 4 & 3 & 83.3\% & 87.5\% & 86.9\% & 84\% \\ \hline
+			Paciente 12 & 9 & 36 & 1 & 2 & 90\% & 94.7\% & 81.8\% & 97.3\% \\ \hline
+			Paciente 13 & 6 & 35 & 6 & 1 & 50\% & 97.2\% & 85.7\% & 85.3\% \\ \hline
+			Paciente 14 & 9 & 30 & 7 & 2 & 43.7\% & 93.8\% & 81.8\% & 81.1\% \\ \hline
+			Paciente 15 & 4 & 40 & 4 & 0 & 50\% & 100\% & 100\% & 90.9\% \\ \hline			
+		\end{tabular}
+		\caption{Verificación de métodos y funcionalidades de Matlab con señales no vistas.}
+		\label{tabla:clasificador_matlab_verificacion}
+	\end{center}
+\end{table}  
 
 
 
