@@ -2,17 +2,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces Media y desv\IeC {\'\i }o de los $T_0$ de hombres y mujeres.}}{17}
-\contentsline {table}{\numberline {2.2}{\ignorespaces T0 de segmentos eliminando subsegmentos sin ronquidos.}}{27}
-\contentsline {table}{\numberline {2.3}{\ignorespaces M\IeC {\'\i }nima cantidad de eventos por segmento.}}{27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces $T_0$ y $F_0$ de segmentos de 1 minuto de duraci\'on.}}{33}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Desv\IeC {\'\i }os est\'andar de los $T_0$ de cada se\~nal en distintas duraciones.}}{33}
-\contentsline {table}{\numberline {4.3}{\ignorespaces $T_0$ y $F_0$ de segmentos con ronquidos de 1 minuto en distintas se\~nales de hombres.}}{34}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Medias y desv\IeC {\'\i }os est\'andar de los $T_0$ para distintas duraciones.}}{34}
-\contentsline {table}{\numberline {4.5}{\ignorespaces Desv\IeC {\'\i }os est\'andar de los $T_0$ de cada se\~nal en distintas duraciones para mujeres.}}{35}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Medias y desv\IeC {\'\i }os est\'andar de los $T_0$ para distintas duraciones en mujeres.}}{35}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Resultados de pruebas sobre clasificador/detector en Matlab.}}{35}
-\contentsline {table}{\numberline {4.8}{\ignorespaces An\'alisis de falsos negativos.}}{36}
-\contentsline {table}{\numberline {4.9}{\ignorespaces An\'alisis de falsos positivos.}}{36}
-\contentsline {table}{\numberline {4.10}{\ignorespaces Verificaci\'on de m\'etodos y funcionalidades de Matlab con se\~nales no vistas.}}{36}
+\contentsline {table}{\numberline {4.1}{\ignorespaces $T_0$ y $F_0$ de segmentos de 1 minuto de duraci\'on.}}{32}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Desv\IeC {\'\i }os est\'andar de los $T_0$ de cada se\~nal en distintas duraciones.}}{32}
+\contentsline {table}{\numberline {4.3}{\ignorespaces $T_0$ y $F_0$ de segmentos con ronquidos de 1 minuto en distintas se\~nales de hombres.}}{33}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Medias y desv\IeC {\'\i }os est\'andar de los $T_0$ para distintas duraciones.}}{33}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Desv\IeC {\'\i }os est\'andar de los $T_0$ de cada se\~nal en distintas duraciones para mujeres.}}{34}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Medias y desv\IeC {\'\i }os est\'andar de los $T_0$ para distintas duraciones en mujeres.}}{34}
+\contentsline {table}{\numberline {4.7}{\ignorespaces T0 de segmentos eliminando subsegmentos sin ronquidos.}}{35}
+\contentsline {table}{\numberline {4.8}{\ignorespaces M\IeC {\'\i }nima cantidad de eventos por segmento.}}{35}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Resultados de pruebas sobre clasificador/detector en Matlab.}}{36}
+\contentsline {table}{\numberline {4.10}{\ignorespaces An\'alisis de falsos negativos.}}{36}
+\contentsline {table}{\numberline {4.11}{\ignorespaces An\'alisis de falsos positivos.}}{36}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Verificaci\'on de m\'etodos y funcionalidades de Matlab con se\~nales no vistas.}}{37}

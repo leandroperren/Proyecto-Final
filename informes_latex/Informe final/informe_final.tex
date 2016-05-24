@@ -250,7 +250,7 @@ Por otra parte se procedió a extraer segmentos de diferentes duraciones con el o
 
 
 \subsection{Análisis de señales correspondientes a hombres}
-En esta sección se presentan los resultados obtenidos de los análisis realizados a señales de hombres. Para ello se tomaron 5 señales *.EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extrajeron manualmente 5 segmentos de cada una de las siguientes duraciones: 30 segundos, 1, 2, 3 y 5 minutos. Posteriormente por medio de un script desarrollado en Matlab el cual utiliza el método de autocorrelación se calculó para cada uno de estos segmentos su valor de $T_0$ y su inversa F0 (frecuencia fundamental). En la Figura \ref{figura:segmento_ronquido_autocorr} se encuentra representado en la parte superior un segmento de 1 minuto el cual contiene ronquidos y en la parte inferior su correspondiente autocorrelación. 
+En esta sección se presentan los resultados obtenidos de los análisis realizados a señales de hombres. Para ello se tomaron 5 señales *.EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extrajeron manualmente 5 segmentos de cada una de las siguientes duraciones: 30 segundos, 1, 2, 3 y 5 minutos. Posteriormente por medio de un script desarrollado en Matlab el cual utiliza el método de autocorrelación se calculó para cada uno de estos segmentos su valor de $T_0$. En la Figura \ref{figura:segmento_ronquido_autocorr} se encuentra representado en la parte superior un segmento de 1 minuto el cual contiene ronquidos y en la parte inferior su correspondiente autocorrelación. 
 Se puede observar en la Figura \ref{figura:segmento_ronquido_autocorr} de la autocorrelación la existencia de un valor pico en torno a los 4 segundos correspondiente al $T_0$ de los ronquidos contenidos en el segmento. 
 
 \begin{figure}[H]
@@ -259,7 +259,7 @@ Se puede observar en la Figura \ref{figura:segmento_ronquido_autocorr} de la aut
 	\label{figura:segmento_ronquido_autocorr}
 \end{figure}
 
-Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una misma señal. En el Cuadro \ref{tabla:t0_f0_1_minuto} podemos ver los valores del $T_0$ y $F_0$ de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos. Si se observa el valor del Desvío Estándar para los $T_0$ de los segmentos con ronquidos presentados en el Cuadro \ref{tabla:t0_f0_1_minuto}, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. 
+Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una misma señal. En el Cuadro \ref{tabla:t0_f0_1_minuto} podemos ver los valores del $T_0$ de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos. Si se observa el valor del Desvío Estándar para los $T_0$ de los segmentos con ronquidos presentados en el Cuadro \ref{tabla:t0_f0_1_minuto}, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. 
 
 Debido a que se extrajeron segmentos de distintas señales se puede observar en el Cuadro \ref{tabla:desvios_estandar_t0} los valores del Desvío Estándar de los $T_0$ de cada señal y para cada duración de segmentos. Viendo estos datos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual se está asegurando que la característica $T_0$ es homogénea entre segmentos de ronquidos de una misma señal.
 
@@ -424,74 +424,18 @@ El otro aspecto consiste en determinar el mínimo indispensable de eventos necesa
 Para ello se analizó una parte del segmento, en particular con una duración de 15 segundos, en los cuales había 4 episodios de ronquido presentes, luego se procedió a quitar de a un evento a la vez y volver a calcular el $T_0$ y así observar si presentan diferencias. Si se observa el Cuadro \ref{tabla:cantidad_minima_t0}, se puede concluir que la cantidad mínima de eventos necesarios para la correcta detección es de 2 ya que con un solo evento el $T_0$ da un valor de 2.58 segundos, lo cual esta por debajo de los 4 segundos promedio. 
 
 En conclusión, no existe restricción alguna en cuanto a la duración de sub­segmentos sin ronquidos, siempre y cuando en alguna parte del segmento completo, existan  al menos 2 eventos de ronquido.  
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-			$T_0$ & \textbf{Descripción}\\ 
-			\hline \hline
-			4.24 & Señal completa \\ \hline
-			4.34 & Último minuto eliminado \\ \hline
-			4.24 & Minuto 4 eliminado \\ \hline
-			4.24 & Minuto 3 eliminado \\ \hline
-			4.24 & Minuto 2 eliminado \\ \hline
-			4.24 & Minuto 1 eliminado \\ \hline
-			\hline
-			4.19 & Últimos 2 minutos eliminados \\ \hline
-			4.34 & Minutos 1 y 5 eliminados \\ \hline
-			4.34 & Minutos 2 y 5 eliminados \\ \hline
-			4.34 & Minutos 3 y 5 eliminados \\ \hline
-			4.19 & Minutos 4 y 5 eliminados \\ \hline
-			4.24 & Minutos 1 y 4 eliminados \\ \hline
-			4.24 & Minutos 2 y 4 eliminados \\ \hline
-			4.24 & Minutos 3 y 4 eliminados \\ \hline
-            4.19 & Minutos 5 y 4 eliminados \\ \hline
-			4.24 & Minutos 1 y 3 eliminados \\ \hline
-			4.24 & Minutos 2 y 3 eliminados \\ \hline
-			4.24 & minutos 1 y 2 eliminados \\ \hline
-			\hline
-			4.19 & Últimos 3 minutos eliminados \\ \hline
-			4.24 & Minutos 1,2,3 \\ \hline
-			4.24 & Minutos 2,3,4 \\ \hline
-			4.19 & Minutos 3,4,5 \\ \hline
-			\hline
-			4.50 & Últimos 4 minutos eliminados \\ \hline
-			4.24 & Minutos 1,2,3 y 4 \\ \hline
-		\end{tabular}
-		\caption{T0 de segmentos eliminando subsegmentos sin ronquidos.}
-		\label{tabla:subsegmentos_t0}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-			$T_0$ & \textbf{Descripción}\\ 
-			\hline \hline
-			4.24 & Últimos 15 segundos \\ \hline
-			4.24 & Últimos 15 segundos (contiene 4 eventos de ronquido) \\ \hline
-			4.24 & Últimos 15 segundos con 3 eventos \\ \hline
-			4.12 & Últimos 15 segundos con 2 eventos \\ \hline
-			2.58 & Últimos 15 segundos con 1 eventos \\ \hline
-		\end{tabular}
-		\caption{Mínima cantidad de eventos por segmento.}
-		\label{tabla:cantidad_minima_t0}
-	\end{center}
-\end{table}    
-
+ 
 \section{Tasas de aciertos del método en Matlab}
 Debido a que se utilizó Matlab para calcular el  T0 de los segmentos extraídos de las señales EDF, es que surgió la posibilidad de desarrollar un script en Matlab, que sirva a modo de aplicación de referencia, que recorra una señal tomando frames de 5 minutos de duración y que calculando el T0 determine si el segmento poseé ronquidos.
 
 Mediante los resultados que se obtuvieron utilizando este script, se pudo determinar que el método es aplicable antes de realizar la aplicación definitiva sobre la plataforma Android, al mismo tiempo que se pudo comparar estos resultados a fin de validar el correcto desarrollo en Android de funciones como la autocorrelación, que en Matlab ya se encuentran disponibles (como por ejemplo la función xcorr).
 
-En el Cuadro \ref{tabla:clasificador_matlab} se presentan los resultados que se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del T0 para ser ronquido entre [3.05s - 5.90 s]. En las distintas columnas se encuentran los valores de verdaderos positivos, verdaderos negativos, falsos positivos, falsos negativos, valor predictivo positivo, valor predictivo negativo, sensibilidad y especificidad, calculados para cada una de las señales EDF utilizadas hasta el momento.
+En el Cuadro \ref{tabla:clasificador_matlab} se presentan los resultados que se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del T0 para ser ronquido entre [3.50 - 4.70 s]. En las distintas columnas se encuentran los valores de verdaderos positivos, verdaderos negativos, falsos positivos, falsos negativos, valor predictivo positivo, valor predictivo negativo, sensibilidad y especificidad, calculados para cada una de las señales EDF utilizadas hasta el momento.
 
 A fin de analizar el desempeño del algoritmo se revisan a continuación los casos de falsos negativos y falsos positivos, analizando los valores de T0 presentados.
 
 En el Cuadro \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9.
-Observando estos T0, se puede ver que los mismos tienen valores inferiores a los 3 segundos, por lo tanto estos valores caen fuera del rango [3.05-5.90s] utilizado por el algoritmo para etiquetarlos como segmentos con ronquidos, de todas maneras representan una minoría.
+Observando estos T0, se puede ver que los mismos tienen valores inferiores a los 3 segundos, por lo tanto estos valores caen fuera del rango [3.50 - 4.70 s] utilizado por el algoritmo para etiquetarlos como segmentos con ronquidos, de todas maneras representan una minoría.
 
 En el Cuadro \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de T0 similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que las señales EDF en esos segmentos sin estar etiquetados como ronquidos presentan algunos picos aislados, esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Igual que en el punto anterior y debido a que es un fenómeno presentado en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
 
@@ -699,6 +643,62 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 
 \begin{table}[H]
 	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			$T_0$ & \textbf{Descripción}\\ 
+			\hline \hline
+			4.24 & Segmento completo \\ \hline
+			4.34 & Último minuto eliminado \\ \hline
+			4.24 & Minuto 4 eliminado \\ \hline
+			4.24 & Minuto 3 eliminado \\ \hline
+			4.24 & Minuto 2 eliminado \\ \hline
+			4.24 & Minuto 1 eliminado \\ \hline
+			\hline
+			4.19 & Últimos 2 minutos eliminados \\ \hline
+			4.34 & Minutos 1 y 5 eliminados \\ \hline
+			4.34 & Minutos 2 y 5 eliminados \\ \hline
+			4.34 & Minutos 3 y 5 eliminados \\ \hline
+			4.19 & Minutos 4 y 5 eliminados \\ \hline
+			4.24 & Minutos 1 y 4 eliminados \\ \hline
+			4.24 & Minutos 2 y 4 eliminados \\ \hline
+			4.24 & Minutos 3 y 4 eliminados \\ \hline
+            4.19 & Minutos 5 y 4 eliminados \\ \hline
+			4.24 & Minutos 1 y 3 eliminados \\ \hline
+			4.24 & Minutos 2 y 3 eliminados \\ \hline
+			4.24 & minutos 1 y 2 eliminados \\ \hline
+			\hline
+			4.19 & Últimos 3 minutos eliminados \\ \hline
+			4.24 & Minutos 1,2,3 \\ \hline
+			4.24 & Minutos 2,3,4 \\ \hline
+			4.19 & Minutos 3,4,5 \\ \hline
+			\hline
+			4.50 & Últimos 4 minutos eliminados \\ \hline
+			4.24 & Minutos 1,2,3 y 4 \\ \hline
+		\end{tabular}
+		\caption{T0 de segmentos eliminando subsegmentos sin ronquidos.}
+		\label{tabla:subsegmentos_t0}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			$T_0$ & \textbf{Descripción}\\ 
+			\hline \hline
+			4.24 & Últimos 15 segundos \\ \hline
+			4.24 & Últimos 15 segundos (contiene 4 eventos de ronquido) \\ \hline
+			4.24 & Últimos 15 segundos con 3 eventos \\ \hline
+			4.12 & Últimos 15 segundos con 2 eventos \\ \hline
+			2.58 & Últimos 15 segundos con 1 eventos \\ \hline
+		\end{tabular}
+		\caption{Mínima cantidad de eventos por segmento.}
+		\label{tabla:cantidad_minima_t0}
+	\end{center}
+\end{table}  
+
+\begin{table}[H]
+	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 			\hline
 			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
@@ -746,7 +746,7 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 			Señal & HORA & ETIQUETA & T0 \\ 
 			\hline \hline
 			Paciente 1 & 22:40:02 & FP & 4.11 \\ \hline
-								 & 23:30:00 & FP & 5.68 \\ \hline
+								 & 23:30:00 & FP & 4.60 \\ \hline
 			Paciente 6 & 12:05:03	& FP & 4.29 \\ \hline
 							   & 15:30:10 & FP & 4.68 \\ \hline
 			Paciente 8 & 00:35:11 &	FP & 3.65 \\ \hline
