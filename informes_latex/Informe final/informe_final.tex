@@ -474,8 +474,44 @@ Para aquellas funcionalidades que la aplicación deberá tener, se procedió primer
 
 \subsection{Requerimientos no funcionales}
 
+Para la obtención de los requerimientos no funcionales, se analizaron las aplicaciones disponibles actualmente. Se relevaron aquellos aspectos que se encuentran implícitos en el funcionamiento de éstas  y se focalizó en el rendimiento y la robustez de la aplicación, como también qué recursos se utilizan de los dispositivos en que se ejecutan. Además, se analizó qué implicancia tendrían algunos de los requerimientos funcionales respecto de estos aspectos: rendimiento, robustez, almacenamiento y drenaje de la batería. Entonces, para este sistema se deben considerar:
+
+\begin{itemize}
+\item La Robustez frente al ruido.
+\item La capacidad de almacenamiento del dispositivo, suficiente para almacenar los resultados del procesamiento de cada segmento, durante las 6 o 7 horas de captura por micrófono.
+\item La capacidad de la batería, para que permita el procesamiento durante 6 o 7 horas.
+\end{itemize}
+
 \section{Diseño del sistema y del software}
 \subsection{Casos de Uso}
+
+A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de casos de usos general de la aplicación. En él se representan los actores  y se describen las principales acciones que permitirá la aplicación.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/caso_uso}	
+	\caption{Diagrama de casos de uso}
+	\label{figura:caso_uso}
+\end{figure}
+
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{|l|}
+			\hline
+			\textbf{CASO DE USO: Iniciando captura} \\
+			\hline
+			 ACTOR: Paciente (Usuario de la App) \\ \hline
+			 DESCRIPCIÓN \\ \hline			
+				Es el proceso por el cual el usuario comienza la captura de datos y el procesamiento \\ 
+				y almacenamiento de los resultados obtenidos. \\ 
+				Opcionalmente se le permite ingresar datos personales y el email de un médico, al que \\  
+				se le enviarán 	los resultados obtenidos.\\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Iniciando captura}
+		\label{tabla:t0_f0_1_minuto}
+	\end{center}
+\end{table}
+
 \subsection{Diagramas de secuencia}
 \subsection{Diseño de Clases}
 
