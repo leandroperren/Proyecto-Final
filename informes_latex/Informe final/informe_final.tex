@@ -445,7 +445,33 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 \chapter{Desarrollo de aplicación Android}
 \thispagestyle{empty}
 \section{Análisis y definición de requerimientos}
+Para el desarrollo de la aplicación android se seguirán los principios de la ingeniería de software, usando como referencia el libro “Ingeniería de Software, Ian Sommerville”, tomando en cuenta un modelo de desarrollo en cascada y se seguirán las etapas mencionadas a continuación:
+
+\begin{itemize}
+\item Análisis y definición de requerimientos
+\item Diseño del sistema y del software
+\item Implementación y prueba de unidad
+\item Integración y prueba del sistema
+\item Operación y mantenimiento
+\end{itemize}
+
+Con el fin de recopilar los requisitos que una aplicación Android, con esta finalidad, debería satisfacer es que se realizaron distintas tareas, tanto para obtener requerimientos funcionales como no funcionales.
+
+
 \subsection{Requerimientos funcionales}
+
+Para aquellas funcionalidades que la aplicación deberá tener, se procedió primeramente a analizar aplicaciones disponibles actualmente en la tienda PlayStore de Android. A partir del testeo de estas aplicaciones, se pudieron recabar funcionalidades básicas y además se registraron aquellas funcionalidades que, aunque necesarias, no se encontraron en ninguna de éstas. Además, se realizaron entrevistas a posibles usuarios y pruebas sobre una versión prototipo, a partir de las cuales se recabaron aspectos y opiniones necesarias para una aplicación de este tipo. A continuación se listan los requisitos obtenidos:
+
+\begin{itemize}
+\item Obtener registros de 6 o 7 horas de duración por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.
+\item Analizar la señal tomando segmentos de 5 minutos.
+\item Determinar si cada segmento de 5 minutos contiene ronquidos o no.
+\item Generar una interfaz sencilla y amigable que resulte intuitiva al usuario.
+\item Disponer de opciones para ingresar el mail de un médico al que se le enviarán los resultados, además de datos personales que sirvan de apoyo al análisis realizado.
+\item Disponer de una pestaña o ventana que indique la hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
+\item Disponer de una pestaña o ventana que presente diferentes gráficos de barras (Bar Charts) o líneas (Line Charts), que muestran los resultados de la detección, y gráficos de torta (Pie Charts), que representan porcentualmente la distribución de segmentos con ronquidos y no ronquidos.
+\end{itemize}
+
 \subsection{Requerimientos no funcionales}
 
 \section{Diseño del sistema y del software}
@@ -775,19 +801,6 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 		\label{tabla:clasificador_matlab_verificacion}
 	\end{center}
 \end{table}  
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 \addcontentsline{toc}{section}{Anexo B}
 
