@@ -259,9 +259,9 @@ Se puede observar en la Figura \ref{figura:segmento_ronquido_autocorr} de la aut
 	\label{figura:segmento_ronquido_autocorr}
 \end{figure}
 
-Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una misma señal. En el Cuadro \ref{tabla:t0_f0_1_minuto} podemos ver los valores del $T_0$ de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos. Si se observa el valor del Desvío Estándar para los $T_0$ de los segmentos con ronquidos presentados en el Cuadro \ref{tabla:t0_f0_1_minuto}, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. 
+Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una misma señal. En el Cuadro \ref{tabla:t0_f0_1_minuto} del Anexo A, podemos ver los valores del $T_0$ de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos. Si se observa el valor del Desvío Estándar para los $T_0$ de los segmentos con ronquidos presentados en el Cuadro \ref{tabla:t0_f0_1_minuto}, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. 
 
-Debido a que se extrajeron segmentos de distintas señales se puede observar en el Cuadro \ref{tabla:desvios_estandar_t0} los valores del Desvío Estándar de los $T_0$ de cada señal y para cada duración de segmentos. Viendo estos datos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual se está asegurando que la característica $T_0$ es homogénea entre segmentos de ronquidos de una misma señal.
+Debido a que se extrajeron segmentos de distintas señales se puede observar en el Cuadro \ref{tabla:desvios_estandar_t0} los valores del Desvío Estándar de los $T_0$ de cada señal y para cada duración de segmentos. Observando éstos datos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual se está asegurando que la característica $T_0$ es homogénea entre segmentos de ronquidos de una misma señal.
 
 Siguiendo el análisis se observa ahora que sucede con los valores del $T_0$ entre segmentos extraídos de diferentes señales, ya que si bien esta característica presentaba cierta homogeneidad entre los segmentos de una misma señal, podrían existir severas diferencias con segmentos provenientes de distintas señales y por ende de distintas personas y así no se podría generalizar el uso del $T_0$ como detector de ronquidos. Para ello se calculó el valor de la media y el desvío estándar de los $T_0$ de todos los segmentos de 1 minuto de duración independientemente de la señal a la que pertenezcan. En el Cuadro \ref{tabla:segmentos_1_minuto_hombres} se presentan los valores del $T_0$ de todos los segmentos de 1 minuto de duración seguidos de su media y desvío estándar, mientras que en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones} se presentan las medias y desvíos estándar de los $T_0$ de todos los segmentos de cada una de las duraciones.
 
@@ -300,12 +300,12 @@ En el Cuadro \ref{tabla:media_desv_t0_hombre_mujer}, se encuentran representados
 	\end{center}
 \end{table}
 
-Se puede observar que los valores promedios en ambos casos (mujeres y hombres), son prácticamente similares y, los correspondientes desvíos estándar, indican también cierta similitud, aunque en el caso de los hombres son levemente mayores. De todas maneras esta pequeña diferencia, no implica inconvenientes a la hora de la detección. De esta manera se descarta la necesidad de que un usuario de la aplicación Android tenga que indicar el género antes de comenzar su uso.
+Se puede observar que los valores promedios en ambos casos (mujeres y hombres), son prácticamente similares y, los correspondientes desvíos estándar, indican también cierta similitud, aunque en el caso de los hombres son levemente mayores. De todas maneras esta pequeña diferencia, no implica inconvenientes a la hora de la detección. De esta manera se descarta la necesidad de que un usuario de la aplicación Android tenga que indicar el género antes de comenzar su uso para aplicar alguna corrección de cálculo.
 
 \section{Análisis de sonidos no deseados (ruidos)}
 Dentro de esta sección se describen los resultados obtenidos del análisis realizado a sonidos no deseados. Por sonido no deseado, debe entenderse como todo aquel sonido que se puede acoplar en una grabación en entornos cotidianos y, que no se trata de un ronquido. Es por ésto, que a los fines del presente trabajo, se consideran como ruidos los sonidos de vehículos, murmullos o personas hablando, música, etcétera.
 
-Hasta el momento se demostró que los valores del $T_0$ para segmentos con ronquidos extraídos de diferentes señales tanto de mujeres como hombres, presentan cierta similitud permitiendo concluir que el $T_0$ es una característica representativa de los segmentos con ronquidos. De todas maneras, esto no es suficiente para poder utilizar esta característica en una aplicación que permita detectar estos segmentos diferenciandolos de aquellos que contienen solo ruidos. Esto se debe a que aquellos sonidos no deseados que se pudieran capturar durante la grabación podrían tener un $T_0$ similar que llegue a caer dentro del rango establecido para ser considerados como ronquidos.
+Hasta el momento se demostró que los valores del $T_0$ para segmentos con ronquidos extraídos de diferentes señales tanto de mujeres como hombres, presentan cierta similitud permitiendo concluir que el $T_0$ es una característica representativa de los segmentos con ronquidos. De todas maneras, esto no es suficiente para poder utilizar esta característica en una aplicación que permita detectar estos segmentos diferenciándolos de aquellos que contienen solo ruidos. Esto se debe a que aquellos sonidos no deseados que se pudieran capturar durante la grabación podrían tener un $T_0$ similar que llegue a caer dentro del rango establecido para ser considerados como ronquidos.
 Para ello se demostrará en la presente sección que bajo condiciones normales los sonidos no deseados que se pueden capturar por medio del micrófono de un dispositivo móvil presentan valores del $T_0$ fuera del rango representativo de los ronquidos.
 
 Se comenzó capturando distintas señales por medio de dispositivos móviles como una tablet y dos celulares. Para esto se instaló en los dispositivos la aplicación Easy Voice Recorder por medio de la cual se grabaron archivos en formato .WAV. Estas grabaciones se llevaron a cabo en ambientes bajo condiciones normales durante las horas del día ya que es mayor la cantidad de ruidos presentes, todas se capturaron a una frecuencia de muestreo de 8000 Hz que es la mínima frecuencia de muestreo que admite la aplicación, pero fueron submuestreadas a 100Hz de manera que tengan igual frecuencia de muestreo que las EDF. Luego se analizaron manualmente con el software Audacity extrayendo segmentos de 1 y 5 minutos que contenían distintos ruidos, por ejemplo: sonidos de vehículos en la calle, personas hablando, ladridos de perros, música proveniente de una radio y sonido de máquinas de obreros trabajando.
@@ -315,7 +315,7 @@ A su vez el segmento graficado en la Figura \ref{figura:ruido2_1_minuto} consist
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=1\columnwidth]{img/figure3}	
+		\includegraphics[width=\textwidth]{img/figure3}	
 	\caption{Sonido de maquinas trabajando, personas hablando y vehículos.}
 	\label{figura:ruido1_1_minuto}
 \end{figure}
@@ -345,7 +345,7 @@ Como se puede ver en las figuras \ref{figura:ruido1_1_minuto}, \ref{figura:ruido
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=1\columnwidth]{img/figure7}	
+		\includegraphics[width=1\textwidth]{img/figure7}	
 	\caption{Autocorrelacion de ronquidos y autocorrelación de sonido ambiental.}
 	\label{figura:autocorrelacion_ruido_ronquidos}
 \end{figure}
@@ -354,14 +354,14 @@ Debido a que los segmentos analizados recientemente eran todos de 1 minuto de du
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=1\columnwidth]{img/figure8}	
+		\includegraphics[width=1\textwidth]{img/figure8}	
 	\caption{Sonido de un automovil circulando en 5 minutos.}
 	\label{figura:ruido1_5minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=1\columnwidth]{img/figure9}	
+		\includegraphics[width=1\textwidth]{img/figure9}	
 	\caption{Sonido de dos vehículos circulando en 5 minutos.}
 	\label{figura:ruido2_5minuto}
 \end{figure}
@@ -445,7 +445,7 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 \chapter{Desarrollo de aplicación Android}
 \thispagestyle{empty}
 \section{Análisis y definición de requerimientos}
-Para el desarrollo de la aplicación android se seguirán los principios de la ingeniería de software, usando como referencia el libro “Ingeniería de Software, Ian Sommerville”, tomando en cuenta un modelo de desarrollo en cascada y se seguirán las etapas mencionadas a continuación:
+Para el desarrollo de la aplicación android se seguirán los principios de la ingeniería de software, usando como referencia el libro ``Ingeniería de Software, Ian Sommerville'', tomando en cuenta un modelo de desarrollo en cascada y se seguirán las etapas mencionadas a continuación:
 
 \begin{itemize}
 \item Análisis y definición de requerimientos
@@ -569,10 +569,17 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 
 [21] Dream Watcher - Anti Ronquidos. Aplicación para detectar ronquidos [consulta: 20 noviembre 2015]. Disponible en: \url{<https://play.google.com/store/apps/details?id=com.arcadexxi.dreamwatcher>}
 
-\chapter*{Anexos}
+
+
+%==============================================================================
+%
+%	ANEXO A
+%
+%==============================================================================
+\chapter*{Anexo A}
 \thispagestyle{empty}
-\addcontentsline{toc}{chapter}{Anexos} % esto añade el capitulo en el índice
-\addcontentsline{toc}{section}{Anexo A} % asi se añade una seccion al índice
+\addcontentsline{toc}{chapter}{Anexo A} % esto añade el capitulo en el índice
+%\addcontentsline{toc}{section}{Anexo A} % asi se añade una seccion al índice
 
 \begin{table}[htbp]
 	\begin{center}
@@ -838,6 +845,13 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 	\end{center}
 \end{table}  
 
-\addcontentsline{toc}{section}{Anexo B}
+%==============================================================================
+%
+%	ANEXO B
+%
+%==============================================================================
+\chapter*{Anexo B}
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Anexo B} % esto añade el capitulo en el índice
 
 \end{document}

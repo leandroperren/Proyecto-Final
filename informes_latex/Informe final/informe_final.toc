@@ -30,6 +30,5 @@
 \contentsline {section}{\numberline {3.5}Tasas de aciertos aplicaci\'on Android}{31}
 \contentsline {chapter}{\numberline {4}Conclusi\'on y Trabajos Futuros}{32}
 \contentsline {chapter}{Bibliograf\IeC {\'\i }a}{33}
-\contentsline {chapter}{Anexos}{35}
-\contentsline {section}{Anexo A}{35}
-\contentsline {section}{Anexo B}{40}
+\contentsline {chapter}{Anexo A}{35}
+\contentsline {chapter}{Anexo B}{41}
