@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="org.example.snoredetection.MainActivity">
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context="edu.fich.pfcii.snoredetection.MainActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="100dp"
+        android:text="Lista de grabaciones"
+        android:gravity="bottom"
+        android:textSize="30sp"
+        android:id="@+id/textView"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#dadada"
+        android:padding="10sp"
+        android:fontFamily="sans-serif-condensed"
+        android:textIsSelectable="false" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_main" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+        fab:fab_icon="@drawable/ic_add"
+        fab:fab_colorNormal="@color/colorAccent"
+        fab:fab_colorPressed="@color/colorAccent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
 
-</android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

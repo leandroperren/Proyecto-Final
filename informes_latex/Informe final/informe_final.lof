@@ -1,0 +1,21 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Aplicaci\'on Dream Watcher de la PlayStore.}}{10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Segmento de 1 minuto etiquetado como ronquidos.}}{13}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Segmento con ronquidos y su autocorrelaci\'on.}}{15}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Sonido de maquinas trabajando, personas hablando y veh\IeC {\'\i }culos.}}{18}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Sonido de un automovil circulando.}}{19}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Sonido de dos veh\IeC {\'\i }culos circulando.}}{19}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Sonido de perros ladrando.}}{20}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Autocorrelacion de ronquidos y autocorrelaci\'on de sonido ambiental.}}{21}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Sonido de un automovil circulando en 5 minutos.}}{21}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Sonido de dos veh\IeC {\'\i }culos circulando en 5 minutos.}}{22}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Sonido de dos veh\IeC {\'\i }culos circulando y ladridos de perros en 5 minutos.}}{22}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Funciones de recorte}}{24}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Autocorrelaciones aplicando las tres funciones de recorte}}{24}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Autocorrelaci\'on de ronquidos sin y con funci\'on de recorte}}{25}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Autocorrelaci\'on de sonido ambiental sin y con funci\'on de recorte}}{26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de casos de uso}}{30}
+\addvspace {10\p@ }
