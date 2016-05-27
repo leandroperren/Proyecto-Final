@@ -17,6 +17,8 @@ bottom=2.5cm,
 top=2.5cm }
 \renewcommand{\baselinestretch}{1.2}
 
+\usepackage{appendix} % Para los Apéndices
+
 %\usepackage{mathptmx} %Times
 
 \usepackage{xcolor,colortbl}
@@ -308,10 +310,10 @@ Dentro de esta sección se describen los resultados obtenidos del análisis realiz
 Hasta el momento se demostró que los valores del $T_0$ para segmentos con ronquidos extraídos de diferentes señales tanto de mujeres como hombres, presentan cierta similitud permitiendo concluir que el $T_0$ es una característica representativa de los segmentos con ronquidos. De todas maneras, esto no es suficiente para poder utilizar esta característica en una aplicación que permita detectar estos segmentos diferenciándolos de aquellos que contienen solo ruidos. Esto se debe a que aquellos sonidos no deseados que se pudieran capturar durante la grabación podrían tener un $T_0$ similar que llegue a caer dentro del rango establecido para ser considerados como ronquidos.
 Para ello se demostrará en la presente sección que bajo condiciones normales los sonidos no deseados que se pueden capturar por medio del micrófono de un dispositivo móvil presentan valores del $T_0$ fuera del rango representativo de los ronquidos.
 
-Se comenzó capturando distintas señales por medio de dispositivos móviles como una tablet y dos celulares. Para esto se instaló en los dispositivos la aplicación Easy Voice Recorder por medio de la cual se grabaron archivos en formato .WAV. Estas grabaciones se llevaron a cabo en ambientes bajo condiciones normales durante las horas del día ya que es mayor la cantidad de ruidos presentes, todas se capturaron a una frecuencia de muestreo de 8000 Hz que es la mínima frecuencia de muestreo que admite la aplicación, pero fueron submuestreadas a 100Hz de manera que tengan igual frecuencia de muestreo que las EDF. Luego se analizaron manualmente con el software Audacity extrayendo segmentos de 1 y 5 minutos que contenían distintos ruidos, por ejemplo: sonidos de vehículos en la calle, personas hablando, ladridos de perros, música proveniente de una radio y sonido de máquinas de obreros trabajando.
+Se comenzó capturando distintas señales por medio de dispositivos móviles como una tablet y dos celulares. Para esto se instaló en los dispositivos la aplicación Easy Voice Recorder por medio de la cual se grabaron archivos en formato .WAV. Estas grabaciones se llevaron a cabo en ambientes bajo condiciones normales durante las horas del día ya que es mayor la cantidad de ruidos presentes, todas se capturaron a una frecuencia de muestreo de 8000 Hz que es la mínima frecuencia de muestreo que admite la aplicación, pero fueron submuestreadas a 100Hz de manera que tengan igual frecuencia de muestreo que las EDF. Luego se analizaron manualmente con el software Audacity extrayendo segmentos de 1 y 5 minutos que contenían distintos ruidos, por ejemplo: sonidos de vehículos en la calle, personas hablando, ladridos de perros, música proveniente de una radio y sonido de maquinaria de obreros trabajando.
 
-En la parte superior de la Figura \ref{figura:ruido1_1_minuto} se puede observar un segmento de 1 minuto el cual contiene ruido ambiental, proveniente del exterior, tal como máquinas de personas trabajando, tráfico de vehículos y personas hablando, mientras que en la gráfica de la parte inferior se encuentra su autocorrelación. 
-A su vez el segmento graficado en la Figura \ref{figura:ruido2_1_minuto} consiste del sonido de un vehículo que proviene de la calle, la Figura \ref{figura:ruido3_1_minuto} contiene el sonido de transito de vehículos proveniente del exterior, primero una motocicleta y luego un automóvil que estaciona y sale al cabo de un tiempo y la Figura \ref{figura:ruido4_1_minuto} contiene el sonido de dos perros ladrando, todas ellas acompañadas en la parte inferior de su correspondiente autocorrelación.
+En la parte superior de la Figura \ref{figura:ruido1_1_minuto} se puede observar un segmento de 1 minuto el cual contiene ruido ambiental, proveniente del exterior, tal como máquinas en pleno funcionamiento, tráfico vehicular y personas hablando, mientras que en la gráfica de la parte inferior se encuentra su autocorrelación.
+A su vez el segmento graficado en la Figura \ref{figura:ruido2_1_minuto} consiste del sonido de un vehículo circulando, la Figura \ref{figura:ruido3_1_minuto} contiene el sonido de transito vehicular, primero una motocicleta y luego un automóvil que estaciona y sale al cabo de un tiempo y la Figura \ref{figura:ruido4_1_minuto} contiene el sonido de dos perros ladrando, todas ellas acompañadas en la parte inferior de su correspondiente autocorrelación.
 
 \begin{figure}[H]
 	\centering
@@ -323,7 +325,7 @@ A su vez el segmento graficado en la Figura \ref{figura:ruido2_1_minuto} consist
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure4}	
-	\caption{Sonido de un automovil circulando.}
+	\caption{Sonido de un vehículo circulando.}
 	\label{figura:ruido2_1_minuto}
 \end{figure}
 
@@ -381,9 +383,10 @@ Debido a que se demostró que el $T_0$ es una característica representativa de lo
 \section{Mejora a través de funciones de recorte}
 La utilización de funciones de recorte permite acentuar los máximos temporales de la señal (correspondientes al periodo fundamental), de forma que la discriminación del período fundamental se visualice con mayor claridad en el tramo analizado.
 
-En la Figura \ref{figura:funciones_recorte}, se observan tres funciones de recorte diferentes. Donde CL es el umbral de decisión donde aplicar el descarte, y el eje x representa el valor de la muestra del segmento al que se le aplica el recorte.
+En la Figura \ref{figura:funciones_recorte}, se observan tres funciones de recorte diferentes, donde $C_L$ es el umbral de decisión donde aplicar el descarte, y el eje $x$ representa el valor de la muestra del segmento al que se le aplica el recorte.
 
-A efectos de decidir cuál de las funciones de recortes antes descritas tiene mejor desempeño, se procedió a calcular la autocorrelación para un segmento con ronquidos, tras aplicar a dicho segmento cada una de las funciones de recorte por separado. En la Figura \ref{figura:autocor_funciones_recorte} se muestra una gráfica con los tres resultados posibles tras aplicar cada una de las funciones de recortes, claramente se puede visualizar que la función de recorte 3 es la que arroja los mejores resultados ya que se observan mas resaltados los picos que produce la autocorrelación ($T_0$, 2$T_0$, 3$T_0$, etcétera). Para los casos que se observaron recientemente, el valor del umbral CL se calculó tomando el 10\% del máximo valor del segmento. De esta manera la función de recorte anulará todas las muestras del segmento cuyo valor esté debajo del 10\% del valor máximo, para así fortalecer o dar más importancia a los valores temporales máximos. De todas maneras el valor óptimo del umbral CL se determina en etapas posteriores cuando se evalúa el algoritmo detector.
+A efectos de decidir cuál de las funciones de recortes antes descritas tiene mejor desempeño, se procedió a calcular la autocorrelación para un segmento con ronquidos, tras aplicar a dicho segmento cada una de las funciones de recorte por separado. En la Figura \ref{figura:autocor_funciones_recorte} se muestra una gráfica con los tres resultados posibles tras aplicar cada una de las funciones de recortes, donde claramente se puede visualizar que la función de recorte 3 es la que arroja los mejores resultados ya que se observan mas resaltados los picos que produce la autocorrelación ($T_0$, 2$T_0$, 3$T_0$, etcétera). 
+Para los casos que se observaron recientemente, el valor del umbral $C_L$ se calculó tomando el 10\% del máximo valor del segmento. De esta manera la función de recorte anulará todas las muestras del segmento cuyo valor esté debajo del 10\% del valor máximo, para así fortalecer o dar más importancia a los valores temporales máximos. De todas maneras el valor óptimo del umbral $C_L$ se determina en etapas posteriores cuando se evalúa el algoritmo detector.
 
 
 \begin{figure}[H]
@@ -400,7 +403,7 @@ A efectos de decidir cuál de las funciones de recortes antes descritas tiene mej
 	\label{figura:autocor_funciones_recorte}
 \end{figure}
 
-En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto de realce producido por la función de recorte, en segmentos donde los valores pico para encontrar el $T_0$, no son visualmente claros. A su vez en la Figura \ref{figura:autocor_funciones_recorte3} se muestra el efecto producido al aplicar la función de recorte a segmentos de sonidos no deseados. Observando estas dos gráficas, es visible que tanto en el caso de ronquidos, como en el de ruidos (sonidos no deseados), el efecto producido por la función de recorte, acentúa valores correspondientes a los períodos $T_0$, logrando en los casos de ronquidos que aquellos casos donde no eran visibles con facilidad, se puedan observarse claramente. Además, es notorio que en los casos de ruidos, no hay existencia de picos destacándose y menos aún, no existe homogeneidad alguna con respecto a la forma que gráficamente produce la autocorrelación.
+En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto de realce producido por la función de recorte, en segmentos donde los valores pico para encontrar el $T_0$, no son visualmente claros. A su vez en la Figura \ref{figura:autocor_funciones_recorte3} se muestra el efecto producido al aplicar la función de recorte a segmentos de sonidos no deseados. Observando estas dos gráficas, es visible que tanto en el caso de ronquidos, como en el de ruidos (sonidos no deseados), el efecto producido por la función de recorte, acentúa valores correspondientes a los períodos $T_0$, logrando en los casos de ronquidos que aquellos casos donde no eran visibles con facilidad, puedan observarse claramente. Además, es notorio que en los casos de ruidos, no hay existencia de picos destacándose y menos aún, no existe homogeneidad alguna con respecto a la forma que gráficamente produce la autocorrelación.
 
 
 \begin{figure}[H]
@@ -418,34 +421,34 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 \end{figure}
 
 \section{Cantidad mínima de ronquidos por segmento}
-A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en el valor del $T_0$ la existencia de subsegmentos que no contengan ronquidos contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 5 minutos con ronquidos y se extrajeron subsegmentos de distintas duraciones, de 1,2,3 y 4 minutos que no contenían ronquidos. Luego se volvió a calcular el $T_0$ sin estos subsegmentos a fin de demostrar si esos subsegmentos sin ronquidos tienen algún tipo de implicación. Tal como se puede apreciar en el Cuadro \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3 o 4 minutos, el $T_0$ detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa). 
+A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en el valor del $T_0$ la existencia de subsegmentos que no contengan ronquidos contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 5 minutos con ronquidos y se extrajeron subsegmentos de distintas duraciones, de 1,2,3 y 4 minutos que no contenían ronquidos. Luego se volvió a calcular el $T_0$ sin estos subsegmentos a fin de demostrar si ellos, sin ronquidos, tienen algún tipo de implicación. Tal como se puede apreciar en el Cuadro \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3 o 4 minutos, el $T_0$ detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa). 
 
-El otro aspecto consiste en determinar el mínimo indispensable de eventos necesarios para que el $T_0$ sea detectado sin sufrir grandes desvíos respecto de la media. 
+Otro aspecto consiste en determinar el mínimo indispensable de eventos necesarios para que el $T_0$ sea detectado sin sufrir grandes desvíos respecto de la media. 
 Para ello se analizó una parte del segmento, en particular con una duración de 15 segundos, en los cuales había 4 episodios de ronquido presentes, luego se procedió a quitar de a un evento a la vez y volver a calcular el $T_0$ y así observar si presentan diferencias. Si se observa el Cuadro \ref{tabla:cantidad_minima_t0}, se puede concluir que la cantidad mínima de eventos necesarios para la correcta detección es de 2 ya que con un solo evento el $T_0$ da un valor de 2.58 segundos, lo cual esta por debajo de los 4 segundos promedio. 
 
 En conclusión, no existe restricción alguna en cuanto a la duración de sub­segmentos sin ronquidos, siempre y cuando en alguna parte del segmento completo, existan  al menos 2 eventos de ronquido.  
  
-\section{Tasas de aciertos del método en Matlab}
-Debido a que se utilizó Matlab para calcular el  T0 de los segmentos extraídos de las señales EDF, es que surgió la posibilidad de desarrollar un script en Matlab, que sirva a modo de aplicación de referencia, que recorra una señal tomando frames de 5 minutos de duración y que calculando el T0 determine si el segmento poseé ronquidos.
+\section{Tasas de aciertos del método en Matlab\textsuperscript{\scriptsize\textregistered}}
+Debido a que se utilizó Matlab para calcular el  $T_0$ de los segmentos extraídos de las señales EDF, es que surgió la posibilidad de desarrollar un script en Matlab, que sirva a modo de aplicación de referencia, que recorra una señal tomando frames de 5 minutos de duración y que calculando el $T_0$ determine si el segmento posee ronquidos.
 
-Mediante los resultados que se obtuvieron utilizando este script, se pudo determinar que el método es aplicable antes de realizar la aplicación definitiva sobre la plataforma Android, al mismo tiempo que se pudo comparar estos resultados a fin de validar el correcto desarrollo en Android de funciones como la autocorrelación, que en Matlab ya se encuentran disponibles (como por ejemplo la función xcorr).
+Mediante los resultados que se obtuvieron utilizando este script, se pudo determinar que el método es aplicable antes de realizar la aplicación definitiva sobre la plataforma Android, al mismo tiempo que se pudo comparar estos resultados a fin de validar el correcto desarrollo en Android de funciones como la autocorrelación, que en Matlab ya se encuentran disponibles (como por ejemplo la función \textit{xcorr}).
 
-En el Cuadro \ref{tabla:clasificador_matlab} se presentan los resultados que se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del T0 para ser ronquido entre [3.50 - 4.70 s]. En las distintas columnas se encuentran los valores de verdaderos positivos, verdaderos negativos, falsos positivos, falsos negativos, valor predictivo positivo, valor predictivo negativo, sensibilidad y especificidad, calculados para cada una de las señales EDF utilizadas hasta el momento.
+En el Cuadro \ref{tabla:clasificador_matlab} se presentan los resultados que se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del $T_0$ para ser ronquido entre [3.50 - 4.70 s]. En las distintas columnas se encuentran los valores de \textit{verdaderos positivos}, \textit{verdaderos negativos}, \textit{falsos positivos}, \textit{falsos negativos}, \textit{valor predictivo positivo}, \textit{valor predictivo negativo}, \textit{sensibilidad} y \textit{especificidad}, calculados para cada una de las señales EDF utilizadas hasta el momento.
 
-A fin de analizar el desempeño del algoritmo se revisan a continuación los casos de falsos negativos y falsos positivos, analizando los valores de T0 presentados.
+A fin de analizar el desempeño del algoritmo se revisan a continuación los casos de falsos negativos y falsos positivos, analizando los valores de $T_0$ presentados.
 
 En el Cuadro \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9.
-Observando estos T0, se puede ver que los mismos tienen valores inferiores a los 3 segundos, por lo tanto estos valores caen fuera del rango [3.50 - 4.70 s] utilizado por el algoritmo para etiquetarlos como segmentos con ronquidos, de todas maneras representan una minoría.
+Observando estos $T_0$, se puede ver que los mismos tienen valores inferiores a los 3 segundos, por lo tanto estos valores caen fuera del rango [3.50 - 4.70 s] utilizado por el algoritmo para etiquetarlos como segmentos con ronquidos, de todas maneras representan una minoría.
 
-En el Cuadro \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de T0 similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que las señales EDF en esos segmentos sin estar etiquetados como ronquidos presentan algunos picos aislados, esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Igual que en el punto anterior y debido a que es un fenómeno presentado en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
+En el Cuadro \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de $T_0$ similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que las señales EDF en esos segmentos sin estar etiquetados como ronquidos presentan algunos picos aislados, esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Igual que en el punto anterior y debido a que es un fenómeno presentado en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
 
 Una vez analizados los valores de falsos positivos y falsos negativos con las señales trabajadas hasta el momento, se procedió a determinar tasas de aciertos usando señales no utilizadas en pruebas (no vistas por el sistema). En el Cuadro \ref{tabla:clasificador_matlab_verificacion} se presentan los valores obtenidos para estas señales (verificación), en ellos se puede observar que los valores de sensibilidad y especificidad superan el 80\%, llegando en algunos casos muy cerca del 100\%, por lo tanto se puede concluir que el método utilizando señales limpias es factible y que puede ser implementado en lenguaje Android.
 
 
-\chapter{Desarrollo de aplicación Android}
+\chapter{Desarrollo de aplicación Android\textsuperscript{\scriptsize\textregistered}}
 \thispagestyle{empty}
 \section{Análisis y definición de requerimientos}
-Para el desarrollo de la aplicación android se seguirán los principios de la ingeniería de software, usando como referencia el libro ``Ingeniería de Software, Ian Sommerville'', tomando en cuenta un modelo de desarrollo en cascada y se seguirán las etapas mencionadas a continuación:
+Para el desarrollo de la aplicación Android se seguirán los principios de la ingeniería de software, usando como referencia el libro ``Ingeniería de Software'' [22], tomando en cuenta un modelo de desarrollo en cascada y donde se seguirán las etapas mencionadas a continuación:
 
 \begin{itemize}
 \item Análisis y definición de requerimientos
@@ -463,13 +466,13 @@ Con el fin de recopilar los requisitos que una aplicación Android, con esta fina
 Para aquellas funcionalidades que la aplicación deberá tener, se procedió primeramente a analizar aplicaciones disponibles actualmente en la tienda PlayStore de Android. A partir del testeo de estas aplicaciones, se pudieron recabar funcionalidades básicas y además se registraron aquellas funcionalidades que, aunque necesarias, no se encontraron en ninguna de éstas. Además, se realizaron entrevistas a posibles usuarios y pruebas sobre una versión prototipo, a partir de las cuales se recabaron aspectos y opiniones necesarias para una aplicación de este tipo. A continuación se listan los requisitos obtenidos:
 
 \begin{itemize}
-\item Obtener registros de 6 o 7 horas de duración por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.
-\item Analizar la señal tomando segmentos de 5 minutos.
-\item Determinar si cada segmento de 5 minutos contiene ronquidos o no.
-\item Generar una interfaz sencilla y amigable que resulte intuitiva al usuario.
-\item Disponer de opciones para ingresar el mail de un médico al que se le enviarán los resultados, además de datos personales que sirvan de apoyo al análisis realizado.
-\item Disponer de una pestaña o ventana que indique la hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
-\item Disponer de una pestaña o ventana que presente diferentes gráficos de barras (Bar Charts) o líneas (Line Charts), que muestran los resultados de la detección, y gráficos de torta (Pie Charts), que representan porcentualmente la distribución de segmentos con ronquidos y no ronquidos.
+    \item Obtener registros de 6 o 7 horas de duración por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.
+    \item Analizar la señal tomando segmentos de 5 minutos.
+    \item Determinar si cada segmento de 5 minutos contiene ronquidos o no.
+    \item Generar una interfaz sencilla y amigable que resulte intuitiva al usuario.
+    \item Disponer de opciones para ingresar el mail de un médico al que se le enviarán los resultados, además de datos personales que sirvan de apoyo al análisis realizado.
+    \item Disponer de una pestaña o ventana que indique la hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
+    \item Disponer de una pestaña o ventana que presente diferentes gráficos de barras (Bar Charts) o líneas (Line Charts), que muestran los resultados de la detección, y gráficos de torta (Pie Charts), que representan porcentualmente la distribución de segmentos con ronquidos y no ronquidos.
 \end{itemize}
 
 \subsection{Requerimientos no funcionales}
@@ -477,9 +480,9 @@ Para aquellas funcionalidades que la aplicación deberá tener, se procedió primer
 Para la obtención de los requerimientos no funcionales, se analizaron las aplicaciones disponibles actualmente. Se relevaron aquellos aspectos que se encuentran implícitos en el funcionamiento de éstas  y se focalizó en el rendimiento y la robustez de la aplicación, como también qué recursos se utilizan de los dispositivos en que se ejecutan. Además, se analizó qué implicancia tendrían algunos de los requerimientos funcionales respecto de estos aspectos: rendimiento, robustez, almacenamiento y drenaje de la batería. Entonces, para este sistema se deben considerar:
 
 \begin{itemize}
-\item La Robustez frente al ruido.
-\item La capacidad de almacenamiento del dispositivo, suficiente para almacenar los resultados del procesamiento de cada segmento, durante las 6 o 7 horas de captura por micrófono.
-\item La capacidad de la batería, para que permita el procesamiento durante 6 o 7 horas.
+    \item La Robustez frente al ruido.
+    \item La capacidad de almacenamiento del dispositivo, suficiente para almacenar los resultados del procesamiento de cada segmento, durante las 6 o 7 horas de captura por micrófono.
+    \item La capacidad de la batería, para que permita el procesamiento durante 6 o 7 horas.
 \end{itemize}
 
 \section{Diseño del sistema y del software}
@@ -498,14 +501,17 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 	\begin{center}
 		\begin{tabular}{|l|}
 			\hline
-			\textbf{CASO DE USO: Iniciando captura} \\
+			\textbf{CASO DE USO: \textit{Iniciando captura}} \\
 			\hline
-			 ACTOR: Paciente (Usuario de la App) \\ \hline
-			 DESCRIPCIÓN \\ \hline			
-				Es el proceso por el cual el usuario comienza la captura de datos y el procesamiento \\ 
-				y almacenamiento de los resultados obtenidos. \\ 
-				Opcionalmente se le permite ingresar datos personales y el email de un médico, al que \\  
-				se le enviarán 	los resultados obtenidos.\\ \hline			
+			 ACTOR: Paciente (Usuario de la App) \\ 
+            \hline
+			 DESCRIPCIÓN \\ 
+            \hline			
+			Es el proceso por el cual el usuario comienza la captura de datos y el procesamiento \\ 
+			y almacenamiento de los resultados obtenidos. \\ 
+			Opcionalmente se le permite ingresar datos personales y el email de un médico, al que \\  
+			se le enviarán 	los resultados obtenidos.\\ 
+            \hline			
 		\end{tabular}
 		\caption{Caso de uso Iniciando captura}
 		\label{tabla:t0_f0_1_minuto}
@@ -569,17 +575,21 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 
 [21] Dream Watcher - Anti Ronquidos. Aplicación para detectar ronquidos [consulta: 20 noviembre 2015]. Disponible en: \url{<https://play.google.com/store/apps/details?id=com.arcadexxi.dreamwatcher>}
 
+[22] Sommerville, Ian and Mari?a Isabel Alfonso Galipienso. Ingenieri?a Del Software. Madrid: Pearson Addison-Wesley, 2005.
 
 
 %==============================================================================
 %
-%	ANEXO A
+%	ANEXO A (Apéndices)
 %
 %==============================================================================
-\chapter*{Anexo A}
+\appendix
+\chapter{Tablas extra de cálculo y determinación de $T_0$}
 \thispagestyle{empty}
-\addcontentsline{toc}{chapter}{Anexo A} % esto añade el capitulo en el índice
+%\addcontentsline{toc}{chapter}{Tablas adicionales para el cálculo de $T_0$} % esto añade el capitulo en el índice
 %\addcontentsline{toc}{section}{Anexo A} % asi se añade una seccion al índice
+
+\footnotesize{
 
 \begin{table}[htbp]
 	\begin{center}
@@ -1114,14 +1124,17 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 		\label{tabla:clasificador_matlab_verificacion}
 	\end{center}
 \end{table}  
-
+}
 %==============================================================================
 %
 %	ANEXO B
 %
 %==============================================================================
-\chapter*{Anexo B}
+\chapter{Información adicional sobre App Android\textsuperscript{\textregistered} }
 \thispagestyle{empty}
-\addcontentsline{toc}{chapter}{Anexo B} % esto añade el capitulo en el índice
+%\addcontentsline{toc}{chapter}{Anexo B} % esto añade el capitulo en el índice
+
+Toda la información extra sobre el desarrollo en Android irá aquí.
+
 
 \end{document}
