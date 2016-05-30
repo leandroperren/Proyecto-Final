@@ -1060,7 +1060,7 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 			\multicolumn{2}{|r|}{\textbf{Media}} & \textbf{4.29} \\ \hline
 			\multicolumn{2}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
 		\end{tabular}
-		\caption{$T_0$ y $F_0$ de segmentos de 1 minuto de duración.}
+		\caption{$T_0$ de segmentos de 1 minuto de duración.}
 		\label{tabla:t0_f0_1_minuto}
 	\end{center}
 \end{table}
@@ -1087,38 +1087,194 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|c|}
 			\hline
-			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{T0} (s) \\ 
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
 			\hline \hline
-			Paciente 1 & 03:33:59 & 4.15 \\ \hline
-			& 02:12:12 & 4.68  \\ \hline
-			& 02:11:04 & 4.86  \\ \hline
-			& 03:24:43 & 3.96  \\ \hline
-			& 04:33:24 & 3.79  \\ \hline
-			Paciente 2 & 22:25:37 & 3.52  \\ \hline
-			& 22:28:24 & 3.73  \\ \hline
-			& 22:30:03 & 4.15  \\ \hline
-			& 22:52:37 & 3.22  \\ \hline
-			& 23:16:03 & 3.82  \\ \hline
-			Paciente 3 & 01:43:47 & 3.77  \\ \hline
-			& 02:06:04 & 4.26  \\ \hline
-			& 02:31:09 & 3.95  \\ \hline
-			& 03:10:34 & 3.58  \\ \hline
-			& 04:52:01 & 3.93  \\ \hline
-			Paciente 4 & 01:30:03 & 5.83  \\ \hline
-			& 03:48:38 & 4.92  \\ \hline
-			& 03:53:09 & 4.74  \\ \hline
-			& 22:25:30 & 4.88  \\ \hline
-			& 00:28:31 & 4.46  \\ \hline
-			Paciente 5 & 04:21:07 & 3.90  \\ \hline
-			& 04:22:42 & 3.91  \\ \hline
-			& 04:57:37 & 3.82  \\ \hline
-			& 23:11:57 & 3.77  \\ \hline
-			& 23:42:54 & 3.68  \\ \hline
-			\multicolumn{2}{|r|}{\textbf{Media}} & \textbf{4.13}  \\ \hline
-			\multicolumn{2}{|r|}{\textbf{Desvío}} & \textbf{0.58} \\ \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15 \\ \hline 
+			& 02:12:12 & 1333200 & 4.68  \\ \hline
+			& 02:11:04 & 1326400 & 4.86  \\ \hline
+			& 03:24:43 & 1768300 & 3.96  \\ \hline
+			& 04:33:24 & 2180400 & 3.79  \\ \hline
+			Paciente 2 & 22:25:37 & 153700 & 3.52  \\ \hline
+			& 22:28:24 & 170400 & 3.73  \\ \hline
+			& 22:30:03 & 180300 & 4.15  \\ \hline
+			& 22:52:37 & 315700 & 3.22  \\ \hline
+			& 23:16:03 & 456300 & 3.82  \\ \hline
+			Paciente 3 & 01:43:47 & 322700 & 3.77  \\ \hline
+			& 02:06:04 & 456400 & 4.26  \\ \hline
+			& 02:31:09 & 606900 & 3.95  \\ \hline
+			& 03:10:34 & 843400 & 3.58  \\ \hline
+			& 04:52:01 & 1452100 & 3.93  \\ \hline		
+			Paciente 4 & 01:30:03 & 1260300 & 5.83  \\ \hline
+			& 03:48:38 & 2091800 & 4.92  \\ \hline
+			& 03:53:09 & 2118900 & 4.74  \\ \hline
+			& 22:25:30 & 153000 & 4.88  \\ \hline
+			& 00:28:31 & 891100 & 4.46  \\ \hline		
+			Paciente 5 & 04:21:07 & 1.926.700 & 3.90  \\ \hline
+			& 04:22:42 & 1.936.200 & 3.91  \\ \hline
+			& 04:57:37 & 2.145.700 & 3.82  \\ \hline
+			& 23:11:57 & 71.700 & 3.77  \\ \hline
+			& 23:42:54 & 257.400 & 3.68  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.13}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.58} \\ \hline
 		\end{tabular}
-		\caption{$T_0$ y $F_0$ de segmentos con ronquidos de 1 minuto en distintas señales de hombres.}
+		\caption{$T_0$ de segmentos con ronquidos de 1 minuto en distintas señales de hombres.}
 		\label{tabla:segmentos_1_minuto_hombres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15 \\ \hline
+			& 02:12:12 & 1333200 & 4.72\\ \hline
+			& 02:11:04 & 1326400 & 4.86\\ \hline
+			& 03:24:43 & 1768300 & 3.96\\ \hline
+			& 04:33:24 & 2180400 & 3.79\\ \hline
+			Paciente 2 & 22:25:37 & 153700 & 3.23  \\ \hline			
+			& 22:28:24 & 170400 & 3.73\\ \hline
+			& 22:30:03 & 180300 & 3.28\\ \hline
+			& 22:52:37 & 315700 & 3.22\\ \hline
+			& 23:16:03 & 456300 & 3.48\\ \hline
+			Paciente 3 & 01:43:37 & 321700 & 3.87\\ \hline	
+			& 02:06:04 & 456400 & 3.92\\ \hline
+			& 02:31:39 & 609900 & 3.95\\ \hline
+			& 03:10:34 & 843400 & 3.65\\ \hline
+			& 04:52:01 & 1452100 & 3.90\\ \hline
+			Paciente 4 & 01:30:03 & 1260300 & 5.83  \\ \hline	
+			& 03:48:38 & 2091800 & 4.31\\ \hline
+			& 03:53:09 & 2118900 & 5.19\\ \hline
+			& 22:25:30 & 153000 & 4.88\\ \hline
+			& 00:28:31 & 891100 & 4.48\\ \hline
+			Paciente 5 & 23:20:51 & 125.100 & 3.98\\ \hline
+			& 00:05:30 & 393.000 & 3.81\\ \hline
+			& 00:08:00 & 408.000 & 3.68\\ \hline
+			& 00:14:17 & 445.700 & 3.38\\ \hline
+			& 00:15:08 & 450.800 & 3.92\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.05}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.64} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 30 segundos en distintas señales de hombres.}
+		\label{tabla:segmentos_30_segndos_hombres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15\\ \hline
+			& 02:12:12 & 1333200 & 4.68\\ \hline
+			& 02:11:04 & 1326400 & 4.86\\ \hline
+			& 04:23:31 & 2121100 & 3.97\\ \hline
+			& 01:29:10 & 1075000 & 3.80\\ \hline
+			Paciente 2 & 22:25:37 & 153700 & 3.52\\ \hline
+			& 23:15:31 & 453100 & 3.32\\ \hline
+			& 23:30:06 & 540600 & 3.64\\ \hline
+			& 00:00:00 & 720000 & 2.98\\ \hline
+			& 01:00:00 & 1080000 & 3.59\\ \hline
+			Paciente 3 & 01:43:37 & 321700 & 3.87\\ \hline
+			& 02:06:04 & 456400 & 4.26\\ \hline
+			& 02:31:39 & 609900 & 3.90\\ \hline
+			& 02:40:22 & 662200 & 3.71\\ \hline
+			& 04:52:01 & 1452100 & 3.96\\ \hline		
+			Paciente 4 & 01:30:03 & 1260300 & 5.83\\ \hline
+			& 03:48:38 & 2091800 & 4.92\\ \hline
+			& 03:53:09 & 2118900 & 5.87\\ \hline
+			& 22:25:30 & 153000 & 4.88\\ \hline
+			& 00:28:31 & 891100 & 4.46\\ \hline		
+			Paciente 5 & 23:04:50 & 29.000 & 3.90\\ \hline
+			& 23:11:57 & 71.700 & 3.77\\ \hline
+			& 23:15:07 & 90.700 & 3.99\\ \hline
+			& 23:18:18 & 109.800 & 3.54\\ \hline
+			& 23:42:45 & 256.500 & 3.81\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.13}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.71} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 2 minutos en distintas señales de hombres.}
+		\label{tabla:segmentos_2_minuto_hombres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15\\ \hline
+			& 02:12:12 & 1333200 & 4.68\\ \hline
+			& 02:11:04 & 1326400 & 4.86\\ \hline
+			& 04:23:31 & 2121100 & 3.97\\ \hline
+			& 01:29:10 & 1075000 & 3.92\\ \hline			
+			Paciente 2 & 22:25:37 & 153700 & 3.52\\ \hline
+			& 23:15:31 & 453100 & 3.32\\ \hline
+			& 23:30:06 & 540600 & 3.64\\ \hline
+			& 00:00:00 & 720000 & 3.66\\ \hline
+			& 01:00:00 & 1080000 & 3.57\\ \hline
+			Paciente 3 & 01:43:37 & 321700 & 3.87\\ \hline
+			& 02:06:04 & 456400 & 3.92\\ \hline
+			& 02:31:39 & 609900 & 3.95\\ \hline
+			& 02:40:22 & 662200 & 3.71\\ \hline
+			& 04:52:01 & 1452100 & 3.45\\ \hline
+			Paciente 4 & 01:30:03 & 1260300 & 5.83\\ \hline
+			& 03:48:38 & 2091800 & 4.39\\ \hline
+			& 03:53:09 & 2118900 & 5.81\\ \hline
+			& 22:25:30 & 153000 & 5.30\\ \hline
+			& 00:28:31 & 891100 & 4.46\\ \hline		
+			Paciente 5 & 23:11:57 & 71.700 & 3.77 \\ \hline
+			& 23:15:39 & 93.900 & 3.99\\ \hline
+			& 23:19:01 & 114.100 & 3.54\\ \hline
+			& 23:42:45 & 256.500 & 3.68\\ \hline
+			& 23:46:00 & 276.000 & 3.87\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.11}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.69} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 3 minutos en distintas señales de hombres.}
+		\label{tabla:segmentos_3_minuto_hombres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15\\ \hline
+			& 02:12:12 & 1333200 & 4.68\\ \hline
+			& 02:20:13 & 1381300 & 4.08\\ \hline
+			& 04:23:31 & 2121100 & 4.45\\ \hline
+			& 01:29:10 & 1075000 & 4.27\\ \hline
+			Paciente 2 & 22:25:37 & 153700 & 3.59\\ \hline
+			& 23:15:31 & 453100 & 3.23\\ \hline
+			& 23:30:06 & 540600 & 4.09\\ \hline
+			& 00:00:00 & 720000 & 3.55\\ \hline
+			& 01:00:00 & 1080000 & 3.50\\ \hline
+			Paciente 3 & 01:43:37 & 321700 & 3.82\\ \hline
+			& 02:06:04 & 456400 & 3.88\\ \hline
+			& 02:31:39 & 609900 & 3.79\\ \hline
+			& 02:40:22 & 662200 & 4.19\\ \hline
+			& 04:52:01 & 1452100 & 3.45\\ \hline
+			Paciente 4 & 01:30:03 & 1260300 & 5.83\\ \hline
+			& 03:48:38 & 2091800 & 4.39\\ \hline
+			& 03:53:09 & 2118900 & 5.81\\ \hline
+			& 22:25:30 & 153000 & 4.27\\ \hline
+			& 00:28:31 & 891100 & 5.98\\ \hline
+			Paciente 5 & 23:11:57 & 71.700 & 3.77\\ \hline
+			& 23:16:02 & 96.200 & 3.96\\ \hline
+			& 23:33:58 & 203.800 & 3.97\\ \hline
+			& 23:45:29 & 272.900 & 3.87\\ \hline
+			& 23:54:33 & 327.300 & 3.89\\ \hline			
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.18}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.71} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 5 minutos en distintas señales de hombres.}
+		\label{tabla:segmentos_5_minuto_hombres}
 	\end{center}
 \end{table}
 
@@ -1232,6 +1388,561 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 		\end{tabular}
 		\caption{Paciente 6: segmentos de duración de 5 minutos}
 		\label{tabla:paciente_6_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline												
+			1 & 00:20:15 & 301500 & 3.58 \\ \hline
+			2 & 00:26:17 & 337700 & 3.17 \\ \hline
+			3 & 00:47:12 & 463200 & 4.07 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.49 \\ \hline
+			5 & 05:38:47 & 2212700 & 4.39 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.94} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.56} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_7_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline														
+			1 & 03:15:10 & 1351000 & 4.12 \\ \hline
+			2 & 03:20:45 & 1384500 & 4.01 \\ \hline
+			3 & 03:37:56 & 1487600 & 4.62 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.82 \\ \hline
+			5 & 05:38:47 & 2212700 & 3.81 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.28} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.43} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_7_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 03:15:10 & 1351000 & 4.48 \\ \hline
+			2 & 03:20:45 & 1384500 & 3.84 \\ \hline
+			3 & 03:37:56 & 1487600 & 4.36 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.49 \\ \hline
+			5 & 05:38:47 & 2212700 & 4.07 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.25} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.28} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 2 minutos}
+		\label{tabla:paciente_7_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 03:15:10 & 1351000 & 3.73 \\ \hline
+			2 & 03:20:45 & 1384500 & 4.60 \\ \hline
+			3 & 03:37:56 & 1487600 & 4.36 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.37 \\ \hline
+			5 & 05:38:47 & 2212700 & 4.07 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.23} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.34} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 3 minutos}
+		\label{tabla:paciente_7_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 03:15:10 & 1351000 & 4.18 \\ \hline
+			2 & 03:20:45 & 1384500 & 4.60 \\ \hline
+			3 & 03:37:56 & 1487600 & 5.24 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.37 \\ \hline
+			5 & 05:38:47 & 2212700 & 4.07 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.49} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 5 minutos}
+		\label{tabla:paciente_7_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.99 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.33 \\ \hline
+			3 & 05:16:52 & 1.719.700 & 4.07 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 3.43 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.59 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.88} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.37} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_8_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.99 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.33 \\ \hline
+			3 & 05:16:52 & 1.721.200 & 3.88 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 3.20 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.58 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.80} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.43} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_8_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.52 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.16 \\ \hline
+			3 & 05:16:52 & 1.721.200 & 4.07 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 4.18 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.59 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.90} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.32} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 2 minutos}
+		\label{tabla:paciente_8_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.52 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.16 \\ \hline
+			3 & 05:16:52 & 1.721.200 & 4.07 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 3.31 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.59 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.73} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.37} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 3 minutos}
+		\label{tabla:paciente_8_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.96 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.03 \\ \hline
+			3 & 05:16:52 & 1.721.200 & 5.01 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 3.31 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.59 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.98} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.65} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 5 minutos}
+		\label{tabla:paciente_8_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 03:40:04 & 1776400 & 5.01 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.61 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.64 \\ \hline
+			4 & 03:43:04 & 1794400 & 4.40 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.92 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.72} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.25} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_9_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline				
+			1 & 03:40:04 & 1776400 & 4.62 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.61 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.38 \\ \hline
+			4 & 03:43:04 & 1794400 & 5.07 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.92 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.72} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.27} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_9_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline				
+			1 & 03:40:04 & 1776400 & 4.64 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.64 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.64 \\ \hline
+			4 & 03:43:04 & 1794400 & 5.07 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.95 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.79} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.21} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 2 minutos}
+		\label{tabla:paciente_9_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline					
+			1 & 03:40:04 & 1776400 & 4.64 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.64 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.64 \\ \hline
+			4 & 03:43:04 & 1794400 & 5.07 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.95 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.79} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.21} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 3 minutos}
+		\label{tabla:paciente_9_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline			
+			1 & 03:40:04 & 1776400 & 4.64 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.64 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.64 \\ \hline
+			4 & 03:43:04 & 1794400 & 5.07 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.95 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.79} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.21} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 5 minutos}
+		\label{tabla:paciente_9_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline		
+			1 & 00:39:58 & 59800 & 3.94 \\ \hline
+			2 & 00:59:45 & 178500 & 4.21 \\ \hline
+			3 & 01:10:14 & 241400 & 3.97 \\ \hline
+			4 & 01:30:00 & 360000 & 3.82 \\ \hline
+			5 & 01:45:00 & 450000 & 4.06 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.00} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.15} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_10_1minuto}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline		
+			1 & 00:39:58 & 59800 & 3.94 \\ \hline
+			2 & 00:59:45 & 178500 & 3.97 \\ \hline
+			3 & 01:10:14 & 241400 & 4.23 \\ \hline
+			4 & 01:30:00 & 360000 & 4.07 \\ \hline
+			5 & 01:45:00 & 450000 & 4.03 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.13} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.16} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_10_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline				
+			1 & 00:39:58 & 59800 & 3.94 \\ \hline
+			2 & 00:59:45 & 178500 & 4.35 \\ \hline
+			3 & 01:10:14 & 241400 & 3.93 \\ \hline
+			4 & 01:30:00 & 360000 & 3.82 \\ \hline
+			5 & 01:45:00 & 450000 & 4.06 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.02} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.20} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 2 minutos}
+		\label{tabla:paciente_10_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline						
+			1 & 00:39:58 & 59800 & 3.94 \\ \hline
+			2 & 00:59:45 & 178500 & 4.02 \\ \hline
+			3 & 01:10:14 & 241400 & 3.93 \\ \hline
+			4 & 01:30:00 & 360000 & 3.82 \\ \hline
+			5 & 01:45:00 & 450000 & 4.06 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.95} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.09} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 3 minutos}
+		\label{tabla:paciente_10_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 00:39:58 & 59800 & 4.07 \\ \hline
+			2 & 00:59:45 & 178500 & 4.02 \\ \hline
+			3 & 01:10:14 & 241400 & 3.93 \\ \hline
+			4 & 01:30:00 & 360000 & 3.82 \\ \hline
+			5 & 01:45:00 & 450000 & 4.06 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.98} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.11} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 5 minutos}
+		\label{tabla:paciente_10_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.18\\ \hline
+			& 15:18:54 & 1193400 & 4.39\\ \hline
+			& 17:07:26 & 1844600 & 4.91\\ \hline
+			& 17:15:31 & 1893100 & 4.85\\ \hline
+			& 15:40:07 & 1320700 & 4.91\\ \hline
+			Paciente 7 & 00:20:15 & 301500 & 3.58\\ \hline
+			& 00:26:17 & 337700 & 3.17\\ \hline
+			& 00:47:12 & 463200 & 4.07\\ \hline
+			& 04:00:02 & 1620200 & 4.49\\ \hline
+			& 05:38:47 & 2212700 & 4.39\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.99\\ \hline
+			& 03:47:33 & 1.185.300 & 4.33\\ \hline
+			& 05:16:52 & 1.719.700 & 4.07\\ \hline
+			& 03:35:25 & 1.112.500 & 3.43\\ \hline 
+			& 02:43:48 & 802.800 & 3.59\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 5.01\\ \hline
+			& 03:42:27 & 1790700 & 4.61\\ \hline
+			& 03:44:04 & 1800400 & 4.64\\ \hline
+			& 03:43:04 & 1794400 & 4.40\\ \hline
+			& 04:14:01 & 1980100 & 4.92\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 3.94\\ \hline
+			& 00:59:45 & 178500 & 4.21\\ \hline
+			& 01:10:14 & 241400 & 3.97\\ \hline
+			& 01:30:00 & 360000 & 3.82\\ \hline
+			& 01:45:00 & 450000 & 4.06\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.24}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.50} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 1 minuto en distintas señales de mujeres.}
+		\label{tabla:segmentos_1_minuto_mujeres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.18\\ \hline
+			& 15:18:54 & 1193400 & 4.65\\ \hline
+			& 17:07:26 & 1847600 & 4.86\\ \hline
+			& 17:15:31 & 1893100 & 5.44\\ \hline
+			& 15:40:07 & 1320700 & 4.63\\ \hline
+			Paciente 7 & 03:15:10 & 1351000 & 4.12\\ \hline
+			& 03:20:45 & 1384500 & 4.01\\ \hline
+			& 03:37:56 & 1487600 & 4.62\\ \hline
+			& 04:00:02 & 1620200 & 4.82\\ \hline
+			& 05:38:47 & 2212700 & 3.81\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.99\\ \hline
+			& 03:47:33 & 1.185.300 & 4.33\\ \hline
+			& 05:16:52 & 1.721.200 & 3.88\\ \hline
+			& 03:35:25 & 1.112.500 & 3.20\\ \hline
+			& 02:43:48 & 802.800 & 3.58\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 4.62\\ \hline
+			& 03:42:27 & 1790700 & 4.61\\ \hline
+			& 03:44:04 & 1800400 & 4.38\\ \hline
+			& 03:43:04 & 1794400 & 5.07\\ \hline
+			& 04:14:01 & 1980100 & 4.92\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 3.94\\ \hline
+			& 00:59:45 & 178500 & 3.97\\ \hline
+			& 01:10:14 & 241400 & 4.23\\ \hline
+			& 01:30:00 & 360000 & 4.07\\ \hline
+			& 01:45:00 & 450000 & 4.03\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.32}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.51} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 30 segundos en distintas señales de mujeres.}
+		\label{tabla:segmentos_30_segundos_mujeres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.22\\ \hline
+			& 15:18:54 & 1193400 & 4.56\\ \hline
+			& 17:07:26 & 1847600 & 5.29\\ \hline
+			& 17:15:31 & 1893100 & 5.10\\ \hline
+			& 15:40:07 & 1320700 & 5.13\\ \hline
+			Paciente 7 & 03:15:10 & 1351000 & 4.48\\ \hline
+			& 03:20:45 & 1384500 & 3.84\\ \hline
+			& 03:37:56 & 1487600 & 4.36\\ \hline
+			& 04:00:02 & 1620200 & 4.49\\ \hline
+			& 05:38:47 & 2212700 & 4.07\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.52\\ \hline
+			& 03:47:33 & 1.185.300 & 4.16\\ \hline
+			& 05:16:52 & 1.721.200 & 4.07\\ \hline
+			& 03:35:25 & 1.112.500 & 4.18\\ \hline
+			& 02:43:48 & 802.800 & 3.59\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 4.64\\ \hline
+			& 03:42:27 & 1790700 & 4.64\\ \hline
+			& 03:44:04 & 1800400 & 4.64\\ \hline
+			& 03:43:04 & 1794400 & 5.07\\ \hline
+			& 04:14:01 & 1980100 & 4.95\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 3.94\\ \hline
+			& 00:59:45 & 178500 & 4.35\\ \hline
+			& 01:10:14 & 241400 & 3.93\\ \hline
+			& 01:30:00 & 360000 & 3.82\\ \hline
+			& 01:45:00 & 450000 & 4.06\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.36}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.49} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 2 minutos en distintas señales de mujeres.}
+		\label{tabla:segmentos_2_minutos_mujeres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.20\\ \hline
+			& 15:18:54 & 1193400 & 4.44\\ \hline
+			& 17:07:26 & 1847600 & 4.83\\ \hline
+			& 17:15:31 & 1893100 & 5.10\\ \hline
+			& 15:40:07 & 1320700 & 4.95\\ \hline
+			Paciente 7 & 03:15:10 & 1351000 & 3.73\\ \hline
+			& 03:20:45 & 1384500 & 4.60\\ \hline
+			& 03:37:56 & 1487600 & 4.36\\ \hline
+			& 04:00:02 & 1620200 & 4.37\\ \hline
+			& 05:38:47 & 2212700 & 4.07\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.52\\ \hline
+			& 03:47:33 & 1.185.300 & 4.16\\ \hline
+			& 05:16:52 & 1.721.200 & 4.07\\ \hline
+			& 03:35:25 & 1.112.500 & 3.31\\ \hline
+			& 02:43:48 & 802.800 & 3.59\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 4.64\\ \hline
+			& 03:42:27 & 1790700 & 4.64\\ \hline
+			& 03:44:04 & 1800400 & 4.64\\ \hline
+			& 03:43:04 & 1794400 & 5.07\\ \hline
+			& 04:14:01 & 1980100 & 4.95\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 3.94\\ \hline
+			& 00:59:45 & 178500 & 4.02\\ \hline
+			& 01:10:14 & 241400 & 3.93\\ \hline
+			& 01:30:00 & 360000 & 3.82\\ \hline
+			& 01:45:00 & 450000 & 4.06\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.28}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.50} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 3 minutos en distintas señales de mujeres.}
+		\label{tabla:segmentos_3_minutos_mujeres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.46\\ \hline
+			& 15:18:54 & 1193400 & 4.46\\ \hline
+			& 17:07:26 & 1847600 & 4.93\\ \hline
+			& 17:15:31 & 1893100 & 5.31\\ \hline
+			& 15:40:07 & 1320700 & 4.67\\ \hline
+			Paciente 7 & 03:15:10 & 1351000 & 4.18\\ \hline
+			& 03:20:45 & 1384500 & 4.60\\ \hline
+			& 03:37:56 & 1487600 & 5.24\\ \hline
+			& 04:00:02 & 1620200 & 4.37\\ \hline
+			& 05:38:47 & 2212700 & 4.07\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.96\\ \hline
+			& 03:47:33 & 1.185.300 & 4.03\\ \hline
+			& 05:16:52 & 1.721.200 & 5.01\\ \hline
+			& 03:35:25 & 1.112.500 & 3.31\\ \hline
+			& 02:43:48 & 802.800 & 3.59\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 4.64\\ \hline
+			& 03:42:27 & 1790700 & 4.64\\ \hline
+			& 03:44:04 & 1800400 & 4.64\\ \hline
+			& 03:43:04 & 1794400 & 5.07\\ \hline
+			& 04:14:01 & 1980100 & 4.95\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 4.07\\ \hline
+			& 00:59:45 & 178500 & 4.02\\ \hline
+			& 01:10:14 & 241400 & 3.93\\ \hline
+			& 01:30:00 & 360000 & 3.82\\ \hline
+			& 01:45:00 & 450000 & 4.06\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.40}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.52} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 5 minutos en distintas señales de mujeres.}
+		\label{tabla:segmentos_5_minutos_mujeres}
 	\end{center}
 \end{table}
 

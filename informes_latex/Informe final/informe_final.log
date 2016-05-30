@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.27)  27 MAY 2016 14:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.27)  30 MAY 2016 16:10
 entering extended mode
 **informe_final.tex
 ("C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\Informe final\informe_final.tex"
@@ -327,14 +327,6 @@ LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <8> not available
 ]
 ("C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\Informe final\informe_final.lot" [4
 
-])
-\tf@lot=\write5
- [5] [6
-
-]
-Cap\'{\i }tulo 1.
-[7
-
 ]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -342,7 +334,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]
+[5])
+\tf@lot=\write5
+ [6] [7
+
+]
+Cap\'{\i }tulo 1.
+[8
+
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -356,7 +356,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10] <img/dream_watcher.png, id=51, 442.86383pt x 756.31395pt>
+[10]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11] <img/dream_watcher.png, id=54, 442.86383pt x 756.31395pt>
 File: img/dream_watcher.png Graphic file (type png)
  <use img/dream_watcher.png>
 Package pdftex.def Info: img/dream_watcher.png used on input line 173.
@@ -368,14 +375,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/dream_watcher.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[12]
+[12 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/dream_watcher.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -383,17 +383,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
 Cap\'{\i }tulo 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <17.28> on input line 232.
-<img/figure1.png, id=65, 746.03719pt x 210.7875pt>
+<img/figure1.png, id=68, 746.03719pt x 210.7875pt>
 File: img/figure1.png Graphic file (type png)
  <use img/figure1.png>
 Package pdftex.def Info: img/figure1.png used on input line 239.
 (pdftex.def)             Requested size: 469.47049pt x 132.64566pt.
- [14
+ [15
 
- <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure1.png>] <img/figure2.png, id=69, 1445.4
+ <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure1.png>] <img/figure2.png, id=72, 1445.4
 pt x 724.95844pt>
 File: img/figure2.png Graphic file (type png)
  <use img/figure2.png>
@@ -406,34 +413,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[16]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure2.png (PNG copy)>]
+[17 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure2.png (PNG copy)>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]
+[18]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18] <img/figure3.png, id=83, 1445.4pt x 724.95844pt>
+[19] <img/figure3.png, id=86, 1445.4pt x 724.95844pt>
 File: img/figure3.png Graphic file (type png)
  <use img/figure3.png>
 Package pdftex.def Info: img/figure3.png used on input line 320.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
 
-<img/figure4.png, id=84, 1445.4pt x 724.95844pt>
+<img/figure4.png, id=87, 1445.4pt x 724.95844pt>
 File: img/figure4.png Graphic file (type png)
  <use img/figure4.png>
 Package pdftex.def Info: img/figure4.png used on input line 327.
@@ -445,13 +452,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure3.png (PNG copy)>]
-<img/figure5.png, id=88, 1445.4pt x 724.95844pt>
+[20 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure3.png (PNG copy)>]
+<img/figure5.png, id=91, 1445.4pt x 724.95844pt>
 File: img/figure5.png Graphic file (type png)
  <use img/figure5.png>
 Package pdftex.def Info: img/figure5.png used on input line 334.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
- <img/figure6.png, id=89, 1445.4pt x 724.95844pt>
+ <img/figure6.png, id=92, 1445.4pt x 724.95844pt>
 File: img/figure6.png Graphic file (type png)
 
 <use img/figure6.png>
@@ -464,9 +471,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure4.png (PNG copy)> <C:/Users/Leandro/
+[21 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure4.png (PNG copy)> <C:/Users/Leandro/
 Desktop/Proyecto-final/informes_latex/Informe final/img/figure5.png (PNG copy)>]
-<img/figure7.png, id=93, 1199.98312pt x 596.98032pt>
+<img/figure7.png, id=96, 1199.98312pt x 596.98032pt>
 File: img/figure7.png Graphic file (type png)
  <use img/figure7.png>
 Package pdftex.def Info: img/figure7.png used on input line 350.
@@ -478,16 +485,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure6.png (PNG copy)>]
-<img/figure8.png, id=97, 1445.4pt x 724.95844pt>
+[22 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure6.png (PNG copy)>]
+<img/figure8.png, id=100, 1445.4pt x 724.95844pt>
 File: img/figure8.png Graphic file (type png)
  <use img/figure8.png>
 Package pdftex.def Info: img/figure8.png used on input line 359.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
- <img/figure9.png, id=98, 1445.4pt x 724.95844pt>
-File: img/figure9.png Graphic file (type png)
 
-<use img/figure9.png>
+<img/figure9.png, id=101, 1445.4pt x 724.95844pt>
+File: img/figure9.png Graphic file (type png)
+ <use img/figure9.png>
 Package pdftex.def Info: img/figure9.png used on input line 366.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
 
@@ -497,9 +504,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[22 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure7.png> <C:/Users/Leandro/Desktop/Pro
+[23 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure7.png> <C:/Users/Leandro/Desktop/Pro
 yecto-final/informes_latex/Informe final/img/figure8.png (PNG copy)>]
-<img/figure10.png, id=102, 1445.4pt x 724.95844pt>
+<img/figure10.png, id=105, 1445.4pt x 724.95844pt>
 File: img/figure10.png Graphic file (type png)
  <use img/figure10.png>
 Package pdftex.def Info: img/figure10.png used on input line 373.
@@ -511,9 +518,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure9.png (PNG copy)> <C:/Users/Leandro/
+[24 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure9.png (PNG copy)> <C:/Users/Leandro/
 Desktop/Proyecto-final/informes_latex/Informe final/img/figure10.png (PNG copy)>]
-<img/figure11.png, id=106, 328.22626pt x 405.01312pt>
+<img/figure11.png, id=110, 328.22626pt x 405.01312pt>
 File: img/figure11.png Graphic file (type png)
  <use img/figure11.png>
 Package pdftex.def Info: img/figure11.png used on input line 394.
@@ -525,7 +532,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24] <img/figure12.png, id=112, 713.66624pt x 548.0475pt>
+[25] <img/figure12.png, id=115, 713.66624pt x 548.0475pt>
 File: img/figure12.png Graphic file (type png)
  <use img/figure12.png>
 Package pdftex.def Info: img/figure12.png used on input line 401.
@@ -537,14 +544,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure11.png> <C:/Users/Leandro/Desktop/Pr
-oyecto-final/informes_latex/Informe final/img/figure12.png>] <img/figure13.png, id=118, 1445.4pt x 724.95844pt>
+[26 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure11.png> <C:/Users/Leandro/Desktop/Pr
+oyecto-final/informes_latex/Informe final/img/figure12.png>] <img/figure13.png, id=121, 1445.4pt x 724.95844pt>
 File: img/figure13.png Graphic file (type png)
 
 <use img/figure13.png>
 Package pdftex.def Info: img/figure13.png used on input line 411.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
- <img/figure14.png, id=119, 1445.4pt x 724.95844pt>
+ <img/figure14.png, id=122, 1445.4pt x 724.95844pt>
 File: img/figure14.png Graphic file (type png)
  <use img/figure14.png>
 Package pdftex.def Info: img/figure14.png used on input line 418.
@@ -556,29 +563,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure13.png>]
+[27 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure13.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure14.png>]
+[28 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/figure14.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28]
+[29]
 Cap\'{\i }tulo 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <24.88> on input line 448.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <20.74> on input line 448.
-[29
+[30
 
-] <img/caso_uso.png, id=134, 474.27188pt x 322.20375pt>
+] <img/caso_uso.png, id=138, 474.27188pt x 322.20375pt>
 File: img/caso_uso.png Graphic file (type png)
  <use img/caso_uso.png>
 Package pdftex.def Info: img/caso_uso.png used on input line 495.
@@ -592,23 +599,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]
+[31]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/caso_uso.png>]
+[32 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe final/img/caso_uso.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32]
+[33]
 Cap\'{\i }tulo 4.
-[33
+[34
 
 ]
 Overfull \hbox (15.48553pt too wide) in paragraph at lines 536--537
@@ -616,7 +623,7 @@ Overfull \hbox (15.48553pt too wide) in paragraph at lines 536--537
  ? title = Ronquido>[]$ 
  []
 
-[34
+[35
 
 ]
 Overfull \hbox (33.52094pt too wide) in paragraph at lines 574--575
@@ -630,18 +637,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35]
+[36]
 Ap\'{e}ndice A.
-[36
+[37
 
 ]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[37]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -747,10 +747,129 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[53]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[54]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[55]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[56]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[59]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[61]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[62]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[63]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[64]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[65]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[66]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[67]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[68]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[69]
 Ap\'{e}ndice B.
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <20.74> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 1413.
-[53
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 2124.
+[70
 
 ] ("C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\Informe final\informe_final.aux")
 
@@ -758,13 +877,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3750 strings out of 493921
- 51313 string characters out of 3144870
- 132904 words of memory out of 3000000
- 6961 multiletter control sequences out of 15000+200000
+ 3779 strings out of 493921
+ 52179 string characters out of 3144870
+ 133252 words of memory out of 3000000
+ 6990 multiletter control sequences out of 15000+200000
  17171 words of font info for 63 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,20n,43p,2347b,553s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,20n,43p,2347b,621s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cmextra/cmbsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
@@ -778,9 +897,9 @@ ic/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
 1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmtt12.pfb>
-Output written on informe_final.pdf (54 pages, 873475 bytes).
+Output written on informe_final.pdf (71 pages, 916298 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
+ 330 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
