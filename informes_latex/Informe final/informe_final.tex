@@ -486,6 +486,123 @@ Para la obtención de los requerimientos no funcionales, se analizaron las aplica
 \end{itemize}
 
 \section{Diseño del sistema y del software}
+
+A continuación se presenta un diagrama de flujos de datos de la aplicación a desarrollar. 
+El primer paso consiste en la captura de la señal, para ello se utilizará la clase AudioRecord de Android, la cual permite hacer uso del micrófono en la aplicación y, mediante los datos capturados por el mismo en segmentos, dar origen a su procesamiento.
+
+Debido a que la mayoría de los aplicaciones que utilizan la clase AudioRecord admiten una frecuencia de muestreo mínima de 8000Hz, que es una limitación propia de la clase, se realiza un proceso de submuestreo a 100Hz, determinado con base en las señales EDF analizadas previamente. Esto posibilitará un menor costo computacional para los cálculos de autocorrelación y un ahorro en el almacenamiento. 
+
+El proceso de submuestreo escogido se denomina “decimation” e incluye un filtro pasa-bajos que permite eliminar previamente las altas frecuencias de la señal para no generar aliasing. Como filtro pasa-bajos se utilizó un FIR de orden 6, con una frecuencia de corte fijada en pi/80. 
+
+La señal submuestreada es segmentada en trozos de 5 minutos, y para cada uno de ellos se  calcula el período fundamental T0 (pitch) por medio de la autocorrelación. Si el valor T0 del segmento está dentro del rango determinado en la etapa previa de análisis de las señales EDF, este segmento será etiquetado como “Ronquido” y se registra la hora en que sucede. Ésto se repite hasta el momento en que el usuario/paciente elige detener la captura, y entonces se genera un informe de resultados que se entrega al usuario por pantalla y se envía al médico por mail (si esta opción fue indicada).
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/diagrama_flujo}	
+	\caption{Diagrama de flujo de la aplicación Android}
+	\label{figura:diagrama_flujo}
+\end{figure}
+
+\subsection*{Diseño de interfaces}
+
+A continuación se presentan los diseños de las interfaces de la aplicación, que se hicieron orientadas a las funcionalidades que se recabaron en la etapa de requerimientos.
+
+En la Figura \ref{figura:screen1} se puede ver la pantalla de inicio de la aplicación, mientras que en la Figura \ref{figura:screen2} se presentan una serie de campos donde se deben ingresar los datos del usuario (paciente) y el correo electrónico del médico. Estos datos son útiles para enviar el email con los resultados al médico. Luego de guardar los datos, se accede a la siguiente pantalla (Figura \ref{figura:screen3}), donde se detalla una lista con todas las grabaciones realizadas previamente. En esta pantalla hay un Botón de Acción Flotante (FAB, del inglés Floating Action Button) que permite generar una nueva captura y procesamiento de datos.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen1}	
+	\caption{Pantalla de inicio}
+	\label{figura:screen1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen2}	
+	\caption{Datos del usuario y médico}
+	\label{figura:screen2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen3}	
+	\caption{Lista con grabaciones realizadas}
+	\label{figura:screen3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen4}	
+	\caption{Iniciar nueva captura de datos}
+	\label{figura:screen4}
+\end{figure}
+
+En la Figura \ref{figura:screen4}, se ven la opciones que permiten iniciar y detener la grabación. Cuando se  finaliza la captura de datos (Detener), la aplicación procesa los resultados y los presenta en una nueva pantalla. En la Figura \ref{figura:screen5} se presentan las imágenes correspondientes a las dos pestañas de resultados, en estas se considera la visualización de distintos tipos de gráficos con resultados en una pestaña y un reporte con información detallada en la otra (en modo de texto o en tablas). Estos reportes son enviados al médico cuando se elige finalizar la captura. 
+
+
+IMPORTANTE!!! AGREGAR CAPTURAS DE REPORTE GRAFICOS Y TEXTO.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen5}	
+	\caption{Presentación de resultados}
+	\label{figura:screen5}
+\end{figure}
+
+\subsection*{Información gráfica detallada} 
+A continuación se presentan una serie de gráficos que se generan con la aplicación, dentro de la pestaña correspondiente.
+En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal capturada y se resaltan los segmentos donde se detectan ronquidos. Por medio de este gráfico el usuario puede tener una idea general acerca de qué cantidad de tiempo ha estado roncando considerando una grabación completada, cualquiera sea su duración. En dicha figura, se observa una señal capturada con una duración de 1 hora, con segmentos resaltados como ronquidos.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico1}	
+	\caption{Señal completa con fragmentos resaltados}
+	\label{figura:screen_grafico1}
+\end{figure}
+
+El gráfico presentado en la Figura \ref{figura:screen_grafico2} se trata de un gráfico de barras donde, cada barra representa un segmento detectado como ronquido y su amplitud será la energía promedio de este segmento, además la barra toma distintos colores dependiendo de la intensidad de esa energía. Como se puede ver en la leyenda, el amarillo representa energía débil, el naranja es energía media y el rojo indica la presencia de ronquidos de mucha energía, estableciendo así una escala de fácil interpretación. 
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico2}	
+	\caption{Gráfico de barras}
+	\label{figura:screen_grafico2}
+\end{figure}
+
+En los gráficos de torta presentados en la Figura \ref{figura:screen_grafico3} se muestra la proporción de segmentos con ronquidos que se encuentran en la señal, y en el segundo gráfico la distribución de los distintos segmentos detectados como ronquidos de energía débil, media o fuerte.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico3}	
+	\caption{Gráficos de torta o rosquilla}
+	\label{figura:screen_grafico3}
+\end{figure}
+
+\subsection*{Información detallada en formato de reporte}
+En la pestaña de reporte se presentan los resultados de manera textual, conteniendo una tabla como se puede apreciar en el Cuadro \ref{tabla:reporte_textual}.
+
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{| p{8cm}| p{8cm}|}
+			\hline
+			\multicolumn{2}{|p{16cm}|}{Hora de inicio de captura: 01:00:00} \\
+			\multicolumn{2}{|p{16cm}|}{Hora de finalización: 05:30:00} \\ 
+			\multicolumn{2}{|p{16cm}|}{Duración: 4:30 hs} \\ 
+			\multicolumn{2}{|p{16cm}|}{Cantidad de segmentos con ronquido: XX segmentos} \\ 
+			\multicolumn{2}{|p{16cm}|}{Hora con mayor cantidad de ronquidos: hora X} \\
+			\multicolumn{2}{|p{16cm}|}{Promedio de ronquidos/hora: X.X ronquidos por hora} \\ \hline	
+			\multicolumn{2}{|c|}{Detalle de segmentos detectados}	\\ \hline	
+			Hora de comienzo del segmento & Intensidad \\ \hline
+			01:05:00 & Debil\\ \hline
+			01:10:00 & Debil\\ \hline
+			01:15:00 & Debil\\ \hline
+			02:20:00 & Fuerte\\ \hline
+			02:25:00 & Fuerte\\ \hline
+		\end{tabular}
+		\caption{Tabla con detalles de captura}
+		\label{tabla:reporte_textual}
+	\end{center}
+\end{table} 
+
 \subsection{Casos de Uso}
 
 A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de casos de usos general de la aplicación. En él se representan los actores  y se describen las principales acciones que permitirá la aplicación.
@@ -499,22 +616,99 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 
 \begin{table}[htbp]
 	\begin{center}
-		\begin{tabular}{|l|}
+		\begin{tabular}{| p{15cm}|}
 			\hline
 			\textbf{CASO DE USO: \textit{Iniciando captura}} \\
 			\hline
-			 ACTOR: Paciente (Usuario de la App) \\ 
-            \hline
-			 DESCRIPCIÓN \\ 
-            \hline			
-			Es el proceso por el cual el usuario comienza la captura de datos y el procesamiento \\ 
-			y almacenamiento de los resultados obtenidos. \\ 
-			Opcionalmente se le permite ingresar datos personales y el email de un médico, al que \\  
-			se le enviarán 	los resultados obtenidos.\\ 
-            \hline			
+			ACTOR: Paciente (Usuario de la App) \\ \hline
+			DESCRIPCIÓN \\ \hline			
+			Es el proceso por el cual el usuario comienza la captura de datos y el procesamiento 
+			y almacenamiento de los resultados obtenidos.  
+			Opcionalmente se le permite ingresar datos personales y el email de un médico, al que  
+			se le enviarán 	los resultados obtenidos. \\ \hline			
 		\end{tabular}
 		\caption{Caso de uso Iniciando captura}
-		\label{tabla:t0_f0_1_minuto}
+		\label{tabla:caso_uso_iniciando}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Finalizando captura}} \\
+			\hline
+			ACTOR: Paciente (Usuario de la App) \\ \hline
+			DESCRIPCIÓN \\ \hline	
+			El paciente puede finalizar la captura cuando lo considere oportuno, 
+			de esta manera se culmina el almacenamiento y procesamiento de los datos 
+			capturados por medio del micrófono. \\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Finalizando captura}
+		\label{tabla:caso_uso_finalizando}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Visualizando resultados}} \\
+			\hline
+			ACTOR: Paciente (Usuario de la App) \\ \hline
+			DESCRIPCIÓN \\ \hline	
+El usuario puede acceder a los resultados obtenidos del procesamiento de la señal. Los resultados se presentan en modo gráfico y textual indicando hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
+ \\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Visualizando resultados}
+		\label{tabla:caso_uso_visualizando}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Recibiendo mail}} \\
+			\hline
+			ACTOR: Médico (Actor secundario) \\ \hline
+			DESCRIPCIÓN \\ \hline	
+Al momento de finalizar la captura, se envía un correo electrónico con los resultados obtenidos del procesamiento de la señal. Los resultados se presentan en modo gráfico y textual indicando hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora. \\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Recibiendo mail}
+		\label{tabla:caso_uso_mail}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Procesando la señal}} \\
+			\hline
+			ACTOR: Sistema base de la App \\ \hline
+			DESCRIPCIÓN \\ \hline	
+Este consiste de analizar los datos mediante ventaneo de 5 minutos de duración y calcular el T0 (pitch) por medio de la autocorrelación. Posteriormente, se determina si dicho segmento contiene o no ronquidos. Luego se elaboran los resultados que serán utilizados para ser visualizados por el paciente y enviados al médico.
+\\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Procesando la señal}
+		\label{tabla:caso_uso_procesando}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Ingresando información para el email}} \\
+			\hline
+			ACTOR: Paciente (Usuario de la App) \\ \hline
+			DESCRIPCIÓN \\ \hline	
+El paciente tendrá la opción, antes de iniciar la captura de datos, de ingresar sus datos personales y además de ingresar un email de un médico, al que se le enviarán los resultados una vez finalizado el procesamiento.
+\\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Ingresando información para el email}
+		\label{tabla:caso_uso_infomail}
 	\end{center}
 \end{table}
 
