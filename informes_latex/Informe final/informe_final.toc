@@ -25,10 +25,10 @@
 \contentsline {subsection}{\numberline {3.2.1}Casos de Uso}{38}
 \contentsline {subsection}{\numberline {3.2.2}Diagramas de secuencia}{41}
 \contentsline {subsection}{\numberline {3.2.3}Dise\~no de Clases}{41}
-\contentsline {section}{\numberline {3.3}Integraci\'on y prueba del sistema}{41}
-\contentsline {section}{\numberline {3.4}Optimizaciones de la aplicaci\'on Android}{41}
-\contentsline {section}{\numberline {3.5}Tasas de aciertos aplicaci\'on Android}{41}
-\contentsline {chapter}{\numberline {4}Conclusi\'on y Trabajos Futuros}{42}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{43}
-\contentsline {chapter}{\numberline {A}Tablas extra de c\'alculo y determinaci\'on de $T_0$}{45}
-\contentsline {chapter}{\numberline {B}Informaci\'on adicional sobre App Android\textsuperscript {\textregistered } }{78}
+\contentsline {section}{\numberline {3.3}Inspecciones y prueba del sistema}{41}
+\contentsline {section}{\numberline {3.4}Optimizaciones de la aplicaci\'on Android}{42}
+\contentsline {section}{\numberline {3.5}Tasas de aciertos aplicaci\'on Android}{42}
+\contentsline {chapter}{\numberline {4}Conclusi\'on y Trabajos Futuros}{44}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{45}
+\contentsline {chapter}{\numberline {A}Tablas extra de c\'alculo y determinaci\'on de $T_0$}{47}
+\contentsline {chapter}{\numberline {B}Informaci\'on adicional sobre App Android\textsuperscript {\textregistered } }{80}

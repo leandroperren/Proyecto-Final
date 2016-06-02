@@ -454,7 +454,7 @@ Para el desarrollo de la aplicación Android se seguirán los principios de la ing
 \item Análisis y definición de requerimientos
 \item Diseño del sistema y del software
 \item Implementación y prueba de unidad
-\item Integración y prueba del sistema
+\item Inspecciones y prueba del sistema
 \item Operación y mantenimiento
 \end{itemize}
 
@@ -548,7 +548,8 @@ IMPORTANTE!!! AGREGAR CAPTURAS DE REPORTE GRAFICOS Y TEXTO.
 	\label{figura:screen5}
 \end{figure}
 
-\subsection*{Información gráfica detallada} 
+\subsection*{Información gráfica detallada}
+IMPORTANTE, AQUI AGREGAR DESCRIPCIÓN DE LA LIBRERIA ANDROID Q SE USO PARA LOS GRAFICOS. 
 A continuación se presentan una serie de gráficos que se generan con la aplicación, dentro de la pestaña correspondiente.
 En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal capturada y se resaltan los segmentos donde se detectan ronquidos. Por medio de este gráfico el usuario puede tener una idea general acerca de qué cantidad de tiempo ha estado roncando considerando una grabación completada, cualquiera sea su duración. En dicha figura, se observa una señal capturada con una duración de 1 hora, con segmentos resaltados como ronquidos.
 
@@ -715,12 +716,59 @@ El paciente tendrá la opción, antes de iniciar la captura de datos, de ingresar 
 \subsection{Diagramas de secuencia}
 \subsection{Diseño de Clases}
 
-\section{Integración y prueba del sistema}
+\section{Inspecciones y prueba del sistema}
+
+En esta sección se pretende describir el procedimiento seguido durante todo el desarrollo de la aplicación Android en cuanto a verificación y validación de los códigos desarrollados, como así también del funcionamineto de la aplicación una vez terminada. Para ello se cuenta brevemente la manera en que se trabajo como equipo de desarrollo en lo que es la inspección de los códigos, de manera que la detección de desarrollos no óptimos o con errores, se detectaran a tiempo y así evitar perdidas de tiempo por retrabajo. A su vez se describe la metodología de pruebas que se utilizó para validar el funcionamiento de la aplicación una vez terminada, la misma consistió de pruebas al método clasificador/detector, a las interfaces, gráficos y reportes, como así también al rendimiento en cuanto a consumo de bateria y de almacenamiento.      
+
+\subsection*{Inspecciones del software}
+
+Durante todo el proceso de desarrollo se llevaron a cabo revisiones del software, buscando defectos en los códigos constatando que lo desarrollado sea lo más óptimo posible y se corresponda con lo definido en las etapas de requerimiento y diseño. 
+Como se trata de un equipo de desarrollo formado por dos personas se realizaron inspecciones cruzadas donde cada uno inspeccionó lo realizado por el otro. 
+
+\subsection*{Metodología de prueba de la aplicación}
+Como parte de las verificaciones y validaciones de la aplicación se describe a continuación la metodología utilizada para las pruebas.
+
+\begin{itemize}
+\item Pruebas del clasificador/detector de la aplicación:
+		\begin{itemize}
+			\item Probar sobre señales EDF (limpias).
+			\item Probar sobre señales obtenidas en entornos cotidianos.
+		\end{itemize}
+\item Pruebas de los gráficos y reportes:
+	\begin{itemize}
+		\item Probar manualmente el cálculo de los resultados mostrados en los gráficos.
+		\item Verificar que los gráficos se estén generando correctamente.
+		\item Verificar el envío de la información vía email.
+	\end{itemize}
+\item Pruebas de interfaces:
+	\begin{itemize}
+		\item Probar todas las interfaces y su navegación de manera de asegurar que los links y eventos de las distintas ventanas o pestañas funcionan adecuadamente.
+		\item Verificar el almacenamiento y carga de los datos personales y del médico.
+	\end{itemize}
+\item Pruebas de rendimiento:
+	\begin{itemize}
+		\item Revisar el tamaño que ocupan los datos almacenados por la aplicación.
+		\item Verificar el consumo de la batería para capturas de 6 o 7 horas.
+	\end{itemize}
+\end{itemize}
 
 \section{Optimizaciones de la aplicación Android}
 
 \section{Tasas de aciertos aplicación Android}
 
+\subsection*{Pruebas sobre señales EDF (limpias)}
+En esta etapa, se describe la comparación entre el método detector/clasificador desarrollado en Matlab y el desempeño del mismo método desarrollado en la aplicación Android.
+Una vez desarrollada la aplicación Android, se procedió a analizar mediante la misma las señales EDF utilizadas para validar el método en Matlab, correspondientes a los Pacientes 11,12,13,14 y 15. De esta menera se pudo comparar y comprobar que los resultados obtenidos por la aplicación eran correctos y demostrar que, así como el método se podía realizar en Matlab, éste también funciona en una aplicación Android; es importante realizar esta comparación ya que Matlab, al tratarse de un software matemático facilita los cálculos pudiendo utilizar funciones inmediatamente disponibles y, que en el caso de Android, fue necesario el desarrollo de tales funcionalidades de cálculo.
+Para las pruebas se procedió a modificar la fuente de datos de la aplicación desarrollada, de manera que no analice los datos capturados vía micrófono, sino que lea los mismos de los archivos EDF.
+Las tasas de aciertos obtenidas se pueden observar en el Cuadro \ref{tabla:clasificador_android_verificacion}, estos resultados son iguales a los obtenidos con el algoritmo desarrollado en Matlab, por lo que se puede afirmar que los cálculos realizados en la aplicación Android son correctos y equivalentes. 
+
+\subsection*{Pruebas sobre señales obtenidas en entornos cotidianos}
+Este apartado, busca probar que la aplicación Android puede diferenciar correctamente los ronquidos de otros sonidos ambientales (ruidos) capturados por medio de la misma. Para ello, se dejó la aplicación ejecutándose en ambientes normales (como por ejemplo, en una habitación) durante varias horas de manera que la misma pueda captar los sonidos que se pudieran presentar sin que sean ronquidos. Al final de estas capturas, los resultados del detector son analizados a fin de demostrar que la cantidad de falsos positivos obtenidos es lo suficientemente baja.
+
+A continuación se describe uno de estos análisis y los resultados obtenidos, en este caso se dejó la aplicación Android capturando datos durante 3 horas y 45 minutos, en un entorno cotidiano de una habitación lindera a la calle, con ventilador de techo encendido (por el ruido que el mismo genera). Esta captura se llevó a cabo desde las 14:00hs y cabe mencionar que la casa contaba con varias personas realizando sus rutinas normales, incluyendo varias entradas y salidas a la habitación mencionada, personas hablando y sonido de televisión de habitaciones linderas.
+En el Cuadro \ref{tabla:clasificador_android_ambientales} se listan los T0 y su correspondiente etiqueta, mientras que en el Cuadro \ref{tabla:aciertos_android_ambientales} se pueden ver los valores de Verdaderos positivos, Falsos positivos, Falsos negativos, Verdaderos negativos, Valor predictivo positivo, Valor predictivo negativo, Sensibilidad y Especificidad. Si se analizan estos valores vemos que al tratarse de una captura donde no había ninguna persona que pudiera generar ronquidos, no existen verdaderos positivos y, por ende, la sensibilidad tampoco debe estar presente, por lo tanto solo importa analizar la especificidad, en la cual se ve un valor muy bueno, ya que supera el 90\%.
+
+Se considera a continuación, si los valores T0 obtenidos corresponden a valores picos. Para ello, se realizó otra captura y se observó la amplitud de su T0 calculando el porcentaje que representa el mismo respecto de la energía (valor de autocorrelación con desplazamiento cero). En el cuadro \ref{tabla:clasificador_android_ambientales2} podemos ver los valores del T0, su amplitud y la correspondiente etiqueta clasificatoria. Como se aprecia en los resultados anteriores, la mayoría de aquellos valores T0 tienen como amplitud valores menores al 30\% de la energía del segmento, lo que los convierte en valores bajos y que evidentemente no representan valores picos sobresalientes en la autocorrelación. Esto permite poder utilizar un umbral del 30\% para discriminar aquellos casos que estando en el rango de 3.50 a 4.70 segundos no sean picos y por ende no corresponden a “Ronquidos”, ya que no representan la cuasi periodicidad que los mismos tienen.
 
 \chapter{Conclusión y Trabajos Futuros}
 \thispagestyle{empty}
@@ -2319,7 +2367,95 @@ El paciente tendrá la opción, antes de iniciar la captura de datos, de ingresar 
 \thispagestyle{empty}
 %\addcontentsline{toc}{chapter}{Anexo B} % esto añade el capitulo en el índice
 
-Toda la información extra sobre el desarrollo en Android irá aquí.
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			Paciente 11 & 20 & 21 & 4 & 3 & 83.3\% & 87.5\% & 86.9\% & 84\% \\ \hline
+			Paciente 12 & 9 & 36 & 1 & 2 & 90\% & 94.7\% & 81.8\% & 97.3\% \\ \hline
+			Paciente 13 & 6 & 35 & 6 & 1 & 50\% & 97.2\% & 85.7\% & 85.3\% \\ \hline
+			Paciente 14 & 9 & 30 & 7 & 2 & 43.7\% & 93.8\% & 81.8\% & 81.1\% \\ \hline
+			Paciente 15 & 4 & 40 & 4 & 0 & 50\% & 100\% & 100\% & 90.9\% \\ \hline			
+		\end{tabular}
+		\caption{Pruebas con clasificador/detector desarrollado en Android.}
+		\label{tabla:clasificador_android_verificacion}
+	\end{center}
+\end{table}  
 
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+		\hline 
+		T0 & Etiqueta & T0 & Etiqueta & T0 & Etiqueta \\ \hline \hline
+		2.01 &No ronquido	&2.22 &No ronquido	&2.03 &No ronquido \\ \hline
+		2.54 &No ronquido	&2.01 &No ronquido	&2.08 &No ronquido \\ \hline
+		3.27 &No ronquido	&3.20 &No ronquido	&2.31 &No ronquido \\ \hline
+		2.37 &No ronquido	&3.01 &No ronquido	&2.39 &No ronquido \\ \hline
+		2.08 &No ronquido	&2.36 &No ronquido	&4.25 &Ronquidos \\ \hline
+		2.54 &No ronquido	&3.05 &No ronquido	&2.30 &No ronquido \\ \hline
+		2.97 &No ronquido	&2.01 &No ronquido	&2.32 &No ronquido \\ \hline
+		2.19 &No ronquido	&2.18 &No ronquido	&4.04 &Ronquidos \\ \hline
+		2.55 &No ronquido	&2.11 &No ronquido	&2.06 &No ronquido \\ \hline
+		2.10 &No ronquido	&2.71 &No ronquido	&2.80 &No ronquido \\ \hline
+		3.20 &No ronquido	&2.63 &No ronquido	&2.27 &No ronquido \\ \hline
+		2.04 &No ronquido	&2.02 &No ronquido	&2.99 &No ronquido \\ \hline
+		2.37 &No ronquido	&2.30 &No ronquido	&2.24 &No ronquido \\ \hline
+		3.08 &No ronquido	&3.73 &Ronquidos &2.45 &No ronquido \\ \hline
+		2.08 &No ronquido	&2.22 &No ronquido	&2.17 &No ronquido \\ \hline
+		\end{tabular}
+		\caption{Pruebas aplicación Android en  ambientes cotidianos.}
+		\label{tabla:clasificador_android_ambientales}
+	\end{center}
+\end{table}  		
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+		\hline 
+		Verdaderos positivos & Falsos positivos & Valor predictivo positivo \\
+		0	& 3	& 0\% \\ \hline
+		Falsos negativos & Verdaderos negativos	& Valor predictivo negativo \\
+		0	& 42	& 100\% \\ \hline
+		Sensibilidad & Especificidad	& \\
+		0\%	& 93.3\% & \\ \hline	
+		\end{tabular}
+		\caption{Aciertos aplicación Android en  ambientes cotidianos.}
+		\label{tabla:aciertos_android_ambientales}
+	\end{center}
+\end{table}  
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+		\hline 
+		T0	& Amplitud	& Etiqueta \\ \hline
+		3.00	& 0.26	&	No ronquido\\ \hline
+		2.95	& 0.34	&	No ronquido\\ \hline
+		2.06	& 0.29	&	No ronquido\\ \hline
+		2.04	& 0.35	&	No ronquido\\ \hline
+		2.21	& 0.19	&	No ronquido\\ \hline
+		2.84	& 0.25	&	No ronquido\\ \hline
+		2.69	& 0.27	&	No ronquido\\ \hline
+		2.01	& 0.28	&	No ronquido\\ \hline
+		3.06	& 0.24	&	No ronquido\\ \hline
+		2.30	& 0.26	&	No ronquido\\ \hline
+		3.17	& 0.25	&	No ronquido\\ \hline
+		2.17	& 0.29	&	No ronquido\\ \hline
+		2.05	& 0.31	&	No ronquido\\ \hline
+		3.60	& 0.32	&	Ronquidos\\ \hline
+		2.49	& 0.29	&	No ronquido\\ \hline
+		2.03	& 0.30	&	No ronquido\\ \hline
+		2.12	& 0.23	&	No ronquido\\ \hline
+		2.30	& 0.14	&	No ronquido\\ \hline
+		2.15	& 0.25	&	No ronquido\\ \hline
+		2.11	& 0.25	&	No ronquido\\ \hline
+		3.32	& 0.29	&	No ronquido\\ \hline
+		\end{tabular}
+		\caption{Pruebas aplicación Android en  ambientes cotidianos.}
+		\label{tabla:clasificador_android_ambientales2}
+	\end{center}
+\end{table}  
 
 \end{document}
