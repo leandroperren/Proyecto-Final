@@ -490,7 +490,7 @@ Para la obtención de los requerimientos no funcionales, se analizaron las aplica
 A continuación se presenta un diagrama de flujos de datos de la aplicación a desarrollar. 
 El primer paso consiste en la captura de la señal, para ello se utilizará la clase AudioRecord de Android, la cual permite hacer uso del micrófono en la aplicación y, mediante los datos capturados por el mismo en segmentos, dar origen a su procesamiento.
 
-Debido a que la mayoría de los aplicaciones que utilizan la clase AudioRecord admiten una frecuencia de muestreo mínima de 8000Hz, que es una limitación propia de la clase, se realiza un proceso de submuestreo a 100Hz, determinado con base en las señales EDF analizadas previamente. Esto posibilitará un menor costo computacional para los cálculos de autocorrelación y un ahorro en el almacenamiento. 
+Debido a que la mayoría de las aplicaciones que utilizan la clase AudioRecord admiten una frecuencia de muestreo mínima de 8000Hz, que es una limitación propia de la clase, se realiza un proceso de submuestreo a 100Hz, determinado con base en las señales EDF analizadas previamente. Esto posibilitará un menor costo computacional para los cálculos de autocorrelación y un ahorro en el almacenamiento. 
 
 El proceso de submuestreo escogido se denomina “decimation” e incluye un filtro pasa-bajos que permite eliminar previamente las altas frecuencias de la señal para no generar aliasing. Como filtro pasa-bajos se utilizó un FIR de orden 6, con una frecuencia de corte fijada en pi/80. 
 
@@ -549,8 +549,9 @@ IMPORTANTE!!! AGREGAR CAPTURAS DE REPORTE GRAFICOS Y TEXTO.
 \end{figure}
 
 \subsection*{Información gráfica detallada}
-IMPORTANTE, AQUI AGREGAR DESCRIPCIÓN DE LA LIBRERIA ANDROID Q SE USO PARA LOS GRAFICOS. 
-A continuación se presentan una serie de gráficos que se generan con la aplicación, dentro de la pestaña correspondiente.
+Para la generación de gráficos, Android ofrece muchas librerias que se pueden adicionar a un proyecto, para esta aplicación se utilizó la libreria MPAndroidChart [23],  la misma permite generar gráficos de barras, de torta, lineas, entre otros. Los mismos son muy agradables a la vista, permitiendo trabajar con colores y estilos diferentes, al mismo tiempo permite configurar opciones para que el usuario interactue con los mismos, pudiendo agrandar o achicar, seleccionar, mostrar información detallada, generar animaciones, editar leyendas, entre otras.       
+
+A continuación se presentan una serie de gráficos que se generan con la aplicación utilizando la librería recien mencionada, dentro de la pestaña correspondiente.
 En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal capturada y se resaltan los segmentos donde se detectan ronquidos. Por medio de este gráfico el usuario puede tener una idea general acerca de qué cantidad de tiempo ha estado roncando considerando una grabación completada, cualquiera sea su duración. En dicha figura, se observa una señal capturada con una duración de 1 hora, con segmentos resaltados como ronquidos.
 
 \begin{figure}[H]
@@ -579,7 +580,7 @@ En los gráficos de torta presentados en la Figura \ref{figura:screen_grafico3} s
 \end{figure}
 
 \subsection*{Información detallada en formato de reporte}
-En la pestaña de reporte se presentan los resultados de manera textual, conteniendo una tabla como se puede apreciar en el Cuadro \ref{tabla:reporte_textual}.
+En la pestaña de reporte se presentan los resultados de manera textual, conteniendo una tabla como se puede apreciar en el Cuadro \ref{tabla:reporte_textual}. En ella se indica la hora de comienzo y de finalización de la captura como así también la duración en horas de la misma. Otras estadisticas que se indican son la cantidad de segmentos detectados como ronquidos, la hora con mayor cantidad de ronquidos, la cual se determina como la hora que contiene mayor cantidad de segmentos de 5 minutos detectados como tales, y por último la cantidad promedio de ronquidos/hora la cual se determina tomando la cantidad total de segmentos detectados como ronquidos dividida entre la duración en horas de la captura. Luego se presenta un detalle de cada segmento detectado como ronquido indicando la hora de comienzo del segmento y una estimación de la intensidad.
 
 \begin{table}[htbp]
 	\begin{center}
@@ -603,6 +604,9 @@ En la pestaña de reporte se presentan los resultados de manera textual, contenie
 		\label{tabla:reporte_textual}
 	\end{center}
 \end{table} 
+
+\subsection*{Reporte enviado al médico}
+AQUI DESCRIBIR EL REPORTE ENVIADO AL MEDICO .. POR EJEMPLO: SI SE LE ADJUNTA UN PDF (LIBRERIA PARA GENERARLO), Q INFO DETALLADA VA A TENER , CAPTURA DEL ARCHIVO, ETC.
 
 \subsection{Casos de Uso}
 
@@ -818,6 +822,8 @@ Se considera a continuación, si los valores T0 obtenidos corresponden a valores 
 [21] Dream Watcher - Anti Ronquidos. Aplicación para detectar ronquidos [consulta: 20 noviembre 2015]. Disponible en: \url{<https://play.google.com/store/apps/details?id=com.arcadexxi.dreamwatcher>}
 
 [22] Sommerville, Ian and Mari?a Isabel Alfonso Galipienso. Ingenieri?a Del Software. Madrid: Pearson Addison-Wesley, 2005.
+
+[23] MPAndroidChart. Libreria Android para generación de gráficos. Disponible en: \url{<https://github.com/PhilJay/MPAndroidChart/>}
 
 
 %==============================================================================
