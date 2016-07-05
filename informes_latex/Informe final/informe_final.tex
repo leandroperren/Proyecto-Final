@@ -537,22 +537,27 @@ En la Figura \ref{figura:screen1} se puede ver la pantalla de inicio de la aplic
 	\label{figura:screen4}
 \end{figure}
 
-En la Figura \ref{figura:screen4}, se ven la opciones que permiten iniciar y detener la grabación. Cuando se  finaliza la captura de datos (Detener), la aplicación procesa los resultados y los presenta en una nueva pantalla. En la Figura \ref{figura:screen5} se presentan las imágenes correspondientes a las dos pestañas de resultados, en estas se considera la visualización de distintos tipos de gráficos con resultados en una pestaña y un reporte con información detallada en la otra (en modo de texto o en tablas). Estos reportes son enviados al médico cuando se elige finalizar la captura. 
+En la Figura \ref{figura:screen4}, se ven la opciones que permiten iniciar y detener la grabación. Cuando se  finaliza la captura de datos (Detener), la aplicación procesa los resultados y los presenta en una nueva pantalla. En las Figuras \ref{figura:screen5} y \ref{figura:screen6} se presentan las imágenes correspondientes a las dos pestañas de resultados, en estas se considera la visualización de distintos tipos de gráficos con resultados en una pestaña y un reporte con información detallada en la otra (en modo de texto o en tablas). Estos reportes son enviados al médico cuando se elige finalizar la captura. 
 
-
-IMPORTANTE!!! AGREGAR CAPTURAS DE REPORTE GRAFICOS Y TEXTO.
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=.5\columnwidth]{img/screen5}	
-	\caption{Presentación de resultados}
+		\includegraphics[width=.5\columnwidth]{img/screen5}			
+	\caption{Pestaña de gráficos}
 	\label{figura:screen5}
 \end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen6}			
+	\caption{Pestaña de reporte textual}
+	\label{figura:screen6}
+\end{figure}	
 
 \subsection*{Información gráfica detallada}
 Para la generación de gráficos, Android ofrece muchas librerias que se pueden adicionar a un proyecto, para esta aplicación se utilizó la libreria MPAndroidChart [23],  la misma permite generar gráficos de barras, de torta, lineas, entre otros. Los mismos son muy agradables a la vista, permitiendo trabajar con colores y estilos diferentes, al mismo tiempo permite configurar opciones para que el usuario interactue con los mismos, pudiendo agrandar o achicar, seleccionar, mostrar información detallada, generar animaciones, editar leyendas, entre otras.       
 
-A continuación se presentan una serie de gráficos que se generan con la aplicación utilizando la librería recien mencionada, dentro de la pestaña correspondiente.
-En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal capturada y se resaltan los segmentos donde se detectan ronquidos. Por medio de este gráfico el usuario puede tener una idea general acerca de qué cantidad de tiempo ha estado roncando considerando una grabación completada, cualquiera sea su duración. En dicha figura, se observa una señal capturada con una duración de 1 hora, con segmentos resaltados como ronquidos.
+A continuación se describen los gráficos que se generan con la aplicación utilizando la librería recien mencionada, dentro de la pestaña correspondiente.
+En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal capturada y se resaltan los segmentos donde se detectan ronquidos. Por medio de este gráfico el usuario puede tener una idea general acerca de qué cantidad de tiempo ha estado roncando considerando una grabación completada, cualquiera sea su duración. 
 
 \begin{figure}[H]
 	\centering
@@ -561,16 +566,9 @@ En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal c
 	\label{figura:screen_grafico1}
 \end{figure}
 
-El gráfico presentado en la Figura \ref{figura:screen_grafico2} se trata de un gráfico de barras donde, cada barra representa un segmento detectado como ronquido y su amplitud será la energía promedio de este segmento, además la barra toma distintos colores dependiendo de la intensidad de esa energía. Como se puede ver en la leyenda, el amarillo representa energía débil, el naranja es energía media y el rojo indica la presencia de ronquidos de mucha energía, estableciendo así una escala de fácil interpretación. 
+El gráfico presentado en la Figura \ref{figura:screen_grafico1} se trata de un gráfico de barras donde, cada barra representa un segmento de cinco minutos de duración, analizado por la aplicación y su amplitud es la energía promedio de este segmento. Se indica en color Cyan todos aquellos segmentos en los que no se detectaron ronquidos, en tanto para los segmentos detectados como ronquidos se utilizan tres niveles de intensidad, debil, medio y fuerte, asignando a cada uno de ellos tres colores diferentes (amarillo, naranja y rojo respectivamente), dependiendo de la amplitud de la barra. Se puede observar que este ejemplo se trata de una señal de 1 hora de duración donde en el eje x se indica para cada barra la hora de comienzo de ese segmento, además el gráfico es interactivo permitiendo que el usuario pueda posicionarse en una determinada barra o bien ampliar o reducir un conjunto de ellas permitiendo así analizar momentos puntuales del procesamiento. 
 
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=.5\columnwidth]{img/screen_grafico2}	
-	\caption{Gráfico de barras}
-	\label{figura:screen_grafico2}
-\end{figure}
-
-En los gráficos de torta presentados en la Figura \ref{figura:screen_grafico3} se muestra la proporción de segmentos con ronquidos que se encuentran en la señal, y en el segundo gráfico la distribución de los distintos segmentos detectados como ronquidos de energía débil, media o fuerte.
+Además del gráfico de barras recien descripto, la aplicación genera dos gráficos de tortas que presentan información porcentual del análisis realizado. En los gráficos de tortas presentados en la Figura \ref{figura:screen_grafico3} se muestra la proporción de segmentos con ronquidos que se encuentran en la señal, y en el segundo gráfico la distribución de los distintos segmentos detectados como ronquidos según su energía sea débil, media o fuerte.
 
 \begin{figure}[H]
 	\centering
@@ -580,30 +578,14 @@ En los gráficos de torta presentados en la Figura \ref{figura:screen_grafico3} s
 \end{figure}
 
 \subsection*{Información detallada en formato de reporte}
-En la pestaña de reporte se presentan los resultados de manera textual, conteniendo una tabla como se puede apreciar en el Cuadro \ref{tabla:reporte_textual}. En ella se indica la hora de comienzo y de finalización de la captura como así también la duración en horas de la misma. Otras estadisticas que se indican son la cantidad de segmentos detectados como ronquidos, la hora con mayor cantidad de ronquidos, la cual se determina como la hora que contiene mayor cantidad de segmentos de 5 minutos detectados como tales, y por último la cantidad promedio de ronquidos/hora la cual se determina tomando la cantidad total de segmentos detectados como ronquidos dividida entre la duración en horas de la captura. Luego se presenta un detalle de cada segmento detectado como ronquido indicando la hora de comienzo del segmento y una estimación de la intensidad.
+En la pestaña de reporte se presentan los resultados de manera textual, conteniendo una tabla como se puede apreciar la Figura \ref{figura:screen_grafico4}. En ella se indica la hora de comienzo y de finalización de la captura como así también la duración en horas de la misma. Otras estadisticas que se indican son la cantidad de segmentos detectados como ronquidos, la hora con mayor cantidad de ronquidos, la cual se determina como la hora que contiene mayor cantidad de segmentos de 5 minutos detectados como tales, y por último la cantidad promedio de ronquidos/hora la cual se determina tomando la cantidad total de segmentos detectados como ronquidos dividida entre la duración en horas de la captura. Luego se presenta un detalle de cada segmento indicando si tiene o no ronquidos, indicando la hora de comienzo del segmento y una estimación de la intensidad.
 
-\begin{table}[htbp]
-	\begin{center}
-		\begin{tabular}{| p{8cm}| p{8cm}|}
-			\hline
-			\multicolumn{2}{|p{16cm}|}{Hora de inicio de captura: 01:00:00} \\
-			\multicolumn{2}{|p{16cm}|}{Hora de finalización: 05:30:00} \\ 
-			\multicolumn{2}{|p{16cm}|}{Duración: 4:30 hs} \\ 
-			\multicolumn{2}{|p{16cm}|}{Cantidad de segmentos con ronquido: XX segmentos} \\ 
-			\multicolumn{2}{|p{16cm}|}{Hora con mayor cantidad de ronquidos: hora X} \\
-			\multicolumn{2}{|p{16cm}|}{Promedio de ronquidos/hora: X.X ronquidos por hora} \\ \hline	
-			\multicolumn{2}{|c|}{Detalle de segmentos detectados}	\\ \hline	
-			Hora de comienzo del segmento & Intensidad \\ \hline
-			01:05:00 & Debil\\ \hline
-			01:10:00 & Debil\\ \hline
-			01:15:00 & Debil\\ \hline
-			02:20:00 & Fuerte\\ \hline
-			02:25:00 & Fuerte\\ \hline
-		\end{tabular}
-		\caption{Tabla con detalles de captura}
-		\label{tabla:reporte_textual}
-	\end{center}
-\end{table} 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico4}	
+	\caption{Información en formato de reporte}
+	\label{figura:screen_grafico4}
+\end{figure}
 
 \subsection*{Reporte enviado al médico}
 AQUI DESCRIBIR EL REPORTE ENVIADO AL MEDICO .. POR EJEMPLO: SI SE LE ADJUNTA UN PDF (LIBRERIA PARA GENERARLO), Q INFO DETALLADA VA A TENER , CAPTURA DEL ARCHIVO, ETC.

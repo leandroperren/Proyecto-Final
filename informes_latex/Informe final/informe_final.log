@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  14 JUN 2016 15:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  5 JUL 2016 18:05
 entering extended mode
 **informe_final.tex
 (informe_final.tex
@@ -743,48 +743,55 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35 <./img/screen3.png>]
+[35 <./img/screen3.png>] <img/screen5.png, id=158, 451.6875pt x 770.88pt>
+File: img/screen5.png Graphic file (type png)
+ <use img/screen5.png>
+Package pdftex.def Info: img/screen5.png used on input line 544.
+(pdftex.def)             Requested size: 234.73524pt x 400.62466pt.
+LaTeX Info: Redefining \. on input line 548.
+LaTeX Info: Redefining \% on input line 548.
 
-! LaTeX Error: File `img/screen5' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.546 ...aphics[width=.5\columnwidth]{img/screen5}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Info: Redefining \. on input line 553.
-LaTeX Info: Redefining \% on input line 553.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36 <./img/screen4.png>] <img/screen_grafico1.png, id=162, 397.485pt x 179.16937pt>
+[36 <./img/screen4.png>] <img/screen6.png, id=163, 451.6875pt x 770.88pt>
+File: img/screen6.png Graphic file (type png)
+ <use img/screen6.png>
+Package pdftex.def Info: img/screen6.png used on input line 551.
+(pdftex.def)             Requested size: 234.73524pt x 400.62466pt.
+LaTeX Info: Redefining \. on input line 555.
+LaTeX Info: Redefining \% on input line 555.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37 <./img/screen5.png>] <img/screen_grafico1.png, id=168, 451.6875pt x 266.49562pt>
 File: img/screen_grafico1.png Graphic file (type png)
  <use img/screen_grafico1.png>
-Package pdftex.def Info: img/screen_grafico1.png used on input line 559.
-(pdftex.def)             Requested size: 234.73524pt x 105.81017pt.
+Package pdftex.def Info: img/screen_grafico1.png used on input line 564.
+(pdftex.def)             Requested size: 234.73524pt x 138.49718pt.
+LaTeX Info: Redefining \. on input line 568.
+LaTeX Info: Redefining \% on input line 568.
 
-<img/screen_grafico2.png, id=163, 379.4175pt x 206.27063pt>
-File: img/screen_grafico2.png Graphic file (type png)
- <use img/screen_grafico2.png>
-Package pdftex.def Info: img/screen_grafico2.png used on input line 568.
-(pdftex.def)             Requested size: 234.73524pt x 127.61577pt.
 
-<img/screen_grafico3.png, id=164, 438.13687pt x 226.59656pt>
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38 <./img/screen6.png>] <img/screen_grafico3.png, id=173, 441.14813pt x 522.45187pt>
 File: img/screen_grafico3.png Graphic file (type png)
  <use img/screen_grafico3.png>
-Package pdftex.def Info: img/screen_grafico3.png used on input line 577.
-(pdftex.def)             Requested size: 234.73524pt x 121.40256pt.
-LaTeX Info: Redefining \. on input line 581.
-LaTeX Info: Redefining \% on input line 581.
+Package pdftex.def Info: img/screen_grafico3.png used on input line 575.
+(pdftex.def)             Requested size: 234.73524pt x 277.9983pt.
+LaTeX Info: Redefining \. on input line 579.
+LaTeX Info: Redefining \% on input line 579.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -792,26 +799,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37 <./img/screen_grafico1.png> <./img/screen_grafico2.png>]
-Overfull \hbox (10.97357pt too wide) in paragraph at lines 587--603
- [] 
- []
+[39 <./img/screen_grafico1.png>] <img/screen_grafico4.png, id=178, 449.42906pt x 609.02531pt>
+File: img/screen_grafico4.png Graphic file (type png)
 
-LaTeX Info: Redefining \. on input line 610.
-LaTeX Info: Redefining \% on input line 610.
+<use img/screen_grafico4.png>
+Package pdftex.def Info: img/screen_grafico4.png used on input line 585.
+(pdftex.def)             Requested size: 234.73524pt x 318.08893pt.
+LaTeX Info: Redefining \. on input line 589.
+LaTeX Info: Redefining \% on input line 589.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38 <./img/screen_grafico3.png>] <img/caso_uso.png, id=171, 474.27188pt x 322.20375pt>
+[40 <./img/screen_grafico3.png>] <img/caso_uso.png, id=183, 474.27188pt x 322.20375pt>
 File: img/caso_uso.png Graphic file (type png)
  <use img/caso_uso.png>
-Package pdftex.def Info: img/caso_uso.png used on input line 617.
+Package pdftex.def Info: img/caso_uso.png used on input line 599.
 (pdftex.def)             Requested size: 469.47049pt x 318.95319pt.
-LaTeX Info: Redefining \. on input line 672.
-LaTeX Info: Redefining \% on input line 672.
+LaTeX Info: Redefining \. on input line 603.
+LaTeX Info: Redefining \% on input line 603.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -819,9 +828,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39 <./img/caso_uso.png>]
-LaTeX Info: Redefining \. on input line 703.
-LaTeX Info: Redefining \% on input line 703.
+[41 <./img/screen_grafico4.png>]
+LaTeX Info: Redefining \. on input line 654.
+LaTeX Info: Redefining \% on input line 654.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -829,9 +838,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40]
-LaTeX Info: Redefining \. on input line 731.
-LaTeX Info: Redefining \% on input line 731.
+[42 <./img/caso_uso.png>]
+LaTeX Info: Redefining \. on input line 701.
+LaTeX Info: Redefining \% on input line 701.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -839,11 +848,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41]
+[43]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 738.
-LaTeX Info: Redefining \. on input line 768.
-LaTeX Info: Redefining \% on input line 768.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 720.
+LaTeX Info: Redefining \. on input line 722.
+LaTeX Info: Redefining \% on input line 722.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -851,7 +860,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42]
+[44]
+LaTeX Info: Redefining \. on input line 753.
+LaTeX Info: Redefining \% on input line 753.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `latin1'.
@@ -860,7 +879,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.775 ...sean picos y por ende no corresponden a “
+l.757 ...sean picos y por ende no corresponden a “
                                                   Ronquidos”, ya que no repr...
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -873,69 +892,45 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.775 ... y por ende no corresponden a “Ronquidos”
+l.757 ... y por ende no corresponden a “Ronquidos”
                                                   , ya que no representan la...
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-LaTeX Info: Redefining \. on input line 776.
-LaTeX Info: Redefining \% on input line 776.
+LaTeX Info: Redefining \. on input line 759.
+LaTeX Info: Redefining \% on input line 759.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]
-LaTeX Info: Redefining \. on input line 777.
-LaTeX Info: Redefining \% on input line 777.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[44]
+[46]
 Cap\'{\i }tulo 4.
-[45
+[47
 
 ]
-Overfull \hbox (15.48553pt too wide) in paragraph at lines 782--783
+Overfull \hbox (15.48553pt too wide) in paragraph at lines 764--765
 \OT1/cmr/m/n/12 2013]. Dis-po-ni-ble en: $\OT1/cmtt/m/n/12 <[]http : / / es . pneumowiki . org / mediawiki / index . php
  ? title = Ronquido>[]$ 
  []
 
-[46
+[48
 
 ]
-Overfull \hbox (33.52094pt too wide) in paragraph at lines 820--821
+Overfull \hbox (33.52094pt too wide) in paragraph at lines 802--803
 \OT1/cmr/m/n/12 ni-ble en: $\OT1/cmtt/m/n/12 <[]https : / / play . google . com / store / apps / details ? id = de . ral
 phsapps . snorecontrol>[]$ 
  []
 
 
-Overfull \hbox (12.21251pt too wide) in paragraph at lines 826--827
+Overfull \hbox (12.21251pt too wide) in paragraph at lines 808--809
 []\OT1/cmr/m/n/12 [23] MPAn-droid-Chart. Li-bre-ria An-droid pa-ra ge-ne-ra-cion de grafi-cos. Dis-po-ni-ble en: $\OT1
 /cmtt/m/n/12 <[]https :
  []
 
-LaTeX Info: Redefining \. on input line 835.
-LaTeX Info: Redefining \% on input line 835.
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[47]
-Ap\'{e}ndice A.
-[48
-
-]
-LaTeX Info: Redefining \. on input line 954.
-LaTeX Info: Redefining \% on input line 954.
-
+LaTeX Info: Redefining \. on input line 817.
+LaTeX Info: Redefining \% on input line 817.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -943,18 +938,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [49]
-LaTeX Info: Redefining \. on input line 1008.
-LaTeX Info: Redefining \% on input line 1008.
+Ap\'{e}ndice A.
+[50
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[50]
-LaTeX Info: Redefining \. on input line 1062.
-LaTeX Info: Redefining \% on input line 1062.
+]
+LaTeX Info: Redefining \. on input line 936.
+LaTeX Info: Redefining \% on input line 936.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -963,8 +952,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [51]
-LaTeX Info: Redefining \. on input line 1116.
-LaTeX Info: Redefining \% on input line 1116.
+LaTeX Info: Redefining \. on input line 990.
+LaTeX Info: Redefining \% on input line 990.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -973,8 +962,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52]
-LaTeX Info: Redefining \. on input line 1170.
-LaTeX Info: Redefining \% on input line 1170.
+LaTeX Info: Redefining \. on input line 1044.
+LaTeX Info: Redefining \% on input line 1044.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -983,8 +972,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [53]
-LaTeX Info: Redefining \. on input line 1224.
-LaTeX Info: Redefining \% on input line 1224.
+LaTeX Info: Redefining \. on input line 1098.
+LaTeX Info: Redefining \% on input line 1098.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -993,8 +982,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54]
-LaTeX Info: Redefining \. on input line 1278.
-LaTeX Info: Redefining \% on input line 1278.
+LaTeX Info: Redefining \. on input line 1152.
+LaTeX Info: Redefining \% on input line 1152.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1003,8 +992,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [55]
-LaTeX Info: Redefining \. on input line 1333.
-LaTeX Info: Redefining \% on input line 1333.
+LaTeX Info: Redefining \. on input line 1206.
+LaTeX Info: Redefining \% on input line 1206.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1013,8 +1002,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [56]
-LaTeX Info: Redefining \. on input line 1372.
-LaTeX Info: Redefining \% on input line 1372.
+LaTeX Info: Redefining \. on input line 1260.
+LaTeX Info: Redefining \% on input line 1260.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1023,8 +1012,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [57]
-LaTeX Info: Redefining \. on input line 1411.
-LaTeX Info: Redefining \% on input line 1411.
+LaTeX Info: Redefining \. on input line 1315.
+LaTeX Info: Redefining \% on input line 1315.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1033,8 +1022,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [58]
-LaTeX Info: Redefining \. on input line 1450.
-LaTeX Info: Redefining \% on input line 1450.
+LaTeX Info: Redefining \. on input line 1354.
+LaTeX Info: Redefining \% on input line 1354.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1043,8 +1032,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [59]
-LaTeX Info: Redefining \. on input line 1489.
-LaTeX Info: Redefining \% on input line 1489.
+LaTeX Info: Redefining \. on input line 1393.
+LaTeX Info: Redefining \% on input line 1393.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1053,8 +1042,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [60]
-LaTeX Info: Redefining \. on input line 1528.
-LaTeX Info: Redefining \% on input line 1528.
+LaTeX Info: Redefining \. on input line 1432.
+LaTeX Info: Redefining \% on input line 1432.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1063,8 +1052,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [61]
-LaTeX Info: Redefining \. on input line 1569.
-LaTeX Info: Redefining \% on input line 1569.
+LaTeX Info: Redefining \. on input line 1471.
+LaTeX Info: Redefining \% on input line 1471.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1073,8 +1062,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [62]
-LaTeX Info: Redefining \. on input line 1623.
-LaTeX Info: Redefining \% on input line 1623.
+LaTeX Info: Redefining \. on input line 1510.
+LaTeX Info: Redefining \% on input line 1510.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1083,8 +1072,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [63]
-LaTeX Info: Redefining \. on input line 1677.
-LaTeX Info: Redefining \% on input line 1677.
+LaTeX Info: Redefining \. on input line 1551.
+LaTeX Info: Redefining \% on input line 1551.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1093,8 +1082,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [64]
-LaTeX Info: Redefining \. on input line 1731.
-LaTeX Info: Redefining \% on input line 1731.
+LaTeX Info: Redefining \. on input line 1605.
+LaTeX Info: Redefining \% on input line 1605.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1103,8 +1092,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [65]
-LaTeX Info: Redefining \. on input line 1785.
-LaTeX Info: Redefining \% on input line 1785.
+LaTeX Info: Redefining \. on input line 1659.
+LaTeX Info: Redefining \% on input line 1659.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1113,8 +1102,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [66]
-LaTeX Info: Redefining \. on input line 1839.
-LaTeX Info: Redefining \% on input line 1839.
+LaTeX Info: Redefining \. on input line 1713.
+LaTeX Info: Redefining \% on input line 1713.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1123,8 +1112,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [67]
-LaTeX Info: Redefining \. on input line 1893.
-LaTeX Info: Redefining \% on input line 1893.
+LaTeX Info: Redefining \. on input line 1767.
+LaTeX Info: Redefining \% on input line 1767.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1133,8 +1122,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [68]
-LaTeX Info: Redefining \. on input line 1947.
-LaTeX Info: Redefining \% on input line 1947.
+LaTeX Info: Redefining \. on input line 1821.
+LaTeX Info: Redefining \% on input line 1821.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1143,8 +1132,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [69]
-LaTeX Info: Redefining \. on input line 2001.
-LaTeX Info: Redefining \% on input line 2001.
+LaTeX Info: Redefining \. on input line 1875.
+LaTeX Info: Redefining \% on input line 1875.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1153,8 +1142,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [70]
-LaTeX Info: Redefining \. on input line 2040.
-LaTeX Info: Redefining \% on input line 2040.
+LaTeX Info: Redefining \. on input line 1929.
+LaTeX Info: Redefining \% on input line 1929.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1163,8 +1152,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [71]
-LaTeX Info: Redefining \. on input line 2079.
-LaTeX Info: Redefining \% on input line 2079.
+LaTeX Info: Redefining \. on input line 1983.
+LaTeX Info: Redefining \% on input line 1983.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1173,8 +1162,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [72]
-LaTeX Info: Redefining \. on input line 2118.
-LaTeX Info: Redefining \% on input line 2118.
+LaTeX Info: Redefining \. on input line 2022.
+LaTeX Info: Redefining \% on input line 2022.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1183,8 +1172,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [73]
-LaTeX Info: Redefining \. on input line 2157.
-LaTeX Info: Redefining \% on input line 2157.
+LaTeX Info: Redefining \. on input line 2061.
+LaTeX Info: Redefining \% on input line 2061.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1193,6 +1182,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [74]
+LaTeX Info: Redefining \. on input line 2100.
+LaTeX Info: Redefining \% on input line 2100.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[75]
+LaTeX Info: Redefining \. on input line 2139.
+LaTeX Info: Redefining \% on input line 2139.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[76]
+LaTeX Info: Redefining \. on input line 2178.
+LaTeX Info: Redefining \% on input line 2178.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[77]
 LaTeX Info: Redefining \. on input line 2196.
 LaTeX Info: Redefining \% on input line 2196.
 
@@ -1202,39 +1221,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[75]
-LaTeX Info: Redefining \. on input line 2214.
-LaTeX Info: Redefining \% on input line 2214.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[76]
-LaTeX Info: Redefining \. on input line 2270.
-LaTeX Info: Redefining \% on input line 2270.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[77]
-LaTeX Info: Redefining \. on input line 2309.
-LaTeX Info: Redefining \% on input line 2309.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [78]
-LaTeX Info: Redefining \. on input line 2372.
-LaTeX Info: Redefining \% on input line 2372.
+LaTeX Info: Redefining \. on input line 2252.
+LaTeX Info: Redefining \% on input line 2252.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1243,8 +1232,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [79]
-LaTeX Info: Redefining \. on input line 2372.
-LaTeX Info: Redefining \% on input line 2372.
+LaTeX Info: Redefining \. on input line 2291.
+LaTeX Info: Redefining \% on input line 2291.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1253,18 +1242,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [80]
-Ap\'{e}ndice B.
-LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <20.74> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 2372.
-[81
+LaTeX Info: Redefining \. on input line 2354.
+LaTeX Info: Redefining \% on input line 2354.
 
-]
-LaTeX Info: Redefining \. on input line 2466.
-LaTeX Info: Redefining \% on input line 2466.
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2466.
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2466.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[81]
+LaTeX Info: Redefining \. on input line 2354.
+LaTeX Info: Redefining \% on input line 2354.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1273,8 +1262,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [82]
-LaTeX Info: Redefining \. on input line 2467.
-LaTeX Info: Redefining \% on input line 2467.
+Ap\'{e}ndice B.
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <20.74> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 2354.
+[83
+
+]
+LaTeX Info: Redefining \. on input line 2448.
+LaTeX Info: Redefining \% on input line 2448.
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2448.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2448.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1282,34 +1281,48 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[83] (informe_final.aux
+[84]
+LaTeX Info: Redefining \. on input line 2449.
+LaTeX Info: Redefining \% on input line 2449.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[85] (informe_final.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-) ) 
+)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4007 strings out of 493673
- 54768 string characters out of 3143953
- 142561 words of memory out of 3000000
- 7259 multiletter control sequences out of 15000+200000
+ 4016 strings out of 493673
+ 54953 string characters out of 3143953
+ 142573 words of memory out of 3000000
+ 7268 multiletter control sequences out of 15000+200000
  17171 words of font info for 63 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,21n,43p,2347b,736s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cmextra/cmbsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informe_final.pdf (84 pages, 1190295 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cmextra/cmbsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on informe_final.pdf (86 pages, 1381569 bytes).
 PDF statistics:
- 392 PDF objects out of 1000 (max. 8388607)
+ 406 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
