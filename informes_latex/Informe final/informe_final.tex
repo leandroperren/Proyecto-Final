@@ -588,7 +588,21 @@ En la pestaña de reporte se presentan los resultados de manera textual, contenie
 \end{figure}
 
 \subsection*{Reporte enviado al médico}
-AQUI DESCRIBIR EL REPORTE ENVIADO AL MEDICO .. POR EJEMPLO: SI SE LE ADJUNTA UN PDF (LIBRERIA PARA GENERARLO), Q INFO DETALLADA VA A TENER , CAPTURA DEL ARCHIVO, ETC.
+Tal como se explicó anteriormente, los resultados obtenidos pueden ser enviados via email a un médico. En dicho email se enviará de manera adjunta un archivo de formato PDF (Portable Document Format ) que contendrá los mismos resultados que el usuario puede observar en las pestañas de gráficos y reportes recientemente descriptas. Este archivo PDF se genera por medio de la libreria iText, y tal como se puede observar en la Figura \ref{figura:screen_grafico5} contiene una primera parte donde se indican los datos del paciente junto con los resultados del análisis, posterior a esta información se presenta una página con los tres gráficos que la aplicación genera tal como se muestra en la Figura \ref{figura:screen_grafico6}.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico5}	
+	\caption{Información textual del PDF}
+	\label{figura:screen_grafico5}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico6}	
+	\caption{Información gráfica del PDF}
+	\label{figura:screen_grafico6}
+\end{figure} 
 
 \subsection{Casos de Uso}
 
