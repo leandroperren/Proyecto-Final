@@ -566,9 +566,9 @@ En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal c
 	\label{figura:screen_grafico1}
 \end{figure}
 
-El gráfico presentado en la Figura \ref{figura:screen_grafico1} se trata de un gráfico de barras donde, cada barra representa un segmento de cinco minutos de duración, analizado por la aplicación y su amplitud es la energía promedio de este segmento. Se indica en color Cyan todos aquellos segmentos en los que no se detectaron ronquidos, en tanto para los segmentos detectados como ronquidos se utilizan tres niveles de intensidad, debil, medio y fuerte, asignando a cada uno de ellos tres colores diferentes (amarillo, naranja y rojo respectivamente), dependiendo de la amplitud de la barra. Se puede observar que este ejemplo se trata de una señal de 1 hora de duración donde en el eje x se indica para cada barra la hora de comienzo de ese segmento, además el gráfico es interactivo permitiendo que el usuario pueda posicionarse en una determinada barra o bien ampliar o reducir un conjunto de ellas permitiendo así analizar momentos puntuales del procesamiento. 
+El gráfico presentado en la Figura \ref{figura:screen_grafico1} se trata de un gráfico de barras donde, cada barra representa un segmento de cinco minutos de duración, analizado por la aplicación y su amplitud es la energía promedio de este segmento. Se indica en color Cyan todos aquellos segmentos en los que no se detectaron ronquidos, en tanto para los segmentos detectados como ronquidos se utilizan dos niveles de intensidad, simple y alto, asignando a cada uno de ellos dos colores diferentes (amarillo y rojo respectivamente), dependiendo de la amplitud de la barra. Se puede observar que este ejemplo se trata de una señal de 1 hora de duración donde en el eje x se indica para cada barra la hora de comienzo de ese segmento, además el gráfico es interactivo permitiendo que el usuario pueda posicionarse en una determinada barra o bien ampliar o reducir un conjunto de ellas permitiendo así analizar momentos puntuales del procesamiento. 
 
-Además del gráfico de barras recien descripto, la aplicación genera dos gráficos de tortas que presentan información porcentual del análisis realizado. En los gráficos de tortas presentados en la Figura \ref{figura:screen_grafico3} se muestra la proporción de segmentos con ronquidos que se encuentran en la señal, y en el segundo gráfico la distribución de los distintos segmentos detectados como ronquidos según su energía sea débil, media o fuerte.
+Además del gráfico de barras recien descripto, la aplicación genera dos gráficos de tortas que presentan información porcentual del análisis realizado. En los gráficos de tortas presentados en la Figura \ref{figura:screen_grafico3} se muestra la proporción de segmentos con ronquidos que se encuentran en la señal, y en el segundo gráfico la distribución de los distintos segmentos detectados como ronquidos según su energía sea simple o alto.
 
 \begin{figure}[H]
 	\centering
@@ -578,7 +578,7 @@ Además del gráfico de barras recien descripto, la aplicación genera dos gráficos
 \end{figure}
 
 \subsection*{Información detallada en formato de reporte}
-En la pestaña de reporte se presentan los resultados de manera textual, conteniendo una tabla como se puede apreciar la Figura \ref{figura:screen_grafico4}. En ella se indica la hora de comienzo y de finalización de la captura como así también la duración en horas de la misma. Otras estadisticas que se indican son la cantidad de segmentos detectados como ronquidos, la hora con mayor cantidad de ronquidos, la cual se determina como la hora que contiene mayor cantidad de segmentos de 5 minutos detectados como tales, y por último la cantidad promedio de ronquidos/hora la cual se determina tomando la cantidad total de segmentos detectados como ronquidos dividida entre la duración en horas de la captura. Luego se presenta un detalle de cada segmento indicando si tiene o no ronquidos, indicando la hora de comienzo del segmento y una estimación de la intensidad.
+En la pestaña de reporte se presentan los resultados de manera textual, conteniendo una tabla como se puede apreciar en la Figura \ref{figura:screen_grafico4}. En ella se indica la hora de comienzo y de finalización de la captura como así también la duración en horas de la misma. Otras estadisticas que se indican son la cantidad de segmentos detectados como ronquidos, la hora con mayor cantidad de ronquidos, la cual se determina como la hora que contiene mayor cantidad de segmentos de 5 minutos detectados como tales, y por último la cantidad promedio de ronquidos/hora la cual se determina tomando la cantidad total de segmentos detectados como ronquidos dividida entre la duración en horas de la captura. Luego se presenta un detalle de cada segmento indicando si tiene o no ronquidos, indicando la hora de comienzo del segmento y una estimación de la intensidad.
 
 \begin{figure}[H]
 	\centering
@@ -588,7 +588,7 @@ En la pestaña de reporte se presentan los resultados de manera textual, contenie
 \end{figure}
 
 \subsection*{Reporte enviado al médico}
-Tal como se explicó anteriormente, los resultados obtenidos pueden ser enviados via email a un médico. En dicho email se enviará de manera adjunta un archivo de formato PDF (Portable Document Format ) que contendrá los mismos resultados que el usuario puede observar en las pestañas de gráficos y reportes recientemente descriptas. Este archivo PDF se genera por medio de la libreria iText, y tal como se puede observar en la Figura \ref{figura:screen_grafico5} contiene una primera parte donde se indican los datos del paciente junto con los resultados del análisis, posterior a esta información se presenta una página con los tres gráficos que la aplicación genera tal como se muestra en la Figura \ref{figura:screen_grafico6}.
+Tal como se explicó anteriormente, los resultados obtenidos pueden ser enviados via email a un médico. En dicho email se enviará de manera adjunta un archivo de formato PDF (Portable Document Format ) que contendrá los mismos resultados que el usuario puede observar en las pestañas de gráficos y reportes recientemente descriptas. Este archivo PDF se genera por medio de la libreria iText [24], y tal como se puede observar en la Figura \ref{figura:screen_grafico5} contiene una primera parte donde se indican los datos del paciente junto con los resultados del análisis, posterior a esta información se presenta una página con los tres gráficos que la aplicación genera tal como se muestra en la Figura \ref{figura:screen_grafico6}.
 
 \begin{figure}[H]
 	\centering
@@ -820,6 +820,8 @@ Se considera a continuación, si los valores T0 obtenidos corresponden a valores 
 [22] Sommerville, Ian and Mari?a Isabel Alfonso Galipienso. Ingenieri?a Del Software. Madrid: Pearson Addison-Wesley, 2005.
 
 [23] MPAndroidChart. Libreria Android para generación de gráficos. Disponible en: \url{<https://github.com/PhilJay/MPAndroidChart/>}
+
+[24] iText. Libreria Java para realizar archivos PDF. Disponible en: \url{<http://itextpdf.com/>} 
 
 
 %==============================================================================
