@@ -106,15 +106,15 @@ public class RecordActivity extends AppCompatActivity {
         findViewById(R.id.btnStop).setOnClickListener(btnClick);
     }
 
-    // Activar o desactivar el boton pasado como parámetro
-    private void enableButton(int id, boolean isEnable) {
-        findViewById(id).setEnabled(isEnable);
-    }
-
     // Activar y desactivar los botones iniciar y detener en funcion de si esta grabando o no
     private void enableButtons(boolean isRecording) {
         enableButton(R.id.btnStart, !isRecording);
         enableButton(R.id.btnStop, isRecording);
+    }
+
+    // Activar o desactivar el boton pasado como parámetro
+    private void enableButton(int id, boolean isEnable) {
+        findViewById(id).setEnabled(isEnable);
     }
 
     // Comenzar la grabacion creando el hilo para la captura via micrófono
