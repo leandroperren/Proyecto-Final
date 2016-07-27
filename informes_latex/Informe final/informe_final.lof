@@ -1,11 +1,12 @@
 \select@language {spanish}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Aplicaci\'on Dream Watcher de la PlayStore.}}{12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Segmento de 1 minuto etiquetado como ronquidos.}}{13}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Segmento con ronquidos y su autocorrelaci\'on.}}{15}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Sonido de maquinas trabajando, personas hablando y veh\IeC {\'\i }culos.}}{21}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Sonido de un automovil circulando.}}{21}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Sonido de dos veh\IeC {\'\i }culos circulando.}}{22}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Segmento de 1 minuto etiquetado como ronquidos.}}{15}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Segmento con ronquidos y su autocorrelaci\'on.}}{17}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Sonido de maquinas trabajando, personas hablando y veh\IeC {\'\i }culos.}}{20}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Sonido de un veh\IeC {\'\i }culo circulando.}}{21}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Sonido de dos veh\IeC {\'\i }culos circulando.}}{21}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Sonido de perros ladrando.}}{22}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Autocorrelacion de ronquidos y autocorrelaci\'on de sonido ambiental.}}{23}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Sonido de un automovil circulando en 5 minutos.}}{23}
@@ -15,5 +16,20 @@
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Autocorrelaciones aplicando las tres funciones de recorte}}{26}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Autocorrelaci\'on de ronquidos sin y con funci\'on de recorte}}{27}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Autocorrelaci\'on de sonido ambiental sin y con funci\'on de recorte}}{28}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de flujo de la aplicaci\'on Android}}{32}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Pantalla de inicio}}{33}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Datos del usuario y m\'edico}}{34}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Lista con grabaciones realizadas}}{35}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Iniciar nueva captura de datos}}{36}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Pesta\~na de gr\'aficos}}{37}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Pesta\~na de reporte textual}}{38}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Se\~nal completa con fragmentos resaltados}}{39}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Gr\'aficos de torta o rosquilla}}{40}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Informaci\'on en formato de reporte}}{41}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Informaci\'on textual del PDF}}{42}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Informaci\'on gr\'afica del PDF}}{42}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Diagrama de casos de uso}}{43}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
