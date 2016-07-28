@@ -12,8 +12,7 @@ public class Snore {
     private ArrayList<Double> amplitud;
     private ArrayList<Integer> tiempo;
 
-    public Snore() {
-    }
+    public Snore() {}
 
     public Snore(String id, int hora_inicio) {
         this.id = id;
@@ -28,6 +27,53 @@ public class Snore {
         this.amplitud = amplitud;
         this.tiempo = tiempo;
     }
+
+    /**
+     * Auxiliary functions to convert Double arrays to String
+     * and vice versa
+     *
+     * @return
+     */
+    private static final String SEPARATOR = "|";
+
+    public ArrayList<Double> getDoubleFromString(String str) {
+        ArrayList<Double> list = new ArrayList<>();
+        String[] listString = str.split(SEPARATOR);
+
+        for (int i=0, n=listString.length; i<n; i++) {
+            list.add(Double.parseDouble(listString[i]));
+        }
+
+        return list;
+    }
+
+    public ArrayList<Integer> getIntegerFromString(String str) {
+        ArrayList<Integer> list = new ArrayList<>();
+        String[] listString = str.split(SEPARATOR);
+
+        for (int i=0, n=listString.length; i<n; i++) {
+            list.add(Integer.parseInt(listString[i]));
+        }
+
+        return list;
+    }
+
+    public String getStringFromDouble(ArrayList<Double> list) {
+        StringBuilder str = new StringBuilder();
+
+        for (int i=0, n=list.size(); i<n-1; i++) {
+            str.append(list.get(i) + SEPARATOR);
+        }
+        // Add last element to StringBuilder outside this for to avoid insert "|" at the end
+        str.append(list.get(list.size()-1));
+
+        return str.toString();
+    }
+
+    /**
+     * All getters and Setters
+     * @return
+     */
 
     public String getId() {
         return id;

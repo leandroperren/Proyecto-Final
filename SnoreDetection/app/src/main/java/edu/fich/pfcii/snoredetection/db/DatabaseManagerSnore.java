@@ -101,7 +101,24 @@ public class DatabaseManagerSnore extends DatabaseManager {
      * Creamos un ArrayList de tipo Snore donde guardamos todos los registros de la DB
      *
      */
-    public ArrayList<Snore> cargaListaSnore() {
-        return null;
+    public ArrayList<Snore> getSnoreList() {
+        ArrayList<Snore> list = new ArrayList<>();
+        // Cargar el curson con todos los datos de la DB
+        Cursor c = cargarCursor();
+        // Recorrer el cursor y cargar la lista con los objetos
+        while (c.moveToNext()) {
+            Snore snore = new Snore();
+            // Setear el objeto con todos los valores obtenidos desde la DB
+            snore.setId(c.getString(0));
+            snore.setHora_inicio(c.getInt(1));
+            snore.setHora_fin(c.getInt(2));
+            snore.setT0(snore.getDoubleFromString(c.getString(3)));
+            snore.setAmplitud(snore.getDoubleFromString(c.getString(4)));
+            snore.setTiempo(snore.getIntegerFromString(c.getString(5)));
+            // Cargar este objeto seteado en la lista
+            list.add(snore);
+        }
+
+        return list;
     }
 }

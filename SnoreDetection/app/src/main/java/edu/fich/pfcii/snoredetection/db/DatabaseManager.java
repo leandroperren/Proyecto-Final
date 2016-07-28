@@ -14,9 +14,7 @@ public abstract class DatabaseManager {
         db = helper.getWritableDatabase();
     }
 
-    public void cerrar() {
-        db.close();
-    }
+    abstract public void cerrar();
 
     abstract void insertar(String fecha_inicio, String fecha_fin, String t0, String amplitud, String tiempo);
     abstract void actualizar(String id, String fecha_inicio, String fecha_fin, String t0, String amplitud, String tiempo);
