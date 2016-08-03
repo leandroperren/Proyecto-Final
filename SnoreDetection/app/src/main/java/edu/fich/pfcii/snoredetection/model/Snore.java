@@ -70,6 +70,18 @@ public class Snore {
         return str.toString();
     }
 
+    public String getStringFromInteger(ArrayList<Integer> list) {
+        StringBuilder str = new StringBuilder();
+
+        for (int i=0, n=list.size(); i<n-1; i++) {
+            str.append(list.get(i) + SEPARATOR);
+        }
+        // Add last element to StringBuilder outside this for to avoid insert "|" at the end
+        str.append(list.get(list.size()-1));
+
+        return str.toString();
+    }
+
     /**
      * All getters and Setters
      * @return

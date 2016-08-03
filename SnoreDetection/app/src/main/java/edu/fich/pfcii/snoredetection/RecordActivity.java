@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class RecordActivity extends AppCompatActivity {
+    public class RecordActivity extends AppCompatActivity {
 
     // Parametros de la clase AudioRecord
     private static final int RECORDER_SAMPLERATE = 8000;
