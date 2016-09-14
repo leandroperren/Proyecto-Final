@@ -61,8 +61,16 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
+
         if (id == R.id.action_settings) {
             Toast.makeText(this, "Opcion de menu seleccionada: SETTINGS", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        if (id == R.id.help_screen) {
+            Intent help = new Intent(this, OnBoardingActivity.class);
+            startActivity(help);
+            finish();
             return true;
         }
 

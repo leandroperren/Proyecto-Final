@@ -50,7 +50,7 @@ top=2.5cm }
 	\begin{center}
 	\LARGE
 	\vspace{-3cm}
-	\includegraphics[scale=0.3]{img/fich_logo_classic}\\[\bigskipamount]
+	\includegraphics[scale=0.25]{img/fich_logo_classic}\\[\bigskipamount]
 }
 \posttitle{	\end{center}}
 
@@ -65,7 +65,7 @@ top=2.5cm }
 \title{
 	\Large{\textcolor{charcoal}{Universidad Nacional del Litoral}\\
 	Facultad de Ingeniería y Ciencias Hídricas}\\ \vspace{15mm}
-	\huge{\textbf{Desarrollo de métodos inteligentes para la detección y clasificación de ronquidos\\ CAMBIAR!}}\\ \vspace{15mm}
+	\huge{\textbf{Desarrollo e Implementación de aplicación Android para detección de roncopatías sobre señales de baja resolución}}\\ \vspace{15mm}
 	\Large{Ingeniería en Informática Aplicada} \vspace{15mm}
 }
 
@@ -111,7 +111,7 @@ La limitación de estos métodos es que solamente realizan un análisis de la señal
 
 En la presente tesis se propone desarrollar una aplicación Android capaz de detectar episodios de ronquidos capturados por medio del micrófono del dispositivo, presentando características fundamentales como la robustez frente al ruido, óptimo uso de procesador y memoria, además de un consumo equilibrado de la batería.
 
-Para ello se presenta un método basado en el cálculo del período fundamental ($T_0$ de aquí en adelante) por medio de la autocorrelacion, este método recorrerá por ventaneo en tiempo real toda la señal capturada por el dispositivo y determinará si el $T_0$ de esa ventana se encuentra dentro de un rango determinado para que sea considerado ronquido. 
+Para ello se presenta un método basado en el cálculo del período fundamental ($T_0$ de aquí en adelante) por medio de la autocorrelación, este método recorrerá por ventaneo en tiempo real toda la señal capturada por el dispositivo y determinará si el $T_0$ de esa ventana se encuentra dentro de un rango determinado para que sea considerado ronquido. 
 
 Este rango de $T_0$ se determina mediante la extracción de una gran cantidad de ronquidos de señales limpias en formato \textbf{*.EDF} provistas por un especialista en trastornos de sueño y que  contienen la grabación de toda una noche de sueño (6 o 7 horas de duración), correspondientes a personas de ambos sexos.
 
@@ -149,7 +149,7 @@ Desde esta problemática, se propone desarrollar una aplicación para dispositivos
 	\item Programación en plataforma Android (basado en Java).
 \end{enumerate}
 
-La importancia de la mecánica de la respiración [5] y de la fisiología y anatomía de la vía aérea superior (VAS) [5]: fosas nasales, faringe y laringe, reside en el conocimiento funcional del aparato respiratorio para comprender por qué se produce el ronquido. El funcionamiento incorrecto de alguna de sus partes provoca la oclusión intermitente de la VAS que predispone el desarrollo de la roncopatía. La programación en plataforma android [12], la cual se compone de Java [13] y su propio entorno de desarrollo o SDK (del inglés Software \-Development Kit) [14], permitiendo la creación de aplicaciones para ésta plataforma, conocidas como aplicaciones nativas. Existen otras variantes para la creación de aplicaciones, pero exceden el alcance de éste proyecto final. Mediante la utilización del SDK y el lenguaje Java, se manifiestan una infinidad de opciones más que suficientes para el alcance de este trabajo final, como ser, bases de datos, creación de clases y funciones para su procesamiento y creación de interfaces orientadas al usuario, entre otras. El procesamiento de señales [10] permite la manipulación matemática de la señal para modificarla, mejorarla y extraer información en algún sentido con el fin de obtener las características necesarias para una posterior detección. 
+La importancia de la mecánica de la respiración [5] y de la fisiología y anatomía de la vía aérea superior (VAS) [5]: fosas nasales, faringe y laringe, reside en el conocimiento funcional del aparato respiratorio para comprender por qué se produce el ronquido. El funcionamiento incorrecto de alguna de sus partes provoca la oclusión intermitente de la VAS que predispone el desarrollo de la roncopatía. La programación en plataforma Android [12], la cual se compone de Java [13] y su propio entorno de desarrollo o SDK (del inglés Software \-Development Kit) [14], permitiendo la creación de aplicaciones para ésta plataforma, conocidas como aplicaciones nativas. Existen otras variantes para la creación de aplicaciones, pero exceden el alcance de éste proyecto final. Mediante la utilización del SDK y el lenguaje Java, se manifiestan una infinidad de opciones más que suficientes para el alcance de este trabajo final, como ser, bases de datos, creación de clases y funciones para su procesamiento y creación de interfaces orientadas al usuario, entre otras. El procesamiento de señales [10] permite la manipulación matemática de la señal para modificarla, mejorarla y extraer información en algún sentido con el fin de obtener las características necesarias para una posterior detección. 
 
 El método que se desarrolla en esta tesis presenta el desafío de lograr una detección de ronquidos con la mayor tasa de aciertos posible. Para ello fue preciso realizar un estudio exhaustivo de las características temporales de diferentes ronquidos de manera tal que la detección, aún en presencia de ruido, presente una gran robustez. Al estudiar los diferentes ronquidos se debió tener presente las condiciones del entorno en el que se captura la señal, ya que esto tiene incidencia directa en la amplia variedad de ruidos que pueden afectarla. 
 
@@ -203,7 +203,7 @@ El análisis de las características temporales se limitará al cálculo del $T_0$ (
 
 Por el lado de la aplicación Android, esta permitirá capturar una señal digital por medio del micrófono del dispositivo, la cual será analizada tomando ventanas de 5 minutos determinando si en dicho segmento se producen ronquidos. La aplicación permitirá acceder a dos tipos de reportes, uno gráfico y otro en modo texto donde se presentarán los resultados. En ellos se indicarán la hora en que se producirán los eventos y una estimación de la intensidad determinando dos niveles. A su vez la aplicación permitirá enviar vía correo electrónico estos reportes a un médico que pudiera estar interesado en los análisis.
 
-El desarrollo de esta aplicación movil cumplirá con las siguientes características: 
+El desarrollo de esta aplicación móvil cumplirá con las siguientes características: 
 \begin{itemize}
 	\item Robustez 
 	\item Sencillez
@@ -275,7 +275,7 @@ Por último, se hace una evaluación acerca de la duración más apropiada de los se
 En esta sección se repetirán los análisis anteriores pero utilizando señales de mujeres. Para ello también se tomaron 5 señales *.EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extrajeron manualmente 5 segmentos de ronquidos de cada una de las duraciones anteriores.
 A fin de determinar si el $T_0$ resulta homogéneo entre segmentos de una misma señal se analiza a continuación que valores toma el $T_0$ entre segmentos extraídos de una misma señal.
 
-En el Cuadro \ref{tabla:desv_estandar_t0_mujeres} se encuentran los valores de los desvíos estandar de todos los $T_0$ de los segmentos extraídos de cada paciente y para cada duración. Si se observan los desvíos estándar todos ellos tienen valores menores a 1 segundo, con lo cual se puede concluir que presentan cierta homogeneidad al igual que ocurría con los segmentos extraídos de las señales de hombres.  
+En el Cuadro \ref{tabla:desv_estandar_t0_mujeres} se encuentran los valores de los desvíos estándar de todos los $T_0$ de los segmentos extraídos de cada paciente y para cada duración. Si se observan los desvíos estándar todos ellos tienen valores menores a 1 segundo, con lo cual se puede concluir que presentan cierta homogeneidad al igual que ocurría con los segmentos extraídos de las señales de hombres.  
 
 A continuación se verifica que el $T_0$ resulta homogéneo entre segmentos de distintas señales. En el Cuadro \ref{tabla:media_desv_t0_mujeres} se encuentran los valores de las medias y desvíos estándar de los $T_0$ de los segmentos para cada duración sin tener en cuenta a que paciente pertenece. Analizando estos datos se puede ver que en todos los casos el valor del desvío está muy por debajo de 1 segundo, por esto se concluye que cualquiera sea la señal, los valores del $T_0$ resultan homogéneos, es decir, que la característica realmente es representativa de los segmentos con eventos de ronquidos.
 
@@ -492,9 +492,9 @@ El primer paso consiste en la captura de la señal, para ello se utilizará la cla
 
 Debido a que la mayoría de las aplicaciones que utilizan la clase AudioRecord admiten una frecuencia de muestreo mínima de 8000Hz, que es una limitación propia de la clase, se realiza un proceso de submuestreo a 100Hz, determinado con base en las señales EDF analizadas previamente. Esto posibilitará un menor costo computacional para los cálculos de autocorrelación y un ahorro en el almacenamiento. 
 
-El proceso de submuestreo escogido se denomina “decimation” e incluye un filtro pasa-bajos que permite eliminar previamente las altas frecuencias de la señal para no generar aliasing. Como filtro pasa-bajos se utilizó un FIR de orden 6, con una frecuencia de corte fijada en pi/80. 
+El proceso de submuestreo escogido se denomina ``decimation'' e incluye un filtro pasa-bajos que permite eliminar previamente las altas frecuencias de la señal para no generar aliasing. Como filtro pasa-bajos se utilizó un FIR de orden 6, con una frecuencia de corte fijada en pi/80. 
 
-La señal submuestreada es segmentada en trozos de 5 minutos, y para cada uno de ellos se  calcula el período fundamental T0 (pitch) por medio de la autocorrelación. Si el valor T0 del segmento está dentro del rango determinado en la etapa previa de análisis de las señales EDF, este segmento será etiquetado como “Ronquido” y se registra la hora en que sucede. Ésto se repite hasta el momento en que el usuario/paciente elige detener la captura, y entonces se genera un informe de resultados que se entrega al usuario por pantalla y se envía al médico por mail (si esta opción fue indicada).
+La señal submuestreada es segmentada en trozos de 5 minutos, y para cada uno de ellos se  calcula el período fundamental $T_0$ por medio de la autocorrelación. Si el valor $T_0$ del segmento está dentro del rango determinado en la etapa previa de análisis de las señales EDF, este segmento será etiquetado como ``Ronquido'' y se registra la hora en que sucede. Ésto se repite hasta el momento en que el usuario/paciente elige detener la captura, y entonces se genera un informe de resultados que se entrega al usuario por pantalla y se envía al médico por mail (si esta opción fue indicada).
 
 \begin{figure}[H]
 	\centering
@@ -554,9 +554,9 @@ En la Figura \ref{figura:screen4}, se ven la opciones que permiten iniciar y det
 \end{figure}	
 
 \subsection*{Información gráfica detallada}
-Para la generación de gráficos, Android ofrece muchas librerias que se pueden adicionar a un proyecto, para esta aplicación se utilizó la libreria MPAndroidChart [23],  la misma permite generar gráficos de barras, de torta, lineas, entre otros. Los mismos son muy agradables a la vista, permitiendo trabajar con colores y estilos diferentes, al mismo tiempo permite configurar opciones para que el usuario interactue con los mismos, pudiendo agrandar o achicar, seleccionar, mostrar información detallada, generar animaciones, editar leyendas, entre otras.       
+Para la generación de gráficos, Android ofrece muchas librerías que se pueden adicionar a un proyecto, para esta aplicación se utilizó la librería MPAndroidChart [23],  la misma permite generar gráficos de barras, de torta, lineas, entre otros. Los mismos son muy agradables a la vista, permitiendo trabajar con colores y estilos diferentes, al mismo tiempo permite configurar opciones para que el usuario interactúe con los mismos, pudiendo realizar paneos o zoom, seleccionar, mostrar información detallada, generar animaciones, editar leyendas, entre otras.       
 
-A continuación se describen los gráficos que se generan con la aplicación utilizando la librería recien mencionada, dentro de la pestaña correspondiente.
+A continuación se describen los gráficos que se generan con la aplicación utilizando la librería antes mencionada, dentro de la pestaña correspondiente.
 En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal capturada y se resaltan los segmentos donde se detectan ronquidos. Por medio de este gráfico el usuario puede tener una idea general acerca de qué cantidad de tiempo ha estado roncando considerando una grabación completada, cualquiera sea su duración. 
 
 \begin{figure}[H]
@@ -578,7 +578,7 @@ Además del gráfico de barras recien descripto, la aplicación genera dos gráficos
 \end{figure}
 
 \subsection*{Información detallada en formato de reporte}
-En la pestaña de reporte se presentan los resultados de manera textual, conteniendo una tabla como se puede apreciar en la Figura \ref{figura:screen_grafico4}. En ella se indica la hora de comienzo y de finalización de la captura como así también la duración en horas de la misma. Además se muestran estadisticas que indican la cantidad de segmentos detectados como ronquidos, la hora con mayor cantidad de ronquidos, la cual se determina como la hora que contiene mayor cantidad de segmentos de 5 minutos detectados como tales, y por último la cantidad promedio de ronquidos/hora la cual se determina tomando la cantidad total de segmentos detectados como ronquidos dividida entre la duración en horas de la captura. Luego se presenta un detalle de cada segmento indicando si tiene o no ronquidos, indicando la hora de comienzo del segmento y una estimación de la intensidad.
+En la pestaña de reporte se presentan los resultados de manera textual, conteniendo una tabla como se puede apreciar en la Figura \ref{figura:screen_grafico4}. En ella se indica la hora de comienzo y de finalización de la captura como así también la duración en horas de la misma. Además se muestran estadísticas que indican la cantidad de segmentos detectados como ronquidos, la hora con mayor cantidad de ronquidos, la cual se determina como la hora que contiene mayor cantidad de segmentos de 5 minutos detectados como tales, y por último la cantidad promedio de ronquidos/hora la cual se determina tomando la cantidad total de segmentos detectados como ronquidos dividida entre la duración en horas de la captura. Luego se presenta un detalle de cada segmento indicando si tiene o no ronquidos, indicando la hora de comienzo del segmento y una estimación de la intensidad.
 
 \begin{figure}[H]
 	\centering
@@ -588,7 +588,7 @@ En la pestaña de reporte se presentan los resultados de manera textual, contenie
 \end{figure}
 
 \subsection*{Reporte enviado al médico}
-Tal como se explicó anteriormente, los resultados obtenidos pueden ser enviados via email a un médico. En dicho email se enviará de manera adjunta un archivo de formato PDF (Portable Document Format ) que contendrá los mismos resultados que el usuario puede observar en las pestañas de gráficos y reportes recientemente descriptas. Este archivo PDF se genera por medio de la libreria iText [24], y tal como se puede observar en la Figura \ref{figura:screen_grafico5} contiene una primera parte donde se indican los datos del paciente junto con los resultados del análisis, posterior a esta información se presenta una página con los tres gráficos que la aplicación genera tal como se muestra en la Figura \ref{figura:screen_grafico6}.
+Tal como se explicó anteriormente, los resultados obtenidos pueden ser enviados vía email a un médico. En dicho email se enviará de manera adjunta un archivo de formato PDF (Portable Document Format) que contendrá los mismos resultados que el usuario puede observar en las pestañas de gráficos y reportes recientemente descriptos. Este archivo PDF se genera por medio de la librería iText [24], y tal como puede observarse en la Figura \ref{figura:screen_grafico5} contiene una primera parte indicando los datos del paciente junto a los resultados del análisis. Posterior a esta información se presenta una página con los tres gráficos que la aplicación genera, tal como se puede visualizar en la Figura \ref{figura:screen_grafico6}.
 
 \begin{figure}[H]
 	\centering
@@ -689,7 +689,7 @@ Al momento de finalizar la captura, se envía un correo electrónico con los resul
 			\hline
 			ACTOR: Sistema base de la App \\ \hline
 			DESCRIPCIÓN \\ \hline	
-Este consiste de analizar los datos mediante ventaneo de 5 minutos de duración y calcular el T0 (pitch) por medio de la autocorrelación. Posteriormente, se determina si dicho segmento contiene o no ronquidos. Luego se elaboran los resultados que serán utilizados para ser visualizados por el paciente y enviados al médico.
+Este consiste de analizar los datos mediante ventaneo de 5 minutos de duración y calcular el $T_0$ por medio de la autocorrelación. Posteriormente, se determina si dicho segmento contiene o no ronquidos. Luego se elaboran los resultados que serán utilizados para ser visualizados por el paciente y enviados al médico.
 \\ \hline			
 		\end{tabular}
 		\caption{Caso de uso Procesando la señal}
@@ -713,12 +713,39 @@ El paciente tendrá la opción, antes de iniciar la captura de datos, de ingresar 
 	\end{center}
 \end{table}
 
-\subsection{Diagramas de secuencia}
+\subsection{Diagrama de secuencia}
+A continuación, en la figura \ref{figura:diagrama_secuencia} se presenta el gráfico de secuencia donde se representan los casos de usos ``Iniciando Captura'' y ``Finalizando Captura'' por parte del Usuario en la aplicación. En él se representan los objetos básicos para representar el flujo de mensajes básico que se ejecutan para tales casos de uso y además los mensajes necesarios para realizar la persistencia de datos, representando así el núcleo básico de operación de la aplicación. Allí también se puede observar el ``loop'' o ciclo básico de captura y procesamiento de segmentos.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/diagrama_secuencia}	
+	\caption{Diagrama de Secuencia}
+	\label{figura:diagrama_secuencia}
+\end{figure}
+
+
 \subsection{Diseño de Clases}
+A continuación, se presenta la figura \ref{figura:diagrama_clases} donde se observa el diagrama de clases general para la aplicación Android. En él se observa que las clases heredadas del propio sistema Android, no cuentan con atributos y operaciones, salvo algunas excepciones, ya que tales clases cuentan con cientos de operaciones, excediendo así los alcances de éste proyecto.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.45]{img/diagrama_objetos}	
+	\caption{Diagrama de Clases}
+	\label{figura:diagrama_clases}
+\end{figure}
+
+Además del diagrama de clases anterior, en la figura \ref{figura:diagrama_clases_db} se representa el correspondiente a la persistencia de datos mediante el motor de Bases de Datos SQLite de Android.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.45]{img/diagrama_objetos_db}	
+	\caption{Diagrama de Clases para Base de Datos}
+	\label{figura:diagrama_clases_db}
+\end{figure}
 
 \section{Inspecciones y prueba del sistema}
 
-En esta sección se pretende describir el procedimiento seguido durante todo el desarrollo de la aplicación Android en cuanto a verificación y validación de los códigos desarrollados, como así también del funcionamineto de la aplicación una vez terminada. Para ello se cuenta brevemente la manera en que se trabajo como equipo de desarrollo en lo que es la inspección de los códigos, de manera que la detección de desarrollos no óptimos o con errores, se detectaran a tiempo y así evitar perdidas de tiempo por retrabajo. A su vez se describe la metodología de pruebas que se utilizó para validar el funcionamiento de la aplicación una vez terminada, la misma consistió de pruebas al método clasificador/detector, a las interfaces, gráficos y reportes, como así también al rendimiento en cuanto a consumo de bateria y de almacenamiento.      
+En esta sección se pretende describir el procedimiento seguido durante todo el desarrollo de la aplicación Android en cuanto a verificación y validación de los códigos desarrollados, como así también del funcionamiento de la aplicación una vez terminada. Para ello se cuenta brevemente la manera en que se trabajo como equipo de desarrollo en lo que es la inspección de los códigos, de manera que la detección de desarrollos no óptimos o con errores, se detectaran a tiempo y así evitar perdidas de tiempo por re-trabajo. A su vez se describe la metodología de pruebas que se utilizó para validar el funcionamiento de la aplicación una vez terminada, la misma consistió de pruebas al método clasificador/detector, a las interfaces, gráficos y reportes, como así también al rendimiento en cuanto a consumo de batería y de almacenamiento.      
 
 \subsection*{Inspecciones del software}
 
@@ -752,13 +779,11 @@ Como parte de las verificaciones y validaciones de la aplicación se describe a c
 	\end{itemize}
 \end{itemize}
 
-\section{Optimizaciones de la aplicación Android}
-
 \section{Tasas de aciertos aplicación Android}
 
 \subsection*{Pruebas sobre señales EDF (limpias)}
 En esta etapa, se describe la comparación entre el método detector/clasificador desarrollado en Matlab y el desempeño del mismo método desarrollado en la aplicación Android.
-Una vez desarrollada la aplicación Android, se procedió a analizar mediante la misma las señales EDF utilizadas para validar el método en Matlab, correspondientes a los Pacientes 11,12,13,14 y 15. De esta menera se pudo comparar y comprobar que los resultados obtenidos por la aplicación eran correctos y demostrar que, así como el método se podía realizar en Matlab, éste también funciona en una aplicación Android; es importante realizar esta comparación ya que Matlab, al tratarse de un software matemático facilita los cálculos pudiendo utilizar funciones inmediatamente disponibles y, que en el caso de Android, fue necesario el desarrollo de tales funcionalidades de cálculo.
+Una vez desarrollada la aplicación Android, se procedió a analizar mediante la misma las señales EDF utilizadas para validar el método en Matlab, correspondientes a los Pacientes 11,12,13,14 y 15. De esta manera se pudo comparar y comprobar que los resultados obtenidos por la aplicación eran correctos y demostrar que, así como el método se podía realizar en Matlab, éste también funciona en una aplicación Android; es importante realizar esta comparación ya que Matlab, al tratarse de un software matemático facilita los cálculos pudiendo utilizar funciones inmediatamente disponibles y, que en el caso de Android, fue necesario el desarrollo de tales funcionalidades de cálculo.
 Para las pruebas se procedió a modificar la fuente de datos de la aplicación desarrollada, de manera que no analice los datos capturados vía micrófono, sino que lea los mismos de los archivos EDF.
 Las tasas de aciertos obtenidas se pueden observar en el Cuadro \ref{tabla:clasificador_android_verificacion}, estos resultados son iguales a los obtenidos con el algoritmo desarrollado en Matlab, por lo que se puede afirmar que los cálculos realizados en la aplicación Android son correctos y equivalentes. 
 
@@ -766,17 +791,17 @@ Las tasas de aciertos obtenidas se pueden observar en el Cuadro \ref{tabla:clasi
 Este apartado, busca probar que la aplicación Android puede diferenciar correctamente los ronquidos de otros sonidos ambientales (ruidos) capturados por medio de la misma. Para ello, se dejó la aplicación ejecutándose en ambientes normales (como por ejemplo, en una habitación) durante varias horas de manera que la misma pueda captar los sonidos que se pudieran presentar sin que sean ronquidos. Al final de estas capturas, los resultados del detector son analizados a fin de demostrar que la cantidad de falsos positivos obtenidos es lo suficientemente baja.
 
 A continuación se describe uno de estos análisis y los resultados obtenidos, en este caso se dejó la aplicación Android capturando datos durante 3 horas y 45 minutos, en un entorno cotidiano de una habitación lindera a la calle, con ventilador de techo encendido (por el ruido que el mismo genera). Esta captura se llevó a cabo desde las 14:00hs y cabe mencionar que la casa contaba con varias personas realizando sus rutinas normales, incluyendo varias entradas y salidas a la habitación mencionada, personas hablando y sonido de televisión de habitaciones linderas.
-En el Cuadro \ref{tabla:clasificador_android_ambientales} se listan los T0 y su correspondiente etiqueta, mientras que en el Cuadro \ref{tabla:aciertos_android_ambientales} se pueden ver los valores de Verdaderos positivos, Falsos positivos, Falsos negativos, Verdaderos negativos, Valor predictivo positivo, Valor predictivo negativo, Sensibilidad y Especificidad. Si se analizan estos valores vemos que al tratarse de una captura donde no había ninguna persona que pudiera generar ronquidos, no existen verdaderos positivos y, por ende, la sensibilidad tampoco debe estar presente, por lo tanto solo importa analizar la especificidad, en la cual se ve un valor muy bueno, ya que supera el 90\%.
+En el Cuadro \ref{tabla:clasificador_android_ambientales} se listan los $T_0$ y su correspondiente etiqueta, mientras que en el Cuadro \ref{tabla:aciertos_android_ambientales} se pueden ver los valores de Verdaderos positivos, Falsos positivos, Falsos negativos, Verdaderos negativos, Valor predictivo positivo, Valor predictivo negativo, Sensibilidad y Especificidad. Si se analizan estos valores vemos que al tratarse de una captura donde no había ninguna persona que pudiera generar ronquidos, no existen verdaderos positivos y, por ende, la sensibilidad tampoco debe estar presente, por lo tanto solo importa analizar la especificidad, en la cual se ve un valor muy bueno, ya que supera el 90\%.
 
-Se considera a continuación, si los valores T0 obtenidos corresponden a valores picos. Para ello, se realizó otra captura y se observó la amplitud de su T0 calculando el porcentaje que representa el mismo respecto de la energía (valor de autocorrelación con desplazamiento cero). En el cuadro \ref{tabla:clasificador_android_ambientales2} podemos ver los valores del T0, su amplitud y la correspondiente etiqueta clasificatoria. Como se aprecia en los resultados anteriores, la mayoría de aquellos valores T0 tienen como amplitud valores menores al 30\% de la energía del segmento, lo que los convierte en valores bajos y que evidentemente no representan valores picos sobresalientes en la autocorrelación. Esto permite poder utilizar un umbral del 30\% para discriminar aquellos casos que estando en el rango de 3.50 a 4.70 segundos no sean picos y por ende no corresponden a “Ronquidos”, ya que no representan la cuasi periodicidad que los mismos tienen.
+Se considera a continuación, si los valores $T_0$ obtenidos corresponden a valores picos. Para ello, se realizó otra captura y se observó la amplitud de su $T_0$ calculando el porcentaje que representa el mismo respecto de la energía (valor de autocorrelación con desplazamiento cero). En el cuadro \ref{tabla:clasificador_android_ambientales2} podemos ver los valores del $T_0$, su amplitud y la correspondiente etiqueta clasificatoria. Como se aprecia en los resultados anteriores, la mayoría de aquellos valores $T_0$ tienen como amplitud valores menores al 30\% de la energía del segmento, lo que los convierte en valores bajos y que evidentemente no representan valores picos sobresalientes en la autocorrelación. Esto permite poder utilizar un umbral del 30\% para discriminar aquellos casos que estando en el rango de 3.50 a 4.70 segundos no sean picos y por ende no corresponden a ``Ronquidos'', ya que no representan la cuasi periodicidad que los mismos tienen.
 
 \chapter{Conclusión y Trabajos Futuros}
-En este proyecto final se desarrolló una aplicación Android capaz de detectar eventos de ronquidos por medio del análisis de datos capturados via el micrófono del dispositivo. El objetivo principal fué lograr una correcta detección utilizando métodos mas inteligentes que los utilizados por las aplicaciones disponibles hasta el momento las cuales solo realizan un análisis del nivel de energía de los datos capturados, generando esto un mal desempeño frente a condiciones ambientales de mucho ruido siendo detectados y etiquetados como ronquidos.
-Primeramente se analizó en detalle los ronquidos a fin de extraer alguna característica representativa de los mismos que permita poder detectarlos dentro de una grabación obtenida en ambientes cotidianos. Para ello se analizaron distintas señales EDF de personas de distintos sexo obtenidas en estudios de sueño, de este análisis se demostró que el T0 es una característica representativa de los ronquidos y que permite diferenciarlos de otros sonidos no deseados que pudieran presentarse en este tipo de grabaciones. Como resultado de esta etapa, mediante la extracción manual de segmentos etiquetados como ronquidos en las señales EDF y el cálculo de su correspondiente T0, se concluye que el rango de valores del T0 es de [3.50 - 4.70 s].
+En este proyecto final se desarrolló una aplicación Android capaz de detectar eventos de ronquidos por medio del análisis de datos capturados vía el micrófono del dispositivo. El objetivo principal fue lograr una correcta detección utilizando métodos mas inteligentes que los utilizados por las aplicaciones disponibles hasta el momento las cuales solo realizan un análisis del nivel de energía de los datos capturados, generando esto un mal desempeño frente a condiciones ambientales de mucho ruido siendo detectados y etiquetados como ronquidos.
+Primeramente se analizó en detalle los ronquidos a fin de extraer alguna característica representativa de los mismos que permita poder detectarlos dentro de una grabación obtenida en ambientes cotidianos. Para ello se analizaron distintas señales EDF de personas de distintos sexo obtenidas en estudios de sueño, de este análisis se demostró que el $T_0$ es una característica representativa de los ronquidos y que permite diferenciarlos de otros sonidos no deseados que pudieran presentarse en este tipo de grabaciones. Como resultado de esta etapa, mediante la extracción manual de segmentos etiquetados como ronquidos en las señales EDF y el cálculo de su correspondiente $T_0$, se concluye que el rango de valores del $T_0$ es de [3.50 - 4.70 s].
 
-Posteriormente se desarrolló el método de detección utilizando el rango de T0 recien mencionado, para ello se probó primero que el método sea viable desarrollando un pequeño script en Matlab para luego si, ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación la misma fue sometida a pruebas según la metodología definida, para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta precensia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, los valores superan el 80\% en ambos tipos de pruebas. Con estos resultados se puede concluir que el desempeño es muy bueno sobre todo en precensia de mucho ruido superando el 90\% de aciertos, siendo muy baja la precensia de falsos positivos. Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
+Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado, para ello se probó primero que el método sea viable desarrollando un pequeño script en Matlab para luego si, ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación la misma fue sometida a pruebas según la metodología definida, para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, los valores superan el 80\% en ambos tipos de pruebas. Con estos resultados se puede concluir que el desempeño es muy bueno sobre todo en presencia de mucho ruido superando el 90\% de aciertos, siendo muy baja la presencia de falsos positivos. Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
 
-De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no solo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas, y de esta manera puedan funcionar de manera complementaria o hasta sustituir en un futuro a los actuales métodos de estudios de sueño permitiendo que el paciente pueda realizar los mismos en su propia casa y sin tener que estar conectado a distintos dispositivos, esto permitiría aumentar la comodidad del paciente al mismo tiempo que sería una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. 
+De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no solo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas, junto a la ayuda de un profesional de la medicina, para aprovechar toda la potencialidad de los dispositivos móviles actuales, y de esta manera puedan funcionar de manera complementaria o hasta sustituir en un futuro a los actuales métodos de estudios de sueño permitiendo que el paciente pueda realizar los mismos en su propia casa y sin tener que estar conectado a distintos dispositivos, esto permitiría aumentar la comodidad del paciente al mismo tiempo que sería una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además de lo recién mencionado, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100Hz y con un almacenamiento discreto, y de ésta manera desarrollar dispositivos inteligentes que pueden ser integrados en la habitación de un individuo para que realice comportamientos determinados según la detección realizada. Ejemplos de lo recién mencionado puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño, aunque no de manera definitiva, claro está.
 
 \thispagestyle{empty}
 \chapter*{Bibliografia}

@@ -3,68 +3,80 @@ package edu.fich.pfcii.snoredetection;
 import android.app.IntentService;
 import android.content.Intent;
 
-import java.util.Vector;
 
-/**
- * Created by Leandro on 04/03/2016.
- */
-public class T0IntentService extends IntentService{
+public class T0IntentService extends IntentService {
 
-    public static final String ACTION_PROGRESO =
-            "edu.fich.pfcii.snoredetection.PROGRESO";
-
-    Vector<Double> autocorrelation;
+    public static final String ACTION_PROGRESO = "edu.fich.pfcii.snoredetection.PROGRESO";
 
     public T0IntentService() {
         super("T0IntentService");
     }
 
     @Override
-    protected void onHandleIntent(Intent intent)
-    {
-        //Recupero el fragmento
-        double fragmento[] = intent.getDoubleArrayExtra("fragmento");
+    protected void onHandleIntent(Intent intent) {
+        // Recuperar el segmento/fragmento
+        float[] fragmento = intent.getFloatArrayExtra("fragmento");
 
-        //calculo la autocorrelación
-        autocorrelation = new Vector<Double>();
-        double aux = 0;
+        // Calcular la autocorrelación
+        double aux;
+        float[] xcorr = new float[401];
         int size = fragmento.length;
 
-        //Calculo la autocorrelacion para 0=energia, y entre 200 y 600 (2seg y 6 seg).
+        // Calcular la autocorrelacion para 0=energia, y entre 200 y 600 (2seg y 6 seg).
         for (int s = 0; s < size; s++) {
-            aux = 0;
-            if (((s>=200) && (s<600)) || (s==0)) {
-                for (int k = 0; k < size - s; k++) {
+
+            aux = 0.0;
+
+            if ((s >= 200 && s < 600) || (s == 0)) {
+                int limit = size - s;
+                for (int k = 0; k < limit; k++) {
                     aux += fragmento[k] * fragmento[k + s];
                 }
+
             }
+
             aux /= size;
-            autocorrelation.add(aux);
+//            autocorrelation.add((float)aux);
+
+            // NEW
+            if (s == 0)
+                xcorr[0] = (float)aux;
+            else if (s >= 200 && s < 600)
+                xcorr[s-199] = (float)aux;
         }
 
-        //Obtengo el T0 para la señal del vector de autocorrelacion
-        double max = 0;
-        double t0 = 0;
+        // Obtener el T0 (pitch) para la señal del vector de autocorrelacion
+        float max = 0;
+        float t0 = 0;
         for (int s = 200; s < 600; s++) {
-            if (autocorrelation.elementAt(s) > max) {
-                max = autocorrelation.elementAt(s);
-                t0 = s / 100f;
+
+//            if (autocorrelation.get(s) > max) {
+//                max = autocorrelation.get(s);
+//                t0 = (float)s / 100.0f;
+//            }
+
+            // NEW
+            if (xcorr[s-199] > max) {
+                max = xcorr[s-199];
+                t0 = (float)s/100f;
             }
         }
 
-        //el elemento 0 de la autocorrelacion es la energia
-        double energia = autocorrelation.elementAt(0);
+        // Elemento en '0' de la autocorrelacion es la energia
+//        float energia = autocorrelation.get(0);
 
-        //normalizo el maximo del T0
-        max = max/autocorrelation.elementAt(0);
+        // NEW
+        float energia = xcorr[0];
 
-        //Devuelvo los valores al hilo principal
+        // Normalizar el maximo del T0 (a fines de saber que % de energia posee respecto a la energia maxima)
+        max /= energia;
+
+        // Devuelver los valores al hilo de grabacion
         Intent bcIntent = new Intent();
         bcIntent.setAction(ACTION_PROGRESO);
         bcIntent.putExtra("tcero", t0);
         bcIntent.putExtra("maximo", max);
         bcIntent.putExtra("energia", energia);
         sendBroadcast(bcIntent);
-
     }
 }
