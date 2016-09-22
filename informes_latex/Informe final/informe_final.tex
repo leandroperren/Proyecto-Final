@@ -250,15 +250,108 @@ Se puede observar en la autocorrelación la existencia de un valor pico en torno 
 	\label{figura:segmento_ronquido_autocorr}
 \end{figure}
 
-Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una misma señal. En el Cuadro \ref{tabla:t0_f0_1_minuto} del Anexo A, podemos ver los valores del $T_0$ de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos. Si se observa el valor del Desvío Estándar para los $T_0$ de los segmentos con ronquidos presentados en el Cuadro \ref{tabla:t0_f0_1_minuto}, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. 
+Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una misma señal. En el Cuadro \ref{tabla:t0_f0_1_minuto}, podemos ver los valores del $T_0$ de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos. Si se observa el valor del Desvío Estándar para los $T_0$ de los segmentos con ronquidos presentados en el Cuadro \ref{tabla:t0_f0_1_minuto}, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. 
 
-Debido a que se extrajeron segmentos de distintas señales se puede observar en el Cuadro \ref{tabla:desvios_estandar_t0} los valores del Desvío Estándar de los $T_0$ de cada señal y para cada duración de segmentos. Observando éstos datos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual se está asegurando que la característica $T_0$ es homogénea entre segmentos de ronquidos de una misma señal.
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{T0} \footnotesize{(s)} \\
+			\hline
+			1 & 03:33:59 & 4.15 \\ \hline
+			2 & 02:12:12 & 4.68 \\ \hline
+			3 & 02:11:04 & 4.86 \\ \hline
+			4 & 03:24:43 & 3.96 \\ \hline
+			5 & 04:33:24 & 3.79 \\ \hline
+			\multicolumn{2}{|r|}{\textbf{Media}} & \textbf{4.29} \\ \hline
+			\multicolumn{2}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos de 1 minuto de duración.}
+		\label{tabla:t0_f0_1_minuto}
+	\end{center}
+\end{table}
 
-Siguiendo el análisis se observa ahora que sucede con los valores del $T_0$ entre segmentos extraídos de diferentes señales, ya que si bien esta característica presentaba cierta homogeneidad entre los segmentos de una misma señal, podrían existir severas diferencias con segmentos provenientes de distintas señales y por ende de distintas personas y así no se podría generalizar el uso del $T_0$ como detector de ronquidos. Para ello se calculó el valor de la media y el desvío estándar de los $T_0$ de todos los segmentos de 1 minuto de duración independientemente de la señal a la que pertenezcan. En el Cuadro \ref{tabla:segmentos_1_minuto_hombres} se presentan los valores del $T_0$ de todos los segmentos de 1 minuto de duración seguidos de su media y desvío estándar, mientras que en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones} se presentan las medias y desvíos estándar de los $T_0$ de todos los segmentos de cada una de las duraciones.
+Debido a que se extrajeron segmentos de distintas señales se puede observar en el Cuadro \ref{tabla:desvios_estandar_t0}, los valores del Desvío Estándar de los $T_0$ de cada señal y para cada duración de segmentos. Observando éstos casos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual se está asegurando que la característica $T_0$ es homogénea entre segmentos de ronquidos de una misma señal.
 
-Se puede observar en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones} que las medias son todas cercanas a los 4 segundos y que los desvíos estándar son inferiores a 1 segundo. Esto permite asegurar que la característica es representativa, no solo dentro de los segmentos de ronquidos de una misma señal, sino también entre segmentos de distintas señales, por lo que no existirían problemas en la distinción vía ésta característica usando cualquier grabación, siempre y cuando los valores de $T_0$ en los segmentos de ruidos difieran suficientemente como para distinguirlos, este aspecto se analizará en secciones posteriores.
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \multicolumn{5}{c|}{\textbf{Desvio estandar del T0}} \\
+			\hline
+			& 30 seg & 1 min & 2 min & 3 min & 5 min \\ \hline
+			Paciente 1 & 0.47 & 0.46 & 0.46 & 0.43 & 0.24 \\ \hline
+			Paciente 2 & 0.22 & 0.35 & 0.27 & 0.14 & 0.31 \\ \hline
+			Paciente 3 & 0.12 & 0.25 & 0.20 & 0.21 & 0.26 \\ \hline
+			Paciente 4 & 0.61 & 0.52 & 0.62 & 0.70 & 0.85 \\ \hline
+			Paciente 5 & 0.24 & 0.09 & 0.17 & 0.17 & 0.08 \\ \hline
+		\end{tabular}
+		\caption{Desvíos estándar de los $T_0$ de cada señal en distintas duraciones.}
+		\label{tabla:desvios_estandar_t0}
+	\end{center}
+\end{table}
 
-Por último, se hace una evaluación acerca de la duración más apropiada de los segmentos. Como recientemente se ha mencionado y, como se podía observar en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones}, los valores de las medias y los desvíos de todos los segmentos de ronquidos tomando distintas duraciones resultan similares entre si, por lo tanto, se concluye que la duración óptima a utilizar, será la de 5 minutos, ya que se genera un ahorro en tiempo de procesamiento y cálculo. También es importante explicar que no se consideran tamaños de segmentos de mayor duración, ya que a los efectos de llevar esto a una aplicación que sea capaz de etiquetar los momentos donde se producen ronquidos, al tomar duraciones de 8, 10 o más minutos se estaría perdiendo precisión en el presente análisis.
+Siguiendo el análisis se observa ahora qué sucede con los valores del $T_0$ entre segmentos extraídos de diferentes señales, ya que si bien esta característica presentaba cierta homogeneidad entre los segmentos de una misma señal, podrían existir severas diferencias con segmentos provenientes de distintas señales y por ende de distintas personas y así no se podría generalizar el uso del $T_0$ como detector de ronquidos. Para ello se calculó el valor de la media y el desvío estándar de los $T_0$ de todos los segmentos de 1 minuto de duración independientemente de la señal a la que pertenezcan. En el Cuadro \ref{tabla:segmentos_1_minuto_hombres} se presentan los valores del $T_0$ de todos los segmentos de 1 minuto de duración seguidos de su media y desvío estándar, mientras que en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones} se presentan las medias y desvíos estándar de los $T_0$ de todos los segmentos de cada una de las duraciones.
+
+Se puede observar en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones} que las medias son todas cercanas a los 4 segundos y que los desvíos estándar son inferiores a 1 segundo. Esto permite asegurar que la característica es representativa, no solo dentro de los segmentos de ronquidos de una misma señal, sino también entre segmentos de distintas señales, por lo que no existirían problemas en la distinción vía ésta característica usando cualquier grabación, siempre y cuando los valores de $T_0$ en los segmentos de ruidos difieran suficientemente como para distinguirlos. Este aspecto se analizará en secciones posteriores.
+
+Por último, se hace una evaluación acerca de la duración más apropiada de los segmentos. Como recientemente se ha mencionado y, como se podía observar en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones}, los valores de las medias y los desvíos de todos los segmentos de ronquidos tomando distintas duraciones resultan similares entre si, por lo tanto, se concluye que la duración óptima a utilizar será la de 5 minutos, ya que se genera un ahorro en tiempo de procesamiento y cálculo. También es importante explicar que no se consideran tamaños de segmentos de mayor duración, ya que a los efectos de llevar esto a una aplicación que sea capaz de etiquetar los momentos donde se producen ronquidos, al tomar duraciones de 8, 10 o más minutos se estaría perdiendo precisión en el presente análisis.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15 \\ \hline 
+			& 02:12:12 & 1333200 & 4.68  \\ \hline
+			& 02:11:04 & 1326400 & 4.86  \\ \hline
+			& 03:24:43 & 1768300 & 3.96  \\ \hline
+			& 04:33:24 & 2180400 & 3.79  \\ \hline
+			Paciente 2 & 22:25:37 & 153700 & 3.52  \\ \hline
+			& 22:28:24 & 170400 & 3.73  \\ \hline
+			& 22:30:03 & 180300 & 4.15  \\ \hline
+			& 22:52:37 & 315700 & 3.22  \\ \hline
+			& 23:16:03 & 456300 & 3.82  \\ \hline
+			Paciente 3 & 01:43:47 & 322700 & 3.77  \\ \hline
+			& 02:06:04 & 456400 & 4.26  \\ \hline
+			& 02:31:09 & 606900 & 3.95  \\ \hline
+			& 03:10:34 & 843400 & 3.58  \\ \hline
+			& 04:52:01 & 1452100 & 3.93  \\ \hline		
+			Paciente 4 & 01:30:03 & 1260300 & 5.83  \\ \hline
+			& 03:48:38 & 2091800 & 4.92  \\ \hline
+			& 03:53:09 & 2118900 & 4.74  \\ \hline
+			& 22:25:30 & 153000 & 4.88  \\ \hline
+			& 00:28:31 & 891100 & 4.46  \\ \hline		
+			Paciente 5 & 04:21:07 & 1.926.700 & 3.90  \\ \hline
+			& 04:22:42 & 1.936.200 & 3.91  \\ \hline
+			& 04:57:37 & 2.145.700 & 3.82  \\ \hline
+			& 23:11:57 & 71.700 & 3.77  \\ \hline
+			& 23:42:54 & 257.400 & 3.68  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.13}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.58} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 1 minuto en distintas señales de hombres.}
+		\label{tabla:segmentos_1_minuto_hombres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Duración segmentos} & \textbf{Media} & \textbf{Desvío Estándar}\\ 
+			\hline \hline
+			30 segundos & 4.05 & 0.64 \\ \hline
+			1 minuto & 4.13 & 0.58 \\ \hline
+			2 minutos & 4.13 & 0.71 \\ \hline
+			3 minutos & 4.11 & 0.69 \\ \hline
+			5 minutos & 4.18 & 0.71 \\ \hline
+		\end{tabular}
+		\caption{Medias y desvíos estándar de los $T_0$ para distintas duraciones.}
+		\label{tabla:media_desvio_t0_dist_duraciones}
+	\end{center}
+\end{table}
 
 \subsection{Análisis de señales correspondientes a mujeres}
 En esta sección se repetirán los análisis anteriores pero utilizando señales de mujeres. Para ello también se tomaron 5 señales *.EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extrajeron manualmente 5 segmentos de ronquidos de cada una de las duraciones anteriores.
@@ -1315,82 +1408,6 @@ De esta manera se abre la posibilidad de trabajos futuros basados en el desarrol
 
 \begin{table}[H]
 	\begin{center}
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{T0} \footnotesize{(s)} \\
-			\hline
-			1 & 03:33:59 & 4.15 \\ \hline
-			2 & 02:12:12 & 4.68 \\ \hline
-			3 & 02:11:04 & 4.86 \\ \hline
-			4 & 03:24:43 & 3.96 \\ \hline
-			5 & 04:33:24 & 3.79 \\ \hline
-			\multicolumn{2}{|r|}{\textbf{Media}} & \textbf{4.29} \\ \hline
-			\multicolumn{2}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
-		\end{tabular}
-		\caption{$T_0$ de segmentos de 1 minuto de duración.}
-		\label{tabla:t0_f0_1_minuto}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-			\textbf{Señal} & \multicolumn{5}{c|}{\textbf{Desvio estandar del T0}} \\
-			\hline
-			& 30 seg & 1 min & 2 min & 3 min & 5 min \\ \hline
-			Paciente 1 & 0.47 & 0.46 & 0.46 & 0.43 & 0.24 \\ \hline
-			Paciente 2 & 0.22 & 0.35 & 0.27 & 0.14 & 0.31 \\ \hline
-			Paciente 3 & 0.12 & 0.25 & 0.20 & 0.21 & 0.26 \\ \hline
-			Paciente 4 & 0.61 & 0.52 & 0.62 & 0.70 & 0.85 \\ \hline
-			Paciente 5 & 0.24 & 0.09 & 0.17 & 0.17 & 0.08 \\ \hline
-		\end{tabular}
-		\caption{Desvíos estándar de los $T_0$ de cada señal en distintas duraciones.}
-		\label{tabla:desvios_estandar_t0}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
-			\hline \hline
-			Paciente 1 & 03:33:59 & 1823900 & 4.15 \\ \hline 
-			& 02:12:12 & 1333200 & 4.68  \\ \hline
-			& 02:11:04 & 1326400 & 4.86  \\ \hline
-			& 03:24:43 & 1768300 & 3.96  \\ \hline
-			& 04:33:24 & 2180400 & 3.79  \\ \hline
-			Paciente 2 & 22:25:37 & 153700 & 3.52  \\ \hline
-			& 22:28:24 & 170400 & 3.73  \\ \hline
-			& 22:30:03 & 180300 & 4.15  \\ \hline
-			& 22:52:37 & 315700 & 3.22  \\ \hline
-			& 23:16:03 & 456300 & 3.82  \\ \hline
-			Paciente 3 & 01:43:47 & 322700 & 3.77  \\ \hline
-			& 02:06:04 & 456400 & 4.26  \\ \hline
-			& 02:31:09 & 606900 & 3.95  \\ \hline
-			& 03:10:34 & 843400 & 3.58  \\ \hline
-			& 04:52:01 & 1452100 & 3.93  \\ \hline		
-			Paciente 4 & 01:30:03 & 1260300 & 5.83  \\ \hline
-			& 03:48:38 & 2091800 & 4.92  \\ \hline
-			& 03:53:09 & 2118900 & 4.74  \\ \hline
-			& 22:25:30 & 153000 & 4.88  \\ \hline
-			& 00:28:31 & 891100 & 4.46  \\ \hline		
-			Paciente 5 & 04:21:07 & 1.926.700 & 3.90  \\ \hline
-			& 04:22:42 & 1.936.200 & 3.91  \\ \hline
-			& 04:57:37 & 2.145.700 & 3.82  \\ \hline
-			& 23:11:57 & 71.700 & 3.77  \\ \hline
-			& 23:42:54 & 257.400 & 3.68  \\ \hline
-			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.13}  \\ \hline
-			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.58} \\ \hline
-		\end{tabular}
-		\caption{$T_0$ de segmentos con ronquidos de 1 minuto en distintas señales de hombres.}
-		\label{tabla:segmentos_1_minuto_hombres}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|c|}
 			\hline
 			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
@@ -1545,23 +1562,6 @@ De esta manera se abre la posibilidad de trabajos futuros basados en el desarrol
 	\end{center}
 \end{table}
 
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-			\textbf{Duración segmentos} & \textbf{Media} & \textbf{Desvío Estándar}\\ 
-			\hline \hline
-			30 segundos & 4.05 & 0.64 \\ \hline
-			1 minuto & 4.13 & 0.58 \\ \hline
-			2 minutos & 4.13 & 0.71 \\ \hline
-			3 minutos & 4.11 & 0.69 \\ \hline
-			5 minutos & 4.18 & 0.71 \\ \hline
-		\end{tabular}
-		\caption{Medias y desvíos estándar de los $T_0$ para distintas duraciones.}
-		\label{tabla:media_desvio_t0_dist_duraciones}
-	\end{center}
-\end{table}
 
 %==============================================================================
 %
