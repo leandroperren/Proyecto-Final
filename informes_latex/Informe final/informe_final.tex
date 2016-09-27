@@ -497,15 +497,13 @@ Debido a que los segmentos analizados recientemente eran todos de 1 minuto de du
 Tomando duraciones de 5 min se puede ver que en algunos segmentos se juntan distintos sonidos no deseados que antes (segmentos de 1 min de duración) se trataron separadamente. Esto es interesante para ver qué sucede con el $T_0$ en segmentos con muchos y diferentes ruidos. 
 Si se observan las gráficas de autocorrelación de las Figuras \ref{figura:ruido1_5minuto} y \ref{figura:ruido2_5minuto} se ve que el aumento del tamaño del segmento no implica cambios ya que no se observa ningún pico sobresaliente. Lo mismo sucede para el caso de la Figura \ref{figura:ruido3_5minuto} que contiene distintos ruidos en un mismo segmento. Estos resultados permiten distinguir claramente estos segmentos de aquellos con ronquidos ya que los segmentos con ruidos no presentan picos sobresalientes en su autocorrelación como para poder definir un $T_0$ en torno a los 4 s que era el valor promedio que se encontró en los segmentos con ronquidos.
 
-Debido a que se demostró que el $T_0$ es una característica representativa de los ronquidos tanto de mujeres como de hombres y que los análisis de segmentos de ruidos presentan valores del $T_0$ distinguibles se puede concluir que el $T_0$ es una buena característica a utilizar para la detección de los segmentos con ronquidos pudiendo diferenciarlos de sonidos no deseados que puedan encontrarse en grabaciones en entornos cotidianos y así lograr la robustez que se necesita.
+Hasta aquí se demostró que el $T_0$ es una característica representativa de los ronquidos tanto de mujeres como de hombres y que los análisis de segmentos de ruidos no presentan valores del $T_0$ distinguibles. Por lo tanto se puede concluir que el $T_0$ es una buena característica a utilizar para la detección de los segmentos con ronquidos pudiendo diferenciarlos de sonidos no deseados que puedan encontrarse en grabaciones en entornos cotidianos y así lograr la robustez que se necesita.
 
 \section{Mejora a través de funciones de recorte}
-La utilización de funciones de recorte permite acentuar los máximos temporales de la señal (correspondientes al periodo fundamental), de forma que la discriminación del período fundamental se visualice con mayor claridad en el tramo analizado.
+La utilización de funciones de recorte permite acentuar los máximos temporales de la señal (correspondientes al periodo fundamental), de forma que la discriminación del período fundamental se visualice con mayor claridad en el tramo analizado. En la Figura \ref{figura:funciones_recorte}, se observan tres funciones de recorte diferentes, donde $C_L$ es el umbral de decisión donde aplicar el descarte, y el eje $x$ representa el valor de la muestra del segmento al que se le aplica el recorte.
 
-En la Figura \ref{figura:funciones_recorte}, se observan tres funciones de recorte diferentes, donde $C_L$ es el umbral de decisión donde aplicar el descarte, y el eje $x$ representa el valor de la muestra del segmento al que se le aplica el recorte.
-
-A efectos de decidir cuál de las funciones de recortes antes descritas tiene mejor desempeño, se procedió a calcular la autocorrelación para un segmento con ronquidos, tras aplicar a dicho segmento cada una de las funciones de recorte por separado. En la Figura \ref{figura:autocor_funciones_recorte} se muestra una gráfica con los tres resultados posibles tras aplicar cada una de las funciones de recortes, donde claramente se puede visualizar que la función de recorte 3 es la que arroja los mejores resultados ya que se observan mas resaltados los picos que produce la autocorrelación ($T_0$, 2$T_0$, 3$T_0$, etcétera). 
-Para los casos que se observaron recientemente, el valor del umbral $C_L$ se calculó tomando el 10\% del máximo valor del segmento. De esta manera la función de recorte anulará todas las muestras del segmento cuyo valor esté debajo del 10\% del valor máximo, para así fortalecer o dar más importancia a los valores temporales máximos. De todas maneras el valor óptimo del umbral $C_L$ se determina en etapas posteriores cuando se evalúa el algoritmo detector.
+A efectos de decidir cuál de las funciones de recortes antes descritas tiene mejor desempeño, se procedió a calcular la autocorrelación para un segmento con ronquidos, tras aplicar a dicho segmento cada una de las funciones de recorte por separado. En la Figura \ref{figura:autocor_funciones_recorte} se muestra una gráfica con los tres resultados posibles tras aplicar cada una de las funciones de recortes. Claramente se puede visualizar que la función de recorte 3 es la que arroja los mejores resultados ya que se observan más resaltados los picos que produce la autocorrelación ($T_0$, 2$T_0$, 3$T_0$, etcétera). 
+Para los casos que se observaron recientemente, el valor del umbral $C_L$ se calculó tomando el 10\% del máximo valor del segmento. De esta manera la función de recorte anulará todas las muestras del segmento cuyo valor esté debajo del 10\% del valor máximo, para así dar más importancia a los valores temporales máximos. De todas maneras el valor óptimo del umbral $C_L$ se determinará en etapas posteriores cuando se evalúa el algoritmo detector.
 
 
 \begin{figure}[H]
@@ -522,7 +520,7 @@ Para los casos que se observaron recientemente, el valor del umbral $C_L$ se cal
 	\label{figura:autocor_funciones_recorte}
 \end{figure}
 
-En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto de realce producido por la función de recorte, en segmentos donde los valores pico para encontrar el $T_0$, no son visualmente claros. A su vez en la Figura \ref{figura:autocor_funciones_recorte3} se muestra el efecto producido al aplicar la función de recorte a segmentos de sonidos no deseados. Observando estas dos gráficas, es visible que tanto en el caso de ronquidos, como en el de ruidos (sonidos no deseados), el efecto producido por la función de recorte, acentúa valores correspondientes a los períodos $T_0$, logrando en los casos de ronquidos que aquellos casos donde no eran visibles con facilidad, puedan observarse claramente. Además, es notorio que en los casos de ruidos, no hay existencia de picos destacándose y menos aún, no existe homogeneidad alguna con respecto a la forma que gráficamente produce la autocorrelación.
+En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto de realce producido por la función de recorte, en segmentos donde los valores pico para encontrar el $T_0$, no son visualmente claros. A su vez, en la Figura \ref{figura:autocor_funciones_recorte3} se muestra el efecto producido al aplicar la función de recorte a segmentos de sonidos no deseados. Observando estas dos gráficas, es visible que tanto en el caso de ronquidos, como en el de ruidos (sonidos no deseados), el efecto producido por la función de recorte acentúa valores correspondientes a los períodos $T_0$, logrando que aquellos casos con ronquidos donde no eran visibles con facilidad, puedan observarse claramente. Además, es notorio que en los casos de ruidos no existen picos destacados y menos aún, no existe homogeneidad alguna con respecto a la forma general de la autocorrelación.
 
 
 \begin{figure}[H]
@@ -540,12 +538,68 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 \end{figure}
 
 \section{Cantidad mínima de ronquidos por segmento}
-A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en el valor del $T_0$ la existencia de subsegmentos que no contengan ronquidos contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 5 min con ronquidos y se extrajeron subsegmentos de distintas duraciones, de 1,2,3 y 4 min que no contenían ronquidos. Luego se volvió a calcular el $T_0$ sin estos subsegmentos a fin de demostrar si ellos, sin ronquidos, tienen algún tipo de implicación. Tal como se puede apreciar en el Cuadro \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3 o 4 min, el $T_0$ detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa). 
+A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 5 min con ronquidos y se extrajeron subsegmentos de distintas duraciones, de 1, 2, 3 y 4 min que no contenían ronquidos. Luego se volvió a calcular el $T_0$ sin estos subsegmentos a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en el Cuadro \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3 o 4 min, el $T_0$ detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa). 
 
 Otro aspecto consiste en determinar el mínimo indispensable de eventos necesarios para que el $T_0$ sea detectado sin sufrir grandes desvíos respecto de la media. 
 Para ello se analizó una parte del segmento, en particular con una duración de 15 segundos, en los cuales había 4 episodios de ronquido presentes, luego se procedió a quitar de a un evento a la vez y volver a calcular el $T_0$ y así observar si presentan diferencias. Si se observa el Cuadro \ref{tabla:cantidad_minima_t0}, se puede concluir que la cantidad mínima de eventos necesarios para la correcta detección es de 2 ya que con un solo evento el $T_0$ da un valor de 2.58 segundos, lo cual esta por debajo de los 4 segundos promedio. 
 
-En conclusión, no existe restricción alguna en cuanto a la duración de sub­segmentos sin ronquidos, siempre y cuando en alguna parte del segmento completo, existan  al menos 2 eventos de ronquido.  
+En conclusión, no existe restricción alguna en cuanto a la duración de sub­segmentos sin ronquidos, siempre y cuando en alguna parte del segmento completo, existan  al menos 2 eventos de ronquido. 
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			$T_0$ & \textbf{Descripción}\\ 
+			\hline \hline
+			4.24 & Segmento completo \\ \hline
+			4.34 & Último minuto eliminado \\ \hline
+			4.24 & Minuto 4 eliminado \\ \hline
+			4.24 & Minuto 3 eliminado \\ \hline
+			4.24 & Minuto 2 eliminado \\ \hline
+			4.24 & Minuto 1 eliminado \\ \hline
+			\hline
+			4.19 & Últimos 2 minutos eliminados \\ \hline
+			4.34 & Minutos 1 y 5 eliminados \\ \hline
+			4.34 & Minutos 2 y 5 eliminados \\ \hline
+			4.34 & Minutos 3 y 5 eliminados \\ \hline
+			4.19 & Minutos 4 y 5 eliminados \\ \hline
+			4.24 & Minutos 1 y 4 eliminados \\ \hline
+			4.24 & Minutos 2 y 4 eliminados \\ \hline
+			4.24 & Minutos 3 y 4 eliminados \\ \hline
+            4.19 & Minutos 5 y 4 eliminados \\ \hline
+			4.24 & Minutos 1 y 3 eliminados \\ \hline
+			4.24 & Minutos 2 y 3 eliminados \\ \hline
+			4.24 & minutos 1 y 2 eliminados \\ \hline
+			\hline
+			4.19 & Últimos 3 minutos eliminados \\ \hline
+			4.24 & Minutos 1,2,3 \\ \hline
+			4.24 & Minutos 2,3,4 \\ \hline
+			4.19 & Minutos 3,4,5 \\ \hline
+			\hline
+			4.50 & Últimos 4 minutos eliminados \\ \hline
+			4.24 & Minutos 1,2,3 y 4 \\ \hline
+		\end{tabular}
+		\caption{T0 de segmentos eliminando subsegmentos sin ronquidos.}
+		\label{tabla:subsegmentos_t0}
+	\end{center}
+\end{table} 
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			$T_0$ & \textbf{Descripción}\\ 
+			\hline \hline
+			4.24 & Últimos 15 segundos \\ \hline
+			4.24 & Últimos 15 segundos (contiene 4 eventos de ronquido) \\ \hline
+			4.24 & Últimos 15 segundos con 3 eventos \\ \hline
+			4.12 & Últimos 15 segundos con 2 eventos \\ \hline
+			2.58 & Últimos 15 segundos con 1 eventos \\ \hline
+		\end{tabular}
+		\caption{Mínima cantidad de eventos por segmento.}
+		\label{tabla:cantidad_minima_t0}
+	\end{center}
+\end{table}  
  
 \section{Tasas de aciertos del método en Matlab\textsuperscript{\scriptsize\textregistered}}
 Debido a que se utilizó Matlab para calcular el  $T_0$ de los segmentos extraídos de las señales EDF, es que surgió la posibilidad de desarrollar un script en Matlab, que sirva a modo de aplicación de referencia, que recorra una señal tomando frames de 5 min de duración y que calculando el $T_0$ determine si el segmento posee ronquidos.
@@ -2249,62 +2303,6 @@ De esta manera se abre la posibilidad de trabajos futuros basados en el desarrol
 		\label{tabla:segmentos_5_minutos_mujeres}
 	\end{center}
 \end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-			$T_0$ & \textbf{Descripción}\\ 
-			\hline \hline
-			4.24 & Segmento completo \\ \hline
-			4.34 & Último minuto eliminado \\ \hline
-			4.24 & Minuto 4 eliminado \\ \hline
-			4.24 & Minuto 3 eliminado \\ \hline
-			4.24 & Minuto 2 eliminado \\ \hline
-			4.24 & Minuto 1 eliminado \\ \hline
-			\hline
-			4.19 & Últimos 2 minutos eliminados \\ \hline
-			4.34 & Minutos 1 y 5 eliminados \\ \hline
-			4.34 & Minutos 2 y 5 eliminados \\ \hline
-			4.34 & Minutos 3 y 5 eliminados \\ \hline
-			4.19 & Minutos 4 y 5 eliminados \\ \hline
-			4.24 & Minutos 1 y 4 eliminados \\ \hline
-			4.24 & Minutos 2 y 4 eliminados \\ \hline
-			4.24 & Minutos 3 y 4 eliminados \\ \hline
-            4.19 & Minutos 5 y 4 eliminados \\ \hline
-			4.24 & Minutos 1 y 3 eliminados \\ \hline
-			4.24 & Minutos 2 y 3 eliminados \\ \hline
-			4.24 & minutos 1 y 2 eliminados \\ \hline
-			\hline
-			4.19 & Últimos 3 minutos eliminados \\ \hline
-			4.24 & Minutos 1,2,3 \\ \hline
-			4.24 & Minutos 2,3,4 \\ \hline
-			4.19 & Minutos 3,4,5 \\ \hline
-			\hline
-			4.50 & Últimos 4 minutos eliminados \\ \hline
-			4.24 & Minutos 1,2,3 y 4 \\ \hline
-		\end{tabular}
-		\caption{T0 de segmentos eliminando subsegmentos sin ronquidos.}
-		\label{tabla:subsegmentos_t0}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
-			\hline
-			$T_0$ & \textbf{Descripción}\\ 
-			\hline \hline
-			4.24 & Últimos 15 segundos \\ \hline
-			4.24 & Últimos 15 segundos (contiene 4 eventos de ronquido) \\ \hline
-			4.24 & Últimos 15 segundos con 3 eventos \\ \hline
-			4.12 & Últimos 15 segundos con 2 eventos \\ \hline
-			2.58 & Últimos 15 segundos con 1 eventos \\ \hline
-		\end{tabular}
-		\caption{Mínima cantidad de eventos por segmento.}
-		\label{tabla:cantidad_minima_t0}
-	\end{center}
-\end{table}  
 
 \begin{table}[H]
 	\begin{center}

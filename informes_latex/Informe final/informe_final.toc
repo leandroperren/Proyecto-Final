@@ -16,18 +16,18 @@
 \contentsline {section}{\numberline {2.4}An\'alisis de sonidos no deseados (ruidos)}{21}
 \contentsline {section}{\numberline {2.5}Mejora a trav\'es de funciones de recorte}{27}
 \contentsline {section}{\numberline {2.6}Cantidad m\IeC {\'\i }nima de ronquidos por segmento}{30}
-\contentsline {section}{\numberline {2.7}Tasas de aciertos del m\'etodo en Matlab\textsuperscript {\relax \fontsize {8}{9.5}\selectfont \textregistered }}{31}
-\contentsline {chapter}{\numberline {3}Desarrollo de aplicaci\'on Android\textsuperscript {\relax \fontsize {8}{9.5}\selectfont \textregistered }}{32}
-\contentsline {section}{\numberline {3.1}An\'alisis y definici\'on de requerimientos}{32}
-\contentsline {subsection}{\numberline {3.1.1}Requerimientos funcionales}{32}
-\contentsline {subsection}{\numberline {3.1.2}Requerimientos no funcionales}{33}
-\contentsline {section}{\numberline {3.2}Dise\~no del sistema y del software}{33}
-\contentsline {subsection}{\numberline {3.2.1}Casos de Uso}{45}
-\contentsline {subsection}{\numberline {3.2.2}Diagrama de secuencia}{47}
-\contentsline {subsection}{\numberline {3.2.3}Dise\~no de Clases}{48}
-\contentsline {section}{\numberline {3.3}Inspecciones y prueba del sistema}{50}
-\contentsline {section}{\numberline {3.4}Tasas de aciertos aplicaci\'on Android}{51}
-\contentsline {chapter}{\numberline {4}Conclusi\'on y Trabajos Futuros}{54}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{56}
-\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{58}
+\contentsline {section}{\numberline {2.7}Tasas de aciertos del m\'etodo en Matlab\textsuperscript {\relax \fontsize {8}{9.5}\selectfont \textregistered }}{32}
+\contentsline {chapter}{\numberline {3}Desarrollo de aplicaci\'on Android\textsuperscript {\relax \fontsize {8}{9.5}\selectfont \textregistered }}{33}
+\contentsline {section}{\numberline {3.1}An\'alisis y definici\'on de requerimientos}{33}
+\contentsline {subsection}{\numberline {3.1.1}Requerimientos funcionales}{33}
+\contentsline {subsection}{\numberline {3.1.2}Requerimientos no funcionales}{34}
+\contentsline {section}{\numberline {3.2}Dise\~no del sistema y del software}{34}
+\contentsline {subsection}{\numberline {3.2.1}Casos de Uso}{46}
+\contentsline {subsection}{\numberline {3.2.2}Diagrama de secuencia}{48}
+\contentsline {subsection}{\numberline {3.2.3}Dise\~no de Clases}{49}
+\contentsline {section}{\numberline {3.3}Inspecciones y prueba del sistema}{51}
+\contentsline {section}{\numberline {3.4}Tasas de aciertos aplicaci\'on Android}{52}
+\contentsline {chapter}{\numberline {4}Conclusi\'on y Trabajos Futuros}{55}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{57}
+\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{59}
 \contentsline {chapter}{\numberline {B}Informaci\'on adicional sobre App Android\textsuperscript {\textregistered } }{88}
