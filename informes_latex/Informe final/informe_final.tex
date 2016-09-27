@@ -592,21 +592,93 @@ En conclusión, no existe restricción alguna en cuanto a la duración de sub­segme
 
  
 \section{Tasas de aciertos del método en Matlab\textsuperscript{\scriptsize\textregistered}}
-Debido a que se utilizó Matlab para calcular el  $T_0$ de los segmentos extraídos de las señales EDF, es que surgió la posibilidad de desarrollar un script en Matlab, que sirva a modo de aplicación de referencia, que recorra una señal tomando frames de 5 min de duración y que calculando el $T_0$ determine si el segmento posee ronquidos.
+Debido a que se utilizó Matlab para calcular el  $T_0$ de los segmentos extraídos de las señales EDF, es que surgió la posibilidad de desarrollar un script en Matlab que recorra una señal tomando frames de 5 min de duración y que calculando el $T_0$ determine si el segmento posee ronquidos. De esta manera se podría determinar si el método es aplicable antes de realizar la aplicación sobre la plataforma Android. 
 
-Mediante los resultados que se obtuvieron utilizando este script, se pudo determinar que el método es aplicable antes de realizar la aplicación definitiva sobre la plataforma Android, al mismo tiempo que se pudo comparar estos resultados a fin de validar el correcto desarrollo en Android de funciones como la autocorrelación, que en Matlab ya se encuentran disponibles (como por ejemplo la función \textit{xcorr}).
+En el Cuadro \ref{tabla:clasificador_matlab} se encuentran los valores de \textit{verdaderos positivos}, \textit{verdaderos negativos}, \textit{falsos positivos}, \textit{falsos negativos}, \textit{valor predictivo positivo}, \textit{valor predictivo negativo}, \textit{sensibilidad} y \textit{especificidad}, calculados para cada una de las señales EDF utilizadas hasta el momento. Estos resultados se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del $T_0$ para ser ronquido en [3.50 - 4.70 s]. 
 
-En el Cuadro \ref{tabla:clasificador_matlab} se presentan los resultados que se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del $T_0$ para ser ronquido entre [3.50 - 4.70 s]. En las distintas columnas se encuentran los valores de \textit{verdaderos positivos}, \textit{verdaderos negativos}, \textit{falsos positivos}, \textit{falsos negativos}, \textit{valor predictivo positivo}, \textit{valor predictivo negativo}, \textit{sensibilidad} y \textit{especificidad}, calculados para cada una de las señales EDF utilizadas hasta el momento.
+En el Cuadro \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9. Estos casos se presentan en baja cantidad, y si se observan los $T_0$, se puede ver que los mismos tienen valores inferiores a los 3 s, por lo tanto estos valores caen fuera del rango [3.50 - 4.70 s] utilizado por el algoritmo para etiquetarlos como segmentos con ronquidos.
 
-A fin de analizar el desempeño del algoritmo se revisan a continuación los casos de falsos negativos y falsos positivos, analizando los valores de $T_0$ presentados.
+En el Cuadro \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de $T_0$ similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que las señales EDF en esos segmentos, sin estar etiquetados como ronquidos, presentan algunos picos aislados. Esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Al tratarse de un fenómeno presentado solo en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
 
-En el Cuadro \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9.
-Observando estos $T_0$, se puede ver que los mismos tienen valores inferiores a los 3 segundos, por lo tanto estos valores caen fuera del rango [3.50 - 4.70 s] utilizado por el algoritmo para etiquetarlos como segmentos con ronquidos, de todas maneras representan una minoría.
+Una vez analizados los valores de falsos positivos y falsos negativos con las señales usadas hasta el momento, se procedió a determinar tasas de aciertos usando señales no utilizadas en pruebas (no vistas por el sistema). En el Cuadro \ref{tabla:clasificador_matlab_verificacion} se presentan los valores obtenidos para estas señales (verificación). En ellos se puede observar que los valores de sensibilidad y especificidad superan el 80\%, llegando en algunos casos muy cerca del 100\%. Por lo tanto se puede concluir que el método utilizando señales limpias es factible y que puede ser implementado en Android.
 
-En el Cuadro \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de $T_0$ similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que las señales EDF en esos segmentos sin estar etiquetados como ronquidos presentan algunos picos aislados, esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Igual que en el punto anterior y debido a que es un fenómeno presentado en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			Paciente 1 & 12 & 19 & 11 & 6 & 52.1\% & 76\% & 66.6\% & 63.3\% \\ \hline
+			Paciente 2 & 46 & 0 & 0 & 2 & 100\% & 0\% & 95.8\% & --\\ \hline
+			Paciente 3 & 42 & 3 & 0 & 3 & 100\% & 50\% & 93.3\% & 100\% \\ \hline
+			Paciente 4 & 39 & 1 & 0 & 8 & 100\% & 11.1\% & 82.9\% & 100\% \\ \hline
+			Paciente 5 & 28 & 18 & 1 & 1 & 96.5\% & 94.7\% & 96.5\% & 94.7\% \\ \hline
+			Paciente 6 & 9 & 33 & 5 & 1 & 64.3\% & 97.6\% & 90\% & 86.8\% \\ \hline
+			Paciente 7 & 38 & 1 & 0 & 9 & 100\% & 10\% & 80.8\% & 100\% \\ \hline
+			Paciente 8 & 37 & 8 & 1 & 2 & 97.3\% & 80\% & 94.8\% & 88.8\% \\ \hline
+			Paciente 9 & 7 & 19 & 12 & 10 & 36.8\% & 65.5\% & 41.1\% & 61.3\% \\ \hline
+			Paciente 10 & 47 & 0 & 0 & 1 & 100\% & 0\% & 97.9\% & -- \\ \hline
+		\end{tabular}
+		\caption{Resultados de pruebas sobre clasificador/detector en Matlab.}
+		\label{tabla:clasificador_matlab}
+	\end{center}
+\end{table}   
 
-Una vez analizados los valores de falsos positivos y falsos negativos con las señales trabajadas hasta el momento, se procedió a determinar tasas de aciertos usando señales no utilizadas en pruebas (no vistas por el sistema). En el Cuadro \ref{tabla:clasificador_matlab_verificacion} se presentan los valores obtenidos para estas señales (verificación), en ellos se puede observar que los valores de sensibilidad y especificidad superan el 80\%, llegando en algunos casos muy cerca del 100\%, por lo tanto se puede concluir que el método utilizando señales limpias es factible y que puede ser implementado en lenguaje Android.
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Señal & HORA & ETIQUETA & T0 \\ 
+			\hline \hline
+			Paciente 1 & 22:35:01 & FN & 2.07 \\ \hline
+								&	23:35:02 & FN &	2.65 \\ \hline
+			Paciente 4 & 23:10:03 &	FN & 2.09 \\ \hline
+							  & 23:20:27 & FN &	2.51 \\ \hline
+			Paciente 7 & 23:35:0 & FN & 2.14 \\ \hline
+								&	01:00:11 & FN &	2.06 \\ \hline
+		  Paciente 9 & 22:55:56 & FN & 2.33 \\ \hline
+								&	23:00:19 & FN & 2.77 \\ \hline
+		\end{tabular}
+		\caption{Análisis de falsos negativos.}
+		\label{tabla:falsos_negativos_matlab}
+	\end{center}
+\end{table}
 
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Señal & HORA & ETIQUETA & T0 \\ 
+			\hline \hline
+			Paciente 1 & 22:40:02 & FP & 4.11 \\ \hline
+								 & 23:30:00 & FP & 4.60 \\ \hline
+			Paciente 6 & 12:05:03	& FP & 4.29 \\ \hline
+							   & 15:30:10 & FP & 4.68 \\ \hline
+			Paciente 8 & 00:35:11 &	FP & 3.65 \\ \hline
+		  Paciente 9 & 22:50:13 & FP & 4.66 \\ \hline
+								 & 00:25:02 & FP & 3.96 \\ \hline
+		\end{tabular}
+		\caption{Análisis de falsos positivos.}
+		\label{tabla:falsos_positivos_matlab}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			Paciente 11 & 20 & 21 & 4 & 3 & 83.3\% & 87.5\% & 86.9\% & 84\% \\ \hline
+			Paciente 12 & 9 & 36 & 1 & 2 & 90\% & 94.7\% & 81.8\% & 97.3\% \\ \hline
+			Paciente 13 & 6 & 35 & 6 & 1 & 50\% & 97.2\% & 85.7\% & 85.3\% \\ \hline
+			Paciente 14 & 9 & 30 & 7 & 2 & 43.7\% & 93.8\% & 81.8\% & 81.1\% \\ \hline
+			Paciente 15 & 4 & 40 & 4 & 0 & 50\% & 100\% & 100\% & 90.9\% \\ \hline			
+		\end{tabular}
+		\caption{Verificación de métodos y funcionalidades de Matlab con señales no vistas.}
+		\label{tabla:clasificador_matlab_verificacion}
+	\end{center}
+\end{table}  
 
 \chapter{Desarrollo de aplicación Android\textsuperscript{\scriptsize\textregistered}}
 \thispagestyle{empty}
@@ -2294,84 +2366,6 @@ De esta manera se abre la posibilidad de trabajos futuros basados en el desarrol
 	\end{center}
 \end{table}
 
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-			\hline
-			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
-			\hline \hline
-			Paciente 1 & 12 & 19 & 11 & 6 & 52.1\% & 76\% & 66.6\% & 63.3\% \\ \hline
-			Paciente 2 & 46 & 0 & 0 & 2 & 100\% & 0\% & 95.8\% & --\\ \hline
-			Paciente 3 & 42 & 3 & 0 & 3 & 100\% & 50\% & 93.3\% & 100\% \\ \hline
-			Paciente 4 & 39 & 1 & 0 & 8 & 100\% & 11.1\% & 82.9\% & 100\% \\ \hline
-			Paciente 5 & 28 & 18 & 1 & 1 & 96.5\% & 94.7\% & 96.5\% & 94.7\% \\ \hline
-			Paciente 6 & 9 & 33 & 5 & 1 & 64.3\% & 97.6\% & 90\% & 86.8\% \\ \hline
-			Paciente 7 & 38 & 1 & 0 & 9 & 100\% & 10\% & 80.8\% & 100\% \\ \hline
-			Paciente 8 & 37 & 8 & 1 & 2 & 97.3\% & 80\% & 94.8\% & 88.8\% \\ \hline
-			Paciente 9 & 7 & 19 & 12 & 10 & 36.8\% & 65.5\% & 41.1\% & 61.3\% \\ \hline
-			Paciente 10 & 47 & 0 & 0 & 1 & 100\% & 0\% & 97.9\% & -- \\ \hline
-		\end{tabular}
-		\caption{Resultados de pruebas sobre clasificador/detector en Matlab.}
-		\label{tabla:clasificador_matlab}
-	\end{center}
-\end{table}    
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			Señal & HORA & ETIQUETA & T0 \\ 
-			\hline \hline
-			Paciente 1 & 22:35:01 & FN & 2.07 \\ \hline
-								&	23:35:02 & FN &	2.65 \\ \hline
-			Paciente 4 & 23:10:03 &	FN & 2.09 \\ \hline
-							  & 23:20:27 & FN &	2.51 \\ \hline
-			Paciente 7 & 23:35:0 & FN & 2.14 \\ \hline
-								&	01:00:11 & FN &	2.06 \\ \hline
-		  Paciente 9 & 22:55:56 & FN & 2.33 \\ \hline
-								&	23:00:19 & FN & 2.77 \\ \hline
-		\end{tabular}
-		\caption{Análisis de falsos negativos.}
-		\label{tabla:falsos_negativos_matlab}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			Señal & HORA & ETIQUETA & T0 \\ 
-			\hline \hline
-			Paciente 1 & 22:40:02 & FP & 4.11 \\ \hline
-								 & 23:30:00 & FP & 4.60 \\ \hline
-			Paciente 6 & 12:05:03	& FP & 4.29 \\ \hline
-							   & 15:30:10 & FP & 4.68 \\ \hline
-			Paciente 8 & 00:35:11 &	FP & 3.65 \\ \hline
-		  Paciente 9 & 22:50:13 & FP & 4.66 \\ \hline
-								 & 00:25:02 & FP & 3.96 \\ \hline
-		\end{tabular}
-		\caption{Análisis de falsos positivos.}
-		\label{tabla:falsos_positivos_matlab}
-	\end{center}
-\end{table}
-
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-			\hline
-			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
-			\hline \hline
-			Paciente 11 & 20 & 21 & 4 & 3 & 83.3\% & 87.5\% & 86.9\% & 84\% \\ \hline
-			Paciente 12 & 9 & 36 & 1 & 2 & 90\% & 94.7\% & 81.8\% & 97.3\% \\ \hline
-			Paciente 13 & 6 & 35 & 6 & 1 & 50\% & 97.2\% & 85.7\% & 85.3\% \\ \hline
-			Paciente 14 & 9 & 30 & 7 & 2 & 43.7\% & 93.8\% & 81.8\% & 81.1\% \\ \hline
-			Paciente 15 & 4 & 40 & 4 & 0 & 50\% & 100\% & 100\% & 90.9\% \\ \hline			
-		\end{tabular}
-		\caption{Verificación de métodos y funcionalidades de Matlab con señales no vistas.}
-		\label{tabla:clasificador_matlab_verificacion}
-	\end{center}
-\end{table}  
 }
 %==============================================================================
 %
