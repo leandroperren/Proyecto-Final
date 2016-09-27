@@ -538,55 +538,44 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 \end{figure}
 
 \section{Cantidad mínima de ronquidos por segmento}
-A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 5 min con ronquidos y se extrajeron subsegmentos de distintas duraciones, de 1, 2, 3 y 4 min que no contenían ronquidos. Luego se volvió a calcular el $T_0$ sin estos subsegmentos a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en el Cuadro \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3 o 4 min, el $T_0$ detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa). 
-
-Otro aspecto consiste en determinar el mínimo indispensable de eventos necesarios para que el $T_0$ sea detectado sin sufrir grandes desvíos respecto de la media. 
-Para ello se analizó una parte del segmento, en particular con una duración de 15 segundos, en los cuales había 4 episodios de ronquido presentes, luego se procedió a quitar de a un evento a la vez y volver a calcular el $T_0$ y así observar si presentan diferencias. Si se observa el Cuadro \ref{tabla:cantidad_minima_t0}, se puede concluir que la cantidad mínima de eventos necesarios para la correcta detección es de 2 ya que con un solo evento el $T_0$ da un valor de 2.58 segundos, lo cual esta por debajo de los 4 segundos promedio. 
-
-En conclusión, no existe restricción alguna en cuanto a la duración de sub­segmentos sin ronquidos, siempre y cuando en alguna parte del segmento completo, existan  al menos 2 eventos de ronquido. 
+A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 1 min con ronquidos y se anexaron segmentos de 1 min para obtener así distintas duraciones, de 1, 2, 3 y 4 min que no contenían ronquidos. Luego se volvió a calcular el $T_0$ para cada posible combinación a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en el Cuadro \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3, 4 o 5 min, el $T_0$ detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa).
 
 \begin{table}[H]
 	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
+		\begin{tabular}{|c|c|}
 			\hline
-			$T_0$ & \textbf{Descripción}\\ 
+			\textbf{Combinación} & $T_0$\\ 
+			\tiny{\textbf{R}: ronquido - \textbf{N}: no-ronquido} & \\
 			\hline \hline
-			4.24 & Segmento completo \\ \hline
-			4.34 & Último minuto eliminado \\ \hline
-			4.24 & Minuto 4 eliminado \\ \hline
-			4.24 & Minuto 3 eliminado \\ \hline
-			4.24 & Minuto 2 eliminado \\ \hline
-			4.24 & Minuto 1 eliminado \\ \hline
-			\hline
-			4.19 & Últimos 2 minutos eliminados \\ \hline
-			4.34 & Minutos 1 y 5 eliminados \\ \hline
-			4.34 & Minutos 2 y 5 eliminados \\ \hline
-			4.34 & Minutos 3 y 5 eliminados \\ \hline
-			4.19 & Minutos 4 y 5 eliminados \\ \hline
-			4.24 & Minutos 1 y 4 eliminados \\ \hline
-			4.24 & Minutos 2 y 4 eliminados \\ \hline
-			4.24 & Minutos 3 y 4 eliminados \\ \hline
-            4.19 & Minutos 5 y 4 eliminados \\ \hline
-			4.24 & Minutos 1 y 3 eliminados \\ \hline
-			4.24 & Minutos 2 y 3 eliminados \\ \hline
-			4.24 & minutos 1 y 2 eliminados \\ \hline
-			\hline
-			4.19 & Últimos 3 minutos eliminados \\ \hline
-			4.24 & Minutos 1,2,3 \\ \hline
-			4.24 & Minutos 2,3,4 \\ \hline
-			4.19 & Minutos 3,4,5 \\ \hline
-			\hline
-			4.50 & Últimos 4 minutos eliminados \\ \hline
-			4.24 & Minutos 1,2,3 y 4 \\ \hline
+            R & 4.24 \\ \hline
+            RN & 4.24 \\ \hline
+            NR & 4.24 \\ \hline
+            RNN & 4.19 \\ \hline
+            NRN & 4.34 \\ \hline
+            NNR & 4.24 \\ \hline
+            RNNN & 4.34 \\ \hline
+            NRNN & 4.24 \\ \hline
+            NNRN & 4.19 \\ \hline
+            NNNR & 4.34 \\ \hline
+            RNNNN & 4.29 \\ \hline
+            NRNNN & 4.33 \\ \hline
+            NNRNN & 4.30 \\ \hline
+            NNNRN & 4.24 \\ \hline
+            NNNNR & 4.34 \\ \hline
 		\end{tabular}
-		\caption{T0 de segmentos eliminando subsegmentos sin ronquidos.}
+		\caption{T0 de segmentos anexando segmentos sin ronquidos.}
 		\label{tabla:subsegmentos_t0}
 	\end{center}
-\end{table} 
+\end{table}
+
+Otro aspecto consiste en determinar el mínimo indispensable de eventos necesarios para que el $T_0$ sea detectado sin sufrir grandes desvíos respecto de la media. 
+Para ello se analizó una parte del segmento, en particular con una duración de 15 segundos, en los cuales había 4 episodios de ronquido presentes, luego se procedió a quitar de a un evento a la vez y volver a calcular el $T_0$ y así observar si presentan diferencias. Si se observa el Cuadro \ref{tabla:cantidad_minima_t0}, se puede concluir que la cantidad mínima de eventos necesarios para la correcta detección es de 2 ya que con un solo evento el $T_0$ da un valor de 2.58 segundos, lo cual esta muy por debajo de los 4 segundos promedio.
+
+En conclusión, no existe restricción alguna en cuanto a la duración de sub­segmentos sin ronquidos, siempre y cuando en alguna parte del segmento completo, existan  al menos 2 eventos de ronquido aún con presencia de ruido, ya que éste último no genera picos lo suficientemente grandes como para ser detectados, tal como se mostró en secciones anteriores.
 
 \begin{table}[H]
 	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|}
+		\begin{tabular}{|c|c|}
 			\hline
 			$T_0$ & \textbf{Descripción}\\ 
 			\hline \hline
@@ -599,7 +588,8 @@ En conclusión, no existe restricción alguna en cuanto a la duración de sub­segme
 		\caption{Mínima cantidad de eventos por segmento.}
 		\label{tabla:cantidad_minima_t0}
 	\end{center}
-\end{table}  
+\end{table}
+
  
 \section{Tasas de aciertos del método en Matlab\textsuperscript{\scriptsize\textregistered}}
 Debido a que se utilizó Matlab para calcular el  $T_0$ de los segmentos extraídos de las señales EDF, es que surgió la posibilidad de desarrollar un script en Matlab, que sirva a modo de aplicación de referencia, que recorra una señal tomando frames de 5 min de duración y que calculando el $T_0$ determine si el segmento posee ronquidos.
