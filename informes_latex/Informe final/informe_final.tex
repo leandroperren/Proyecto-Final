@@ -596,7 +596,7 @@ Debido a que se utilizó Matlab para calcular el  $T_0$ de los segmentos extraído
 
 En el Cuadro \ref{tabla:clasificador_matlab} se encuentran los valores de \textit{verdaderos positivos}, \textit{verdaderos negativos}, \textit{falsos positivos}, \textit{falsos negativos}, \textit{valor predictivo positivo}, \textit{valor predictivo negativo}, \textit{sensibilidad} y \textit{especificidad}, calculados para cada una de las señales EDF utilizadas hasta el momento. Estos resultados se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del $T_0$ para ser ronquido en [3.50 - 4.70 s]. 
 
-En el Cuadro \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9. Estos casos se presentan en baja cantidad, y si se observan los $T_0$, se puede ver que los mismos tienen valores inferiores a los 3 s, por lo tanto estos valores caen fuera del rango [3.50 - 4.70 s] utilizado por el algoritmo para etiquetarlos como segmentos con ronquidos.
+En el Cuadro \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9. Estos casos se presentan en baja cantidad, y todos tienen valores de $T_0$ inferiores a los 3 s. Debido a esto el algoritmo los etiqueta como segmentos sin ronquidos ya que estan fuera del rango [3.50 - 4.70 s].
 
 En el Cuadro \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de $T_0$ similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que las señales EDF en esos segmentos, sin estar etiquetados como ronquidos, presentan algunos picos aislados. Esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Al tratarse de un fenómeno presentado solo en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
 
@@ -682,8 +682,7 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 
 \chapter{Desarrollo de aplicación Android\textsuperscript{\scriptsize\textregistered}}
 \thispagestyle{empty}
-\section{Análisis y definición de requerimientos}
-Para el desarrollo de la aplicación Android se seguirán los principios de la ingeniería de software, usando como referencia el libro ``Ingeniería de Software'' [22], tomando en cuenta un modelo de desarrollo en cascada y donde se seguirán las etapas mencionadas a continuación:
+Este capítulo describe los pasos que se llevaron a cabo para desarrollar una aplicación Android capaz de detectar segmentos de ronquidos. Para ello se utilizaron los resultados obtenidos en capitulos anteriores que nos permitieron caracterizar los ronquidos y diferenciarlos de posibles ruidos. Para el desarrollo se siguieron las siguientes etapas:
 
 \begin{itemize}
 \item Análisis y definición de requerimientos
@@ -692,8 +691,9 @@ Para el desarrollo de la aplicación Android se seguirán los principios de la ing
 \item Inspecciones y prueba del sistema
 \item Operación y mantenimiento
 \end{itemize}
-
-Con el fin de recopilar los requisitos que una aplicación Android, con esta finalidad, debería satisfacer es que se realizaron distintas tareas, tanto para obtener requerimientos funcionales como no funcionales.
+    
+\section{Análisis y definición de requerimientos}
+Con el fin de recopilar los requisitos que una aplicación Android debe satisfacer se realizaron distintas tareas, tanto para obtener requerimientos funcionales como no funcionales.
 
 
 \subsection{Requerimientos funcionales}
