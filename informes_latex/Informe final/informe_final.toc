@@ -22,12 +22,12 @@
 \contentsline {subsection}{\numberline {3.1.1}Requerimientos funcionales}{35}
 \contentsline {subsection}{\numberline {3.1.2}Requerimientos no funcionales}{36}
 \contentsline {section}{\numberline {3.2}Dise\~no del sistema y del software}{36}
-\contentsline {subsection}{\numberline {3.2.1}Casos de Uso}{48}
-\contentsline {subsection}{\numberline {3.2.2}Diagrama de secuencia}{50}
-\contentsline {subsection}{\numberline {3.2.3}Dise\~no de Clases}{51}
-\contentsline {section}{\numberline {3.3}Inspecciones y prueba del sistema}{53}
-\contentsline {section}{\numberline {3.4}Tasas de aciertos aplicaci\'on Android}{54}
-\contentsline {chapter}{\numberline {4}Conclusi\'on y Trabajos Futuros}{57}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{59}
-\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{61}
-\contentsline {chapter}{\numberline {B}Informaci\'on adicional sobre App Android\textsuperscript {\textregistered } }{88}
+\contentsline {subsection}{\numberline {3.2.1}Casos de Uso}{49}
+\contentsline {subsection}{\numberline {3.2.2}Diagrama de secuencia}{51}
+\contentsline {subsection}{\numberline {3.2.3}Dise\~no de Clases}{52}
+\contentsline {section}{\numberline {3.3}Inspecciones y prueba del sistema}{54}
+\contentsline {section}{\numberline {3.4}Tasas de aciertos aplicaci\'on Android}{55}
+\contentsline {chapter}{\numberline {4}Conclusi\'on y Trabajos Futuros}{58}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{60}
+\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{62}
+\contentsline {chapter}{\numberline {B}Informaci\'on adicional sobre App Android\textsuperscript {\textregistered } }{89}
