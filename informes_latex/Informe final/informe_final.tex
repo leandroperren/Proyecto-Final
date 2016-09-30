@@ -4,9 +4,10 @@
 \usepackage{calc}
 \usepackage{fancyhdr}
 \usepackage[pdftex]{graphicx}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps}
 \usepackage{graphics}
 \usepackage{float}
+\usepackage{epstopdf}
 \usepackage{geometry}
 \geometry{
 a4paper,
@@ -680,39 +681,48 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 	\end{center}
 \end{table}  
 
+
+%==============================================================================
+%
+%	CAPITULO 3 - APLICACIÓN ANDROID
+%
+%==============================================================================
 \chapter{Desarrollo de aplicación Android\textsuperscript{\scriptsize\textregistered}}
 \thispagestyle{empty}
-Este capítulo describe los pasos que se llevaron a cabo para desarrollar una aplicación Android capaz de detectar segmentos de ronquidos. Para ello se utilizaron los resultados obtenidos en capitulos anteriores que nos permitieron caracterizar los ronquidos y diferenciarlos de posibles ruidos. Para el desarrollo se siguieron las siguientes etapas:
+Este capítulo describe los pasos que se llevaron a cabo para desarrollar una aplicación Android capaz de detectar segmentos de ronquidos. Para ello se utilizaron los resultados obtenidos en capítulos anteriores que nos permitieron caracterizar los ronquidos y diferenciarlos de posibles ruidos. El desarrollo se realizó utilizando el modelo en cascada [22] y se siguieron las siguientes etapas:
 
 \begin{itemize}
-\item Análisis y definición de requerimientos
-\item Diseño del sistema y del software
-\item Implementación y prueba de unidad
-\item Inspecciones y prueba del sistema
-\item Operación y mantenimiento
+    \item Análisis y definición de requerimientos
+    \item Diseño del sistema y del software
+    \item Implementación y prueba de unidad
+    \item Inspecciones y prueba del sistema
+    \item Operación y mantenimiento
 \end{itemize}
     
 \section{Análisis y definición de requerimientos}
-Con el fin de recopilar los requisitos que una aplicación Android debe satisfacer se realizaron distintas tareas, tanto para obtener requerimientos funcionales como no funcionales.
-
+Con el fin de recopilar los requisitos que esta aplicación Android debe satisfacer se realizaron distintas tareas, tanto para obtener requerimientos funcionales como no funcionales.
 
 \subsection{Requerimientos funcionales}
-
-Para aquellas funcionalidades que la aplicación deberá tener, se procedió primeramente a analizar las aplicaciones disponibles actualmente en la tienda PlayStore de Android [20][21]. A partir del testeo de estas aplicaciones, se pudieron recabar funcionalidades básicas y además se registraron aquellas funcionalidades que, aunque necesarias, no se encontraron en ninguna de éstas. Además, se realizaron entrevistas a posibles usuarios y pruebas sobre una versión prototipo, a partir de las cuales se recabaron aspectos y opiniones necesarias para una aplicación de este tipo. A continuación se listan los requisitos obtenidos:
+Para definir las funcionalidades de esta aplicación, se analizaron las aplicaciones disponibles actualmente en la tienda Play Store de Android [20][21]. A partir del testeo de estas aplicaciones fue posible definir una lista de funcionalidades básicas disponibles en éstas y se detectaron también aquellas que no estaban disponibles pero resultan necesarias. Además, se realizaron entrevistas a posibles usuarios y pruebas sobre una versión prototipo con el fin de recabar aspectos y opiniones sobre esta aplicación. A continuación se listan los requerimientos funcionales relevados:
 
 \begin{itemize}
-    \item Obtener registros de 6 o 7 horas de duración por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.
-    \item Analizar la señal tomando segmentos de 5 min.
-    \item Determinar si cada segmento de 5 min contiene ronquidos o no.
-    \item Generar una interfaz sencilla y amigable que resulte intuitiva al usuario.
-    \item Disponer de opciones para ingresar el mail de un médico al que se le enviarán los resultados, además de datos personales que sirvan de apoyo al análisis realizado.
-    \item Disponer de una pestaña o ventana que indique la hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
-    \item Disponer de una pestaña o ventana que presente diferentes gráficos de barras (Bar Charts) o líneas (Line Charts), que muestran los resultados de la detección, y gráficos de torta (Pie Charts), que representan porcentualmente la distribución de segmentos con ronquidos y no ronquidos.
+    \item Los registros deben ser obtenidos en un período de 6 o 7 horas de duración por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.
+    
+    \item La señal se debe analizar tomando segmentos de 5 min.
+    
+    \item Se determina si cada segmento contiene ronquidos o no.
+    
+    \item Se debe generar una interfaz sencilla y amigable que resulte intuitiva al usuario.
+    
+    \item Se debe disponer de opciones para ingresar el email de un médico al que se le enviarán los resultados, además de datos personales que sirvan de apoyo al análisis realizado.
+    
+    \item La información obtenida debe ser contenida dentro de una pestaña o ventana que indique la hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
+    
+    \item La información gráfica debe ser presentada en una pestaña o ventana para los diferentes tipos de gráficos, como por ejemplo de barras (Bar Charts) o líneas (Line Charts), que muestran los resultados de la detección, y de torta (Pie Charts), que representan porcentualmente la distribución de segmentos con ronquidos y no ronquidos.
 \end{itemize}
 
 \subsection{Requerimientos no funcionales}
-
-Para la obtención de los requerimientos no funcionales, se analizaron las aplicaciones disponibles actualmente [20][21]. Se relevaron aquellos aspectos que se encuentran implícitos en el funcionamiento de éstas  y se focalizó en el rendimiento y la robustez de la aplicación, como también qué recursos se utilizan de los dispositivos en que se ejecutan. Además, se analizó qué implicancia tendrían algunos de los requerimientos funcionales respecto de estos aspectos: rendimiento, robustez, almacenamiento y drenaje de la batería. Entonces, para este sistema se deben considerar:
+Para la obtención de los requerimientos no funcionales, también fueron analizadas las aplicaciones disponibles actualmente [20][21]. Se relevaron aquellos aspectos que se encuentran implícitos en el funcionamiento de éstas  y se puso especial énfasis en el rendimiento y la robustez de la aplicación, identificando que recursos del sistema son utilizados. Además, se analizó que implicancia tendrían algunos de los requerimientos funcionales respecto de rendimiento, robustez, almacenamiento y drenaje de la batería. Finalmente, este sistema debe considerar:
 
 \begin{itemize}
     \item La Robustez frente al ruido.
@@ -720,23 +730,24 @@ Para la obtención de los requerimientos no funcionales, se analizaron las aplica
     \item La capacidad de la batería, para que permita el procesamiento durante 6 o 7 horas.
 \end{itemize}
 
+
 \section{Diseño del sistema y del software}
+A continuación se presenta un diagrama de flujos de datos que ejemplifica el funcionamiento del sistema. 
+El primer paso consiste en la captura de la señal, para ésto se utilizó la clase AudioRecord de Android, la cual permite hacer uso del micrófono en la aplicación y, mediante los datos capturados por el mismo en segmentos.
 
-A continuación se presenta un diagrama de flujos de datos de la aplicación a desarrollar. 
-El primer paso consiste en la captura de la señal, para ello se utilizará la clase AudioRecord de Android, la cual permite hacer uso del micrófono en la aplicación y, mediante los datos capturados por el mismo en segmentos, dar origen a su procesamiento.
+Debido a que la mayoría de las aplicaciones que utilizan la clase AudioRecord admiten una frecuencia de muestreo mínima de 8000 Hz, que es una limitación propia de la clase, se realiza un proceso de submuestreo a 100 Hz, número determinado con base en el análisis previo de las señales EDF analizadas previamente. Esto involucra un menor costo computacional para los cálculos de autocorrelación y un ahorro en el almacenamiento.
 
-Debido a que la mayoría de las aplicaciones que utilizan la clase AudioRecord admiten una frecuencia de muestreo mínima de 8000Hz, que es una limitación propia de la clase, se realiza un proceso de submuestreo a 100Hz, determinado con base en las señales EDF analizadas previamente. Esto posibilitará un menor costo computacional para los cálculos de autocorrelación y un ahorro en el almacenamiento. 
+El proceso de submuestreo escogido se denomina ``decimation'' e incluye un filtro pasa-bajos que permite eliminar previamente las altas frecuencias de la señal para no generar aliasing. Como filtro pasa-bajos se utilizó un FIR de orden 6, con una frecuencia de corte fijada en $\pi/80$. 
 
-El proceso de submuestreo escogido se denomina ``decimation'' e incluye un filtro pasa-bajos que permite eliminar previamente las altas frecuencias de la señal para no generar aliasing. Como filtro pasa-bajos se utilizó un FIR de orden 6, con una frecuencia de corte fijada en pi/80. 
-
-La señal submuestreada es segmentada en trozos de 5 min, y para cada uno de ellos se  calcula el período fundamental $T_0$ por medio de la autocorrelación. Si el valor $T_0$ del segmento está dentro del rango determinado en la etapa previa de análisis de las señales EDF, este segmento será etiquetado como ``Ronquido'' y se registra la hora en que sucede. Ésto se repite hasta el momento en que el usuario/paciente elige detener la captura, y entonces se genera un informe de resultados que se entrega al usuario por pantalla y se envía al médico por mail (si esta opción fue indicada).
+La señal submuestreada es segmentada en trozos de 5 min, y para cada uno de estos se  calcula el período fundamental $T_0$ por medio de la autocorrelación. Si el valor $T_0$ del segmento está dentro del rango determinado en la etapa previa de análisis de las señales EDF, este segmento será etiquetado como ``Ronquido'' y se registra la hora en que sucede. Ésto se repite hasta el momento en que el usuario/paciente elige detener la captura, y entonces se genera un informe de resultados que se entrega al usuario por pantalla y se envía al médico por mail (si esta opción fue indicada).
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=.5\columnwidth]{img/diagrama_flujo}	
+		\includegraphics[scale=.5]{img/flujo.eps}
 	\caption{Diagrama de flujo de la aplicación Android}
 	\label{figura:diagrama_flujo}
 \end{figure}
+
 
 \subsection*{Diseño de interfaces}
 
@@ -1030,6 +1041,12 @@ En el Cuadro \ref{tabla:clasificador_android_ambientales} se listan los $T_0$ y 
 
 Se considera a continuación, si los valores $T_0$ obtenidos corresponden a valores picos. Para ello, se realizó otra captura y se observó la amplitud de su $T_0$ calculando el porcentaje que representa el mismo respecto de la energía (valor de autocorrelación con desplazamiento cero). En el cuadro \ref{tabla:clasificador_android_ambientales2} podemos ver los valores del $T_0$, su amplitud y la correspondiente etiqueta clasificatoria. Como se aprecia en los resultados anteriores, la mayoría de aquellos valores $T_0$ tienen como amplitud valores menores al 30\% de la energía del segmento, lo que los convierte en valores bajos y que evidentemente no representan valores picos sobresalientes en la autocorrelación. Esto permite poder utilizar un umbral del 30\% para discriminar aquellos casos que estando en el rango de 3.50 a 4.70 segundos no sean picos y por ende no corresponden a ``Ronquidos'', ya que no representan la cuasi periodicidad que los mismos tienen.
 
+
+%==============================================================================
+%
+%	CAPITULO 4 - CONCLUSIÓN Y TRABAJOS FUTUROS
+%
+%==============================================================================
 \chapter{Conclusión y Trabajos Futuros}
 En este proyecto final se desarrolló una aplicación Android capaz de detectar eventos de ronquidos por medio del análisis de datos capturados vía el micrófono del dispositivo. El objetivo principal fue lograr una correcta detección utilizando métodos mas inteligentes que los utilizados por las aplicaciones disponibles hasta el momento las cuales solo realizan un análisis del nivel de energía de los datos capturados, generando esto un mal desempeño frente a condiciones ambientales de mucho ruido siendo detectados y etiquetados como ronquidos.
 Primeramente se analizó en detalle los ronquidos a fin de extraer alguna característica representativa de los mismos que permita poder detectarlos dentro de una grabación obtenida en ambientes cotidianos. Para ello se analizaron distintas señales EDF de personas de distintos sexo obtenidas en estudios de sueño, de este análisis se demostró que el $T_0$ es una característica representativa de los ronquidos y que permite diferenciarlos de otros sonidos no deseados que pudieran presentarse en este tipo de grabaciones. Como resultado de esta etapa, mediante la extracción manual de segmentos etiquetados como ronquidos en las señales EDF y el cálculo de su correspondiente $T_0$, se concluye que el rango de valores del $T_0$ es de [3.50 - 4.70 s].
