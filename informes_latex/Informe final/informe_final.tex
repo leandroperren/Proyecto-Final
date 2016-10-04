@@ -751,9 +751,9 @@ La señal submuestreada es segmentada en trozos de 5 min, y para cada uno de esto
 
 \subsection*{Diseño de interfaces}
 
-A continuación se presentan los diseños de las interfaces de la aplicación, que se hicieron orientadas a las funcionalidades que se recabaron en la etapa de requerimientos.
+A continuación se presentan las interfaces de la aplicación, que se hicieron orientadas a las funcionalidades que se recabaron en la etapa de requerimientos.
 
-En la Figura \ref{figura:screen1} se puede ver la pantalla de inicio de la aplicación, mientras que en la Figura \ref{figura:screen2} se presentan una serie de campos donde se deben ingresar los datos del usuario (paciente) y el correo electrónico del médico. Estos datos son útiles para enviar el email con los resultados al médico. Luego de guardar los datos, se accede a la siguiente pantalla (Figura \ref{figura:screen3}), donde se detalla una lista con todas las grabaciones realizadas previamente. En esta pantalla hay un Botón de Acción Flotante (FAB, del inglés Floating Action Button) que permite generar una nueva captura y procesamiento de datos.
+En la Figura \ref{figura:screen1} se puede ver la pantalla de inicio de la aplicación, mientras que en la Figura \ref{figura:screen2} se presentan una serie de campos donde se deben ingresar los datos del usuario (paciente) y el correo electrónico del médico. Estos datos son útiles para enviar el email con los resultados al médico. Luego de guardar los datos, se accede a la siguiente pantalla (Figura \ref{figura:screen3}), donde se detalla una lista con todas las grabaciones realizadas previamente. En esta pantalla hay un Botón de Acción Flotante que permite generar una nueva captura y procesamiento de datos.
 
 \begin{figure}[H]
 	\centering
@@ -764,14 +764,14 @@ En la Figura \ref{figura:screen1} se puede ver la pantalla de inicio de la aplic
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=.5\columnwidth]{img/screen2}	
+		\includegraphics[width=.35\columnwidth]{img/screen2}	
 	\caption{Datos del usuario y médico}
 	\label{figura:screen2}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=.5\columnwidth]{img/screen3}	
+		\includegraphics[width=.35\columnwidth]{img/screen3}	
 	\caption{Lista con grabaciones realizadas}
 	\label{figura:screen3}
 \end{figure}
@@ -783,7 +783,7 @@ En la Figura \ref{figura:screen1} se puede ver la pantalla de inicio de la aplic
 	\label{figura:screen4}
 \end{figure}
 
-En la Figura \ref{figura:screen4}, se ven la opciones que permiten iniciar y detener la grabación. Cuando se  finaliza la captura de datos (Detener), la aplicación procesa los resultados y los presenta en una nueva pantalla. En las Figuras \ref{figura:screen5} y \ref{figura:screen6} se presentan las imágenes correspondientes a las dos pestañas de resultados, en estas se considera la visualización de distintos tipos de gráficos con resultados en una pestaña y un reporte con información detallada en la otra (en modo de texto o en tablas). Estos reportes son enviados al médico cuando se elige finalizar la captura. 
+En la Figura \ref{figura:screen4}, se ven la opciones que permiten iniciar y detener la grabación. Cuando se  finaliza la captura (Detener), la aplicación procesa los datos y se obtienen los resultados que son presentados en una nueva pantalla. En las Figuras \ref{figura:screen5} y \ref{figura:screen6} se presentan las imágenes correspondientes a las dos pestañas de resultados, en una se ven las gráficas mientras que en la otra se ve un reporte con información detallada (en modo de texto o en tablas). Estos reportes son enviados al médico cuando se elige finalizar la captura. 
 
 \begin{figure}[H]
 	\centering
@@ -800,10 +800,8 @@ En la Figura \ref{figura:screen4}, se ven la opciones que permiten iniciar y det
 \end{figure}	
 
 \subsection*{Información gráfica detallada}
-Para la generación de gráficos, Android ofrece muchas librerías que se pueden adicionar a un proyecto, para esta aplicación se utilizó la librería MPAndroidChart [23],  la misma permite generar gráficos de barras, de torta, lineas, entre otros. Los mismos son muy agradables a la vista, permitiendo trabajar con colores y estilos diferentes, al mismo tiempo permite configurar opciones para que el usuario interactúe con los mismos, pudiendo realizar paneos o zoom, seleccionar, mostrar información detallada, generar animaciones, editar leyendas, entre otras.       
-
-A continuación se describen los gráficos que se generan con la aplicación utilizando la librería antes mencionada, dentro de la pestaña correspondiente.
-En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal capturada y se resaltan los segmentos donde se detectan ronquidos. Por medio de este gráfico el usuario puede tener una idea general acerca de qué cantidad de tiempo ha estado roncando considerando una grabación completada, cualquiera sea su duración. 
+Existen muchas librerías en android que permiten realizar gráficos, en este sistema se utilizó MPAndroidChart [23]. A continuación se describen los gráficos que se generan con la aplicación utilizando esta librería.
+En el gráfico de barras de la Figura \ref{figura:screen_grafico1} se representa la señal capturada y se resaltan los segmentos donde se detectan ronquidos. Cada barra representa un segmento de cinco min de duración, indicando el tiempo de inicio, y su amplitud es la energía promedio de este segmento. En cuanto a los colores, las barras de color Cyan representan segmentos en los que no se detectaron ronquidos, las de color amarillo representan ronquidos de intensidad simple, y las rojas de alta intensidad. 
 
 \begin{figure}[H]
 	\centering
@@ -812,14 +810,12 @@ En el gráfico de la Figura \ref{figura:screen_grafico1} se representa la señal c
 	\label{figura:screen_grafico1}
 \end{figure}
 
-El gráfico presentado en la Figura \ref{figura:screen_grafico1} se trata de un gráfico de barras donde, cada barra representa un segmento de cinco min de duración, analizado por la aplicación y su amplitud es la energía promedio de este segmento. Se indica en color Cyan todos aquellos segmentos en los que no se detectaron ronquidos, en tanto para los segmentos detectados como ronquidos se utilizan dos niveles de intensidad, simple y alto, asignando a cada uno de ellos dos colores diferentes (amarillo y rojo respectivamente), dependiendo de la amplitud de la barra. Se puede observar que este ejemplo se trata de una señal de 1 hora de duración donde en el eje x se indica para cada barra la hora de comienzo de ese segmento, además el gráfico es interactivo permitiendo que el usuario pueda posicionarse en una determinada barra o bien ampliar o reducir un conjunto de ellas permitiendo así analizar momentos puntuales del procesamiento. 
-
-Además del gráfico de barras recien descripto, la aplicación genera dos gráficos de tortas que presentan información porcentual del análisis realizado. En los gráficos de tortas presentados en la Figura \ref{figura:screen_grafico3} se muestra la proporción de segmentos con ronquidos que se encuentran en la señal, y en el segundo gráfico la distribución de los distintos segmentos detectados como ronquidos según sean del tipo simple o alto.
+Además genera dos gráficos de anillos que presentan información porcentual del análisis realizado. En el primer gráfico de la Figura \ref{figura:screen_grafico3}, se muestra la proporción de segmentos con ronquidos que se encuentran en la señal, y en el segundo la distribución de los distintos segmentos detectados como ronquidos según sean del tipo simple o alto.
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=.5\columnwidth]{img/screen_grafico3}	
-	\caption{Gráficos de torta o rosquilla}
+	\caption{Gráficos de anillos}
 	\label{figura:screen_grafico3}
 \end{figure}
 
