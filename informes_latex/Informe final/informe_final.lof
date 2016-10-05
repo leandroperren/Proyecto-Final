@@ -17,18 +17,18 @@
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Autocorrelaci\'on de sonido ambiental sin y con funci\'on de recorte}}{30}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de flujo de la aplicaci\'on Android}}{38}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Pantalla de inicio}}{39}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Datos del usuario y m\'edico}}{40}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Lista con grabaciones realizadas}}{40}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Iniciar nueva captura de datos}}{41}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Pesta\~na de gr\'aficos}}{42}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Pesta\~na de reporte detallado}}{43}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Se\~nal completa con fragmentos resaltados}}{44}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Gr\'aficos de anillos}}{44}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Informaci\'on en formato de reporte}}{45}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Informaci\'on detallada del paciente y las detecciones}}{46}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Informaci\'on gr\'afica de la informaci\'on obtenida}}{46}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Diagrama de casos de uso}}{47}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de casos de uso}}{39}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Pantalla de inicio}}{42}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Datos del usuario y m\'edico}}{43}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Lista con grabaciones realizadas}}{43}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Iniciar nueva captura de datos}}{44}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Pesta\~na de gr\'aficos}}{45}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Pesta\~na de reporte detallado}}{46}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Se\~nal completa con fragmentos resaltados}}{47}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Gr\'aficos de anillos}}{47}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Informaci\'on en formato de reporte}}{48}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Informaci\'on detallada del paciente y las detecciones}}{49}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Informaci\'on gr\'afica de la informaci\'on obtenida}}{49}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Diagrama de secuencia}}{50}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Diagrama de clases}}{51}
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Diagrama de clases para base de datos}}{52}

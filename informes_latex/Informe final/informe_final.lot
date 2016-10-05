@@ -15,12 +15,12 @@
 \contentsline {table}{\numberline {2.12}{\ignorespaces An\'alisis de falsos positivos.}}{34}
 \contentsline {table}{\numberline {2.13}{\ignorespaces Verificaci\'on de m\'etodos y funcionalidades de Matlab con se\~nales no vistas.}}{34}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Caso de uso Iniciando captura}}{47}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Caso de uso Finalizando captura}}{48}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Caso de uso Visualizando resultados}}{48}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Caso de uso Recibiendo mail}}{48}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Caso de uso Procesando la se\~nal}}{49}
-\contentsline {table}{\numberline {3.6}{\ignorespaces Caso de uso Ingresando informaci\'on para el email}}{49}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Caso de uso Iniciando captura}}{39}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Caso de uso Finalizando captura}}{39}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Caso de uso Visualizando resultados}}{40}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Caso de uso Recibiendo mail}}{40}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Caso de uso Procesando la se\~nal}}{40}
+\contentsline {table}{\numberline {3.6}{\ignorespaces Caso de uso Ingresando informaci\'on para el email}}{41}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {A.1}{\ignorespaces Paciente 1: segmentos de duraci\'on de 1 minuto}}{60}

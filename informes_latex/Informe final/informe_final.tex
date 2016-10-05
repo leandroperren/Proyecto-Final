@@ -748,8 +748,115 @@ La señal submuestreada es segmentada en trozos de 5 min, y para cada uno de esto
 	\label{figura:diagrama_flujo}
 \end{figure}
 
+\subsection{Casos de Uso}
+A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de casos de usos general de la aplicación. En él se representan los actores  y se describen las principales acciones que permitirá la aplicación.
 
-\subsection*{Diseño de interfaces}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/caso_uso}	
+	\caption{Diagrama de casos de uso}
+	\label{figura:caso_uso}
+\end{figure}
+
+\begin{table}[htbp]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Iniciando captura}} \\
+			\hline
+			ACTOR: Paciente (Usuario de la App) \\ \hline
+			DESCRIPCIÓN \\ \hline			
+			Es el proceso por el cual el usuario comienza la captura y procesamiento de datos, 
+			luego almacena los resultados obtenidos.  
+			Opcionalmente se le permite ingresar datos personales y el email de un médico, al que  
+			se le enviarán 	los resultados obtenidos. \\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Iniciando captura}
+		\label{tabla:caso_uso_iniciando}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Finalizando captura}} \\
+			\hline
+			ACTOR: Paciente (Usuario de la App) \\ \hline
+			DESCRIPCIÓN \\ \hline	
+			El paciente puede finalizar la captura cuando lo considere oportuno, 
+			de esta manera se culmina el procesamiento de los datos 
+			capturados por medio del micrófono. \\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Finalizando captura}
+		\label{tabla:caso_uso_finalizando}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Visualizando resultados}} \\
+			\hline
+			ACTOR: Paciente (Usuario de la App) \\ \hline
+			DESCRIPCIÓN \\ \hline	
+El usuario puede acceder a los resultados obtenidos del procesamiento de la señal. Los resultados se presentan en modo gráfico y textual indicando hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
+ \\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Visualizando resultados}
+		\label{tabla:caso_uso_visualizando}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Recibiendo mail}} \\
+			\hline
+			ACTOR: Médico (Actor secundario) \\ \hline
+			DESCRIPCIÓN \\ \hline	
+Al momento de finalizar la captura, se envía un correo electrónico con los resultados obtenidos del procesamiento de la señal. Los resultados se presentan en modo gráfico y textual indicando hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora. \\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Recibiendo mail}
+		\label{tabla:caso_uso_mail}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Procesando la señal}} \\
+			\hline
+			ACTOR: Sistema base de la App \\ \hline
+			DESCRIPCIÓN \\ \hline	
+Este consiste de analizar los datos mediante ventaneo de 5 min de duración y calcular el $T_0$ por medio de la autocorrelación. Posteriormente, se determina si dicho segmento contiene o no ronquidos. Luego se elaboran los resultados que serán utilizados para ser visualizados por el paciente y enviados al médico.
+\\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Procesando la señal}
+		\label{tabla:caso_uso_procesando}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{| p{15cm}|}
+			\hline
+			\textbf{CASO DE USO: \textit{Ingresando información para el email}} \\
+			\hline
+			ACTOR: Paciente (Usuario de la App) \\ \hline
+			DESCRIPCIÓN \\ \hline	
+El paciente tendrá la opción, antes de iniciar la captura de datos, de ingresar sus datos personales y además de ingresar un email de un médico, al que se le enviarán los resultados una vez finalizado el procesamiento.
+\\ \hline			
+		\end{tabular}
+		\caption{Caso de uso Ingresando información para el email}
+		\label{tabla:caso_uso_infomail}
+	\end{center}
+\end{table}
+
+\subsection{Diseño de interfaces}
 A continuación se presentan las interfaces de la aplicación, que se diseñaron orientadas a las funcionalidades que se recabaron en la etapa de requerimientos.
 
 En la Figura \ref{figura:screen1} se puede ver la pantalla de inicio de la aplicación, mientras que en la Figura \ref{figura:screen2} se presentan una serie de campos donde se deben ingresar los datos del usuario (paciente) y el correo electrónico del médico. Estos datos son útiles para enviar el email con los resultados al médico. Luego de guardar los datos, se accede a la siguiente pantalla (Figura \ref{figura:screen3}), donde se detalla una lista con todas las grabaciones realizadas previamente. En esta pantalla hay un Botón de Acción Flotante que permite generar una nueva captura y procesamiento de datos.
@@ -844,115 +951,6 @@ Los resultados obtenidos pueden ser enviados vía email a un médico, donde se adj
 	\caption{Información gráfica de la información obtenida}
 	\label{figura:screen_grafico6}
 \end{figure} 
-
-
-\subsection{Casos de Uso}
-A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de casos de usos general de la aplicación. En él se representan los actores  y se describen las principales acciones que permitirá la aplicación.
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=1\columnwidth]{img/caso_uso}	
-	\caption{Diagrama de casos de uso}
-	\label{figura:caso_uso}
-\end{figure}
-
-\begin{table}[htbp]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Iniciando captura}} \\
-			\hline
-			ACTOR: Paciente (Usuario de la App) \\ \hline
-			DESCRIPCIÓN \\ \hline			
-			Es el proceso por el cual el usuario comienza la captura de datos y el procesamiento 
-			y almacenamiento de los resultados obtenidos.  
-			Opcionalmente se le permite ingresar datos personales y el email de un médico, al que  
-			se le enviarán 	los resultados obtenidos. \\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Iniciando captura}
-		\label{tabla:caso_uso_iniciando}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Finalizando captura}} \\
-			\hline
-			ACTOR: Paciente (Usuario de la App) \\ \hline
-			DESCRIPCIÓN \\ \hline	
-			El paciente puede finalizar la captura cuando lo considere oportuno, 
-			de esta manera se culmina el almacenamiento y procesamiento de los datos 
-			capturados por medio del micrófono. \\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Finalizando captura}
-		\label{tabla:caso_uso_finalizando}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Visualizando resultados}} \\
-			\hline
-			ACTOR: Paciente (Usuario de la App) \\ \hline
-			DESCRIPCIÓN \\ \hline	
-El usuario puede acceder a los resultados obtenidos del procesamiento de la señal. Los resultados se presentan en modo gráfico y textual indicando hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
- \\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Visualizando resultados}
-		\label{tabla:caso_uso_visualizando}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Recibiendo mail}} \\
-			\hline
-			ACTOR: Médico (Actor secundario) \\ \hline
-			DESCRIPCIÓN \\ \hline	
-Al momento de finalizar la captura, se envía un correo electrónico con los resultados obtenidos del procesamiento de la señal. Los resultados se presentan en modo gráfico y textual indicando hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora. \\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Recibiendo mail}
-		\label{tabla:caso_uso_mail}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Procesando la señal}} \\
-			\hline
-			ACTOR: Sistema base de la App \\ \hline
-			DESCRIPCIÓN \\ \hline	
-Este consiste de analizar los datos mediante ventaneo de 5 min de duración y calcular el $T_0$ por medio de la autocorrelación. Posteriormente, se determina si dicho segmento contiene o no ronquidos. Luego se elaboran los resultados que serán utilizados para ser visualizados por el paciente y enviados al médico.
-\\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Procesando la señal}
-		\label{tabla:caso_uso_procesando}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Ingresando información para el email}} \\
-			\hline
-			ACTOR: Paciente (Usuario de la App) \\ \hline
-			DESCRIPCIÓN \\ \hline	
-El paciente tendrá la opción, antes de iniciar la captura de datos, de ingresar sus datos personales y además de ingresar un email de un médico, al que se le enviarán los resultados una vez finalizado el procesamiento.
-\\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Ingresando información para el email}
-		\label{tabla:caso_uso_infomail}
-	\end{center}
-\end{table}
 
 \subsection{Diagrama de secuencia}
 A continuación, en la figura \ref{figura:diagrama_secuencia} se presenta el gráfico de secuencia donde se representan los casos de usos ``Iniciando Captura'' y ``Finalizando Captura'' por parte del Usuario en la aplicación. En él se representan los objetos básicos para representar el flujo de mensajes básico que se ejecutan para tales casos de uso y además los mensajes necesarios para realizar la persistencia de datos, representando así el núcleo básico de operación de la aplicación. Allí también se puede observar el ``loop'' o ciclo básico de captura y procesamiento de segmentos.
