@@ -753,7 +753,7 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=1\columnwidth]{img/caso_uso}	
+		\includegraphics[scale=.5]{img/CU.eps}	
 	\caption{Diagrama de casos de uso}
 	\label{figura:caso_uso}
 \end{figure}
@@ -856,6 +856,37 @@ El paciente tendrá la opción, antes de iniciar la captura de datos, de ingresar 
 	\end{center}
 \end{table}
 
+\subsection{Diagrama de secuencia}
+A continuación se presenta el gráfico de secuencia donde se representan los casos de usos ``Iniciando Captura'' y ``Finalizando Captura'' por parte del Usuario en la aplicación. En éste se representan los objetos básicos para representar el flujo de mensajes necesarios para que se ejecuten para tales casos de uso y además los mensajes necesarios para realizar la persistencia de datos, representando así el núcleo básico de operación de la aplicación, como se puede observar en la Figura \ref{figura:diagrama_secuencia}. También se puede observar el ``loop'' o ciclo básico de captura y procesamiento de segmentos.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/secuencia.eps}	
+	\caption{Diagrama de secuencia}
+	\label{figura:diagrama_secuencia}
+\end{figure}
+
+
+\subsection{Diseño de Clases}
+A continuación, se presenta la figura \ref{figura:diagrama_clases} donde se observa el diagrama de clases general para la aplicación Android. En él se observa que las clases heredadas del propio sistema Android, no cuentan con atributos y operaciones, salvo algunas excepciones, ya que tales clases cuentan con cientos de operaciones, excediendo así los alcances de éste proyecto.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.45]{img/diagrama_objetos}	
+	\caption{Diagrama de clases}
+	\label{figura:diagrama_clases}
+\end{figure}
+
+Además del diagrama de clases anterior, en la figura \ref{figura:diagrama_clases_db} se representa el correspondiente a la persistencia de datos mediante el motor de Bases de Datos SQLite de Android.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.45]{img/diagrama_objetos_db}	
+	\caption{Diagrama de clases para base de datos}
+	\label{figura:diagrama_clases_db}
+\end{figure}
+
+
 \subsection{Diseño de interfaces}
 A continuación se presentan las interfaces de la aplicación, que se diseñaron orientadas a las funcionalidades que se recabaron en la etapa de requerimientos.
 
@@ -952,35 +983,6 @@ Los resultados obtenidos pueden ser enviados vía email a un médico, donde se adj
 	\label{figura:screen_grafico6}
 \end{figure} 
 
-\subsection{Diagrama de secuencia}
-A continuación, en la figura \ref{figura:diagrama_secuencia} se presenta el gráfico de secuencia donde se representan los casos de usos ``Iniciando Captura'' y ``Finalizando Captura'' por parte del Usuario en la aplicación. En él se representan los objetos básicos para representar el flujo de mensajes básico que se ejecutan para tales casos de uso y además los mensajes necesarios para realizar la persistencia de datos, representando así el núcleo básico de operación de la aplicación. Allí también se puede observar el ``loop'' o ciclo básico de captura y procesamiento de segmentos.
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=1\columnwidth]{img/diagrama_secuencia}	
-	\caption{Diagrama de secuencia}
-	\label{figura:diagrama_secuencia}
-\end{figure}
-
-
-\subsection{Diseño de Clases}
-A continuación, se presenta la figura \ref{figura:diagrama_clases} donde se observa el diagrama de clases general para la aplicación Android. En él se observa que las clases heredadas del propio sistema Android, no cuentan con atributos y operaciones, salvo algunas excepciones, ya que tales clases cuentan con cientos de operaciones, excediendo así los alcances de éste proyecto.
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[scale=0.45]{img/diagrama_objetos}	
-	\caption{Diagrama de clases}
-	\label{figura:diagrama_clases}
-\end{figure}
-
-Además del diagrama de clases anterior, en la figura \ref{figura:diagrama_clases_db} se representa el correspondiente a la persistencia de datos mediante el motor de Bases de Datos SQLite de Android.
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[scale=0.45]{img/diagrama_objetos_db}	
-	\caption{Diagrama de clases para base de datos}
-	\label{figura:diagrama_clases_db}
-\end{figure}
 
 \section{Inspecciones y prueba del sistema}
 
