@@ -984,25 +984,25 @@ Los resultados obtenidos pueden ser enviados vía email a un médico, donde se adj
 
 \section{Inspecciones y prueba del sistema}
 
-En esta sección se pretende describir el procedimiento seguido durante todo el desarrollo de la aplicación Android en cuanto a verificación y validación de los códigos desarrollados, como así también del funcionamiento de la aplicación una vez terminada. Para ello se cuenta brevemente la manera en que se trabajo como equipo de desarrollo en lo que es la inspección de los códigos, de manera que la detección de desarrollos no óptimos o con errores, se detectaran a tiempo y así evitar perdidas de tiempo por re-trabajo. A su vez se describe la metodología de pruebas que se utilizó para validar el funcionamiento de la aplicación una vez terminada, la misma consistió de pruebas al método clasificador/detector, a las interfaces, gráficos y reportes, como así también al rendimiento en cuanto a consumo de batería y de almacenamiento.      
+En esta sección se describe el procedimiento seguido durante todo el desarrollo de la aplicación Android en cuanto a verificación y validación de los códigos desarrollados, como así también la metodología de pruebas que se utilizó para validar el funcionamiento de la aplicación una vez terminada. La misma consistió de pruebas al método clasificador/detector, a las interfaces, gráficos y reportes, como así también al rendimiento en cuanto a consumo de batería y de almacenamiento.      
 
 \subsection*{Inspecciones del software}
 
-Durante todo el proceso de desarrollo se llevaron a cabo revisiones del software, buscando defectos en los códigos constatando que lo desarrollado sea lo más óptimo posible y se corresponda con lo definido en las etapas de requerimiento y diseño. 
+Durante todo el proceso de desarrollo se llevaron a cabo revisiones del software, buscando defectos en los códigos constatando que lo desarrollado fuese lo más óptimo posible y se corresponda con lo definido en las etapas de requerimiento y diseño. 
 Como se trata de un equipo de desarrollo formado por dos personas se realizaron inspecciones cruzadas donde cada uno inspeccionó lo realizado por el otro. 
 
 \subsection*{Metodología de prueba de la aplicación}
-Como parte de las verificaciones y validaciones de la aplicación se describe a continuación la metodología utilizada para las pruebas.
+Como parte de las verificaciones y validaciones de la aplicación se describen a continuación las actividades que se desarrollaron para cumplir con la metodología.
 
 \begin{itemize}
-\item Pruebas del clasificador/detector de la aplicación:
+\item Pruebas del clasificador/detector de ronquidos de la aplicación:
 		\begin{itemize}
-			\item Probar sobre señales EDF (limpias).
-			\item Probar sobre señales obtenidas en entornos cotidianos.
+			\item Determinar tasas de aciertos sobre señales EDF (limpias).
+			\item Determinar tasas de aciertos sobre señales obtenidas en entornos cotidianos.
 		\end{itemize}
 \item Pruebas de los gráficos y reportes:
 	\begin{itemize}
-		\item Probar manualmente el cálculo de los resultados mostrados en los gráficos.
+		\item Realizar los calculos de manera manual para comprobar los resultados mostrados en los gráficos.
 		\item Verificar que los gráficos se estén generando correctamente.
 		\item Verificar el envío de la información vía email.
 	\end{itemize}
@@ -1018,7 +1018,7 @@ Como parte de las verificaciones y validaciones de la aplicación se describe a c
 	\end{itemize}
 \end{itemize}
 
-\section{Tasas de aciertos aplicación Android}
+\section{Tasas de aciertos de la aplicación Android}
 
 \subsection*{Pruebas sobre señales EDF (limpias)}
 En esta etapa, se describe la comparación entre el método detector/clasificador desarrollado en Matlab y el desempeño del mismo método desarrollado en la aplicación Android.
