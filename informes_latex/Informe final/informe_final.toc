@@ -28,7 +28,6 @@
 \contentsline {subsection}{\numberline {3.2.4}Dise\~no de interfaces}{44}
 \contentsline {section}{\numberline {3.3}Inspecciones y prueba del sistema}{53}
 \contentsline {section}{\numberline {3.4}Tasas de aciertos de la aplicaci\'on Android}{54}
-\contentsline {chapter}{\numberline {4}Conclusi\'on y Trabajos Futuros}{56}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{58}
-\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{60}
-\contentsline {chapter}{\numberline {B}Informaci\'on adicional sobre App Android\textsuperscript {\textregistered } }{87}
+\contentsline {chapter}{\numberline {4}Conclusi\'on y Trabajos Futuros}{57}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{59}
+\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{61}
