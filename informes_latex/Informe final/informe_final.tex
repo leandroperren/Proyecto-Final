@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt,oneside]{book}
 \usepackage[latin1]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish, es-tabla]{babel}
 \usepackage{calc}
 \usepackage{fancyhdr}
 \usepackage[pdftex]{graphicx}
@@ -253,7 +253,7 @@ Se puede observar en la autocorrelación la existencia de un valor pico en torno 
 	\label{figura:segmento_ronquido_autocorr}
 \end{figure}
 
-Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una misma señal. En el Cuadro \ref{tabla:t0_f0_1_minuto}, podemos ver los valores del $T_0$ de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos. Si se observa el valor del desvío estándar para los $T_0$ de los segmentos con ronquidos presentados en el Cuadro \ref{tabla:t0_f0_1_minuto}, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. 
+Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una misma señal. En la Tabla \ref{tabla:t0_f0_1_minuto}, podemos ver los valores del $T_0$ de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos. Si se observa el valor del desvío estándar para los $T_0$ de los segmentos con ronquidos presentados en la Tabla \ref{tabla:t0_f0_1_minuto}, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. 
 
 \begin{table}[H]
 	\begin{center}
@@ -274,7 +274,7 @@ Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una mis
 	\end{center}
 \end{table}
 
-Debido a que se extrajeron segmentos de distintas señales se puede observar en el Cuadro \ref{tabla:desvios_estandar_t0}, los valores del desvío estándar de los $T_0$ de cada señal y para cada duración de segmentos. Observando éstos casos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual se está asegurando que la característica $T_0$ es homogénea entre segmentos de ronquidos de una misma señal.
+Debido a que se extrajeron segmentos de distintas señales se puede observar en la Tabla \ref{tabla:desvios_estandar_t0}, los valores del desvío estándar de los $T_0$ de cada señal y para cada duración de segmentos. Observando éstos casos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual se está asegurando que la característica $T_0$ es homogénea entre segmentos de ronquidos de una misma señal.
 
 \begin{table}[H]
 	\begin{center}
@@ -294,11 +294,11 @@ Debido a que se extrajeron segmentos de distintas señales se puede observar en e
 	\end{center}
 \end{table}
 
-Siguiendo el análisis se observa ahora qué sucede con los valores del $T_0$ entre segmentos extraídos de diferentes señales, ya que si bien esta característica presentaba cierta homogeneidad entre los segmentos de una misma señal, podrían existir severas diferencias con segmentos provenientes de distintas señales y por ende de distintas personas y así no se podría generalizar el uso del $T_0$ como detector de ronquidos. Para ello se calculó el valor de la media y el desvío estándar de los $T_0$ de todos los segmentos de 1 minuto de duración independientemente de la señal a la que pertenezcan. En el Cuadro \ref{tabla:segmentos_1_minuto_hombres} se presentan los valores del $T_0$ de todos los segmentos de 1 minuto de duración seguidos de su media y desvío estándar, mientras que en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones} se presentan las medias y desvíos estándar de los $T_0$ de todos los segmentos de cada una de las duraciones.
+Siguiendo el análisis se observa ahora qué sucede con los valores del $T_0$ entre segmentos extraídos de diferentes señales, ya que si bien esta característica presentaba cierta homogeneidad entre los segmentos de una misma señal, podrían existir severas diferencias con segmentos provenientes de distintas señales y por ende de distintas personas y así no se podría generalizar el uso del $T_0$ como detector de ronquidos. Para ello se calculó el valor de la media y el desvío estándar de los $T_0$ de todos los segmentos de 1 minuto de duración independientemente de la señal a la que pertenezcan. En la Tabla \ref{tabla:segmentos_1_minuto_hombres} se presentan los valores del $T_0$ de todos los segmentos de 1 minuto de duración seguidos de su media y desvío estándar, mientras que en la Tabla \ref{tabla:media_desvio_t0_dist_duraciones} se presentan las medias y desvíos estándar de los $T_0$ de todos los segmentos de cada una de las duraciones.
 
-Se puede observar en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones} que las medias son todas cercanas a los 4 segundos y que los desvíos estándar son inferiores a 1 segundo. Esto permite asegurar que la característica es representativa, no solo dentro de los segmentos de ronquidos de una misma señal, sino también entre segmentos de distintas señales, por lo que no existirían problemas en la distinción vía ésta característica usando cualquier grabación, siempre y cuando los valores de $T_0$ en los segmentos de ruidos difieran suficientemente como para distinguirlos. Este aspecto se analizará en secciones posteriores.
+Se puede observar en la Tabla \ref{tabla:media_desvio_t0_dist_duraciones} que las medias son todas cercanas a los 4 segundos y que los desvíos estándar son inferiores a 1 segundo. Esto permite asegurar que la característica es representativa, no solo dentro de los segmentos de ronquidos de una misma señal, sino también entre segmentos de distintas señales, por lo que no existirían problemas en la distinción vía ésta característica usando cualquier grabación, siempre y cuando los valores de $T_0$ en los segmentos de ruidos difieran suficientemente como para distinguirlos. Este aspecto se analizará en secciones posteriores.
 
-Por último, se hace una evaluación acerca de la duración más apropiada de los segmentos. Como recientemente se ha mencionado y, como se podía observar en el Cuadro \ref{tabla:media_desvio_t0_dist_duraciones}, los valores de las medias y los desvíos de todos los segmentos de ronquidos tomando distintas duraciones resultan similares entre si, por lo tanto, se concluye que la duración óptima a utilizar será la de 5 minutos, ya que se genera un ahorro en tiempo de procesamiento y cálculo. También es importante explicar que no se consideran tamaños de segmentos de mayor duración, ya que a los efectos de llevar esto a una aplicación que sea capaz de etiquetar los momentos donde se producen ronquidos, al tomar duraciones de 8, 10 o más minutos se estaría perdiendo precisión en el presente análisis.
+Por último, se hace una evaluación acerca de la duración más apropiada de los segmentos. Como recientemente se ha mencionado y, como se podía observar en la Tabla \ref{tabla:media_desvio_t0_dist_duraciones}, los valores de las medias y los desvíos de todos los segmentos de ronquidos tomando distintas duraciones resultan similares entre si, por lo tanto, se concluye que la duración óptima a utilizar será la de 5 minutos, ya que se genera un ahorro en tiempo de procesamiento y cálculo. También es importante explicar que no se consideran tamaños de segmentos de mayor duración, ya que a los efectos de llevar esto a una aplicación que sea capaz de etiquetar los momentos donde se producen ronquidos, al tomar duraciones de 8, 10 o más minutos se estaría perdiendo precisión en el presente análisis.
 
 \begin{table}[H]
 	\begin{center}
@@ -360,7 +360,7 @@ Por último, se hace una evaluación acerca de la duración más apropiada de los se
 En esta sección se repetirán los análisis anteriores pero utilizando señales de mujeres. Para ello también se tomaron 5 señales .EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extrajeron manualmente 5 segmentos de ronquidos de cada una de las duraciones anteriores.
 A fin de determinar si el $T_0$ resulta homogéneo entre segmentos de una misma señal se analiza a continuación que valores toma el $T_0$ entre segmentos extraídos de una misma señal.
 
-En el Cuadro \ref{tabla:desv_estandar_t0_mujeres} se encuentran los valores de los desvíos estándar de todos los $T_0$ de los segmentos extraídos de cada paciente y para cada duración. Si se observan los desvíos estándar todos ellos tienen valores menores a 1 segundo, con lo cual se puede concluir que presentan cierta homogeneidad al igual que ocurría con los segmentos extraídos de las señales de hombres.
+En la Tabla \ref{tabla:desv_estandar_t0_mujeres} se encuentran los valores de los desvíos estándar de todos los $T_0$ de los segmentos extraídos de cada paciente y para cada duración. Si se observan los desvíos estándar todos ellos tienen valores menores a 1 segundo, con lo cual se puede concluir que presentan cierta homogeneidad al igual que ocurría con los segmentos extraídos de las señales de hombres.
 
 \begin{table}[H]
 	\begin{center}
@@ -380,7 +380,7 @@ En el Cuadro \ref{tabla:desv_estandar_t0_mujeres} se encuentran los valores de l
 	\end{center}
 \end{table}
 
-A continuación se verifica que el $T_0$ resulta homogéneo entre segmentos de distintas señales. En el Cuadro \ref{tabla:media_desv_t0_mujeres} se encuentran los valores de las medias y desvíos estándar de los $T_0$ de los segmentos para cada duración sin tener en cuenta a que paciente pertenece. Analizando estos datos se puede ver que en todos los casos el valor del desvío está muy por debajo de 1 segundo, por esto se concluye que cualquiera sea la señal, los valores del $T_0$ resultan homogéneos, es decir, que la característica realmente es representativa de los segmentos con eventos de ronquidos.
+A continuación se verifica que el $T_0$ resulta homogéneo entre segmentos de distintas señales. En la Tabla \ref{tabla:media_desv_t0_mujeres} se encuentran los valores de las medias y desvíos estándar de los $T_0$ de los segmentos para cada duración sin tener en cuenta a que paciente pertenece. Analizando estos datos se puede ver que en todos los casos el valor del desvío está muy por debajo de 1 segundo, por esto se concluye que cualquiera sea la señal, los valores del $T_0$ resultan homogéneos, es decir, que la característica realmente es representativa de los segmentos con eventos de ronquidos.
 
 \begin{table}[H]
 	\begin{center}
@@ -406,7 +406,7 @@ Tal como se concluyó en el caso de las señales de hombres, aquí también puede ve
 
 Finalizado el análisis de las señales de hombres y mujeres por separado, se realiza un análisis comparativo del $T_0$ promedio entre dichas señales. Debido a que tanto en el análisis de hombres como en el de mujeres se llegó a la conclusión de que la duración más óptima de los segmentos es la de 5 minutos, la comparación entre media y desvío de los $T_0$ se realizó directamente con esta duración. 
 
-En el Cuadro \ref{tabla:media_desv_t0_hombre_mujer}, se encuentran representados los valores de las medias y desvíos de los $T_0$ correspondientes a segmentos de 5 minutos, tanto de señales de hombres como de mujeres. 
+En la Tabla \ref{tabla:media_desv_t0_hombre_mujer}, se encuentran representados los valores de las medias y desvíos de los $T_0$ correspondientes a segmentos de 5 minutos, tanto de señales de hombres como de mujeres. 
 
 \begin{table}[H]
 	\begin{center}
@@ -539,7 +539,7 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 \end{figure}
 
 \section{Cantidad mínima de ronquidos por segmento}
-A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 1 min con ronquidos y se anexaron segmentos de 1 min para obtener así distintas duraciones, de 1, 2, 3 y 4 min que no contenían ronquidos. Luego se volvió a calcular el $T_0$ para cada posible combinación a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en el Cuadro \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3, 4 o 5 min, el $T_0$ detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa).
+A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 1 min con ronquidos y se anexaron segmentos de 1 min para obtener así distintas duraciones, de 1, 2, 3 y 4 min que no contenían ronquidos. Luego se volvió a calcular el $T_0$ para cada posible combinación a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en la Tabla \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3, 4 o 5 min, el $T_0$ detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa).
 
 \begin{table}[H]
 	\begin{center}
@@ -564,13 +564,13 @@ A continuación se plantea el análisis de dos aspectos que pueden alterar la dete
             NNNRN & 4.24 \\ \hline
             NNNNR & 4.34 \\ \hline
 		\end{tabular}
-		\caption{T0 de segmentos anexando segmentos sin ronquidos.}
+		\caption{$T_0$ de segmentos anexando segmentos sin ronquidos.}
 		\label{tabla:subsegmentos_t0}
 	\end{center}
 \end{table}
 
 Otro aspecto consiste en determinar el mínimo indispensable de eventos necesarios para que el $T_0$ sea detectado sin sufrir grandes desvíos respecto de la media. 
-Para ello se analizó una parte del segmento, en particular con una duración de 15 segundos, en los cuales había 4 episodios de ronquido presentes, luego se procedió a quitar de a un evento a la vez y volver a calcular el $T_0$ y así observar si presentan diferencias. Si se observa el Cuadro \ref{tabla:cantidad_minima_t0}, se puede concluir que la cantidad mínima de eventos necesarios para la correcta detección es de 2 ya que con un solo evento el $T_0$ da un valor de 2.58 segundos, lo cual esta muy por debajo de los 4 segundos promedio.
+Para ello se analizó una parte del segmento, en particular con una duración de 15 segundos, en los cuales había 4 episodios de ronquido presentes, luego se procedió a quitar de a un evento a la vez y volver a calcular el $T_0$ y así observar si presentan diferencias. Si se observa la Tabla \ref{tabla:cantidad_minima_t0}, se puede concluir que la cantidad mínima de eventos necesarios para la correcta detección es de 2 ya que con un solo evento el $T_0$ da un valor de 2.58 segundos, lo cual esta muy por debajo de los 4 segundos promedio.
 
 En conclusión, no existe restricción alguna en cuanto a la duración de sub­segmentos sin ronquidos, siempre y cuando en alguna parte del segmento completo, existan  al menos 2 eventos de ronquido aún con presencia de ruido, ya que éste último no genera picos lo suficientemente grandes como para ser detectados, tal como se mostró en secciones anteriores.
 
@@ -595,13 +595,13 @@ En conclusión, no existe restricción alguna en cuanto a la duración de sub­segme
 \section{Tasas de aciertos del método en Matlab\textsuperscript{\scriptsize\textregistered}}
 Debido a que se utilizó Matlab para calcular el  $T_0$ de los segmentos extraídos de las señales EDF, es que surgió la posibilidad de desarrollar un script en Matlab que recorra una señal tomando frames de 5 min de duración y que calculando el $T_0$ determine si el segmento posee ronquidos. De esta manera se podría determinar si el método es aplicable antes de realizar la aplicación sobre la plataforma Android. 
 
-En el Cuadro \ref{tabla:clasificador_matlab} se encuentran los valores de \textit{verdaderos positivos}, \textit{verdaderos negativos}, \textit{falsos positivos}, \textit{falsos negativos}, \textit{valor predictivo positivo}, \textit{valor predictivo negativo}, \textit{sensibilidad} y \textit{especificidad}, calculados para cada una de las señales EDF utilizadas hasta el momento. Estos resultados se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del $T_0$ para ser ronquido en [3.50 - 4.70 s]. 
+En la Tabla \ref{tabla:clasificador_matlab} se encuentran los valores de \textit{verdaderos positivos}, \textit{verdaderos negativos}, \textit{falsos positivos}, \textit{falsos negativos}, \textit{valor predictivo positivo}, \textit{valor predictivo negativo}, \textit{sensibilidad} y \textit{especificidad}, calculados para cada una de las señales EDF utilizadas hasta el momento. Estos resultados se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del $T_0$ para ser ronquido en [3.50 - 4.70 s]. 
 
-En el Cuadro \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9. Estos casos se presentan en baja cantidad, y todos tienen valores de $T_0$ inferiores a los 3 s. Debido a esto el algoritmo los etiqueta como segmentos sin ronquidos ya que estan fuera del rango [3.50 - 4.70 s].
+En la Tabla \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9. Estos casos se presentan en baja cantidad, y todos tienen valores de $T_0$ inferiores a los 3 s. Debido a esto el algoritmo los etiqueta como segmentos sin ronquidos ya que estan fuera del rango [3.50 - 4.70 s].
 
-En el Cuadro \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de $T_0$ similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que las señales EDF en esos segmentos, sin estar etiquetados como ronquidos, presentan algunos picos aislados. Esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Al tratarse de un fenómeno presentado solo en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
+En la Tabla \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de $T_0$ similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que las señales EDF en esos segmentos, sin estar etiquetados como ronquidos, presentan algunos picos aislados. Esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Al tratarse de un fenómeno presentado solo en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
 
-Una vez analizados los valores de falsos positivos y falsos negativos con las señales usadas hasta el momento, se procedió a determinar tasas de aciertos usando señales no utilizadas en pruebas (no vistas por el sistema). En el Cuadro \ref{tabla:clasificador_matlab_verificacion} se presentan los valores obtenidos para estas señales (verificación). En ellos se puede observar que los valores de sensibilidad y especificidad superan el 80\%, llegando en algunos casos muy cerca del 100\%. Por lo tanto se puede concluir que el método utilizando señales limpias es factible y que puede ser implementado en Android.
+Una vez analizados los valores de falsos positivos y falsos negativos con las señales usadas hasta el momento, se procedió a determinar tasas de aciertos usando señales no utilizadas en pruebas (no vistas por el sistema). En la Tabla \ref{tabla:clasificador_matlab_verificacion} se presentan los valores obtenidos para estas señales (verificación). En ellos se puede observar que los valores de sensibilidad y especificidad superan el 80\%, llegando en algunos casos muy cerca del 100\%. Por lo tanto se puede concluir que el método utilizando señales limpias es factible y que puede ser implementado en Android.
 
 \begin{table}[H]
 	\begin{center}
@@ -620,7 +620,7 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 			Paciente 9 & 7 & 19 & 12 & 10 & 36.8\% & 65.5\% & 41.1\% & 61.3\% \\ \hline
 			Paciente 10 & 47 & 0 & 0 & 1 & 100\% & 0\% & 97.9\% & -- \\ \hline
 		\end{tabular}
-		\caption{Resultados de pruebas sobre clasificador/detector en Matlab.}
+		\caption{Resultados de las pruebas al clasificador/detector en Matlab.}
 		\label{tabla:clasificador_matlab}
 	\end{center}
 \end{table}   
@@ -880,7 +880,7 @@ En esta sección se presentan dos diagramas de clases de la aplicación. El primer
 \begin{figure}[H]
 	\centering
 		\includegraphics[scale=0.45]{img/diagrama_objetos_db}	
-	\caption{Diagrama de clases para base de datos}
+	\caption{Diagrama de clases para la base de datos}
 	\label{figura:diagrama_clases_db}
 \end{figure}
 
@@ -923,14 +923,14 @@ En la Figura \ref{figura:screen4}, se ven la opciones que permiten iniciar y det
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=.5\columnwidth]{img/screen5}			
-	\caption{Pestaña de gráficos}
+	\caption{Pestaña de los gráficos}
 	\label{figura:screen5}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=.5\columnwidth]{img/screen6}			
-	\caption{Pestaña de reporte detallado}
+	\caption{Pestaña del reporte detallado}
 	\label{figura:screen6}
 \end{figure}
 
@@ -977,7 +977,7 @@ Los resultados obtenidos pueden ser enviados vía email a un médico, donde se adj
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=.5\columnwidth]{img/screen_grafico6}	
-	\caption{Información gráfica de la información obtenida}
+	\caption{Representación gráfica de los resultados}
 	\label{figura:screen_grafico6}
 \end{figure} 
 
@@ -1024,7 +1024,7 @@ Como parte de las verificaciones y validaciones de la aplicación se describen a 
 En esta etapa, se describe la comparación entre el clasificador desarrollado en Matlab y el desempeño del mismo método desarrollado en la aplicación Android. Para ello se analizaron las mismas señales EDF utilizadas para validar el método en Matlab, correspondientes a los Pacientes 11, 12, 13, 14 y 15. 
 
 Para las pruebas se procedió a modificar la fuente de datos de la aplicación desarrollada, de manera que no analice los datos capturados vía micrófono, sino que lea los mismos de los archivos EDF.
-Las tasas de aciertos obtenidas se pueden observar en el Cuadro \ref{tabla:clasificador_android_verificacion}, estos resultados son iguales a los obtenidos con el algoritmo desarrollado en Matlab, por lo que se puede afirmar que los cálculos realizados en la aplicación Android son correctos y equivalentes. Por lo tanto se concluye que, así como el método se podía realizar en Matlab, éste también funciona en una aplicación Android.
+Las tasas de aciertos obtenidas se pueden observar en la Tabla \ref{tabla:clasificador_android_verificacion}, estos resultados son iguales a los obtenidos con el algoritmo desarrollado en Matlab, por lo que se puede afirmar que los cálculos realizados en la aplicación Android son correctos y equivalentes. Por lo tanto se concluye que, así como el método se podía realizar en Matlab, éste también funciona en una aplicación Android.
 
 \begin{table}[H]
 	\begin{center}
@@ -1038,7 +1038,7 @@ Las tasas de aciertos obtenidas se pueden observar en el Cuadro \ref{tabla:clasi
 			Paciente 14 & 9 & 30 & 7 & 2 & 43.7\% & 93.8\% & 81.8\% & 81.1\% \\ \hline
 			Paciente 15 & 4 & 40 & 4 & 0 & 50\% & 100\% & 100\% & 90.9\% \\ \hline			
 		\end{tabular}
-		\caption{Pruebas al clasificador desarrollado en Android.}
+		\caption{Tasas de aciertos de la aplicación Android con señales limpias.}
 		\label{tabla:clasificador_android_verificacion}
 	\end{center}
 \end{table} 
@@ -1047,7 +1047,7 @@ Las tasas de aciertos obtenidas se pueden observar en el Cuadro \ref{tabla:clasi
 Aquí se presentan los resultados de las pruebas realizadas con la aplicación android utilizando señales obtenidas en entornos cotidianos, entendiendo por tales, aquellos lugares donde es común la presencia de sonidos, que sin ser ronquidos pudieran ser capturados por la aplicación. Para esto, se colocó el dispositivo movil con la aplicación ejecutandose durante varias horas en entornos con dichas características (como por ejemplo, en una habitación). 
 
 Una de las pruebas comenzó a las 14:00 hs y tuvo una duración de 3 horas y 45 min. Se realizó en una habitación lindera a la calle, con ventilador de techo encendido (por el ruido que el mismo genera), donde varias personas realizaban sus rutinas normales, lo que generó sonidos de entradas y salidas a la habitación, personas hablando y de televisión de habitaciones linderas.
-En el Cuadro \ref{tabla:clasificador_android_ambientales} se listan los períodos fundamentales relevados durante la captura y su correspondiente etiqueta, mientras que en el Cuadro \ref{tabla:aciertos_android_ambientales} se pueden ver los valores de Verdaderos positivos, Falsos positivos, Falsos negativos, Verdaderos negativos, Valor predictivo positivo, Valor predictivo negativo, Sensibilidad y Especificidad. 
+En la Tabla \ref{tabla:clasificador_android_ambientales} se listan los períodos fundamentales relevados durante la captura y su correspondiente etiqueta, mientras que en la Tabla \ref{tabla:aciertos_android_ambientales} se pueden ver los valores de Verdaderos positivos, Falsos positivos, Falsos negativos, Verdaderos negativos, Valor predictivo positivo, Valor predictivo negativo, Sensibilidad y Especificidad. 
 Se puede ver que no existen verdaderos positivos ya que ninguna persona genero ronquidos, por ésto, la sensibilidad no está presente y por lo tanto solo importa analizar la especificidad, en la cual se ve un valor muy bueno, ya que supera el 90\%.
 
 \begin{table}[H]
@@ -1087,12 +1087,12 @@ Se puede ver que no existen verdaderos positivos ya que ninguna persona genero r
 		Sensibilidad & Especificidad	& \\
 		0\%	& 93.3\% & \\ \hline	
 		\end{tabular}
-		\caption{Aciertos de la aplicación Android en  ambientes cotidianos.}
+		\caption{Tasas de aciertos de la aplicación Android en  ambientes cotidianos.}
 		\label{tabla:aciertos_android_ambientales}
 	\end{center}
 \end{table} 
 
-Para el análisis de los valores pico, se realizó otra captura y se estimó la amplitud de $T_0$. Luego se calculó el porcentaje que representa esa amplitud respecto de la energía (valor de autocorrelación con desplazamiento cero). En el cuadro \ref{tabla:clasificador_android_ambientales2} se puede ver los valores del $T_0$, su amplitud y la correspondiente etiqueta clasificatoria. Como se aprecia en los resultados anteriores, la mayoría de los valores $T_0$ tienen una amplitud menor al 0.3 (30\%) de la energía del segmento, lo que los convierte en valores bajos y que evidentemente no representan valores picos sobresalientes en la autocorrelación. Esto permite utilizar un umbral del 30\% para discriminar aquellos segmentos cuyo $T_0$ esta en el rango de 3.50 a 4.70 seg pero que por no ser valores picos no corresponden a ``Ronquidos''.
+Para el análisis de los valores pico, se realizó otra captura y se estimó la amplitud de $T_0$. Luego se calculó el porcentaje que representa esa amplitud respecto de la energía (valor de autocorrelación con desplazamiento cero). En la Tabla \ref{tabla:clasificador_android_ambientales2} se puede ver los valores del $T_0$, su amplitud y la correspondiente etiqueta clasificatoria. Como se aprecia en los resultados anteriores, la mayoría de los valores $T_0$ tienen una amplitud menor al 0.3 (30\%) de la energía del segmento, lo que los convierte en valores bajos y que evidentemente no representan valores picos sobresalientes en la autocorrelación. Esto permite utilizar un umbral del 30\% para discriminar aquellos segmentos cuyo $T_0$ esta en el rango de 3.50 a 4.70 seg pero que por no ser valores picos no corresponden a ``Ronquidos''.
 
 \begin{table}[H]
 	\begin{center}
@@ -1121,7 +1121,7 @@ Para el análisis de los valores pico, se realizó otra captura y se estimó la amp
 		2.11	& 0.25	&	No ronquido\\ \hline
 		3.32	& 0.29	&	No ronquido\\ \hline
 		\end{tabular}
-		\caption{Pruebas aplicación Android en  ambientes cotidianos.}
+		\caption{Pruebas de la aplicación Android en  ambientes cotidianos.}
 		\label{tabla:clasificador_android_ambientales2}
 	\end{center}
 \end{table}  
@@ -1135,9 +1135,9 @@ Para el análisis de los valores pico, se realizó otra captura y se estimó la amp
 En este proyecto final se desarrolló una aplicación Android capaz de detectar eventos de ronquidos por medio del análisis de datos capturados vía el micrófono del dispositivo. El objetivo principal fue lograr una correcta detección utilizando métodos más inteligentes que los utilizados por las aplicaciones disponibles hasta el momento. Estas aplicaciones sólo realizan un análisis del nivel de energía de los datos capturados, generando un mal desempeño frente a condiciones ambientales de mucho ruido, siendo detectados y etiquetados como ronquidos.
 Primeramente se analizaron en detalle los ronquidos a fin de extraer alguna característica representativa de los mismos que permita poder detectarlos dentro de una grabación obtenida en ambientes cotidianos. Para ello se analizaron distintas señales EDF de personas de distinto sexo, obtenidas en estudios de sueño. De este análisis se demostró que el $T_0$ es una característica representativa de los ronquidos y que permite diferenciarlos de otros sonidos no deseados que pudieran presentarse en este tipo de grabaciones. Como resultado de esta etapa, mediante la extracción manual de segmentos etiquetados como ronquidos en las señales EDF y el cálculo de su correspondiente $T_0$, se concluye que el rango de valores del $T_0$ es de [3.50 - 4.70 s].
 
-Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas. Con estos resultados se puede ver que el desempeño es muy bueno, sobre todo en presencia de mucho ruido, superando el 90\% de aciertos, siendo muy baja la presencia de falsos positivos. Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
+Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado. Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas. Con estos resultados se puede ver que el desempeño es muy bueno, sobre todo en presencia de mucho ruido, superando el 90\% de aciertos, siendo muy baja la presencia de falsos positivos. Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
 
-De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no sólo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas. Junto a la ayuda de un profesional de la medicina y aprovechando toda la potencialidad de los dispositivos móviles actuales, los mismos podrían complementar o hasta sustituir en un futuro a los actuales métodos de estudios de sueño, permitiendo que el paciente pueda realizar los mismos en su propia casa y sin tener que estar conectado a distintos dispositivos. Esto permitiría aumentar la comodidad del paciente al mismo tiempo que sería una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100 Hz y con un almacenamiento discreto. De ésta manera se pueden desarrollar dispositivos inteligentes integrables a la habitación de un individuo para que realice comportamientos determinados según la detección realizada. Ejemplo de esto puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño.
+De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no sólo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas. Junto a la ayuda de un profesional de la medicina y aprovechando toda la potencialidad de los dispositivos móviles actuales, los mismos podrían complementar o hasta sustituir en un futuro a los actuales métodos de estudios de sueño, permitiendo que el paciente pueda realizar los mismos en su propia casa y sin tener que estar conectado a distintos dispositivos. Esto permitiría aumentar la comodidad del paciente al mismo tiempo que sería una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100 Hz y con un almacenamiento discreto. De ésta manera se pueden desarrollar dispositivos inteligentes integrables a la habitación de un individuo , que realicen comportamientos determinados según la detección realizada. Ejemplo de esto puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño.
 
 \thispagestyle{empty}
 \chapter*{Bibliografia}
