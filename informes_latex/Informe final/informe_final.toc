@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {2.2.1}An\'alisis de se\~nales correspondientes a hombres}{16}
 \contentsline {subsection}{\numberline {2.2.2}An\'alisis de se\~nales correspondientes a mujeres}{20}
 \contentsline {section}{\numberline {2.3}Comparaci\'on de $T_0$ entre hombres y mujeres}{21}
-\contentsline {section}{\numberline {2.4}An\'alisis de sonidos no deseados (ruidos)}{21}
+\contentsline {section}{\numberline {2.4}An\'alisis de sonidos no deseados (ruidos)}{22}
 \contentsline {section}{\numberline {2.5}Mejora a trav\'es de funciones de recorte}{27}
 \contentsline {section}{\numberline {2.6}Cantidad m\IeC {\'\i }nima de ronquidos por segmento}{30}
 \contentsline {section}{\numberline {2.7}Tasas de aciertos del m\'etodo en Matlab\textsuperscript {\relax \fontsize {8}{9.5}\selectfont \textregistered }}{32}
