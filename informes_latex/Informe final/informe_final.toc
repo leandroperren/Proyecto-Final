@@ -25,9 +25,9 @@
 \contentsline {subsection}{\numberline {3.2.1}Casos de Uso}{38}
 \contentsline {subsection}{\numberline {3.2.2}Diagrama de secuencia}{41}
 \contentsline {subsection}{\numberline {3.2.3}Dise\~no de Clases}{42}
-\contentsline {subsection}{\numberline {3.2.4}Dise\~no de interfaces}{44}
-\contentsline {section}{\numberline {3.3}Inspecciones y prueba del sistema}{53}
-\contentsline {section}{\numberline {3.4}Tasas de aciertos de la aplicaci\'on Android}{54}
-\contentsline {chapter}{\numberline {4}Conclusi\'on y trabajos futuros}{57}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{59}
-\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{61}
+\contentsline {subsection}{\numberline {3.2.4}Dise\~no de interfaces}{43}
+\contentsline {section}{\numberline {3.3}Inspecciones y prueba del sistema}{51}
+\contentsline {section}{\numberline {3.4}Tasas de aciertos de la aplicaci\'on Android}{52}
+\contentsline {chapter}{\numberline {4}Conclusi\'on y trabajos futuros}{55}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{57}
+\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{59}
