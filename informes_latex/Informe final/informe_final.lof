@@ -3,14 +3,14 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Segmento de 1 minuto etiquetado como ronquidos.}}{16}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Segmento con ronquidos y su autocorrelaci\'on.}}{18}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Sonido de maquinas trabajando, personas hablando y veh\IeC {\'\i }culos.}}{24}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Sonido de un veh\IeC {\'\i }culo circulando.}}{24}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Sonido de dos veh\IeC {\'\i }culos circulando.}}{25}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Sonido de perros ladrando.}}{25}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Autocorrelacion de ronquidos y autocorrelaci\'on de sonido ambiental.}}{26}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Sonido de un automovil circulando en 5 min.}}{26}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Sonido de dos veh\IeC {\'\i }culos circulando en 5 min.}}{27}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Sonido de dos veh\IeC {\'\i }culos circulando y ladridos de perros en 5 min.}}{27}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Oscilograma de m\'aquinas trabajando, personas hablando y veh\IeC {\'\i }culos.}}{24}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Oscilograma de un veh\IeC {\'\i }culo circulando.}}{24}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Oscilograma de dos veh\IeC {\'\i }culos circulando.}}{25}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Oscilograma de perros ladrando.}}{25}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Autocorrelaci\'on de ronquidos y autocorrelaci\'on de sonido ambiental.}}{26}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Oscilograma de un automovil circulando durante 5 min.}}{26}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Oscilograma de dos veh\IeC {\'\i }culos circulando durante 5 min.}}{27}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Oscilograma de dos veh\IeC {\'\i }culos circulando y ladridos de perros durante 5 min.}}{27}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Funciones de recorte}}{29}
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Autocorrelaciones aplicando las tres funciones de recorte}}{29}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Autocorrelaci\'on de ronquidos sin y con funci\'on de recorte}}{30}
@@ -24,13 +24,13 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama de clases para la representaci\'on gr\'afica de los resultados}}{44}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Diagrama de clases para la base de datos}}{45}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Pantalla de inicio}}{46}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Datos del usuario y m\'edico}}{46}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Lista con grabaciones realizadas}}{47}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Datos del usuario y del m\'edico}}{46}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Lista de las grabaciones realizadas}}{47}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Iniciar nueva captura de datos}}{47}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Pesta\~na de los gr\'aficos}}{48}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Pesta\~na del reporte detallado}}{49}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Se\~nal completa con fragmentos resaltados}}{50}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Gr\'aficos de anillos}}{50}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Gr\'afico de barras generado por la aplicaci\'on}}{50}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Gr\'aficos de anillos generados por la aplicaci\'on}}{50}
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Informaci\'on en formato de reporte}}{51}
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Informaci\'on detallada del paciente y las detecciones}}{52}
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Representaci\'on gr\'afica de los resultados}}{52}

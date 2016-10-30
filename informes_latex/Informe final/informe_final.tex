@@ -72,7 +72,7 @@ top=2.5cm }
 
 \author{
 	\textbf{Autores:} Meurzet, Matías - Perren, Leandro\\
-	\textbf{Director y Co-Director:} Milone, Diego - Albornoz, Marcelo \\ \\
+	\textbf{Director y Co-Director:} Milone, Diego - Albornoz, Enrique M. \\ \\
 	\small{Santa Fe, Argentina}
 }
 
@@ -106,14 +106,14 @@ top=2.5cm }
 \chapter*{Resumen}
 \thispagestyle{empty}
 
-En la actualidad existen distintas herramientas de uso doméstico para la detección de ronquidos, las cuales van desde elementos diseñados especialmente, como almohadas inteligentes o pulseras, hasta diferentes aplicaciones para dispositivos móviles. Todas ellas consisten del análisis de una señal capturada por medio del micrófono de tal dispositivo. La limitación de estos métodos es que solamente realizan un análisis de la señal en busca de cambios bruscos del nivel de energía, provocando que las aplicaciones sean poco robustas a los ruidos que se pueden presentar en un entorno cotidiano bajo condiciones normales, entendiéndose por tal escenario a una habitación personal donde hay movimiento de gente y de otros provenientes de distintos objetos, tanto internos como externos a la habitación.
+En la actualidad existen distintas herramientas de uso doméstico para la detección de ronquidos, las cuales van desde elementos diseñados especialmente, como almohadas inteligentes o pulseras, hasta diferentes aplicaciones para dispositivos móviles. Todas ellas consisten del análisis de una señal capturada por medio del micrófono del dispositivo. La limitación de estos métodos recae en que solamente realizan un análisis de la señal en busca de cambios bruscos del nivel de energía, provocando que las aplicaciones sean poco robustas a los ruidos que se pueden presentar en un entorno cotidiano bajo condiciones normales. Entendiéndose por tal escenario a un ambiente con alta presencia de ruidos tanto externos como internos.
 
-En el presente proyecto final de carrera se propone desarrollar una aplicación Android capaz de detectar episodios de ronquidos capturados por medio del micrófono del dispositivo, presentando características fundamentales como la robustez frente al ruido, óptimo uso de procesador y memoria, además de un consumo equilibrado de la batería.
-Para ello se presenta un método basado en el cálculo del período fundamental ($T_0$ de aquí en adelante) por medio de la autocorrelación. Este método recorrerá por ventaneo en tiempo real toda la señal capturada por el dispositivo y determinará si el $T_0$ de esa ventana se encuentra dentro de un rango determinado para que sea considerado ronquido. 
-Este rango de $T_0$ se determina mediante la extracción de una gran cantidad de ronquidos de señales limpias provistas por un especialista en trastornos de sueño y que  contienen la grabación de toda una noche de sueño (6 o 7 horas de duración), correspondientes a personas de ambos sexos.
-La base del método que se propone esta en la naturaleza cuasi-periódica que los ronquidos presentan, a su vez la ventaja de utilizar el $T_0$ se basa en que únicamente se analiza temporalmente la señal y que se puede utilizar en señales de baja frecuencia (100Hz), lo que genera un costo computacional, de almacenamiento y de consumo energético mucho menor al de otros métodos que utilizan además características frecuenciales.
+En este proyecto final de carrera se propuso desarrollar una aplicación Android capaz de detectar episodios de ronquidos capturados por medio del micrófono del dispositivo, considerando características fundamentales como la robustez frente al ruido, óptimo uso de procesador y memoria, además de un consumo equilibrado de la batería.
+Para ésto se propuso el uso de un método basado en el cálculo del período fundamental ($T_0$ de aquí en adelante) por medio de la autocorrelación. Este método realiza un ventaneo en tiempo real toda la señal capturada por el dispositivo y determina si el $T_0$ de cada ventana se encuentra dentro de un rango determinado para que sea considerado ronquido. 
+Este rango de $T_0$ fue determinado mediante la extracción de una gran cantidad de ronquidos de señales limpias provistas por un especialista en trastornos de sueño y que  contienen la grabación de toda una noche de sueño (6 o 7 horas de duración), correspondientes a personas de ambos sexos.
+El método propuesto hace uso de la naturaleza cuasi-periódica que los ronquidos presentan. La ventaja de utilizar el $T_0$ se basa en que únicamente se analiza temporalmente la señal y que se puede utilizar en señales de baja frecuencia (100Hz), lo que genera un costo computacional, de almacenamiento y de consumo energético mucho menor al de otros métodos que utilizan además características frecuenciales.
 
-Los resultados que se obtuvieron de las pruebas de la aplicación arrojaron buenas tasas de aciertos, superando el 80\% y en algunos casos llegando a valores cercanos al 100\%, tanto para pruebas realizadas sobre señales limpias como para señales capturadas en entornos cotidianos, conteniendo una gran cantidad de ruidos.
+Los resultados que se obtuvieron de las pruebas de la aplicación arrojaron buenas tasas de aciertos, superando el 80\% y en algunos casos llegando a valores cercanos al 100\%, tanto para pruebas realizadas sobre señales limpias como para señales capturadas en entornos cotidianos, donde existían una gran cantidad de ruidos.
 
 \newpage
 
@@ -276,7 +276,7 @@ Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una mis
 			\multicolumn{2}{|r|}{\textbf{Media}} & \textbf{4.29} \\ \hline
 			\multicolumn{2}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
 		\end{tabular}
-		\caption{$T_0$ de segmentos de 1 minuto de duración.}
+		\caption{Período fundamental ($T_0$) de segmentos de 1 minuto de duración.}
 		\label{tabla:t0_f0_1_minuto}
 	\end{center}
 \end{table}
@@ -296,7 +296,7 @@ Debido a que se extrajeron segmentos de distintas señales se puede observar en l
 			Paciente 4 & 0.61 & 0.52 & 0.62 & 0.70 & 0.85 \\ \hline
 			Paciente 5 & 0.24 & 0.09 & 0.17 & 0.17 & 0.08 \\ \hline
 		\end{tabular}
-		\caption{Desvíos estándar de los $T_0$ de cada señal en distintas duraciones.}
+		\caption{Desvíos estándar de los $T_0$ de cada señal para distintas duraciones.}
 		\label{tabla:desvios_estandar_t0}
 	\end{center}
 \end{table}
@@ -341,7 +341,7 @@ Por último, se hace una evaluación acerca de la duración más apropiada de los se
 			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.13}  \\ \hline
 			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.58} \\ \hline
 		\end{tabular}
-		\caption{$T_0$ de segmentos con ronquidos de 1 minuto en distintas señales de hombres.}
+		\caption{$T_0$ de los ronquidos de hombres, para diferentes señales}
 		\label{tabla:segmentos_1_minuto_hombres}
 	\end{center}
 \end{table}
@@ -382,7 +382,7 @@ En la Tabla \ref{tabla:desv_estandar_t0_mujeres} se encuentran los valores de lo
 			Paciente 9 & 0.25 & 0.27 & 0.21 & 0.21 & 0.21 \\ \hline
 			Paciente 10 & 0.15 & 0.16 & 0.20 & 0.09 & 0.11 \\ \hline
 		\end{tabular}
-		\caption{Desvíos estándar de los $T_0$ de cada señal en distintas duraciones para mujeres.}
+		\caption{Desvíos estándar de los $T_0$ de mujeres, para distintas duraciones y señales.}
 		\label{tabla:desv_estandar_t0_mujeres}
 	\end{center}
 \end{table}
@@ -401,7 +401,7 @@ A continuación se verifica que el $T_0$ resulta homogéneo entre segmentos de dis
 			3 minutos & 4.28 & 0.50 \\ \hline
 			5 minutos & 4.40 & 0.52 \\ \hline
 		\end{tabular}
-		\caption{Medias y desvíos estándar de los $T_0$ para distintas duraciones en mujeres.}
+		\caption{Medias y desvíos estándar de los $T_0$ de mujeres, para distintas duraciones.}
 		\label{tabla:media_desv_t0_mujeres}
 	\end{center}
 \end{table}
@@ -445,28 +445,28 @@ A su vez el segmento graficado en la Figura \ref{figura:ruido2_1_minuto} consist
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=\textwidth]{img/figure3}	
-	\caption{Sonido de maquinas trabajando, personas hablando y vehículos.}
+	\caption{Oscilograma de máquinas trabajando, personas hablando y vehículos.}
 	\label{figura:ruido1_1_minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure4}	
-	\caption{Sonido de un vehículo circulando.}
+	\caption{Oscilograma de un vehículo circulando.}
 	\label{figura:ruido2_1_minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure5}	
-	\caption{Sonido de dos vehículos circulando.}
+	\caption{Oscilograma de dos vehículos circulando.}
 	\label{figura:ruido3_1_minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure6}	
-	\caption{Sonido de perros ladrando.}
+	\caption{Oscilograma de perros ladrando.}
 	\label{figura:ruido4_1_minuto}
 \end{figure}
 
@@ -475,7 +475,7 @@ Como se puede ver en las Figuras \ref{figura:ruido1_1_minuto}, \ref{figura:ruido
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\textwidth]{img/figure7}	
-	\caption{Autocorrelacion de ronquidos y autocorrelación de sonido ambiental.}
+	\caption{Autocorrelación de ronquidos y autocorrelación de sonido ambiental.}
 	\label{figura:autocorrelacion_ruido_ronquidos}
 \end{figure}
 
@@ -484,21 +484,21 @@ Debido a que los segmentos analizados recientemente eran todos de 1 minuto de du
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\textwidth]{img/figure8}	
-	\caption{Sonido de un automovil circulando en 5 min.}
+	\caption{Oscilograma de un automovil circulando durante 5 min.}
 	\label{figura:ruido1_5minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\textwidth]{img/figure9}	
-	\caption{Sonido de dos vehículos circulando en 5 min.}
+	\caption{Oscilograma de dos vehículos circulando durante 5 min.}
 	\label{figura:ruido2_5minuto}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1\columnwidth]{img/figure10}	
-	\caption{Sonido de dos vehículos circulando y ladridos de perros en 5 min.}
+	\caption{Oscilograma de dos vehículos circulando y ladridos de perros durante 5 min.}
 	\label{figura:ruido3_5minuto}
 \end{figure}
 
@@ -627,7 +627,7 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 			Paciente 9 & 7 & 19 & 12 & 10 & 36.8\% & 65.5\% & 41.1\% & 61.3\% \\ \hline
 			Paciente 10 & 47 & 0 & 0 & 1 & 100\% & 0\% & 97.9\% & -- \\ \hline
 		\end{tabular}
-		\caption{Resultados de las pruebas al clasificador/detector en Matlab.}
+		\caption{Resultados de las pruebas utilizando el detector en Matlab.}
 		\label{tabla:clasificador_matlab}
 	\end{center}
 \end{table}   
@@ -921,14 +921,14 @@ En la Figura \ref{figura:screen1} se puede ver la pantalla de inicio de la aplic
 \begin{figure}[H]
 	\centering
 		\includegraphics[scale=.75]{img/screen2}	
-	\caption{Datos del usuario y médico}
+	\caption{Datos del usuario y del médico}
 	\label{figura:screen2}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[scale=.75]{img/screen3}	
-	\caption{Lista con grabaciones realizadas}
+	\caption{Lista de las grabaciones realizadas}
 	\label{figura:screen3}
 \end{figure}
 
@@ -962,7 +962,7 @@ En el gráfico de barras de la Figura \ref{figura:screen_grafico1} se representa 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=.5\columnwidth]{img/screen_grafico1}	
-	\caption{Señal completa con fragmentos resaltados}
+	\caption{Gráfico de barras generado por la aplicación} 
 	\label{figura:screen_grafico1}
 \end{figure}
 
@@ -971,7 +971,7 @@ Además genera dos gráficos de anillos que presentan información porcentual del a
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=.5\columnwidth]{img/screen_grafico3}	
-	\caption{Gráficos de anillos}
+	\caption{Gráficos de anillos generados por la aplicación}
 	\label{figura:screen_grafico3}
 \end{figure}
 

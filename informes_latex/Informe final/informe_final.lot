@@ -1,16 +1,16 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces $T_0$ de segmentos de 1 minuto de duraci\'on.}}{18}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Desv\IeC {\'\i }os est\'andar de los $T_0$ de cada se\~nal en distintas duraciones.}}{19}
-\contentsline {table}{\numberline {2.3}{\ignorespaces $T_0$ de segmentos con ronquidos de 1 minuto en distintas se\~nales de hombres.}}{20}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Per\IeC {\'\i }odo fundamental ($T_0$) de segmentos de 1 minuto de duraci\'on.}}{18}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Desv\IeC {\'\i }os est\'andar de los $T_0$ de cada se\~nal para distintas duraciones.}}{19}
+\contentsline {table}{\numberline {2.3}{\ignorespaces $T_0$ de los ronquidos de hombres, para diferentes se\~nales}}{20}
 \contentsline {table}{\numberline {2.4}{\ignorespaces Medias y desv\IeC {\'\i }os est\'andar de los $T_0$ para distintas duraciones.}}{21}
-\contentsline {table}{\numberline {2.5}{\ignorespaces Desv\IeC {\'\i }os est\'andar de los $T_0$ de cada se\~nal en distintas duraciones para mujeres.}}{21}
-\contentsline {table}{\numberline {2.6}{\ignorespaces Medias y desv\IeC {\'\i }os est\'andar de los $T_0$ para distintas duraciones en mujeres.}}{22}
+\contentsline {table}{\numberline {2.5}{\ignorespaces Desv\IeC {\'\i }os est\'andar de los $T_0$ de mujeres, para distintas duraciones y se\~nales.}}{21}
+\contentsline {table}{\numberline {2.6}{\ignorespaces Medias y desv\IeC {\'\i }os est\'andar de los $T_0$ de mujeres, para distintas duraciones.}}{22}
 \contentsline {table}{\numberline {2.7}{\ignorespaces Media y desv\IeC {\'\i }o de los $T_0$ de hombres y mujeres.}}{22}
 \contentsline {table}{\numberline {2.8}{\ignorespaces $T_0$ de segmentos anexando segmentos sin ronquidos.}}{32}
 \contentsline {table}{\numberline {2.9}{\ignorespaces M\IeC {\'\i }nima cantidad de eventos por segmento.}}{33}
-\contentsline {table}{\numberline {2.10}{\ignorespaces Resultados de las pruebas al clasificador/detector en Matlab.}}{34}
+\contentsline {table}{\numberline {2.10}{\ignorespaces Resultados de las pruebas utilizando el detector en Matlab.}}{34}
 \contentsline {table}{\numberline {2.11}{\ignorespaces An\'alisis de falsos negativos.}}{34}
 \contentsline {table}{\numberline {2.12}{\ignorespaces An\'alisis de falsos positivos.}}{35}
 \contentsline {table}{\numberline {2.13}{\ignorespaces Verificaci\'on de m\'etodos y funcionalidades de Matlab con se\~nales no vistas.}}{35}
