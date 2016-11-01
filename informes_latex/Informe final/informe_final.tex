@@ -31,7 +31,7 @@ top=2.5cm }
 
 \pagestyle{fancy}
 % Header
-\lhead{\textsc{\scriptsize PFC}}
+\lhead{\textsc{\scriptsize Proyecto Final de Carrera}}
 \rhead{\textit{\scriptsize \leftmark}}
 % Footer
 \lfoot{\scriptsize \textit{Meurzet, Matías - Perren, Leandro}}
@@ -229,18 +229,23 @@ De acuerdo a la extracción y análisis de distintos segmentos, se pudo observar q
 	\label{figura:segmento_1_minuto}
 \end{figure}
 
-Dada la baja resolución en amplitud y frecuencia de muestreo que presenta la señal en cuestión, no resulta conveniente extraer características frecuenciales como son la transformada de fourier, formantes o espectrogramas, entre otras, por lo que se debió buscar alguna característica temporal que sea representativa de los ronquidos. En consecuencia surgió la idea de medir la periodicidad de los eventos de ronquidos recién expuestos, a través de $T_0$, el período fundamental, partiendo de la hipótesis de que aquellos segmentos que contienen sonidos no deseados (todo lo que no sea ronquido), no presentan este patrón repetitivo. En la ecuacion \ref{ecuacion:autocorrelacion} se puede ver la formula para el cálculo de la autocorrelación, el valor N representa la cantidad de muestras del frame y el valor s representa el desplazamiento. La ecuación \ref{ecuacion:periodo_fundamental} describe la determinación del $T_0$, el cual se obtiene tomando el desplazamiento s que tiene el máximo valor en la autocorrelación. Por otro lado la necesidad de poder utilizar solamente análisis temporal presenta la ventaja de generar un mayor ahorro de tiempo y capacidad de procesamiento por no tener que transformar la señal al dominio frecuencial, permitiendo también utilizar señales de baja resolución lo que genera un menor costo de almacenamiento.
-
+Dada la baja resolución en amplitud y frecuencia de muestreo que presenta la señal en cuestión, no resulta conveniente extraer características frecuenciales como son la transformada de Fourier, formantes o espectrogramas, entre otras, por lo que se debió buscar alguna característica temporal que sea representativa de los ronquidos. En consecuencia surgió la idea de medir la periodicidad de los eventos de ronquidos, a través de $T_0$, el período fundamental, partiendo de la hipótesis de que aquellos segmentos que contienen sonidos no deseados (todo lo que no sea ronquido), no presentan este patrón repetitivo. La formula para el cálculo de la autocorrelación es 
 \begin{center}
 \begin{equation}
-corr(s) = \sum_{k=0}^{N}fragmento(k)*fragmento(k+s)
+ \Gamma{xx}_i[k] = \sum_{n=0}^{N}x_i[n]*x_i[n+k] 
 \label{ecuacion:autocorrelacion}
 \end{equation}
+\end{center}
+\noindent
+el valor $N$ representa la cantidad de muestras del segmento $x_i$ y el valor $k$ representa el desplazamiento. El $T_0$ se obtiene tomando el desplazamiento $k$ que tiene el máximo valor en la autocorrelación, es decir
+\begin{center}
 \begin{equation}
-T_0 = \max_{s} (corr(s))
+ T_0_i = \arg\max_{k} \{\Gamma{xx}_i[k]\}
 \label{ecuacion:periodo_fundamental}
 \end{equation}
 \end{center}
+\noindent 
+Poder utilizar solamente un análisis temporal presenta la ventaja de generar un mayor ahorro de tiempo y capacidad de procesamiento por no tener que transformar la señal al dominio frecuencial, permitiendo también utilizar señales de baja resolución lo que genera un menor costo de almacenamiento.
 
 Con el fin de utilizar el $T_0$ para diferenciar segmentos de ronquidos de aquellos que no lo son, resulta necesario analizar si el $T_0$ es una característica representativa de los ronquidos, en el sentido de que deberían presentar cierta homogeneidad en los valores obtenidos de segmentos provenientes de diferentes señales. Es por esto que en las siguientes secciones se presentan los resultados obtenidos de extraer segmentos de ronquidos de diferentes duraciones y de distintas señales de ambos sexos a los cuales se les calculó el correspondiente $T_0$.
 
@@ -546,7 +551,7 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 \end{figure}
 
 \section{Cantidad mínima de ronquidos por segmento}
-A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 1 min con ronquidos y se anexaron segmentos de 1 min para obtener así distintas duraciones, de 1, 2, 3 y 4 min que no contenían ronquidos. Luego se volvió a calcular el $T_0$ para cada posible combinación a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en la Tabla \ref{tabla:subsegmentos_t0}, no hay inconvenientes ya que cualquiera sea su duración, es decir, si es de 1, 2, 3, 4 o 5 min, el $T_0$ detectado es correcto, ya que prácticamente no presenta variaciones respecto al resultado global (de la señal completa).
+A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 1 min con ronquidos y se anexaron segmentos de 1 min para obtener así distintas duraciones. Luego se volvió a calcular el $T_0$ para cada posible combinación a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en la Tabla \ref{tabla:subsegmentos_t0}, el algoritmo no tuvo inconvenientes ya que cualquiera sea la duración, es decir, si es de 1, 2, 3, 4 o 5 min, el $T_0$ detectado es correcto.
 
 \begin{table}[H]
 	\begin{center}
@@ -1156,15 +1161,15 @@ Para el análisis de los valores pico, se realizó otra captura y se estimó la amp
 En este proyecto final se desarrolló una aplicación Android capaz de detectar eventos de ronquidos por medio del análisis de datos capturados vía el micrófono del dispositivo. El objetivo principal fue lograr una correcta detección utilizando métodos más inteligentes que los utilizados por las aplicaciones disponibles hasta el momento. Estas aplicaciones sólo realizan un análisis del nivel de energía de los datos capturados, generando un mal desempeño frente a condiciones ambientales de mucho ruido, siendo detectados y etiquetados como ronquidos.
 Primeramente se analizaron en detalle los ronquidos a fin de extraer alguna característica representativa de los mismos que permita poder detectarlos dentro de una grabación obtenida en ambientes cotidianos. Para ello se analizaron distintas señales EDF de personas de distinto sexo, obtenidas en estudios de sueño. De este análisis se demostró que el $T_0$ es una característica representativa de los ronquidos y que permite diferenciarlos de otros sonidos no deseados que pudieran presentarse en este tipo de grabaciones. Como resultado de esta etapa, mediante la extracción manual de segmentos etiquetados como ronquidos en las señales EDF y el cálculo de su correspondiente $T_0$, se concluye que el rango de valores del $T_0$ es de [3.50 - 4.70 s].
 
-Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado. Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas. Con estos resultados se puede ver que el desempeño es muy bueno, sobre todo en presencia de mucho ruido, superando el 90\% de aciertos, siendo muy baja la presencia de falsos positivos. Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
+Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado. Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas llegando a mas del 90\% en algunos casos. Con estos resultados se puede ver que el desempeño es muy bueno aún en presencia de mucho ruido. Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
 
-De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no sólo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas. Junto a la ayuda de un profesional de la medicina y aprovechando toda la potencialidad de los dispositivos móviles actuales, los mismos podrían complementar o hasta sustituir en un futuro a los actuales métodos de estudios de sueño, permitiendo que el paciente pueda realizar los mismos en su propia casa y sin tener que estar conectado a distintos dispositivos. Esto permitiría aumentar la comodidad del paciente al mismo tiempo que sería una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100 Hz y con un almacenamiento discreto. De ésta manera se pueden desarrollar dispositivos inteligentes integrables a la habitación de un individuo , que realicen comportamientos determinados según la detección realizada. Ejemplo de esto puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño.
+De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no sólo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas. Estos podrían complementar o hasta sustituir en un futuro a los actuales métodos de estudios de sueño. Permitiendo aumentar la comodidad del paciente teniendo una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100 Hz y con un almacenamiento discreto. De ésta manera se pueden desarrollar dispositivos inteligentes integrables a la habitación de un individuo , que realicen comportamientos determinados según la detección realizada. Ejemplo de esto puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño.
 
 \thispagestyle{empty}
 \chapter*{Bibliografia}
 \thispagestyle{empty}
 \addcontentsline{toc}{chapter}{Bibliografía} % esto añade el capitulo en el índice
-[1] PNEUMOWIKI, a enciclopedia de Neumología de contenido libre [consulta: 26 abril 2013]. Disponible en: \url{<http://es.pneumowiki.org/mediawiki/index.php?title=Ronquido>}
+[1] PNEUMOWIKI, la enciclopedia de Neumología de contenido libre [consulta: 26 abril 2013]. Disponible en: \url{<http://es.pneumowiki.org/mediawiki/index.php?title=Ronquido>}
 
 [2] RONCAR.ES, el ronquido simple y la apnea del sueño [consulta: 26 abril 2013]. Disponible en: \url{<http://roncopatia.roncar.es/>}
 
@@ -1172,7 +1177,7 @@ De esta manera se abre la posibilidad de trabajos futuros basados en el desarrol
 
 [4] NIH, U.S. National Library of Medicine [consulta: 27 abril 2013]. Disponible en: \url{<http://www.nlm.nih.gov/>}
 
-[5] ORTHOAPNEA, la solucion a los trastornos del sueño [consulta: 27 abril 2013]. Disponible en: \url{<http://www.orthoapnea.com/es/index.php>}
+[5] ORTHOAPNEA, la solución a los trastornos del sueño [consulta: 27 abril 2013]. Disponible en: \url{<http://www.orthoapnea.com/es/index.php>}
  
 [6] GOOGLE PLAY, aplicaciones de Android [consulta: 30 abril 2013]. Disponible en: \url{<https://play.google.com/store>}
 
@@ -1206,11 +1211,11 @@ De esta manera se abre la posibilidad de trabajos futuros basados en el desarrol
 
 [21] Dream Watcher - Anti Ronquidos. Aplicación para detectar ronquidos [consulta: 20 noviembre 2015]. Disponible en: \url{<https://play.google.com/store/apps/details?id=com.arcadexxi.dreamwatcher>}
 
-[22] Sommerville, Ian and Mari?a Isabel Alfonso Galipienso. Ingenieri?a Del Software. Madrid: Pearson Addison-Wesley, 2005.
+[22] Sommerville, Ian and María Isabel Alfonso Galipienso. Ingeniería Del Software. Madrid: Pearson Addison-Wesley, 2005.
 
-[23] MPAndroidChart. Libreria Android para generación de gráficos. Disponible en: \url{<https://github.com/PhilJay/MPAndroidChart/>}
+[23] MPAndroidChart. Librería Android para generación de gráficos. Disponible en: \url{<https://github.com/PhilJay/MPAndroidChart/>}
 
-[24] iText. Libreria Java para realizar archivos PDF. Disponible en: \url{<http://itextpdf.com/>} 
+[24] iText. Librería Java para realizar archivos PDF. Disponible en: \url{<http://itextpdf.com/>} 
 
 
 %==============================================================================
