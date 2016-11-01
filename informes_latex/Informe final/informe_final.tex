@@ -237,15 +237,15 @@ Dada la baja resolución en amplitud y frecuencia de muestreo que presenta la señ
 \end{equation}
 \end{center}
 \noindent
-el valor $N$ representa la cantidad de muestras del segmento $x_i$ y el valor $k$ representa el desplazamiento. El $T_0$ se obtiene tomando el desplazamiento $k$ que tiene el máximo valor en la autocorrelación, es decir
+donde el valor $N$ representa la cantidad de muestras del segmento $x_i$ y el valor $k$ representa el desplazamiento. El $T_0$ se obtiene tomando el desplazamiento $k$ que tiene el máximo valor en la autocorrelación, es decir
 \begin{center}
 \begin{equation}
- T_0_i = \arg\max_{k} \{\Gamma{xx}_i[k]\}
+ {T_0}_i = \arg\max_{k} \{\Gamma{xx}_i[k]\}
 \label{ecuacion:periodo_fundamental}
 \end{equation}
 \end{center}
 \noindent 
-Poder utilizar solamente un análisis temporal presenta la ventaja de generar un mayor ahorro de tiempo y capacidad de procesamiento por no tener que transformar la señal al dominio frecuencial, permitiendo también utilizar señales de baja resolución lo que genera un menor costo de almacenamiento.
+Por otro lado, poder utilizar solamente un análisis temporal presenta la ventaja de generar un mayor ahorro de tiempo y capacidad de procesamiento por no tener que transformar la señal al dominio frecuencial, permitiendo también utilizar señales de baja resolución lo que genera un menor costo de almacenamiento.
 
 Con el fin de utilizar el $T_0$ para diferenciar segmentos de ronquidos de aquellos que no lo son, resulta necesario analizar si el $T_0$ es una característica representativa de los ronquidos, en el sentido de que deberían presentar cierta homogeneidad en los valores obtenidos de segmentos provenientes de diferentes señales. Es por esto que en las siguientes secciones se presentan los resultados obtenidos de extraer segmentos de ronquidos de diferentes duraciones y de distintas señales de ambos sexos a los cuales se les calculó el correspondiente $T_0$.
 
@@ -551,7 +551,7 @@ En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto
 \end{figure}
 
 \section{Cantidad mínima de ronquidos por segmento}
-A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 1 min con ronquidos y se anexaron segmentos de 1 min para obtener así distintas duraciones. Luego se volvió a calcular el $T_0$ para cada posible combinación a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en la Tabla \ref{tabla:subsegmentos_t0}, el algoritmo no tuvo inconvenientes ya que cualquiera sea la duración, es decir, si es de 1, 2, 3, 4 o 5 min, el $T_0$ detectado es correcto.
+A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 1 min con ronquidos y se anexaron segmentos de 1 min para obtener así distintas duraciones totales. Luego se volvió a calcular el $T_0$ para cada posible combinación a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en la Tabla \ref{tabla:subsegmentos_t0}, el algoritmo no tuvo inconvenientes ya que cualquiera sea la duración, es decir, si es de 1, 2, 3, 4 o 5 min, el $T_0$ detectado es correcto.
 
 \begin{table}[H]
 	\begin{center}
