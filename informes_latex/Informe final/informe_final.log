@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.11)  31 OCT 2016 22:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.11)  2 NOV 2016 00:05
 entering extended mode
 **informe_final.tex
 ("C:\Users\matute\Desktop\PFC\informes_latex\Informe final\informe_final.tex"
@@ -455,7 +455,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17] <img/figure2.png, id=79, 1445.4pt x 724.95844pt>
+[17] <img/figure2.png, id=80, 1445.4pt x 724.95844pt>
 File: img/figure2.png Graphic file (type png)
  <use img/figure2.png>
 Package pdftex.def Info: img/figure2.png used on input line 263.
@@ -503,7 +503,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23] <img/figure3.png, id=99, 1445.4pt x 724.95844pt>
+[23] <img/figure3.png, id=100, 1445.4pt x 724.95844pt>
 File: img/figure3.png Graphic file (type png)
  <use img/figure3.png>
 Package pdftex.def Info: img/figure3.png used on input line 452.
@@ -515,13 +515,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24] <img/figure4.png, id=104, 1445.4pt x 724.95844pt>
+[24] <img/figure4.png, id=105, 1445.4pt x 724.95844pt>
 File: img/figure4.png Graphic file (type png)
  <use img/figure4.png>
 Package pdftex.def Info: img/figure4.png used on input line 459.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
 
-<img/figure5.png, id=105, 1445.4pt x 724.95844pt>
+<img/figure5.png, id=106, 1445.4pt x 724.95844pt>
 File: img/figure5.png Graphic file (type png)
  <use img/figure5.png>
 Package pdftex.def Info: img/figure5.png used on input line 466.
@@ -535,13 +535,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [25 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure3.png (
 PNG copy)> <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure
-4.png (PNG copy)>] <img/figure6.png, id=109, 1445.4pt x 724.95844pt>
+4.png (PNG copy)>] <img/figure6.png, id=110, 1445.4pt x 724.95844pt>
 File: img/figure6.png Graphic file (type png)
 
 <use img/figure6.png>
 Package pdftex.def Info: img/figure6.png used on input line 473.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
- <img/figure7.png, id=110, 1199.98312pt x 596.98032pt>
+ <img/figure7.png, id=111, 1199.98312pt x 596.98032pt>
 File: img/figure7.png Graphic file (type png)
 
 <use img/figure7.png>
@@ -556,13 +556,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [26 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure5.png (
 PNG copy)> <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure
-6.png (PNG copy)>] <img/figure8.png, id=114, 1445.4pt x 724.95844pt>
+6.png (PNG copy)>] <img/figure8.png, id=115, 1445.4pt x 724.95844pt>
 File: img/figure8.png Graphic file (type png)
 
 <use img/figure8.png>
 Package pdftex.def Info: img/figure8.png used on input line 491.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
- <img/figure9.png, id=115, 1445.4pt x 724.95844pt>
+ <img/figure9.png, id=116, 1445.4pt x 724.95844pt>
 File: img/figure9.png Graphic file (type png)
 
 <use img/figure9.png>
@@ -577,7 +577,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [27 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure7.png> 
 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure8.png (PNG 
-copy)>] <img/figure10.png, id=119, 1445.4pt x 724.95844pt>
+copy)>] <img/figure10.png, id=120, 1445.4pt x 724.95844pt>
 File: img/figure10.png Graphic file (type png)
 
 <use img/figure10.png>
@@ -592,7 +592,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [28 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure9.png (
 PNG copy)> <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure
-10.png (PNG copy)>] <img/figure11.png, id=123, 328.22626pt x 405.01312pt>
+10.png (PNG copy)>] <img/figure11.png, id=124, 328.22626pt x 405.01312pt>
 File: img/figure11.png Graphic file (type png)
 
 <use img/figure11.png>
@@ -605,7 +605,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29] <img/figure12.png, id=127, 713.66624pt x 548.0475pt>
+[29] <img/figure12.png, id=128, 713.66624pt x 548.0475pt>
 File: img/figure12.png Graphic file (type png)
 
 <use img/figure12.png>
@@ -620,13 +620,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [30 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure11.png>
  <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/figure12.png>]
-<img/figure13.png, id=134, 1445.4pt x 724.95844pt>
+<img/figure13.png, id=135, 1445.4pt x 724.95844pt>
 File: img/figure13.png Graphic file (type png)
  <use img/figure13.png>
 Package pdftex.def Info: img/figure13.png used on input line 541.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
 
-<img/figure14.png, id=135, 1445.4pt x 724.95844pt>
+<img/figure14.png, id=136, 1445.4pt x 724.95844pt>
 File: img/figure14.png Graphic file (type png)
  <use img/figure14.png>
 Package pdftex.def Info: img/figure14.png used on input line 548.
@@ -704,7 +704,7 @@ Package epstopdf Info: Source file: <img/flujo.eps>
 pdf img/flujo.eps>
 (epstopdf)             \includegraphics on input line 758.
 Package epstopdf Info: Output file is already uptodate.
- <img/flujo-eps-converted-to.pdf, id=163, 598.235pt x 1079.03125pt>
+ <img/flujo-eps-converted-to.pdf, id=164, 598.235pt x 1079.03125pt>
 File: img/flujo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/flujo-eps-converted-to.pdf>
@@ -729,7 +729,7 @@ Package epstopdf Info: Source file: <img/CU.eps>
  img/CU.eps>
 (epstopdf)             \includegraphics on input line 768.
 Package epstopdf Info: Output file is already uptodate.
- <img/CU-eps-converted-to.pdf, id=167, 982.67125pt x 640.3925pt>
+ <img/CU-eps-converted-to.pdf, id=168, 982.67125pt x 640.3925pt>
 File: img/CU-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/CU-eps-converted-to.pdf>
@@ -773,7 +773,7 @@ Package epstopdf Info: Source file: <img/secuencia.eps>
 -to.pdf img/secuencia.eps>
 (epstopdf)             \includegraphics on input line 876.
 Package epstopdf Info: Output file is already uptodate.
- <img/secuencia-eps-converted-to.pdf, id=186, 934.49126pt x 665.48625pt>
+ <img/secuencia-eps-converted-to.pdf, id=187, 934.49126pt x 665.48625pt>
 File: img/secuencia-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/secuencia-eps-converted-to.pdf>
@@ -800,7 +800,7 @@ pdf img/obj_1.eps>
 (epstopdf)             \includegraphics on input line 887.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/obj_1-eps-converted-to.pdf, id=194, 1360.08125pt x 989.6975pt>
+<img/obj_1-eps-converted-to.pdf, id=195, 1360.08125pt x 989.6975pt>
 File: img/obj_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/obj_1-eps-converted-to.pdf>
@@ -822,7 +822,7 @@ Package epstopdf Info: Source file: <img/obj_2.eps>
 pdf img/obj_2.eps>
 (epstopdf)             \includegraphics on input line 894.
 Package epstopdf Info: Output file is already uptodate.
-<img/obj_2-eps-converted-to.pdf, id=195, 1218.5525pt x 714.67pt>
+<img/obj_2-eps-converted-to.pdf, id=196, 1218.5525pt x 714.67pt>
 File: img/obj_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/obj_2-eps-converted-to.pdf>
@@ -848,7 +848,7 @@ Package epstopdf Info: Source file: <img/obj_3.eps>
 pdf img/obj_3.eps>
 (epstopdf)             \includegraphics on input line 901.
 Package epstopdf Info: Output file is already uptodate.
- <img/obj_3-eps-converted-to.pdf, id=203, 827.09pt x 505.89pt>
+ <img/obj_3-eps-converted-to.pdf, id=204, 827.09pt x 505.89pt>
 File: img/obj_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/obj_3-eps-converted-to.pdf>
@@ -866,7 +866,7 @@ to.pdf img/objetos2.eps>
 (epstopdf)             \includegraphics on input line 908.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/objetos2-eps-converted-to.pdf, id=204, 1513.655pt x 1313.90875pt>
+<img/objetos2-eps-converted-to.pdf, id=205, 1513.655pt x 1313.90875pt>
 File: img/objetos2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/objetos2-eps-converted-to.pdf>
@@ -883,7 +883,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [45 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/obj_2-eps-con
 verted-to.pdf> <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/ob
 j_3-eps-converted-to.pdf>]
-<img/screen1.png, id=216, 239.39438pt x 398.23781pt>
+<img/screen1.png, id=217, 239.39438pt x 398.23781pt>
 File: img/screen1.png Graphic file (type png)
  <use img/screen1.png>
 Package pdftex.def Info: img/screen1.png used on input line 921.
@@ -896,13 +896,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [46 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/objetos2-eps-
-converted-to.pdf>] <img/screen2.png, id=224, 239.39438pt x 398.23781pt>
+converted-to.pdf>] <img/screen2.png, id=225, 239.39438pt x 398.23781pt>
 File: img/screen2.png Graphic file (type png)
 
 <use img/screen2.png>
 Package pdftex.def Info: img/screen2.png used on input line 928.
 (pdftex.def)             Requested size: 179.54533pt x 298.67761pt.
- <img/screen3.png, id=225, 241.65282pt x 401.24907pt>
+ <img/screen3.png, id=226, 241.65282pt x 401.24907pt>
 File: img/screen3.png Graphic file (type png)
 
 <use img/screen3.png>
@@ -917,7 +917,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [47 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/screen1.png> 
 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/screen2.png>]
-<img/screen4.png, id=229, 239.39438pt x 395.22656pt>
+<img/screen4.png, id=230, 239.39438pt x 395.22656pt>
 File: img/screen4.png Graphic file (type png)
  <use img/screen4.png>
 Package pdftex.def Info: img/screen4.png used on input line 942.
@@ -931,13 +931,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [48 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/screen3.png> 
 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/screen4.png>]
-<img/screen5.png, id=234, 451.6875pt x 770.88pt>
+<img/screen5.png, id=235, 451.6875pt x 770.88pt>
 File: img/screen5.png Graphic file (type png)
  <use img/screen5.png>
 Package pdftex.def Info: img/screen5.png used on input line 951.
 (pdftex.def)             Requested size: 234.73524pt x 400.62466pt.
 
-<img/screen6.png, id=235, 451.6875pt x 770.88pt>
+<img/screen6.png, id=236, 451.6875pt x 770.88pt>
 File: img/screen6.png Graphic file (type png)
  <use img/screen6.png>
 Package pdftex.def Info: img/screen6.png used on input line 958.
@@ -950,7 +950,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [49 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/screen5.png>]
-<img/screen_grafico1.png, id=240, 451.6875pt x 274.02374pt>
+<img/screen_grafico1.png, id=241, 451.6875pt x 274.02374pt>
 File: img/screen_grafico1.png Graphic file (type png)
 
 <use img/screen_grafico1.png>
@@ -964,7 +964,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [50 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/screen6.png>]
-<img/screen_grafico3.png, id=245, 450.9347pt x 527.72156pt>
+<img/screen_grafico3.png, id=246, 450.9347pt x 527.72156pt>
 File: img/screen_grafico3.png Graphic file (type png)
 
 <use img/screen_grafico3.png>
@@ -979,14 +979,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [51 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/screen_grafic
 o1.png> <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/screen_gr
-afico3.png>] <img/screen_grafico4.png, id=251, 450.9347pt x 643.6547pt>
+afico3.png>] <img/screen_grafico4.png, id=252, 450.9347pt x 643.6547pt>
 File: img/screen_grafico4.png Graphic file (type png)
 
 <use img/screen_grafico4.png>
 Package pdftex.def Info: img/screen_grafico4.png used on input line 988.
 (pdftex.def)             Requested size: 234.73524pt x 335.05594pt.
 
-<img/screen_grafico5.png, id=252, 433.62pt x 488.57532pt>
+<img/screen_grafico5.png, id=253, 433.62pt x 488.57532pt>
 File: img/screen_grafico5.png Graphic file (type png)
 
 <use img/screen_grafico5.png>
@@ -1000,7 +1000,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52 <C:/Users/matute/Desktop/PFC/informes_latex/Informe final/img/screen_grafic
-o4.png>] <img/screen_grafico6.png, id=257, 432.11438pt x 590.95781pt>
+o4.png>] <img/screen_grafico6.png, id=258, 432.11438pt x 590.95781pt>
 File: img/screen_grafico6.png Graphic file (type png)
 
 <use img/screen_grafico6.png>
@@ -1264,37 +1264,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [88]
-("C:\Users\matute\Desktop\PFC\informes_latex\Informe final\informe_final.aux") 
-) 
+("C:\Users\matute\Desktop\PFC\informes_latex\Informe final\informe_final.aux")
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4223 strings out of 493921
- 60968 string characters out of 3144873
+ 4227 strings out of 493921
+ 61024 string characters out of 3144873
  140938 words of memory out of 3000000
- 7390 multiletter control sequences out of 15000+200000
+ 7394 multiletter control sequences out of 15000+200000
  16570 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  42i,21n,43p,2118b,607s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy8.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on informe_final.pdf (89 pages, 1326718 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy8
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on informe_final.pdf (89 pages, 1334620 bytes).
 PDF statistics:
- 434 PDF objects out of 1000 (max. 8388607)
+ 438 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

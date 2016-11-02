@@ -229,10 +229,10 @@ De acuerdo a la extracción y análisis de distintos segmentos, se pudo observar q
 	\label{figura:segmento_1_minuto}
 \end{figure}
 
-Dada la baja resolución en amplitud y frecuencia de muestreo que presenta la señal en cuestión, no resulta conveniente extraer características frecuenciales como son la transformada de Fourier, formantes o espectrogramas, entre otras, por lo que se debió buscar alguna característica temporal que sea representativa de los ronquidos. En consecuencia surgió la idea de medir la periodicidad de los eventos de ronquidos, a través de $T_0$, el período fundamental, partiendo de la hipótesis de que aquellos segmentos que contienen sonidos no deseados (todo lo que no sea ronquido), no presentan este patrón repetitivo. La formula para el cálculo de la autocorrelación es 
+Dada la baja resolución en amplitud y frecuencia de muestreo que presenta la señal en cuestión, no resulta conveniente extraer características frecuenciales como son la transformada de Fourier, formantes o espectrogramas, entre otras, por lo que se debió buscar alguna característica temporal que sea representativa de los ronquidos. En consecuencia surgió la idea de medir la periodicidad de los eventos de ronquidos a través de $T_0$, el período fundamental, partiendo de la hipótesis de que aquellos segmentos que contienen sonidos no deseados (todo lo que no sea ronquido), no presentan este patrón repetitivo. La formula para el cálculo de la autocorrelación es 
 \begin{center}
 \begin{equation}
- \Gamma{xx}_i[k] = \sum_{n=0}^{N}x_i[n]*x_i[n+k] 
+ \Gamma_{xx_i}[k] = \sum_{n=0}^{N}x_i[n]x_i[n+k],
 \label{ecuacion:autocorrelacion}
 \end{equation}
 \end{center}
@@ -240,7 +240,7 @@ Dada la baja resolución en amplitud y frecuencia de muestreo que presenta la señ
 donde el valor $N$ representa la cantidad de muestras del segmento $x_i$ y el valor $k$ representa el desplazamiento. El $T_0$ se obtiene tomando el desplazamiento $k$ que tiene el máximo valor en la autocorrelación, es decir
 \begin{center}
 \begin{equation}
- {T_0}_i = \arg\max_{k} \{\Gamma{xx}_i[k]\}
+ {T_0}_i = \arg\max_{k} \{\Gamma_{xx_i}[k]\}.
 \label{ecuacion:periodo_fundamental}
 \end{equation}
 \end{center}
