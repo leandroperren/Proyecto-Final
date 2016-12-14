@@ -8,29 +8,29 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
-import com.gc.materialdesign.views.ButtonFlat;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 
 public class OnBoardingActivity extends FragmentActivity {
 
     private ViewPager pager;
     private SmartTabLayout indicator;
-    private ButtonFlat skip;
-    private ButtonFlat next;
+    private Button skip;
+    private Button next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.onboarding);
 
-        pager = (ViewPager) findViewById(R.id.pager);
+        pager     = (ViewPager) findViewById(R.id.pager);
         indicator = (SmartTabLayout) findViewById(R.id.indicator);
-        skip = (ButtonFlat) findViewById(R.id.skip);
-        next = (ButtonFlat) findViewById(R.id.next);
+        skip      = (Button) findViewById(R.id.skip);
+        next      = (Button) findViewById(R.id.next);
 
         // Crear un adaptador (Adapter) para poder desplegar las Pantallas creadas
-        FragmentStatePagerAdapter adapter = new FragmentStatePagerAdapter(getSupportFragmentManager()) {
+        final FragmentStatePagerAdapter adapter = new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
                 switch (position) {
@@ -66,7 +66,8 @@ public class OnBoardingActivity extends FragmentActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (pager.getCurrentItem() == 2) {
+                int c = adapter.getCount() - 1; // tiene indice en 0
+                if (pager.getCurrentItem() == c) {
                     // Esta es la ultima pantalla
                     finishOnboarding();
                 } else {
@@ -84,12 +85,12 @@ public class OnBoardingActivity extends FragmentActivity {
         indicator.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
-                if (position == 2) {
+                if (position == (adapter.getCount() - 1)) {
                     skip.setVisibility(View.GONE);
-                    next.setText("Done");
+                    next.setText("Listo");
                 } else {
                     skip.setVisibility(View.VISIBLE);
-                    next.setText("Next");
+                    next.setText("Siguiente");
                 }
             }
         });

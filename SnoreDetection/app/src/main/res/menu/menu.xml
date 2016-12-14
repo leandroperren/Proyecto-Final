@@ -6,13 +6,13 @@
 
     <item
         android:id="@+id/action_settings"
-        android:title="Settings"
+        android:title="Configuraciones"
         android:orderInCategory="100"
         android:showAsAction="never" />
 
     <item
         android:id="@+id/help_screen"
-        android:title="Tutorial de Ayuda"
+        android:title="Ayuda"
         android:orderInCategory="50"
-        android:showAsAction="always" />
+        android:showAsAction="never" />
 </menu>

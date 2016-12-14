@@ -18,19 +18,22 @@
         android:layout_alignParentBottom="true"
         android:id="@+id/navigation">
 
-        <com.gc.materialdesign.views.ButtonFlat
-            android:layout_width="0dp"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Skip"
-            android:id="@+id/skip"/>
-
-        <com.gc.materialdesign.views.ButtonFlat
-            android:layout_width="0dp"
+            android:text="Saltar"
+            android:id="@+id/skip"
+            style="?attr/borderlessButtonStyle"
+            android:textColor="@color/colorAccent"/>
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="Next"
-            android:id="@+id/next"/>
+            android:text="Siguiente"
+            android:id="@+id/next"
+            style="?attr/borderlessButtonStyle"
+            android:textColor="@color/colorAccent"/>
 
     </LinearLayout>
 

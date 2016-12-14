@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Snore Detection</string>
+    <string name="title_main_activity_name">Resultados</string>
     <string name="title_activity_record">RecordActivity</string>
     <string name="btn_iniciar">Iniciar</string>
     <string name="btn_detener">Detener</string>
+
+    <!-- Pantalla 1 del onBoarding -->
+    <string name="ob_1_title">Bienvenido!</string>
+    <string name="ob_1_description">A continuación se presentarán algunas características de la aplicación.</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
 </resources>

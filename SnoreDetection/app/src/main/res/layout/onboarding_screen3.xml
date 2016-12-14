@@ -6,18 +6,30 @@
     android:padding="@dimen/activity_vertical_margin"
     android:gravity="center_horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Pantalla III"
-        android:textSize="48sp"
-        android:layout_marginTop="50dp"/>
+        android:src="@drawable/pie"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="0dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:layout_marginTop="20dp"
-        android:text="Agregar grafico y texto segun se necesite"/>
+        android:text="Gráficos post captura"
+        android:textSize="30sp"
+        android:layout_marginTop="0dp"
+        android:textColor="#5F5F5F"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar grafico y texto segun se necesite"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#8F8F8F"
+        android:textAlignment="center"/>
 
 </LinearLayout>

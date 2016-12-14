@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#f44336</color>
+    <color name="colorPrimaryDark">#d32f2f</color>
+    <color name="colorAccent">#1976d2</color>
+
+    <!-- Colores para registro de ronquido segun nivel de deteccion -->
+    <color name="colorRed">#d32f2f</color>
+    <color name="colorYellow">#FBC02D</color>
+    <color name="colorGreen">#388E3C</color>
 </resources>
