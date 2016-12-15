@@ -6,9 +6,12 @@ import android.database.Cursor;
 
 import java.util.ArrayList;
 
+import edu.fich.pfcii.snoredetection.helper.Helper;
 import edu.fich.pfcii.snoredetection.model.Snore;
 
 public class DatabaseManagerSnore extends DatabaseManager {
+
+    private Helper helper = new Helper();
 
     private static final String TABLE_NAME = "snore";
     private static final String ID = "id";
@@ -49,12 +52,12 @@ public class DatabaseManagerSnore extends DatabaseManager {
     }
 
     @Override
-    void insertar(String hora_inicio, String hora_fin, String t0, String amplitud, String tiempo) {
+    public void insertar(String hora_inicio, String hora_fin, String t0, String amplitud, String tiempo) {
         super.getDb().insert(TABLE_NAME, null, generarContentValues(hora_inicio, hora_fin, t0, amplitud, tiempo));
     }
 
     @Override
-    void actualizar(String id, String hora_inicio, String hora_fin, String t0, String amplitud, String tiempo) {
+    public void actualizar(String id, String hora_inicio, String hora_fin, String t0, String amplitud, String tiempo) {
         ContentValues valores = new ContentValues();
         valores.put(ID, id);
         valores.put(HORA_INICIO, hora_inicio);
@@ -106,19 +109,20 @@ public class DatabaseManagerSnore extends DatabaseManager {
         // Cargar el curson con todos los datos de la DB
         Cursor c = cargarCursor();
         // Recorrer el cursor y cargar la lista con los objetos
-        while (c.moveToNext()) {
-            Snore snore = new Snore();
-            // Setear el objeto con todos los valores obtenidos desde la DB
-            snore.setId(c.getString(0));
-            snore.setHora_inicio(c.getInt(1));
-            snore.setHora_fin(c.getInt(2));
-            snore.setT0(snore.getDoubleFromString(c.getString(3)));
-            snore.setAmplitud(snore.getDoubleFromString(c.getString(4)));
-            snore.setTiempo(snore.getIntegerFromString(c.getString(5)));
-            // Cargar este objeto seteado en la lista
-            list.add(snore);
+        if (c != null) {
+            while (c.moveToNext()) {
+                Snore snore = new Snore();
+                // Setear el objeto con todos los valores obtenidos desde la DB
+                snore.setId(c.getString(0));
+                snore.setHora_inicio(c.getInt(1));
+                snore.setHora_fin(c.getInt(2));
+                snore.setT0(helper.getDoubleFromString(c.getString(3)));
+                snore.setAmplitud(helper.getDoubleFromString(c.getString(4)));
+                snore.setTiempo(helper.getIntegerFromString(c.getString(5)));
+                // Cargar este objeto seteado en la lista
+                list.add(snore);
+            }
         }
-
         return list;
     }
 }
