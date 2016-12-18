@@ -321,6 +321,9 @@ import java.util.ArrayList;
                     enableButtons(false);
                     stopRecording();
 
+                    //Creamos el Intent
+                    Intent intent = new Intent(RecordActivity.this, tabs.class);
+                    startActivity(intent);
                     break;
                 }
             }

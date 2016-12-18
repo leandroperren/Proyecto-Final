@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TabHost android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TabWidget android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@android:id/tabs" />
+
+            <FrameLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@android:id/tabcontent" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView" >
+
+                <LinearLayout android:id="@+id/tab1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ff0093ff"
+                        android:textColor="#ffffff"
+                        android:paddingTop="10dp"
+                        android:textSize="20sp"
+                        android:gravity="center" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                                android:id="@+id/barchart"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp"
+                                android:layout_marginTop="10dp" />
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/piechart"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp" />
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/piechart2"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp" />
+
+                    <Button
+                        android:id="@+id/btnPdf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Generar PDF"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+                <LinearLayout android:id="@+id/tab2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ff0093ff"
+                        android:textColor="#ffffff"
+                        android:paddingTop="10dp"
+                        android:textSize="20sp"
+                        android:gravity="center" />
+
+                    <TextView android:id="@+id/textDetalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="DETALLE DE SEGMENTOS DETECTADOS"
+                        android:textSize="20sp"
+                        android:padding="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="HORA COMIENZO -- INTENSIDAD"
+                        android:textSize="20sp"
+                        android:padding="5dp"/>
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/listview"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
