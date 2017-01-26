@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  17 JAN 2017 20:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  25 JAN 2017 20:58
 entering extended mode
 **informe_final.tex
 (informe_final.tex
@@ -233,10 +233,7 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip58
 \thanksmargin=\skip59
 \droptitle=\skip60
-) (informe_final.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
-)
+) (informe_final.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
@@ -443,6 +440,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 Cap\'{\i }tulo 2.
+
+LaTeX Warning: Reference `figura:segmento_1_minuto' on page 16 undefined on input line 223.
+
 <img/figure1.png, id=69, 746.03719pt x 210.7875pt>
 File: img/figure1.png Graphic file (type png)
  <use img/figure1.png>
@@ -453,9 +453,12 @@ Package pdftex.def Info: img/figure1.png used on input line 227.
  <./img/figure1.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <17.28> on input line 253.
+
+
+LaTeX Warning: Reference `figura:segmento_ronquido_autocorr' on page 17 undefined on input line 259.
+
 LaTeX Info: Redefining \. on input line 261.
 LaTeX Info: Redefining \% on input line 261.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -467,9 +470,15 @@ File: img/figure2.png Graphic file (type png)
  <use img/figure2.png>
 Package pdftex.def Info: img/figure2.png used on input line 263.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
+
+
+LaTeX Warning: Reference `tabla:t0_f0_1_minuto' on page 18 undefined on input line 268.
+
+
+LaTeX Warning: Reference `tabla:t0_f0_1_minuto' on page 18 undefined on input line 268.
+
 LaTeX Info: Redefining \. on input line 288.
 LaTeX Info: Redefining \% on input line 288.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -477,9 +486,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18 <./img/figure2.png (PNG copy)>]
+
+LaTeX Warning: Reference `tabla:desvios_estandar_t0' on page 19 undefined on input line 289.
+
+
+LaTeX Warning: Reference `tabla:segmentos_1_minuto_hombres' on page 19 undefined on input line 309.
+
+
+LaTeX Warning: Reference `tabla:media_desvio_t0_dist_duraciones' on page 19 undefined on input line 309.
+
+
+LaTeX Warning: Reference `tabla:media_desvio_t0_dist_duraciones' on page 19 undefined on input line 311.
+
 LaTeX Info: Redefining \. on input line 312.
 LaTeX Info: Redefining \% on input line 312.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -487,9 +507,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
+
+LaTeX Warning: Reference `tabla:media_desvio_t0_dist_duraciones' on page 20 undefined on input line 313.
+
 LaTeX Info: Redefining \. on input line 353.
 LaTeX Info: Redefining \% on input line 353.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -507,9 +529,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
+
+LaTeX Warning: Reference `tabla:desv_estandar_t0_mujeres' on page 22 undefined on input line 375.
+
+
+LaTeX Warning: Reference `tabla:media_desv_t0_mujeres' on page 22 undefined on input line 395.
+
 LaTeX Info: Redefining \. on input line 415.
 LaTeX Info: Redefining \% on input line 415.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -517,16 +544,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
+
+LaTeX Warning: Reference `tabla:media_desv_t0_hombre_mujer' on page 23 undefined on input line 421.
+
 LaTeX Info: Redefining \. on input line 444.
 LaTeX Info: Redefining \% on input line 444.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23] <img/figure3.png, id=100, 1445.4pt x 724.95844pt>
+[23]
+
+LaTeX Warning: Reference `figura:ruido1_1_minuto' on page 24 undefined on input line 447.
+
+
+LaTeX Warning: Reference `figura:ruido2_1_minuto' on page 24 undefined on input line 448.
+
+
+LaTeX Warning: Reference `figura:ruido3_1_minuto' on page 24 undefined on input line 448.
+
+
+LaTeX Warning: Reference `figura:ruido4_1_minuto' on page 24 undefined on input line 448.
+
+<img/figure3.png, id=100, 1445.4pt x 724.95844pt>
 File: img/figure3.png Graphic file (type png)
  <use img/figure3.png>
 Package pdftex.def Info: img/figure3.png used on input line 452.
@@ -566,7 +608,23 @@ File: img/figure6.png Graphic file (type png)
 <use img/figure6.png>
 Package pdftex.def Info: img/figure6.png used on input line 473.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
- <img/figure7.png, id=111, 1199.98312pt x 596.98032pt>
+
+
+LaTeX Warning: Reference `figura:ruido1_1_minuto' on page 26 undefined on input line 478.
+
+
+LaTeX Warning: Reference `figura:ruido2_1_minuto' on page 26 undefined on input line 478.
+
+
+LaTeX Warning: Reference `figura:ruido3_1_minuto' on page 26 undefined on input line 478.
+
+
+LaTeX Warning: Reference `figura:ruido4_1_minuto' on page 26 undefined on input line 478.
+
+
+LaTeX Warning: Reference `figura:autocorrelacion_ruido_ronquidos' on page 26 undefined on input line 478.
+
+<img/figure7.png, id=111, 1199.98312pt x 596.98032pt>
 File: img/figure7.png Graphic file (type png)
  <use img/figure7.png>
 Package pdftex.def Info: img/figure7.png used on input line 482.
@@ -580,13 +638,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26 <./img/figure5.png (PNG copy)> <./img/figure6.png (PNG copy)>] <img/figure8.png, id=115, 1445.4pt x 724.95844pt>
-File: img/figure8.png Graphic file (type png)
+[26 <./img/figure5.png (PNG copy)> <./img/figure6.png (PNG copy)>]
 
-<use img/figure8.png>
+LaTeX Warning: Reference `figura:ruido1_5minuto' on page 27 undefined on input line 487.
+
+
+LaTeX Warning: Reference `figura:ruido2_5minuto' on page 27 undefined on input line 487.
+
+
+LaTeX Warning: Reference `figura:ruido3_5minuto' on page 27 undefined on input line 487.
+
+<img/figure8.png, id=115, 1445.4pt x 724.95844pt>
+File: img/figure8.png Graphic file (type png)
+ <use img/figure8.png>
 Package pdftex.def Info: img/figure8.png used on input line 491.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
- <img/figure9.png, id=116, 1445.4pt x 724.95844pt>
+
+<img/figure9.png, id=116, 1445.4pt x 724.95844pt>
 File: img/figure9.png Graphic file (type png)
  <use img/figure9.png>
 Package pdftex.def Info: img/figure9.png used on input line 498.
@@ -606,9 +674,18 @@ File: img/figure10.png Graphic file (type png)
 <use img/figure10.png>
 Package pdftex.def Info: img/figure10.png used on input line 505.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
+
+
+LaTeX Warning: Reference `figura:ruido1_5minuto' on page 28 undefined on input line 511.
+
+
+LaTeX Warning: Reference `figura:ruido2_5minuto' on page 28 undefined on input line 511.
+
+
+LaTeX Warning: Reference `figura:ruido3_5minuto' on page 28 undefined on input line 511.
+
 LaTeX Info: Redefining \. on input line 512.
 LaTeX Info: Redefining \% on input line 512.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -616,6 +693,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28 <./img/figure9.png (PNG copy)> <./img/figure10.png (PNG copy)>]
+
+LaTeX Warning: Reference `figura:funciones_recorte' on page 29 undefined on input line 516.
+
+
+LaTeX Warning: Reference `figura:autocor_funciones_recorte' on page 29 undefined on input line 518.
+
 <img/figure11.png, id=124, 328.22626pt x 405.01312pt>
 File: img/figure11.png Graphic file (type png)
  <use img/figure11.png>
@@ -635,9 +718,15 @@ File: img/figure12.png Graphic file (type png)
  <use img/figure12.png>
 Package pdftex.def Info: img/figure12.png used on input line 531.
 (pdftex.def)             Requested size: 469.47049pt x 360.52498pt.
+
+
+LaTeX Warning: Reference `figura:autocor_funciones_recorte2' on page 30 undefined on input line 536.
+
+
+LaTeX Warning: Reference `figura:autocor_funciones_recorte3' on page 30 undefined on input line 536.
+
 LaTeX Info: Redefining \. on input line 537.
 LaTeX Info: Redefining \% on input line 537.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -665,9 +754,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [31 <./img/figure13.png>]
+
+LaTeX Warning: Reference `tabla:subsegmentos_t0' on page 32 undefined on input line 554.
+
 LaTeX Info: Redefining \. on input line 583.
 LaTeX Info: Redefining \% on input line 583.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -675,9 +766,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32 <./img/figure14.png>]
+
+LaTeX Warning: Reference `tabla:cantidad_minima_t0' on page 33 undefined on input line 585.
+
 LaTeX Info: Redefining \. on input line 605.
 LaTeX Info: Redefining \% on input line 605.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -685,9 +778,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
+
+LaTeX Warning: Reference `tabla:clasificador_matlab' on page 34 undefined on input line 610.
+
+
+LaTeX Warning: Reference `tabla:falsos_negativos_matlab' on page 34 undefined on input line 612.
+
+
+LaTeX Warning: Reference `tabla:falsos_positivos_matlab' on page 34 undefined on input line 614.
+
+
+LaTeX Warning: Reference `tabla:clasificador_matlab_verificacion' on page 34 undefined on input line 616.
+
 LaTeX Info: Redefining \. on input line 617.
 LaTeX Info: Redefining \% on input line 617.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -723,10 +827,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [37
 
 ]
-LaTeX Info: Redefining \. on input line 749.
-LaTeX Info: Redefining \% on input line 749.
+LaTeX Info: Redefining \. on input line 746.
+LaTeX Info: Redefining \% on input line 746.
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 749.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 746.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -742,15 +846,15 @@ Package epstopdf Info: Source file: <img/flujo.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
 (epstopdf)                    size: 4196 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/flujo-eps-converted-to.pdf img/flujo.eps>
-(epstopdf)             \includegraphics on input line 758.
+(epstopdf)             \includegraphics on input line 762.
 Package epstopdf Info: Output file is already uptodate.
  <img/flujo-eps-converted-to.pdf, id=164, 598.235pt x 1079.03125pt>
 File: img/flujo-eps-converted-to.pdf Graphic file (type pdf)
  <use img/flujo-eps-converted-to.pdf>
-Package pdftex.def Info: img/flujo-eps-converted-to.pdf used on input line 758.
+Package pdftex.def Info: img/flujo-eps-converted-to.pdf used on input line 762.
 (pdftex.def)             Requested size: 299.11676pt x 539.51431pt.
-LaTeX Info: Redefining \. on input line 762.
-LaTeX Info: Redefining \% on input line 762.
+LaTeX Info: Redefining \. on input line 766.
+LaTeX Info: Redefining \% on input line 766.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -759,6 +863,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [39]
+
+LaTeX Warning: Reference `figura:caso_uso' on page 40 undefined on input line 768.
+
 Package epstopdf Info: Source file: <img/CU.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
 (epstopdf)                    size: 16545 bytes
@@ -766,20 +873,20 @@ Package epstopdf Info: Source file: <img/CU.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
 (epstopdf)                    size: 4414 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/CU-eps-converted-to.pdf img/CU.eps>
-(epstopdf)             \includegraphics on input line 768.
+(epstopdf)             \includegraphics on input line 772.
 Package epstopdf Info: Output file is already uptodate.
- <img/CU-eps-converted-to.pdf, id=168, 982.67125pt x 640.3925pt>
+<img/CU-eps-converted-to.pdf, id=168, 982.67125pt x 640.3925pt>
 File: img/CU-eps-converted-to.pdf Graphic file (type pdf)
  <use img/CU-eps-converted-to.pdf>
-Package pdftex.def Info: img/CU-eps-converted-to.pdf used on input line 768.
+Package pdftex.def Info: img/CU-eps-converted-to.pdf used on input line 772.
 (pdftex.def)             Requested size: 491.33443pt x 320.19547pt.
 
-Overfull \hbox (21.86394pt too wide) in paragraph at lines 768--769
+Overfull \hbox (21.86394pt too wide) in paragraph at lines 772--773
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 772.
-LaTeX Info: Redefining \% on input line 772.
+LaTeX Info: Redefining \. on input line 776.
+LaTeX Info: Redefining \% on input line 776.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -787,8 +894,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [40 <./img/flujo-eps-converted-to.pdf>]
-LaTeX Info: Redefining \. on input line 823.
-LaTeX Info: Redefining \% on input line 823.
+LaTeX Info: Redefining \. on input line 827.
+LaTeX Info: Redefining \% on input line 827.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -797,8 +904,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41 <./img/CU-eps-converted-to.pdf>]
-LaTeX Info: Redefining \. on input line 870.
-LaTeX Info: Redefining \% on input line 870.
+LaTeX Info: Redefining \. on input line 874.
+LaTeX Info: Redefining \% on input line 874.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -807,6 +914,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
+
+LaTeX Warning: Reference `figura:diagrama_secuencia' on page 43 undefined on input line 876.
+
 Package epstopdf Info: Source file: <img/secuencia.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
 (epstopdf)                    size: 19304 bytes
@@ -814,16 +924,28 @@ Package epstopdf Info: Source file: <img/secuencia.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
 (epstopdf)                    size: 4333 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/secuencia-eps-converted-to.pdf img/secuencia.eps>
-(epstopdf)             \includegraphics on input line 876.
+(epstopdf)             \includegraphics on input line 880.
 Package epstopdf Info: Output file is already uptodate.
- <img/secuencia-eps-converted-to.pdf, id=187, 934.49126pt x 665.48625pt>
+<img/secuencia-eps-converted-to.pdf, id=187, 934.49126pt x 665.48625pt>
 File: img/secuencia-eps-converted-to.pdf Graphic file (type pdf)
  <use img/secuencia-eps-converted-to.pdf>
-Package pdftex.def Info: img/secuencia-eps-converted-to.pdf used on input line 876.
+Package pdftex.def Info: img/secuencia-eps-converted-to.pdf used on input line 880.
 (pdftex.def)             Requested size: 469.47049pt x 334.3264pt.
-LaTeX Info: Redefining \. on input line 884.
-LaTeX Info: Redefining \% on input line 884.
 
+
+LaTeX Warning: Reference `figura:diagrama_clases_1' on page 43 undefined on input line 887.
+
+
+LaTeX Warning: Reference `figura:diagrama_clases_2' on page 43 undefined on input line 887.
+
+
+LaTeX Warning: Reference `figura:diagrama_clases_3' on page 43 undefined on input line 887.
+
+
+LaTeX Warning: Reference `figura:diagrama_clases_db' on page 43 undefined on input line 887.
+
+LaTeX Info: Redefining \. on input line 888.
+LaTeX Info: Redefining \% on input line 888.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -838,16 +960,16 @@ Package epstopdf Info: Source file: <img/obj_1.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
 (epstopdf)                    size: 4800 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/obj_1-eps-converted-to.pdf img/obj_1.eps>
-(epstopdf)             \includegraphics on input line 887.
+(epstopdf)             \includegraphics on input line 891.
 Package epstopdf Info: Output file is already uptodate.
  <img/obj_1-eps-converted-to.pdf, id=195, 1360.08125pt x 989.6975pt>
 File: img/obj_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/obj_1-eps-converted-to.pdf>
-Package pdftex.def Info: img/obj_1-eps-converted-to.pdf used on input line 887.
+Package pdftex.def Info: img/obj_1-eps-converted-to.pdf used on input line 891.
 (pdftex.def)             Requested size: 476.03557pt x 346.3993pt.
 
-Overfull \hbox (6.56508pt too wide) in paragraph at lines 887--888
+Overfull \hbox (6.56508pt too wide) in paragraph at lines 891--892
  [][] 
  []
 
@@ -858,15 +980,15 @@ Package epstopdf Info: Source file: <img/obj_2.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
 (epstopdf)                    size: 4551 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/obj_2-eps-converted-to.pdf img/obj_2.eps>
-(epstopdf)             \includegraphics on input line 894.
+(epstopdf)             \includegraphics on input line 898.
 Package epstopdf Info: Output file is already uptodate.
 <img/obj_2-eps-converted-to.pdf, id=196, 1218.5525pt x 714.67pt>
 File: img/obj_2-eps-converted-to.pdf Graphic file (type pdf)
  <use img/obj_2-eps-converted-to.pdf>
-Package pdftex.def Info: img/obj_2-eps-converted-to.pdf used on input line 894.
+Package pdftex.def Info: img/obj_2-eps-converted-to.pdf used on input line 898.
 (pdftex.def)             Requested size: 426.49977pt x 250.13824pt.
-LaTeX Info: Redefining \. on input line 898.
-LaTeX Info: Redefining \% on input line 898.
+LaTeX Info: Redefining \. on input line 902.
+LaTeX Info: Redefining \% on input line 902.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -882,13 +1004,13 @@ Package epstopdf Info: Source file: <img/obj_3.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
 (epstopdf)                    size: 3639 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/obj_3-eps-converted-to.pdf img/obj_3.eps>
-(epstopdf)             \includegraphics on input line 901.
+(epstopdf)             \includegraphics on input line 905.
 Package epstopdf Info: Output file is already uptodate.
  <img/obj_3-eps-converted-to.pdf, id=204, 827.09pt x 505.89pt>
 File: img/obj_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/obj_3-eps-converted-to.pdf>
-Package pdftex.def Info: img/obj_3-eps-converted-to.pdf used on input line 901.
+Package pdftex.def Info: img/obj_3-eps-converted-to.pdf used on input line 905.
 (pdftex.def)             Requested size: 289.48582pt x 177.06415pt.
 Package epstopdf Info: Source file: <img/objetos2.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
@@ -897,16 +1019,16 @@ Package epstopdf Info: Source file: <img/objetos2.eps>
 (epstopdf)                    date: 2017-01-16 19:01:20
 (epstopdf)                    size: 4626 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/objetos2-eps-converted-to.pdf img/objetos2.eps>
-(epstopdf)             \includegraphics on input line 908.
+(epstopdf)             \includegraphics on input line 912.
 Package epstopdf Info: Output file is already uptodate.
  <img/objetos2-eps-converted-to.pdf, id=205, 1513.655pt x 1313.90875pt>
 File: img/objetos2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/objetos2-eps-converted-to.pdf>
-Package pdftex.def Info: img/objetos2-eps-converted-to.pdf used on input line 908.
+Package pdftex.def Info: img/objetos2-eps-converted-to.pdf used on input line 912.
 (pdftex.def)             Requested size: 454.1pt x 394.17567pt.
-LaTeX Info: Redefining \. on input line 912.
-LaTeX Info: Redefining \% on input line 912.
+LaTeX Info: Redefining \. on input line 916.
+LaTeX Info: Redefining \% on input line 916.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -915,13 +1037,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [45 <./img/obj_2-eps-converted-to.pdf> <./img/obj_3-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `figura:screen1' on page 46 undefined on input line 921.
+
+
+LaTeX Warning: Reference `figura:screen2' on page 46 undefined on input line 921.
+
+
+LaTeX Warning: Reference `figura:screen3' on page 46 undefined on input line 921.
+
 <img/screen1.png, id=217, 239.39438pt x 398.23781pt>
 File: img/screen1.png Graphic file (type png)
  <use img/screen1.png>
-Package pdftex.def Info: img/screen1.png used on input line 921.
+Package pdftex.def Info: img/screen1.png used on input line 925.
 (pdftex.def)             Requested size: 179.54533pt x 298.67761pt.
-LaTeX Info: Redefining \. on input line 925.
-LaTeX Info: Redefining \% on input line 925.
+LaTeX Info: Redefining \. on input line 929.
+LaTeX Info: Redefining \% on input line 929.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -932,16 +1063,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [46 <./img/objetos2-eps-converted-to.pdf>] <img/screen2.png, id=225, 239.39438pt x 398.23781pt>
 File: img/screen2.png Graphic file (type png)
  <use img/screen2.png>
-Package pdftex.def Info: img/screen2.png used on input line 928.
+Package pdftex.def Info: img/screen2.png used on input line 932.
 (pdftex.def)             Requested size: 179.54533pt x 298.67761pt.
 
 <img/screen3.png, id=226, 241.65282pt x 401.24907pt>
 File: img/screen3.png Graphic file (type png)
  <use img/screen3.png>
-Package pdftex.def Info: img/screen3.png used on input line 935.
+Package pdftex.def Info: img/screen3.png used on input line 939.
 (pdftex.def)             Requested size: 181.23917pt x 300.93605pt.
-LaTeX Info: Redefining \. on input line 939.
-LaTeX Info: Redefining \% on input line 939.
+LaTeX Info: Redefining \. on input line 943.
+LaTeX Info: Redefining \% on input line 943.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -952,11 +1083,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [47 <./img/screen1.png> <./img/screen2.png>] <img/screen4.png, id=230, 239.39438pt x 395.22656pt>
 File: img/screen4.png Graphic file (type png)
  <use img/screen4.png>
-Package pdftex.def Info: img/screen4.png used on input line 942.
+Package pdftex.def Info: img/screen4.png used on input line 946.
 (pdftex.def)             Requested size: 179.54533pt x 296.41919pt.
-LaTeX Info: Redefining \. on input line 948.
-LaTeX Info: Redefining \% on input line 948.
 
+
+LaTeX Warning: Reference `figura:screen4' on page 48 undefined on input line 951.
+
+
+LaTeX Warning: Reference `figura:screen5' on page 48 undefined on input line 951.
+
+
+LaTeX Warning: Reference `figura:screen6' on page 48 undefined on input line 951.
+
+LaTeX Info: Redefining \. on input line 952.
+LaTeX Info: Redefining \% on input line 952.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -966,16 +1106,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [48 <./img/screen3.png> <./img/screen4.png>] <img/screen5.png, id=235, 451.6875pt x 770.88pt>
 File: img/screen5.png Graphic file (type png)
  <use img/screen5.png>
-Package pdftex.def Info: img/screen5.png used on input line 951.
+Package pdftex.def Info: img/screen5.png used on input line 955.
 (pdftex.def)             Requested size: 234.73524pt x 400.62466pt.
 
 <img/screen6.png, id=236, 451.6875pt x 770.88pt>
 File: img/screen6.png Graphic file (type png)
  <use img/screen6.png>
-Package pdftex.def Info: img/screen6.png used on input line 958.
+Package pdftex.def Info: img/screen6.png used on input line 962.
 (pdftex.def)             Requested size: 234.73524pt x 400.62466pt.
-LaTeX Info: Redefining \. on input line 962.
-LaTeX Info: Redefining \% on input line 962.
+LaTeX Info: Redefining \. on input line 966.
+LaTeX Info: Redefining \% on input line 966.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -983,13 +1123,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49 <./img/screen5.png>] <img/screen_grafico1.png, id=241, 451.6875pt x 274.02374pt>
+[49 <./img/screen5.png>]
+
+LaTeX Warning: Reference `figura:screen_grafico1' on page 50 undefined on input line 969.
+
+<img/screen_grafico1.png, id=241, 451.6875pt x 274.02374pt>
 File: img/screen_grafico1.png Graphic file (type png)
  <use img/screen_grafico1.png>
-Package pdftex.def Info: img/screen_grafico1.png used on input line 969.
+Package pdftex.def Info: img/screen_grafico1.png used on input line 973.
 (pdftex.def)             Requested size: 234.73524pt x 142.40953pt.
-LaTeX Info: Redefining \. on input line 973.
-LaTeX Info: Redefining \% on input line 973.
+LaTeX Info: Redefining \. on input line 977.
+LaTeX Info: Redefining \% on input line 977.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -997,14 +1141,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50 <./img/screen6.png>] <img/screen_grafico3.png, id=246, 450.9347pt x 527.72156pt>
+[50 <./img/screen6.png>]
+
+LaTeX Warning: Reference `figura:screen_grafico3' on page 51 undefined on input line 978.
+
+<img/screen_grafico3.png, id=246, 450.9347pt x 527.72156pt>
 File: img/screen_grafico3.png Graphic file (type png)
  <use img/screen_grafico3.png>
-Package pdftex.def Info: img/screen_grafico3.png used on input line 978.
+Package pdftex.def Info: img/screen_grafico3.png used on input line 982.
 (pdftex.def)             Requested size: 234.73524pt x 274.70668pt.
-LaTeX Info: Redefining \. on input line 985.
-LaTeX Info: Redefining \% on input line 985.
 
+
+LaTeX Warning: Reference `figura:screen_grafico4' on page 51 undefined on input line 988.
+
+LaTeX Info: Redefining \. on input line 989.
+LaTeX Info: Redefining \% on input line 989.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1015,15 +1166,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: img/screen_grafico4.png Graphic file (type png)
 
 <use img/screen_grafico4.png>
-Package pdftex.def Info: img/screen_grafico4.png used on input line 988.
+Package pdftex.def Info: img/screen_grafico4.png used on input line 992.
 (pdftex.def)             Requested size: 234.73524pt x 335.05594pt.
- <img/screen_grafico5.png, id=253, 433.62pt x 488.57532pt>
+
+
+LaTeX Warning: Reference `figura:screen_grafico5' on page 52 undefined on input line 998.
+
+
+LaTeX Warning: Reference `figura:screen_grafico6' on page 52 undefined on input line 998.
+
+<img/screen_grafico5.png, id=253, 433.62pt x 488.57532pt>
 File: img/screen_grafico5.png Graphic file (type png)
  <use img/screen_grafico5.png>
-Package pdftex.def Info: img/screen_grafico5.png used on input line 998.
+Package pdftex.def Info: img/screen_grafico5.png used on input line 1002.
 (pdftex.def)             Requested size: 234.73524pt x 264.49023pt.
-LaTeX Info: Redefining \. on input line 1002.
-LaTeX Info: Redefining \% on input line 1002.
+LaTeX Info: Redefining \. on input line 1006.
+LaTeX Info: Redefining \% on input line 1006.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1035,10 +1193,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: img/screen_grafico6.png Graphic file (type png)
 
 <use img/screen_grafico6.png>
-Package pdftex.def Info: img/screen_grafico6.png used on input line 1005.
+Package pdftex.def Info: img/screen_grafico6.png used on input line 1009.
 (pdftex.def)             Requested size: 234.73524pt x 321.02412pt.
-LaTeX Info: Redefining \. on input line 1014.
-LaTeX Info: Redefining \% on input line 1014.
+LaTeX Info: Redefining \. on input line 1018.
+LaTeX Info: Redefining \% on input line 1018.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1048,9 +1206,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [53 <./img/screen_grafico5.png> <./img/screen_grafico6.png>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1027.
-LaTeX Info: Redefining \. on input line 1044.
-LaTeX Info: Redefining \% on input line 1044.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1031.
+LaTeX Info: Redefining \. on input line 1048.
+LaTeX Info: Redefining \% on input line 1048.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1059,9 +1217,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54]
-LaTeX Info: Redefining \. on input line 1079.
-LaTeX Info: Redefining \% on input line 1079.
 
+LaTeX Warning: Reference `tabla:clasificador_android_verificacion' on page 55 undefined on input line 1058.
+
+
+LaTeX Warning: Reference `tabla:clasificador_android_ambientales' on page 55 undefined on input line 1081.
+
+
+LaTeX Warning: Reference `tabla:aciertos_android_ambientales' on page 55 undefined on input line 1081.
+
+LaTeX Info: Redefining \. on input line 1083.
+LaTeX Info: Redefining \% on input line 1083.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1069,9 +1235,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [55]
-LaTeX Info: Redefining \. on input line 1123.
-LaTeX Info: Redefining \% on input line 1123.
 
+LaTeX Warning: Reference `tabla:clasificador_android_ambientales2' on page 56 undefined on input line 1126.
+
+LaTeX Info: Redefining \. on input line 1127.
+LaTeX Info: Redefining \% on input line 1127.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1079,9 +1247,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [56]
-LaTeX Info: Redefining \. on input line 1163.
-LaTeX Info: Redefining \% on input line 1163.
 
+LaTeX Warning: Reference `tabla:aplicaciones_android_ronquidos' on page 57 undefined on input line 1166.
+
+
+LaTeX Warning: Reference `tabla:aplicaciones_android_ruidos' on page 57 undefined on input line 1166.
+
+LaTeX Info: Redefining \. on input line 1167.
+LaTeX Info: Redefining \% on input line 1167.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1089,8 +1262,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [57]
-LaTeX Info: Redefining \. on input line 1199.
-LaTeX Info: Redefining \% on input line 1199.
+LaTeX Info: Redefining \. on input line 1203.
+LaTeX Info: Redefining \% on input line 1203.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1100,24 +1273,36 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [58]
 Cap\'{\i }tulo 4.
+
+LaTeX Warning: Reference `tabla:clasificador_android_verificacion' on page 59 undefined on input line 1207.
+
+
+LaTeX Warning: Reference `tabla:aciertos_android_ambientales' on page 59 undefined on input line 1207.
+
+
+LaTeX Warning: Reference `tabla:aplicaciones_android_ronquidos' on page 59 undefined on input line 1207.
+
+
+LaTeX Warning: Reference `tabla:aplicaciones_android_ruidos' on page 59 undefined on input line 1207.
+
 [59
 
 ] [60] [61
 
 ]
-Overfull \hbox (33.52094pt too wide) in paragraph at lines 1244--1245
+Overfull \hbox (33.52094pt too wide) in paragraph at lines 1248--1249
 \OT1/cmr/m/n/12 ni-ble en: $\OT1/cmtt/m/n/12 <[]https : / / play . google . com / store / apps / details ? id = de . ral
 phsapps . snorecontrol>[]$ 
  []
 
 
-Overfull \hbox (12.21251pt too wide) in paragraph at lines 1250--1251
+Overfull \hbox (12.21251pt too wide) in paragraph at lines 1254--1255
 []\OT1/cmr/m/n/12 [20] MPAn-droid-Chart. Li-brera An-droid pa-ra ge-ne-ra-cion de grafi-cos. Dis-po-ni-ble en: $\OT1
 /cmtt/m/n/12 <[]https :
  []
 
-LaTeX Info: Redefining \. on input line 1261.
-LaTeX Info: Redefining \% on input line 1261.
+LaTeX Info: Redefining \. on input line 1265.
+LaTeX Info: Redefining \% on input line 1265.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1129,8 +1314,8 @@ Ap\'{e}ndice A.
 [63
 
 ]
-LaTeX Info: Redefining \. on input line 1380.
-LaTeX Info: Redefining \% on input line 1380.
+LaTeX Info: Redefining \. on input line 1384.
+LaTeX Info: Redefining \% on input line 1384.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1139,8 +1324,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [64]
-LaTeX Info: Redefining \. on input line 1434.
-LaTeX Info: Redefining \% on input line 1434.
+LaTeX Info: Redefining \. on input line 1438.
+LaTeX Info: Redefining \% on input line 1438.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1149,8 +1334,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [65]
-LaTeX Info: Redefining \. on input line 1488.
-LaTeX Info: Redefining \% on input line 1488.
+LaTeX Info: Redefining \. on input line 1492.
+LaTeX Info: Redefining \% on input line 1492.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1159,8 +1344,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [66]
-LaTeX Info: Redefining \. on input line 1542.
-LaTeX Info: Redefining \% on input line 1542.
+LaTeX Info: Redefining \. on input line 1546.
+LaTeX Info: Redefining \% on input line 1546.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1169,8 +1354,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [67]
-LaTeX Info: Redefining \. on input line 1596.
-LaTeX Info: Redefining \% on input line 1596.
+LaTeX Info: Redefining \. on input line 1600.
+LaTeX Info: Redefining \% on input line 1600.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1179,8 +1364,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [68]
-LaTeX Info: Redefining \. on input line 1650.
-LaTeX Info: Redefining \% on input line 1650.
+LaTeX Info: Redefining \. on input line 1654.
+LaTeX Info: Redefining \% on input line 1654.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1189,8 +1374,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [69]
-LaTeX Info: Redefining \. on input line 1704.
-LaTeX Info: Redefining \% on input line 1704.
+LaTeX Info: Redefining \. on input line 1708.
+LaTeX Info: Redefining \% on input line 1708.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1199,8 +1384,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [70]
-LaTeX Info: Redefining \. on input line 1761.
-LaTeX Info: Redefining \% on input line 1761.
+LaTeX Info: Redefining \. on input line 1765.
+LaTeX Info: Redefining \% on input line 1765.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1209,8 +1394,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [71]
-LaTeX Info: Redefining \. on input line 1800.
-LaTeX Info: Redefining \% on input line 1800.
+LaTeX Info: Redefining \. on input line 1804.
+LaTeX Info: Redefining \% on input line 1804.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1219,8 +1404,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [72]
-LaTeX Info: Redefining \. on input line 1839.
-LaTeX Info: Redefining \% on input line 1839.
+LaTeX Info: Redefining \. on input line 1843.
+LaTeX Info: Redefining \% on input line 1843.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1229,8 +1414,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [73]
-LaTeX Info: Redefining \. on input line 1878.
-LaTeX Info: Redefining \% on input line 1878.
+LaTeX Info: Redefining \. on input line 1882.
+LaTeX Info: Redefining \% on input line 1882.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1239,8 +1424,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [74]
-LaTeX Info: Redefining \. on input line 1902.
-LaTeX Info: Redefining \% on input line 1902.
+LaTeX Info: Redefining \. on input line 1906.
+LaTeX Info: Redefining \% on input line 1906.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1249,8 +1434,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [75]
-LaTeX Info: Redefining \. on input line 1956.
-LaTeX Info: Redefining \% on input line 1956.
+LaTeX Info: Redefining \. on input line 1960.
+LaTeX Info: Redefining \% on input line 1960.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1259,8 +1444,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [76]
-LaTeX Info: Redefining \. on input line 2010.
-LaTeX Info: Redefining \% on input line 2010.
+LaTeX Info: Redefining \. on input line 2014.
+LaTeX Info: Redefining \% on input line 2014.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1269,8 +1454,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [77]
-LaTeX Info: Redefining \. on input line 2064.
-LaTeX Info: Redefining \% on input line 2064.
+LaTeX Info: Redefining \. on input line 2068.
+LaTeX Info: Redefining \% on input line 2068.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1279,8 +1464,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [78]
-LaTeX Info: Redefining \. on input line 2118.
-LaTeX Info: Redefining \% on input line 2118.
+LaTeX Info: Redefining \. on input line 2122.
+LaTeX Info: Redefining \% on input line 2122.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1289,8 +1474,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [79]
-LaTeX Info: Redefining \. on input line 2172.
-LaTeX Info: Redefining \% on input line 2172.
+LaTeX Info: Redefining \. on input line 2176.
+LaTeX Info: Redefining \% on input line 2176.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1299,8 +1484,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [80]
-LaTeX Info: Redefining \. on input line 2226.
-LaTeX Info: Redefining \% on input line 2226.
+LaTeX Info: Redefining \. on input line 2230.
+LaTeX Info: Redefining \% on input line 2230.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1309,8 +1494,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [81]
-LaTeX Info: Redefining \. on input line 2280.
-LaTeX Info: Redefining \% on input line 2280.
+LaTeX Info: Redefining \. on input line 2284.
+LaTeX Info: Redefining \% on input line 2284.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1319,8 +1504,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [82]
-LaTeX Info: Redefining \. on input line 2334.
-LaTeX Info: Redefining \% on input line 2334.
+LaTeX Info: Redefining \. on input line 2338.
+LaTeX Info: Redefining \% on input line 2338.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1329,8 +1514,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [83]
-LaTeX Info: Redefining \. on input line 2373.
-LaTeX Info: Redefining \% on input line 2373.
+LaTeX Info: Redefining \. on input line 2377.
+LaTeX Info: Redefining \% on input line 2377.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1339,8 +1524,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [84]
-LaTeX Info: Redefining \. on input line 2412.
-LaTeX Info: Redefining \% on input line 2412.
+LaTeX Info: Redefining \. on input line 2416.
+LaTeX Info: Redefining \% on input line 2416.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1349,8 +1534,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [85]
-LaTeX Info: Redefining \. on input line 2451.
-LaTeX Info: Redefining \% on input line 2451.
+LaTeX Info: Redefining \. on input line 2455.
+LaTeX Info: Redefining \% on input line 2455.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1359,8 +1544,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [86]
-LaTeX Info: Redefining \. on input line 2490.
-LaTeX Info: Redefining \% on input line 2490.
+LaTeX Info: Redefining \. on input line 2494.
+LaTeX Info: Redefining \% on input line 2494.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1369,8 +1554,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [87]
-LaTeX Info: Redefining \. on input line 2529.
-LaTeX Info: Redefining \% on input line 2529.
+LaTeX Info: Redefining \. on input line 2533.
+LaTeX Info: Redefining \% on input line 2533.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1379,8 +1564,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [88]
-LaTeX Info: Redefining \. on input line 2532.
-LaTeX Info: Redefining \% on input line 2532.
+LaTeX Info: Redefining \. on input line 2536.
+LaTeX Info: Redefining \% on input line 2536.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1391,28 +1576,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [89] (informe_final.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
-) ) 
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  4389 strings out of 493673
  62250 string characters out of 3143953
- 150236 words of memory out of 3000000
+ 148867 words of memory out of 3000000
  7607 multiletter control sequences out of 15000+200000
  16570 words of font info for 61 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,20n,43p,2118b,722s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti
-12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmtt12.pfb>
-Output written on informe_final.pdf (90 pages, 1327344 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmtt12.pfb>
+Output written on informe_final.pdf (90 pages, 1329228 bytes).
 PDF statistics:
  441 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

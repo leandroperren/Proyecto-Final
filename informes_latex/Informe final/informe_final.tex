@@ -718,19 +718,21 @@ Con el fin de recopilar los requisitos que esta aplicación Android debe satisfac
 Para definir las funcionalidades de esta aplicación, se analizaron las aplicaciones disponibles actualmente en la tienda Play Store de Android [17][18]. A partir del testeo de estas aplicaciones fue posible definir una lista de funcionalidades básicas disponibles en éstas y se detectaron también aquellas que no estaban disponibles pero resultan necesarias. Además, se realizaron entrevistas a posibles usuarios y pruebas sobre una versión prototipo con el fin de recabar aspectos y opiniones sobre esta aplicación. A continuación se listan los requerimientos funcionales relevados:
 
 \begin{itemize}
-    \item Los registros deben ser obtenidos en un período de 6 o 7 horas de duración por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.
     
     \item La señal se debe analizar tomando segmentos de 5 min.
     
     \item Se determina si cada segmento contiene ronquidos o no.
     
-    \item Se debe generar una interfaz sencilla y amigable que resulte intuitiva al usuario.
-    
     \item Se debe disponer de opciones para ingresar el email de un médico al que se le enviarán los resultados, además de datos personales que sirvan de apoyo al análisis realizado.
     
     \item La información obtenida debe ser contenida dentro de una pestaña o ventana que indique la hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
-    
+		
     \item La información gráfica debe ser presentada en una pestaña o ventana para los diferentes tipos de gráficos, como por ejemplo de barras (Bar Charts) o líneas (Line Charts), que muestran los resultados de la detección, y de torta (Pie Charts), que representan porcentualmente la distribución de segmentos con ronquidos y no ronquidos.
+		
+		\item \textcolor{blue}{Los resultados obtenidos se deben guardar en un archivo de formato PDF que se envía adjunto en el mail al médico.}
+		
+		\item \textcolor{blue}{Se debe disponer de una pestaña o ventana donde se listen las distinas capturas que el usuario generó. De manera que pueda volver a acceder a los resultados obtenidos en cada una de ellas.}
+		
 \end{itemize}
 
 \subsection{Requerimientos no funcionales}
@@ -738,6 +740,8 @@ Para la obtención de los requerimientos no funcionales, también fueron analizada
 
 \begin{itemize}
     \item La Robustez frente al ruido.
+		\item \textcolor{blue}{Se debe generar una interfaz sencilla y amigable que resulte intuitiva al usuario.}
+		\item \textcolor{blue}{Los registros deben ser obtenidos en un período de 6 o 7 horas de duración por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.}
     \item La capacidad de almacenamiento del dispositivo, suficiente para almacenar los resultados del procesamiento de cada segmento, durante las 6 o 7 horas de captura por micrófono.
     \item La capacidad de la batería, para que permita el procesamiento durante 6 o 7 horas.
 \end{itemize}
