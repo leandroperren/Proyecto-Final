@@ -704,14 +704,14 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 Este capítulo describe los pasos que se llevaron a cabo para desarrollar una aplicación Android capaz de detectar segmentos de ronquidos. Para ello se utilizaron los resultados obtenidos en capítulos anteriores que nos permitieron caracterizar los ronquidos y diferenciarlos de posibles ruidos. El desarrollo se realizó utilizando el modelo en cascada [19]. \textcolor{blue}{ Este modelo es de facil aplicación, promoviendo una metodología de trabajo efectiva basada en definir detalladamente cada etapa antes de avanzar a la siguiente. Al no disponer de un cliente específico, el cual pudiese solicitar cambios o nuevos requerimientos, no se vió la necesidad de utilizar un modelo de desarrollo que permita volver a diseñar y codificar. Es por esto que al tratarse de un desarrollo de dos personas se focalizó en definir detalladamente en conjunto lo que se debía realizar en cada etapa.} Para ello se siguieron las siguientes etapas:
 
 \begin{itemize}
-    \item Análisis y definición de requerimientos
-    \item Diseño del sistema y del software
-    \item Implementación y prueba de unidad
-    \item Inspecciones y prueba del sistema
+    \item Requerimientos
+    \item Diseño
+    \item Desarrollo
+    \item Verificación y validación
     \item Operación y mantenimiento
 \end{itemize}
     
-\section{Análisis y definición de requerimientos}
+\section{Requerimientos}
 Con el fin de recopilar los requisitos que esta aplicación Android debe satisfacer se realizaron distintas tareas, tanto para obtener requerimientos funcionales como no funcionales.
 
 \subsection{Requerimientos funcionales}
@@ -722,6 +722,8 @@ Para definir las funcionalidades de esta aplicación, se analizaron las aplicacio
     \item La señal se debe analizar tomando segmentos de 5 min.
     
     \item Se determina si cada segmento contiene ronquidos o no.
+		
+		\item \textcolor{blue}{Los registros deben ser obtenidos por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.}
     
     \item Se debe disponer de opciones para ingresar el email de un médico al que se le enviarán los resultados, además de datos personales que sirvan de apoyo al análisis realizado.
     
@@ -741,13 +743,14 @@ Para la obtención de los requerimientos no funcionales, también fueron analizada
 \begin{itemize}
     \item La Robustez frente al ruido.
 		\item \textcolor{blue}{Se debe generar una interfaz sencilla y amigable que resulte intuitiva al usuario.}
-		\item \textcolor{blue}{Los registros deben ser obtenidos en un período de 6 o 7 horas de duración por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.}
     \item La capacidad de almacenamiento del dispositivo, suficiente para almacenar los resultados del procesamiento de cada segmento, durante las 6 o 7 horas de captura por micrófono.
     \item La capacidad de la batería, para que permita el procesamiento durante 6 o 7 horas.
+		\item \textcolor{blue}{La tasa de aciertos debe ser superior a la de las demás aplicaciones.}
+		\item \textcolor{blue}{La aplicación debe funcionar bajo sistema operativo Android.}
 \end{itemize}
 
 
-\section{Diseño del sistema y del software}
+\section{Diseño}
 A continuación se presenta un diagrama de flujos de datos que ejemplifica el funcionamiento del sistema. 
 El primer paso consiste en la captura de la señal, para ésto se utilizó la clase AudioRecord de Android, la cual permite hacer uso del micrófono en la aplicación y, mediante los datos capturados por el mismo en segmentos.
 
@@ -1012,7 +1015,7 @@ Los resultados obtenidos pueden ser enviados vía email a un médico, donde se adj
 \end{figure} 
 
 
-\section{Inspecciones y prueba del sistema}
+\section{Verificación y validación}
 
 En esta sección se describe el procedimiento seguido \textcolor{blue}{al finalizar el desarrollo} de la aplicación Android en cuanto a verificación y validación de los códigos desarrollados, como así también la metodología de pruebas que se utilizó para validar el funcionamiento de la aplicación una vez terminada. La misma consistió de pruebas al método clasificador/detector, a las interfaces, gráficos y reportes, como así también al rendimiento en cuanto a consumo de batería y de almacenamiento.      
 
@@ -1034,7 +1037,7 @@ Como parte de las verificaciones y validaciones de la aplicación se describen a 
 \item Pruebas de los gráficos y reportes:
 	\begin{itemize}
 		\item Realizar los calculos de manera manual para comprobar los resultados mostrados en los gráficos.
-		\item Verificar que los gráficos se estén generando correctamente.
+		\item Verificar que lo representado en los gráficos corresponda a los resultados obtenidos.
 		\item Verificar el envío de la información vía email.
 	\end{itemize}
 \item Pruebas de interfaces:

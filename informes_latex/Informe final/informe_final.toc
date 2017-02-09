@@ -18,15 +18,15 @@
 \contentsline {section}{\numberline {2.6}Cantidad m\IeC {\'\i }nima de ronquidos por segmento}{32}
 \contentsline {section}{\numberline {2.7}Tasas de aciertos del m\'etodo en Matlab\textsuperscript {\relax \fontsize {8}{9.5}\selectfont \textregistered }}{34}
 \contentsline {chapter}{\numberline {3}Desarrollo de aplicaci\'on Android\textsuperscript {\relax \fontsize {8}{9.5}\selectfont \textregistered }}{37}
-\contentsline {section}{\numberline {3.1}An\'alisis y definici\'on de requerimientos}{37}
+\contentsline {section}{\numberline {3.1}Requerimientos}{37}
 \contentsline {subsection}{\numberline {3.1.1}Requerimientos funcionales}{37}
 \contentsline {subsection}{\numberline {3.1.2}Requerimientos no funcionales}{38}
-\contentsline {section}{\numberline {3.2}Dise\~no del sistema y del software}{39}
+\contentsline {section}{\numberline {3.2}Dise\~no}{39}
 \contentsline {subsection}{\numberline {3.2.1}Casos de Uso}{40}
 \contentsline {subsection}{\numberline {3.2.2}Diagrama de secuencia}{43}
 \contentsline {subsection}{\numberline {3.2.3}Dise\~no de Clases}{44}
 \contentsline {subsection}{\numberline {3.2.4}Dise\~no de interfaces}{46}
-\contentsline {section}{\numberline {3.3}Inspecciones y prueba del sistema}{54}
+\contentsline {section}{\numberline {3.3}Verificaci\'on y validaci\'on}{54}
 \contentsline {section}{\numberline {3.4}Tasas de aciertos de la aplicaci\'on Android}{55}
 \contentsline {chapter}{\numberline {4}Conclusi\'on y trabajos futuros}{59}
 \contentsline {chapter}{Bibliograf\IeC {\'\i }a}{61}
