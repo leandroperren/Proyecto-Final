@@ -1,0 +1,2492 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{calc}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage{array}
+\usepackage{epstopdf}
+\usepackage{geometry}
+\geometry{
+a4paper,
+layout=a4paper,
+left=2.5cm,
+right=2cm,
+bottom=2.5cm,
+top=2.5cm }
+\renewcommand{\baselinestretch}{1.2}
+
+\usepackage{appendix} % Para los Apéndices
+
+%\usepackage{mathptmx} %Times
+
+\usepackage{xcolor,colortbl}
+\definecolor{light-grey}{gray}{0.9}
+\definecolor{medium-grey}{gray}{0.5}
+\definecolor{charcoal}{HTML}{333333}
+
+\usepackage{mathrsfs} 
+
+\pagestyle{fancy}
+% Header
+\lhead{\textsc{\scriptsize Proyecto Final de Carrera}}
+\rhead{\textit{\scriptsize \leftmark}}
+% Footer
+\lfoot{\scriptsize \textit{Meurzet, Matías - Perren, Leandro}}
+\cfoot{}
+\rfoot{\scriptsize \thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\usepackage{cite} % para contraer referencias
+\usepackage{enumerate} % enumerados
+\usepackage{url} % direcciones url web para citas y referencias bibliograficas
+
+%\renewcommand\theenumii{\theenumi.\arabic{enumii}}
+\usepackage{titling}
+
+\pretitle{
+	\begin{center}
+	\LARGE
+	\vspace{-3cm}
+	\includegraphics[scale=0.25]{img/fich_logo_classic}\\[\bigskipamount]
+}
+\posttitle{	\end{center}}
+
+
+\begin{document}
+
+%==============================================================================
+%
+%	PORTADA DE TESIS
+%
+%==============================================================================
+\title{
+	\Large{\textcolor{charcoal}{Universidad Nacional del Litoral}\\
+	Facultad de Ingeniería y Ciencias Hídricas}\\ \vspace{15mm}
+	\huge{\textbf{Desarrollo e implementación de aplicación Android para detección de roncopatías sobre señales de baja resolución}}\\ \vspace{15mm}
+	\Large{Ingeniería en Informática} \vspace{15mm}
+}
+
+\author{
+	\textbf{Autores:} Meurzet, Matías - Perren, Leandro\\
+	\textbf{Director y Co-Director:} Milone, Diego - Albornoz, Enrique M. \\ \\
+	\small{Santa Fe, Argentina}
+}
+
+\date{\small{\today}}
+
+\maketitle
+
+
+%==============================================================================
+%
+%	INDICES DE CONTENIDO, FIGURAS Y TABLAS RESPECTIVAMENTE
+%
+%==============================================================================
+\tableofcontents
+\thispagestyle{empty}
+
+\listoffigures
+\thispagestyle{empty}
+
+\listoftables
+\thispagestyle{empty}
+
+
+%==============================================================================
+%
+%	RESUMEN
+%
+%==============================================================================
+\newpage
+
+\chapter*{Resumen}
+\thispagestyle{empty}
+
+En la actualidad existen distintas herramientas de uso doméstico para la detección de ronquidos, las cuales van desde elementos diseñados especialmente, como almohadas inteligentes o pulseras, hasta diferentes aplicaciones para dispositivos móviles. Todas ellas consisten del análisis de una señal capturada por medio del micrófono del dispositivo. La limitación de estos métodos recae en que solamente realizan un análisis de la señal en busca de cambios bruscos del nivel de energía, provocando que las aplicaciones sean poco robustas a los ruidos que se pueden presentar en un entorno cotidiano bajo condiciones normales. Entendiéndose por tal escenario a un ambiente con alta presencia de ruidos tanto externos como internos.
+
+En este proyecto final de carrera se propuso desarrollar una aplicación Android capaz de detectar episodios de ronquidos capturados por medio del micrófono del dispositivo, considerando características fundamentales como la robustez frente al ruido, óptimo uso de procesador y memoria, además de un consumo equilibrado de la batería.
+Para ésto se propuso el uso de un método basado en el cálculo del período fundamental ($T_0$ de aquí en adelante) por medio de la autocorrelación. Este método realiza un ventaneo en tiempo real toda la señal capturada por el dispositivo y determina si el $T_0$ de cada ventana se encuentra dentro de un rango determinado para que sea considerado ronquido. 
+Este rango de $T_0$ fue determinado mediante la extracción de una gran cantidad de ronquidos de señales limpias provistas por un especialista en trastornos de sueño y que  contienen la grabación de toda una noche de sueño (6 o 7 horas de duración), correspondientes a personas de ambos sexos.
+El método propuesto hace uso de la naturaleza cuasi-periódica que los ronquidos presentan. La ventaja de utilizar el $T_0$ se basa en que únicamente se analiza temporalmente la señal y que se puede utilizar en señales de baja frecuencia (100Hz), lo que genera un costo computacional, de almacenamiento y de consumo energético mucho menor al de otros métodos que utilizan además características frecuenciales.
+
+Los resultados que se obtuvieron de las pruebas de la aplicación arrojaron buenas tasas de aciertos, superando el 80\% y en algunos casos llegando a valores cercanos al 100\%, tanto para pruebas realizadas sobre señales limpias como para señales capturadas en entornos cotidianos, donde existían una gran cantidad de ruidos.
+
+\newpage
+
+
+%==============================================================================
+%
+%	CAPITULO 1 - INTRODUCCION
+%
+%==============================================================================
+\setcounter{chapter}{0}
+
+\chapter{Introducción}
+\thispagestyle{empty}
+\section{Motivación} 
+El ronquido es un sonido respiratorio producido durante el sueño pudiendo ser inspiratorio, espiratorio o bien ocupar todo el ciclo respiratorio. El surgimiento se debe a que el flujo de aire encuentra una obstrucción al pasar por detrás de la boca y la nariz, en donde la lengua y la parte superior de la garganta se encuentran con el paladar blando y la úvula. El choque de estas estructuras, sumado al paso de la respiración, determina la presencia del ronquido [1].
+
+La importancia de la detección de esta patología excede el simple hecho de evitar roncar por las noches. Esta situación puede ocasionar trastornos sociales al impedir el sueño de aquellos que rodeen al roncador, así como también producir el conocido Síndrome de Apneas Obstructivas del Sueño (SAOS). De acuerdo con lo anteriormente mencionado, se pueden encontrar 2 tipos o clases de ronquidos [2]: simple, el cual no molesta a los acompañantes, o bien alto habitual (o social), debido a que suele afectar a un eventual acompañante o conviviente. 
+
+Actualmente existen numerosas herramientas y dispositivos que permiten detectar esta patología en una persona. Dentro de éstas se encuentran diferentes aplicaciones disponibles para dispositivos móviles (smartphones) que cuenten con sistema operativo (OS) Android [4] o AppleiOS [5], ejemplos de las mismas son las aplicaciones SnoreClock y AntiSnore para Android y, AntiRonquidos y SnoreLab para dispositivos iPhone. Otros dispositivos que se encuentran disponibles hoy en día y que suelen ser menos frecuentes y más costosos son, por ejemplo, el Snore-detection pillow [7] o la almohada detectora de ronquidos, las pulseras detectoras, las cuales son colocadas en la muñeca como si se tratara de un reloj, además de una cama inteligente (The Starry Night Sleep Technology Bed) [6] que dispone de un dispositivo de detección y ajuste de la posición de la cabeza para que los sonidos cesen. Algunos de los dispositivos mencionados para la detección de esta patología (principalmente dispositivos móviles) están basados en un simple análisis de la señal de audio digital, capturada por el dispositivo, buscando cambios bruscos que superen un umbral dado de energía, indicando así la presencia de ronquido.
+
+La problemática de los métodos mencionados, radica en el hecho de que no cualquier sonido que supere cierto umbral de energía es un ronquido. Este problema se puede presentar de manera habitual cuando un individuo realiza la grabación en un ambiente natural como una habitación, en la cual se pueden adicionar muchos ruidos. Se entiende como ruido toda aquella información no deseada que se encuentre contenida en la señal bajo análisis, generando inconvenientes, pudiendo ser estos tanto externos (colectivos, motos, vecinos, etc.) como internos (charlas, música, TV, cierre brusco de una puerta, etc.) incorporando una gran cantidad de energía a la señal y siendo eventualmente detectados como ronquido. 
+
+Desde esta problemática, se propone desarrollar una aplicación para dispositivos móviles la cual, utilizando métodos más inteligentes que los actuales, sea capaz de reconocer y clasificar ronquidos, a partir de la captura de una señal de audio digital mediante el micrófono de un dispositivo móvil (smartphone), realizando el análisis de la misma con la aplicación de diversos conocimientos: 
+
+\begin{enumerate}
+	\item Mecánica de la respiración.
+	\item Fisiología y anatomía de la vía aérea superior (VAS).
+	\item Procesamiento de señales.
+	\item Programación en plataforma Android (basado en Java).
+\end{enumerate}
+
+La importancia de la mecánica de la respiración [3] y de la fisiología y anatomía de la vía aérea superior (VAS) [3]: fosas nasales, faringe y laringe, reside en el conocimiento funcional del aparato respiratorio para comprender por qué se produce el ronquido. El funcionamiento incorrecto de alguna de sus partes provoca la oclusión intermitente de la VAS, que predispone el desarrollo de la roncopatía. Mediante el procesamiento de señales [8] se logra la manipulación de la señal para modificarla, mejorarla y extraer información en algún sentido con el fin de obtener las características necesarias para una posterior detección. Para lograr la detección mediante una aplicación movil, se dispone de la programación en plataforma Android [9], la cual se compone de Java [10] y su propio entorno de desarrollo o SDK (del inglés Software \-Development Kit) [11], permitiendo la creación de aplicaciones para ésta plataforma, conocidas como aplicaciones nativas. Existen otras variantes para la creación de aplicaciones, pero exceden el alcance de éste proyecto final. Mediante la utilización del SDK y el lenguaje Java, se dispone de las herramientas necesarias, como ser, bases de datos, creación de clases y funciones para su procesamiento y creación de interfaces orientadas al usuario, entre otras. 
+
+El método que se desarrolla en este proyecto final de carrera presenta el desafío de lograr una detección de ronquidos con la mayor tasa de aciertos posible. Para ello fue preciso realizar un estudio exhaustivo de las características temporales de diferentes ronquidos de manera tal que la detección, aún en presencia de ruido, presente una gran robustez. Al estudiar los diferentes ronquidos es importante contemplar las condiciones del entorno en el que se captura la señal, ya que esto tiene incidencia directa en la amplia variedad de ruidos que pueden afectarla. 
+
+Mediante este trabajo se pretende proporcionar una alternativa inteligente respecto a los métodos actuales de detección de ronquidos, además de ser un punto inicial para futuros desarrollos tecnológicos, no necesariamente software sobre teléfonos inteligentes (smart\-phones), sino también para otros dispositivos que pretendan incorporar inteligencia a fin de detectar el ronquido para llevar a cabo alguna acción determinada. A su vez se espera que sirva de base sólida para futuros trabajos que logren ampliar su alcance llevándolo a la detección y clasificación de otros trastornos como es el caso del SAOS [3]. 
+
+\section{Estado del arte}
+En esta sección se describe el estado actual de trabajos y aplicaciones que tienden a cumplir objetivos similares a los que se persiguen en este proyecto final de carrera. Para ello primero se describen una serie de trabajos de investigación en los cuales se trabaja en base a señales capturadas en estudios del sueño, mediante las cuales se extraen y analizan segmentos de ronquidos y tienen por objeto caracterizar a los mismos tanto temporalmente como frecuencialmente. Por otra parte se analiza el desempeño de algunas de las aplicaciones Android disponibles actualmente indicando sus falencias y posibles mejoras.
+
+Comenzando por los trabajos de investigación, en [12] se describe el estado del arte actual de los procedimientos de análisis del ronquido. Los métodos que se mencionan son los cuestionarios del ronquido, nasoendoscopía durante el sueño inducido, maniobras de Müller, manometría de la vía aérea superior, rinomanometría y rinomanometría acústica, técnicas de imagen, medidas acústicas, monitores-analizadores de ronquido y finaliza con otros métodos para analizar el ronquido. De todas ellas lo más interesante son las medidas acústicas, donde se realizan 3 análisis: intensidad, frecuencia y regularidad del ronquido.
+Por otro lado, en [13] hacen una revisión de los conocimientos científicos con respecto a la evaluación acústica del ronquido, y de ésta manera hacer frente a tópicos como por ejemplo características físicas de los sonidos de ronquidos generados en la vía aérea superior, principios de la medición acústica del sonido, análisis avanzado y modelado de sonidos de ronquidos, evaluación acústica de ronquidos respecto a resultados clínicos y además de cuestiones sin resolver que se plantean para futuras investigaciones. La información más relevante para este trabajo se encuentra en la medición acústica del sonido, donde se extraen características de los mismos, y por otro lado también el apartado de análisis y modelado, donde se utilizan métodos avanzados como por ejemplo codificación por predicción lineal (LPC, del inglés Linear Predictive Coding), transformada de Fourier para análisis espectral, análisis de onditas, modelos ocultos de Markov, análisis en la distribución de energía, determinación del período fundamental y por último la utilización de estadísticas de alto orden. 
+En otro trabajo, se analizaron grabaciones en audio digital de distintos roncadores, en específico 42 con distintos grados de severidad de apneas (leve, moderado y grave) y 15 roncadores sin apneas [14]. A partir de allí, se extrajeron diversas características con las que determina una norma de variación y se comparan entre pacientes con y sin SAOS. Entre las características extraídas se encuentran la densidad espectral de potencia (PSD, del inglés Power Spectral Density) calculada con el método de Welch y con ventanas de Hanning. Además, para cada segmento, se calcula la potencia promedio, tasa de cruces por cero (ZCR, del inglés Zero-Crossing Rate), frecuencia del pico espectral con la menor frecuencia (Fo), frecuencia del pico con máxima potencia (Fp) y entropía espectral (SE, del inglés Spectral Entropy) usada para ver que tan plana es la PSD. Además se realiza un análisis estadístico con las medianas de las características del sonido de ronquido para cada clase de episodio, como por ejemplo no-apneico, hipopneico y post-apneico. Por otro lado también se realiza un análisis de regresión y clasificación donde se introduce un Indice de Apnea-Hipopnea (AHI, del inglés Apnea Hypopnea Index) en 2 grupos de roncadores, con y sin apneas, introduciendo además otro indicador que es la norma de variación total (TV, del inglés Total Variation) para cada característica individual. Por último se verifican los métodos mediante validación cruzada de la forma leave-one-out.
+En otro estudio [15], los autores hacen un pre-procesamiento de la señal acústica capturada, realizando una transformación invariante del dominio mediante onditas y de ésta manera se realiza una mejora de la señal de ronquido a través de un nivel de umbral de correlación dependiente (LCD, del inglés Level Correlation Dependent) y la identificación de ronquido a través de un detector de actividad de ronquido (SA, del inglés Snore Activity).
+Por último, en [16] se propone la utilización de un algoritmo automático y sin supervisión para la detección de ronquidos. Uno de los algoritmos utilizados es el de cuadro vertical que se encarga de identificar los episodios de actividad sonora. De estos episodios se extrae la distribución de energía en la sub banda de 500Hz y otras características como ZCR, transformada de Fourier de tiempo corto (STFT, del inglés Short Time Fourier Transform), matriz de covarianza y un vector con la media de las características de los ronquidos. Con estos datos se utiliza un algoritmo de clustering borroso de c-medias (FCM, del inglés Fuzzy c-Means clustering) para etiquetar los episodios de sonido como ronquido, respiración y ruido. 
+
+La mayoría de los trabajos que se mencionan en el párrafo anterior, si bien presentan métodos y procedimientos interesantes, no pueden ser aplicados totalmente a los fines de este proyecto final de carrera. En principio, no están enfocados directamente a la detección de episodios de ronquidos, sino a caracterizar ronquidos ya extraídos de señales con alta resolución permitiéndoles extraer en su mayoría características frecuenciales como formantes, onditas y Fourier. A su vez, algunos trabajos realizan comparaciones entre ronquidos simples y ronquidos apneicos, otros describen diferencias puntuales de ciertas características dependiendo si el ronquido se produce en alguna parte especial de la vía aérea superior, lo cual excede el alcance de este trabajo. Aun así se rescatan cuestiones interesantes que tienen que ver con procedimientos relacionados al ventaneo y con la naturaleza cuasi-periódica de los ronquidos permitiendo trabajar temporalmente con características como la energía y el período fundamental.
+
+En cuanto a las aplicaciones, a continuación se describen algunas desarrolladas para Android disponibles al momento en la \textit{PlayStore}. Una de ellas es \textbf{\textit{SnoreClock}}, la misma presenta una interface sencilla que dispone de los controles elementales para comenzar, detener, reproducir, avanzar y retroceder la grabación. La aplicación presenta una gráfica en tiempo real de lo que va capturando, una vez finalizada la captura se puede recorrer la señal y hasta reproducir segmentos de la misma. Los segmentos que etiqueta como posibles ronquidos los marca en la gráfica en color rojo. El problema de esta aplicación es que etiqueta como posibles ronquidos todo el sonido que supere un determinado umbral de energía durante un cierto período de tiempo, tal como lo define en la información oficial de la app [17]. Es por esto que el funcionamiento no es para nada preciso, reconociendo que marca rangos temporales en los que posiblemente el usuario no ha roncado. Otra aplicación disponible es \textbf{\textit{Dream Watcher - Anti ronquidos}} [18], donde se realiza una monitorización de ronquidos y ruidos nocturnos. Dream Watcher va analizando la señal mientras la captura, extrayendo aquellos episodios que detecta como posibles ronquidos guardando esos segmentos separadamente como archivos de audios los cuales pueden ser reproducidos. Además, se resalta un umbral marcado en color rojo, donde cada vez que la señal supera esa línea cuenta un ronquido. Esta aplicación presenta el mismo problema que la anterior ya que cualquier ruido en el ambiente se lo marca como ronquido, es por esto que en la información oficial de la App sugiere que el segmento esta disponible para escucharse de manera que sea el usuario quien decida si es un ronquido o no en base a lo que el escucha. Además de las aplicaciones aquí mencionadas, existen muchas más en la tienda de Android, donde la mayoría presentan las mismas limitaciones y en ningún caso mencionan que sucede con ruidos externos y, en otros casos son más generales, dejando de lado el enfoque hacia ronquidos.
+
+\section{Objetivos}
+\subsection{Objetivos generales} 
+Desarrollar una aplicación Android capaz de detectar segmentos con ronquidos a partir de una grabación de audio digital capturada por medio del micrófono del dispositivo, presentando alta robustez frente a ruidos en condiciones ambientales normales.
+
+\subsection{Objetivos específicos}
+\begin{itemize}  
+    \item Caracterizar temporalmente distintos segmentos de ronquidos.
+	\item Desarrollar un método para la detección/clasificación de ronquidos. 
+	\item Incorporar el método a una aplicación Android capaz de detectar segmentos de ronquidos.
+	\item Lograr una tasa de aciertos en la detección de ronquidos superior a la que presentan otras aplicaciones. 
+\end{itemize}
+
+\section{Alcances}
+El desarrollo de este trabajo implica definir el alcance del método de detección aquí propuesto como también de las características que la aplicación Android debe cumplir. 
+
+Por el lado del método de detección, para el estudio de las características temporales se trabajó con señales EDF obtenidas mediante el sistema médico ApneaLink, las cuales tienen características equivalentes, pudiendo mencionar: 
+ 
+\begin{itemize}
+	\item Frecuencia de muestreo (en Hz). 
+	\item Precisión en bits para cuantificación. 
+	\item Duración en horas similares (con desvío de +/- 2 horas) 
+\end{itemize}
+
+El análisis de las características temporales se limitará al cálculo del $T_0$ (período fundamental), se considerarán posibles diferencias entre ronquidos de personas de distintos sexos, y se dejarán de lado otras características de los individuos como el peso y la edad, ya que no se dispone de esa información en las señales EDF. A su vez, el método de detección se desarrollará específicamente para ronquidos y se dejará de lado el caso particular de la deteccción de SAOS y demás trastornos del sueño, ya que se trabajará solamente con el canal de ronquido de tales grabaciones.
+
+Por el lado de la aplicación Android, esta permitirá capturar una señal digital por medio del micrófono del dispositivo, la cual será analizada tomando ventanas de 5 minutos, determinando si en dicho segmento se producen ronquidos. La aplicación permitirá acceder a dos tipos de reportes, uno gráfico y otro en modo texto, donde se presentarán los resultados. En ellos se indicarán la hora en que se producirán los eventos y una estimación de la intensidad determinando dos niveles. A su vez la aplicación permitirá enviar estos reportes vía correo electrónico a un médico que pudiera estar interesado en los análisis.
+
+El desarrollo de esta aplicación móvil cumplirá con las siguientes características: 
+\begin{itemize}
+	\item Robustez 
+	\item Sencillez
+	\item Eficiencia
+	\item Óptimo consumo de batería
+	\item Óptimo uso de la capacidad de almacenamiento
+\end{itemize} 
+
+\section{Organización del proyecto final}
+Este proyecto final de carrera presenta la siguiente estructura:
+\begin{itemize}
+	\item En el presente capítulo se describió la motivación de este desarrollo y el problema que será abordado. Se presenta una revisión del estado del arte de dispositivos y aplicaciones destinados a detectar ronquidos, como también se describen trabajos investigativos orientados a la detección de los mismos utilizando señales obtenidas en estudios del sueño. Luego se presentan los objetivos y alcances, y finalmente, se describe la estructura de capítulos.
+	\item En el Capítulo 2 se describe el método de detección desarrollado en este proyecto final. Primeramente se describe la extracción de ronquidos y calculo del $T_0$ de las señales limpias EDF (canal de Ronquido) y se determina en base a ellos un rango de decisión. Posteriormente se capturan diferentes sonidos no deseados y se comparan los $T_0$ con los de los segmentos de ronquidos. Para finalizar se presentan las tasas de acierto del algoritmo detector desarrollado en Matlab, utilizando las señales limpias EDF.
+	\item En el Capítulo 3 se presenta el desarrollo de la aplicación Android. Primeramente se desarrollan las distintas etapas propuestas por la ingeniería de software. Luego se calculan las tasas de aciertos de la aplicación realizando distintas pruebas tanto con señales limpias (canal de ronquido en EDF) como en entornos cotidianos propensos a un alto contenido de ruidos.
+	\item El Capítulo 4 dispone de las conclusiones particulares y generales como también de propuestas de futuros trabajos que podrían derivar del presente.
+\end{itemize}
+
+
+%==============================================================================
+%
+%	CAPITULO 2 - METODOS
+%
+%==============================================================================
+\chapter{Desarrollo del sistema de detección}
+\thispagestyle{empty}
+\section{Método de detección de ronquidos por medio de período fundamental}
+Para este trabajo se dispuso de una cantidad de 23 señales de formato EDF provistas por un médico especializado en trastornos de sueño. Cada una de ellas contiene la grabación de una persona mientras duerme con una duración promedio de 7 hs. Estas señales se registraron a una frecuencia de muestreo de 100 Hz por medio del sistema médico Apnealink el cual realiza un análisis de la señal generando un archivo de extensión CSV, donde el propio sistema junto con el análisis del médico etiqueta los eventos de ronquidos indicando la hora en que se producen.  Mediante este archivo se pudo localizar en la señal los momentos de ronquidos y extraer algunos segmentos de ellos para poder analizarlos. 
+
+De acuerdo a la extracción y análisis de distintos segmentos, se pudo observar que estos contienen una serie de concentraciones de energía separados entre sí, de manera que presentan cierta repetitividad o periodicidad, tal como se aprecia en el segmento de la Figura \ref{figura:segmento_1_minuto}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\columnwidth]{img/figure1}	
+	\caption{Segmento de 1 minuto etiquetado como ronquidos.}
+	\label{figura:segmento_1_minuto}
+\end{figure}
+
+Dada la baja resolución en amplitud y frecuencia de muestreo que presenta la señal en cuestión, no resulta conveniente extraer características frecuenciales como son la transformada de Fourier, formantes o espectrogramas, entre otras, por lo que se debió buscar alguna característica temporal que sea representativa de los ronquidos. En consecuencia surgió la idea de medir la periodicidad de los eventos de ronquidos a través de $T_0$, el período fundamental, partiendo de la hipótesis de que aquellos segmentos que contienen sonidos no deseados (todo lo que no sea ronquido), no presentan este patrón repetitivo. La formula para el cálculo de la autocorrelación es 
+\begin{center}
+\begin{equation}
+ \Gamma_{xx_i}[k] = \sum_{n=0}^{N}x_i[n]x_i[n+k],
+\label{ecuacion:autocorrelacion}
+\end{equation}
+\end{center}
+\noindent
+donde el valor $N$ representa la cantidad de muestras del segmento $x_i$ y el valor $k$ representa el desplazamiento. El $T_0$ se obtiene tomando el desplazamiento $k$ que tiene el máximo valor en la autocorrelación, es decir
+\begin{center}
+\begin{equation}
+ {T_0}_i = \arg\max_{k} \{\Gamma_{xx_i}[k]\}.
+\label{ecuacion:periodo_fundamental}
+\end{equation}
+\end{center}
+\noindent 
+Por otro lado, poder utilizar solamente un análisis temporal presenta la ventaja de generar un mayor ahorro de tiempo y capacidad de procesamiento por no tener que transformar la señal al dominio frecuencial, permitiendo también utilizar señales de baja resolución lo que genera un menor costo de almacenamiento.
+
+Con el fin de utilizar el $T_0$ para diferenciar segmentos de ronquidos de aquellos que no lo son, resulta necesario analizar si el $T_0$ es una característica representativa de los ronquidos, en el sentido de que deberían presentar cierta homogeneidad en los valores obtenidos de segmentos provenientes de diferentes señales. Es por esto que en las siguientes secciones se presentan los resultados obtenidos de extraer segmentos de ronquidos de diferentes duraciones y de distintas señales de ambos sexos a los cuales se les calculó el correspondiente $T_0$.
+
+
+\section{Cálculo de $T_0$ y comparación entre segmentos de distintas señales}
+Debido a que se dispone de señales de personas de ambos sexos, resulta interesante realizar el análisis separadamente a fin de determinar si existen diferencias notables en los ronquidos producidos por hombres o mujeres, ya que esto podría implicar la necesidad de indicar el género en la aplicación a desarrollar en este proyecto final de carrera. 
+Por otra parte se procedió a extraer segmentos de diferentes duraciones con el objetivo de determinar si la variación de la misma implica variaciones importantes en los valores de $T_0$ y así poder determinar un valor óptimo de duración del segmento. 
+
+
+\subsection{Análisis de señales correspondientes a hombres}
+En esta sección se presentan los resultados obtenidos de los análisis realizados a señales de hombres. Para ello se tomaron 5 señales .EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extrajeron manualmente 5 segmentos de las siguientes duraciones: 30 s, 1, 2, 3 y 5 min. Posteriormente, por medio de un script desarrollado en Matlab basado en el método de autocorrelación, se calculó el valor de $T_0$ para cada uno de estos segmentos. En la Figura \ref{figura:segmento_ronquido_autocorr} se encuentra representado en la parte superior un segmento de 1 minuto que contiene ronquidos y en la parte inferior su correspondiente autocorrelación. 
+Se puede observar en la autocorrelación la existencia de un valor pico en torno a los 4 segundos, correspondiente al $T_0$ de los ronquidos contenidos en el segmento. 
+
+\begin{figure}[H]
+	\includegraphics[width=1\columnwidth]{img/figure2}	
+	\caption{Segmento con ronquidos y su autocorrelación.}
+	\label{figura:segmento_ronquido_autocorr}
+\end{figure}
+
+Como primer punto se analiza que sucede con los $T_0$ entre segmentos de una misma señal. En la Tabla \ref{tabla:t0_f0_1_minuto}, podemos ver los valores del $T_0$ de 5 segmentos de ronquidos de 1 minuto de duración todos extraídos de la misma señal en diferentes momentos. Si se observa el valor del desvío estándar para los $T_0$ de los segmentos con ronquidos presentados en la Tabla \ref{tabla:t0_f0_1_minuto}, se puede observar que tiene un valor de 0.46 segundos lo cual es un valor pequeño que estaría indicando cierta homogeneidad. 
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{T0} \footnotesize{(s)} \\
+			\hline
+			1 & 03:33:59 & 4.15 \\ \hline
+			2 & 02:12:12 & 4.68 \\ \hline
+			3 & 02:11:04 & 4.86 \\ \hline
+			4 & 03:24:43 & 3.96 \\ \hline
+			5 & 04:33:24 & 3.79 \\ \hline
+			\multicolumn{2}{|r|}{\textbf{Media}} & \textbf{4.29} \\ \hline
+			\multicolumn{2}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
+		\end{tabular}
+		\caption{Período fundamental ($T_0$) de segmentos de 1 minuto de duración.}
+		\label{tabla:t0_f0_1_minuto}
+	\end{center}
+\end{table}
+
+Debido a que se extrajeron segmentos de distintas señales se puede observar en la Tabla \ref{tabla:desvios_estandar_t0}, los valores del desvío estándar de los $T_0$ de cada señal y para cada duración de segmentos. Observando éstos casos se concluye que cualquiera sea la duración utilizada en los segmentos, los valores del desvío estándar son menores a 1 segundo, con lo cual se está asegurando que la característica $T_0$ es homogénea entre segmentos de ronquidos de una misma señal.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \multicolumn{5}{c|}{\textbf{Desvio estandar del T0}} \\
+			\hline
+			& 30 seg & 1 min & 2 min & 3 min & 5 min \\ \hline
+			Paciente 1 & 0.47 & 0.46 & 0.46 & 0.43 & 0.24 \\ \hline
+			Paciente 2 & 0.22 & 0.35 & 0.27 & 0.14 & 0.31 \\ \hline
+			Paciente 3 & 0.12 & 0.25 & 0.20 & 0.21 & 0.26 \\ \hline
+			Paciente 4 & 0.61 & 0.52 & 0.62 & 0.70 & 0.85 \\ \hline
+			Paciente 5 & 0.24 & 0.09 & 0.17 & 0.17 & 0.08 \\ \hline
+		\end{tabular}
+		\caption{Desvíos estándar de los $T_0$ de cada señal para distintas duraciones.}
+		\label{tabla:desvios_estandar_t0}
+	\end{center}
+\end{table}
+
+Siguiendo el análisis se observa ahora qué sucede con los valores del $T_0$ entre segmentos extraídos de diferentes señales, ya que si bien esta característica presentaba cierta homogeneidad entre los segmentos de una misma señal, podrían existir severas diferencias con segmentos provenientes de distintas señales y por ende de distintas personas y así no se podría generalizar el uso del $T_0$ como detector de ronquidos. Para ello se calculó el valor de la media y el desvío estándar de los $T_0$ de todos los segmentos de 1 minuto de duración independientemente de la señal a la que pertenezcan. En la Tabla \ref{tabla:segmentos_1_minuto_hombres} se presentan los valores del $T_0$ de todos los segmentos de 1 minuto de duración seguidos de su media y desvío estándar, mientras que en la Tabla \ref{tabla:media_desvio_t0_dist_duraciones} se presentan las medias y desvíos estándar de los $T_0$ de todos los segmentos de cada una de las duraciones.
+
+Se puede observar en la Tabla \ref{tabla:media_desvio_t0_dist_duraciones} que las medias son todas cercanas a los 4 segundos y que los desvíos estándar son inferiores a 1 segundo. Esto permite asegurar que la característica es representativa, no solo dentro de los segmentos de ronquidos de una misma señal, sino también entre segmentos de distintas señales, por lo que no existirían problemas en la distinción vía ésta característica usando cualquier grabación, siempre y cuando los valores de $T_0$ en los segmentos de ruidos difieran suficientemente como para distinguirlos. Este aspecto se analizará en secciones posteriores.
+
+Por último, se hace una evaluación acerca de la duración más apropiada de los segmentos. Como recientemente se ha mencionado y, como se podía observar en la Tabla \ref{tabla:media_desvio_t0_dist_duraciones}, los valores de las medias y los desvíos de todos los segmentos de ronquidos tomando distintas duraciones resultan similares entre si, por lo tanto, se concluye que la duración óptima a utilizar será la de 5 minutos, ya que se genera un ahorro en tiempo de procesamiento y cálculo. También es importante explicar que no se consideran tamaños de segmentos de mayor duración, ya que a los efectos de llevar esto a una aplicación que sea capaz de etiquetar los momentos donde se producen ronquidos, al tomar duraciones de 8, 10 o más minutos se estaría perdiendo precisión en el presente análisis.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15 \\ \hline 
+			& 02:12:12 & 1333200 & 4.68  \\ \hline
+			& 02:11:04 & 1326400 & 4.86  \\ \hline
+			& 03:24:43 & 1768300 & 3.96  \\ \hline
+			& 04:33:24 & 2180400 & 3.79  \\ \hline
+			Paciente 2 & 22:25:37 & 153700 & 3.52  \\ \hline
+			& 22:28:24 & 170400 & 3.73  \\ \hline
+			& 22:30:03 & 180300 & 4.15  \\ \hline
+			& 22:52:37 & 315700 & 3.22  \\ \hline
+			& 23:16:03 & 456300 & 3.82  \\ \hline
+			Paciente 3 & 01:43:47 & 322700 & 3.77  \\ \hline
+			& 02:06:04 & 456400 & 4.26  \\ \hline
+			& 02:31:09 & 606900 & 3.95  \\ \hline
+			& 03:10:34 & 843400 & 3.58  \\ \hline
+			& 04:52:01 & 1452100 & 3.93  \\ \hline		
+			Paciente 4 & 01:30:03 & 1260300 & 5.83  \\ \hline
+			& 03:48:38 & 2091800 & 4.92  \\ \hline
+			& 03:53:09 & 2118900 & 4.74  \\ \hline
+			& 22:25:30 & 153000 & 4.88  \\ \hline
+			& 00:28:31 & 891100 & 4.46  \\ \hline		
+			Paciente 5 & 04:21:07 & 1.926.700 & 3.90  \\ \hline
+			& 04:22:42 & 1.936.200 & 3.91  \\ \hline
+			& 04:57:37 & 2.145.700 & 3.82  \\ \hline
+			& 23:11:57 & 71.700 & 3.77  \\ \hline
+			& 23:42:54 & 257.400 & 3.68  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.13}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.58} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de los ronquidos de hombres, para diferentes señales}
+		\label{tabla:segmentos_1_minuto_hombres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Duración segmentos} & \textbf{Media} & \textbf{Desvío Estándar}\\ 
+			\hline \hline
+			30 segundos & 4.05 & 0.64 \\ \hline
+			1 minuto & 4.13 & 0.58 \\ \hline
+			2 minutos & 4.13 & 0.71 \\ \hline
+			3 minutos & 4.11 & 0.69 \\ \hline
+			5 minutos & 4.18 & 0.71 \\ \hline
+		\end{tabular}
+		\caption{Medias y desvíos estándar de los $T_0$ para distintas duraciones.}
+		\label{tabla:media_desvio_t0_dist_duraciones}
+	\end{center}
+\end{table}
+
+\subsection{Análisis de señales correspondientes a mujeres}
+En esta sección se repetirán los análisis anteriores pero utilizando señales de mujeres. Para ello también se tomaron 5 señales .EDF dejando algunas señales para las pruebas finales del método. Para cada una de estas señales se extrajeron manualmente 5 segmentos de ronquidos de cada una de las duraciones anteriores.
+A fin de determinar si el $T_0$ resulta homogéneo entre segmentos de una misma señal se analiza a continuación que valores toma el $T_0$ entre segmentos extraídos de una misma señal.
+
+En la Tabla \ref{tabla:desv_estandar_t0_mujeres} se encuentran los valores de los desvíos estándar de todos los $T_0$ de los segmentos extraídos de cada paciente y para cada duración. Si se observan los desvíos estándar todos ellos tienen valores menores a 1 segundo, con lo cual se puede concluir que presentan cierta homogeneidad al igual que ocurría con los segmentos extraídos de las señales de hombres.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			Señal & \multicolumn{5}{|c|}{Desvio estandar del T0} \\
+			\hline \hline
+			& 1 min & 30 seg & 2 min & 3 min & 5 min \\ \hline
+			Paciente 6 & 0.34 & 0.46 & 0.45 & 0.37 & 0.36 \\ \hline
+			Paciente 7 & 0.56 & 0.43 & 0.28 & 0.34 & 0.46 \\ \hline
+			Paciente 8 & 0.37 & 0.43 & 0.32 & 0.37 & 0.65 \\ \hline
+			Paciente 9 & 0.25 & 0.27 & 0.21 & 0.21 & 0.21 \\ \hline
+			Paciente 10 & 0.15 & 0.16 & 0.20 & 0.09 & 0.11 \\ \hline
+		\end{tabular}
+		\caption{Desvíos estándar de los $T_0$ de mujeres, para distintas duraciones y señales.}
+		\label{tabla:desv_estandar_t0_mujeres}
+	\end{center}
+\end{table}
+
+A continuación se verifica que el $T_0$ resulta homogéneo entre segmentos de distintas señales. En la Tabla \ref{tabla:media_desv_t0_mujeres} se encuentran los valores de las medias y desvíos estándar de los $T_0$ de los segmentos para cada duración sin tener en cuenta a que paciente pertenece. Analizando estos datos se puede ver que en todos los casos el valor del desvío está muy por debajo de 1 segundo, por esto se concluye que cualquiera sea la señal, los valores del $T_0$ resultan homogéneos, es decir, que la característica realmente es representativa de los segmentos con eventos de ronquidos.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			Duración segmentos & Media & Desvío Estándar\\ 
+			\hline \hline
+			30 segundos & 4.32 & 0.51 \\ \hline
+			1 minuto & 4.24 & 0.50 \\ \hline
+			2 minutos & 4.36 & 0.49 \\ \hline
+			3 minutos & 4.28 & 0.50 \\ \hline
+			5 minutos & 4.40 & 0.52 \\ \hline
+		\end{tabular}
+		\caption{Medias y desvíos estándar de los $T_0$ de mujeres, para distintas duraciones.}
+		\label{tabla:media_desv_t0_mujeres}
+	\end{center}
+\end{table}
+
+Tal como se concluyó en el caso de las señales de hombres, aquí también puede verse que la media, cualquiera sea la duración de los segmentos, oscila en torno a los 4.3 segundos y el desvío en torno a los 0.50 segundos, por lo que dado este bajo número también se opta por la duración de segmentos de 5 minutos como la más óptima en términos de procesamiento y precisión.
+
+
+\section{Comparación de $T_0$ entre hombres y mujeres}
+
+Finalizado el análisis de las señales de hombres y mujeres por separado, se realiza un análisis comparativo del $T_0$ promedio entre dichas señales. Debido a que tanto en el análisis de hombres como en el de mujeres se llegó a la conclusión de que la duración más óptima de los segmentos es la de 5 minutos, la comparación entre media y desvío de los $T_0$ se realizó directamente con esta duración. 
+
+En la Tabla \ref{tabla:media_desv_t0_hombre_mujer}, se encuentran representados los valores de las medias y desvíos de los $T_0$ correspondientes a segmentos de 5 minutos, tanto de señales de hombres como de mujeres. 
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			Tipo de señal & Media (5 min) & Desvío estándar (5 min)\\ 
+			\hline \hline
+			Hombres & 4.18 & 0.71 \\ \hline
+			Mujeres & 4.40 & 0.52 \\ \hline
+		\end{tabular}
+		\caption{Media y desvío de los $T_0$ de hombres y mujeres.}
+		\label{tabla:media_desv_t0_hombre_mujer}
+	\end{center}
+\end{table}
+
+Se puede observar que los valores promedios en ambos casos (mujeres y hombres), son prácticamente similares y, los correspondientes desvíos estándar, indican también cierta similitud, aunque en el caso de los hombres son levemente mayores. De todas maneras esta pequeña diferencia, no implica inconvenientes a la hora de la detección. De esta manera se descarta la necesidad de que un usuario de la aplicación Android tenga que indicar el género antes de comenzar su uso para aplicar alguna corrección de cálculo.
+
+\section{Análisis de sonidos no deseados (ruidos)}
+Dentro de esta sección se describen los resultados obtenidos del análisis realizado a sonidos no deseados. Por sonido no deseado debe entenderse como todo aquel sonido que se puede acoplar en una grabación en entornos cotidianos y que no se trata de un ronquido. Es por ésto que a los fines del presente trabajo se consideran como ruidos los sonidos de vehículos, murmullos o personas hablando, música, etcétera.
+
+Hasta el momento se demostró que los valores del $T_0$ para segmentos con ronquidos extraídos de diferentes señales, tanto de mujeres como hombres, presentan cierta similitud permitiendo concluir que el $T_0$ es una característica representativa de los segmentos con ronquidos. De todas maneras, esto no es suficiente para poder utilizar esta característica en una aplicación que permita detectar estos segmentos diferenciándolos de aquellos que contienen solo ruidos. Esto se debe a que aquellos sonidos no deseados que se pudieran capturar durante la grabación podrían tener un $T_0$ similar que llegue a caer dentro del rango establecido para ser considerados como ronquidos.
+Para ello se demostrará en la presente sección que bajo condiciones normales los sonidos no deseados que se pueden capturar por medio del micrófono de un dispositivo móvil presentan valores del $T_0$ fuera del rango representativo de los ronquidos.
+
+Se comenzó capturando distintas señales por medio de dispositivos móviles, una tablet y dos celulares. Para esto se instaló en los dispositivos la aplicación Easy Voice Recorder por medio de la cual se grabaron archivos en formato WAV. Estas grabaciones se llevaron a cabo en ambientes bajo condiciones normales durante las horas del día ya que es mayor la cantidad de ruidos presentes. Todas se capturaron a una frecuencia de muestreo de 8000 Hz que es la mínima frecuencia de muestreo que admite la aplicación, pero fueron submuestreadas a 100Hz de manera que tengan igual frecuencia de muestreo que las EDF. Luego se analizaron manualmente con el software Audacity extrayendo segmentos de 1 y 5 minutos que contenían distintos ruidos, por ejemplo: sonidos de vehículos en la calle, personas hablando, ladridos de perros, música proveniente de una radio y sonido de maquinaria de obreros trabajando.
+
+En la parte superior de la Figura \ref{figura:ruido1_1_minuto} se puede observar un segmento de 1 minuto el cual contiene ruido ambiental, proveniente del exterior, que incluye máquinas en pleno funcionamiento, tráfico vehicular y personas hablando. En la gráfica de la parte inferior se encuentra su autocorrelación.
+A su vez el segmento graficado en la Figura \ref{figura:ruido2_1_minuto} consiste del sonido de un vehículo circulando, la Figura \ref{figura:ruido3_1_minuto} contiene el sonido de transito vehicular, primero una motocicleta y luego un automóvil que estaciona y sale al cabo de un tiempo, y la Figura \ref{figura:ruido4_1_minuto} contiene el sonido de dos perros ladrando. Todas ellas están acompañadas en la parte inferior de su correspondiente autocorrelación.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=\textwidth]{img/figure3}	
+	\caption{Oscilograma de máquinas trabajando, personas hablando y vehículos.}
+	\label{figura:ruido1_1_minuto}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/figure4}	
+	\caption{Oscilograma de un vehículo circulando.}
+	\label{figura:ruido2_1_minuto}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/figure5}	
+	\caption{Oscilograma de dos vehículos circulando.}
+	\label{figura:ruido3_1_minuto}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/figure6}	
+	\caption{Oscilograma de perros ladrando.}
+	\label{figura:ruido4_1_minuto}
+\end{figure}
+
+Como se puede ver en las Figuras \ref{figura:ruido1_1_minuto}, \ref{figura:ruido2_1_minuto}, \ref{figura:ruido3_1_minuto} y \ref{figura:ruido4_1_minuto}, los cuatro gráficos de la autocorrelación (parte inferior) no muestran la presencia de un valor pico que sobresalga del resto como si sucede en los segmentos con ronquidos, donde claramente existe un valor pico correspondiente al $T_0$. Esto se ve reflejado claramente en la comparación de las autocorrelaciones graficadas en la Figura \ref{figura:autocorrelacion_ruido_ronquidos}. Esto se debe a que en los segmentos con ronquidos, las señales presentan una naturaleza cuasi-periódica debido a la presencia de una serie de ronquidos de manera continua, y a que los mismos tienen una apariencia similar entre sí; esto no ocurre en los ruidos antes analizados, donde tienden a concentrar su energía en un momento determinado (por ejemplo, el caso de vehículos).
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\textwidth]{img/figure7}	
+	\caption{Autocorrelación de ronquidos y autocorrelación de sonido ambiental.}
+	\label{figura:autocorrelacion_ruido_ronquidos}
+\end{figure}
+
+Debido a que los segmentos analizados recientemente eran todos de 1 minuto de duración, y ya que se concluyo que la duración de 5 minutos era la mas óptima en el caso de segmentos con ronquidos, es que también se extrajeron segmentos de 5 minutos de sonidos no deseados. En las Figuras \ref{figura:ruido1_5minuto}, \ref{figura:ruido2_5minuto} y \ref{figura:ruido3_5minuto} se ven representados los mismos con su correspondiente autocorrelación. 
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\textwidth]{img/figure8}	
+	\caption{Oscilograma de un automovil circulando durante 5 min.}
+	\label{figura:ruido1_5minuto}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\textwidth]{img/figure9}	
+	\caption{Oscilograma de dos vehículos circulando durante 5 min.}
+	\label{figura:ruido2_5minuto}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/figure10}	
+	\caption{Oscilograma de dos vehículos circulando y ladridos de perros durante 5 min.}
+	\label{figura:ruido3_5minuto}
+\end{figure}
+
+Tomando duraciones de 5 min se puede ver que en algunos segmentos se juntan distintos sonidos no deseados que antes (segmentos de 1 min de duración) se trataron separadamente. Esto es interesante para ver qué sucede con el $T_0$ en segmentos con muchos y diferentes ruidos. 
+Si se observan las gráficas de autocorrelación de las Figuras \ref{figura:ruido1_5minuto} y \ref{figura:ruido2_5minuto} se ve que el aumento del tamaño del segmento no implica cambios ya que no se observa ningún pico sobresaliente. Lo mismo sucede para el caso de la Figura \ref{figura:ruido3_5minuto} que contiene distintos ruidos en un mismo segmento. Estos resultados permiten distinguir claramente estos segmentos de aquellos con ronquidos ya que los segmentos con ruidos no presentan picos sobresalientes en su autocorrelación como para poder definir un $T_0$ en torno a los 4 s que era el valor promedio que se encontró en los segmentos con ronquidos.
+
+Hasta aquí se demostró que el $T_0$ es una característica representativa de los ronquidos tanto de mujeres como de hombres y que los análisis de segmentos de ruidos no presentan valores del $T_0$ distinguibles. Por lo tanto se puede concluir que el $T_0$ es una buena característica a utilizar para la detección de los segmentos con ronquidos pudiendo diferenciarlos de sonidos no deseados que puedan encontrarse en grabaciones en entornos cotidianos y así lograr la robustez que se necesita.
+
+\section{Mejora a través de funciones de recorte}
+La utilización de funciones de recorte permite acentuar los máximos temporales de la señal (correspondientes al periodo fundamental), de forma que la discriminación del período fundamental se visualice con mayor claridad en el tramo analizado. En la Figura \ref{figura:funciones_recorte}, se observan tres funciones de recorte diferentes, donde $C_L$ es el umbral de decisión donde aplicar el descarte, y el eje $x$ representa el valor de la muestra del segmento al que se le aplica el recorte.
+
+A efectos de decidir cuál de las funciones de recortes antes descritas tiene mejor desempeño, se procedió a calcular la autocorrelación para un segmento con ronquidos, tras aplicar a dicho segmento cada una de las funciones de recorte por separado. En la Figura \ref{figura:autocor_funciones_recorte} se muestra una gráfica con los tres resultados posibles tras aplicar cada una de las funciones de recortes. Claramente se puede visualizar que la función de recorte 3 es la que arroja los mejores resultados ya que se observan más resaltados los picos que produce la autocorrelación ($T_0$, 2$T_0$, 3$T_0$, etcétera). 
+Para los casos que se observaron recientemente, el valor del umbral $C_L$ se calculó tomando el 10\% del máximo valor del segmento. De esta manera la función de recorte anulará todas las muestras del segmento cuyo valor esté debajo del 10\% del valor máximo, para así dar más importancia a los valores temporales máximos. De todas maneras el valor óptimo del umbral $C_L$ se determinará en etapas posteriores cuando se evalúa el algoritmo detector.
+
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.6]{img/figure11}	
+	\caption{Funciones de recorte}
+	\label{figura:funciones_recorte}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/figure12}	
+	\caption{Autocorrelaciones aplicando las tres funciones de recorte}
+	\label{figura:autocor_funciones_recorte}
+\end{figure}
+
+En la Figura \ref{figura:autocor_funciones_recorte2} se puede observar el efecto de realce producido por la función de recorte, en segmentos donde los valores pico para encontrar el $T_0$, no son visualmente claros. A su vez, en la Figura \ref{figura:autocor_funciones_recorte3} se muestra el efecto producido al aplicar la función de recorte a segmentos de sonidos no deseados. Observando estas dos gráficas, es visible que tanto en el caso de ronquidos, como en el de ruidos (sonidos no deseados), el efecto producido por la función de recorte acentúa valores correspondientes a los períodos $T_0$, logrando que aquellos casos con ronquidos donde no eran visibles con facilidad, puedan observarse claramente. Además, es notorio que en los casos de ruidos no existen picos destacados y menos aún, no existe homogeneidad alguna con respecto a la forma general de la autocorrelación.
+
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/figure13}	
+	\caption{Autocorrelación de ronquidos sin y con función de recorte}
+	\label{figura:autocor_funciones_recorte2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/figure14}	
+	\caption{Autocorrelación de sonido ambiental sin y con función de recorte}
+	\label{figura:autocor_funciones_recorte3}
+\end{figure}
+
+\section{Cantidad mínima de ronquidos por segmento}
+A continuación se plantea el análisis de dos aspectos que pueden alterar la detección a través del $T_0$. Por un lado se analiza que efectos tiene en la amplitud de la correlación en $T_0$ la existencia de subsegmentos que no contengan ronquidos, contenidos en segmentos de mayor duración que si contienen ronquidos. Para demostrar el efecto se tomó un segmento de 1 min con ronquidos y se anexaron segmentos de 1 min para obtener así distintas duraciones totales. Luego se volvió a calcular el $T_0$ para cada posible combinación a fin de determinar si ellos tienen algún tipo de impacto. Tal como se puede apreciar en la Tabla \ref{tabla:subsegmentos_t0}, el algoritmo no tuvo inconvenientes ya que cualquiera sea la duración, es decir, si es de 1, 2, 3, 4 o 5 min, el $T_0$ detectado es correcto.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			\textbf{Combinación} & $T_0$\\ 
+			\tiny{\textbf{R}: ronquido - \textbf{N}: no-ronquido} & \\
+			\hline \hline
+            R & 4.24 \\ \hline
+            RN & 4.24 \\ \hline
+            NR & 4.24 \\ \hline
+            RNN & 4.19 \\ \hline
+            NRN & 4.34 \\ \hline
+            NNR & 4.24 \\ \hline
+            RNNN & 4.34 \\ \hline
+            NRNN & 4.24 \\ \hline
+            NNRN & 4.19 \\ \hline
+            NNNR & 4.34 \\ \hline
+            RNNNN & 4.29 \\ \hline
+            NRNNN & 4.33 \\ \hline
+            NNRNN & 4.30 \\ \hline
+            NNNRN & 4.24 \\ \hline
+            NNNNR & 4.34 \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos anexando segmentos sin ronquidos.}
+		\label{tabla:subsegmentos_t0}
+	\end{center}
+\end{table}
+
+Otro aspecto consiste en determinar el mínimo indispensable de eventos necesarios para que el $T_0$ sea detectado sin sufrir grandes desvíos respecto de la media. 
+Para ello se analizó una parte del segmento, en particular con una duración de 15 segundos, en los cuales había 4 episodios de ronquido presentes, luego se procedió a quitar de a un evento a la vez y volver a calcular el $T_0$ y así observar si presentan diferencias. Si se observa la Tabla \ref{tabla:cantidad_minima_t0}, se puede concluir que la cantidad mínima de eventos necesarios para la correcta detección es de 2 ya que con un solo evento el $T_0$ da un valor de 2.58 segundos, lo cual esta muy por debajo de los 4 segundos promedio.
+
+En conclusión, no existe restricción alguna en cuanto a la duración de sub­segmentos sin ronquidos, siempre y cuando en alguna parte del segmento completo, existan  al menos 2 eventos de ronquido aún con presencia de ruido, ya que éste último no genera picos lo suficientemente grandes como para ser detectados, tal como se mostró en secciones anteriores.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			$T_0$ & \textbf{Descripción}\\ 
+			\hline \hline
+			4.24 & Últimos 15 segundos \\ \hline
+			4.24 & Últimos 15 segundos (contiene 4 eventos de ronquido) \\ \hline
+			4.24 & Últimos 15 segundos con 3 eventos \\ \hline
+			4.12 & Últimos 15 segundos con 2 eventos \\ \hline
+			2.58 & Últimos 15 segundos con 1 eventos \\ \hline
+		\end{tabular}
+		\caption{Mínima cantidad de eventos por segmento.}
+		\label{tabla:cantidad_minima_t0}
+	\end{center}
+\end{table}
+
+ 
+\section{Tasas de aciertos del método en Matlab\textsuperscript{\scriptsize\textregistered}}
+Debido a que se utilizó Matlab para calcular el  $T_0$ de los segmentos extraídos de las señales EDF, es que surgió la posibilidad de desarrollar un script en Matlab que recorra una señal tomando frames de 5 min de duración y que calculando el $T_0$ determine si el segmento posee ronquidos. De esta manera se podría determinar si el método es aplicable antes de realizar la aplicación sobre la plataforma Android. 
+
+En la Tabla \ref{tabla:clasificador_matlab} se encuentran los valores de \textit{verdaderos positivos}, \textit{verdaderos negativos}, \textit{falsos positivos}, \textit{falsos negativos}, \textit{valor predictivo positivo}, \textit{valor predictivo negativo}, \textit{sensibilidad} y \textit{especificidad}, calculados para cada una de las señales EDF utilizadas hasta el momento. Estos resultados se obtuvieron usando la función de recorte 3 con el umbral seteado en 2.3, cantidad mínima de ronquidos por segmento en 2 y el rango del $T_0$ para ser ronquido en [3.50 - 4.70 s]. 
+
+En la Tabla \ref{tabla:falsos_negativos_matlab} se listan algunos valores de falsos negativos, correspondientes a los pacientes 1, 4, 7 y 9. Estos casos se presentan en baja cantidad, y todos tienen valores de $T_0$ inferiores a los 3 s. Debido a esto el algoritmo los etiqueta como segmentos sin ronquidos ya que estan fuera del rango [3.50 - 4.70 s].
+
+En la Tabla \ref{tabla:falsos_positivos_matlab}, se muestran algunos de los falsos positivos que se detectaron con el algoritmo, correspondientes a los pacientes 1, 6, 8 y 9. Como se puede apreciar, presentan valores de $T_0$ similares a los segmentos con ronquidos. De los análisis puntuales realizados, fue notorio que las señales EDF en esos segmentos, sin estar etiquetados como ronquidos, presentan algunos picos aislados. Esto se ve en algunas señales en mayor proporción que en otras, como el caso del paciente 9. Debido a esto el algoritmo los detecta como ronquidos. Al tratarse de un fenómeno presentado solo en algunas señales se tendrá en cuenta en la aplicación final Android, ya que a la hora de capturar las muestras desde un dispositivo estos ``picos'' aislados no deberían aparecer.
+
+Una vez analizados los valores de falsos positivos y falsos negativos con las señales usadas hasta el momento, se procedió a determinar tasas de aciertos usando señales no utilizadas en pruebas (no vistas por el sistema). En la Tabla \ref{tabla:clasificador_matlab_verificacion} se presentan los valores obtenidos para estas señales (verificación). En ellos se puede observar que los valores de sensibilidad y especificidad superan el 80\%, llegando en algunos casos muy cerca del 100\%. Por lo tanto se puede concluir que el método utilizando señales limpias es factible y que puede ser implementado en Android.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			Paciente 1 & 12 & 19 & 11 & 6 & 52.1\% & 76\% & 66.6\% & 63.3\% \\ \hline
+			Paciente 2 & 46 & 0 & 0 & 2 & 100\% & 0\% & 95.8\% & --\\ \hline
+			Paciente 3 & 42 & 3 & 0 & 3 & 100\% & 50\% & 93.3\% & 100\% \\ \hline
+			Paciente 4 & 39 & 1 & 0 & 8 & 100\% & 11.1\% & 82.9\% & 100\% \\ \hline
+			Paciente 5 & 28 & 18 & 1 & 1 & 96.5\% & 94.7\% & 96.5\% & 94.7\% \\ \hline
+			Paciente 6 & 9 & 33 & 5 & 1 & 64.3\% & 97.6\% & 90\% & 86.8\% \\ \hline
+			Paciente 7 & 38 & 1 & 0 & 9 & 100\% & 10\% & 80.8\% & 100\% \\ \hline
+			Paciente 8 & 37 & 8 & 1 & 2 & 97.3\% & 80\% & 94.8\% & 88.8\% \\ \hline
+			Paciente 9 & 7 & 19 & 12 & 10 & 36.8\% & 65.5\% & 41.1\% & 61.3\% \\ \hline
+			Paciente 10 & 47 & 0 & 0 & 1 & 100\% & 0\% & 97.9\% & -- \\ \hline
+		\end{tabular}
+		\caption{Resultados de las pruebas utilizando el detector en Matlab.}
+		\label{tabla:clasificador_matlab}
+	\end{center}
+\end{table}   
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Señal & HORA & ETIQUETA & T0 \\ 
+			\hline \hline
+			Paciente 1 & 22:35:01 & FN & 2.07 \\ \hline
+								&	23:35:02 & FN &	2.65 \\ \hline
+			Paciente 4 & 23:10:03 &	FN & 2.09 \\ \hline
+							  & 23:20:27 & FN &	2.51 \\ \hline
+			Paciente 7 & 23:35:0 & FN & 2.14 \\ \hline
+								&	01:00:11 & FN &	2.06 \\ \hline
+		  Paciente 9 & 22:55:56 & FN & 2.33 \\ \hline
+								&	23:00:19 & FN & 2.77 \\ \hline
+		\end{tabular}
+		\caption{Análisis de falsos negativos.}
+		\label{tabla:falsos_negativos_matlab}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Señal & HORA & ETIQUETA & T0 \\ 
+			\hline \hline
+			Paciente 1 & 22:40:02 & FP & 4.11 \\ \hline
+								 & 23:30:00 & FP & 4.60 \\ \hline
+			Paciente 6 & 12:05:03	& FP & 4.29 \\ \hline
+							   & 15:30:10 & FP & 4.68 \\ \hline
+			Paciente 8 & 00:35:11 &	FP & 3.65 \\ \hline
+		  Paciente 9 & 22:50:13 & FP & 4.66 \\ \hline
+								 & 00:25:02 & FP & 3.96 \\ \hline
+		\end{tabular}
+		\caption{Análisis de falsos positivos.}
+		\label{tabla:falsos_positivos_matlab}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			Paciente 11 & 20 & 21 & 4 & 3 & 83.3\% & 87.5\% & 86.9\% & 84\% \\ \hline
+			Paciente 12 & 9 & 36 & 1 & 2 & 90\% & 94.7\% & 81.8\% & 97.3\% \\ \hline
+			Paciente 13 & 6 & 35 & 6 & 1 & 50\% & 97.2\% & 85.7\% & 85.3\% \\ \hline
+			Paciente 14 & 9 & 30 & 7 & 2 & 43.7\% & 93.8\% & 81.8\% & 81.1\% \\ \hline
+			Paciente 15 & 4 & 40 & 4 & 0 & 50\% & 100\% & 100\% & 90.9\% \\ \hline			
+		\end{tabular}
+		\caption{Verificación de métodos y funcionalidades de Matlab con señales no vistas.}
+		\label{tabla:clasificador_matlab_verificacion}
+	\end{center}
+\end{table}  
+
+
+%==============================================================================
+%
+%	CAPITULO 3 - APLICACIÓN ANDROID
+%
+%==============================================================================
+\chapter{Desarrollo de aplicación Android\textsuperscript{\scriptsize\textregistered}}
+\thispagestyle{empty}
+Este capítulo describe los pasos que se llevaron a cabo para desarrollar una aplicación Android capaz de detectar segmentos de ronquidos. Para ello se utilizaron los resultados obtenidos en capítulos anteriores que nos permitieron caracterizar los ronquidos y diferenciarlos de posibles ruidos. El desarrollo se realizó utilizando el modelo en cascada [19]. \textcolor{blue}{ Este modelo es de facil aplicación, promoviendo una metodología de trabajo efectiva basada en definir detalladamente cada etapa antes de avanzar a la siguiente. Al no disponer de un cliente específico, el cual pudiese solicitar cambios o nuevos requerimientos, no se vió la necesidad de utilizar un modelo de desarrollo que permita volver a diseñar y codificar. Es por esto que al tratarse de un desarrollo de dos personas se focalizó en definir detalladamente en conjunto lo que se debía realizar en cada etapa.} Para ello se siguieron las siguientes etapas:
+
+\begin{itemize}
+    \item Requerimientos
+    \item Diseño
+    \item Desarrollo
+    \item Verificación y validación
+    \item Operación y mantenimiento
+\end{itemize}
+    
+\section{Requerimientos}
+Con el fin de recopilar los requisitos que esta aplicación Android debe satisfacer se realizaron distintas tareas, tanto para obtener requerimientos funcionales como no funcionales.
+
+\subsection{Requerimientos funcionales}
+Para definir las funcionalidades de esta aplicación, se analizaron las aplicaciones disponibles actualmente en la tienda Play Store de Android [17][18]. A partir del testeo de estas aplicaciones fue posible definir una lista de funcionalidades básicas disponibles en éstas y se detectaron también aquellas que no estaban disponibles pero resultan necesarias. Además, se realizaron entrevistas a posibles usuarios y pruebas sobre una versión prototipo con el fin de recabar aspectos y opiniones sobre esta aplicación. A continuación se listan los requerimientos funcionales relevados:
+
+\begin{itemize}
+    
+    \item La señal se debe analizar tomando segmentos de 5 min.
+    
+    \item Se determina si cada segmento contiene ronquidos o no.
+		
+		\item \textcolor{blue}{Los registros deben ser obtenidos por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.}
+    
+    \item Se debe disponer de opciones para ingresar el email de un médico al que se le enviarán los resultados, además de datos personales que sirvan de apoyo al análisis realizado.
+    
+    \item La información obtenida debe ser contenida dentro de una pestaña o ventana que indique la hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
+		
+    \item La información gráfica debe ser presentada en una pestaña o ventana para los diferentes tipos de gráficos, como por ejemplo de barras (Bar Charts) o líneas (Line Charts), que muestran los resultados de la detección, y de torta (Pie Charts), que representan porcentualmente la distribución de segmentos con ronquidos y no ronquidos.
+		
+		\item \textcolor{blue}{Los resultados obtenidos se deben guardar en un archivo de formato PDF que se envía adjunto en el mail al médico.}
+		
+		\item \textcolor{blue}{Se debe disponer de una pestaña o ventana donde se listen las distinas capturas que el usuario generó. De manera que pueda volver a acceder a los resultados obtenidos en cada una de ellas.}
+		
+\end{itemize}
+
+\subsection{Requerimientos no funcionales}
+Para la obtención de los requerimientos no funcionales, también fueron analizadas las aplicaciones disponibles actualmente [17][18]. Se relevaron aquellos aspectos que se encuentran implícitos en el funcionamiento de éstas  y se puso especial énfasis en el rendimiento y la robustez de la aplicación, identificando que recursos del sistema son utilizados. Además, se analizó que implicancia tendrían algunos de los requerimientos funcionales respecto de rendimiento, robustez, almacenamiento y drenaje de la batería. Finalmente, este sistema debe considerar:
+
+\begin{itemize}
+    \item La Robustez frente al ruido.
+		\item \textcolor{blue}{Se debe generar una interfaz sencilla y amigable que resulte intuitiva al usuario.}
+    \item La capacidad de almacenamiento del dispositivo, suficiente para almacenar los resultados del procesamiento de cada segmento, durante las 6 o 7 horas de captura por micrófono.
+    \item La capacidad de la batería, para que permita el procesamiento durante 6 o 7 horas.
+		\item \textcolor{blue}{La tasa de aciertos debe ser superior a la de las demás aplicaciones.}
+		\item \textcolor{blue}{La aplicación debe funcionar bajo sistema operativo Android.}
+\end{itemize}
+
+
+\section{Diseño}
+A continuación se presenta un diagrama de flujos de datos que ejemplifica el funcionamiento del sistema. 
+El primer paso consiste en la captura de la señal, para ésto se utilizó la clase AudioRecord de Android, la cual permite hacer uso del micrófono en la aplicación y, mediante los datos capturados por el mismo en segmentos.
+
+Debido a que la mayoría de las aplicaciones que utilizan la clase AudioRecord admiten una frecuencia de muestreo mínima de 8000 Hz, que es una limitación propia de la clase, se realiza un proceso de submuestreo a 100 Hz, número determinado con base en el análisis previo de las señales EDF analizadas previamente. Esto involucra un menor costo computacional para los cálculos de autocorrelación y un ahorro en el almacenamiento.
+
+El proceso de submuestreo escogido se denomina ``decimation'' e incluye un filtro pasa-bajos que permite eliminar previamente las altas frecuencias de la señal para no generar aliasing. Como filtro pasa-bajos se utilizó un FIR de orden 6, con una frecuencia de corte fijada en $\pi/80$. 
+
+La señal submuestreada es segmentada en trozos de 5 min, y para cada uno de estos se  calcula el período fundamental $T_0$ por medio de la autocorrelación. Si el valor $T_0$ del segmento está dentro del rango determinado en la etapa previa de análisis de las señales EDF, este segmento será etiquetado como ``Ronquido'' y se registra la hora en que sucede. Ésto se repite hasta el momento en que el usuario/paciente elige detener la captura, y entonces se genera un informe de resultados que se entrega al usuario por pantalla y se envía al médico por mail (si esta opción fue indicada).
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=.5]{img/flujo.eps}
+	\caption{Diagrama de flujo de la aplicación Android}
+	\label{figura:diagrama_flujo}
+\end{figure}
+
+\subsection{Casos de Uso}
+A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de casos de usos general de la aplicación. En él se representan los actores  y se describen las principales acciones que permitirá la aplicación.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics{img/CU_new.png}	
+	\caption{Diagrama de casos de uso}
+	\label{figura:caso_uso}
+\end{figure}
+
+
+%******************************************************
+%
+%   Tablas con descripciones de los CU
+%
+%******************************************************
+\begin{table}[H]
+	\centering
+    \small
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{ID del caso de uso} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Nombre del caso de uso}} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Actores que participan}} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Breve descripción del CU} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{Que tiene que ocurrir antes del CU} \\
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Paso 1
+                        \item Paso 2
+                        \item Paso 3
+                    \end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Paso alternativo 1
+                    \end{enumerate}
+                } \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm} |}{Que pasa luego del CU} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm} |}{Imágenes tipo Mockups} \\
+            \hline
+		\end{tabular}
+		\caption{Caso de uso Iniciando captura}
+		\label{tabla:caso_uso_iniciando}
+\end{table}
+
+
+
+
+\subsection{Diagrama de secuencia}
+A continuación se presenta el gráfico de secuencia donde se representan los casos de usos ``Iniciando Captura'' y ``Finalizando Captura'' por parte del Usuario en la aplicación. En éste se representan los objetos básicos para representar el flujo de mensajes necesarios para que se ejecuten para tales casos de uso y además los mensajes necesarios para realizar la persistencia de datos, representando así el núcleo básico de operación de la aplicación, como se puede observar en la Figura \ref{figura:diagrama_secuencia}. También se puede observar el ``loop'' o ciclo básico de captura y procesamiento de segmentos.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1\columnwidth]{img/secuencia.eps}	
+	\caption{Diagrama de secuencia}
+	\label{figura:diagrama_secuencia}
+\end{figure}
+
+
+\subsection{Diseño de Clases}
+En esta sección se presentan dos diagramas de clases de la aplicación. El primero de ellos, es el diagrama de clases general de la aplicación. En las Figuras \ref{figura:diagrama_clases_1}, \ref{figura:diagrama_clases_2} y \ref{figura:diagrama_clases_3} se observa que las clases heredadas del propio sistema Android, no cuentan con atributos y operaciones, salvo algunas excepciones, ya que tales clases cuentan con cientos de operaciones, excediendo así los alcances de éste proyecto. El segundo diagrama esta vinculado al manejo de la Base de Datos. En la figura \ref{figura:diagrama_clases_db} se representan las clases encargadas de la persistencia de datos mediante el motor de Bases de Datos SQLite de Android.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.35]{img/obj_1.eps}	
+	\caption{Diagrama de clases para captura, procesamiento y comunicación}
+	\label{figura:diagrama_clases_1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.35]{img/obj_2.eps}	
+	\caption{Diagrama de clases para la vista principal y sus fragmentos}
+	\label{figura:diagrama_clases_2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.35]{img/obj_3.eps}	
+	\caption{Diagrama de clases para la representación gráfica de los resultados}
+	\label{figura:diagrama_clases_3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.3]{img/objetos2.eps}	
+	\caption{Diagrama de clases para la base de datos}
+	\label{figura:diagrama_clases_db}
+\end{figure}
+
+
+\subsection{Diseño de interfaces}
+A continuación se presentan las interfaces de la aplicación, que se diseñaron orientadas a las funcionalidades que se recabaron en la etapa de requerimientos.
+
+En la Figura \ref{figura:screen1} se puede ver la pantalla de inicio de la aplicación, mientras que en la Figura \ref{figura:screen2} se presentan una serie de campos donde se deben ingresar los datos del usuario (paciente) y el correo electrónico del médico. Estos datos son útiles para enviar el email con los resultados al médico. Luego de guardar los datos, se accede a la siguiente pantalla (Figura \ref{figura:screen3}), donde se detalla una lista con todas las grabaciones realizadas previamente. En esta pantalla hay un Botón de Acción Flotante que permite generar una nueva captura y procesamiento de datos.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=.75]{img/screen1}	
+	\caption{Pantalla de inicio}
+	\label{figura:screen1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=.75]{img/screen2}	
+	\caption{Datos del usuario y del médico}
+	\label{figura:screen2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=.75]{img/screen3}	
+	\caption{Lista de las grabaciones realizadas}
+	\label{figura:screen3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=.75]{img/screen4}	
+	\caption{Iniciar nueva captura de datos}
+	\label{figura:screen4}
+\end{figure}
+
+En la Figura \ref{figura:screen4}, se ven la opciones que permiten iniciar y detener la grabación. Cuando se  finaliza la captura (Detener), la aplicación procesa los datos y se obtienen los resultados que son presentados en una nueva pantalla. En las Figuras \ref{figura:screen5} y \ref{figura:screen6} se presentan las imágenes correspondientes a las dos pestañas de resultados, en una se ven las gráficas mientras que en la otra se ve un reporte con información detallada (en modo de texto o en tablas). Estos reportes son enviados al médico cuando se elige finalizar la captura.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen5}			
+	\caption{Pestaña de los gráficos}
+	\label{figura:screen5}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen6}			
+	\caption{Pestaña del reporte detallado}
+	\label{figura:screen6}
+\end{figure}
+
+\subsection*{Información gráfica detallada}
+Existen muchas librerías en android que permiten realizar gráficos, en este sistema se utilizó MPAndroidChart [20]. A continuación se describen los gráficos que se generan con la aplicación utilizando esta librería.
+En el gráfico de barras de la Figura \ref{figura:screen_grafico1} se representa la señal capturada y se resaltan los segmentos donde se detectan ronquidos. Cada barra representa un segmento de cinco min de duración, indicando el tiempo de inicio, y su amplitud es la energía promedio de este segmento. En cuanto a los colores, las barras de color Cyan representan segmentos en los que no se detectaron ronquidos, las de color amarillo representan ronquidos de intensidad simple, y las rojas de alta intensidad. 
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico1}	
+	\caption{Gráfico de barras generado por la aplicación} 
+	\label{figura:screen_grafico1}
+\end{figure}
+
+Además genera dos gráficos de anillos que presentan información porcentual del análisis realizado. En el primer gráfico de la Figura \ref{figura:screen_grafico3}, se muestra la proporción de segmentos con ronquidos que se encuentran en la señal, y en el segundo la distribución de los distintos segmentos detectados como ronquidos según sean del tipo simple o alto.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico3}	
+	\caption{Gráficos de anillos generados por la aplicación}
+	\label{figura:screen_grafico3}
+\end{figure}
+
+\subsection*{Información detallada en formato de reporte}
+En la pestaña de reporte se presenta una tabla como se puede apreciar en la Figura \ref{figura:screen_grafico4}. En esta se indica la hora de comienzo y de finalización de la captura como así también la duración en horas de la misma. Además se muestran otros indicadores como por ejemplo la cantidad de segmentos detectados como ronquidos, la hora con mayor cantidad de ronquidos, la cual se determina como la hora que contiene mayor cantidad de segmentos de 5 min detectados como tales, y por último la cantidad promedio de ronquidos/hora. Luego se presenta un detalle de cada segmento indicando si tiene o no ronquidos, indicando la hora de comienzo del segmento y una estimación de la intensidad.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico4}	
+	\caption{Información en formato de reporte}
+	\label{figura:screen_grafico4}
+\end{figure}
+
+\subsection*{Reporte enviado al médico}
+Los resultados obtenidos pueden ser enviados vía email a un médico, donde se adjunta un archivo de formato PDF (Portable Document Format) que contendrá los mismos resultados que el usuario puede observar en la aplicación. Este archivo PDF se genera por medio de la librería iText [21], y tal como puede observarse en la Figura \ref{figura:screen_grafico5} y la Figura \ref{figura:screen_grafico6} consta de dos partes, donde en la primera se indican los datos del paciente junto a los resultados del análisis y en la segunda se presentan los gráficos que la aplicación genera.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico5}	
+	\caption{Información detallada del paciente y las detecciones}
+	\label{figura:screen_grafico5}
+\end{figure} 
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=.5\columnwidth]{img/screen_grafico6}	
+	\caption{Representación gráfica de los resultados}
+	\label{figura:screen_grafico6}
+\end{figure} 
+
+
+\section{Verificación y validación}
+
+En esta sección se describe el procedimiento seguido \textcolor{blue}{al finalizar el desarrollo} de la aplicación Android en cuanto a verificación y validación de los códigos desarrollados, como así también la metodología de pruebas que se utilizó para validar el funcionamiento de la aplicación una vez terminada. La misma consistió de pruebas al método clasificador/detector, a las interfaces, gráficos y reportes, como así también al rendimiento en cuanto a consumo de batería y de almacenamiento.      
+
+\subsection*{Inspecciones del software}
+
+\textcolor{blue}{Al finalizar la etapa de Implementación se llevaron} a cabo revisiones del software, buscando defectos en los códigos constatando que lo desarrollado fuese lo más óptimo posible y se corresponda con lo definido en las etapas de requerimiento y diseño. 
+Como se trata de un equipo de desarrollo formado por dos personas se realizaron inspecciones cruzadas donde cada uno inspeccionó lo realizado por el otro. 
+
+\subsection*{Metodología de prueba de la aplicación}
+Como parte de las verificaciones y validaciones de la aplicación se describen a continuación las actividades que se desarrollaron para cumplir con la metodología.
+\textcolor{blue}{Estas pruebas se realizaron de manera manual y no se utilizaron herramientas adicionales. Para las pruebas del clasificador/detector de ronquidos de la aplicación se utilizó un enfoque de caja blanca mientras que para el resto de los items se utilizaron pruebas de caja negra.}
+
+\begin{itemize}
+\item Pruebas del clasificador/detector de ronquidos de la aplicación:
+		\begin{itemize}
+			\item Determinar tasas de aciertos sobre señales EDF (limpias).
+			\item Determinar tasas de aciertos sobre señales obtenidas en entornos cotidianos.
+		\end{itemize}
+\item Pruebas de los gráficos y reportes:
+	\begin{itemize}
+		\item Realizar los calculos de manera manual para comprobar los resultados mostrados en los gráficos.
+		\item Verificar que lo representado en los gráficos corresponda a los resultados obtenidos.
+		\item Verificar el envío de la información vía email.
+	\end{itemize}
+\item Pruebas de interfaces:
+	\begin{itemize}
+		\item Probar todas las interfaces y su navegación de manera de asegurar que los links y eventos de las distintas ventanas o pestañas funcionan adecuadamente.
+		\item Verificar el almacenamiento y carga de los datos personales y del médico.
+	\end{itemize}
+\item Pruebas de rendimiento:
+	\begin{itemize}
+		\item Revisar el tamaño que ocupan los datos almacenados por la aplicación.
+		\item Verificar el consumo de la batería para capturas de 6 o 7 horas.
+	\end{itemize}
+\end{itemize}
+
+\section{Tasas de aciertos de la aplicación Android}
+
+\subsection*{Pruebas sobre señales EDF (limpias)}
+En esta etapa, se describe la comparación entre el clasificador desarrollado en Matlab y el desempeño del mismo método desarrollado en la aplicación Android. Para ello se analizaron las mismas señales EDF utilizadas para validar el método en Matlab, correspondientes a los Pacientes 11, 12, 13, 14 y 15. 
+
+Para las pruebas se procedió a modificar la fuente de datos de la aplicación desarrollada, de manera que no analice los datos capturados vía micrófono, sino que lea los mismos de los archivos EDF.
+Las tasas de aciertos obtenidas se pueden observar en la Tabla \ref{tabla:clasificador_android_verificacion}, estos resultados son iguales a los obtenidos con el algoritmo desarrollado en Matlab, por lo que se puede afirmar que los cálculos realizados en la aplicación Android son correctos y equivalentes. Por lo tanto se concluye que, así como el método se podía realizar en Matlab, éste también funciona en una aplicación Android.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Señal & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			Paciente 11 & 20 & 21 & 4 & 3 & 83.3\% & 87.5\% & 86.9\% & 84\% \\ \hline
+			Paciente 12 & 9 & 36 & 1 & 2 & 90\% & 94.7\% & 81.8\% & 97.3\% \\ \hline
+			Paciente 13 & 6 & 35 & 6 & 1 & 50\% & 97.2\% & 85.7\% & 85.3\% \\ \hline
+			Paciente 14 & 9 & 30 & 7 & 2 & 43.7\% & 93.8\% & 81.8\% & 81.1\% \\ \hline
+			Paciente 15 & 4 & 40 & 4 & 0 & 50\% & 100\% & 100\% & 90.9\% \\ \hline			
+		\end{tabular}
+		\caption{Tasas de aciertos de la aplicación Android con señales limpias.}
+		\label{tabla:clasificador_android_verificacion}
+	\end{center}
+\end{table} 
+
+\subsection*{Pruebas sobre señales obtenidas en entornos cotidianos}
+Aquí se presentan los resultados de las pruebas realizadas con la aplicación android utilizando señales obtenidas en entornos cotidianos, entendiendo por tales, aquellos lugares donde es común la presencia de sonidos, que sin ser ronquidos pudieran ser capturados por la aplicación. Para esto, se colocó el dispositivo movil con la aplicación ejecutandose durante varias horas en entornos con dichas características (como por ejemplo, en una habitación). 
+
+Una de las pruebas comenzó a las 14:00 hs y tuvo una duración de 3 horas y 45 min. Se realizó en una habitación lindera a la calle, con ventilador de techo encendido (por el ruido que el mismo genera), donde varias personas realizaban sus rutinas normales, lo que generó sonidos de entradas y salidas a la habitación, personas hablando y de televisión de habitaciones linderas.
+En la Tabla \ref{tabla:clasificador_android_ambientales} se listan los períodos fundamentales relevados durante la captura y su correspondiente etiqueta, mientras que en la Tabla \ref{tabla:aciertos_android_ambientales} se pueden ver los valores de Verdaderos positivos, Falsos positivos, Falsos negativos, Verdaderos negativos, Valor predictivo positivo, Valor predictivo negativo, Sensibilidad y Especificidad. 
+Se puede ver que no existen verdaderos positivos ya que ninguna persona genero ronquidos, por ésto, la sensibilidad no está presente y por lo tanto solo importa analizar la especificidad, en la cual se ve un valor muy bueno, ya que supera el 90\%.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+		\hline 
+		T0 & Etiqueta & T0 & Etiqueta & T0 & Etiqueta \\ \hline \hline
+		2.01 &No ronquido	&2.22 &No ronquido	&2.03 &No ronquido \\ \hline
+		2.54 &No ronquido	&2.01 &No ronquido	&2.08 &No ronquido \\ \hline
+		3.27 &No ronquido	&3.20 &No ronquido	&2.31 &No ronquido \\ \hline
+		2.37 &No ronquido	&3.01 &No ronquido	&2.39 &No ronquido \\ \hline
+		2.08 &No ronquido	&2.36 &No ronquido	&4.25 &Ronquidos \\ \hline
+		2.54 &No ronquido	&3.05 &No ronquido	&2.30 &No ronquido \\ \hline
+		2.97 &No ronquido	&2.01 &No ronquido	&2.32 &No ronquido \\ \hline
+		2.19 &No ronquido	&2.18 &No ronquido	&4.04 &Ronquidos \\ \hline
+		2.55 &No ronquido	&2.11 &No ronquido	&2.06 &No ronquido \\ \hline
+		2.10 &No ronquido	&2.71 &No ronquido	&2.80 &No ronquido \\ \hline
+		3.20 &No ronquido	&2.63 &No ronquido	&2.27 &No ronquido \\ \hline
+		2.04 &No ronquido	&2.02 &No ronquido	&2.99 &No ronquido \\ \hline
+		2.37 &No ronquido	&2.30 &No ronquido	&2.24 &No ronquido \\ \hline
+		3.08 &No ronquido	&3.73 &Ronquidos &2.45 &No ronquido \\ \hline
+		2.08 &No ronquido	&2.22 &No ronquido	&2.17 &No ronquido \\ \hline
+		\end{tabular}
+		\caption{Pruebas a la aplicación Android en ambientes cotidianos.}
+		\label{tabla:clasificador_android_ambientales}
+	\end{center}
+\end{table} 
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+		\hline 
+		Verdaderos positivos & Falsos positivos & Valor predictivo positivo \\
+		0	& 3	& 0\% \\ \hline
+		Falsos negativos & Verdaderos negativos	& Valor predictivo negativo \\
+		0	& 42	& 100\% \\ \hline
+		Sensibilidad & Especificidad	& \\
+		0\%	& 93.3\% & \\ \hline	
+		\end{tabular}
+		\caption{Tasas de aciertos de la aplicación Android en  ambientes cotidianos.}
+		\label{tabla:aciertos_android_ambientales}
+	\end{center}
+\end{table} 
+
+Para el análisis de los valores pico, se realizó otra captura y se estimó la amplitud de $T_0$. Luego se calculó el porcentaje que representa esa amplitud respecto de la energía (valor de autocorrelación con desplazamiento cero). En la Tabla \ref{tabla:clasificador_android_ambientales2} se puede ver los valores del $T_0$, su amplitud y la correspondiente etiqueta clasificatoria. Como se aprecia en los resultados anteriores, la mayoría de los valores $T_0$ tienen una amplitud menor al 0.3 (30\%) de la energía del segmento, lo que los convierte en valores bajos y que evidentemente no representan valores picos sobresalientes en la autocorrelación. Esto permite utilizar un umbral del 30\% para discriminar aquellos segmentos cuyo $T_0$ esta en el rango de 3.50 a 4.70 seg pero que por no ser valores picos no corresponden a ``Ronquidos''.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+		\hline 
+		T0	& Amplitud	& Etiqueta \\ \hline
+		3.00	& 0.26	&	No ronquido\\ \hline
+		2.95	& 0.34	&	No ronquido\\ \hline
+		2.06	& 0.29	&	No ronquido\\ \hline
+		2.04	& 0.35	&	No ronquido\\ \hline
+		2.21	& 0.19	&	No ronquido\\ \hline
+		2.84	& 0.25	&	No ronquido\\ \hline
+		2.69	& 0.27	&	No ronquido\\ \hline
+		2.01	& 0.28	&	No ronquido\\ \hline
+		3.06	& 0.24	&	No ronquido\\ \hline
+		2.30	& 0.26	&	No ronquido\\ \hline
+		3.17	& 0.25	&	No ronquido\\ \hline
+		2.17	& 0.29	&	No ronquido\\ \hline
+		2.05	& 0.31	&	No ronquido\\ \hline
+		3.60	& 0.32	&	Ronquidos\\ \hline
+		2.49	& 0.29	&	No ronquido\\ \hline
+		2.03	& 0.30	&	No ronquido\\ \hline
+		2.12	& 0.23	&	No ronquido\\ \hline
+		2.30	& 0.14	&	No ronquido\\ \hline
+		2.15	& 0.25	&	No ronquido\\ \hline
+		2.11	& 0.25	&	No ronquido\\ \hline
+		3.32	& 0.29	&	No ronquido\\ \hline
+		\end{tabular}
+		\caption{Pruebas de la aplicación Android en  ambientes cotidianos.}
+		\label{tabla:clasificador_android_ambientales2}
+	\end{center}
+\end{table}  
+
+
+\subsection*{Análisis comparativo de las aplicaciones Android}
+\textcolor{blue}{
+En esta sección se presentan los resultados de las pruebas que se realizaron a 
+las aplicaciones Android, \textbf{\textit{SnoreClock}} y \textbf{\textit{DreamWatcher}}. El objetivo fué demostrar que la aplicación desarrollada en este Proyecto Final de Carrera presenta mejores tasas de aciertos.
+Para demostrar esto se utilizaron dos señales, una con puros ronquidos y la otra únicamente con ruidos. En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se pueden ver las tasas de aciertos que se obtuvieron utilizando estas señales en las distintas aplicaciones. Se puede observar que para la señal de ronquidos los pocentajes de aciertos fueron buenos en cualquier aplicación. Sin embargo, esto cambió cuando se utilizó la señal con puros ruidos, ya que las dos aplicaciones elegidas para esta comparación detectaron muchos falsos positivos. Esto se debió a que estas aplicaciones analizan solamente cambios bruscos de energía detectando todo lo que es ruido como ronquidos. De esta manera, quedó demostrado que se desarrolló una aplicación capaz de lograr buenas tasas de aciertos en la detección de ronquidos aún en precensia de ruidos. 
+}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Aplicación & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			SnoreDetection & 11 & 0 & 0 & 1 & 100\% & 0\% & 91.6\% & 0\% \\ \hline
+			SnoreClock & 12 & 0 & 0 & 0 & 100\% & 0\% & 100\% & 0\% \\ \hline
+			DreamWatcher & 12 & 0 & 0 & 0 & 100\% & 0\% & 100\% & 0\% \\ \hline			
+		\end{tabular}
+		\caption{Tasas de acierto de las aplicaciónes Android para una señal de ronquidos.}
+		\label{tabla:aplicaciones_android_ronquidos}
+	\end{center}
+\end{table} 
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Aplicación & VP & VN & FP & FN & VPP & VPN & Sen & Esp \\ 
+			\hline \hline
+			SnoreDetection & 0 & 12 & 0 & 0 & 0\% & 100\% & 0\% & 100\% \\ \hline
+			SnoreClock & 0 & 4 & 8 & 0 & 0\% & 100\% & 0\% & 33.3\% \\ \hline
+			DreamWatcher & 0 & 0 & 12 & 0 & 0\% & 0\% & 0\% & 0\% \\ \hline			
+		\end{tabular}
+		\caption{Tasas de acierto de las aplicaciónes Android para una señal de ruidos.}
+		\label{tabla:aplicaciones_android_ruidos}
+	\end{center}
+\end{table} 
+
+%==============================================================================
+%
+%	CAPITULO 4 - CONCLUSIÓN Y TRABAJOS FUTUROS
+%
+%==============================================================================
+\chapter{Conclusión y trabajos futuros}
+En este proyecto final se desarrolló una aplicación Android capaz de detectar eventos de ronquidos por medio del análisis de datos capturados vía el micrófono del dispositivo. El objetivo principal fue lograr una correcta detección utilizando métodos más inteligentes que los utilizados por las aplicaciones disponibles hasta el momento. Estas aplicaciones sólo realizan un análisis del nivel de energía de los datos capturados, generando un mal desempeño frente a condiciones ambientales de mucho ruido, siendo detectados y etiquetados como ronquidos.
+Primeramente se analizaron en detalle los ronquidos a fin de extraer alguna característica representativa de los mismos que permita poder detectarlos dentro de una grabación obtenida en ambientes cotidianos. Para ello se analizaron distintas señales EDF de personas de distinto sexo, obtenidas en estudios de sueño. De este análisis se demostró que el $T_0$ es una característica representativa de los ronquidos y que permite diferenciarlos de otros sonidos no deseados que pudieran presentarse en este tipo de grabaciones. Como resultado de esta etapa, mediante la extracción manual de segmentos etiquetados como ronquidos en las señales EDF y el cálculo de su correspondiente $T_0$, se concluye que el rango de valores del $T_0$ es de [3.50 - 4.70 s].
+
+Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado. Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas llegando a mas del 90\% en algunos casos. \textcolor{blue}{En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se observa que en precensia de mucho ruido la aplicación desarrollada en este Proyecto Final de Carrera logra el mejor desempeño comparado con el de las demas aplicaciones.} Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
+
+De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no sólo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas. Estos podrían complementar o hasta sustituir en un futuro a los actuales métodos de estudios de sueño. Permitiendo aumentar la comodidad del paciente teniendo una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100 Hz y con un almacenamiento discreto. De ésta manera se pueden desarrollar dispositivos inteligentes integrables a la habitación de un individuo , que realicen comportamientos determinados según la detección realizada. Ejemplo de esto puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño.
+
+\thispagestyle{empty}
+\chapter*{Bibliografia}
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Bibliografía} % esto añade el capitulo en el índice
+
+[1] Dalmasso F, Prota R. Snoring: analysis, measurement, clinical implications and applications. European Respiratory Journal. Vol. 9, pp. 146-159, 1996.
+
+[2] Thorpy MJ. The international classification of sleep disorders: diagnostic and coding manual. Lawrence KS ed Allen Press. Inc., USA, pp. 195-197, 1990
+
+[3] Paul Countera, Janet A. Wilson. The management of simple snoring. Sleep Medicine Reviews. Elsevier, vol. 8, pp. 433-441, 2004.
+ 
+[4] GOOGLE PLAY, aplicaciones de Android [consulta: 30 abril 2013]. Disponible en: \url{<https://play.google.com/store>}
+
+[5] iPHONE, cientos de miles de infitas posibilidades [consulta: 30 abril 2013]. Disponible en: \url{<http://www.apple.com/es/iphone/from-the-app-store/>}
+ 
+[6] STARRY NIGTH, sleep technology bed [consulta: 30 abrir 2013]. Disponible en: \url{<http://www.starrynightbed.com/>}
+
+[7] BACK IN ACTION, snore pillow [consulta: 30 abril 2013]. Disponible en: \url{<http://www.backinaction.co.uk/snore-pillow>}
+
+[8] MILONE, D., RUFINER, H., ACEVEDO, R., DI PERSIA, L., TORRES, H. Introducción a las Señales y los Sistemas Discretos. Santa Fe, 2009. 223 p. 
+
+[9] WIKIPEDIA, la enciclopedia libre [consulta: 14 marzo 2016]. Disponible en: \url{https://es.wikipedia.org/wiki/Desarrollo_de_programas_para_Android}
+
+[10] WIKIPEDIA, la enciclopedia libre [consulta: 14 marzo 2016]. Disponible en: \url{https://es.wikipedia.org/wiki/Java_(lenguaje_de_programacion)}
+
+[11] WIKIPEDIA, la enciclopedia libre [consulta: 14 marzo 2016]. Disponible en: \url{https://es.wikipedia.org/wiki/Kit_de_desarrollo_de_software}
+
+[12] José Antonio Fiz Fernández, Jordi Solá Soler y Raimon Jané Campos. Métodos de análisis del ronquido. Medicina Clínica (Barcelona). Elsevier, vol. 137, no. 1, pp. 36-42, 2011.  
+
+[13] Dirk Pevernagie, Ronald M. Aarts y Micheline De Meyer. The acoustics of snoring. Sleep Medicine Reviews. Elsevier, vol. 14, pp. 131-144, 2010.
+
+[14] Ali  Azarbarzina, Zahra  Moussavi. Snoring sounds variability as a signature of obstructive sleep apnea. Medical Engineering \& Physics. Elsevier, vol. 35, pp. 479-485, 2013.
+
+[15] Andrew Keong Ng, Tong San Koh, Kathiravelu Puvanendran y Udantha Ranjith Abeyratne. Snore Signal Enhancement and Activity Detection via Translation-Invariant Wavelet Transform. Transactions on Biomedical Engineering. IEEE, vol. 55, no. 10, pp. 2332-2342, 2008.
+
+[16] Ali Azarbarzin y Zahra M. K. Moussavi. Automatic and Unsupervised Snore Sound Extraction From Respiratory Sound Signals. Transactions on Biomedical Engineering. IEEE, vol. 58, no. 5, pp. 1156:1162, 2011.
+
+[17] SnoreClock. Aplicación para detectar ronquidos [consulta: 18 noviembre 2015]. Disponible en: \url{<https://play.google.com/store/apps/details?id=de.ralphsapps.snorecontrol>}
+
+[18] Dream Watcher - Anti Ronquidos. Aplicación para detectar ronquidos [consulta: 20 noviembre 2015]. Disponible en: \url{<https://play.google.com/store/apps/details?id=com.arcadexxi.dreamwatcher>}
+
+[19] Sommerville, Ian and María Isabel Alfonso Galipienso. Ingeniería Del Software. Madrid: Pearson Addison-Wesley, 2005.
+
+[20] MPAndroidChart. Librería Android para generación de gráficos. Disponible en: \url{<https://github.com/PhilJay/MPAndroidChart/>}
+
+[21] iText. Librería Java para realizar archivos PDF. Disponible en: \url{<http://itextpdf.com/>} 
+
+
+%==============================================================================
+%
+%	ANEXO A (Apéndices)
+%
+%==============================================================================
+\appendix
+\chapter{Tablas adicionales sobre la extracción de $T_0$}
+\thispagestyle{empty}
+%\addcontentsline{toc}{chapter}{Tablas adicionales para el cálculo de $T_0$} % esto añade el capitulo en el índice
+%\addcontentsline{toc}{section}{Anexo A} % asi se añade una seccion al índice
+
+\footnotesize{
+
+%==============================================================================
+%
+%	Comienzo tablas de segmentos extraidos de hombres
+%
+%==============================================================================
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline		
+			1 & 03:33:59 & 1823900 & 4.15 \\ \hline
+			2 & 02:12:12 & 1333200 & 4.68 \\ \hline
+			3 & 02:11:04 & 1326400 & 4.86 \\ \hline
+			4 & 03:24:43 & 1768300 & 3.96 \\ \hline
+			5 & 04:33:24 & 2180400 & 3.79 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.29} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
+		\end{tabular}
+		\caption{Paciente 1: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_1_minuto}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline		
+			1 & 03:33:59 & 1823900 & 4.15 \\ \hline
+			2 & 02:12:12 & 1333200 & 4.72 \\ \hline
+			3 & 02:11:04 & 1326400 & 4.86 \\ \hline
+			4 & 03:24:43 & 1768300 & 3.96 \\ \hline
+			5 & 04:33:24 & 2180400 & 3.79 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.30} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.47} \\ \hline
+		\end{tabular}
+		\caption{Paciente 1: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_1_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline					
+			1 & 03:33:59 & 1823900 & 4.15 \\ \hline
+			2 & 02:12:12 & 1333200 & 4.68 \\ \hline
+			3 & 02:11:04 & 1326400 & 4.86 \\ \hline
+			4 & 04:23:31 & 2121100 & 3.97 \\ \hline
+			5 & 01:29:10 & 1075000 & 3.80 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.29} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
+		\end{tabular}
+		\caption{Paciente 1: segmentos de duración de 2 min}
+		\label{tabla:paciente_1_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline								
+			1 & 03:33:59 & 1823900 & 4.15 \\ \hline					
+			2 & 02:12:12 & 1333200 & 4.68 \\ \hline
+			3 & 02:11:04 & 1326400 & 4.86 \\ \hline
+			4 & 04:23:31 & 2121100 & 3.97 \\ \hline
+			5 & 01:29:10 & 1075000 & 3.92 \\ \hline		
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.32} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.43} \\ \hline
+		\end{tabular}
+		\caption{Paciente 1: segmentos de duración de 3 min}
+		\label{tabla:paciente_1_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline								
+			1 & 03:33:59 & 1823900 & 4.15 \\ \hline
+			2 & 02:12:12 & 1333200 & 4.68 \\ \hline
+			3 & 02:20:13 & 1381300 & 4.08 \\ \hline
+			4 & 04:23:31 & 2121100 & 4.45 \\ \hline
+			5 & 01:29:10 & 1075000 & 4.27 \\ \hline								
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.33} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.24} \\ \hline
+		\end{tabular}
+		\caption{Paciente 1: segmentos de duración de 5 min}
+		\label{tabla:paciente_1_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline								
+			1 & 22:25:37 & 153700 & 3.52 \\ \hline
+			2 & 22:28:24 & 170400 & 3.73 \\ \hline
+			3 & 22:30:03 & 180300 & 4.15 \\ \hline
+			4 & 22:52:37 & 315700 & 3.22 \\ \hline
+			5 & 23:16:03 & 456300 & 3.82 \\ \hline						
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.69} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.35} \\ \hline
+		\end{tabular}
+		\caption{Paciente 2: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_2_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline								
+			1 & 22:25:37 & 153700 & 3.23 \\ \hline
+			2 & 22:28:24 & 170400 & 3.73 \\ \hline
+			3 & 22:30:03 & 180300 & 3.28 \\ \hline
+			4 & 22:52:37 & 315700 & 3.22 \\ \hline
+			5 & 23:16:03 & 456300 & 3.48 \\ \hline				
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.39} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.22} \\ \hline
+		\end{tabular}
+		\caption{Paciente 2: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_2_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline										
+			1 & 22:25:37 & 153700 & 3.52 \\ \hline
+			2 & 23:15:31 & 453100 & 3.32 \\ \hline
+			3 & 23:30:06 & 540600 & 3.64 \\ \hline
+			4 & 00:00:00 & 720000 & 2.98 \\ \hline
+			5 & 01:00:00 & 1080000 & 3.59 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.41} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.27} \\ \hline
+		\end{tabular}
+		\caption{Paciente 2: segmentos de duración de 2 min}
+		\label{tabla:paciente_2_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline										
+			1 & 22:25:37 & 153700 & 3.52 \\ \hline
+			2 & 23:15:31 & 453100 & 3.32 \\ \hline
+			3 & 23:30:06 & 540600 & 3.64 \\ \hline
+			4 & 00:00:00 & 720000 & 3.66 \\ \hline
+			5 & 01:00:00 & 1080000 & 3.57	\\ \hline		
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.54} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.14} \\ \hline
+		\end{tabular}
+		\caption{Paciente 2: segmentos de duración de 3 min}
+		\label{tabla:paciente_2_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 22:25:37 & 153700 & 3.59 \\ \hline
+			2 & 23:15:31 & 453100 & 3.23 \\ \hline
+			3 & 23:30:06 & 540600 & 4.09 \\ \hline
+			4 & 00:00:00 & 720000 & 3.55 \\ \hline
+			5 & 01:00:00 & 1080000 & 3.50	\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.59} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.31} \\ \hline
+		\end{tabular}
+		\caption{Paciente 2: segmentos de duración de 5 min}
+		\label{tabla:paciente_2_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 01:43:47 & 322700 & 3.77 \\ \hline
+			2 & 02:06:04 & 456400 & 4.26 \\ \hline
+			3 & 02:31:09 & 606900 & 3.95 \\ \hline
+			4 & 03:10:34 & 843400 & 3.58 \\ \hline
+			5 & 04:52:01 & 1452100 & 3.93 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.90} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.25} \\ \hline
+		\end{tabular}
+		\caption{Paciente 3: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_3_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 01:43:37 & 321700 & 3.87 \\ \hline
+			2 & 02:06:04 & 456400 & 3.92 \\ \hline
+			3 & 02:31:39 & 609900 & 3.95 \\ \hline
+			4 & 03:10:34 & 843400 & 3.65 \\ \hline
+			5 & 04:52:01 & 1452100 & 3.90 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.85} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.12} \\ \hline
+		\end{tabular}
+		\caption{Paciente 3: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_3_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 01:43:37 & 321700 & 3.87 \\ \hline
+			2 & 02:06:04 & 456400 & 4.26 \\ \hline
+			3 & 02:31:39 & 609900 & 3.90 \\ \hline
+			4 & 02:40:22 & 662200 & 3.71 \\ \hline
+			5 & 04:52:01 & 1452100 & 3.96 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.94} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.20} \\ \hline
+		\end{tabular}
+		\caption{Paciente 3: segmentos de duración de 2 min}
+		\label{tabla:paciente_3_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 01:43:37 & 321700 & 3.87 \\ \hline
+			2 & 02:06:04 & 456400 & 3.92 \\ \hline
+			3 & 02:31:39 & 609900 & 3.95 \\ \hline
+			4 & 02:40:22 & 662200 & 3.71 \\ \hline
+			5 & 04:52:01 & 1452100 & 3.45 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.78} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.21} \\ \hline
+		\end{tabular}
+		\caption{Paciente 3: segmentos de duración de 3 min}
+		\label{tabla:paciente_3_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 01:43:37 & 321700 & 3.82 \\ \hline
+			2 & 02:06:04 & 456400 & 3.88 \\ \hline
+			3 & 02:31:39 & 609900 & 3.79 \\ \hline
+			4 & 02:40:22 & 662200 & 4.19 \\ \hline
+			5 & 04:52:01 & 1452100 & 3.45 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.82} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.26} \\ \hline
+		\end{tabular}
+		\caption{Paciente 3: segmentos de duración de 5 min}
+		\label{tabla:paciente_3_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 01:30:03 & 1260300 & 5.83 \\ \hline
+			2 & 03:48:38 & 2091800 & 4.92 \\ \hline
+			3 & 03:53:09 & 2118900 & 4.74 \\ \hline
+			4 & 22:25:30 & 153000 & 4.88 \\ \hline
+			5 & 00:28:31 & 891100 & 4.46 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.97} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.52} \\ \hline
+		\end{tabular}
+		\caption{Paciente 4: segmentos de duración de 1 min}
+		\label{tabla:paciente_4_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 01:30:03 & 1260300 & 5.83 \\ \hline
+			2 & 03:48:38 & 2091800 & 4.31 \\ \hline
+			3 & 03:53:09 & 2118900 & 5.19 \\ \hline
+			4 & 22:25:30 & 153000 & 4.88 \\ \hline
+			5 & 00:28:31 & 891100 & 4.48 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.94} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.61} \\ \hline
+		\end{tabular}
+		\caption{Paciente 4: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_4_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 01:30:03 & 1260300 & 5.83 \\ \hline
+			2 & 03:48:38 & 2091800 & 4.92 \\ \hline
+			3 & 03:53:09 & 2118900 & 5.87 \\ \hline
+			4 & 22:25:30 & 153000 & 4.88 \\ \hline
+			5 & 00:28:31 & 891100 & 4.46 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{5.19} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.62} \\ \hline
+		\end{tabular}
+		\caption{Paciente 4: segmentos de duración de 2 min}
+		\label{tabla:paciente_4_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 01:30:03 & 1260300 & 5.83 \\ \hline
+			2 & 03:48:38 & 2091800 & 4.39 \\ \hline
+			3 & 03:53:09 & 2118900 & 5.81 \\ \hline
+			4 & 22:25:30 & 153000 & 5.30 \\ \hline
+			5 & 00:28:31 & 891100 & 4.46 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{5.16} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.70} \\ \hline
+		\end{tabular}
+		\caption{Paciente 4: segmentos de duración de 3 min}
+		\label{tabla:paciente_4_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline			
+			1 & 01:30:03 & 1260300 & 5.83 \\ \hline
+			2 & 03:48:38 & 2091800 & 4.39 \\ \hline
+			3 & 03:53:09 & 2118900 & 5.81 \\ \hline
+			4 & 22:25:30 & 153000 & 4.27 \\ \hline
+			5 & 00:28:31 & 891100 & 5.98 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{5.26} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.85} \\ \hline
+		\end{tabular}
+		\caption{Paciente 4: segmentos de duración de 5 min}
+		\label{tabla:paciente_4_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline			
+			1 & 04:21:07 & 1.926.700 & 3.90 \\ \hline
+			2 & 04:22:42 & 1.936.200 & 3.91 \\ \hline
+			3 & 04:57:37 & 2.145.700 & 3.82 \\ \hline
+			4 & 23:11:57 & 71.700 & 3.77 \\ \hline
+			5 & 23:42:54 & 257.400 & 3.68	\\ \hline		
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.81} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.095} \\ \hline
+		\end{tabular}
+		\caption{Paciente 5: segmentos de duración de 1 min}
+		\label{tabla:paciente_5_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline						
+			1 & 23:20:51 & 125.100 & 3.98 \\ \hline
+			2 & 00:05:30 & 393.000 & 3.81 \\ \hline
+			3 & 00:08:00 & 408.000 & 3.68 \\ \hline
+			4 & 00:14:17 & 445.700 & 3.38 \\ \hline
+			5 & 00:15:08 & 450.800 & 3.92 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.75} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.24} \\ \hline
+		\end{tabular}
+		\caption{Paciente 5: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_5_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline						
+			1 & 23:04:50 & 29.000 & 3.90 \\ \hline
+			2 & 23:11:57 & 71.700 & 3.77 \\ \hline
+			3 & 23:15:07 & 90.700 & 3.99 \\ \hline
+			4 & 23:18:18 & 109.800 & 3.54 \\ \hline
+			5 & 23:42:45 & 256.500 & 3.81 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.80} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.17} \\ \hline
+		\end{tabular}
+		\caption{Paciente 5: segmentos de duración de 2 min}
+		\label{tabla:paciente_5_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline						
+		1 & 23:11:57 & 71.700 & 3.77 \\ \hline
+		2 & 23:15:39 & 93.900 & 3.99 \\ \hline
+		3 & 23:19:01 & 114.100 & 3.54 \\ \hline
+		4 & 23:42:45 & 256.500 & 3.68 \\ \hline
+		5 & 23:46:00 & 276.000 & 3.87	\\ \hline		
+		\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.77} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.17} \\ \hline
+		\end{tabular}
+		\caption{Paciente 5: segmentos de duración de 3 min}
+		\label{tabla:paciente_5_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline						
+		1 & 23:11:57 & 71.700 & 3.77 \\ \hline
+		2 & 23:16:02 & 96.200 & 3.96 \\ \hline
+		3 & 23:33:58 & 203.800 & 3.97 \\ \hline
+		4 & 23:45:29 & 272.900 & 3.87 \\ \hline
+		5 & 23:54:33 & 327.300 & 3.89 \\ \hline
+		\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.89} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.08} \\ \hline
+		\end{tabular}
+		\caption{Paciente 5: segmentos de duración de 5 min}
+		\label{tabla:paciente_5_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15 \\ \hline
+			& 02:12:12 & 1333200 & 4.72\\ \hline
+			& 02:11:04 & 1326400 & 4.86\\ \hline
+			& 03:24:43 & 1768300 & 3.96\\ \hline
+			& 04:33:24 & 2180400 & 3.79\\ \hline
+			Paciente 2 & 22:25:37 & 153700 & 3.23  \\ \hline			
+			& 22:28:24 & 170400 & 3.73\\ \hline
+			& 22:30:03 & 180300 & 3.28\\ \hline
+			& 22:52:37 & 315700 & 3.22\\ \hline
+			& 23:16:03 & 456300 & 3.48\\ \hline
+			Paciente 3 & 01:43:37 & 321700 & 3.87\\ \hline	
+			& 02:06:04 & 456400 & 3.92\\ \hline
+			& 02:31:39 & 609900 & 3.95\\ \hline
+			& 03:10:34 & 843400 & 3.65\\ \hline
+			& 04:52:01 & 1452100 & 3.90\\ \hline
+			Paciente 4 & 01:30:03 & 1260300 & 5.83  \\ \hline	
+			& 03:48:38 & 2091800 & 4.31\\ \hline
+			& 03:53:09 & 2118900 & 5.19\\ \hline
+			& 22:25:30 & 153000 & 4.88\\ \hline
+			& 00:28:31 & 891100 & 4.48\\ \hline
+			Paciente 5 & 23:20:51 & 125.100 & 3.98\\ \hline
+			& 00:05:30 & 393.000 & 3.81\\ \hline
+			& 00:08:00 & 408.000 & 3.68\\ \hline
+			& 00:14:17 & 445.700 & 3.38\\ \hline
+			& 00:15:08 & 450.800 & 3.92\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.05}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.64} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 30 segundos en distintas señales de hombres.}
+		\label{tabla:segmentos_30_segndos_hombres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15\\ \hline
+			& 02:12:12 & 1333200 & 4.68\\ \hline
+			& 02:11:04 & 1326400 & 4.86\\ \hline
+			& 04:23:31 & 2121100 & 3.97\\ \hline
+			& 01:29:10 & 1075000 & 3.80\\ \hline
+			Paciente 2 & 22:25:37 & 153700 & 3.52\\ \hline
+			& 23:15:31 & 453100 & 3.32\\ \hline
+			& 23:30:06 & 540600 & 3.64\\ \hline
+			& 00:00:00 & 720000 & 2.98\\ \hline
+			& 01:00:00 & 1080000 & 3.59\\ \hline
+			Paciente 3 & 01:43:37 & 321700 & 3.87\\ \hline
+			& 02:06:04 & 456400 & 4.26\\ \hline
+			& 02:31:39 & 609900 & 3.90\\ \hline
+			& 02:40:22 & 662200 & 3.71\\ \hline
+			& 04:52:01 & 1452100 & 3.96\\ \hline		
+			Paciente 4 & 01:30:03 & 1260300 & 5.83\\ \hline
+			& 03:48:38 & 2091800 & 4.92\\ \hline
+			& 03:53:09 & 2118900 & 5.87\\ \hline
+			& 22:25:30 & 153000 & 4.88\\ \hline
+			& 00:28:31 & 891100 & 4.46\\ \hline		
+			Paciente 5 & 23:04:50 & 29.000 & 3.90\\ \hline
+			& 23:11:57 & 71.700 & 3.77\\ \hline
+			& 23:15:07 & 90.700 & 3.99\\ \hline
+			& 23:18:18 & 109.800 & 3.54\\ \hline
+			& 23:42:45 & 256.500 & 3.81\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.13}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.71} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 2 min en distintas señales de hombres.}
+		\label{tabla:segmentos_2_minuto_hombres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15\\ \hline
+			& 02:12:12 & 1333200 & 4.68\\ \hline
+			& 02:11:04 & 1326400 & 4.86\\ \hline
+			& 04:23:31 & 2121100 & 3.97\\ \hline
+			& 01:29:10 & 1075000 & 3.92\\ \hline			
+			Paciente 2 & 22:25:37 & 153700 & 3.52\\ \hline
+			& 23:15:31 & 453100 & 3.32\\ \hline
+			& 23:30:06 & 540600 & 3.64\\ \hline
+			& 00:00:00 & 720000 & 3.66\\ \hline
+			& 01:00:00 & 1080000 & 3.57\\ \hline
+			Paciente 3 & 01:43:37 & 321700 & 3.87\\ \hline
+			& 02:06:04 & 456400 & 3.92\\ \hline
+			& 02:31:39 & 609900 & 3.95\\ \hline
+			& 02:40:22 & 662200 & 3.71\\ \hline
+			& 04:52:01 & 1452100 & 3.45\\ \hline
+			Paciente 4 & 01:30:03 & 1260300 & 5.83\\ \hline
+			& 03:48:38 & 2091800 & 4.39\\ \hline
+			& 03:53:09 & 2118900 & 5.81\\ \hline
+			& 22:25:30 & 153000 & 5.30\\ \hline
+			& 00:28:31 & 891100 & 4.46\\ \hline		
+			Paciente 5 & 23:11:57 & 71.700 & 3.77 \\ \hline
+			& 23:15:39 & 93.900 & 3.99\\ \hline
+			& 23:19:01 & 114.100 & 3.54\\ \hline
+			& 23:42:45 & 256.500 & 3.68\\ \hline
+			& 23:46:00 & 276.000 & 3.87\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.11}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.69} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 3 min en distintas señales de hombres.}
+		\label{tabla:segmentos_3_minuto_hombres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 1 & 03:33:59 & 1823900 & 4.15\\ \hline
+			& 02:12:12 & 1333200 & 4.68\\ \hline
+			& 02:20:13 & 1381300 & 4.08\\ \hline
+			& 04:23:31 & 2121100 & 4.45\\ \hline
+			& 01:29:10 & 1075000 & 4.27\\ \hline
+			Paciente 2 & 22:25:37 & 153700 & 3.59\\ \hline
+			& 23:15:31 & 453100 & 3.23\\ \hline
+			& 23:30:06 & 540600 & 4.09\\ \hline
+			& 00:00:00 & 720000 & 3.55\\ \hline
+			& 01:00:00 & 1080000 & 3.50\\ \hline
+			Paciente 3 & 01:43:37 & 321700 & 3.82\\ \hline
+			& 02:06:04 & 456400 & 3.88\\ \hline
+			& 02:31:39 & 609900 & 3.79\\ \hline
+			& 02:40:22 & 662200 & 4.19\\ \hline
+			& 04:52:01 & 1452100 & 3.45\\ \hline
+			Paciente 4 & 01:30:03 & 1260300 & 5.83\\ \hline
+			& 03:48:38 & 2091800 & 4.39\\ \hline
+			& 03:53:09 & 2118900 & 5.81\\ \hline
+			& 22:25:30 & 153000 & 4.27\\ \hline
+			& 00:28:31 & 891100 & 5.98\\ \hline
+			Paciente 5 & 23:11:57 & 71.700 & 3.77\\ \hline
+			& 23:16:02 & 96.200 & 3.96\\ \hline
+			& 23:33:58 & 203.800 & 3.97\\ \hline
+			& 23:45:29 & 272.900 & 3.87\\ \hline
+			& 23:54:33 & 327.300 & 3.89\\ \hline			
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.18}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.71} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 5 min en distintas señales de hombres.}
+		\label{tabla:segmentos_5_minuto_hombres}
+	\end{center}
+\end{table}
+
+
+%==============================================================================
+%
+%	Comienzo tablas de segmentos extraidos de mujeres
+%
+%==============================================================================
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline		
+			1 & 15:17:07 & 1182700 & 4.18 \\ \hline
+			2 & 15:18:54 & 1193400 & 4.39 \\ \hline
+			3 & 17:07:26 & 1844600 & 4.91 \\ \hline
+			4 & 17:15:31 & 1893100 & 4.85 \\ \hline
+			5 & 15:40:07 & 1320700 & 4.91 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.65} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.34} \\ \hline
+		\end{tabular}
+		\caption{Paciente 6: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_6_1_minuto}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline
+			1 & 15:17:07 & 1182700 & 4.18 \\ \hline
+			2 & 15:18:54 & 1193400 & 4.65 \\ \hline
+			3 & 17:07:26 & 1847600 & 4.86 \\ \hline
+			4 & 17:15:31 & 1893100 & 5.44 \\ \hline
+			5 & 15:40:07 & 1320700 & 4.63 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.75} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
+		\end{tabular}
+		\caption{Paciente 6: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_6_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline					
+			1 & 15:17:07 & 1182700 & 4.22 \\ \hline
+			2 & 15:18:54 & 1193400 & 4.56 \\ \hline
+			3 & 17:07:26 & 1847600 & 5.29 \\ \hline
+			4 & 17:15:31 & 1893100 & 5.10 \\ \hline
+			5 & 15:40:07 & 1320700 & 5.13 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.86} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.45} \\ \hline
+		\end{tabular}
+		\caption{Paciente 6: segmentos de duración de 2 min}
+		\label{tabla:paciente_6_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline								
+			1 & 15:17:07 & 1182700 & 4.20 \\ \hline
+			2 & 15:18:54 & 1193400 & 4.44 \\ \hline
+			3 & 17:07:26 & 1847600 & 4.83 \\ \hline
+			4 & 17:15:31 & 1893100 & 5.10 \\ \hline
+			5 & 15:40:07 & 1320700 & 4.95 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.70} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.37} \\ \hline
+		\end{tabular}
+		\caption{Paciente 6: segmentos de duración de 3 min}
+		\label{tabla:paciente_6_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline									
+			1 & 15:17:07 & 1182700 & 4.46 \\ \hline
+			2 & 15:18:54 & 1193400 & 4.46 \\ \hline
+			3 & 17:07:26 & 1847600 & 4.93 \\ \hline
+			4 & 17:15:31 & 1893100 & 5.31 \\ \hline
+			5 & 15:40:07 & 1320700 & 4.67 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.77} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.36} \\ \hline
+		\end{tabular}
+		\caption{Paciente 6: segmentos de duración de 5 min}
+		\label{tabla:paciente_6_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline												
+			1 & 00:20:15 & 301500 & 3.58 \\ \hline
+			2 & 00:26:17 & 337700 & 3.17 \\ \hline
+			3 & 00:47:12 & 463200 & 4.07 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.49 \\ \hline
+			5 & 05:38:47 & 2212700 & 4.39 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.94} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.56} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 1 min}
+		\label{tabla:paciente_7_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline														
+			1 & 03:15:10 & 1351000 & 4.12 \\ \hline
+			2 & 03:20:45 & 1384500 & 4.01 \\ \hline
+			3 & 03:37:56 & 1487600 & 4.62 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.82 \\ \hline
+			5 & 05:38:47 & 2212700 & 3.81 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.28} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.43} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_7_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 03:15:10 & 1351000 & 4.48 \\ \hline
+			2 & 03:20:45 & 1384500 & 3.84 \\ \hline
+			3 & 03:37:56 & 1487600 & 4.36 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.49 \\ \hline
+			5 & 05:38:47 & 2212700 & 4.07 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.25} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.28} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 2 min}
+		\label{tabla:paciente_7_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 03:15:10 & 1351000 & 3.73 \\ \hline
+			2 & 03:20:45 & 1384500 & 4.60 \\ \hline
+			3 & 03:37:56 & 1487600 & 4.36 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.37 \\ \hline
+			5 & 05:38:47 & 2212700 & 4.07 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.23} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.34} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 3 min}
+		\label{tabla:paciente_7_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 03:15:10 & 1351000 & 4.18 \\ \hline
+			2 & 03:20:45 & 1384500 & 4.60 \\ \hline
+			3 & 03:37:56 & 1487600 & 5.24 \\ \hline
+			4 & 04:00:02 & 1620200 & 4.37 \\ \hline
+			5 & 05:38:47 & 2212700 & 4.07 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.49} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.46} \\ \hline
+		\end{tabular}
+		\caption{Paciente 7: segmentos de duración de 5 min}
+		\label{tabla:paciente_7_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.99 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.33 \\ \hline
+			3 & 05:16:52 & 1.719.700 & 4.07 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 3.43 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.59 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.88} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.37} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_8_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.99 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.33 \\ \hline
+			3 & 05:16:52 & 1.721.200 & 3.88 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 3.20 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.58 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.80} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.43} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_8_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.52 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.16 \\ \hline
+			3 & 05:16:52 & 1.721.200 & 4.07 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 4.18 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.59 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.90} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.32} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 2 min}
+		\label{tabla:paciente_8_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.52 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.16 \\ \hline
+			3 & 05:16:52 & 1.721.200 & 4.07 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 3.31 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.59 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.73} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.37} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 3 min}
+		\label{tabla:paciente_8_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 01:33:05 & 378.500 & 3.96 \\ \hline
+			2 & 03:47:33 & 1.185.300 & 4.03 \\ \hline
+			3 & 05:16:52 & 1.721.200 & 5.01 \\ \hline
+			4 & 03:35:25 & 1.112.500 & 3.31 \\ \hline
+			5 & 02:43:48 & 802.800 & 3.59 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.98} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.65} \\ \hline
+		\end{tabular}
+		\caption{Paciente 8: segmentos de duración de 5 min}
+		\label{tabla:paciente_8_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 03:40:04 & 1776400 & 5.01 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.61 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.64 \\ \hline
+			4 & 03:43:04 & 1794400 & 4.40 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.92 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.72} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.25} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 1 min}
+		\label{tabla:paciente_9_1minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline				
+			1 & 03:40:04 & 1776400 & 4.62 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.61 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.38 \\ \hline
+			4 & 03:43:04 & 1794400 & 5.07 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.92 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.72} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.27} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_9_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline				
+			1 & 03:40:04 & 1776400 & 4.64 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.64 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.64 \\ \hline
+			4 & 03:43:04 & 1794400 & 5.07 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.95 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.79} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.21} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 2 min}
+		\label{tabla:paciente_9_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline					
+			1 & 03:40:04 & 1776400 & 4.64 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.64 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.64 \\ \hline
+			4 & 03:43:04 & 1794400 & 5.07 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.95 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.79} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.21} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 3 min}
+		\label{tabla:paciente_9_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline			
+			1 & 03:40:04 & 1776400 & 4.64 \\ \hline
+			2 & 03:42:27 & 1790700 & 4.64 \\ \hline
+			3 & 03:44:04 & 1800400 & 4.64 \\ \hline
+			4 & 03:43:04 & 1794400 & 5.07 \\ \hline
+			5 & 04:14:01 & 1980100 & 4.95 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.79} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.21} \\ \hline
+		\end{tabular}
+		\caption{Paciente 9: segmentos de duración de 5 min}
+		\label{tabla:paciente_9_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline		
+			1 & 00:39:58 & 59800 & 3.94 \\ \hline
+			2 & 00:59:45 & 178500 & 4.21 \\ \hline
+			3 & 01:10:14 & 241400 & 3.97 \\ \hline
+			4 & 01:30:00 & 360000 & 3.82 \\ \hline
+			5 & 01:45:00 & 450000 & 4.06 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.00} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.15} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 1 minuto}
+		\label{tabla:paciente_10_1minuto}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline		
+			1 & 00:39:58 & 59800 & 3.94 \\ \hline
+			2 & 00:59:45 & 178500 & 3.97 \\ \hline
+			3 & 01:10:14 & 241400 & 4.23 \\ \hline
+			4 & 01:30:00 & 360000 & 4.07 \\ \hline
+			5 & 01:45:00 & 450000 & 4.03 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.13} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.16} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 30 segundos}
+		\label{tabla:paciente_10_30segundos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline				
+			1 & 00:39:58 & 59800 & 3.94 \\ \hline
+			2 & 00:59:45 & 178500 & 4.35 \\ \hline
+			3 & 01:10:14 & 241400 & 3.93 \\ \hline
+			4 & 01:30:00 & 360000 & 3.82 \\ \hline
+			5 & 01:45:00 & 450000 & 4.06 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.02} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.20} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 2 min}
+		\label{tabla:paciente_10_2minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline						
+			1 & 00:39:58 & 59800 & 3.94 \\ \hline
+			2 & 00:59:45 & 178500 & 4.02 \\ \hline
+			3 & 01:10:14 & 241400 & 3.93 \\ \hline
+			4 & 01:30:00 & 360000 & 3.82 \\ \hline
+			5 & 01:45:00 & 450000 & 4.06 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.95} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.09} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 3 min}
+		\label{tabla:paciente_10_3minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Ronquido} & \textbf{Hora} \footnotesize{(HH:MM:SS)} & \textbf{N° muestra} & \textbf{T0} \footnotesize{(s)} \\ \hline	
+			1 & 00:39:58 & 59800 & 4.07 \\ \hline
+			2 & 00:59:45 & 178500 & 4.02 \\ \hline
+			3 & 01:10:14 & 241400 & 3.93 \\ \hline
+			4 & 01:30:00 & 360000 & 3.82 \\ \hline
+			5 & 01:45:00 & 450000 & 4.06 \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{3.98} \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío Estándar}} & \textbf{0.11} \\ \hline
+		\end{tabular}
+		\caption{Paciente 10: segmentos de duración de 5 min}
+		\label{tabla:paciente_10_5minutos}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.18\\ \hline
+			& 15:18:54 & 1193400 & 4.39\\ \hline
+			& 17:07:26 & 1844600 & 4.91\\ \hline
+			& 17:15:31 & 1893100 & 4.85\\ \hline
+			& 15:40:07 & 1320700 & 4.91\\ \hline
+			Paciente 7 & 00:20:15 & 301500 & 3.58\\ \hline
+			& 00:26:17 & 337700 & 3.17\\ \hline
+			& 00:47:12 & 463200 & 4.07\\ \hline
+			& 04:00:02 & 1620200 & 4.49\\ \hline
+			& 05:38:47 & 2212700 & 4.39\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.99\\ \hline
+			& 03:47:33 & 1.185.300 & 4.33\\ \hline
+			& 05:16:52 & 1.719.700 & 4.07\\ \hline
+			& 03:35:25 & 1.112.500 & 3.43\\ \hline 
+			& 02:43:48 & 802.800 & 3.59\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 5.01\\ \hline
+			& 03:42:27 & 1790700 & 4.61\\ \hline
+			& 03:44:04 & 1800400 & 4.64\\ \hline
+			& 03:43:04 & 1794400 & 4.40\\ \hline
+			& 04:14:01 & 1980100 & 4.92\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 3.94\\ \hline
+			& 00:59:45 & 178500 & 4.21\\ \hline
+			& 01:10:14 & 241400 & 3.97\\ \hline
+			& 01:30:00 & 360000 & 3.82\\ \hline
+			& 01:45:00 & 450000 & 4.06\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.24}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.50} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 1 minuto en distintas señales de mujeres.}
+		\label{tabla:segmentos_1_minuto_mujeres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.18\\ \hline
+			& 15:18:54 & 1193400 & 4.65\\ \hline
+			& 17:07:26 & 1847600 & 4.86\\ \hline
+			& 17:15:31 & 1893100 & 5.44\\ \hline
+			& 15:40:07 & 1320700 & 4.63\\ \hline
+			Paciente 7 & 03:15:10 & 1351000 & 4.12\\ \hline
+			& 03:20:45 & 1384500 & 4.01\\ \hline
+			& 03:37:56 & 1487600 & 4.62\\ \hline
+			& 04:00:02 & 1620200 & 4.82\\ \hline
+			& 05:38:47 & 2212700 & 3.81\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.99\\ \hline
+			& 03:47:33 & 1.185.300 & 4.33\\ \hline
+			& 05:16:52 & 1.721.200 & 3.88\\ \hline
+			& 03:35:25 & 1.112.500 & 3.20\\ \hline
+			& 02:43:48 & 802.800 & 3.58\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 4.62\\ \hline
+			& 03:42:27 & 1790700 & 4.61\\ \hline
+			& 03:44:04 & 1800400 & 4.38\\ \hline
+			& 03:43:04 & 1794400 & 5.07\\ \hline
+			& 04:14:01 & 1980100 & 4.92\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 3.94\\ \hline
+			& 00:59:45 & 178500 & 3.97\\ \hline
+			& 01:10:14 & 241400 & 4.23\\ \hline
+			& 01:30:00 & 360000 & 4.07\\ \hline
+			& 01:45:00 & 450000 & 4.03\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.32}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.51} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 30 segundos en distintas señales de mujeres.}
+		\label{tabla:segmentos_30_segundos_mujeres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.22\\ \hline
+			& 15:18:54 & 1193400 & 4.56\\ \hline
+			& 17:07:26 & 1847600 & 5.29\\ \hline
+			& 17:15:31 & 1893100 & 5.10\\ \hline
+			& 15:40:07 & 1320700 & 5.13\\ \hline
+			Paciente 7 & 03:15:10 & 1351000 & 4.48\\ \hline
+			& 03:20:45 & 1384500 & 3.84\\ \hline
+			& 03:37:56 & 1487600 & 4.36\\ \hline
+			& 04:00:02 & 1620200 & 4.49\\ \hline
+			& 05:38:47 & 2212700 & 4.07\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.52\\ \hline
+			& 03:47:33 & 1.185.300 & 4.16\\ \hline
+			& 05:16:52 & 1.721.200 & 4.07\\ \hline
+			& 03:35:25 & 1.112.500 & 4.18\\ \hline
+			& 02:43:48 & 802.800 & 3.59\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 4.64\\ \hline
+			& 03:42:27 & 1790700 & 4.64\\ \hline
+			& 03:44:04 & 1800400 & 4.64\\ \hline
+			& 03:43:04 & 1794400 & 5.07\\ \hline
+			& 04:14:01 & 1980100 & 4.95\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 3.94\\ \hline
+			& 00:59:45 & 178500 & 4.35\\ \hline
+			& 01:10:14 & 241400 & 3.93\\ \hline
+			& 01:30:00 & 360000 & 3.82\\ \hline
+			& 01:45:00 & 450000 & 4.06\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.36}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.49} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 2 min en distintas señales de mujeres.}
+		\label{tabla:segmentos_2_minutos_mujeres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.20\\ \hline
+			& 15:18:54 & 1193400 & 4.44\\ \hline
+			& 17:07:26 & 1847600 & 4.83\\ \hline
+			& 17:15:31 & 1893100 & 5.10\\ \hline
+			& 15:40:07 & 1320700 & 4.95\\ \hline
+			Paciente 7 & 03:15:10 & 1351000 & 3.73\\ \hline
+			& 03:20:45 & 1384500 & 4.60\\ \hline
+			& 03:37:56 & 1487600 & 4.36\\ \hline
+			& 04:00:02 & 1620200 & 4.37\\ \hline
+			& 05:38:47 & 2212700 & 4.07\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.52\\ \hline
+			& 03:47:33 & 1.185.300 & 4.16\\ \hline
+			& 05:16:52 & 1.721.200 & 4.07\\ \hline
+			& 03:35:25 & 1.112.500 & 3.31\\ \hline
+			& 02:43:48 & 802.800 & 3.59\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 4.64\\ \hline
+			& 03:42:27 & 1790700 & 4.64\\ \hline
+			& 03:44:04 & 1800400 & 4.64\\ \hline
+			& 03:43:04 & 1794400 & 5.07\\ \hline
+			& 04:14:01 & 1980100 & 4.95\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 3.94\\ \hline
+			& 00:59:45 & 178500 & 4.02\\ \hline
+			& 01:10:14 & 241400 & 3.93\\ \hline
+			& 01:30:00 & 360000 & 3.82\\ \hline
+			& 01:45:00 & 450000 & 4.06\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.28}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.50} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 3 min en distintas señales de mujeres.}
+		\label{tabla:segmentos_3_minutos_mujeres}
+	\end{center}
+\end{table}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\textbf{Señal} & \textbf{Hora Inicio} & \textbf{N° muestra} & \textbf{T0} (s) \\ 
+			\hline \hline
+			Paciente 6 & 15:17:07 & 1182700 & 4.46\\ \hline
+			& 15:18:54 & 1193400 & 4.46\\ \hline
+			& 17:07:26 & 1847600 & 4.93\\ \hline
+			& 17:15:31 & 1893100 & 5.31\\ \hline
+			& 15:40:07 & 1320700 & 4.67\\ \hline
+			Paciente 7 & 03:15:10 & 1351000 & 4.18\\ \hline
+			& 03:20:45 & 1384500 & 4.60\\ \hline
+			& 03:37:56 & 1487600 & 5.24\\ \hline
+			& 04:00:02 & 1620200 & 4.37\\ \hline
+			& 05:38:47 & 2212700 & 4.07\\ \hline
+			Paciente 8 & 01:33:05 & 378.500 & 3.96\\ \hline
+			& 03:47:33 & 1.185.300 & 4.03\\ \hline
+			& 05:16:52 & 1.721.200 & 5.01\\ \hline
+			& 03:35:25 & 1.112.500 & 3.31\\ \hline
+			& 02:43:48 & 802.800 & 3.59\\ \hline
+			Paciente 9 & 03:40:04 & 1776400 & 4.64\\ \hline
+			& 03:42:27 & 1790700 & 4.64\\ \hline
+			& 03:44:04 & 1800400 & 4.64\\ \hline
+			& 03:43:04 & 1794400 & 5.07\\ \hline
+			& 04:14:01 & 1980100 & 4.95\\ \hline
+			Paciente 10 & 00:39:58 & 59800 & 4.07\\ \hline
+			& 00:59:45 & 178500 & 4.02\\ \hline
+			& 01:10:14 & 241400 & 3.93\\ \hline
+			& 01:30:00 & 360000 & 3.82\\ \hline
+			& 01:45:00 & 450000 & 4.06\\ \hline
+			\multicolumn{3}{|r|}{\textbf{Media}} & \textbf{4.40}  \\ \hline
+			\multicolumn{3}{|r|}{\textbf{Desvío}} & \textbf{0.52} \\ \hline
+		\end{tabular}
+		\caption{$T_0$ de segmentos con ronquidos de 5 min en distintas señales de mujeres.}
+		\label{tabla:segmentos_5_minutos_mujeres}
+	\end{center}
+\end{table}
+
+}
+
+\end{document}
