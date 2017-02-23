@@ -789,6 +789,60 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
     \small
 		\begin{tabular}{|l|l|l|l|}
 			\hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU1} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Iniciando captura de datos}} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación), Sistema Base de la App}} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual el paciente comienza la captura y procesamiento de datos para luego almacenar los resultados obtenidos en variables temporales.} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El dispositivo a utilizar (smartphone o tablet) debe contar con al menos el 60\% de batería (basándose en que una carga al 100\% tiene una vida útil de aproximadamente unas 20hs de uso mixto habitual), además de al menos 10Mb de almacenamiento libre en memoria, para buffers de captura y variables de almacenamiento temporal.} \\
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Éste caso de uso comienza cuando el usuario se encuentre ubicado en la pantalla dedicada a la grabación, habiendo hecho uso del «CU9 - Iniciando interfaz de grabación» que aquí llamamos “Iniciar grabación”, donde hace clic en el botón llamado “Iniciar”.
+                        \item El sistema setea todos los valores que necesita e inicia el proceso de captura de datos, que se lleva a cabo mediante el micrófono del dispositivo, como único medio de entrada.
+                        \item El sistema informa al usuario ha iniciado mediante un mensaje visible temporalmente.
+												\item A medida que se capturan datos, el sistema debe confeccionar una variable que los contenga hasta alcanzar el límite de 5 min.
+												\item El sistema procesa la variable a fin de determinar si contiene información de interés, en éste caso sería si presenta alguna roncopatía, haciendo uso del «CU5 - Procesando la señal capturada» donde interviene el actor «Sistema base de la App» que hace las veces de controlador del proceso.
+												\item El sistema base de la app (actor controlador) devuelve la información obtenida y la almacena temporalmente en diferentes variables de memoria.
+												\item El proceso se repite hasta que se llame al «CU2 - Finalizando captura de datos»
+                    \end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Si la batería no cumple con el mínimo establecido, se le debe informar al usuario con una advertencia, iniciando de igualmente el proceso de captura.
+												\item Si la memoria es inferior al mínimo sugerido, se debe informar al usuario y no debe continuar con la inicialización del proceso de captura.
+												\item Si el procesamiento de la señal capturada falla en algún momento se debe detener la captura e informar al usuario al respecto con detalles de lo sucedido.
+												\item Si la aplicación se detiene por algún tipo de fallo, más allá del punto anterior, la captura se debe detener, no se debe hacer persistente la información obtenida y se debe informar al usuario de lo sucedido.
+                    \end{enumerate}
+                } \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm} |}{
+El segmento de datos capturados (señal) con una duración de 5 min es confeccionada correctamente, se procesan los datos de la misma, se devuelve la información obtenida y luego es almacenada en 3 variables bien definidas, como por ejemplo t0, energía, numeroDeSegmento. Esto se repite hasta que el proceso de captura es detenido/interrumpido.
+} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm} |}{
+								%\begin{figure}[H]
+								%		\includegraphics[scale = 0.8]{img/mockups1_CU1.png}	
+								%\end{figure}
+								} \\
+            \hline
+		\end{tabular}
+		\caption{Caso de uso Iniciando captura}
+		\label{tabla:caso_uso_iniciando}
+\end{table}
+
+\begin{table}[H]
+	\centering
+    \small
+		\begin{tabular}{|l|l|l|l|}
+			\hline
                 \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{ID del caso de uso} \\
             \hline
                 \multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Nombre del caso de uso}} \\
@@ -818,13 +872,12 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
             \hline
                 \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm} |}{Que pasa luego del CU} \\
             \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm} |}{Imágenes tipo Mockups} \\
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm} |}{Mockups} \\
             \hline
 		\end{tabular}
 		\caption{Caso de uso Iniciando captura}
 		\label{tabla:caso_uso_iniciando}
 \end{table}
-
 
 
 
