@@ -7,6 +7,7 @@
 \DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps}
 \usepackage{graphics}
 \usepackage{float}
+\usepackage{array}
 \usepackage{epstopdf}
 \usepackage{geometry}
 \geometry{
@@ -772,108 +773,60 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[scale=.5]{img/CU.eps}	
+		\includegraphics{img/CU_new.png}	
 	\caption{Diagrama de casos de uso}
 	\label{figura:caso_uso}
 \end{figure}
 
-\begin{table}[htbp]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
+
+%******************************************************
+%
+%   Tablas con descripciones de los CU
+%
+%******************************************************
+\begin{table}[H]
+	\centering
+    \small
+		\begin{tabular}{|l|l|l|l|}
 			\hline
-			\textbf{CASO DE USO: \textit{Iniciando captura}} \\
-			\hline
-			ACTOR: Paciente (Usuario de la App) \\ \hline
-			DESCRIPCIÓN \\ \hline			
-			Es el proceso por el cual el usuario comienza la captura y procesamiento de datos, 
-			luego almacena los resultados obtenidos.  
-			Opcionalmente se le permite ingresar datos personales y el email de un médico, al que  
-			se le enviarán 	los resultados obtenidos. \\ \hline			
+                \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{ID del caso de uso} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Nombre del caso de uso}} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Actores que participan}} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Breve descripción del CU} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{Que tiene que ocurrir antes del CU} \\
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Paso 1
+                        \item Paso 2
+                        \item Paso 3
+                    \end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Paso alternativo 1
+                    \end{enumerate}
+                } \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm} |}{Que pasa luego del CU} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm} |}{Imágenes tipo Mockups} \\
+            \hline
 		\end{tabular}
 		\caption{Caso de uso Iniciando captura}
 		\label{tabla:caso_uso_iniciando}
-	\end{center}
 \end{table}
 
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Finalizando captura}} \\
-			\hline
-			ACTOR: Paciente (Usuario de la App) \\ \hline
-			DESCRIPCIÓN \\ \hline	
-			El paciente puede finalizar la captura cuando lo considere oportuno, 
-			de esta manera se culmina el procesamiento de los datos 
-			capturados por medio del micrófono. \\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Finalizando captura}
-		\label{tabla:caso_uso_finalizando}
-	\end{center}
-\end{table}
 
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Visualizando resultados}} \\
-			\hline
-			ACTOR: Paciente (Usuario de la App) \\ \hline
-			DESCRIPCIÓN \\ \hline	
-El usuario puede acceder a los resultados obtenidos del procesamiento de la señal. Los resultados se presentan en modo gráfico y textual indicando hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora.
- \\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Visualizando resultados}
-		\label{tabla:caso_uso_visualizando}
-	\end{center}
-\end{table}
 
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Recibiendo mail}} \\
-			\hline
-			ACTOR: Médico (Actor secundario) \\ \hline
-			DESCRIPCIÓN \\ \hline	
-Al momento de finalizar la captura, se envía un correo electrónico con los resultados obtenidos del procesamiento de la señal. Los resultados se presentan en modo gráfico y textual indicando hora de comienzo del análisis, hora de finalización, hora donde se producen ronquidos, cantidad de segmentos con ronquido, hora con mayor cantidad de ronquidos, promedio de ronquidos/hora. \\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Recibiendo mail}
-		\label{tabla:caso_uso_mail}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Procesando la señal}} \\
-			\hline
-			ACTOR: Sistema base de la App \\ \hline
-			DESCRIPCIÓN \\ \hline	
-Este consiste de analizar los datos mediante ventaneo de 5 min de duración y calcular el $T_0$ por medio de la autocorrelación. Posteriormente, se determina si dicho segmento contiene o no ronquidos. Luego se elaboran los resultados que serán utilizados para ser visualizados por el paciente y enviados al médico.
-\\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Procesando la señal}
-		\label{tabla:caso_uso_procesando}
-	\end{center}
-\end{table}
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{| p{15cm}|}
-			\hline
-			\textbf{CASO DE USO: \textit{Ingresando información para el email}} \\
-			\hline
-			ACTOR: Paciente (Usuario de la App) \\ \hline
-			DESCRIPCIÓN \\ \hline	
-El paciente tendrá la opción, antes de iniciar la captura de datos, de ingresar sus datos personales y además de ingresar un email de un médico, al que se le enviarán los resultados una vez finalizado el procesamiento.
-\\ \hline			
-		\end{tabular}
-		\caption{Caso de uso Ingresando información para el email}
-		\label{tabla:caso_uso_infomail}
-	\end{center}
-\end{table}
 
 \subsection{Diagrama de secuencia}
 A continuación se presenta el gráfico de secuencia donde se representan los casos de usos ``Iniciando Captura'' y ``Finalizando Captura'' por parte del Usuario en la aplicación. En éste se representan los objetos básicos para representar el flujo de mensajes necesarios para que se ejecuten para tales casos de uso y además los mensajes necesarios para realizar la persistencia de datos, representando así el núcleo básico de operación de la aplicación, como se puede observar en la Figura \ref{figura:diagrama_secuencia}. También se puede observar el ``loop'' o ciclo básico de captura y procesamiento de segmentos.

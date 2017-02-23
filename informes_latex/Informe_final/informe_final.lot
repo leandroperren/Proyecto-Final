@@ -15,18 +15,13 @@
 \contentsline {table}{\numberline {2.12}{\ignorespaces An\'alisis de falsos positivos.}}{36}
 \contentsline {table}{\numberline {2.13}{\ignorespaces Verificaci\'on de m\'etodos y funcionalidades de Matlab con se\~nales no vistas.}}{36}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Caso de uso Iniciando captura}}{41}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Caso de uso Finalizando captura}}{41}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Caso de uso Visualizando resultados}}{42}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Caso de uso Recibiendo mail}}{42}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Caso de uso Procesando la se\~nal}}{42}
-\contentsline {table}{\numberline {3.6}{\ignorespaces Caso de uso Ingresando informaci\'on para el email}}{43}
-\contentsline {table}{\numberline {3.7}{\ignorespaces Tasas de aciertos de la aplicaci\'on Android con se\~nales limpias.}}{55}
-\contentsline {table}{\numberline {3.8}{\ignorespaces Pruebas a la aplicaci\'on Android en ambientes cotidianos.}}{56}
-\contentsline {table}{\numberline {3.9}{\ignorespaces Tasas de aciertos de la aplicaci\'on Android en ambientes cotidianos.}}{56}
-\contentsline {table}{\numberline {3.10}{\ignorespaces Pruebas de la aplicaci\'on Android en ambientes cotidianos.}}{57}
-\contentsline {table}{\numberline {3.11}{\ignorespaces Tasas de acierto de las aplicaci\'ones Android para una se\~nal de ronquidos.}}{58}
-\contentsline {table}{\numberline {3.12}{\ignorespaces Tasas de acierto de las aplicaci\'ones Android para una se\~nal de ruidos.}}{58}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Caso de uso Iniciando captura}}{42}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Tasas de aciertos de la aplicaci\'on Android con se\~nales limpias.}}{55}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Pruebas a la aplicaci\'on Android en ambientes cotidianos.}}{56}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Tasas de aciertos de la aplicaci\'on Android en ambientes cotidianos.}}{56}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Pruebas de la aplicaci\'on Android en ambientes cotidianos.}}{57}
+\contentsline {table}{\numberline {3.6}{\ignorespaces Tasas de acierto de las aplicaci\'ones Android para una se\~nal de ronquidos.}}{58}
+\contentsline {table}{\numberline {3.7}{\ignorespaces Tasas de acierto de las aplicaci\'ones Android para una se\~nal de ruidos.}}{58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {A.1}{\ignorespaces Paciente 1: segmentos de duraci\'on de 1 minuto}}{63}
