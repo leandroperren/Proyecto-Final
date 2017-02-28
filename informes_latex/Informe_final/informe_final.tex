@@ -21,6 +21,8 @@ top=2.5cm }
 
 \usepackage{appendix} % Para los Apéndices
 
+\usepackage{longtable} 
+
 %\usepackage{mathptmx} %Times
 
 \usepackage{xcolor,colortbl}
@@ -55,8 +57,6 @@ top=2.5cm }
 	\includegraphics[scale=0.25]{img/fich_logo_classic}\\[\bigskipamount]
 }
 \posttitle{	\end{center}}
-
-\usepackage{longtable} 
 
 \begin{document}
 
@@ -800,7 +800,8 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
 						\endfirsthead									
 						\endhead
-						\hline \multicolumn{4}{|p{12cm}|}{Continua en la siguiente página} \\ \hline
+						
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
 						\endfoot
 						\endlastfoot
 														
@@ -827,60 +828,677 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
                     \end{enumerate}
                 } \\
             \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm} |}{
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
 El segmento de datos capturados (señal) con una duración de 5 min es confeccionada correctamente, se procesan los datos de la misma, se devuelve la información obtenida y luego es almacenada en 3 variables bien definidas, como por ejemplo t0, energía, numeroDeSegmento. Esto se repite hasta que el proceso de captura es detenido/interrumpido.
 } \\
             \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm} |}{
-								%\begin{figure}[H]
-								%		\includegraphics[scale = 0.8]{img/mockups1_CU1.png}	
-								%\end{figure}
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{
+												\centering \\		
+												\includegraphics[width=4cm]{img/mockups1_CU1.png}	
+		
 								} \\
             \hline
 		\caption{Caso de uso Iniciando captura}
 		\label{tabla:caso_uso_iniciando}
 \end{longtable}
 
-\begin{table}[H]
-	\centering
-    \small
-		\begin{tabular}{|l|l|l|l|}
+\begin{longtable}{|l|l|l|l|}
 			\hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{ID del caso de uso} \\
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU2} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Finalizando captura de datos}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación), Sistema Base de la App}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual el paciente finaliza la captura y procesamiento de datos para luego almacenar los resultados obtenidos de manera persistente y presentar la información obtenida.} \\
             \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Nombre del caso de uso}} \\
-            \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Actores que participan}} \\
-            \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Breve descripción del CU} \\
-            \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{Que tiene que ocurrir antes del CU} \\
-            \hline
-                \multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El «CU1 - Iniciando captura de datos» debe estar en curso sin inconvenientes.} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
             \hline
                 \multicolumn{2}{|p{8cm}|}{\centering 
                     \begin{enumerate}
                         \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
-                        \item Paso 1
-                        \item Paso 2
-                        \item Paso 3
+                        \item El sistema detiene la captura de datos a través del micrófono del dispositivo.
+												\item El sistema informa al usuario que la captura fue detenida a través de un mensaje temporal.
+												\item El sistema toma los cálculos almacenados en variables temporales y los envía hacia el «CU7 - Guardando datos procesados» donde los almacena de manera permanente en una base de datos embebida.
+												\item El sistema toma la información almacenada anteriormente y la presenta gráficamente con el «CU10 - Visualizando resultados en gráficos».
                     \end{enumerate}
                 } & 
                 \multicolumn{2}{p{8cm} |}{\centering 
                     \begin{enumerate}
                         \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
-                        \item Paso alternativo 1
+                        \item Si los datos capturados al momento de detener el proceso no alcanzan para formar el segmento de 5 min, éste es descartado y se procede al proceso de almacenamiento.
+												\item Si no hay datos procesados al momento de detener la captura, no se dirige a la presentación de datos gráficos y el sistema debe quedar en la pantalla actual, informando debidamente lo sucedido.
                     \end{enumerate}
                 } \\
             \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm} |}{Que pasa luego del CU} \\
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+Los datos capturados son enviados al sistema de procesamiento solo si completan un segmento de 5 min; de otra manera son descartados. El sistema almacena toda la información obtenida a lo largo de la captura de forma permanente en una base de datos embebida. Luego presenta la información de manera gráfica. Opcionalmente se puede presentar de manera tabulada en forma de tablas mediante el caso de uso extendido «CU11 - Visualizando resultados en tablas».
+} \\
             \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm} |}{Mockups} \\
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{
+												\centering \\		
+												\includegraphics[width=4cm]{img/mockups1_CU1.png}	
+												\includegraphics[width=4cm]{img/mockups1_CU2.png}
+								} \\
             \hline
-		\end{tabular}
-		\caption{Caso de uso Iniciando captura}
-		\label{tabla:caso_uso_iniciando}
-\end{table}
+		\caption{Caso de uso Finalizando captura de datos}
+		\label{tabla:caso_uso_finalizando}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU3} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Consultando lista de resultados}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual el paciente puede visualizar una lista con todas las grabaciones realizadas, donde en cada uno de los ítems de la lista presenta a priori información de interés.} \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{La aplicación debe estar iniciada y el usuario debe estar ubicado en la pantalla principal. El sistema debe contar con al menos una grabación en la base de datos para poder visualizar un ítem en la lista.} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario inicia la aplicación.
+												\item La aplicación se sitúa en la pantalla principal, donde se listan todos los resultados de las diferentes grabaciones en una lista.
+												\item La lista se compone de diferentes ítems, donde cada uno presenta información acerca de la cantidad de detecciones, hora de inicio y fin, duración total y opcionalmente un color representativo de la cantidad de detecciones, como por ejemplo verde si es baja, amarillo si es media y rojo si es alta, basando los límites en correspondencia con la tasa de aciertos obtenida con la aplicación.
+												\item Cuando el usuario hace clic en un ítem, se obtiene la información completa desde la base de datos y se le presenta la misma en una ventana aparte.					
+                    \end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Si la aplicación no posee grabaciones, la lista estará vacía y se debe mostrar un mensaje en el lugar de la lista, avisando al usuario que aún no posee grabaciones.
+                    \end{enumerate}
+                } \\
+						\hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Extensiones}} & \multicolumn{3}{|p{12cm}|}{
+									\begin{list_type}  
+										\item 4.a.  Ver información gráfica: incluye «CU10 - Visualizando resultados en gráficos» que por defecto es utilizado.
+										\item 4.b.  Ver información tabulada: incluye «CU11 - Visualizando resultados en tablas» 									
+									\end{list_type}
+								} \\		
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+Se presenta al usuario una lista de grabaciones. El usuario hace clic en uno de los ítems de interés y es llevado a una nueva ventana donde se le presenta la totalidad de la información de manera gráfica (por defecto) o bien, opcionalmente, de manera tabulada con detalles específicos del procesamiento. El mockup correspondiente a la presentación de información gráfica se puede visualizar en el detalle de pantalla del «CU2 - Finalizando captura de datos», segunda imagen.
+} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{
+												\centering \\		
+												\includegraphics[width=3.5cm]{img/mockups1_CU3.png}	
+												\includegraphics[width=3.5cm]{img/mockups2_CU3.png}
+												\includegraphics[width=3.5cm]{img/mockups3_CU3.png}
+								} \\
+            \hline
+		\caption{Caso de uso Consultando lista de resultados}
+		\label{tabla:caso_uso_lista_resultados}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU4} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Enviando mail con resultados}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual el paciente puede enviar un mail al médico adjuntando un archivo PDF con la información de los resultados obtenidos. } \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario debe estar ubicado en la pantalla de Resultados dentro de la pestaña Gráficos. El sistema debe tener generado el archivo PDF con los resultados y también tener guardada la dirección de email del médico para su posterior envío. El dispositivo deberá estar conectado a internet para poder enviar el mail.} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Comienza cuando finaliza el caso de uso «CU8 - Generando informe de resultados», mediante el cual se genera el reporte en formato PDF.
+												\item La aplicación abre el asistente de correo del propio Android creando un correo nuevo.
+												\item Se adjunta el archivo PDF, se recupera el mail del médico y se lo asigna  como destinatario del correo.
+												\item Se elige la opción enviar para terminar el caso de uso.
+                    \end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item En caso de no poder recuperar el archivo PDF el proceso será abortado indicando al usuario el error mediante un mensaje.
+												\item El sistema informará al usuario en caso de no estar cargado el mail del médico.
+												\item El propio sistema de Android  se encarga de asignar el correo a “No enviados” si el mismo falla por algún motivo.
+                    \end{enumerate}
+                } \\						
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+En caso de generar correctamente el archivo PDF con los resultados, el sistema abre el asistente de correos de Android creando un nuevo correo. Para ello adjunta el archivo PDF y asigna la dirección de email del médico como destinatario del mensaje. Si falla el envío del mail el propio asistente de correo de Android se encarga de informar el error y el mensaje queda guardado en la sección “No enviados” del asistente. En caso de no disponer conexión a internet se podrá volver a enviar cuantas veces se desee accediendo nuevamente a los resultados de la captura.} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{
+												\centering 		
+												Este CU no posee detalle de pantalla.
+								} \\
+            \hline
+		\caption{Caso de uso Consultando lista de resultados}
+		\label{tabla:caso_uso_lista_resultados}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU5} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Procesando la señal capturada}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación), Sistema base de la app}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual la señal capturada en un segmento de 5 min, es sub-muestreada y posteriormente analizada en búsqueda de información de interés. } \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El «CU1 - Iniciando captura de datos» debe estar en curso sin inconvenientes.} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El «CU1 - Iniciando captura de datos» almacena en una variable temporal todos los frames capturados hasta que se completen los 5 min requeridos.
+												\item El segmento formado se procesa para sub-muestrearlo hasta la frecuencia buscada, según los datos analizados.
+												\item Al nuevo segmento sub-muestreado se le realizan diferentes cálculos como la energía y la autocorrelación.
+												\item La información obtenida se analiza para determinar si hay presencia de roncopatias o no.
+												\item La información obtenida se almacena temporalmente en vectores.
+                    \end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Si la captura de datos no es posible debido a algún fallo de software/hardware, debe ser informado debidamente al usuario.												
+                    \end{enumerate}
+                } \\						
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+El segmento con 5 min de captura se envía al proceso de cálculos. Se procesa dicho segmento y se obtiene la información que se requiere. La información es almacenada temporalmente en vectores junto a información antes obtenida y junto a información futura de posteriores capturas.
+								} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{
+												\centering 		
+												Este CU no posee detalle de pantalla.
+								} \\
+            \hline
+		\caption{Caso de uso Procesando la señal capturada}
+		\label{tabla:caso_uso_procesando_señal}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU6} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Ingresando información para el mail}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual, el usuario ingresa toda la información de interés que se adjuntará al informe en formato PDF.} \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario hace uso del «CU12 - Consultando menú de opciones» para luego darle curso al CU actual. La aplicación debe guardar los datos en variables locales, como por ejemplo las SHARED\_PREFERENCES en Android.} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario se encuentra en la pantalla principal de la aplicación y hace uso del «CU12 - Consultando menú de opciones» para luego hacer uso del CU actual del cual extiende.
+												\item El usuario es dirigido a una nueva pantalla donde se encuentran todos los datos que debe ingresar, separados entre datos personales y datos del médico. El usuario cuenta con: Nombre, Apellido, Edad y Sexo. Por otro lado, el médico cuenta con el campo Email únicamente.
+												\item El usuario guarda la información haciendo clic en un botón Guardar (preferentemente).
+												\item La información ingresada es almacenada en variables de Shared Preferences de Android.
+												\item El usuario es redirigido hacia la pantalla principal.
+                    \end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Si el usuario no desea guardar la información almacenada, debe poder hacer clic en una flecha de regreso (volver) ubicada a la izquierda del título o bien mediante la acción “volver” del dispositivo en uso, descartando todo lo introducido y dirigiendolo hacia la pantalla principal.
+												\item Si alguno de los campos introducidos falla el sistema de validación (principalmente el email) se debe informar al usuario de tal fallo y se cancela el guardado de los datos hasta corregir el error y que se vuelva a proceder normalmente.
+                    \end{enumerate}
+                } \\						
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+El usuario ingresa los datos personales más el email del médico. Luego hace clic en el botón “Guardar” donde se validan los datos ingresados y posteriormente son almacenados en variables del Shared Preferences propias de la aplicación.
+								} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{														
+												\centering \\		
+												\includegraphics[width=3.5cm]{img/mockups1_CU6.png}	
+												\includegraphics[width=3.5cm]{img/mockups2_CU6.png}
+								} \\
+            \hline
+		\caption{Caso de uso Ingresando información mail}
+		\label{tabla:caso_uso_ingresando_informacion}
+\end{longtable}
+
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU7} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Guardando datos procesados}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual los datos procesados que permanecen en variables temporales, pasan a ser persistentes en una base de datos embebida.} \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{Para que éste proceso comience es necesario que se haya hecho uso del «CU2 - Finalizando captura de datos», además de contar con un motor de base de datos embebidas, como por ejemplo una base de datos SQLite.} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario se encuentra en la pantalla de grabación (captura de datos) y ejecuta el «CU2 - Finalizando captura de datos».
+												\item La información almacenada temporalmente en variables (vectores) es serializada para formar un único dato por cada variable.
+												\item La información serializada se pasa hacia un método que maneja la base de datos, abriendo una conexión e insertando la información en una tabla de ronquidos, conteniendo la siguiente información: ID, Hora de inicio, Hora de fin, t0, Amplitud y Tiempo.
+												\item El sistema informa al «CU2 - Finalizando captura de datos» que hace uso de éste y cierra todo tipo de conexión hacia la base de datos.
+										\end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Si las variables temporales que almacenan información están vacías, no se debe hacer uso de las conexiones y métodos de la base de datos, además de informar acerca de lo sucedido.
+												\item Si ocurre un error en el proceso de guardado de datos en la base de datos, se debe informar al usuario con información relevante de lo sucedido.
+                    \end{enumerate}
+                } \\						
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+El sistema toma las variables con la información obtenida y las serializa para formar datos de un solo valor (como un String de datos consecutivos) y los envía hacia el proceso de guardado. El sistema controlador de la base de datos abre una conexión, inserta estos valores junto a otros más de interés y finalmente cierra la conexión para liberar recursos. Luego informa al sistema que originó la llamada que la operación tuvo éxito.
+								} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{														
+												\centering 		
+												Este CU no posee detalle de pantalla.
+								} \\
+            \hline
+		\caption{Caso de uso Guardando datos procesados}
+		\label{tabla:caso_uso_guardando_datos}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU8} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Generando informe de resultados}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual el usuario genera un informe completo en formato PDF para luego ser enviado por mail haciendo uso del «CU4 - Enviando mail con resultados»} \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario se encuentra en la pantalla de presentación de resultados, en la pestaña de Gráficos. Se debe contar con un servicio de email en el dispositivo, como por ejemplo GMail.} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario acaba de terminar una grabación y fue redirigido hacia la pantalla de presentación de información gráfica o bien accedió desde la pantalla principal haciendo clic en un item de grabación.
+												\item Allí hace clic en un botón de acción llamado “Generar informe y enviar” o “Generar PDF y enviar” como nombres tentativos.
+												\item El sistema recoge toda la información personal del usuario ingresada, además de todos los gráficos y tablas generados con la información obtenida del análisis y confecciona un archivo en formato PDF que es almacenado en el dispositivo de manera permanente.
+												\item El sistema hace uso del servicio de email, como por ejemplo GMail, y setea todos los campos del mismo, donde el email de destino es obtenido de la información ingresada, particularmente el mail del médico, y adjunta el PDF generado a tal email. Este paso se ejecuta haciendo uso del «CU4 - Enviando mail con resultados»
+												\item El sistema muestra al usuario una ventana donde debe hacer clic en Enviar para que el mismo sea enviado.
+										\end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Si el sistema no puede generar el archivo PDF, debe informar al usuario lo sucedido.
+												\item Si al momento de enviar el email, no hay conexión a internet, el mail queda en espera hasta reestablecer la conexión y enviar nuevamente.
+												\item Si el sistema de mail falla por algún motivo, se debe informar al usuario de ello.
+                    \end{enumerate}
+                } \\						
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+El sistema genera el archivo PDF con toda la información necesaria y lo almacena en el dispositivo. Luego hace uso del «CU4 - Enviando mail con resultados» para setear todos los valores en el servicio de mail y posteriormente enviarlo.
+								} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{														
+												\centering \\ 		
+												\includegraphics[width=3.5cm]{img/mockups1_CU2.png}	
+												\includegraphics[width=3.5cm]{img/mockups2_CU8.png}
+								} \\
+            \hline
+		\caption{Caso de uso Generando informe de resultados}
+		\label{tabla:caso_uso_generando_informes}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU9} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Iniciando interfaz de grabación}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual el usuario accede a la pantalla de grabación desde la pantalla principal de la aplicación.} \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario deberá tener la aplicación iniciada y estar ubicado en la pantalla principal. } \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario inicia la aplicación y es direccionado hacia la pantalla principal.
+												\item El usuario hace clic en un botón (puede ser flotante) que sea representativo para dirigirse a la pantalla de grabación (por ejemplo “Ir a grabación” o simplemente con un símbolo de suma “+”).
+												\item La aplicación redirecciona al usuario hacia la pantalla de grabación.												
+										\end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Si el botón no redirige hacia la pantalla de grabación debido a un error de aplicación, debe notificarse al usuario debidamente.
+												\item Si el usuario ubicado en la pantalla de grabación decide no capturar datos, debe contarse con un mecanismo para volver a la pantalla principal, como por ejemplo una flecha en la barra de título o bien en el botón “volver” del dispositivo.
+                    \end{enumerate}
+                } \\						
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+Una vez que el usuario inicia la aplicación y se encuentra en la pantalla principal, hace clic en el botón correspondiente para ir hacia la sección de grabación. Luego es redirigido hacia la pantalla de grabación donde se le ofrecen los casos de uso «CU1 - Iniciando captura de datos» y «CU2 - Finalizando captura de datos», además de algún mecanismo para volver a la pantalla principal.
+								} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{														
+											El detalle de pantalla de éste CU se puede observar en la primer imagen del «CU3 - Consultando lista de resultados», donde se representa el botón de acción mediante un botón flotante con un símbolo de suma “+”, ubicado abajo a la derecha.
+								} \\
+            \hline
+		\caption{Caso de uso Iniciando interfaz de grabación}
+		\label{tabla:caso_uso_iniciando_interfaz}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU10} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Visualizando resultados en gráficos}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso mediante el cual se muestran gráficos de barras y de torta que representan los resultados obtenidos en el procesamiento.} \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario debe iniciar una captura y elegir finalizar mediante el caso de uso  «CU2 - Finalizando captura de datos». 
+La otra posibilidad es seleccionar una captura de la lista de resultados del caso de uso «CU3 - Consultando lista de resultados».} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario se encuentra capturando y decide detener la misma.
+												\item La aplicación recupera los datos del procesamiento y los almacena en variables temporales.
+												\item Se calculan los porcentajes de Ronquidos, No ronquidos y distribución por intensidad.
+												\item Se calculan estadísticas: hora con mayor cantidad de ronquidos y promedio de ronquidos/hora.
+												\item Se generan los gráficos y se despliega la pantalla.								
+										\end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario puede seleccionar una captura de la lista de resultados.
+												\item Se generan los gráficos y se despliega la pantalla de igual manera al curso normal.
+                    \end{enumerate}
+                } \\						
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+Una vez que el usuario decide detener la captura mediante el caso de uso  «CU2 - Finalizando captura de datos» la aplicación abre una pantalla en la que se pueden ver en gráficos de barras y tortas los resultados obtenidos en el procesamiento.
+A su vez el usuario podrá acceder mediante «CU3 - Consultando lista de resultados» a cualquier captura de la lista para poder ver los resultados en cualquier momento.
+								} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{														
+										\centering \\ 		
+										\includegraphics[width=3.5cm]{img/mockups1_CU2.png}	
+								} \\
+            \hline
+		\caption{Caso de uso Visualizando resultados gráficos}
+		\label{tabla:caso_uso_visualizando_resultados}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU11} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Visualizando resultados en tablas}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso mediante el cual se muestran tablas con los resultados obtenidos en el procesamiento.} \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario debe iniciar una captura y elegir finalizar mediante el caso de uso  «CU2 - Finalizando captura de datos».
+La otra posibilidad es seleccionar una captura de la lista de resultados del caso de uso «CU3 - Consultando lista de resultados».} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario hace uso del «CU2 - Finalizando captura de datos» o bien eligiendo un item de la lista de grabaciones del «CU3 - Consultando lista de resultados».
+												\item En la pantalla de resultados, el usuario hace clic en la pestaña de “Tablas” para acceder a éste formato.
+												\item La aplicación despliega los resultados en tablas con la totalidad de la información obtenida a partir de la captura y procesamiento de datos, como por ejemplo: hora de inicio y fin de la captura, Tiempo total, Cantidad de detecciones, Hora con mayor cantidad de detecciones, promedio de detecciones por hora y además una lista con todas las detecciones detallando hora de detección e intensidad de la misma.
+										\end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Si luego de hacer uso del «CU2 - Finalizando captura de datos» no hay datos para mostrar, se debe informar al usuario de tal situación.
+												\item Si luego de hacer uso del «CU3 - Consultando lista de resultados» haciendo clic en uno de items de la lista de grabación falla al conectarse y obtener datos desde la base de datos, debe informarse al usuario del inconveniente ocurrido y volver a la pantalla principal.
+                    \end{enumerate}
+                } \\						
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+El usuario accede a la pantalla de presentación de información mediante uno de los casos de uso CU2 o CU3. Luego hace clic en la pestaña “Tablas” y se despliega la información obtenida en éste formato.
+								} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{														
+										\centering \\ 		
+										\includegraphics[width=3.5cm]{img/mockups3_CU3.png}	
+								} \\
+            \hline
+		\caption{Caso de uso Visualizando resultados en tablas}
+		\label{tabla:caso_uso_visualizando_resultados_tablas}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU12} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Consultando menú de opciones}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual el usuario accede a una lista de opciones que puede seleccionar para llevar a cabo alguna acción definida.} \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario se encuentra en la pantalla principal de la aplicación. El menú debe estar ubicado en la barra de título y en forma de 3 mini-cuadrados dispuestos en forma vertical uno debajo del otro.} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario inicia la aplicación y se ubica en la pantalla principal.
+												\item El usuario hace clic en un botón tipo ícono (en forma de 3 mini-cuadrados dispuestos en forma vertical uno debajo del otro).
+												\item Se despliega un menú superpuesto a los elementos de tal pantalla con las opciones disponibles.
+												\item El usuario puede seleccionar una opción o bien hacer clic nuevamente sobre el ícono para cerrar el menú.
+										\end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering                     
+                } \\
+						\hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Extensiones}} & \multicolumn{3}{|p{12cm}|}{
+									\begin{list_type}  
+										\item 4.a.  Ingresar o editar información: extiende «CU6 - Ingresando información para el mail».
+										\item 4.b.  Ver ayuda: extiende «CU13 - Consultando ayuda»								
+									\end{list_type}
+								} \\										
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+El usuario, ubicado en la pantalla principal, hace clic en el ícono que representa el menú. Se despliegan las opciones disponibles. El usuario puede optar por hace uso de alguna de las opciones disponibles o no. Si desea cerrar el menú, hace clic nuevamente en el ícono correspondiente.
+								} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{														
+										\centering \\ 		
+										\includegraphics[width=3.5cm]{img/mockups1_CU12.png}	
+								} \\
+            \hline
+		\caption{Caso de uso Consultando menú de opciones}
+		\label{tabla:caso_uso_consultando_opciones}
+\end{longtable}
+
+\begin{longtable}{|l|l|l|l|}
+			\hline
+            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU13} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Consultando ayuda}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+						\hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es el proceso por el cual el usuario accede a la ayuda de la aplicación.} \\
+            \hline
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario debe estar ubicado en la pantalla principal y hacer uso del «CU12 - Consultando menú de opciones», del cual extiende éste caso de uso.} \\														
+						\hline
+									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+						\endfirsthead									
+						\endhead
+						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+						\endfoot
+						\endlastfoot
+														
+            \hline
+                \multicolumn{2}{|p{8cm}|}{\centering 
+                    \begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item El usuario ubicado en la pantalla principal, hace clic en el ícono de menú, haciendo uso del «CU12 - Consultando menú de opciones» donde se despliega el menú correspondiente.
+												\item El usuario hace clic en la opción “Ingresar/editar información” (nombre sugerido), donde es redirigido hacia una nueva pantalla.
+												\item El sistema despliega la ayuda en forma de texto y gráficos, donde el usuario puede navegar libremente.
+												\item El usuario hace clic en “Volver/Salir” o bien en el botón volver del dispositivo, para poder ser redirigido hacia la pantalla principal.
+										\end{enumerate}
+                } & 
+                \multicolumn{2}{p{8cm} |}{\centering 																		
+										\begin{enumerate}
+                        \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        \item Si la ayuda no puede ser mostrada al usuario debido a un error, debe informarse al usuario de lo sucedido.
+										\end{enumerate}								
+                } \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
+El usuario accede al menú de opciones desde la pantalla principal y allí hace clic en la opción “Ingresar/editar información”. Se redirige al usuario hacia una nueva pantalla con ayuda acerca de la aplicación y sus componentes principales. El usuario decide cuándo volver a la pantalla principal.
+								} \\
+            \hline
+                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{														
+										\centering \\ 		
+										\includegraphics[width=3.5cm]{img/mockups1_CU13.png}	
+								} \\
+            \hline
+		\caption{Caso de uso Consultando ayuda}
+		\label{tabla:caso_uso_consultando_ayuda}
+\end{longtable}
+
+%\begin{table}[H]
+	%\centering
+    %\small
+		%\begin{tabular}{|l|l|l|l|}
+			%\hline
+                %\multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{ID del caso de uso} \\
+            %\hline
+                %\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Nombre del caso de uso}} \\
+            %\hline
+                %\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Actores que participan}} \\
+            %\hline
+                %\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Breve descripción del CU} \\
+            %\hline
+                %\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{Que tiene que ocurrir antes del CU} \\
+            %\hline
+                %\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\
+            %\hline
+                %\multicolumn{2}{|p{8cm}|}{\centering 
+                    %\begin{enumerate}
+                        %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        %\item Paso 1
+                        %\item Paso 2
+                        %\item Paso 3
+                    %\end{enumerate}
+                %} & 
+                %\multicolumn{2}{p{8cm} |}{\centering 
+                    %\begin{enumerate}
+                        %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
+                        %\item Paso alternativo 1
+                    %\end{enumerate}
+                %} \\
+            %\hline
+                %\multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm} |}{Que pasa luego del CU} \\
+            %\hline
+                %\multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm} |}{Mockups} \\
+            %\hline
+		%\end{tabular}
+		%\caption{Caso de uso Iniciando captura}
+		%\label{tabla:caso_uso_iniciando}
+%\end{table}
 
 
 

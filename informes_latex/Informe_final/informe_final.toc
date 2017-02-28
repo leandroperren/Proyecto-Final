@@ -23,11 +23,11 @@
 \contentsline {subsection}{\numberline {3.1.2}Requerimientos no funcionales}{38}
 \contentsline {section}{\numberline {3.2}Dise\~no}{39}
 \contentsline {subsection}{\numberline {3.2.1}Casos de Uso}{40}
-\contentsline {subsection}{\numberline {3.2.2}Diagrama de secuencia}{44}
-\contentsline {subsection}{\numberline {3.2.3}Dise\~no de Clases}{45}
-\contentsline {subsection}{\numberline {3.2.4}Dise\~no de interfaces}{48}
-\contentsline {section}{\numberline {3.3}Verificaci\'on y validaci\'on}{56}
-\contentsline {section}{\numberline {3.4}Tasas de aciertos de la aplicaci\'on Android}{57}
-\contentsline {chapter}{\numberline {4}Conclusi\'on y trabajos futuros}{61}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{63}
-\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{65}
+\contentsline {subsection}{\numberline {3.2.2}Diagrama de secuencia}{62}
+\contentsline {subsection}{\numberline {3.2.3}Dise\~no de Clases}{62}
+\contentsline {subsection}{\numberline {3.2.4}Dise\~no de interfaces}{65}
+\contentsline {section}{\numberline {3.3}Verificaci\'on y validaci\'on}{73}
+\contentsline {section}{\numberline {3.4}Tasas de aciertos de la aplicaci\'on Android}{74}
+\contentsline {chapter}{\numberline {4}Conclusi\'on y trabajos futuros}{78}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{80}
+\contentsline {chapter}{\numberline {A}Tablas adicionales sobre la extracci\'on de $T_0$}{82}

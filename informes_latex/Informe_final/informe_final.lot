@@ -16,71 +16,82 @@
 \contentsline {table}{\numberline {2.13}{\ignorespaces Verificaci\'on de m\'etodos y funcionalidades de Matlab con se\~nales no vistas.}}{36}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{Caso de uso Iniciando captura}}{44}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Caso de uso Iniciando captura}}{44}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Tasas de aciertos de la aplicaci\'on Android con se\~nales limpias.}}{57}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Pruebas a la aplicaci\'on Android en ambientes cotidianos.}}{58}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Tasas de aciertos de la aplicaci\'on Android en ambientes cotidianos.}}{58}
-\contentsline {table}{\numberline {3.6}{\ignorespaces Pruebas de la aplicaci\'on Android en ambientes cotidianos.}}{59}
-\contentsline {table}{\numberline {3.7}{\ignorespaces Tasas de acierto de las aplicaci\'ones Android para una se\~nal de ronquidos.}}{60}
-\contentsline {table}{\numberline {3.8}{\ignorespaces Tasas de acierto de las aplicaci\'ones Android para una se\~nal de ruidos.}}{60}
+\contentsline {table}{\numberline {3.2}{Caso de uso Finalizando captura de datos}}{46}
+\contentsline {table}{\numberline {3.3}{Caso de uso Consultando lista de resultados}}{47}
+\contentsline {table}{\numberline {3.4}{Caso de uso Consultando lista de resultados}}{48}
+\contentsline {table}{\numberline {3.5}{Caso de uso Procesando la se\~nal capturada}}{49}
+\contentsline {table}{\numberline {3.6}{Caso de uso Ingresando informaci\'on mail}}{51}
+\contentsline {table}{\numberline {3.7}{Caso de uso Guardando datos procesados}}{52}
+\contentsline {table}{\numberline {3.8}{Caso de uso Generando informe de resultados}}{55}
+\contentsline {table}{\numberline {3.9}{Caso de uso Iniciando interfaz de grabaci\'on}}{56}
+\contentsline {table}{\numberline {3.10}{Caso de uso Visualizando resultados gr\'aficos}}{57}
+\contentsline {table}{\numberline {3.11}{Caso de uso Visualizando resultados en tablas}}{59}
+\contentsline {table}{\numberline {3.12}{Caso de uso Consultando men\'u de opciones}}{60}
+\contentsline {table}{\numberline {3.13}{Caso de uso Consultando ayuda}}{61}
+\contentsline {table}{\numberline {3.14}{\ignorespaces Tasas de aciertos de la aplicaci\'on Android con se\~nales limpias.}}{74}
+\contentsline {table}{\numberline {3.15}{\ignorespaces Pruebas a la aplicaci\'on Android en ambientes cotidianos.}}{75}
+\contentsline {table}{\numberline {3.16}{\ignorespaces Tasas de aciertos de la aplicaci\'on Android en ambientes cotidianos.}}{75}
+\contentsline {table}{\numberline {3.17}{\ignorespaces Pruebas de la aplicaci\'on Android en ambientes cotidianos.}}{76}
+\contentsline {table}{\numberline {3.18}{\ignorespaces Tasas de acierto de las aplicaci\'ones Android para una se\~nal de ronquidos.}}{77}
+\contentsline {table}{\numberline {3.19}{\ignorespaces Tasas de acierto de las aplicaci\'ones Android para una se\~nal de ruidos.}}{77}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Paciente 1: segmentos de duraci\'on de 1 minuto}}{65}
-\contentsline {table}{\numberline {A.2}{\ignorespaces Paciente 1: segmentos de duraci\'on de 30 segundos}}{65}
-\contentsline {table}{\numberline {A.3}{\ignorespaces Paciente 1: segmentos de duraci\'on de 2 min}}{66}
-\contentsline {table}{\numberline {A.4}{\ignorespaces Paciente 1: segmentos de duraci\'on de 3 min}}{66}
-\contentsline {table}{\numberline {A.5}{\ignorespaces Paciente 1: segmentos de duraci\'on de 5 min}}{66}
-\contentsline {table}{\numberline {A.6}{\ignorespaces Paciente 2: segmentos de duraci\'on de 1 minuto}}{67}
-\contentsline {table}{\numberline {A.7}{\ignorespaces Paciente 2: segmentos de duraci\'on de 30 segundos}}{67}
-\contentsline {table}{\numberline {A.8}{\ignorespaces Paciente 2: segmentos de duraci\'on de 2 min}}{67}
-\contentsline {table}{\numberline {A.9}{\ignorespaces Paciente 2: segmentos de duraci\'on de 3 min}}{68}
-\contentsline {table}{\numberline {A.10}{\ignorespaces Paciente 2: segmentos de duraci\'on de 5 min}}{68}
-\contentsline {table}{\numberline {A.11}{\ignorespaces Paciente 3: segmentos de duraci\'on de 1 minuto}}{68}
-\contentsline {table}{\numberline {A.12}{\ignorespaces Paciente 3: segmentos de duraci\'on de 30 segundos}}{69}
-\contentsline {table}{\numberline {A.13}{\ignorespaces Paciente 3: segmentos de duraci\'on de 2 min}}{69}
-\contentsline {table}{\numberline {A.14}{\ignorespaces Paciente 3: segmentos de duraci\'on de 3 min}}{69}
-\contentsline {table}{\numberline {A.15}{\ignorespaces Paciente 3: segmentos de duraci\'on de 5 min}}{70}
-\contentsline {table}{\numberline {A.16}{\ignorespaces Paciente 4: segmentos de duraci\'on de 1 min}}{70}
-\contentsline {table}{\numberline {A.17}{\ignorespaces Paciente 4: segmentos de duraci\'on de 30 segundos}}{70}
-\contentsline {table}{\numberline {A.18}{\ignorespaces Paciente 4: segmentos de duraci\'on de 2 min}}{71}
-\contentsline {table}{\numberline {A.19}{\ignorespaces Paciente 4: segmentos de duraci\'on de 3 min}}{71}
-\contentsline {table}{\numberline {A.20}{\ignorespaces Paciente 4: segmentos de duraci\'on de 5 min}}{71}
-\contentsline {table}{\numberline {A.21}{\ignorespaces Paciente 5: segmentos de duraci\'on de 1 min}}{72}
-\contentsline {table}{\numberline {A.22}{\ignorespaces Paciente 5: segmentos de duraci\'on de 30 segundos}}{72}
-\contentsline {table}{\numberline {A.23}{\ignorespaces Paciente 5: segmentos de duraci\'on de 2 min}}{72}
-\contentsline {table}{\numberline {A.24}{\ignorespaces Paciente 5: segmentos de duraci\'on de 3 min}}{73}
-\contentsline {table}{\numberline {A.25}{\ignorespaces Paciente 5: segmentos de duraci\'on de 5 min}}{73}
-\contentsline {table}{\numberline {A.26}{\ignorespaces $T_0$ de segmentos con ronquidos de 30 segundos en distintas se\~nales de hombres.}}{74}
-\contentsline {table}{\numberline {A.27}{\ignorespaces $T_0$ de segmentos con ronquidos de 2 min en distintas se\~nales de hombres.}}{75}
-\contentsline {table}{\numberline {A.28}{\ignorespaces $T_0$ de segmentos con ronquidos de 3 min en distintas se\~nales de hombres.}}{76}
-\contentsline {table}{\numberline {A.29}{\ignorespaces $T_0$ de segmentos con ronquidos de 5 min en distintas se\~nales de hombres.}}{77}
-\contentsline {table}{\numberline {A.30}{\ignorespaces Paciente 6: segmentos de duraci\'on de 1 minuto}}{78}
-\contentsline {table}{\numberline {A.31}{\ignorespaces Paciente 6: segmentos de duraci\'on de 30 segundos}}{78}
-\contentsline {table}{\numberline {A.32}{\ignorespaces Paciente 6: segmentos de duraci\'on de 2 min}}{78}
-\contentsline {table}{\numberline {A.33}{\ignorespaces Paciente 6: segmentos de duraci\'on de 3 min}}{79}
-\contentsline {table}{\numberline {A.34}{\ignorespaces Paciente 6: segmentos de duraci\'on de 5 min}}{79}
-\contentsline {table}{\numberline {A.35}{\ignorespaces Paciente 7: segmentos de duraci\'on de 1 min}}{79}
-\contentsline {table}{\numberline {A.36}{\ignorespaces Paciente 7: segmentos de duraci\'on de 30 segundos}}{80}
-\contentsline {table}{\numberline {A.37}{\ignorespaces Paciente 7: segmentos de duraci\'on de 2 min}}{80}
-\contentsline {table}{\numberline {A.38}{\ignorespaces Paciente 7: segmentos de duraci\'on de 3 min}}{80}
-\contentsline {table}{\numberline {A.39}{\ignorespaces Paciente 7: segmentos de duraci\'on de 5 min}}{81}
-\contentsline {table}{\numberline {A.40}{\ignorespaces Paciente 8: segmentos de duraci\'on de 1 minuto}}{81}
-\contentsline {table}{\numberline {A.41}{\ignorespaces Paciente 8: segmentos de duraci\'on de 30 segundos}}{81}
-\contentsline {table}{\numberline {A.42}{\ignorespaces Paciente 8: segmentos de duraci\'on de 2 min}}{82}
-\contentsline {table}{\numberline {A.43}{\ignorespaces Paciente 8: segmentos de duraci\'on de 3 min}}{82}
-\contentsline {table}{\numberline {A.44}{\ignorespaces Paciente 8: segmentos de duraci\'on de 5 min}}{82}
-\contentsline {table}{\numberline {A.45}{\ignorespaces Paciente 9: segmentos de duraci\'on de 1 min}}{83}
-\contentsline {table}{\numberline {A.46}{\ignorespaces Paciente 9: segmentos de duraci\'on de 30 segundos}}{83}
-\contentsline {table}{\numberline {A.47}{\ignorespaces Paciente 9: segmentos de duraci\'on de 2 min}}{83}
-\contentsline {table}{\numberline {A.48}{\ignorespaces Paciente 9: segmentos de duraci\'on de 3 min}}{84}
-\contentsline {table}{\numberline {A.49}{\ignorespaces Paciente 9: segmentos de duraci\'on de 5 min}}{84}
-\contentsline {table}{\numberline {A.50}{\ignorespaces Paciente 10: segmentos de duraci\'on de 1 minuto}}{84}
-\contentsline {table}{\numberline {A.51}{\ignorespaces Paciente 10: segmentos de duraci\'on de 30 segundos}}{85}
-\contentsline {table}{\numberline {A.52}{\ignorespaces Paciente 10: segmentos de duraci\'on de 2 min}}{85}
-\contentsline {table}{\numberline {A.53}{\ignorespaces Paciente 10: segmentos de duraci\'on de 3 min}}{85}
-\contentsline {table}{\numberline {A.54}{\ignorespaces Paciente 10: segmentos de duraci\'on de 5 min}}{86}
-\contentsline {table}{\numberline {A.55}{\ignorespaces $T_0$ de segmentos con ronquidos de 1 minuto en distintas se\~nales de mujeres.}}{87}
-\contentsline {table}{\numberline {A.56}{\ignorespaces $T_0$ de segmentos con ronquidos de 30 segundos en distintas se\~nales de mujeres.}}{88}
-\contentsline {table}{\numberline {A.57}{\ignorespaces $T_0$ de segmentos con ronquidos de 2 min en distintas se\~nales de mujeres.}}{89}
-\contentsline {table}{\numberline {A.58}{\ignorespaces $T_0$ de segmentos con ronquidos de 3 min en distintas se\~nales de mujeres.}}{90}
-\contentsline {table}{\numberline {A.59}{\ignorespaces $T_0$ de segmentos con ronquidos de 5 min en distintas se\~nales de mujeres.}}{91}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Paciente 1: segmentos de duraci\'on de 1 minuto}}{82}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Paciente 1: segmentos de duraci\'on de 30 segundos}}{82}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Paciente 1: segmentos de duraci\'on de 2 min}}{83}
+\contentsline {table}{\numberline {A.4}{\ignorespaces Paciente 1: segmentos de duraci\'on de 3 min}}{83}
+\contentsline {table}{\numberline {A.5}{\ignorespaces Paciente 1: segmentos de duraci\'on de 5 min}}{83}
+\contentsline {table}{\numberline {A.6}{\ignorespaces Paciente 2: segmentos de duraci\'on de 1 minuto}}{84}
+\contentsline {table}{\numberline {A.7}{\ignorespaces Paciente 2: segmentos de duraci\'on de 30 segundos}}{84}
+\contentsline {table}{\numberline {A.8}{\ignorespaces Paciente 2: segmentos de duraci\'on de 2 min}}{84}
+\contentsline {table}{\numberline {A.9}{\ignorespaces Paciente 2: segmentos de duraci\'on de 3 min}}{85}
+\contentsline {table}{\numberline {A.10}{\ignorespaces Paciente 2: segmentos de duraci\'on de 5 min}}{85}
+\contentsline {table}{\numberline {A.11}{\ignorespaces Paciente 3: segmentos de duraci\'on de 1 minuto}}{85}
+\contentsline {table}{\numberline {A.12}{\ignorespaces Paciente 3: segmentos de duraci\'on de 30 segundos}}{86}
+\contentsline {table}{\numberline {A.13}{\ignorespaces Paciente 3: segmentos de duraci\'on de 2 min}}{86}
+\contentsline {table}{\numberline {A.14}{\ignorespaces Paciente 3: segmentos de duraci\'on de 3 min}}{86}
+\contentsline {table}{\numberline {A.15}{\ignorespaces Paciente 3: segmentos de duraci\'on de 5 min}}{87}
+\contentsline {table}{\numberline {A.16}{\ignorespaces Paciente 4: segmentos de duraci\'on de 1 min}}{87}
+\contentsline {table}{\numberline {A.17}{\ignorespaces Paciente 4: segmentos de duraci\'on de 30 segundos}}{87}
+\contentsline {table}{\numberline {A.18}{\ignorespaces Paciente 4: segmentos de duraci\'on de 2 min}}{88}
+\contentsline {table}{\numberline {A.19}{\ignorespaces Paciente 4: segmentos de duraci\'on de 3 min}}{88}
+\contentsline {table}{\numberline {A.20}{\ignorespaces Paciente 4: segmentos de duraci\'on de 5 min}}{88}
+\contentsline {table}{\numberline {A.21}{\ignorespaces Paciente 5: segmentos de duraci\'on de 1 min}}{89}
+\contentsline {table}{\numberline {A.22}{\ignorespaces Paciente 5: segmentos de duraci\'on de 30 segundos}}{89}
+\contentsline {table}{\numberline {A.23}{\ignorespaces Paciente 5: segmentos de duraci\'on de 2 min}}{89}
+\contentsline {table}{\numberline {A.24}{\ignorespaces Paciente 5: segmentos de duraci\'on de 3 min}}{90}
+\contentsline {table}{\numberline {A.25}{\ignorespaces Paciente 5: segmentos de duraci\'on de 5 min}}{90}
+\contentsline {table}{\numberline {A.26}{\ignorespaces $T_0$ de segmentos con ronquidos de 30 segundos en distintas se\~nales de hombres.}}{91}
+\contentsline {table}{\numberline {A.27}{\ignorespaces $T_0$ de segmentos con ronquidos de 2 min en distintas se\~nales de hombres.}}{92}
+\contentsline {table}{\numberline {A.28}{\ignorespaces $T_0$ de segmentos con ronquidos de 3 min en distintas se\~nales de hombres.}}{93}
+\contentsline {table}{\numberline {A.29}{\ignorespaces $T_0$ de segmentos con ronquidos de 5 min en distintas se\~nales de hombres.}}{94}
+\contentsline {table}{\numberline {A.30}{\ignorespaces Paciente 6: segmentos de duraci\'on de 1 minuto}}{95}
+\contentsline {table}{\numberline {A.31}{\ignorespaces Paciente 6: segmentos de duraci\'on de 30 segundos}}{95}
+\contentsline {table}{\numberline {A.32}{\ignorespaces Paciente 6: segmentos de duraci\'on de 2 min}}{95}
+\contentsline {table}{\numberline {A.33}{\ignorespaces Paciente 6: segmentos de duraci\'on de 3 min}}{96}
+\contentsline {table}{\numberline {A.34}{\ignorespaces Paciente 6: segmentos de duraci\'on de 5 min}}{96}
+\contentsline {table}{\numberline {A.35}{\ignorespaces Paciente 7: segmentos de duraci\'on de 1 min}}{96}
+\contentsline {table}{\numberline {A.36}{\ignorespaces Paciente 7: segmentos de duraci\'on de 30 segundos}}{97}
+\contentsline {table}{\numberline {A.37}{\ignorespaces Paciente 7: segmentos de duraci\'on de 2 min}}{97}
+\contentsline {table}{\numberline {A.38}{\ignorespaces Paciente 7: segmentos de duraci\'on de 3 min}}{97}
+\contentsline {table}{\numberline {A.39}{\ignorespaces Paciente 7: segmentos de duraci\'on de 5 min}}{98}
+\contentsline {table}{\numberline {A.40}{\ignorespaces Paciente 8: segmentos de duraci\'on de 1 minuto}}{98}
+\contentsline {table}{\numberline {A.41}{\ignorespaces Paciente 8: segmentos de duraci\'on de 30 segundos}}{98}
+\contentsline {table}{\numberline {A.42}{\ignorespaces Paciente 8: segmentos de duraci\'on de 2 min}}{99}
+\contentsline {table}{\numberline {A.43}{\ignorespaces Paciente 8: segmentos de duraci\'on de 3 min}}{99}
+\contentsline {table}{\numberline {A.44}{\ignorespaces Paciente 8: segmentos de duraci\'on de 5 min}}{99}
+\contentsline {table}{\numberline {A.45}{\ignorespaces Paciente 9: segmentos de duraci\'on de 1 min}}{100}
+\contentsline {table}{\numberline {A.46}{\ignorespaces Paciente 9: segmentos de duraci\'on de 30 segundos}}{100}
+\contentsline {table}{\numberline {A.47}{\ignorespaces Paciente 9: segmentos de duraci\'on de 2 min}}{100}
+\contentsline {table}{\numberline {A.48}{\ignorespaces Paciente 9: segmentos de duraci\'on de 3 min}}{101}
+\contentsline {table}{\numberline {A.49}{\ignorespaces Paciente 9: segmentos de duraci\'on de 5 min}}{101}
+\contentsline {table}{\numberline {A.50}{\ignorespaces Paciente 10: segmentos de duraci\'on de 1 minuto}}{101}
+\contentsline {table}{\numberline {A.51}{\ignorespaces Paciente 10: segmentos de duraci\'on de 30 segundos}}{102}
+\contentsline {table}{\numberline {A.52}{\ignorespaces Paciente 10: segmentos de duraci\'on de 2 min}}{102}
+\contentsline {table}{\numberline {A.53}{\ignorespaces Paciente 10: segmentos de duraci\'on de 3 min}}{102}
+\contentsline {table}{\numberline {A.54}{\ignorespaces Paciente 10: segmentos de duraci\'on de 5 min}}{103}
+\contentsline {table}{\numberline {A.55}{\ignorespaces $T_0$ de segmentos con ronquidos de 1 minuto en distintas se\~nales de mujeres.}}{104}
+\contentsline {table}{\numberline {A.56}{\ignorespaces $T_0$ de segmentos con ronquidos de 30 segundos en distintas se\~nales de mujeres.}}{105}
+\contentsline {table}{\numberline {A.57}{\ignorespaces $T_0$ de segmentos con ronquidos de 2 min en distintas se\~nales de mujeres.}}{106}
+\contentsline {table}{\numberline {A.58}{\ignorespaces $T_0$ de segmentos con ronquidos de 3 min en distintas se\~nales de mujeres.}}{107}
+\contentsline {table}{\numberline {A.59}{\ignorespaces $T_0$ de segmentos con ronquidos de 5 min en distintas se\~nales de mujeres.}}{108}
