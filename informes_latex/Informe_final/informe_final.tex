@@ -19,9 +19,9 @@ bottom=2.5cm,
 top=2.5cm }
 \renewcommand{\baselinestretch}{1.2}
 
-\usepackage{appendix} % Para los Apéndices
+\usepackage{longtable}
 
-\usepackage{longtable} 
+\usepackage{appendix} % Para los Apéndices
 
 %\usepackage{mathptmx} %Times
 
@@ -809,9 +809,9 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
                 \multicolumn{2}{|p{8cm}|}{\centering 
                     \begin{enumerate}
                         \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
-                        \item Éste caso de uso comienza cuando el usuario se encuentre ubicado en la pantalla dedicada a la grabación, habiendo hecho uso del «CU9 - Iniciando interfaz de grabación» que aquí llamamos “Iniciar grabación”, donde hace clic en el botón llamado “Iniciar”.
+                        \item Éste caso de uso comienza cuando el usuario se encuentre ubicado en la pantalla dedicada a la grabación, habiendo hecho uso del «CU9 - Iniciando interfaz de grabación» que aquí llamamos "`Iniciar grabación"', donde hace clic en el botón llamado "`Iniciar"'.
                         \item El sistema setea todos los valores que necesita e inicia el proceso de captura de datos, que se lleva a cabo mediante el micrófono del dispositivo, como único medio de entrada.
-                        \item El sistema informa al usuario ha iniciado mediante un mensaje visible temporalmente.
+                        \item El sistema informa al usuario que ha iniciado mediante un mensaje visible temporalmente.
 												\item A medida que se capturan datos, el sistema debe confeccionar una variable que los contenga hasta alcanzar el límite de 5 min.
 												\item El sistema procesa la variable a fin de determinar si contiene información de interés, en éste caso sería si presenta alguna roncopatía, haciendo uso del «CU5 - Procesando la señal capturada» donde interviene el actor «Sistema base de la App» que hace las veces de controlador del proceso.
 												\item El sistema base de la app (actor controlador) devuelve la información obtenida y la almacena temporalmente en diferentes variables de memoria.
@@ -821,7 +821,7 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
                 \multicolumn{2}{p{8cm} |}{\centering 
                     \begin{enumerate}
                         \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
-                        \item Si la batería no cumple con el mínimo establecido, se le debe informar al usuario con una advertencia, iniciando de igualmente el proceso de captura.
+                        \item Si la batería no cumple con el mínimo establecido, se le debe informar al usuario con una advertencia, iniciando igualmente el proceso de captura.
 												\item Si la memoria es inferior al mínimo sugerido, se debe informar al usuario y no debe continuar con la inicialización del proceso de captura.
 												\item Si el procesamiento de la señal capturada falla en algún momento se debe detener la captura e informar al usuario al respecto con detalles de lo sucedido.
 												\item Si la aplicación se detiene por algún tipo de fallo, más allá del punto anterior, la captura se debe detener, no se debe hacer persistente la información obtenida y se debe informar al usuario de lo sucedido.
@@ -829,7 +829,7 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
                 } \\
             \hline
                 \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{|p{12cm}|}{
-El segmento de datos capturados (señal) con una duración de 5 min es confeccionada correctamente, se procesan los datos de la misma, se devuelve la información obtenida y luego es almacenada en 3 variables bien definidas, como por ejemplo t0, energía, numeroDeSegmento. Esto se repite hasta que el proceso de captura es detenido/interrumpido.
+Cuando el segmento de datos capturados (señal) con una duración de 5 min es confeccionado correctamente, se procesan los datos del mismo y se almacena la información obtenida en 3 variables bien definidas: t0, energía y numeroDeSegmento. Esto se repite hasta que el proceso de captura es detenido/interrumpido.
 } \\
             \hline
                 \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{|p{12cm}|}{
@@ -985,7 +985,7 @@ Se presenta al usuario una lista de grabaciones. El usuario hace clic en uno de 
                         \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
                         \item En caso de no poder recuperar el archivo PDF el proceso será abortado indicando al usuario el error mediante un mensaje.
 												\item El sistema informará al usuario en caso de no estar cargado el mail del médico.
-												\item El propio sistema de Android  se encarga de asignar el correo a “No enviados” si el mismo falla por algún motivo.
+												\item El propio sistema de Android  se encarga de asignar el correo a "`No enviados"' si el mismo falla por algún motivo.
                     \end{enumerate}
                 } \\						
             \hline
@@ -1178,7 +1178,7 @@ El sistema toma las variables con la información obtenida y las serializa para f
                     \begin{enumerate}
                         \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
                         \item El usuario acaba de terminar una grabación y fue redirigido hacia la pantalla de presentación de información gráfica o bien accedió desde la pantalla principal haciendo clic en un item de grabación.
-												\item Allí hace clic en un botón de acción llamado “Generar informe y enviar” o “Generar PDF y enviar” como nombres tentativos.
+												\item Allí hace clic en un botón de acción llamado "`Generar informe y enviar"' o "`Generar PDF y enviar"' como nombres tentativos.
 												\item El sistema recoge toda la información personal del usuario ingresada, además de todos los gráficos y tablas generados con la información obtenida del análisis y confecciona un archivo en formato PDF que es almacenado en el dispositivo de manera permanente.
 												\item El sistema hace uso del servicio de email, como por ejemplo GMail, y setea todos los campos del mismo, donde el email de destino es obtenido de la información ingresada, particularmente el mail del médico, y adjunta el PDF generado a tal email. Este paso se ejecuta haciendo uso del «CU4 - Enviando mail con resultados»
 												\item El sistema muestra al usuario una ventana donde debe hacer clic en Enviar para que el mismo sea enviado.
@@ -1188,7 +1188,7 @@ El sistema toma las variables con la información obtenida y las serializa para f
                     \begin{enumerate}
                         \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
                         \item Si el sistema no puede generar el archivo PDF, debe informar al usuario lo sucedido.
-												\item Si al momento de enviar el email, no hay conexión a internet, el mail queda en espera hasta reestablecer la conexión y enviar nuevamente.
+												\item Si al momento de enviar el email, no hay conexión a internet, el mail queda en espera hasta restablecer la conexión y enviar nuevamente.
 												\item Si el sistema de mail falla por algún motivo, se debe informar al usuario de ello.
                     \end{enumerate}
                 } \\						
@@ -1333,8 +1333,8 @@ La otra posibilidad es seleccionar una captura de la lista de resultados del cas
                     \begin{enumerate}
                         \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
                         \item El usuario hace uso del «CU2 - Finalizando captura de datos» o bien eligiendo un item de la lista de grabaciones del «CU3 - Consultando lista de resultados».
-												\item En la pantalla de resultados, el usuario hace clic en la pestaña de “Tablas” para acceder a éste formato.
-												\item La aplicación despliega los resultados en tablas con la totalidad de la información obtenida a partir de la captura y procesamiento de datos, como por ejemplo: hora de inicio y fin de la captura, Tiempo total, Cantidad de detecciones, Hora con mayor cantidad de detecciones, promedio de detecciones por hora y además una lista con todas las detecciones detallando hora de detección e intensidad de la misma.
+												\item En la pantalla de resultados, el usuario hace clic en la pestaña de "`Tablas"' para acceder a éste formato.
+												\item La aplicación despliega los resultados en tablas con la totalidad de la información obtenida a partir de la captura y procesamiento de datos: hora de inicio y fin de la captura, tiempo total, cantidad de detecciones, hora con mayor cantidad de detecciones, promedio de detecciones por hora y la lista con todas las detecciones detallando hora de detección e intensidad de la misma.
 										\end{enumerate}
                 } & 
                 \multicolumn{2}{p{8cm} |}{\centering 
@@ -1434,9 +1434,9 @@ El usuario, ubicado en la pantalla principal, hace clic en el ícono que represen
                     \begin{enumerate}
                         \itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
                         \item El usuario ubicado en la pantalla principal, hace clic en el ícono de menú, haciendo uso del «CU12 - Consultando menú de opciones» donde se despliega el menú correspondiente.
-												\item El usuario hace clic en la opción “Ingresar/editar información” (nombre sugerido), donde es redirigido hacia una nueva pantalla.
+												\item El usuario hace clic en la opción "`Ingresar/editar información"' (nombre sugerido), donde es redirigido hacia una nueva pantalla.
 												\item El sistema despliega la ayuda en forma de texto y gráficos, donde el usuario puede navegar libremente.
-												\item El usuario hace clic en “Volver/Salir” o bien en el botón volver del dispositivo, para poder ser redirigido hacia la pantalla principal.
+												\item El usuario hace clic en "`Volver/Salir"' o bien en el botón volver del dispositivo, para poder ser redirigido hacia la pantalla principal.
 										\end{enumerate}
                 } & 
                 \multicolumn{2}{p{8cm} |}{\centering 																		
@@ -1792,7 +1792,7 @@ Para el análisis de los valores pico, se realizó otra captura y se estimó la amp
 \textcolor{blue}{
 En esta sección se presentan los resultados de las pruebas que se realizaron a 
 las aplicaciones Android, \textbf{\textit{SnoreClock}} y \textbf{\textit{DreamWatcher}}. El objetivo fué demostrar que la aplicación desarrollada en este Proyecto Final de Carrera presenta mejores tasas de aciertos.
-Para demostrar esto se utilizaron dos señales, una con puros ronquidos y la otra únicamente con ruidos. En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se pueden ver las tasas de aciertos que se obtuvieron utilizando estas señales en las distintas aplicaciones. Se puede observar que para la señal de ronquidos los pocentajes de aciertos fueron buenos en cualquier aplicación. Sin embargo, esto cambió cuando se utilizó la señal con puros ruidos, ya que las dos aplicaciones elegidas para esta comparación detectaron muchos falsos positivos. Esto se debió a que estas aplicaciones analizan solamente cambios bruscos de energía detectando todo lo que es ruido como ronquidos. De esta manera, quedó demostrado que se desarrolló una aplicación capaz de lograr buenas tasas de aciertos en la detección de ronquidos aún en precensia de ruidos. 
+Para demostrar esto se utilizaron dos señales, una con puros ronquidos y la otra únicamente con ruidos. En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se pueden ver las tasas de aciertos que se obtuvieron utilizando estas señales en las distintas aplicaciones. Se puede observar que para la señal de ronquidos los pocentajes de aciertos fueron buenos en cualquier aplicación. Sin embargo, esto cambió cuando se utilizó la señal con puros ruidos, ya que las dos aplicaciones elegidas para esta comparación detectaron muchos falsos positivos. Esto se debió a que estas aplicaciones analizan solamente cambios bruscos de energía detectando todo lo que es ruido como ronquidos. De esta manera, quedó demostrado que se desarrolló una aplicación capaz de lograr buenas tasas de aciertos en la detección de ronquidos aún en presensia de ruidos. 
 }
 
 \begin{table}[H]
@@ -1834,7 +1834,7 @@ Para demostrar esto se utilizaron dos señales, una con puros ronquidos y la otra
 En este proyecto final se desarrolló una aplicación Android capaz de detectar eventos de ronquidos por medio del análisis de datos capturados vía el micrófono del dispositivo. El objetivo principal fue lograr una correcta detección utilizando métodos más inteligentes que los utilizados por las aplicaciones disponibles hasta el momento. Estas aplicaciones sólo realizan un análisis del nivel de energía de los datos capturados, generando un mal desempeño frente a condiciones ambientales de mucho ruido, siendo detectados y etiquetados como ronquidos.
 Primeramente se analizaron en detalle los ronquidos a fin de extraer alguna característica representativa de los mismos que permita poder detectarlos dentro de una grabación obtenida en ambientes cotidianos. Para ello se analizaron distintas señales EDF de personas de distinto sexo, obtenidas en estudios de sueño. De este análisis se demostró que el $T_0$ es una característica representativa de los ronquidos y que permite diferenciarlos de otros sonidos no deseados que pudieran presentarse en este tipo de grabaciones. Como resultado de esta etapa, mediante la extracción manual de segmentos etiquetados como ronquidos en las señales EDF y el cálculo de su correspondiente $T_0$, se concluye que el rango de valores del $T_0$ es de [3.50 - 4.70 s].
 
-Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado. Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas llegando a mas del 90\% en algunos casos. \textcolor{blue}{En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se observa que en precensia de mucho ruido la aplicación desarrollada en este Proyecto Final de Carrera logra el mejor desempeño comparado con el de las demas aplicaciones.} Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
+Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado. Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas llegando a mas del 90\% en algunos casos. \textcolor{blue}{En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se observa que en presensia de mucho ruido la aplicación desarrollada en este Proyecto Final de Carrera logra el mejor desempeño comparado con el de las demas aplicaciones.} Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
 
 De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no sólo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas. Estos podrían complementar o hasta sustituir en un futuro a los actuales métodos de estudios de sueño. Permitiendo aumentar la comodidad del paciente teniendo una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100 Hz y con un almacenamiento discreto. De ésta manera se pueden desarrollar dispositivos inteligentes integrables a la habitación de un individuo , que realicen comportamientos determinados según la detección realizada. Ejemplo de esto puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño.
 

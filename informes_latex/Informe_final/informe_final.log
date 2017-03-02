@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  28 FEB 2017 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  2 MAR 2017 19:55
 entering extended mode
 **informe_final.tex
 (informe_final.tex
@@ -190,32 +190,32 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks21
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
-Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count98
-\c@@ppsavesec=\count99
-\c@@ppsaveapp=\count100
-)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip57
 \LTright=\skip58
 \LTpre=\skip59
 \LTpost=\skip60
-\LTchunksize=\count101
+\LTchunksize=\count98
 \LTcapwidth=\dimen118
 \LT@head=\box28
 \LT@firsthead=\box29
 \LT@foot=\box30
 \LT@lastfoot=\box31
-\LT@cols=\count102
-\LT@rows=\count103
-\c@LT@tables=\count104
-\c@LT@chunks=\count105
+\LT@cols=\count99
+\LT@rows=\count100
+\c@LT@tables=\count101
+\c@LT@chunks=\count102
 \LT@p@ftn=\toks22
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count103
+\c@@ppsavesec=\count104
+\c@@ppsaveapp=\count105
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -254,7 +254,79 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip62
 \thanksmargin=\skip63
 \droptitle=\skip64
-) (informe_final.aux)
+) (informe_final.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+
+
+LaTeX Warning: Label `tabla:caso_uso_lista_resultados' multiply defined.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \unhbox 
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{49}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+
+LaTeX Warning: Label `tabla:caso_uso_procesando_se\~nal' multiply defined.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \unhbox 
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{49}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{49}}
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \accent@spacefactor 
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{49}}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Bad space factor (0).
+<to be read again> 
+                   \accent@spacefactor 
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{49}}
+                                                  
+I allow only values in the range 1..32767 here.
+
+! Extra \endcsname.
+\@namedef ...xpandafter \def \csname #1\endcsname 
+                                                  
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{49}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Extra }, or forgotten \endgroup.
+\@newl@bel ...ined}}\global \@namedef {#1@#2}{#3}}
+                                                  
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{49}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
@@ -269,8 +341,12 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
 LaTeX Info: Redefining \. on input line 61.
 LaTeX Info: Redefining \% on input line 61.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+Overfull \hbox (110.19016pt too wide) in paragraph at lines 134--13
+[]\OT1/cmr/m/n/12 ~nal3.549                                                                                             
+                                                                                                          [][][][] 
+ []
 
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
 \scratchdimen=\dimen119
@@ -319,7 +395,16 @@ LaTeX Info: Redefining \% on input line 61.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<img/fich_logo_classic.png, id=1, 426.59375pt x 426.59375pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1{C:/Users/Leandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+]
+<img/fich_logo_classic.png, id=9, 426.59375pt x 426.59375pt>
 File: img/fich_logo_classic.png Graphic file (type png)
  <use img/fich_logo_classic.png>
 Package pdftex.def Info: img/fich_logo_classic.png used on input line 83.
@@ -334,8 +419,7 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 83.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
-
-{C:/Users/Leandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/fich_logo_classic.png>] (informe_final.toc
+ <./img/fich_logo_classic.png>] (informe_final.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -345,7 +429,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
@@ -354,8 +439,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 19.
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 20.
-
-[1
+ [1
 
 ])
 \tf@toc=\write3
@@ -461,10 +545,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 Cap\'{\i }tulo 2.
-
-LaTeX Warning: Reference `figura:segmento_1_minuto' on page 16 undefined on input line 225.
-
-<img/figure1.png, id=69, 746.03719pt x 210.7875pt>
+<img/figure1.png, id=72, 746.03719pt x 210.7875pt>
 File: img/figure1.png Graphic file (type png)
  <use img/figure1.png>
 Package pdftex.def Info: img/figure1.png used on input line 229.
@@ -474,32 +555,23 @@ Package pdftex.def Info: img/figure1.png used on input line 229.
  <./img/figure1.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <17.28> on input line 255.
-
-
-LaTeX Warning: Reference `figura:segmento_ronquido_autocorr' on page 17 undefined on input line 261.
-
 LaTeX Info: Redefining \. on input line 263.
 LaTeX Info: Redefining \% on input line 263.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17] <img/figure2.png, id=80, 1445.4pt x 724.95844pt>
+[17] <img/figure2.png, id=84, 1445.4pt x 724.95844pt>
 File: img/figure2.png Graphic file (type png)
  <use img/figure2.png>
 Package pdftex.def Info: img/figure2.png used on input line 265.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
-
-
-LaTeX Warning: Reference `tabla:t0_f0_1_minuto' on page 18 undefined on input line 270.
-
-
-LaTeX Warning: Reference `tabla:t0_f0_1_minuto' on page 18 undefined on input line 270.
-
 LaTeX Info: Redefining \. on input line 290.
 LaTeX Info: Redefining \% on input line 290.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -507,20 +579,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18 <./img/figure2.png (PNG copy)>]
-
-LaTeX Warning: Reference `tabla:desvios_estandar_t0' on page 19 undefined on input line 291.
-
-
-LaTeX Warning: Reference `tabla:segmentos_1_minuto_hombres' on page 19 undefined on input line 311.
-
-
-LaTeX Warning: Reference `tabla:media_desvio_t0_dist_duraciones' on page 19 undefined on input line 311.
-
-
-LaTeX Warning: Reference `tabla:media_desvio_t0_dist_duraciones' on page 19 undefined on input line 313.
-
 LaTeX Info: Redefining \. on input line 314.
 LaTeX Info: Redefining \% on input line 314.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -528,11 +589,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
-
-LaTeX Warning: Reference `tabla:media_desvio_t0_dist_duraciones' on page 20 undefined on input line 315.
-
 LaTeX Info: Redefining \. on input line 355.
 LaTeX Info: Redefining \% on input line 355.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -550,14 +609,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
-
-LaTeX Warning: Reference `tabla:desv_estandar_t0_mujeres' on page 22 undefined on input line 377.
-
-
-LaTeX Warning: Reference `tabla:media_desv_t0_mujeres' on page 22 undefined on input line 397.
-
 LaTeX Info: Redefining \. on input line 417.
 LaTeX Info: Redefining \% on input line 417.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -565,31 +619,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22]
-
-LaTeX Warning: Reference `tabla:media_desv_t0_hombre_mujer' on page 23 undefined on input line 423.
-
 LaTeX Info: Redefining \. on input line 446.
 LaTeX Info: Redefining \% on input line 446.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23]
-
-LaTeX Warning: Reference `figura:ruido1_1_minuto' on page 24 undefined on input line 449.
-
-
-LaTeX Warning: Reference `figura:ruido2_1_minuto' on page 24 undefined on input line 450.
-
-
-LaTeX Warning: Reference `figura:ruido3_1_minuto' on page 24 undefined on input line 450.
-
-
-LaTeX Warning: Reference `figura:ruido4_1_minuto' on page 24 undefined on input line 450.
-
-<img/figure3.png, id=100, 1445.4pt x 724.95844pt>
+[23] <img/figure3.png, id=104, 1445.4pt x 724.95844pt>
 File: img/figure3.png Graphic file (type png)
  <use img/figure3.png>
 Package pdftex.def Info: img/figure3.png used on input line 454.
@@ -603,13 +642,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24] <img/figure4.png, id=105, 1445.4pt x 724.95844pt>
+[24] <img/figure4.png, id=108, 1445.4pt x 724.95844pt>
 File: img/figure4.png Graphic file (type png)
  <use img/figure4.png>
 Package pdftex.def Info: img/figure4.png used on input line 461.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
 
-<img/figure5.png, id=106, 1445.4pt x 724.95844pt>
+<img/figure5.png, id=109, 1445.4pt x 724.95844pt>
 File: img/figure5.png Graphic file (type png)
  <use img/figure5.png>
 Package pdftex.def Info: img/figure5.png used on input line 468.
@@ -623,29 +662,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <./img/figure3.png (PNG copy)> <./img/figure4.png (PNG copy)>] <img/figure6.png, id=110, 1445.4pt x 724.95844pt>
+[25 <./img/figure3.png (PNG copy)> <./img/figure4.png (PNG copy)>] <img/figure6.png, id=113, 1445.4pt x 724.95844pt>
 File: img/figure6.png Graphic file (type png)
 
 <use img/figure6.png>
 Package pdftex.def Info: img/figure6.png used on input line 475.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
-
-
-LaTeX Warning: Reference `figura:ruido1_1_minuto' on page 26 undefined on input line 480.
-
-
-LaTeX Warning: Reference `figura:ruido2_1_minuto' on page 26 undefined on input line 480.
-
-
-LaTeX Warning: Reference `figura:ruido3_1_minuto' on page 26 undefined on input line 480.
-
-
-LaTeX Warning: Reference `figura:ruido4_1_minuto' on page 26 undefined on input line 480.
-
-
-LaTeX Warning: Reference `figura:autocorrelacion_ruido_ronquidos' on page 26 undefined on input line 480.
-
-<img/figure7.png, id=111, 1199.98312pt x 596.98032pt>
+ <img/figure7.png, id=114, 1199.98312pt x 596.98032pt>
 File: img/figure7.png Graphic file (type png)
  <use img/figure7.png>
 Package pdftex.def Info: img/figure7.png used on input line 484.
@@ -659,23 +682,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26 <./img/figure5.png (PNG copy)> <./img/figure6.png (PNG copy)>]
-
-LaTeX Warning: Reference `figura:ruido1_5minuto' on page 27 undefined on input line 489.
-
-
-LaTeX Warning: Reference `figura:ruido2_5minuto' on page 27 undefined on input line 489.
-
-
-LaTeX Warning: Reference `figura:ruido3_5minuto' on page 27 undefined on input line 489.
-
-<img/figure8.png, id=115, 1445.4pt x 724.95844pt>
+[26 <./img/figure5.png (PNG copy)> <./img/figure6.png (PNG copy)>] <img/figure8.png, id=118, 1445.4pt x 724.95844pt>
 File: img/figure8.png Graphic file (type png)
- <use img/figure8.png>
+
+<use img/figure8.png>
 Package pdftex.def Info: img/figure8.png used on input line 493.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
-
-<img/figure9.png, id=116, 1445.4pt x 724.95844pt>
+ <img/figure9.png, id=119, 1445.4pt x 724.95844pt>
 File: img/figure9.png Graphic file (type png)
  <use img/figure9.png>
 Package pdftex.def Info: img/figure9.png used on input line 500.
@@ -689,24 +702,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27 <./img/figure7.png> <./img/figure8.png (PNG copy)>] <img/figure10.png, id=120, 1445.4pt x 724.95844pt>
+[27 <./img/figure7.png> <./img/figure8.png (PNG copy)>] <img/figure10.png, id=123, 1445.4pt x 724.95844pt>
 File: img/figure10.png Graphic file (type png)
 
 <use img/figure10.png>
 Package pdftex.def Info: img/figure10.png used on input line 507.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
-
-
-LaTeX Warning: Reference `figura:ruido1_5minuto' on page 28 undefined on input line 513.
-
-
-LaTeX Warning: Reference `figura:ruido2_5minuto' on page 28 undefined on input line 513.
-
-
-LaTeX Warning: Reference `figura:ruido3_5minuto' on page 28 undefined on input line 513.
-
 LaTeX Info: Redefining \. on input line 514.
 LaTeX Info: Redefining \% on input line 514.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -714,13 +718,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28 <./img/figure9.png (PNG copy)> <./img/figure10.png (PNG copy)>]
-
-LaTeX Warning: Reference `figura:funciones_recorte' on page 29 undefined on input line 518.
-
-
-LaTeX Warning: Reference `figura:autocor_funciones_recorte' on page 29 undefined on input line 520.
-
-<img/figure11.png, id=124, 328.22626pt x 405.01312pt>
+<img/figure11.png, id=127, 328.22626pt x 405.01312pt>
 File: img/figure11.png Graphic file (type png)
  <use img/figure11.png>
 Package pdftex.def Info: img/figure11.png used on input line 526.
@@ -734,33 +732,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29] <img/figure12.png, id=128, 713.66624pt x 548.0475pt>
+[29] <img/figure12.png, id=132, 713.66624pt x 548.0475pt>
 File: img/figure12.png Graphic file (type png)
  <use img/figure12.png>
 Package pdftex.def Info: img/figure12.png used on input line 533.
 (pdftex.def)             Requested size: 469.47049pt x 360.52498pt.
-
-
-LaTeX Warning: Reference `figura:autocor_funciones_recorte2' on page 30 undefined on input line 538.
-
-
-LaTeX Warning: Reference `figura:autocor_funciones_recorte3' on page 30 undefined on input line 538.
-
 LaTeX Info: Redefining \. on input line 539.
 LaTeX Info: Redefining \% on input line 539.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <./img/figure11.png> <./img/figure12.png>] <img/figure13.png, id=135, 1445.4pt x 724.95844pt>
+[30 <./img/figure11.png> <./img/figure12.png>] <img/figure13.png, id=138, 1445.4pt x 724.95844pt>
 File: img/figure13.png Graphic file (type png)
 
 <use img/figure13.png>
 Package pdftex.def Info: img/figure13.png used on input line 543.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
- <img/figure14.png, id=136, 1445.4pt x 724.95844pt>
+ <img/figure14.png, id=139, 1445.4pt x 724.95844pt>
 File: img/figure14.png Graphic file (type png)
  <use img/figure14.png>
 Package pdftex.def Info: img/figure14.png used on input line 550.
@@ -775,11 +767,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [31 <./img/figure13.png>]
-
-LaTeX Warning: Reference `tabla:subsegmentos_t0' on page 32 undefined on input line 556.
-
 LaTeX Info: Redefining \. on input line 585.
 LaTeX Info: Redefining \% on input line 585.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -787,11 +777,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32 <./img/figure14.png>]
-
-LaTeX Warning: Reference `tabla:cantidad_minima_t0' on page 33 undefined on input line 587.
-
 LaTeX Info: Redefining \. on input line 607.
 LaTeX Info: Redefining \% on input line 607.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -799,20 +787,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
-
-LaTeX Warning: Reference `tabla:clasificador_matlab' on page 34 undefined on input line 612.
-
-
-LaTeX Warning: Reference `tabla:falsos_negativos_matlab' on page 34 undefined on input line 614.
-
-
-LaTeX Warning: Reference `tabla:falsos_positivos_matlab' on page 34 undefined on input line 616.
-
-
-LaTeX Warning: Reference `tabla:clasificador_matlab_verificacion' on page 34 undefined on input line 618.
-
 LaTeX Info: Redefining \. on input line 619.
 LaTeX Info: Redefining \% on input line 619.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -869,7 +846,7 @@ Package epstopdf Info: Source file: <img/flujo.eps>
 (epstopdf)             Command: <epstopdf --outfile=img/flujo-eps-converted-to.pdf img/flujo.eps>
 (epstopdf)             \includegraphics on input line 767.
 Package epstopdf Info: Output file is already uptodate.
- <img/flujo-eps-converted-to.pdf, id=164, 598.235pt x 1079.03125pt>
+ <img/flujo-eps-converted-to.pdf, id=167, 598.235pt x 1079.03125pt>
 File: img/flujo-eps-converted-to.pdf Graphic file (type pdf)
  <use img/flujo-eps-converted-to.pdf>
 Package pdftex.def Info: img/flujo-eps-converted-to.pdf used on input line 767.
@@ -883,11 +860,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39]
-
-LaTeX Warning: Reference `figura:caso_uso' on page 40 undefined on input line 773.
-
-<img/CU_new.png, id=168, 496.254pt x 519.3804pt>
+[39] <img/CU_new.png, id=171, 496.254pt x 519.3804pt>
 File: img/CU_new.png Graphic file (type png)
  <use img/CU_new.png>
 Package pdftex.def Info: img/CU_new.png used on input line 777.
@@ -906,84 +879,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [40 <./img/flujo-eps-converted-to.pdf>]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 788--801
+Overfull \hbox (11.37357pt too wide) in alignment at lines 788--801
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 801--802
+Overfull \hbox (11.37357pt too wide) in alignment at lines 801--802
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 802--805
+Overfull \hbox (11.37357pt too wide) in alignment at lines 802--805
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 805--806
+Overfull \hbox (11.37357pt too wide) in alignment at lines 805--806
  [] [] [] [] 
  []
 
 LaTeX Font Info:    Try loading font information for U+lasy on input line 820.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.820                 }
-                        &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.820                 }
-                        &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.820                 }
-                        &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.820                 }
-                        &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-<img/mockups1_CU1.png, id=176, 171.64125pt x 302.63063pt>
+) <img/mockups1_CU1.png, id=179, 171.64125pt x 302.63063pt>
 File: img/mockups1_CU1.png Graphic file (type png)
- <use img/mockups1_CU1.png>
+
+<use img/mockups1_CU1.png>
 Package pdftex.def Info: img/mockups1_CU1.png used on input line 839.
 (pdftex.def)             Requested size: 113.81102pt x 200.665pt.
 
@@ -1004,12 +925,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41 <./img/CU_new.png>]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.1 on input line 843.
-
 LaTeX Info: Redefining \. on input line 843.
 LaTeX Info: Redefining \% on input line 843.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1027,22 +945,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [43]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 845--858
+Overfull \hbox (11.37357pt too wide) in alignment at lines 845--858
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 858--859
+Overfull \hbox (11.37357pt too wide) in alignment at lines 858--859
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 859--861
+Overfull \hbox (11.37357pt too wide) in alignment at lines 859--861
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 861--862
+Overfull \hbox (11.37357pt too wide) in alignment at lines 861--862
  [] [] [] [] 
  []
 
@@ -1050,7 +968,7 @@ File: img/mockups1_CU1.png Graphic file (type png)
 <use img/mockups1_CU1.png>
 Package pdftex.def Info: img/mockups1_CU1.png used on input line 890.
 (pdftex.def)             Requested size: 113.81102pt x 200.665pt.
- <img/mockups1_CU2.png, id=189, 173.89969pt x 307.90031pt>
+ <img/mockups1_CU2.png, id=192, 173.89969pt x 307.90031pt>
 File: img/mockups1_CU2.png Graphic file (type png)
  <use img/mockups1_CU2.png>
 Package pdftex.def Info: img/mockups1_CU2.png used on input line 890.
@@ -1063,10 +981,6 @@ Overfull \hbox (11.37357pt too wide) in alignment at lines 862--894
 
 Underfull \vbox (badness 10000) detected at line 894
  []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.2 on input line 894.
 
 LaTeX Info: Redefining \. on input line 894.
 LaTeX Info: Redefining \% on input line 894.
@@ -1087,22 +1001,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [45 <./img/mockups1_CU2.png>]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 896--909
+Overfull \hbox (11.37357pt too wide) in alignment at lines 896--909
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 909--910
+Overfull \hbox (11.37357pt too wide) in alignment at lines 909--910
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 910--912
+Overfull \hbox (11.37357pt too wide) in alignment at lines 910--912
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 912--913
+Overfull \hbox (11.37357pt too wide) in alignment at lines 912--913
  [] [] [] [] 
  []
 
@@ -1166,19 +1080,19 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<img/mockups1_CU3.png, id=198, 175.40532pt x 308.65312pt>
+<img/mockups1_CU3.png, id=201, 175.40532pt x 308.65312pt>
 File: img/mockups1_CU3.png Graphic file (type png)
  <use img/mockups1_CU3.png>
 Package pdftex.def Info: img/mockups1_CU3.png used on input line 948.
 (pdftex.def)             Requested size: 99.58464pt x 175.23706pt.
 
-<img/mockups2_CU3.png, id=199, 175.40532pt x 308.65312pt>
+<img/mockups2_CU3.png, id=202, 175.40532pt x 308.65312pt>
 File: img/mockups2_CU3.png Graphic file (type png)
  <use img/mockups2_CU3.png>
 Package pdftex.def Info: img/mockups2_CU3.png used on input line 948.
 (pdftex.def)             Requested size: 99.58464pt x 175.23706pt.
 
-<img/mockups3_CU3.png, id=200, 175.40532pt x 308.65312pt>
+<img/mockups3_CU3.png, id=203, 175.40532pt x 308.65312pt>
 File: img/mockups3_CU3.png Graphic file (type png)
  <use img/mockups3_CU3.png>
 Package pdftex.def Info: img/mockups3_CU3.png used on input line 948.
@@ -1192,10 +1106,6 @@ Overfull \hbox (11.37357pt too wide) in alignment at lines 913--952
 Underfull \vbox (badness 10000) detected at line 952
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.3 on input line 952.
-
 LaTeX Info: Redefining \. on input line 952.
 LaTeX Info: Redefining \% on input line 952.
 
@@ -1205,50 +1115,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [46]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 954--967
+Overfull \hbox (11.37357pt too wide) in alignment at lines 954--967
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 967--968
+Overfull \hbox (11.37357pt too wide) in alignment at lines 967--968
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 968--970
+Overfull \hbox (11.37357pt too wide) in alignment at lines 968--970
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 970--971
+Overfull \hbox (11.37357pt too wide) in alignment at lines 970--971
  [] [] [] [] 
  []
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.990                 }
-                        \\
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.990                 }
-                        \\
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
 
 
 ! Package inputenc Error: Keyboard character used is undefined
@@ -1294,27 +1178,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [47 <./img/mockups1_CU3.png> <./img/mockups2_CU3.png> <./img/mockups3_CU3.png>]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.4 on input line 1002.
-
-
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1004--1017
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1004--1017
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1017--1018
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1017--1018
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1018--1020
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1018--1020
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1020--1021
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1020--1021
  [] [] [] [] 
  []
 
@@ -1336,27 +1215,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [48]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.5 on input line 1052.
-
-
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1054--1067
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1054--1067
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1067--1068
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1067--1068
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1068--1070
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1068--1070
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1070--1071
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1070--1071
  [] [] [] [] 
  []
 
@@ -1412,13 +1286,13 @@ l.1094 								}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-<img/mockups1_CU6.png, id=214, 175.40532pt x 308.65312pt>
+<img/mockups1_CU6.png, id=217, 175.40532pt x 308.65312pt>
 File: img/mockups1_CU6.png Graphic file (type png)
  <use img/mockups1_CU6.png>
 Package pdftex.def Info: img/mockups1_CU6.png used on input line 1100.
 (pdftex.def)             Requested size: 99.58464pt x 175.23706pt.
 
-<img/mockups2_CU6.png, id=215, 175.40532pt x 308.65312pt>
+<img/mockups2_CU6.png, id=218, 175.40532pt x 308.65312pt>
 File: img/mockups2_CU6.png Graphic file (type png)
  <use img/mockups2_CU6.png>
 Package pdftex.def Info: img/mockups2_CU6.png used on input line 1100.
@@ -1441,12 +1315,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [49]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.6 on input line 1104.
-
 LaTeX Info: Redefining \. on input line 1104.
 LaTeX Info: Redefining \% on input line 1104.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1454,22 +1325,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [50]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1107--1120
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1107--1120
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1120--1121
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1120--1121
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1121--1123
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1121--1123
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1123--1124
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1123--1124
  [] [] [] [] 
  []
 
@@ -1482,10 +1353,6 @@ Overfull \hbox (11.37357pt too wide) in alignment at lines 1124--1155
 Underfull \vbox (badness 10000) detected at line 1155
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.7 on input line 1155.
-
 LaTeX Info: Redefining \. on input line 1155.
 LaTeX Info: Redefining \% on input line 1155.
 
@@ -1495,82 +1362,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [51 <./img/mockups1_CU6.png> <./img/mockups2_CU6.png>]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1157--1170
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1157--1170
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1170--1171
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1170--1171
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1171--1173
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1171--1173
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1173--1174
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1173--1174
  [] [] [] [] 
  []
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1186                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1186                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1186                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1186                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
 
 File: img/mockups1_CU2.png Graphic file (type png)
 <use img/mockups1_CU2.png>
 Package pdftex.def Info: img/mockups1_CU2.png used on input line 1204.
 (pdftex.def)             Requested size: 99.58464pt x 176.31778pt.
- <img/mockups2_CU8.png, id=227, 175.40532pt x 308.65312pt>
+ <img/mockups2_CU8.png, id=230, 175.40532pt x 308.65312pt>
 File: img/mockups2_CU8.png Graphic file (type png)
  <use img/mockups2_CU8.png>
 Package pdftex.def Info: img/mockups2_CU8.png used on input line 1204.
@@ -1593,12 +1408,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [52]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.8 on input line 1208.
-
 LaTeX Info: Redefining \. on input line 1208.
 LaTeX Info: Redefining \% on input line 1208.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1616,22 +1428,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1210--1223
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1210--1223
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1223--1224
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1223--1224
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1224--1226
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1224--1226
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1226--1227
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1226--1227
  [] [] [] [] 
  []
 
@@ -1748,10 +1560,6 @@ Overfull \hbox (11.37357pt too wide) in alignment at lines 1227--1256
 Underfull \vbox (badness 10000) detected at line 1256
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.9 on input line 1256.
-
 LaTeX Info: Redefining \. on input line 1256.
 LaTeX Info: Redefining \% on input line 1256.
 
@@ -1761,22 +1569,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [55 <./img/mockups2_CU8.png>]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1258--1272
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1258--1272
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1272--1273
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1272--1273
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1273--1275
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1273--1275
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1275--1276
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1275--1276
  [] [] [] [] 
  []
 
@@ -1793,10 +1601,6 @@ Overfull \hbox (11.37357pt too wide) in alignment at lines 1276--1309
 Underfull \vbox (badness 10000) detected at line 1309
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.10 on input line 1309.
-
 LaTeX Info: Redefining \. on input line 1309.
 LaTeX Info: Redefining \% on input line 1309.
 
@@ -1806,50 +1610,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [56]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1311--1325
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1311--1325
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1325--1326
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1325--1326
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1326--1328
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1326--1328
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1328--1329
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1328--1329
  [] [] [] [] 
  []
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1339                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1339                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
 
 
 ! Package inputenc Error: Keyboard character used is undefined
@@ -1899,12 +1677,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [57]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.11 on input line 1359.
-
 LaTeX Info: Redefining \. on input line 1359.
 LaTeX Info: Redefining \% on input line 1359.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1912,22 +1687,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [58]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1361--1374
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1361--1374
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1374--1375
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1374--1375
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1375--1377
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1375--1377
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1377--1378
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1377--1378
  [] [] [] [] 
  []
 
@@ -1991,7 +1766,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<img/mockups1_CU12.png, id=251, 179.16937pt x 308.65312pt>
+<img/mockups1_CU12.png, id=254, 179.16937pt x 308.65312pt>
 File: img/mockups1_CU12.png Graphic file (type png)
  <use img/mockups1_CU12.png>
 Package pdftex.def Info: img/mockups1_CU12.png used on input line 1407.
@@ -2005,10 +1780,6 @@ Overfull \hbox (11.37357pt too wide) in alignment at lines 1378--1411
 Underfull \vbox (badness 10000) detected at line 1411
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.12 on input line 1411.
-
 LaTeX Info: Redefining \. on input line 1411.
 LaTeX Info: Redefining \% on input line 1411.
 
@@ -2018,76 +1789,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [59]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1413--1426
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1413--1426
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1426--1427
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1426--1427
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1427--1429
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1427--1429
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1429--1430
+Overfull \hbox (11.37357pt too wide) in alignment at lines 1429--1430
  [] [] [] [] 
  []
 
 
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1441                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1441                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1441                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1441                 }
-                         &
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
+Underfull \hbox (badness 1997) in paragraph at lines 1441--1441
+[]\OT1/cmr/m/n/12 El usua-rio ha-ce clic en la op-cion
+ []
 
 
 ! Package inputenc Error: Keyboard character used is undefined
@@ -2115,7 +1839,7 @@ l.1451 								}
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-<img/mockups1_CU13.png, id=255, 179.16937pt x 308.65312pt>
+<img/mockups1_CU13.png, id=259, 179.16937pt x 308.65312pt>
 File: img/mockups1_CU13.png Graphic file (type png)
  <use img/mockups1_CU13.png>
 Package pdftex.def Info: img/mockups1_CU13.png used on input line 1456.
@@ -2129,10 +1853,6 @@ Overfull \hbox (11.37357pt too wide) in alignment at lines 1430--1460
 Underfull \vbox (badness 10000) detected at line 1460
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 3.13 on input line 1460.
-
 LaTeX Info: Redefining \. on input line 1460.
 LaTeX Info: Redefining \% on input line 1460.
 
@@ -2142,11 +1862,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [60 <./img/mockups1_CU12.png>]
-
-LaTeX Warning: Reference `figura:diagrama_secuencia' on page 61 undefined on input line 1506.
-
 LaTeX Info: Redefining \. on input line 1507.
 LaTeX Info: Redefining \% on input line 1507.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2163,25 +1881,12 @@ Package epstopdf Info: Source file: <img/secuencia.eps>
 (epstopdf)             Command: <epstopdf --outfile=img/secuencia-eps-converted-to.pdf img/secuencia.eps>
 (epstopdf)             \includegraphics on input line 1510.
 Package epstopdf Info: Output file is already uptodate.
- <img/secuencia-eps-converted-to.pdf, id=265, 934.49126pt x 665.48625pt>
+ <img/secuencia-eps-converted-to.pdf, id=268, 934.49126pt x 665.48625pt>
 File: img/secuencia-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/secuencia-eps-converted-to.pdf>
 Package pdftex.def Info: img/secuencia-eps-converted-to.pdf used on input line 1510.
 (pdftex.def)             Requested size: 469.47049pt x 334.3264pt.
-
-
-LaTeX Warning: Reference `figura:diagrama_clases_1' on page 62 undefined on input line 1517.
-
-
-LaTeX Warning: Reference `figura:diagrama_clases_2' on page 62 undefined on input line 1517.
-
-
-LaTeX Warning: Reference `figura:diagrama_clases_3' on page 62 undefined on input line 1517.
-
-
-LaTeX Warning: Reference `figura:diagrama_clases_db' on page 62 undefined on input line 1517.
-
 Package epstopdf Info: Source file: <img/obj_1.eps>
 (epstopdf)                    date: 2017-02-23 18:48:37
 (epstopdf)                    size: 21646 bytes
@@ -2191,9 +1896,10 @@ Package epstopdf Info: Source file: <img/obj_1.eps>
 (epstopdf)             Command: <epstopdf --outfile=img/obj_1-eps-converted-to.pdf img/obj_1.eps>
 (epstopdf)             \includegraphics on input line 1521.
 Package epstopdf Info: Output file is already uptodate.
-<img/obj_1-eps-converted-to.pdf, id=266, 1360.08125pt x 989.6975pt>
+ <img/obj_1-eps-converted-to.pdf, id=269, 1360.08125pt x 989.6975pt>
 File: img/obj_1-eps-converted-to.pdf Graphic file (type pdf)
- <use img/obj_1-eps-converted-to.pdf>
+
+<use img/obj_1-eps-converted-to.pdf>
 Package pdftex.def Info: img/obj_1-eps-converted-to.pdf used on input line 1521.
 (pdftex.def)             Requested size: 476.03557pt x 346.3993pt.
 
@@ -2219,7 +1925,7 @@ Package epstopdf Info: Source file: <img/obj_2.eps>
 (epstopdf)             Command: <epstopdf --outfile=img/obj_2-eps-converted-to.pdf img/obj_2.eps>
 (epstopdf)             \includegraphics on input line 1528.
 Package epstopdf Info: Output file is already uptodate.
- <img/obj_2-eps-converted-to.pdf, id=274, 1218.5525pt x 714.67pt>
+ <img/obj_2-eps-converted-to.pdf, id=277, 1218.5525pt x 714.67pt>
 File: img/obj_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/obj_2-eps-converted-to.pdf>
@@ -2234,7 +1940,7 @@ Package epstopdf Info: Source file: <img/obj_3.eps>
 (epstopdf)             Command: <epstopdf --outfile=img/obj_3-eps-converted-to.pdf img/obj_3.eps>
 (epstopdf)             \includegraphics on input line 1535.
 Package epstopdf Info: Output file is already uptodate.
- <img/obj_3-eps-converted-to.pdf, id=275, 827.09pt x 505.89pt>
+ <img/obj_3-eps-converted-to.pdf, id=278, 827.09pt x 505.89pt>
 File: img/obj_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/obj_3-eps-converted-to.pdf>
@@ -2260,7 +1966,7 @@ Package epstopdf Info: Source file: <img/objetos2.eps>
 (epstopdf)             \includegraphics on input line 1542.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/objetos2-eps-converted-to.pdf, id=287, 1513.655pt x 1313.90875pt>
+<img/objetos2-eps-converted-to.pdf, id=290, 1513.655pt x 1313.90875pt>
 File: img/objetos2-eps-converted-to.pdf Graphic file (type pdf)
  <use img/objetos2-eps-converted-to.pdf>
 Package pdftex.def Info: img/objetos2-eps-converted-to.pdf used on input line 1542.
@@ -2275,22 +1981,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [64 <./img/obj_3-eps-converted-to.pdf> <./img/objetos2-eps-converted-to.pdf>]
-
-LaTeX Warning: Reference `figura:screen1' on page 65 undefined on input line 1551.
-
-
-LaTeX Warning: Reference `figura:screen2' on page 65 undefined on input line 1551.
-
-
-LaTeX Warning: Reference `figura:screen3' on page 65 undefined on input line 1551.
-
-<img/screen1.png, id=299, 239.39438pt x 398.23781pt>
+<img/screen1.png, id=302, 239.39438pt x 398.23781pt>
 File: img/screen1.png Graphic file (type png)
  <use img/screen1.png>
 Package pdftex.def Info: img/screen1.png used on input line 1555.
 (pdftex.def)             Requested size: 179.54533pt x 298.67761pt.
 
-<img/screen2.png, id=300, 239.39438pt x 398.23781pt>
+<img/screen2.png, id=303, 239.39438pt x 398.23781pt>
 File: img/screen2.png Graphic file (type png)
  <use img/screen2.png>
 Package pdftex.def Info: img/screen2.png used on input line 1562.
@@ -2304,13 +2001,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65 <./img/screen1.png>] <img/screen3.png, id=304, 241.65282pt x 401.24907pt>
+[65 <./img/screen1.png>] <img/screen3.png, id=308, 241.65282pt x 401.24907pt>
 File: img/screen3.png Graphic file (type png)
  <use img/screen3.png>
 Package pdftex.def Info: img/screen3.png used on input line 1569.
 (pdftex.def)             Requested size: 181.23917pt x 300.93605pt.
 
-<img/screen4.png, id=305, 239.39438pt x 395.22656pt>
+<img/screen4.png, id=309, 239.39438pt x 395.22656pt>
 File: img/screen4.png Graphic file (type png)
  <use img/screen4.png>
 Package pdftex.def Info: img/screen4.png used on input line 1576.
@@ -2324,17 +2021,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66 <./img/screen2.png> <./img/screen3.png>]
-
-LaTeX Warning: Reference `figura:screen4' on page 67 undefined on input line 1581.
-
-
-LaTeX Warning: Reference `figura:screen5' on page 67 undefined on input line 1581.
-
-
-LaTeX Warning: Reference `figura:screen6' on page 67 undefined on input line 1581.
-
-<img/screen5.png, id=310, 451.6875pt x 770.88pt>
+[66 <./img/screen2.png> <./img/screen3.png>] <img/screen5.png, id=313, 451.6875pt x 770.88pt>
 File: img/screen5.png Graphic file (type png)
  <use img/screen5.png>
 Package pdftex.def Info: img/screen5.png used on input line 1585.
@@ -2348,7 +2035,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67 <./img/screen4.png>] <img/screen6.png, id=314, 451.6875pt x 770.88pt>
+[67 <./img/screen4.png>] <img/screen6.png, id=317, 451.6875pt x 770.88pt>
 File: img/screen6.png Graphic file (type png)
  <use img/screen6.png>
 Package pdftex.def Info: img/screen6.png used on input line 1592.
@@ -2362,11 +2049,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[68 <./img/screen5.png>]
-
-LaTeX Warning: Reference `figura:screen_grafico1' on page 69 undefined on input line 1599.
-
-<img/screen_grafico1.png, id=319, 451.6875pt x 274.02374pt>
+[68 <./img/screen5.png>] <img/screen_grafico1.png, id=322, 451.6875pt x 274.02374pt>
 File: img/screen_grafico1.png Graphic file (type png)
  <use img/screen_grafico1.png>
 Package pdftex.def Info: img/screen_grafico1.png used on input line 1603.
@@ -2380,41 +2063,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69 <./img/screen6.png>]
-
-LaTeX Warning: Reference `figura:screen_grafico3' on page 70 undefined on input line 1608.
-
-<img/screen_grafico3.png, id=324, 450.9347pt x 527.72156pt>
+[69 <./img/screen6.png>] <img/screen_grafico3.png, id=327, 450.9347pt x 527.72156pt>
 File: img/screen_grafico3.png Graphic file (type png)
  <use img/screen_grafico3.png>
 Package pdftex.def Info: img/screen_grafico3.png used on input line 1612.
 (pdftex.def)             Requested size: 234.73524pt x 274.70668pt.
-
-
-LaTeX Warning: Reference `figura:screen_grafico4' on page 70 undefined on input line 1618.
-
 LaTeX Info: Redefining \. on input line 1619.
 LaTeX Info: Redefining \% on input line 1619.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[70 <./img/screen_grafico1.png> <./img/screen_grafico3.png>] <img/screen_grafico4.png, id=330, 450.9347pt x 643.6547pt>
+[70 <./img/screen_grafico1.png> <./img/screen_grafico3.png>] <img/screen_grafico4.png, id=333, 450.9347pt x 643.6547pt>
 File: img/screen_grafico4.png Graphic file (type png)
 
 <use img/screen_grafico4.png>
 Package pdftex.def Info: img/screen_grafico4.png used on input line 1622.
 (pdftex.def)             Requested size: 234.73524pt x 335.05594pt.
-
-
-LaTeX Warning: Reference `figura:screen_grafico5' on page 71 undefined on input line 1628.
-
-
-LaTeX Warning: Reference `figura:screen_grafico6' on page 71 undefined on input line 1628.
-
-<img/screen_grafico5.png, id=331, 433.62pt x 488.57532pt>
+ <img/screen_grafico5.png, id=334, 433.62pt x 488.57532pt>
 File: img/screen_grafico5.png Graphic file (type png)
  <use img/screen_grafico5.png>
 Package pdftex.def Info: img/screen_grafico5.png used on input line 1632.
@@ -2428,7 +2097,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[71 <./img/screen_grafico4.png>] <img/screen_grafico6.png, id=336, 432.11438pt x 590.95781pt>
+[71 <./img/screen_grafico4.png>] <img/screen_grafico6.png, id=340, 432.11438pt x 590.95781pt>
 File: img/screen_grafico6.png Graphic file (type png)
 
 <use img/screen_grafico6.png>
@@ -2456,17 +2125,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [73]
-
-LaTeX Warning: Reference `tabla:clasificador_android_verificacion' on page 74 undefined on input line 1688.
-
-
-LaTeX Warning: Reference `tabla:clasificador_android_ambientales' on page 74 undefined on input line 1711.
-
-
-LaTeX Warning: Reference `tabla:aciertos_android_ambientales' on page 74 undefined on input line 1711.
-
 LaTeX Info: Redefining \. on input line 1713.
 LaTeX Info: Redefining \% on input line 1713.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2474,11 +2135,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [74]
-
-LaTeX Warning: Reference `tabla:clasificador_android_ambientales2' on page 75 undefined on input line 1756.
-
 LaTeX Info: Redefining \. on input line 1757.
 LaTeX Info: Redefining \% on input line 1757.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2486,14 +2145,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [75]
-
-LaTeX Warning: Reference `tabla:aplicaciones_android_ronquidos' on page 76 undefined on input line 1796.
-
-
-LaTeX Warning: Reference `tabla:aplicaciones_android_ruidos' on page 76 undefined on input line 1796.
-
 LaTeX Info: Redefining \. on input line 1797.
 LaTeX Info: Redefining \% on input line 1797.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2512,18 +2166,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [77]
 Cap\'{\i }tulo 4.
-
-LaTeX Warning: Reference `tabla:clasificador_android_verificacion' on page 78 undefined on input line 1837.
-
-
-LaTeX Warning: Reference `tabla:aciertos_android_ambientales' on page 78 undefined on input line 1837.
-
-
-LaTeX Warning: Reference `tabla:aplicaciones_android_ronquidos' on page 78 undefined on input line 1837.
-
-
-LaTeX Warning: Reference `tabla:aplicaciones_android_ruidos' on page 78 undefined on input line 1837.
-
 [78
 
 ] [79] [80
@@ -2803,11 +2445,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [107]
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
 LaTeX Info: Redefining \. on input line 3166.
 LaTeX Info: Redefining \% on input line 3166.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2835,10 +2475,7 @@ I'm ignoring this, since I wasn't doing a \csname.
 
 )
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 
 Overfull \hbox (1.48602pt too wide) in paragraph at lines 134--3166
@@ -2848,10 +2485,10 @@ Overfull \hbox (1.48602pt too wide) in paragraph at lines 134--3166
 
  ) 
 Here is how much of TeX's memory you used:
- 4556 strings out of 493673
- 64997 string characters out of 3143953
- 156567 words of memory out of 3000000
- 7757 multiletter control sequences out of 15000+200000
+ 4559 strings out of 493673
+ 65033 string characters out of 3143953
+ 158909 words of memory out of 3000000
+ 7760 multiletter control sequences out of 15000+200000
  16676 words of font info for 62 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,21n,43p,2118b,722s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2867,9 +2504,9 @@ type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on informe_final.pdf (109 pages, 1715632 bytes).
+Output written on informe_final.pdf (110 pages, 1714515 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
+ 527 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  216 words of extra memory for PDF output out of 10000 (max. 10000000)
 
