@@ -1,0 +1,57 @@
+\documentclass[a3paper,12pt,landscape]{book}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{calc}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage{array}
+\usepackage[a3paper]{geometry}
+\geometry{
+left=2.5cm,
+right=2cm,
+bottom=2.5cm,
+top=2.5cm }
+\renewcommand{\baselinestretch}{1.2}
+
+%\usepackage{mathptmx} %Times
+
+\usepackage{xcolor,colortbl}
+\definecolor{light-grey}{gray}{0.9}
+\definecolor{medium-grey}{gray}{0.5}
+\definecolor{charcoal}{HTML}{333333}
+
+
+\pagestyle{fancy}
+% Header
+\lhead{\textsc{\scriptsize Proyecto Final de Carrera}}
+\rhead{\textit{\scriptsize CAPÍTULO 3. DESARROLLO DE APLICACIÓN ANDROID\textsuperscript{\scriptsize\textregistered}}}
+% Footer
+\lfoot{\scriptsize \textit{Meurzet, Matías - Perren, Leandro}}
+\cfoot{}
+\rfoot{\scriptsize 62} % PONER NUMERO DE PAGINA CORRECTO
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+
+\begin{document}
+
+\setcounter{chapter}{2}
+\chapter{Esto no se imprime!!!}
+\newpage
+
+% parte nueva
+
+\setcounter{figure}{3} 
+
+\begin{center}
+    \begin{figure}
+       \includegraphics[width=\textwidth,keepaspectratio]{DiagramaClases.png}
+       \caption{Diagrama de clases de la aplicación}
+    \end{figure}
+\end{center}
+
+
+\end{document}
