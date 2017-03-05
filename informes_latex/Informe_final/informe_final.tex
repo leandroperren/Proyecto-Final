@@ -1459,49 +1459,6 @@ El usuario accede al menú de opciones desde la pantalla principal y allí hace cl
 		\label{tabla:caso_uso_consultando_ayuda}
 \end{longtable}
 
-%\begin{table}[H]
-	%\centering
-    %\small
-		%\begin{tabular}{|l|l|l|l|}
-			%\hline
-                %\multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{ID del caso de uso} \\
-            %\hline
-                %\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Nombre del caso de uso}} \\
-            %\hline
-                %\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Actores que participan}} \\
-            %\hline
-                %\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Breve descripción del CU} \\
-            %\hline
-                %\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{Que tiene que ocurrir antes del CU} \\
-            %\hline
-                %\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\
-            %\hline
-                %\multicolumn{2}{|p{8cm}|}{\centering 
-                    %\begin{enumerate}
-                        %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
-                        %\item Paso 1
-                        %\item Paso 2
-                        %\item Paso 3
-                    %\end{enumerate}
-                %} & 
-                %\multicolumn{2}{p{8cm} |}{\centering 
-                    %\begin{enumerate}
-                        %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
-                        %\item Paso alternativo 1
-                    %\end{enumerate}
-                %} \\
-            %\hline
-                %\multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm} |}{Que pasa luego del CU} \\
-            %\hline
-                %\multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm} |}{Mockups} \\
-            %\hline
-		%\end{tabular}
-		%\caption{Caso de uso Iniciando captura}
-		%\label{tabla:caso_uso_iniciando}
-%\end{table}
-
-
-
 \subsection{Diagrama de secuencia}
 A continuación se presenta el gráfico de secuencia donde se representan los casos de usos ``Iniciando Captura'' y ``Finalizando Captura'' por parte del Usuario en la aplicación. En éste se representan los objetos básicos para representar el flujo de mensajes necesarios para que se ejecuten para tales casos de uso y además los mensajes necesarios para realizar la persistencia de datos, representando así el núcleo básico de operación de la aplicación, como se puede observar en la Figura \ref{figura:diagrama_secuencia}. También se puede observar el ``loop'' o ciclo básico de captura y procesamiento de segmentos.
 
@@ -1514,36 +1471,16 @@ A continuación se presenta el gráfico de secuencia donde se representan los caso
 
 
 \subsection{Diseño de Clases}
-En esta sección se presentan dos diagramas de clases de la aplicación. El primero de ellos, es el diagrama de clases general de la aplicación. En las Figuras \ref{figura:diagrama_clases_1}, \ref{figura:diagrama_clases_2} y \ref{figura:diagrama_clases_3} se observa que las clases heredadas del propio sistema Android, no cuentan con atributos y operaciones, salvo algunas excepciones, ya que tales clases cuentan con cientos de operaciones, excediendo así los alcances de éste proyecto. El segundo diagrama esta vinculado al manejo de la Base de Datos. En la figura \ref{figura:diagrama_clases_db} se representan las clases encargadas de la persistencia de datos mediante el motor de Bases de Datos SQLite de Android.
+En esta sección se presenta el diagrama de clases de la aplicación. En la Figura \ref{figura:diagrama_clases_1} se observa que las clases heredadas del propio sistema Android, no cuentan con atributos y operaciones, salvo algunas excepciones, ya que tales clases cuentan con cientos de operaciones, excediendo así los alcances de éste proyecto. A su vez se incluyen las clases encargadas de la persistencia de datos mediante el motor de Bases de Datos SQLite de Android y las encargadas de la generación y envío por mail del reporte en formato PDF.
 
+\newpage
 \begin{figure}[H]
 	\centering
 		\includegraphics[scale=0.35]{img/obj_1.eps}	
-	\caption{Diagrama de clases para captura, procesamiento y comunicación}
+	\caption{Diagrama de clases de la aplicación}
 	\label{figura:diagrama_clases_1}
 \end{figure}
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[scale=0.35]{img/obj_2.eps}	
-	\caption{Diagrama de clases para la vista principal y sus fragmentos}
-	\label{figura:diagrama_clases_2}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[scale=0.35]{img/obj_3.eps}	
-	\caption{Diagrama de clases para la representación gráfica de los resultados}
-	\label{figura:diagrama_clases_3}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[scale=0.3]{img/objetos2.eps}	
-	\caption{Diagrama de clases para la base de datos}
-	\label{figura:diagrama_clases_db}
-\end{figure}
-
+\newpage
 
 \subsection{Diseño de interfaces}
 A continuación se presentan las interfaces de la aplicación, que se diseñaron orientadas a las funcionalidades que se recabaron en la etapa de requerimientos.
@@ -1791,8 +1728,8 @@ Para el análisis de los valores pico, se realizó otra captura y se estimó la amp
 \subsection*{Análisis comparativo de las aplicaciones Android}
 \textcolor{blue}{
 En esta sección se presentan los resultados de las pruebas que se realizaron a 
-las aplicaciones Android, \textbf{\textit{SnoreClock}} y \textbf{\textit{DreamWatcher}}. El objetivo fué demostrar que la aplicación desarrollada en este Proyecto Final de Carrera presenta mejores tasas de aciertos.
-Para demostrar esto se utilizaron dos señales, una con puros ronquidos y la otra únicamente con ruidos. En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se pueden ver las tasas de aciertos que se obtuvieron utilizando estas señales en las distintas aplicaciones. Se puede observar que para la señal de ronquidos los pocentajes de aciertos fueron buenos en cualquier aplicación. Sin embargo, esto cambió cuando se utilizó la señal con puros ruidos, ya que las dos aplicaciones elegidas para esta comparación detectaron muchos falsos positivos. Esto se debió a que estas aplicaciones analizan solamente cambios bruscos de energía detectando todo lo que es ruido como ronquidos. De esta manera, quedó demostrado que se desarrolló una aplicación capaz de lograr buenas tasas de aciertos en la detección de ronquidos aún en presensia de ruidos. 
+las aplicaciones Android, \textbf{\textit{SnoreClock}} y \textbf{\textit{DreamWatcher}}. El objetivo es demostrar que la aplicación desarrollada en este Proyecto Final de Carrera presenta mejores tasas de aciertos.
+Para demostrar esto se utilizaron dos señales, una contenía ronquidos y la otra únicamente ruidos. En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se pueden ver las tasas de aciertos que se obtuvieron utilizando estas señales en las distintas aplicaciones. Se puede observar que para la señal de ronquidos los pocentajes de aciertos fueron buenos en cualquier aplicación. Sin embargo, esto cambió cuando se utilizó la señal con puros ruidos, ya que las dos aplicaciones elegidas para esta comparación detectaron muchos falsos positivos. Esto se debió a que estas aplicaciones analizan solamente cambios bruscos de energía detectando todo lo que es ruido como ronquidos. De esta manera, quedó demostrado que se desarrolló una aplicación capaz de lograr buenas tasas de aciertos en la detección de ronquidos aún en presensia de ruidos. 
 }
 
 \begin{table}[H]
@@ -1836,10 +1773,10 @@ Primeramente se analizaron en detalle los ronquidos a fin de extraer alguna cara
 
 Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado. Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas llegando a mas del 90\% en algunos casos. \textcolor{blue}{En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se observa que en presensia de mucho ruido la aplicación desarrollada en este Proyecto Final de Carrera logra el mejor desempeño comparado con el de las demas aplicaciones.} Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
 
-De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no sólo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas. Estos podrían complementar o hasta sustituir en un futuro a los actuales métodos de estudios de sueño. Permitiendo aumentar la comodidad del paciente teniendo una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100 Hz y con un almacenamiento discreto. De ésta manera se pueden desarrollar dispositivos inteligentes integrables a la habitación de un individuo , que realicen comportamientos determinados según la detección realizada. Ejemplo de esto puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño.
+De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no sólo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas. Estos podrían complementar o hasta sustituir en un futuro a los actuales métodos de estudios de sueño. Permitiendo aumentar la comodidad del paciente teniendo una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100 Hz y con un almacenamiento discreto. De ésta manera se pueden desarrollar dispositivos inteligentes integrables a la habitación de un individuo, que realicen comportamientos determinados según la detección realizada. Ejemplo de esto puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño.
 
 \thispagestyle{empty}
-\chapter*{Bibliografia}
+\chapter*{Bibliografía}
 \thispagestyle{empty}
 \addcontentsline{toc}{chapter}{Bibliografía} % esto añade el capitulo en el índice
 

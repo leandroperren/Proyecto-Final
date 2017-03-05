@@ -1,38 +1,35 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Segmento de 1 minuto etiquetado como ronquidos.}}{16}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Segmento con ronquidos y su autocorrelaci\'on.}}{18}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Oscilograma de m\'aquinas trabajando, personas hablando y veh\IeC {\'\i }culos.}}{25}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Oscilograma de un veh\IeC {\'\i }culo circulando.}}{25}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Oscilograma de dos veh\IeC {\'\i }culos circulando.}}{26}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Oscilograma de perros ladrando.}}{26}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Autocorrelaci\'on de ronquidos y autocorrelaci\'on de sonido ambiental.}}{27}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Oscilograma de un automovil circulando durante 5 min.}}{27}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Oscilograma de dos veh\IeC {\'\i }culos circulando durante 5 min.}}{28}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Oscilograma de dos veh\IeC {\'\i }culos circulando y ladridos de perros durante 5 min.}}{28}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Funciones de recorte}}{30}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Autocorrelaciones aplicando las tres funciones de recorte}}{30}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Autocorrelaci\'on de ronquidos sin y con funci\'on de recorte}}{31}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Autocorrelaci\'on de sonido ambiental sin y con funci\'on de recorte}}{32}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Segmento de 1 minuto etiquetado como ronquidos.}}{15}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Segmento con ronquidos y su autocorrelaci\'on.}}{17}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Oscilograma de m\'aquinas trabajando, personas hablando y veh\IeC {\'\i }culos.}}{24}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Oscilograma de un veh\IeC {\'\i }culo circulando.}}{24}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Oscilograma de dos veh\IeC {\'\i }culos circulando.}}{25}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Oscilograma de perros ladrando.}}{25}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Autocorrelaci\'on de ronquidos y autocorrelaci\'on de sonido ambiental.}}{26}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Oscilograma de un automovil circulando durante 5 min.}}{26}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Oscilograma de dos veh\IeC {\'\i }culos circulando durante 5 min.}}{27}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Oscilograma de dos veh\IeC {\'\i }culos circulando y ladridos de perros durante 5 min.}}{27}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Funciones de recorte}}{29}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Autocorrelaciones aplicando las tres funciones de recorte}}{29}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Autocorrelaci\'on de ronquidos sin y con funci\'on de recorte}}{30}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Autocorrelaci\'on de sonido ambiental sin y con funci\'on de recorte}}{31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de flujo de la aplicaci\'on Android}}{40}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de casos de uso}}{41}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de secuencia}}{62}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de clases para captura, procesamiento y comunicaci\'on}}{63}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de clases para la vista principal y sus fragmentos}}{63}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama de clases para la representaci\'on gr\'afica de los resultados}}{64}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagrama de clases para la base de datos}}{64}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Pantalla de inicio}}{65}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Datos del usuario y del m\'edico}}{66}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Lista de las grabaciones realizadas}}{66}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Iniciar nueva captura de datos}}{67}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Pesta\~na de los gr\'aficos}}{68}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Pesta\~na del reporte detallado}}{69}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Gr\'afico de barras generado por la aplicaci\'on}}{70}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Gr\'aficos de anillos generados por la aplicaci\'on}}{70}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Informaci\'on en formato de reporte}}{71}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Informaci\'on detallada del paciente y las detecciones}}{72}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Representaci\'on gr\'afica de los resultados}}{72}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de flujo de la aplicaci\'on Android}}{39}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de casos de uso}}{40}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de secuencia}}{61}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de clases de la aplicaci\'on}}{62}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Pantalla de inicio}}{63}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Datos del usuario y del m\'edico}}{64}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Lista de las grabaciones realizadas}}{64}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Iniciar nueva captura de datos}}{65}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Pesta\~na de los gr\'aficos}}{66}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Pesta\~na del reporte detallado}}{67}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Gr\'afico de barras generado por la aplicaci\'on}}{68}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Gr\'aficos de anillos generados por la aplicaci\'on}}{68}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Informaci\'on en formato de reporte}}{69}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Informaci\'on detallada del paciente y las detecciones}}{70}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Representaci\'on gr\'afica de los resultados}}{70}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
