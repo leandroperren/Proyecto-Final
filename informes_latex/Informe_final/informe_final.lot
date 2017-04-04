@@ -15,18 +15,18 @@
 \contentsline {table}{\numberline {2.12}{\ignorespaces An\'alisis de falsos positivos.}}{35}
 \contentsline {table}{\numberline {2.13}{\ignorespaces Verificaci\'on de m\'etodos y funcionalidades de Matlab con se\~nales no vistas.}}{35}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{Caso de uso Iniciando captura}}{43}
-\contentsline {table}{\numberline {3.2}{Caso de uso Finalizando captura de datos}}{45}
+\contentsline {table}{\numberline {3.1}{Caso de uso Iniciando captura}}{42}
+\contentsline {table}{\numberline {3.2}{Caso de uso Finalizando captura de datos}}{44}
 \contentsline {table}{\numberline {3.3}{Caso de uso Consultando lista de resultados}}{46}
 \contentsline {table}{\numberline {3.4}{Caso de uso Consultando lista de resultados}}{47}
-\contentsline {table}{\numberline {3.5}{Caso de uso Procesando la se\~nal capturada}}{48}
-\contentsline {table}{\numberline {3.6}{Caso de uso Ingresando informaci\'on mail}}{50}
-\contentsline {table}{\numberline {3.7}{Caso de uso Guardando datos procesados}}{51}
-\contentsline {table}{\numberline {3.8}{Caso de uso Generando informe de resultados}}{54}
-\contentsline {table}{\numberline {3.9}{Caso de uso Iniciando interfaz de grabaci\'on}}{55}
-\contentsline {table}{\numberline {3.10}{Caso de uso Visualizando resultados gr\'aficos}}{56}
-\contentsline {table}{\numberline {3.11}{Caso de uso Visualizando resultados en tablas}}{58}
-\contentsline {table}{\numberline {3.12}{Caso de uso Consultando men\'u de opciones}}{59}
+\contentsline {table}{\numberline {3.5}{Caso de uso Procesando la se\~nal capturada}}{47}
+\contentsline {table}{\numberline {3.6}{Caso de uso Ingresando informaci\'on mail}}{49}
+\contentsline {table}{\numberline {3.7}{Caso de uso Guardando datos procesados}}{50}
+\contentsline {table}{\numberline {3.8}{Caso de uso Generando informe de resultados}}{53}
+\contentsline {table}{\numberline {3.9}{Caso de uso Iniciando interfaz de grabaci\'on}}{54}
+\contentsline {table}{\numberline {3.10}{Caso de uso Visualizando resultados gr\'aficos}}{55}
+\contentsline {table}{\numberline {3.11}{Caso de uso Visualizando resultados en tablas}}{57}
+\contentsline {table}{\numberline {3.12}{Caso de uso Consultando men\'u de opciones}}{58}
 \contentsline {table}{\numberline {3.13}{Caso de uso Consultando ayuda}}{60}
 \contentsline {table}{\numberline {3.14}{\ignorespaces Tasas de aciertos de la aplicaci\'on Android con se\~nales limpias.}}{72}
 \contentsline {table}{\numberline {3.15}{\ignorespaces Pruebas a la aplicaci\'on Android en ambientes cotidianos.}}{73}
