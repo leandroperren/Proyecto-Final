@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  3 APR 2017 21:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  4 APR 2017 00:32
 entering extended mode
 **informe_final.tex
 (informe_final.tex
@@ -850,13 +850,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38] <img/CU_new.png, id=168, 496.254pt x 519.3804pt>
+[38] <img/CU_new.png, id=168, 491.79735pt x 513.8397pt>
 File: img/CU_new.png Graphic file (type png)
  <use img/CU_new.png>
 Package pdftex.def Info: img/CU_new.png used on input line 777.
-(pdftex.def)             Requested size: 496.25278pt x 519.37912pt.
+(pdftex.def)             Requested size: 491.79614pt x 513.83846pt.
 
-Overfull \hbox (26.78229pt too wide) in paragraph at lines 777--778
+Overfull \hbox (22.32565pt too wide) in paragraph at lines 777--778
  [][] 
  []
 
@@ -2894,7 +2894,7 @@ type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on informe_final.pdf (108 pages, 1707389 bytes).
+Output written on informe_final.pdf (108 pages, 1622371 bytes).
 PDF statistics:
  501 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
