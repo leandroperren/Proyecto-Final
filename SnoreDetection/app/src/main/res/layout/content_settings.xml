@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -13,11 +13,106 @@
     tools:showIn="@layout/activity_settings">
 
     <TextView
+        android:id="@+id/title1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Título de prueba para ver como sale la activity"
-        android:textSize="50sp"
+        android:fontFamily="sans-serif-thin"
+        android:paddingBottom="15dp"
+        android:text="Datos personales"
         android:textAlignment="center"
-        android:padding="30dp"/>
+        android:textSize="35sp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title1"
+        android:hint="Nombre"
+        android:inputType="textCapWords"
+        android:paddingBottom="25dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/name"
+        android:hint="Apellido"
+        android:inputType="textCapWords"
+        android:paddingBottom="25dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lastName"
+        android:hint="Edad"
+        android:inputType="number"
+        android:paddingBottom="25dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastName"
+        android:layout_toRightOf="@+id/age"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:text="Sexo"
+        android:textColor="#555"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastName"
+        android:layout_toRightOf="@+id/txtSexo"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp">
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="F" />
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="M" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/age"
+        android:fontFamily="sans-serif-thin"
+        android:paddingBottom="15dp"
+        android:paddingTop="50dp"
+        android:text="Email médico"
+        android:textAlignment="center"
+        android:textSize="35sp" />
+
+    <EditText
+        android:id="@+id/doctorEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title2"
+        android:hint="Email médico"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="25dp"
+        android:textSize="20sp" />
 
 </RelativeLayout>

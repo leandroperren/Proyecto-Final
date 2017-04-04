@@ -285,6 +285,16 @@ public class MainActivity extends AppCompatActivity implements SnoreAdapter.Item
             return true;
         }
 
+        if (id == R.id.load_test_data) {
+            // Genero valores testing para la DB
+            generarValoresParaDB();
+            // Asignalos a la lista
+            datos = managerSnore.getSnoreList();
+            // Agregar la lista de resultados con RecyclerView y Adapter
+            SnoreAdapter adaptador = new SnoreAdapter(datos, this);
+            lista.setAdapter(adaptador);
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
