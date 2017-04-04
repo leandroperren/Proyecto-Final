@@ -27,15 +27,17 @@ import java.util.ArrayList;
     private Thread recordingThread;
     private boolean isRecording = false;
 
-    // Definir los vectores donde almacenar el fragmento y su energía
-//    ArrayList<Float> fragmento;
-    ArrayList<Float> energia = new ArrayList<>();
+    // Definir los vectores donde almacenar período, energía y tiempo
+    public ArrayList<Double> periodo  = new ArrayList<>();
+    public ArrayList<Double> amplitud = new ArrayList<>();
+    public ArrayList<Integer> tiempo  = new ArrayList<>();
+    public ArrayList<Double> energia  = new ArrayList<>();
 
 
     /// PARTE NUEVA
     static final int SAMPLES_PER_SECOND_AT_8K = 480000;
-    static final int SIZE_SEGMENTO = 5*SAMPLES_PER_SECOND_AT_8K;
-    static final int SIZE_AT_100HZ = SIZE_SEGMENTO/80;
+    static final int SIZE_SEGMENTO            = 5*SAMPLES_PER_SECOND_AT_8K;
+    static final int SIZE_AT_100HZ            = SIZE_SEGMENTO/80;
 
     private TextView resultados_parciales;
 
@@ -79,7 +81,16 @@ import java.util.ArrayList;
 
                     float t0 = intent.getFloatExtra("tcero", 0);
                     float max = intent.getFloatExtra("maximo", 0);
-                    energia.add(intent.getFloatExtra("energia", 0));
+                    double energy = intent.getDoubleExtra("energia", 0.0);
+                    energia.add(energy);
+
+                    /*-----------------------------------------------------
+                     |  @@@@ Hay que guardar estos valores:
+                     |-----------------------------------------------------
+                     |      periodo
+                     |      amplitud
+                     |      tiempo
+                     */
 
                     //Etiqueto el fragmento como ronquido o no ronquido
                     String ronquido;
@@ -93,7 +104,7 @@ import java.util.ArrayList;
                     resultados_parciales.setText(
                             resultados_parciales.getText().toString()
                             + "\n"
-                            + t0 + "\t" + max + "\t" + ronquido);
+                            + t0 + "\t" + max + "\t" + ronquido + "\t" + energy);
                 }
             }
         };
@@ -144,7 +155,7 @@ import java.util.ArrayList;
 
         resultados_parciales.setText(
                 resultados_parciales.getText().toString()
-                + "\nT0\tAmplitud\tEtiqueta");
+                + "\nT0\tAmplitud\tRonquido\tE");
     }
 
     // Esta funcion es la ejecutada por el hilo de la captura
