@@ -703,7 +703,7 @@ Una vez analizados los valores de falsos positivos y falsos negativos con las se
 %==============================================================================
 \chapter{Desarrollo de aplicación Android\textsuperscript{\scriptsize\textregistered}}
 \thispagestyle{empty}
-Este capítulo describe los pasos que se llevaron a cabo para desarrollar una aplicación Android capaz de detectar segmentos de ronquidos. Para ello se utilizaron los resultados obtenidos en capítulos anteriores que nos permitieron caracterizar los ronquidos y diferenciarlos de posibles ruidos. El desarrollo se realizó utilizando el modelo en cascada [19]. \textcolor{blue}{ Este modelo es de facil aplicación, promoviendo una metodología de trabajo efectiva basada en definir detalladamente cada etapa antes de avanzar a la siguiente. Al no disponer de un cliente específico, el cual pudiese solicitar cambios o nuevos requerimientos, no se vió la necesidad de utilizar un modelo de desarrollo que permita volver a diseñar y codificar. Es por esto que al tratarse de un desarrollo de dos personas se focalizó en definir detalladamente en conjunto lo que se debía realizar en cada etapa.} Para ello se siguieron las siguientes etapas:
+Este capítulo describe los pasos que se llevaron a cabo para desarrollar una aplicación Android capaz de detectar segmentos de ronquidos. Para ello se utilizaron los resultados obtenidos en capítulos anteriores que nos permitieron caracterizar los ronquidos y diferenciarlos de posibles ruidos. El desarrollo se realizó utilizando el modelo en cascada [19]. Este modelo es de facil aplicación, promoviendo una metodología de trabajo efectiva basada en definir detalladamente cada etapa antes de avanzar a la siguiente. Al no disponer de un cliente específico, el cual pudiese solicitar cambios o nuevos requerimientos, no se vió la necesidad de utilizar un modelo de desarrollo que permita volver a diseñar y codificar. Es por esto que al tratarse de un desarrollo de dos personas se focalizó en definir detalladamente en conjunto lo que se debía realizar en cada etapa. Para ello se siguieron las siguientes etapas:
 
 \begin{itemize}
     \item Requerimientos
@@ -725,7 +725,7 @@ Para definir las funcionalidades de esta aplicación, se analizaron las aplicacio
     
     \item Se determina si cada segmento contiene ronquidos o no.
 		
-		\item \textcolor{blue}{Los registros deben ser obtenidos por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.}
+		\item Los registros deben ser obtenidos por medio del micrófono de un dispositivo móvil como puede ser una Tablet o Smartphone.
     
     \item Se debe disponer de opciones para ingresar el email de un médico al que se le enviarán los resultados, además de datos personales que sirvan de apoyo al análisis realizado.
     
@@ -733,9 +733,9 @@ Para definir las funcionalidades de esta aplicación, se analizaron las aplicacio
 		
     \item La información gráfica debe ser presentada en una pestaña o ventana para los diferentes tipos de gráficos, como por ejemplo de barras (Bar Charts) o líneas (Line Charts), que muestran los resultados de la detección, y de torta (Pie Charts), que representan porcentualmente la distribución de segmentos con ronquidos y no ronquidos.
 		
-		\item \textcolor{blue}{Los resultados obtenidos se deben guardar en un archivo de formato PDF que se envía adjunto en el mail al médico.}
+		\item Los resultados obtenidos se deben guardar en un archivo de formato PDF que se envía adjunto en el mail al médico.
 		
-		\item \textcolor{blue}{Se debe disponer de una pestaña o ventana donde se listen las distinas capturas que el usuario generó. De manera que pueda volver a acceder a los resultados obtenidos en cada una de ellas.}
+		\item Se debe disponer de una pestaña o ventana donde se listen las distinas capturas que el usuario generó. De manera que pueda volver a acceder a los resultados obtenidos en cada una de ellas.
 		
 \end{itemize}
 
@@ -744,11 +744,11 @@ Para la obtención de los requerimientos no funcionales, también fueron analizada
 
 \begin{itemize}
     \item La Robustez frente al ruido.
-		\item \textcolor{blue}{Se debe generar una interfaz sencilla y amigable que resulte intuitiva al usuario.}
+		\item Se debe generar una interfaz sencilla y amigable que resulte intuitiva al usuario.
     \item La capacidad de almacenamiento del dispositivo, suficiente para almacenar los resultados del procesamiento de cada segmento, durante las 6 o 7 horas de captura por micrófono.
     \item La capacidad de la batería, para que permita el procesamiento durante 6 o 7 horas.
-		\item \textcolor{blue}{La tasa de aciertos debe ser superior a la de las demás aplicaciones.}
-		\item \textcolor{blue}{La aplicación debe funcionar bajo sistema operativo Android.}
+		\item La tasa de aciertos debe ser superior a la de las demás aplicaciones.
+		\item La aplicación debe funcionar bajo sistema operativo Android.
 \end{itemize}
 
 
@@ -821,8 +821,7 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 								& \multicolumn{2}{p{8cm} |}{}
 								\hline
                 \multicolumn{2}{|p{8cm}|}{5. Se invoca el caso de uso «CU5 - Procesando la señal capturada».} 
-								& \multicolumn{2}{p{8cm} |}{5.1 Si el procesamiento de la señal capturada falla en algún momento se debe detener la captura e informar al usuario al respecto con detalles de lo sucedido.} \\
-								\multicolumn{2}{|p{8cm}|}{} & \multicolumn{2}{p{8cm}|}{5.2 Si la aplicación se detiene por algún tipo de fallo, más allá del punto anterior, la captura se debe detener, no se debe hacer persistente la información obtenida y se debe informar al usuario de lo sucedido.}								
+								& \multicolumn{2}{p{8cm} |}{} \\
 								\hline
                 \multicolumn{2}{|p{8cm}|}{6. El proceso se repite hasta que se llame al «CU2 - Finalizando captura de datos»} 
 								& \multicolumn{2}{p{8cm} |}{}\hline                
@@ -996,7 +995,7 @@ Se presenta al usuario una lista de grabaciones. El usuario hace clic en uno de 
 						\hline
 									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual el paciente puede enviar un mail al médico adjuntando un archivo PDF con la información de los resultados obtenidos. } \\
             \hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario debe estar ubicado en la pantalla de Resultados dentro de la pestaña Gráficos. El sistema debe tener generado el archivo PDF con los resultados y también tener guardada la dirección de email del médico para su posterior envío. El dispositivo deberá estar conectado a internet para poder enviar el mail.} \\														
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{} \\														
 						\hline
 									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
 						\endfirsthead									
@@ -1056,7 +1055,7 @@ En caso de generar correctamente el archivo PDF con los resultados, el sistema a
 						\hline
 									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual la señal capturada en un segmento de 5 min, es sub-muestreada y posteriormente analizada en búsqueda de información de interés. } \\
             \hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El «CU1 - Iniciando captura de datos» debe estar en curso sin inconvenientes.} \\														
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{} \\														
 						\hline
 									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
 						\endfirsthead									
@@ -1181,7 +1180,7 @@ El usuario ingresa los datos personales más el email del médico. Luego hace clic
 						\hline
 									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual los datos procesados que permanecen en variables temporales, pasan a ser persistentes en una base de datos embebida.} \\
             \hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{Para que éste proceso comience es necesario que se haya hecho uso del «CU2 - Finalizando captura de datos», además de contar con un motor de base de datos embebidas, como por ejemplo una base de datos SQLite.} \\														
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{Se debe contar con un motor de base de datos embebidas, como por ejemplo una base de datos SQLite.} \\														
 						\hline
 									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
 						\endfirsthead									
@@ -1256,11 +1255,7 @@ El sistema toma las variables con la información obtenida y las serializa para f
 								\multicolumn{2}{|p{8cm}|}{3. El sistema recoge toda la información personal del usuario ingresada, además de todos los gráficos y tablas generados con la información obtenida del análisis y confecciona un archivo en formato PDF que es almacenado en el dispositivo de manera permanente.} & 
 								\multicolumn{2}{p{8cm}|}{3.1 Si el sistema no puede generar el archivo PDF, debe informar al usuario lo sucedido.} \hline
 								\multicolumn{2}{|p{8cm}|}{4. Se invoca el «CU4 - Enviando mail con resultados»} & 
-								\multicolumn{2}{p{8cm}|}{} \hline
-								\multicolumn{2}{|p{8cm}|}{5. El sistema muestra al usuario una ventana donde debe hacer clic en Enviar para que el mismo sea enviado.} & 
-								\multicolumn{2}{p{8cm}|}{5.1 Si al momento de enviar el email, no hay conexión a internet, el mail queda en espera hasta restablecer la conexión y enviar nuevamente.} \\
-								\multicolumn{2}{|p{8cm}|}{} & 
-								\multicolumn{2}{p{8cm}|}{5.2 Si el sistema de mail falla por algún motivo, se debe informar al usuario de ello.} \hline
+								\multicolumn{2}{p{8cm}|}{} \hline								
                 %\multicolumn{2}{|p{8cm}|}{\centering 
                     %\begin{enumerate}
                         %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
@@ -1359,8 +1354,7 @@ Una vez que el usuario inicia la aplicación y se encuentra en la pantalla princi
 						\hline
 									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad mediante la cual se muestran gráficos de barras y de torta que representan los resultados obtenidos en el procesamiento.} \\
             \hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario debe iniciar una captura y elegir finalizar mediante el caso de uso  «CU2 - Finalizando captura de datos». 
-La otra posibilidad es seleccionar una captura de la lista de resultados del caso de uso «CU3 - Consultando lista de resultados».} \\														
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{} \\														
 						\hline
 									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
 						\endfirsthead									
@@ -1704,16 +1698,16 @@ Los resultados obtenidos pueden ser enviados vía email a un médico, donde se adj
 
 \section{Verificación y validación}
 
-En esta sección se describe el procedimiento seguido \textcolor{blue}{al finalizar el desarrollo} de la aplicación Android en cuanto a verificación y validación de los códigos desarrollados, como así también la metodología de pruebas que se utilizó para validar el funcionamiento de la aplicación una vez terminada. La misma consistió de pruebas al método clasificador/detector, a las interfaces, gráficos y reportes, como así también al rendimiento en cuanto a consumo de batería y de almacenamiento.      
+En esta sección se describe el procedimiento seguido al finalizar el desarrollo de la aplicación Android en cuanto a verificación y validación de los códigos desarrollados, como así también la metodología de pruebas que se utilizó para validar el funcionamiento de la aplicación una vez terminada. La misma consistió de pruebas al método clasificador/detector, a las interfaces, gráficos y reportes, como así también al rendimiento en cuanto a consumo de batería y de almacenamiento.      
 
 \subsection*{Inspecciones del software}
 
-\textcolor{blue}{Al finalizar la etapa de Implementación se llevaron} a cabo revisiones del software, buscando defectos en los códigos constatando que lo desarrollado fuese lo más óptimo posible y se corresponda con lo definido en las etapas de requerimiento y diseño. 
+Al finalizar la etapa de Implementación se llevaron a cabo revisiones del software, buscando defectos en los códigos constatando que lo desarrollado fuese lo más óptimo posible y se corresponda con lo definido en las etapas de requerimiento y diseño. 
 Como se trata de un equipo de desarrollo formado por dos personas se realizaron inspecciones cruzadas donde cada uno inspeccionó lo realizado por el otro. 
 
 \subsection*{Metodología de prueba de la aplicación}
 Como parte de las verificaciones y validaciones de la aplicación se describen a continuación las actividades que se desarrollaron para cumplir con la metodología.
-\textcolor{blue}{Estas pruebas se realizaron de manera manual y no se utilizaron herramientas adicionales. Para las pruebas del clasificador/detector de ronquidos de la aplicación se utilizó un enfoque de caja blanca mientras que para el resto de los items se utilizaron pruebas de caja negra.}
+Estas pruebas se realizaron de manera manual y no se utilizaron herramientas adicionales. Para las pruebas del clasificador/detector de ronquidos de la aplicación se utilizó un enfoque de caja blanca mientras que para el resto de los items se utilizaron pruebas de caja negra.
 
 \begin{itemize}
 \item Pruebas del clasificador/detector de ronquidos de la aplicación:
@@ -1849,11 +1843,11 @@ Para el análisis de los valores pico, se realizó otra captura y se estimó la amp
 
 
 \subsection*{Análisis comparativo de las aplicaciones Android}
-\textcolor{blue}{
+
 En esta sección se presentan los resultados de las pruebas que se realizaron a 
 las aplicaciones Android, \textbf{\textit{SnoreClock}} y \textbf{\textit{DreamWatcher}}. El objetivo es demostrar que la aplicación desarrollada en este Proyecto Final de Carrera presenta mejores tasas de aciertos.
 Para demostrar esto se utilizaron dos señales, una contenía ronquidos y la otra únicamente ruidos. En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se pueden ver las tasas de aciertos que se obtuvieron utilizando estas señales en las distintas aplicaciones. Se puede observar que para la señal de ronquidos los pocentajes de aciertos fueron buenos en cualquier aplicación. Sin embargo, esto cambió cuando se utilizó la señal con puros ruidos, ya que las dos aplicaciones elegidas para esta comparación detectaron muchos falsos positivos. Esto se debió a que estas aplicaciones analizan solamente cambios bruscos de energía detectando todo lo que es ruido como ronquidos. De esta manera, quedó demostrado que se desarrolló una aplicación capaz de lograr buenas tasas de aciertos en la detección de ronquidos aún en presensia de ruidos. 
-}
+
 
 \begin{table}[H]
 	\begin{center}
@@ -1894,7 +1888,7 @@ Para demostrar esto se utilizaron dos señales, una contenía ronquidos y la otra 
 En este proyecto final se desarrolló una aplicación Android capaz de detectar eventos de ronquidos por medio del análisis de datos capturados vía el micrófono del dispositivo. El objetivo principal fue lograr una correcta detección utilizando métodos más inteligentes que los utilizados por las aplicaciones disponibles hasta el momento. Estas aplicaciones sólo realizan un análisis del nivel de energía de los datos capturados, generando un mal desempeño frente a condiciones ambientales de mucho ruido, siendo detectados y etiquetados como ronquidos.
 Primeramente se analizaron en detalle los ronquidos a fin de extraer alguna característica representativa de los mismos que permita poder detectarlos dentro de una grabación obtenida en ambientes cotidianos. Para ello se analizaron distintas señales EDF de personas de distinto sexo, obtenidas en estudios de sueño. De este análisis se demostró que el $T_0$ es una característica representativa de los ronquidos y que permite diferenciarlos de otros sonidos no deseados que pudieran presentarse en este tipo de grabaciones. Como resultado de esta etapa, mediante la extracción manual de segmentos etiquetados como ronquidos en las señales EDF y el cálculo de su correspondiente $T_0$, se concluye que el rango de valores del $T_0$ es de [3.50 - 4.70 s].
 
-Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado. Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas llegando a mas del 90\% en algunos casos. \textcolor{blue}{En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se observa que en presensia de mucho ruido la aplicación desarrollada en este Proyecto Final de Carrera logra el mejor desempeño comparado con el de las demas aplicaciones.} Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
+Posteriormente se desarrolló el método de detección utilizando el rango de $T_0$ recien mencionado. Para ello primero se probó que el método sea viable desarrollando un pequeño script en Matlab para luego ser desarrollado e integrado en una aplicación Android que analice en tiempo real los datos capturados por medio del micrófono del dispositivo. Una vez finalizada la aplicación, fue sometida a pruebas según la metodología definida. Para ello se realizaron pruebas del método detector utilizando las señales limpias EDF y luego se probó el desempeño de la aplicación capturando en ambientes normales con alta presencia de ruidos, a fin de demostrar que estos sean correctamente distinguidos. Tal como se puede observar en los resultados presentados en las Tablas \ref{tabla:clasificador_android_verificacion} y \ref{tabla:aciertos_android_ambientales} la aplicación arroja altas tasas de aciertos, superando el 80\% en ambos tipos de pruebas llegando a mas del 90\% en algunos casos. En las Tablas \ref{tabla:aplicaciones_android_ronquidos} y \ref{tabla:aplicaciones_android_ruidos} se observa que en presensia de mucho ruido la aplicación desarrollada en este Proyecto Final de Carrera logra el mejor desempeño comparado con el de las demas aplicaciones. Por lo tanto se puede concluir que se logró el objetivo de desarrollar una aplicación capaz de detectar correctamente eventos de ronquidos presentando alta robustez frente al ruido.  
 
 De esta manera se abre la posibilidad de trabajos futuros basados en el desarrollo de nuevos métodos y aplicaciones que realicen detección y clasificación no sólo de ronquidos sino también de otros trastornos de sueños como pueden ser las apneas. Estos podrían complementar o hasta sustituir en un futuro a los actuales métodos de estudios de sueño. Permitiendo aumentar la comodidad del paciente teniendo una alternativa de bajo costo y una ventaja para personas que se encuentran viviendo en zonas alejadas a algún centro médico especializado. Además, quedó demostrado que es factible poder realizar tales algoritmos bajo un hardware de bajo costo, con dispositivos que permitan una captura a 100 Hz y con un almacenamiento discreto. De ésta manera se pueden desarrollar dispositivos inteligentes integrables a la habitación de un individuo, que realicen comportamientos determinados según la detección realizada. Ejemplo de esto puede ser el de una almohada que vibre cuando detecte el evento de ronquido, para que el individuo cambie su postura y así quizás solucionar momentáneamente éste trastorno del sueño.
 
