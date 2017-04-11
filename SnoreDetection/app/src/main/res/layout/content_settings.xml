@@ -20,7 +20,7 @@
         android:paddingBottom="15dp"
         android:text="Datos personales"
         android:textAlignment="center"
-        android:textSize="35sp" />
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/name"
@@ -30,8 +30,8 @@
         android:layout_below="@+id/title1"
         android:hint="Nombre"
         android:inputType="textCapWords"
-        android:paddingBottom="25dp"
-        android:textSize="20sp" />
+        android:paddingBottom="20dp"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/lastName"
@@ -41,8 +41,8 @@
         android:layout_below="@+id/name"
         android:hint="Apellido"
         android:inputType="textCapWords"
-        android:paddingBottom="25dp"
-        android:textSize="20sp" />
+        android:paddingBottom="20dp"
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/age"
@@ -52,8 +52,8 @@
         android:layout_below="@+id/lastName"
         android:hint="Edad"
         android:inputType="number"
-        android:paddingBottom="25dp"
-        android:textSize="20sp" />
+        android:paddingBottom="20dp"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/txtSexo"
@@ -61,12 +61,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/lastName"
         android:layout_toRightOf="@+id/age"
-        android:paddingBottom="20dp"
-        android:paddingLeft="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:text="Sexo"
         android:textColor="#555"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
     <RadioGroup
         android:id="@+id/radioSex"
@@ -76,7 +76,7 @@
         android:layout_toRightOf="@+id/txtSexo"
         android:orientation="horizontal"
         android:paddingLeft="15dp"
-        android:paddingTop="10dp">
+        android:paddingTop="5dp">
 
         <RadioButton
             android:id="@+id/female"
@@ -100,10 +100,10 @@
         android:layout_below="@+id/age"
         android:fontFamily="sans-serif-thin"
         android:paddingBottom="15dp"
-        android:paddingTop="50dp"
+        android:paddingTop="40dp"
         android:text="Email médico"
         android:textAlignment="center"
-        android:textSize="35sp" />
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/doctorEmail"
@@ -112,7 +112,7 @@
         android:layout_below="@+id/title2"
         android:hint="Email médico"
         android:inputType="textEmailAddress"
-        android:paddingBottom="25dp"
-        android:textSize="20sp" />
+        android:paddingBottom="20dp"
+        android:textSize="15sp" />
 
 </RelativeLayout>

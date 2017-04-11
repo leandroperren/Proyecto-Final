@@ -16,7 +16,7 @@ public abstract class DatabaseManager {
 
     abstract public void cerrar();
 
-    abstract void insertar(String fecha_inicio, String fecha_fin, String t0, String amplitud, String tiempo);
+    abstract long insertar(String fecha_inicio, String fecha_fin, String t0, String amplitud, String tiempo);
     abstract void actualizar(String id, String fecha_inicio, String fecha_fin, String t0, String amplitud, String tiempo);
 
     abstract public void eliminar(String id);

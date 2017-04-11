@@ -52,8 +52,8 @@ public class DatabaseManagerSnore extends DatabaseManager {
     }
 
     @Override
-    public void insertar(String hora_inicio, String hora_fin, String t0, String amplitud, String tiempo) {
-        super.getDb().insert(TABLE_NAME, null, generarContentValues(hora_inicio, hora_fin, t0, amplitud, tiempo));
+    public long insertar(String hora_inicio, String hora_fin, String t0, String amplitud, String tiempo) {
+        return super.getDb().insert(TABLE_NAME, null, generarContentValues(hora_inicio, hora_fin, t0, amplitud, tiempo));
     }
 
     @Override
