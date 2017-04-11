@@ -6,6 +6,8 @@ import android.content.Intent;
 
 public class T0IntentService extends IntentService {
 
+    private static int CONTADOR_TIEMPO = 0;
+
     public static final String ACTION_PROGRESO = "edu.fich.pfcii.snoredetection.PROGRESO";
 
     public T0IntentService() {
@@ -65,6 +67,8 @@ public class T0IntentService extends IntentService {
         // Elemento en '0' de la autocorrelacion es la energia
 //        float energia = autocorrelation.get(0);
 
+        // calcular la energia de todo el segmento
+        // Es equivalente a la autocorrelacion en '0'
         // NEW
         float energia = xcorr[0];
 
@@ -74,9 +78,16 @@ public class T0IntentService extends IntentService {
         // Devuelver los valores al hilo de grabacion
         Intent bcIntent = new Intent();
         bcIntent.setAction(ACTION_PROGRESO);
-        bcIntent.putExtra("tcero", t0);
-        bcIntent.putExtra("maximo", max);
+        // Guardar el valor de período
+        bcIntent.putExtra("periodo", t0);
+        // Guardar el valor de amplitud de ese período detectado
+        bcIntent.putExtra("amplitud", max);
+        // Guardar el valor de la energia del segmento
         bcIntent.putExtra("energia", energia);
+        // Guardar el valore entero del tiempo (0, 1, 2, ...), cada uno representa 5 minutos de duración
+        bcIntent.putExtra("tiempo", CONTADOR_TIEMPO);
+        // Actualizo el contador para la proxima llamada
+        CONTADOR_TIEMPO++;
         sendBroadcast(bcIntent);
     }
 }

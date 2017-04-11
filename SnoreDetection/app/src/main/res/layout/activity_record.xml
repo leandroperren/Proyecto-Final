@@ -42,7 +42,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="Algunos resultados"
+            android:text="Resultados parciales"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <Button

@@ -15,7 +15,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-    public class RecordActivity extends AppCompatActivity {
+import edu.fich.pfcii.snoredetection.db.DatabaseManagerSnore;
+import edu.fich.pfcii.snoredetection.helper.Helper;
+
+public class RecordActivity extends AppCompatActivity {
 
     // Parametros de la clase AudioRecord
     private static final int RECORDER_SAMPLERATE = 8000;
@@ -46,6 +49,16 @@ import java.util.ArrayList;
 
     private BroadcastReceiver receiver;
 
+    // Manejador de la BBDD SQLite
+    private DatabaseManagerSnore managerSnore;
+
+    // Variables para control de tiempo
+    private long horaInicio;
+    private long horaFin;
+
+    // Helper para convertir vectores a string y viceversa, ademas de obtener tiempos
+    private Helper helper = new Helper();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,38 +86,72 @@ import java.util.ArrayList;
 
         resultados_parciales = (TextView)findViewById(R.id.datos);
 
+        // Intanciar Objeto para la BBDD
+        managerSnore = new DatabaseManagerSnore(this);
+
         receiver = new BroadcastReceiver() {
 
             // Analizar los datos recibidos y determino si es ronquido o no
             public void onReceive(Context context, Intent intent) {
                 if (intent.getAction().equals(T0IntentService.ACTION_PROGRESO)) {
 
-                    float t0 = intent.getFloatExtra("tcero", 0);
+                    /*float t0 = intent.getFloatExtra("tcero", 0);
                     float max = intent.getFloatExtra("maximo", 0);
                     double energy = intent.getDoubleExtra("energia", 0.0);
                     energia.add(energy);
+                    */
 
                     /*-----------------------------------------------------
-                     |  @@@@ Hay que guardar estos valores:
-                     |-----------------------------------------------------
-                     |      periodo
-                     |      amplitud
-                     |      tiempo
+                     *  @@@@ Hay que guardar estos valores:
+                     *-----------------------------------------------------
+                     *      periodo
+                     *      amplitud
+                     *      tiempo
+                     *      energia
                      */
+                    float periodo_value  = intent.getFloatExtra("periodo", .0f);
+                    float amplitud_value = intent.getFloatExtra("amplitud", 0.f);
+                    int tiempo_value     = intent.getIntExtra("tiempo", 0);
+                    // NOTA: en este caso la energía no tiene sentido, ya que solo se usa
+                    // para calcular el umbral que debe pasar la amplitud, del 25%
+                    float energia_value  = intent.getFloatExtra("energia", .0f);
 
                     //Etiqueto el fragmento como ronquido o no ronquido
-                    String ronquido;
+                    // Actualizar con datos nuevos
+                    /*String ronquido;
                     if ((t0 > 3.05f) && (t0 < 5.9f) && (max > 0.25f)) {
                         ronquido = "Ronquidos";
                     } else {
                         ronquido = "No ronquido";
+                    }*/
+                    boolean is_snore = false;
+                    if ((periodo_value > 3.05f) && (periodo_value < 5.9f) && amplitud_value > 0.25f) {
+                        is_snore = true;
+
+                        // Salvar los valores anteriores en sus vectores
+                        // que luego seran guardados hacia la BBDD
+                        periodo.add((double)periodo_value);
+                        amplitud.add((double)amplitud_value);
+                        tiempo.add(tiempo_value);
+                        energia.add((double)energia_value); // esto no va a la BBDD
                     }
 
+
                     // Imprimir en pantalla provisoriamente los resultados en el TextView
-                    resultados_parciales.setText(
+                    // parte vieja
+                    /*resultados_parciales.setText(
                             resultados_parciales.getText().toString()
                             + "\n"
                             + t0 + "\t" + max + "\t" + ronquido + "\t" + energy);
+                    */
+                    // Parte con datos nuevos
+                    resultados_parciales.setText(
+                            resultados_parciales.getText().toString()
+                                    + "\n"
+                                    + periodo_value + " - "
+                                    + String.format("%.4f", amplitud_value) + " - "
+                                    + tiempo_value + " - "
+                                    + (is_snore ? "SI" : "NO"));
                 }
             }
         };
@@ -153,9 +200,12 @@ import java.util.ArrayList;
 
         recordingThread.start();
 
+        // Guardar timestamp de inicio de grabacion
+        this.horaInicio = helper.getTimestamp();
+
         resultados_parciales.setText(
                 resultados_parciales.getText().toString()
-                + "\nT0\tAmplitud\tRonquido\tE");
+                + "\nT0 - Amp - Tpo - Status");
     }
 
     // Esta funcion es la ejecutada por el hilo de la captura
@@ -274,10 +324,10 @@ import java.util.ArrayList;
 //                            }
 
                             // Iniciar el IntentService que calcula el t0
-                            Intent pitch = new Intent(RecordActivity.this, T0IntentService.class);
-//                            pitch.putExtra("fragmento", muestras);
-                            pitch.putExtra("fragmento", muestras2);
-                            startService(pitch);
+                            Intent periodo = new Intent(RecordActivity.this, T0IntentService.class);
+//                            periodo.putExtra("fragmento", muestras);
+                            periodo.putExtra("fragmento", muestras2);
+                            startService(periodo);
 
                         }
                     }, "Hilo Filtrado y Decimation");
@@ -311,6 +361,34 @@ import java.util.ArrayList;
             // Interrupcion del hilo de grabacion para liberar recursos
             Thread.currentThread().interrupt();
             recordingThread = null;
+
+            // Salvo el timestamp de corte de grabacion
+            this.horaFin = helper.getTimestamp();
+
+            // Convertimos los vectores a string y salvamos los datos en la BBDD de SQLite
+            int countRegistros = this.tiempo.size();
+            if (countRegistros > 0) {
+                String periodos = helper.getStringFromDouble(this.periodo);
+                String amplitudes = helper.getStringFromDouble(this.amplitud);
+                String tiempos = helper.getStringFromInteger(this.tiempo);
+
+                // Insertar valores en la BBDD y obtener el ID del registro insertado
+                long id = this.managerSnore.insertar(Long.toString(this.horaInicio), Long.toString(this.horaFin), periodos, amplitudes, tiempos);
+
+                //@@@@ Muestro el ID de la inserción con un toast. BORRAR
+                Toast.makeText(RecordActivity.this, "ID de la inserción: " + id, Toast.LENGTH_LONG).show();
+
+                //@@@@  Aqui se deberia llamar al intent con los resultados graficos
+                //@@@@  pasandole el ID de la inserción realizada como parametro extra
+                //@@@@  y allí levantar el registro desde la BBDD y realizar todos calculos
+            } else {
+                // Mostrar toast con mensaje de error (éste sobrevive a cambios de activity)
+                Toast.makeText(RecordActivity.this, "No hay datos para guardar y graficar", Toast.LENGTH_LONG).show();
+
+                // Volver a la activity principal
+                Intent main = new Intent(RecordActivity.this, MainActivity.class);
+                startActivity(main);
+            }
         }
     }
 
@@ -332,9 +410,11 @@ import java.util.ArrayList;
                     enableButtons(false);
                     stopRecording();
 
-                    //Creamos el Intent
-                    Intent intent = new Intent(RecordActivity.this, tabs.class);
+                    // Creamos en instanciamos el Intent hacia los resultados graficos
+                    // ver de hacer esto mismo en 376-378
+                    /*Intent intent = new Intent(RecordActivity.this, tabs.class);
                     startActivity(intent);
+                    */
                     break;
                 }
             }
