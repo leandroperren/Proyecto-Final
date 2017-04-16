@@ -39,7 +39,7 @@ public class RecordActivity extends AppCompatActivity {
 
     /// PARTE NUEVA
     static final int SAMPLES_PER_SECOND_AT_8K = 480000;
-    static final int SIZE_SEGMENTO            = 5*SAMPLES_PER_SECOND_AT_8K;
+    static final int SIZE_SEGMENTO            = 1*SAMPLES_PER_SECOND_AT_8K;
     static final int SIZE_AT_100HZ            = SIZE_SEGMENTO/80;
 
     private TextView resultados_parciales;
@@ -381,6 +381,8 @@ public class RecordActivity extends AppCompatActivity {
                 //@@@@  Aqui se deberia llamar al intent con los resultados graficos
                 //@@@@  pasandole el ID de la inserción realizada como parametro extra
                 //@@@@  y allí levantar el registro desde la BBDD y realizar todos calculos
+                Intent tabsresultados = new Intent(RecordActivity.this, tabs.class);
+                startActivity(tabsresultados);
             } else {
                 // Mostrar toast con mensaje de error (éste sobrevive a cambios de activity)
                 Toast.makeText(RecordActivity.this, "No hay datos para guardar y graficar", Toast.LENGTH_LONG).show();

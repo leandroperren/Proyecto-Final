@@ -1,6 +1,7 @@
 package edu.fich.pfcii.snoredetection;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -37,6 +38,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import edu.fich.pfcii.snoredetection.db.DatabaseManagerSnore;
+import edu.fich.pfcii.snoredetection.helper.Helper;
+
 /**
  * Created by Leandro on 05/12/2016.
  */
@@ -48,7 +52,9 @@ public class tabs extends AppCompatActivity {
     private BarChart barchart;
     private ArrayList<BarEntry> entradas = new ArrayList<>();
     private ArrayList<String> etiquetas = new ArrayList<String>();
+    private ArrayList<Double> amplitudes = new ArrayList<Double>();
     private float[] muestras;
+
 
     private PieChart piechart;
     private PieChart piechart2;
@@ -57,11 +63,16 @@ public class tabs extends AppCompatActivity {
 
     private Button btnPDF;
 
+    private Cursor cursor;
+    private DatabaseManagerSnore manager;
+    private Helper helper = new Helper();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs);
+
+
 
         txtTab1 = (TextView) findViewById(R.id.textView1);
         txtTab2 = (TextView) findViewById(R.id.textView2);
@@ -82,9 +93,17 @@ public class tabs extends AppCompatActivity {
         calendar.setTime(horaActual);
         final SimpleDateFormat formato = new SimpleDateFormat("hh:mm:ss");
 
+        cursor = this.manager.cargarCursor();
+        cursor.moveToPosition(0);
+        String amplitud= cursor.getString(4);
+
+        amplitudes = helper.getDoubleFromString(amplitud);
+
         muestras = new float[12];
         int [] barColorArray1 = new int[12];
 
+        //muestras[0] = amplitudes.get(0).floatValue(); // 0.20f;
+        //muestras[1] = amplitudes.get(1).floatValue(); //0.25f;
         muestras[0] = 0.20f;
         muestras[1] = 0.25f;
         muestras[2] = 0.22f;
