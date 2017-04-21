@@ -382,6 +382,10 @@ public class RecordActivity extends AppCompatActivity {
                 //@@@@  pasandole el ID de la inserción realizada como parametro extra
                 //@@@@  y allí levantar el registro desde la BBDD y realizar todos calculos
                 Intent tabsresultados = new Intent(RecordActivity.this, tabs.class);
+                Integer itemid;
+                id = id -1;
+                itemid = (int) id;
+                tabsresultados.putExtra("ITEM_ID", itemid);
                 startActivity(tabsresultados);
             } else {
                 // Mostrar toast con mensaje de error (éste sobrevive a cambios de activity)

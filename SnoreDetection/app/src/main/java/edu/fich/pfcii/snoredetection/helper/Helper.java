@@ -115,4 +115,22 @@ public class Helper
 
         return str.toString();
     }
+
+    public Date getDateFromString(String dateString){
+        Date horaActual = new Date();
+        try {
+            //Date horaActual = new Date();
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss", ARGENTINA_LOCALE); // the format of your date
+            horaActual = (Date) sdf.parse(dateString);
+            return horaActual;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return horaActual;
+
+    }
+
+
 }
+
+

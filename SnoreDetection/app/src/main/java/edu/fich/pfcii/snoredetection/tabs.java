@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
@@ -53,6 +54,7 @@ public class tabs extends AppCompatActivity {
     private ArrayList<BarEntry> entradas = new ArrayList<>();
     private ArrayList<String> etiquetas = new ArrayList<String>();
     private ArrayList<Double> amplitudes = new ArrayList<Double>();
+    private ArrayList<Double> tiempos = new ArrayList<Double>();
     private float[] muestras;
 
 
@@ -67,12 +69,14 @@ public class tabs extends AppCompatActivity {
     private DatabaseManagerSnore manager;
     private Helper helper = new Helper();
 
+    private final static String ITEM_ID = "ITEM_ID";
+    private int cantidadPeriodos;
+    private String horaInicio2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs);
-
-
 
         txtTab1 = (TextView) findViewById(R.id.textView1);
         txtTab2 = (TextView) findViewById(R.id.textView2);
@@ -83,29 +87,55 @@ public class tabs extends AppCompatActivity {
         //----------Contenido para la tab 1 (gráficos)------------
         //
         //--------------------------------------------------------
+        // Intanciar Objeto para la BBDD
+        manager = new DatabaseManagerSnore(this);
+        cursor = this.manager.cargarCursor();
+
+        Integer ItemId   = getIntent().getIntExtra(ITEM_ID, 0);
+
+        cursor.moveToPosition(ItemId);
+        String amplitud = cursor.getString(4);
+        String tiempo = cursor.getString(5);
+        horaInicio2 = cursor.getString(1);
+        long prueba = Long.parseLong(horaInicio2);
+        horaInicio2 = helper.getTime(prueba);
 
         //Contenido de los gráficos hardcodeados!!!!
-        final Date horaActual = new Date();
+        final Date horaActual = helper.getDateFromString(horaInicio2);
         final Calendar calendar = Calendar.getInstance();
         final Calendar calinicio = Calendar.getInstance();
         final Calendar diferencia = Calendar.getInstance();
         calinicio.setTime(horaActual);
         calendar.setTime(horaActual);
-        final SimpleDateFormat formato = new SimpleDateFormat("hh:mm:ss");
-
-        cursor = this.manager.cargarCursor();
-        cursor.moveToPosition(0);
-        String amplitud= cursor.getString(4);
+        final SimpleDateFormat formato = new SimpleDateFormat("HH:mm:ss");
 
         amplitudes = helper.getDoubleFromString(amplitud);
+        tiempos = helper.getDoubleFromString(tiempo);
 
-        muestras = new float[12];
-        int [] barColorArray1 = new int[12];
+        cantidadPeriodos = (tiempos.get(tiempos.size()-1).intValue());
 
-        //muestras[0] = amplitudes.get(0).floatValue(); // 0.20f;
-        //muestras[1] = amplitudes.get(1).floatValue(); //0.25f;
-        muestras[0] = 0.20f;
-        muestras[1] = 0.25f;
+        muestras = new float[cantidadPeriodos];
+        int [] barColorArray1 = new int[cantidadPeriodos];
+
+        int c = 0;
+        while (c < cantidadPeriodos){
+            muestras[c] = 0;
+            c++;
+        }
+
+        int indiceTiempo = 0;
+        for (int i = 0; i<tiempos.size(); i++){
+            indiceTiempo = tiempos.get(i).intValue();
+            indiceTiempo = indiceTiempo-1;
+            if (indiceTiempo < cantidadPeriodos) {
+                muestras[indiceTiempo] = amplitudes.get(i).floatValue();
+            }
+        }
+
+        /*muestras[0] = amplitudes.get(0).floatValue(); // 0.20f;
+        muestras[1] = amplitudes.get(1).floatValue(); //0.25f;
+        //muestras[0] = 0.20f;
+        //muestras[1] = 0.25f;
         muestras[2] = 0.22f;
         muestras[3] = 0.30f;
         muestras[4] = 0.35f;
@@ -115,7 +145,7 @@ public class tabs extends AppCompatActivity {
         muestras[8] = 0.26f;
         muestras[9] = 0.60f;
         muestras[10] = 0.90f;
-        muestras[11] = 0.20f;
+        muestras[11] = 0.20f;*/
 
         //--------------Calculo de porcentajes------------------
         int cant_ron = 0;
@@ -128,12 +158,12 @@ public class tabs extends AppCompatActivity {
             entradas.add(new BarEntry(valor, i));
             etiquetas.add(formato.format(calendar.getTime())+" ");
 
-            if (valor<0.30) {
+            if (valor<0.10) {
                 //para segmentos de no ronquidos
                 barColorArray1[i] = Color.CYAN;
             }else {
                 cant_ron++;
-                if (valor >= 0.30 && valor < 0.40) {
+                if (valor >= 0.10 && valor < 0.30) {
                     //nivel simple menor a 40% de la energía
                     barColorArray1[i] = Color.YELLOW;
                     cant_ron_simple++;
@@ -147,7 +177,7 @@ public class tabs extends AppCompatActivity {
         }
 
         //porcentaje de segmentos con ronquidos
-        float por_ron = (cant_ron/12f)*100f;
+        float por_ron = (cant_ron/(float)cantidadPeriodos)*100f;
         //porcentaje de segmentos sin ronquidos
         float por_noron = 100-por_ron;
 
@@ -243,16 +273,16 @@ public class tabs extends AppCompatActivity {
         calinicio.setTime(horaActual);
         calendar.setTime(horaActual);
 
-        String[] salida = new String[12];
+        String[] salida = new String[cantidadPeriodos];
         int canSegRonquidos=0;
 
-        for(int i=0; i<12; i++) {
+        for(int i=0; i<cantidadPeriodos; i++) {
             float valor=muestras[i];
-            if (valor<0.30) {
+            if (valor<0.10) {
                 salida[i] = formato.format(calendar.getTime())+"  --  No ronquidos";
             }else {
                 canSegRonquidos++;
-                if (valor >= 0.30 && valor < 0.40) {
+                if (valor >= 0.10 && valor < 0.30) {
                     salida[i] = formato.format(calendar.getTime())+"  --  Simple";
                 } else {
                     salida[i] = formato.format(calendar.getTime())+"  --  Alto";
@@ -263,8 +293,8 @@ public class tabs extends AppCompatActivity {
 
         diferencia.setTimeInMillis(calendar.getTime().getTime() - calinicio.getTime().getTime());
 
-        String horaInicio =  "Hora de inicio de captura: " +formato.format(horaActual);
-        String horaFin = "Hora de finalización: "+formato.format(calendar.getTime());
+        String horaInicio =  "Hora de inicio de captura: "+horaInicio2;
+        String horaFin = "Hora de finalización: "+formato.format(calendar.getTime());;
         String duracion = "Duración: 1 hora";
         String cantidadSegmentos = "Cantidad de segmentos con ronquido:" +canSegRonquidos;
         String mayorCantidad = "Hora con mayor cantidad de ronquidos: "+formato.format(horaActual)+"--"+formato.format(calendar.getTime());
@@ -333,14 +363,14 @@ public class tabs extends AppCompatActivity {
 
                     int canSegRonquidos=0;
 
-                    for(int i=0; i<12; i++) {
+                    for(int i=0; i<cantidadPeriodos; i++) {
                         float valor=muestras[i];
-                        if (valor<0.30) {
+                        if (valor<0.10) {
                             tabla.addCell(formato.format(calendar.getTime()));
                             tabla.addCell("No ronquidos");
                         }else {
                             canSegRonquidos++;
-                            if (valor >= 0.30 && valor < 0.40) {
+                            if (valor >= 0.10 && valor < 0.30) {
                                 tabla.addCell(formato.format(calendar.getTime()));
                                 tabla.addCell("Simple");
                             } else {
@@ -353,7 +383,7 @@ public class tabs extends AppCompatActivity {
 
                     diferencia.setTimeInMillis(calendar.getTime().getTime() - calinicio.getTime().getTime());
 
-                    String horaInicio =  "Hora de inicio de captura: " +formato.format(horaActual);
+                    String horaInicio =  "Hora de inicio de captura: " +horaInicio2;
                     String horaFin = "Hora de finalización: "+formato.format(calendar.getTime());
                     String duracion = "Duración: 1 hora";
                     String cantidadSegmentos = "Cantidad de segmentos con ronquido:" +canSegRonquidos;

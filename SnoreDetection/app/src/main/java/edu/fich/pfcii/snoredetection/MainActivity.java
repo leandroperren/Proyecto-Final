@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements SnoreAdapter.Item
     private final static String ITEM_PERIODOS = "PERIODOS";
     private final static String ITEM_AMPLITUDES = "AMPLITUDES";
 
+
     private RecyclerView lista;
     private FloatingActionButton fabAdd;
 
@@ -303,11 +304,15 @@ public class MainActivity extends AppCompatActivity implements SnoreAdapter.Item
         //Toast.makeText(this, "Click en el item " + position, Toast.LENGTH_SHORT).show();
         Snore item = datos.get(position);
 
-        Intent intent = new Intent(this, DetalleCaptura.class);
-        intent.putExtra(ITEM_AMPLITUDES, item.getAmplitud());
-        intent.putExtra(ITEM_PERIODOS, item.getT0());
+        //Intent intent = new Intent(this, DetalleCaptura.class);
+        //intent.putExtra(ITEM_AMPLITUDES, item.getAmplitud());
+        //intent.putExtra(ITEM_PERIODOS, item.getT0());
 
-        startActivity(intent);
+        //startActivity(intent);
+
+        Intent tabsresultados = new Intent(this, tabs.class);
+        tabsresultados.putExtra("ITEM_ID", position);
+        startActivity(tabsresultados);
     }
 
     @Override
