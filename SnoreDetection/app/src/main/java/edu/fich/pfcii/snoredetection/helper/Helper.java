@@ -62,6 +62,17 @@ public class Helper
         return diffHours + "h " +  diffMinutes + "' " + diffSeconds + "''";
     }
 
+    public Long getCantidadPeriodos(long timestamp_ini, long timestamp_fin) {
+        long diff = (timestamp_fin - timestamp_ini);
+
+        long diffMinutes = diff/60 % 60;
+        //Cambiar por cuando se establezca a 5 minutos
+        //long cantidad = diffMinutes/5;
+        long cantidad = diffMinutes;
+
+        return cantidad;
+    }
+
     public static double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
 
@@ -107,7 +118,7 @@ public class Helper
             str.append(list.get(i) + SEPARATOR);
         }
         // Add last element to StringBuilder outside this for to avoid insert "|" at the end
-        str.append(list.get(list.size()-1));
+        str.append(list.get(list.size() - 1));
 
         return str.toString();
     }

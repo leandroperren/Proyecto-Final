@@ -72,6 +72,10 @@ public class tabs extends AppCompatActivity {
     private final static String ITEM_ID = "ITEM_ID";
     private int cantidadPeriodos;
     private String horaInicio2;
+    private String horaFin2;
+    private String duracionTotal;
+    private Long CantidadPeriodosTotal;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,8 +101,17 @@ public class tabs extends AppCompatActivity {
         String amplitud = cursor.getString(4);
         String tiempo = cursor.getString(5);
         horaInicio2 = cursor.getString(1);
-        long prueba = Long.parseLong(horaInicio2);
-        horaInicio2 = helper.getTime(prueba);
+        horaFin2 = cursor.getString(2);
+
+        long InicioTime = Long.parseLong(horaInicio2);
+        horaInicio2 = helper.getTime(InicioTime);
+
+        long FinTime = Long.parseLong(horaFin2);
+        horaFin2 = helper.getTime(FinTime);
+
+        duracionTotal = helper.getTotalTime(InicioTime, FinTime);
+
+        CantidadPeriodosTotal = helper.getCantidadPeriodos(InicioTime, FinTime);
 
         //Contenido de los gráficos hardcodeados!!!!
         final Date horaActual = helper.getDateFromString(horaInicio2);
@@ -132,21 +145,6 @@ public class tabs extends AppCompatActivity {
             }
         }
 
-        /*muestras[0] = amplitudes.get(0).floatValue(); // 0.20f;
-        muestras[1] = amplitudes.get(1).floatValue(); //0.25f;
-        //muestras[0] = 0.20f;
-        //muestras[1] = 0.25f;
-        muestras[2] = 0.22f;
-        muestras[3] = 0.30f;
-        muestras[4] = 0.35f;
-        muestras[5] = 0.60f;
-        muestras[6] = 0.21f;
-        muestras[7] = 0.22f;
-        muestras[8] = 0.26f;
-        muestras[9] = 0.60f;
-        muestras[10] = 0.90f;
-        muestras[11] = 0.20f;*/
-
         //--------------Calculo de porcentajes------------------
         int cant_ron = 0;
         int cant_ron_simple = 0;
@@ -177,7 +175,8 @@ public class tabs extends AppCompatActivity {
         }
 
         //porcentaje de segmentos con ronquidos
-        float por_ron = (cant_ron/(float)cantidadPeriodos)*100f;
+        //float por_ron = (cant_ron/(float)cantidadPeriodos)*100f;
+        float por_ron = (cant_ron/(float)CantidadPeriodosTotal)*100f;
         //porcentaje de segmentos sin ronquidos
         float por_noron = 100-por_ron;
 
@@ -294,8 +293,9 @@ public class tabs extends AppCompatActivity {
         diferencia.setTimeInMillis(calendar.getTime().getTime() - calinicio.getTime().getTime());
 
         String horaInicio =  "Hora de inicio de captura: "+horaInicio2;
-        String horaFin = "Hora de finalización: "+formato.format(calendar.getTime());;
-        String duracion = "Duración: 1 hora";
+        //String horaFin = "Hora de finalización: "+formato.format(calendar.getTime());
+        String horaFin = "Hora de finalización: "+horaFin2;
+        String duracion = "Duración: "+duracionTotal;
         String cantidadSegmentos = "Cantidad de segmentos con ronquido:" +canSegRonquidos;
         String mayorCantidad = "Hora con mayor cantidad de ronquidos: "+formato.format(horaActual)+"--"+formato.format(calendar.getTime());
         String promedioRonquidos = "Promedio de ronquidos/hora: 5 ronquidos por hora";
@@ -384,8 +384,8 @@ public class tabs extends AppCompatActivity {
                     diferencia.setTimeInMillis(calendar.getTime().getTime() - calinicio.getTime().getTime());
 
                     String horaInicio =  "Hora de inicio de captura: " +horaInicio2;
-                    String horaFin = "Hora de finalización: "+formato.format(calendar.getTime());
-                    String duracion = "Duración: 1 hora";
+                    String horaFin = "Hora de finalización: "+horaFin2;
+                    String duracion = "Duración: "+duracionTotal;
                     String cantidadSegmentos = "Cantidad de segmentos con ronquido:" +canSegRonquidos;
                     String mayorCantidad = "Hora con mayor cantidad de ronquidos: "+formato.format(horaActual)+"--"+formato.format(calendar.getTime());
                     String promedioRonquidos = "Promedio de ronquidos/hora: 5 ronquidos por hora";
