@@ -1,5 +1,8 @@
 package edu.fich.pfcii.snoredetection.helper;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.SimpleDateFormat;
@@ -9,10 +12,15 @@ import java.util.Locale;
 import java.util.StringTokenizer;
 import java.util.TimeZone;
 
+import edu.fich.pfcii.snoredetection.SettingsActivity;
+
+import static android.content.Context.MODE_PRIVATE;
+
 public class Helper
 {
     private final Locale ARGENTINA_LOCALE = new Locale("es", "AR");
     private final TimeZone GMT_AR = TimeZone.getTimeZone("GMT-3");
+    public static final String PREF_CONFIG_NAME = "MisConfiguraciones";
 
     public long getTimestamp() {
         return (long)System.currentTimeMillis() / 1000L;
@@ -116,7 +124,7 @@ public class Helper
         return str.toString();
     }
 
-    public Date getDateFromString(String dateString){
+    public Date getDateFromString(String dateString) {
         Date horaActual = new Date();
         try {
             //Date horaActual = new Date();
@@ -127,10 +135,49 @@ public class Helper
             e.printStackTrace();
         }
         return horaActual;
-
     }
 
+    //-------------------------------------------------------------------------
+    // Funciones para obtener datos desde shared preferences
+    //-------------------------------------------------------------------------
+    //
+    // NOTA:
+    //      para llamar a éstas funciones se debe pasar como parametro el
+    //      contexto del llamante, que seria la keyword 'this'
+    //
+    //  Ejemplo: getEmailMedico(this)
+    //-------------------------------------------------------------------------
+    public String getEmailMedico(Context context) {
+        SharedPreferences settings = context.getSharedPreferences(PREF_CONFIG_NAME, MODE_PRIVATE);
+        return settings.getString("email_medico", "");
+    }
 
+    // Obtener nombre del paciente
+    public String getNombrePaciente(Context context) {
+        SharedPreferences settings = context.getSharedPreferences(PREF_CONFIG_NAME, MODE_PRIVATE);
+        return settings.getString("nombre", "");
+    }
+
+    // Obtener apellido del paciente
+    public String getApellidoPaciente(Context context) {
+        SharedPreferences settings = context.getSharedPreferences(PREF_CONFIG_NAME, MODE_PRIVATE);
+        return settings.getString("apellido", "");
+        /*String lastName_val = settings.getString("apellido", "");
+        int age_val         = settings.getInt("edad", 18);
+        String genre_val    = settings.getString("sexo", "F");*/
+    }
+
+    // Obtener edad del paciente
+    public int getEdadPaciente(Context context) {
+        SharedPreferences settings = context.getSharedPreferences(PREF_CONFIG_NAME, MODE_PRIVATE);
+        return settings.getInt("edad", -1);
+    }
+
+    // Obtener sexo del paciente
+    public String getSexoPaciente(Context context) {
+        SharedPreferences settings = context.getSharedPreferences(PREF_CONFIG_NAME, MODE_PRIVATE);
+        return settings.getString("sexo", "F");
+    }
 }
 
 

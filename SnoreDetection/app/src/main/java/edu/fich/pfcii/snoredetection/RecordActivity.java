@@ -20,6 +20,8 @@ import edu.fich.pfcii.snoredetection.helper.Helper;
 
 public class RecordActivity extends AppCompatActivity {
 
+    private int CONTADOR_TIEMPO = 0;
+
     // Parametros de la clase AudioRecord
     private static final int RECORDER_SAMPLERATE = 8000;
     private static final int RECORDER_CHANNELS = AudioFormat.CHANNEL_IN_MONO;
@@ -106,15 +108,17 @@ public class RecordActivity extends AppCompatActivity {
                      *-----------------------------------------------------
                      *      periodo
                      *      amplitud
-                     *      tiempo
                      *      energia
                      */
                     float periodo_value  = intent.getFloatExtra("periodo", .0f);
                     float amplitud_value = intent.getFloatExtra("amplitud", 0.f);
-                    int tiempo_value     = intent.getIntExtra("tiempo", 0);
+                    //int tiempo_value     = intent.getIntExtra("tiempo", 0);
                     // NOTA: en este caso la energía no tiene sentido, ya que solo se usa
                     // para calcular el umbral que debe pasar la amplitud, del 25%
                     float energia_value  = intent.getFloatExtra("energia", .0f);
+
+                    int tiempo_value = CONTADOR_TIEMPO;
+                    CONTADOR_TIEMPO++;
 
                     //Etiqueto el fragmento como ronquido o no ronquido
                     // Actualizar con datos nuevos
@@ -206,6 +210,9 @@ public class RecordActivity extends AppCompatActivity {
         resultados_parciales.setText(
                 resultados_parciales.getText().toString()
                 + "\nT0 - Amp - Tpo - Status");
+
+        // inicio el contador en 0
+        this.CONTADOR_TIEMPO = 0;
     }
 
     // Esta funcion es la ejecutada por el hilo de la captura
