@@ -338,11 +338,12 @@ public class tabs extends AppCompatActivity {
 
                     documento.open();
 
-                    //Inserto datos personales
-                    String nombre = "Jose";
-                    String apellido = "Lopez";
-                    String edad = "28";
-                    String sexo = "Masculino";
+                    //Recupera datos personales
+                    String nombre = helper.getNombrePaciente(tabs.this);
+                    String apellido = helper.getApellidoPaciente(tabs.this);
+                    Integer edad = helper.getEdadPaciente(tabs.this);
+                    String sexo = helper.getSexoPaciente(tabs.this);
+
                     documento.add(new Paragraph("Datos del paciente", boldFont));
                     documento.add(new Paragraph("Nombre: "+nombre));
                     documento.add(new Paragraph("Apellido: "+apellido));
@@ -426,7 +427,7 @@ public class tabs extends AppCompatActivity {
                     documento.close();
 
                     // Reemplazamos el email por el del médico
-                    String[] to = { "leandroperren@gmail.com"};
+                    String[] to = { helper.getEmailMedico(tabs.this)};
                     String[] cc = { "" };
                     enviar(to, cc, "Envio PDF",
                             "Resultado del análisis de SnoreDetection");
