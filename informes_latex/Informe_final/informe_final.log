@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  6 APR 2017 20:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  2 MAY 2017 20:22
 entering extended mode
 **informe_final.tex
 (informe_final.tex
@@ -1716,7 +1716,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.1131 							\multicolumn
-                          {2}{|p{8cm}|}{2. El usuario es dirigido a una nuev...
+                          {2}{|p{8cm}|}{2. El paciente elige la opción «Conf...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -1724,10 +1724,15 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.1131 							\multicolumn
-                          {2}{|p{8cm}|}{2. El usuario es dirigido a una nuev...
+                          {2}{|p{8cm}|}{2. El paciente elige la opción «Conf...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1131
+[]|\OT1/cmr/m/n/12 2. El pa-cien-te eli-ge la op-cion
+ []
 
 ! Misplaced \noalign.
 \hline ->\noalign 
@@ -1741,7 +1746,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.1133 							\multicolumn
-                          {2}{|p{8cm}|}{3. El usuario guarda la información ...
+                          {2}{|p{8cm}|}{3. El usuario es dirigido a una nuev...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -1749,58 +1754,7 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.1133 							\multicolumn
-                          {2}{|p{8cm}|}{3. El usuario guarda la información ...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1134 ...rigiendolo hacia la pantalla principal.}
-                                                   \hline
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `latin1'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1134 ...rigiendolo hacia la pantalla principal.}
-                                                   \hline
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1134 ...olo hacia la pantalla principal.} \hline
-                                                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1135 							\multicolumn
-                          {2}{|p{8cm}|}{4. La información ingresada es almac...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1135 							\multicolumn
-                          {2}{|p{8cm}|}{4. La información ingresada es almac...
+                          {2}{|p{8cm}|}{3. El usuario es dirigido a una nuev...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
@@ -1808,32 +1762,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1136 ...e vuelva a proceder normalmente.} \hline
-                                                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1137 							\multicolumn
-                          {2}{|p{8cm}|}{5. El usuario es redirigido hacia la...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1137 							\multicolumn
-                          {2}{|p{8cm}|}{5. El usuario es redirigido hacia la...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1138 							\multicolumn{2}{p{8cm}|}{} \hline
+l.1134 							\multicolumn{2}{p{8cm}|}{} \hline
                                                
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1841,7 +1770,108 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1156 
+l.1135 							\multicolumn
+                          {2}{|p{8cm}|}{4. El usuario presiona el boton guar...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1135 							\multicolumn
+                          {2}{|p{8cm}|}{4. El usuario presiona el boton guar...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1136 ...acción “volver” del dispositivo en uso.}
+                                                   \hline
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1136 ...acción “volver” del dispositivo en uso.}
+                                                   \hline
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1136 ...“volver” del dispositivo en uso.} \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1137 							\multicolumn
+                          {2}{|p{8cm}|}{5. La información ingresada es almac...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1137 							\multicolumn
+                          {2}{|p{8cm}|}{5. La información ingresada es almac...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1138 ...e vuelva a proceder normalmente.} \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1139 							\multicolumn
+                          {2}{|p{8cm}|}{6. El usuario es redirigido hacia la...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1139 							\multicolumn
+                          {2}{|p{8cm}|}{6. El usuario es redirigido hacia la...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1140 							\multicolumn{2}{p{8cm}|}{} \hline
+                                               
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1158 
        
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1849,7 +1879,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1156 
+l.1158 
        
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1863,7 +1893,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1160 								}
+l.1162 								}
                  \\
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1876,7 +1906,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1160 								}
+l.1162 								}
                  \\
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -1884,25 +1914,25 @@ or \DeclareInputMath before using this key.
 <img/mockups1_CU6.png, id=210, 175.40532pt x 308.65312pt>
 File: img/mockups1_CU6.png Graphic file (type png)
  <use img/mockups1_CU6.png>
-Package pdftex.def Info: img/mockups1_CU6.png used on input line 1166.
+Package pdftex.def Info: img/mockups1_CU6.png used on input line 1168.
 (pdftex.def)             Requested size: 99.58464pt x 175.23706pt.
 
 <img/mockups2_CU6.png, id=211, 175.40532pt x 308.65312pt>
 File: img/mockups2_CU6.png Graphic file (type png)
  <use img/mockups2_CU6.png>
-Package pdftex.def Info: img/mockups2_CU6.png used on input line 1166.
+Package pdftex.def Info: img/mockups2_CU6.png used on input line 1168.
 (pdftex.def)             Requested size: 99.58464pt x 175.23706pt.
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1126--1170
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1126--1172
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1170
+Underfull \vbox (badness 10000) detected at line 1172
  []
 
-LaTeX Info: Redefining \. on input line 1170.
-LaTeX Info: Redefining \% on input line 1170.
+LaTeX Info: Redefining \. on input line 1172.
+LaTeX Info: Redefining \% on input line 1172.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1910,29 +1940,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [47]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1173--1186
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1175--1188
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1186--1187
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1188--1189
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1187--1189
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1189--1191
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1189--1190
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1191--1192
  [] [] [] [] 
  []
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1194 							\multicolumn{2}{p{8cm}|}{} \hline
+l.1196 							\multicolumn{2}{p{8cm}|}{} \hline
                                                
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1940,7 +1970,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1195 							\multicolumn
+l.1197 							\multicolumn
                           {2}{|p{8cm}|}{2. La información almacenada tempora...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1948,7 +1978,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1195 							\multicolumn
+l.1197 							\multicolumn
                           {2}{|p{8cm}|}{2. La información almacenada tempora...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1957,32 +1987,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1196 ... informar acerca de lo sucedido.} \hline
-                                                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1197 							\multicolumn
-                          {2}{|p{8cm}|}{3. La información serializada se pas...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1197 							\multicolumn
-                          {2}{|p{8cm}|}{3. La información serializada se pas...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1198 ...mación relevante de lo sucedido.} \hline
+l.1198 ... informar acerca de lo sucedido.} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1991,7 +1996,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.1199 							\multicolumn
-                          {2}{|p{8cm}|}{4. El sistema informa al «CU2 - Fina...
+                          {2}{|p{8cm}|}{3. La información serializada se pas...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -1999,6 +2004,31 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.1199 							\multicolumn
+                          {2}{|p{8cm}|}{3. La información serializada se pas...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1200 ...mación relevante de lo sucedido.} \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1201 							\multicolumn
+                          {2}{|p{8cm}|}{4. El sistema informa al «CU2 - Fina...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1201 							\multicolumn
                           {2}{|p{8cm}|}{4. El sistema informa al «CU2 - Fina...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2007,7 +2037,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1217             \hline
+l.1219             \hline
                          
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2015,7 +2045,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1218                 \multicolumn
+l.1220                 \multicolumn
                                    {1}{|p{4cm}|}{\textbf{Postcondiciones}} &...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2023,23 +2053,23 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1218                 \multicolumn
+l.1220                 \multicolumn
                                    {1}{|p{4cm}|}{\textbf{Postcondiciones}} &...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1190--1229
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1192--1231
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1229
+Underfull \vbox (badness 10000) detected at line 1231
  []
 
-LaTeX Info: Redefining \. on input line 1229.
-LaTeX Info: Redefining \% on input line 1229.
+LaTeX Info: Redefining \. on input line 1231.
+LaTeX Info: Redefining \% on input line 1231.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2047,79 +2077,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [48 <./img/mockups1_CU6.png> <./img/mockups2_CU6.png>]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1231--1244
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1233--1246
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1244--1245
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1246--1247
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1245--1247
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1247--1249
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1247--1248
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1249--1250
  [] [] [] [] 
  []
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1252 								\multicolumn{2}{p{8cm}|}{} \hline
-                                                
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1253 								\multicolumn
-                           {2}{|p{8cm}|}{2. Allí hace clic en un botón de ac...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1253 								\multicolumn
-                           {2}{|p{8cm}|}{2. Allí hace clic en un botón de ac...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1254 								\multicolumn{2}{p{8cm}|}{} \hline
-                                                
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1255 								\multicolumn
-                           {2}{|p{8cm}|}{3. El sistema recoge toda la inform...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1255 								\multicolumn
-                           {2}{|p{8cm}|}{3. El sistema recoge toda la inform...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1256 ...informar al usuario lo sucedido.} \hline
+l.1254 ... item de la lista de resultados.} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2127,8 +2107,33 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
+l.1255 								\multicolumn
+                           {2}{|p{8cm}|}{2. El paciente hace clic en el botó...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1255 								\multicolumn
+                           {2}{|p{8cm}|}{2. El paciente hace clic en el botó...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1256 								\multicolumn{2}{p{8cm}|}{} \hline
+                                                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
 l.1257 								\multicolumn
-                           {2}{|p{8cm}|}{4. Se invoca el «CU4 - Enviando mai...
+                           {2}{|p{8cm}|}{3. El sistema recoge toda la inform...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -2136,6 +2141,31 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.1257 								\multicolumn
+                           {2}{|p{8cm}|}{3. El sistema recoge toda la inform...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1258 ...informar al usuario lo sucedido.} \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1259 								\multicolumn
+                           {2}{|p{8cm}|}{4. Se invoca el «CU4 - Enviando mai...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1259 								\multicolumn
                            {2}{|p{8cm}|}{4. Se invoca el «CU4 - Enviando mai...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2144,7 +2174,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1258 								\multicolumn{2}{p{8cm}|}{} \hline
+l.1260 								\multicolumn{2}{p{8cm}|}{} \hline
                                                 
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2152,7 +2182,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1277             \hline
+l.1279             \hline
                          
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2160,7 +2190,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1277             \hline
+l.1279             \hline
                          
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2168,24 +2198,24 @@ So I'll assume that you meant to type \cr instead.
 
 File: img/mockups1_CU2.png Graphic file (type png)
 <use img/mockups1_CU2.png>
-Package pdftex.def Info: img/mockups1_CU2.png used on input line 1286.
+Package pdftex.def Info: img/mockups1_CU2.png used on input line 1288.
 (pdftex.def)             Requested size: 99.58464pt x 176.31778pt.
  <img/mockups2_CU8.png, id=221, 175.40532pt x 308.65312pt>
 File: img/mockups2_CU8.png Graphic file (type png)
  <use img/mockups2_CU8.png>
-Package pdftex.def Info: img/mockups2_CU8.png used on input line 1286.
+Package pdftex.def Info: img/mockups2_CU8.png used on input line 1288.
 (pdftex.def)             Requested size: 99.58464pt x 175.23706pt.
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1248--1290
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1250--1292
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1290
+Underfull \vbox (badness 10000) detected at line 1292
  []
 
-LaTeX Info: Redefining \. on input line 1290.
-LaTeX Info: Redefining \% on input line 1290.
+LaTeX Info: Redefining \. on input line 1292.
+LaTeX Info: Redefining \% on input line 1292.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2193,29 +2223,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [49]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1292--1305
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1294--1307
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1305--1306
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1307--1308
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1306--1308
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1308--1310
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1308--1309
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1310--1311
  [] [] [] [] 
  []
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1313 							\multicolumn{2}{p{8cm}|}{} \hline
+l.1315 							\multicolumn{2}{p{8cm}|}{} \hline
                                                
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2223,7 +2253,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1314 							\multicolumn
+l.1316 							\multicolumn
                           {2}{|p{8cm}|}{2. El usuario hace clic en un botón ...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2231,7 +2261,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1314 							\multicolumn
+l.1316 							\multicolumn
                           {2}{|p{8cm}|}{2. El usuario hace clic en un botón ...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2245,7 +2275,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1314 ...implemente con un símbolo de suma “+”).}
+l.1316 ...implemente con un símbolo de suma “+”).}
                                                    &
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -2258,7 +2288,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1314 ...implemente con un símbolo de suma “+”).}
+l.1316 ...implemente con un símbolo de suma “+”).}
                                                    &
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -2271,7 +2301,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1314 ...implemente con un símbolo de suma “+”).}
+l.1316 ...implemente con un símbolo de suma “+”).}
                                                    &
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -2284,7 +2314,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1314 ...implemente con un símbolo de suma “+”).}
+l.1316 ...implemente con un símbolo de suma “+”).}
                                                    &
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -2292,7 +2322,7 @@ or \DeclareInputMath before using this key.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1315 ...ificarse al usuario debidamente.} \hline
+l.1317 ...ificarse al usuario debidamente.} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2300,7 +2330,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1316 							\multicolumn
+l.1318 							\multicolumn
                           {2}{|p{8cm}|}{3. La aplicación redirecciona al usu...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2308,7 +2338,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1316 							\multicolumn
+l.1318 							\multicolumn
                           {2}{|p{8cm}|}{3. La aplicación redirecciona al usu...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2322,7 +2352,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1317 ...n en el botón “volver” del dispositivo.}
+l.1319 ...n en el botón “volver” del dispositivo.}
                                                   
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -2335,7 +2365,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1317 ...n en el botón “volver” del dispositivo.}
+l.1319 ...n en el botón “volver” del dispositivo.}
                                                   
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -2343,7 +2373,7 @@ or \DeclareInputMath before using this key.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1334             \hline
+l.1336             \hline
                          
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2351,7 +2381,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1335                 \multicolumn
+l.1337                 \multicolumn
                                    {1}{|p{4cm}|}{\textbf{Postcondiciones}} &...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2359,7 +2389,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1335                 \multicolumn
+l.1337                 \multicolumn
                                    {1}{|p{4cm}|}{\textbf{Postcondiciones}} &...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2373,7 +2403,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1341 								}
+l.1343 								}
                  \\
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -2386,22 +2416,22 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1341 								}
+l.1343 								}
                  \\
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1309--1345
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1311--1347
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1345
+Underfull \vbox (badness 10000) detected at line 1347
  []
 
-LaTeX Info: Redefining \. on input line 1345.
-LaTeX Info: Redefining \% on input line 1345.
+LaTeX Info: Redefining \. on input line 1347.
+LaTeX Info: Redefining \% on input line 1347.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2409,29 +2439,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [50 <./img/mockups2_CU8.png>]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1347--1360
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1349--1362
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1360--1361
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1362--1363
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1361--1363
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1363--1365
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1363--1364
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1365--1366
  [] [] [] [] 
  []
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1368 ...ptura de la lista de resultados.} \hline
+l.1370 ...onsultando lista de resultados».} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2439,7 +2469,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1369 							\multicolumn
+l.1371 							\multicolumn
                           {2}{|p{8cm}|}{2. La aplicación recupera los datos ...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2447,33 +2477,8 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1369 							\multicolumn
+l.1371 							\multicolumn
                           {2}{|p{8cm}|}{2. La aplicación recupera los datos ...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1370 							\multicolumn{2}{p{8cm}|}{} \hline
-                                               
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1371 							\multicolumn
-                          {2}{|p{8cm}|}{3. Se calculan los porcentajes de Ro...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1371 							\multicolumn
-                          {2}{|p{8cm}|}{3. Se calculan los porcentajes de Ro...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
@@ -2490,7 +2495,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.1373 							\multicolumn
-                          {2}{|p{8cm}|}{4. Se calculan estadísticas: hora co...
+                          {2}{|p{8cm}|}{3. Se calculan los porcentajes de Ro...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -2498,7 +2503,7 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.1373 							\multicolumn
-                          {2}{|p{8cm}|}{4. Se calculan estadísticas: hora co...
+                          {2}{|p{8cm}|}{3. Se calculan los porcentajes de Ro...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
@@ -2515,7 +2520,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.1375 							\multicolumn
-                          {2}{|p{8cm}|}{5. Se generan los gráficos y se desp...
+                          {2}{|p{8cm}|}{4. Se calculan estadísticas: hora co...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -2523,7 +2528,7 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.1375 							\multicolumn
-                          {2}{|p{8cm}|}{5. Se generan los gráficos y se desp...
+                          {2}{|p{8cm}|}{4. Se calculan estadísticas: hora co...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
@@ -2539,92 +2544,16 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1394             \hline
-                         
+l.1377 							\multicolumn
+                          {2}{|p{8cm}|}{5. Se generan los gráficos y se desp...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1394             \hline
-                         
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-File: img/mockups1_CU2.png Graphic file (type png)
-<use img/mockups1_CU2.png>
-Package pdftex.def Info: img/mockups1_CU2.png used on input line 1403.
-(pdftex.def)             Requested size: 99.58464pt x 176.31778pt.
-
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1364--1407
- [] [] [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 1407
- []
-
-LaTeX Info: Redefining \. on input line 1407.
-LaTeX Info: Redefining \% on input line 1407.
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[51]
-LaTeX Info: Redefining \. on input line 1407.
-LaTeX Info: Redefining \% on input line 1407.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[52]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1409--1423
- [] [] [] [] 
- []
-
-
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1423--1424
- [] [] [] [] 
- []
-
-
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1424--1426
- [] [] [] [] 
- []
-
-
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1426--1427
- [] [] [] [] 
- []
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1431 ...onsultando lista de resultados».} \hline
-                                                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1432 							\multicolumn
-                          {2}{|p{8cm}|}{2. En la pantalla de resultados, el ...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1432 							\multicolumn
-                          {2}{|p{8cm}|}{2. En la pantalla de resultados, el ...
+l.1377 							\multicolumn
+                          {2}{|p{8cm}|}{5. Se generan los gráficos y se desp...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
@@ -2632,7 +2561,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1433 							\multicolumn{2}{p{8cm}|}{} \hline
+l.1378 							\multicolumn{2}{p{8cm}|}{} \hline
                                                
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2640,8 +2569,74 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
+l.1396             \hline
+                         
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1396             \hline
+                         
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+File: img/mockups1_CU2.png Graphic file (type png)
+<use img/mockups1_CU2.png>
+Package pdftex.def Info: img/mockups1_CU2.png used on input line 1405.
+(pdftex.def)             Requested size: 99.58464pt x 176.31778pt.
+
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1366--1409
+ [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1409
+ []
+
+LaTeX Info: Redefining \. on input line 1409.
+LaTeX Info: Redefining \% on input line 1409.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51]
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1411--1425
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1425--1426
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1426--1428
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1428--1429
+ [] [] [] [] 
+ []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1433 ...onsultando lista de resultados».} \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
 l.1434 							\multicolumn
-                          {2}{|p{8cm}|}{3. La aplicación despliega los resul...
+                          {2}{|p{8cm}|}{2. En la pantalla de resultados, el ...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -2649,6 +2644,31 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.1434 							\multicolumn
+                          {2}{|p{8cm}|}{2. En la pantalla de resultados, el ...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1435 							\multicolumn{2}{p{8cm}|}{} \hline
+                                               
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1436 							\multicolumn
+                          {2}{|p{8cm}|}{3. La aplicación despliega los resul...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1436 							\multicolumn
                           {2}{|p{8cm}|}{3. La aplicación despliega los resul...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2657,7 +2677,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1451             \hline
+l.1453             \hline
                          
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2665,7 +2685,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1452                 \multicolumn
+l.1454                 \multicolumn
                                    {1}{|p{4cm}|}{\textbf{Postcondiciones}} &...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2673,7 +2693,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1452                 \multicolumn
+l.1454                 \multicolumn
                                    {1}{|p{4cm}|}{\textbf{Postcondiciones}} &...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2687,7 +2707,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1454 								}
+l.1456 								}
                  \\
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -2700,26 +2720,36 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1454 								}
+l.1456 								}
                  \\
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
 File: img/mockups3_CU3.png Graphic file (type png)
 <use img/mockups3_CU3.png>
-Package pdftex.def Info: img/mockups3_CU3.png used on input line 1459.
+Package pdftex.def Info: img/mockups3_CU3.png used on input line 1461.
 (pdftex.def)             Requested size: 99.58464pt x 175.23706pt.
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1427--1463
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1429--1465
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1463
+Underfull \vbox (badness 10000) detected at line 1465
  []
 
-LaTeX Info: Redefining \. on input line 1463.
-LaTeX Info: Redefining \% on input line 1463.
+LaTeX Info: Redefining \. on input line 1465.
+LaTeX Info: Redefining \% on input line 1465.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[52]
+LaTeX Info: Redefining \. on input line 1465.
+LaTeX Info: Redefining \% on input line 1465.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2727,79 +2757,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [53]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1465--1478
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1467--1480
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1478--1479
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1480--1481
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1479--1481
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1481--1483
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1481--1482
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1483--1484
  [] [] [] [] 
  []
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1485 ...al.} & \multicolumn{2}{p{8cm}|}{} \hline
-                                                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1486 							\multicolumn
-                          {2}{|p{8cm}|}{2. El usuario hace clic en un botón ...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1486 							\multicolumn
-                          {2}{|p{8cm}|}{2. El usuario hace clic en un botón ...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1486 ...o).} & \multicolumn{2}{p{8cm}|}{} \hline
-                                                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1487 							\multicolumn
-                          {2}{|p{8cm}|}{3. Se despliega un menú superpuesto ...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1487 							\multicolumn
-                          {2}{|p{8cm}|}{3. Se despliega un menú superpuesto ...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1487 ...es.} & \multicolumn{2}{p{8cm}|}{} \hline
+l.1487 ...al.} & \multicolumn{2}{p{8cm}|}{} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2808,7 +2788,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.1488 							\multicolumn
-                          {2}{|p{8cm}|}{4. El usuario puede hacer clic nueva...
+                          {2}{|p{8cm}|}{2. El usuario hace clic en un botón ...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -2816,6 +2796,56 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.1488 							\multicolumn
+                          {2}{|p{8cm}|}{2. El usuario hace clic en un botón ...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1488 ...o).} & \multicolumn{2}{p{8cm}|}{} \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1489 							\multicolumn
+                          {2}{|p{8cm}|}{3. Se despliega un menú superpuesto ...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1489 							\multicolumn
+                          {2}{|p{8cm}|}{3. Se despliega un menú superpuesto ...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1489 ...es.} & \multicolumn{2}{p{8cm}|}{} \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1490 							\multicolumn
+                          {2}{|p{8cm}|}{4. El usuario puede hacer clic nueva...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1490 							\multicolumn
                           {2}{|p{8cm}|}{4. El usuario puede hacer clic nueva...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2824,7 +2854,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1508             \hline
+l.1510             \hline
                          
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2832,7 +2862,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1509                 \multicolumn
+l.1511                 \multicolumn
                                    {1}{|p{4cm}|}{\textbf{Postcondiciones}} &...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2840,7 +2870,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1509                 \multicolumn
+l.1511                 \multicolumn
                                    {1}{|p{4cm}|}{\textbf{Postcondiciones}} &...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2849,19 +2879,19 @@ So I'll assume that you meant to type \cr instead.
 <img/mockups1_CU12.png, id=239, 179.16937pt x 308.65312pt>
 File: img/mockups1_CU12.png Graphic file (type png)
  <use img/mockups1_CU12.png>
-Package pdftex.def Info: img/mockups1_CU12.png used on input line 1516.
+Package pdftex.def Info: img/mockups1_CU12.png used on input line 1518.
 (pdftex.def)             Requested size: 99.58464pt x 171.55411pt.
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1482--1520
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1484--1522
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1520
+Underfull \vbox (badness 10000) detected at line 1522
  []
 
-LaTeX Info: Redefining \. on input line 1520.
-LaTeX Info: Redefining \% on input line 1520.
+LaTeX Info: Redefining \. on input line 1522.
+LaTeX Info: Redefining \% on input line 1522.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2869,53 +2899,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1522--1535
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1524--1537
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1535--1536
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1537--1538
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1536--1538
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1538--1540
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1538--1539
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1540--1541
  [] [] [] [] 
- []
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1543 								\multicolumn{2}{p{8cm}|}{} \hline
-                                                
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.1544 								\multicolumn
-                           {2}{|p{8cm}|}{2. El usuario hace clic en la opció...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.1544 								\multicolumn
-                           {2}{|p{8cm}|}{2. El usuario hace clic en la opció...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-
-Underfull \hbox (badness 4341) in paragraph at lines 1544--1544
-[]|\OT1/cmr/m/n/12 2. El usua-rio ha-ce clic en la op-cion
  []
 
 ! Misplaced \noalign.
@@ -2930,7 +2930,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.1546 								\multicolumn
-                           {2}{|p{8cm}|}{3. El sistema despliega la ayuda en...
+                           {2}{|p{8cm}|}{2. El usuario hace clic en la opció...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -2938,6 +2938,31 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.1546 								\multicolumn
+                           {2}{|p{8cm}|}{2. El usuario hace clic en la opció...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.1547 								\multicolumn{2}{p{8cm}|}{} \hline
+                                                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.1548 								\multicolumn
+                           {2}{|p{8cm}|}{3. El sistema despliega la ayuda en...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.1548 								\multicolumn
                            {2}{|p{8cm}|}{3. El sistema despliega la ayuda en...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2946,7 +2971,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1547 ...marse al usuario de lo sucedido.} \hline
+l.1549 ...marse al usuario de lo sucedido.} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2954,7 +2979,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1548 								\multicolumn
+l.1550 								\multicolumn
                            {2}{|p{8cm}|}{4. El usuario hace clic en "`Volver...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2962,7 +2987,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1548 								\multicolumn
+l.1550 								\multicolumn
                            {2}{|p{8cm}|}{4. El usuario hace clic en "`Volver...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -2971,7 +2996,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1549 								\multicolumn{2}{p{8cm}|}{} \hline
+l.1551 								\multicolumn{2}{p{8cm}|}{} \hline
                                                 
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2979,7 +3004,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.1565             \hline
+l.1567             \hline
                          
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2987,7 +3012,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.1565             \hline
+l.1567             \hline
                          
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -3001,7 +3026,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1568 								}
+l.1570 								}
                  \\
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -3014,7 +3039,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1568 								}
+l.1570 								}
                  \\
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -3022,19 +3047,19 @@ or \DeclareInputMath before using this key.
 <img/mockups1_CU13.png, id=243, 179.16937pt x 308.65312pt>
 File: img/mockups1_CU13.png Graphic file (type png)
  <use img/mockups1_CU13.png>
-Package pdftex.def Info: img/mockups1_CU13.png used on input line 1573.
+Package pdftex.def Info: img/mockups1_CU13.png used on input line 1575.
 (pdftex.def)             Requested size: 99.58464pt x 171.55411pt.
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 1539--1577
+Overfull \hbox (10.97357pt too wide) in alignment at lines 1541--1579
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1577
+Underfull \vbox (badness 10000) detected at line 1579
  []
 
-LaTeX Info: Redefining \. on input line 1577.
-LaTeX Info: Redefining \% on input line 1577.
+LaTeX Info: Redefining \. on input line 1579.
+LaTeX Info: Redefining \% on input line 1579.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3049,16 +3074,16 @@ Package epstopdf Info: Source file: <img/secuencia.eps>
 (epstopdf)                    date: 2017-02-23 18:48:38
 (epstopdf)                    size: 4333 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/secuencia-eps-converted-to.pdf img/secuencia.eps>
-(epstopdf)             \includegraphics on input line 1584.
+(epstopdf)             \includegraphics on input line 1586.
 Package epstopdf Info: Output file is already uptodate.
  <img/secuencia-eps-converted-to.pdf, id=248, 934.49126pt x 665.48625pt>
 File: img/secuencia-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/secuencia-eps-converted-to.pdf>
-Package pdftex.def Info: img/secuencia-eps-converted-to.pdf used on input line 1584.
+Package pdftex.def Info: img/secuencia-eps-converted-to.pdf used on input line 1586.
 (pdftex.def)             Requested size: 469.47049pt x 334.3264pt.
-LaTeX Info: Redefining \. on input line 1588.
-LaTeX Info: Redefining \% on input line 1588.
+LaTeX Info: Redefining \. on input line 1590.
+LaTeX Info: Redefining \% on input line 1590.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3067,8 +3092,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [56 <./img/mockups1_CU13.png>]
-LaTeX Info: Redefining \. on input line 1593.
-LaTeX Info: Redefining \% on input line 1593.
+LaTeX Info: Redefining \. on input line 1595.
+LaTeX Info: Redefining \% on input line 1595.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3080,10 +3105,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: img/DClases_placeholder.png Graphic file (type png)
 
 <use img/DClases_placeholder.png>
-Package pdftex.def Info: img/DClases_placeholder.png used on input line 1596.
+Package pdftex.def Info: img/DClases_placeholder.png used on input line 1598.
 (pdftex.def)             Requested size: 245.91707pt x 245.91707pt.
-LaTeX Info: Redefining \. on input line 1600.
-LaTeX Info: Redefining \% on input line 1600.
+LaTeX Info: Redefining \. on input line 1602.
+LaTeX Info: Redefining \% on input line 1602.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3094,16 +3119,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [58 <./img/DClases_placeholder.png>] <img/screen1.png, id=265, 239.39438pt x 398.23781pt>
 File: img/screen1.png Graphic file (type png)
  <use img/screen1.png>
-Package pdftex.def Info: img/screen1.png used on input line 1609.
+Package pdftex.def Info: img/screen1.png used on input line 1611.
 (pdftex.def)             Requested size: 179.54533pt x 298.67761pt.
 
 <img/screen2.png, id=266, 239.39438pt x 398.23781pt>
 File: img/screen2.png Graphic file (type png)
  <use img/screen2.png>
-Package pdftex.def Info: img/screen2.png used on input line 1616.
+Package pdftex.def Info: img/screen2.png used on input line 1618.
 (pdftex.def)             Requested size: 179.54533pt x 298.67761pt.
-LaTeX Info: Redefining \. on input line 1620.
-LaTeX Info: Redefining \% on input line 1620.
+LaTeX Info: Redefining \. on input line 1622.
+LaTeX Info: Redefining \% on input line 1622.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3114,16 +3139,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [59 <./img/screen1.png>] <img/screen3.png, id=271, 241.65282pt x 401.24907pt>
 File: img/screen3.png Graphic file (type png)
  <use img/screen3.png>
-Package pdftex.def Info: img/screen3.png used on input line 1623.
+Package pdftex.def Info: img/screen3.png used on input line 1625.
 (pdftex.def)             Requested size: 181.23917pt x 300.93605pt.
 
 <img/screen4.png, id=272, 239.39438pt x 395.22656pt>
 File: img/screen4.png Graphic file (type png)
  <use img/screen4.png>
-Package pdftex.def Info: img/screen4.png used on input line 1630.
+Package pdftex.def Info: img/screen4.png used on input line 1632.
 (pdftex.def)             Requested size: 179.54533pt x 296.41919pt.
-LaTeX Info: Redefining \. on input line 1634.
-LaTeX Info: Redefining \% on input line 1634.
+LaTeX Info: Redefining \. on input line 1636.
+LaTeX Info: Redefining \% on input line 1636.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3134,10 +3159,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [60 <./img/screen2.png> <./img/screen3.png>] <img/screen5.png, id=276, 451.6875pt x 770.88pt>
 File: img/screen5.png Graphic file (type png)
  <use img/screen5.png>
-Package pdftex.def Info: img/screen5.png used on input line 1639.
+Package pdftex.def Info: img/screen5.png used on input line 1641.
 (pdftex.def)             Requested size: 234.73524pt x 400.62466pt.
-LaTeX Info: Redefining \. on input line 1643.
-LaTeX Info: Redefining \% on input line 1643.
+LaTeX Info: Redefining \. on input line 1645.
+LaTeX Info: Redefining \% on input line 1645.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3148,10 +3173,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [61 <./img/screen4.png>] <img/screen6.png, id=280, 451.6875pt x 770.88pt>
 File: img/screen6.png Graphic file (type png)
  <use img/screen6.png>
-Package pdftex.def Info: img/screen6.png used on input line 1646.
+Package pdftex.def Info: img/screen6.png used on input line 1648.
 (pdftex.def)             Requested size: 234.73524pt x 400.62466pt.
-LaTeX Info: Redefining \. on input line 1650.
-LaTeX Info: Redefining \% on input line 1650.
+LaTeX Info: Redefining \. on input line 1652.
+LaTeX Info: Redefining \% on input line 1652.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3162,10 +3187,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [62 <./img/screen5.png>] <img/screen_grafico1.png, id=285, 451.6875pt x 274.02374pt>
 File: img/screen_grafico1.png Graphic file (type png)
  <use img/screen_grafico1.png>
-Package pdftex.def Info: img/screen_grafico1.png used on input line 1657.
+Package pdftex.def Info: img/screen_grafico1.png used on input line 1659.
 (pdftex.def)             Requested size: 234.73524pt x 142.40953pt.
-LaTeX Info: Redefining \. on input line 1661.
-LaTeX Info: Redefining \% on input line 1661.
+LaTeX Info: Redefining \. on input line 1663.
+LaTeX Info: Redefining \% on input line 1663.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3176,10 +3201,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [63 <./img/screen6.png>] <img/screen_grafico3.png, id=290, 450.9347pt x 527.72156pt>
 File: img/screen_grafico3.png Graphic file (type png)
  <use img/screen_grafico3.png>
-Package pdftex.def Info: img/screen_grafico3.png used on input line 1666.
+Package pdftex.def Info: img/screen_grafico3.png used on input line 1668.
 (pdftex.def)             Requested size: 234.73524pt x 274.70668pt.
-LaTeX Info: Redefining \. on input line 1673.
-LaTeX Info: Redefining \% on input line 1673.
+LaTeX Info: Redefining \. on input line 1675.
+LaTeX Info: Redefining \% on input line 1675.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3191,15 +3216,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: img/screen_grafico4.png Graphic file (type png)
 
 <use img/screen_grafico4.png>
-Package pdftex.def Info: img/screen_grafico4.png used on input line 1676.
+Package pdftex.def Info: img/screen_grafico4.png used on input line 1678.
 (pdftex.def)             Requested size: 234.73524pt x 335.05594pt.
  <img/screen_grafico5.png, id=297, 433.62pt x 488.57532pt>
 File: img/screen_grafico5.png Graphic file (type png)
  <use img/screen_grafico5.png>
-Package pdftex.def Info: img/screen_grafico5.png used on input line 1686.
+Package pdftex.def Info: img/screen_grafico5.png used on input line 1688.
 (pdftex.def)             Requested size: 234.73524pt x 264.49023pt.
-LaTeX Info: Redefining \. on input line 1690.
-LaTeX Info: Redefining \% on input line 1690.
+LaTeX Info: Redefining \. on input line 1692.
+LaTeX Info: Redefining \% on input line 1692.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3211,10 +3236,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: img/screen_grafico6.png Graphic file (type png)
 
 <use img/screen_grafico6.png>
-Package pdftex.def Info: img/screen_grafico6.png used on input line 1693.
+Package pdftex.def Info: img/screen_grafico6.png used on input line 1695.
 (pdftex.def)             Requested size: 234.73524pt x 321.02412pt.
-LaTeX Info: Redefining \. on input line 1702.
-LaTeX Info: Redefining \% on input line 1702.
+LaTeX Info: Redefining \. on input line 1704.
+LaTeX Info: Redefining \% on input line 1704.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3224,9 +3249,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [66 <./img/screen_grafico5.png> <./img/screen_grafico6.png>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1715.
-LaTeX Info: Redefining \. on input line 1732.
-LaTeX Info: Redefining \% on input line 1732.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1717.
+LaTeX Info: Redefining \. on input line 1734.
+LaTeX Info: Redefining \% on input line 1734.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3235,8 +3260,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [67]
-LaTeX Info: Redefining \. on input line 1767.
-LaTeX Info: Redefining \% on input line 1767.
+LaTeX Info: Redefining \. on input line 1769.
+LaTeX Info: Redefining \% on input line 1769.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3245,8 +3270,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [68]
-LaTeX Info: Redefining \. on input line 1811.
-LaTeX Info: Redefining \% on input line 1811.
+LaTeX Info: Redefining \. on input line 1813.
+LaTeX Info: Redefining \% on input line 1813.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3255,8 +3280,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [69]
-LaTeX Info: Redefining \. on input line 1850.
-LaTeX Info: Redefining \% on input line 1850.
+LaTeX Info: Redefining \. on input line 1852.
+LaTeX Info: Redefining \% on input line 1852.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3265,8 +3290,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [70]
-LaTeX Info: Redefining \. on input line 1887.
-LaTeX Info: Redefining \% on input line 1887.
+LaTeX Info: Redefining \. on input line 1889.
+LaTeX Info: Redefining \% on input line 1889.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3281,19 +3306,19 @@ Cap\'{\i }tulo 4.
 ] [73] [74
 
 ]
-Overfull \hbox (33.52094pt too wide) in paragraph at lines 1932--1933
+Overfull \hbox (33.52094pt too wide) in paragraph at lines 1934--1935
 \OT1/cmr/m/n/12 ni-ble en: $\OT1/cmtt/m/n/12 <[]https : / / play . google . com / store / apps / details ? id = de . ral
 phsapps . snorecontrol>[]$ 
  []
 
 
-Overfull \hbox (12.21251pt too wide) in paragraph at lines 1938--1939
+Overfull \hbox (12.21251pt too wide) in paragraph at lines 1940--1941
 []\OT1/cmr/m/n/12 [20] MPAn-droid-Chart. Li-brera An-droid pa-ra ge-ne-ra-cion de grafi-cos. Dis-po-ni-ble en: $\OT1
 /cmtt/m/n/12 <[]https :
  []
 
-LaTeX Info: Redefining \. on input line 1949.
-LaTeX Info: Redefining \% on input line 1949.
+LaTeX Info: Redefining \. on input line 1951.
+LaTeX Info: Redefining \% on input line 1951.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3305,8 +3330,8 @@ Ap\'{e}ndice A.
 [76
 
 ]
-LaTeX Info: Redefining \. on input line 2068.
-LaTeX Info: Redefining \% on input line 2068.
+LaTeX Info: Redefining \. on input line 2070.
+LaTeX Info: Redefining \% on input line 2070.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3315,8 +3340,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [77]
-LaTeX Info: Redefining \. on input line 2122.
-LaTeX Info: Redefining \% on input line 2122.
+LaTeX Info: Redefining \. on input line 2124.
+LaTeX Info: Redefining \% on input line 2124.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3325,8 +3350,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [78]
-LaTeX Info: Redefining \. on input line 2176.
-LaTeX Info: Redefining \% on input line 2176.
+LaTeX Info: Redefining \. on input line 2178.
+LaTeX Info: Redefining \% on input line 2178.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3335,8 +3360,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [79]
-LaTeX Info: Redefining \. on input line 2230.
-LaTeX Info: Redefining \% on input line 2230.
+LaTeX Info: Redefining \. on input line 2232.
+LaTeX Info: Redefining \% on input line 2232.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3345,8 +3370,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [80]
-LaTeX Info: Redefining \. on input line 2284.
-LaTeX Info: Redefining \% on input line 2284.
+LaTeX Info: Redefining \. on input line 2286.
+LaTeX Info: Redefining \% on input line 2286.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3355,8 +3380,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [81]
-LaTeX Info: Redefining \. on input line 2338.
-LaTeX Info: Redefining \% on input line 2338.
+LaTeX Info: Redefining \. on input line 2340.
+LaTeX Info: Redefining \% on input line 2340.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3365,8 +3390,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [82]
-LaTeX Info: Redefining \. on input line 2392.
-LaTeX Info: Redefining \% on input line 2392.
+LaTeX Info: Redefining \. on input line 2394.
+LaTeX Info: Redefining \% on input line 2394.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3375,8 +3400,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [83]
-LaTeX Info: Redefining \. on input line 2449.
-LaTeX Info: Redefining \% on input line 2449.
+LaTeX Info: Redefining \. on input line 2451.
+LaTeX Info: Redefining \% on input line 2451.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3385,8 +3410,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [84]
-LaTeX Info: Redefining \. on input line 2488.
-LaTeX Info: Redefining \% on input line 2488.
+LaTeX Info: Redefining \. on input line 2490.
+LaTeX Info: Redefining \% on input line 2490.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3395,8 +3420,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [85]
-LaTeX Info: Redefining \. on input line 2527.
-LaTeX Info: Redefining \% on input line 2527.
+LaTeX Info: Redefining \. on input line 2529.
+LaTeX Info: Redefining \% on input line 2529.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3405,8 +3430,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [86]
-LaTeX Info: Redefining \. on input line 2566.
-LaTeX Info: Redefining \% on input line 2566.
+LaTeX Info: Redefining \. on input line 2568.
+LaTeX Info: Redefining \% on input line 2568.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3415,8 +3440,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [87]
-LaTeX Info: Redefining \. on input line 2590.
-LaTeX Info: Redefining \% on input line 2590.
+LaTeX Info: Redefining \. on input line 2592.
+LaTeX Info: Redefining \% on input line 2592.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3425,8 +3450,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [88]
-LaTeX Info: Redefining \. on input line 2644.
-LaTeX Info: Redefining \% on input line 2644.
+LaTeX Info: Redefining \. on input line 2646.
+LaTeX Info: Redefining \% on input line 2646.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3435,8 +3460,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [89]
-LaTeX Info: Redefining \. on input line 2698.
-LaTeX Info: Redefining \% on input line 2698.
+LaTeX Info: Redefining \. on input line 2700.
+LaTeX Info: Redefining \% on input line 2700.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3445,8 +3470,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [90]
-LaTeX Info: Redefining \. on input line 2752.
-LaTeX Info: Redefining \% on input line 2752.
+LaTeX Info: Redefining \. on input line 2754.
+LaTeX Info: Redefining \% on input line 2754.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3455,8 +3480,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [91]
-LaTeX Info: Redefining \. on input line 2806.
-LaTeX Info: Redefining \% on input line 2806.
+LaTeX Info: Redefining \. on input line 2808.
+LaTeX Info: Redefining \% on input line 2808.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3465,8 +3490,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [92]
-LaTeX Info: Redefining \. on input line 2860.
-LaTeX Info: Redefining \% on input line 2860.
+LaTeX Info: Redefining \. on input line 2862.
+LaTeX Info: Redefining \% on input line 2862.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3475,8 +3500,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [93]
-LaTeX Info: Redefining \. on input line 2914.
-LaTeX Info: Redefining \% on input line 2914.
+LaTeX Info: Redefining \. on input line 2916.
+LaTeX Info: Redefining \% on input line 2916.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3485,8 +3510,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [94]
-LaTeX Info: Redefining \. on input line 2968.
-LaTeX Info: Redefining \% on input line 2968.
+LaTeX Info: Redefining \. on input line 2970.
+LaTeX Info: Redefining \% on input line 2970.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3495,8 +3520,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [95]
-LaTeX Info: Redefining \. on input line 3022.
-LaTeX Info: Redefining \% on input line 3022.
+LaTeX Info: Redefining \. on input line 3024.
+LaTeX Info: Redefining \% on input line 3024.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3505,8 +3530,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [96]
-LaTeX Info: Redefining \. on input line 3061.
-LaTeX Info: Redefining \% on input line 3061.
+LaTeX Info: Redefining \. on input line 3063.
+LaTeX Info: Redefining \% on input line 3063.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3515,8 +3540,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [97]
-LaTeX Info: Redefining \. on input line 3100.
-LaTeX Info: Redefining \% on input line 3100.
+LaTeX Info: Redefining \. on input line 3102.
+LaTeX Info: Redefining \% on input line 3102.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3525,8 +3550,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [98]
-LaTeX Info: Redefining \. on input line 3139.
-LaTeX Info: Redefining \% on input line 3139.
+LaTeX Info: Redefining \. on input line 3141.
+LaTeX Info: Redefining \% on input line 3141.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3535,8 +3560,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [99]
-LaTeX Info: Redefining \. on input line 3178.
-LaTeX Info: Redefining \% on input line 3178.
+LaTeX Info: Redefining \. on input line 3180.
+LaTeX Info: Redefining \% on input line 3180.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3545,8 +3570,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [100]
-LaTeX Info: Redefining \. on input line 3217.
-LaTeX Info: Redefining \% on input line 3217.
+LaTeX Info: Redefining \. on input line 3219.
+LaTeX Info: Redefining \% on input line 3219.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3555,8 +3580,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [101]
-LaTeX Info: Redefining \. on input line 3220.
-LaTeX Info: Redefining \% on input line 3220.
+LaTeX Info: Redefining \. on input line 3222.
+LaTeX Info: Redefining \% on input line 3222.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3591,7 +3616,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  4539 strings out of 493673
  64476 string characters out of 3143953
- 157861 words of memory out of 3000000
+ 154861 words of memory out of 3000000
  7743 multiletter control sequences out of 15000+200000
  16676 words of font info for 62 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -3608,7 +3633,7 @@ type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on informe_final.pdf (104 pages, 1616310 bytes).
+Output written on informe_final.pdf (104 pages, 1616227 bytes).
 PDF statistics:
  489 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

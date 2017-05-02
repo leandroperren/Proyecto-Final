@@ -806,7 +806,7 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 						\endlastfoot							
             \hline
                 
-								\multicolumn{2}{|p{8cm}|}{1. Éste caso de uso comienza cuando el usuario se encuentre ubicado en la pantalla dedicada a la grabación, habiendo hecho uso del «CU9 - Iniciando interfaz de grabación» que aquí llamamos "`Iniciar grabación"', donde hace clic en el botón llamado "`Iniciar"'.} 
+								\multicolumn{2}{|p{8cm}|}{1. El caso de uso comienza cuando el Paciente hace uso del «CU9 - Iniciando interfaz de grabación» que aquí llamamos "`Iniciar grabación"', donde hace clic en el botón llamado "`Iniciar"'.} 
 								& \multicolumn{2}{p{8cm} |}{1.1 Si la batería no cumple con el mínimo establecido, se le debe informar al usuario con una advertencia, iniciando igualmente el proceso de captura.}
 								\\
 								\multicolumn{2}{|p{8cm}|}{} 
@@ -939,7 +939,7 @@ Los datos capturados son enviados al sistema de procesamiento solo si completan 
 						\endlastfoot
 														
             \hline
-								\multicolumn{2}{|p{8cm}|}{1. El usuario inicia la aplicación.} & 
+								\multicolumn{2}{|p{8cm}|}{1. El caso de uso se inicia cuando el paciente accede a la lista de resultados.} & 
 								\multicolumn{2}{p{8cm}|}{} \hline
 								\multicolumn{2}{|p{8cm}|}{2. La aplicación se sitúa en la pantalla principal, donde se listan todos los resultados de las diferentes grabaciones en una lista.} 
 								& \multicolumn{2}{p{8cm}|}{2.1 Si la aplicación no posee grabaciones, la lista estará vacía y se debe mostrar un mensaje en el lugar de la lista, avisando al usuario que aún no posee grabaciones.} \hline
@@ -1005,7 +1005,7 @@ Se presenta al usuario una lista de grabaciones. El usuario hace clic en uno de 
 						\endlastfoot
 														
             \hline
-							\multicolumn{2}{|p{8cm}|}{1. Comienza cuando finaliza el caso de uso «CU8 - Generando informe de resultados», mediante el cual se genera el reporte en formato PDF.} & 
+							\multicolumn{2}{|p{8cm}|}{1. Comienza cuando el Paciente finaliza el caso de uso «CU8 - Generando informe de resultados», mediante el cual se genera el reporte en formato PDF.} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
 							\multicolumn{2}{|p{8cm}|}{2. La aplicación abre el asistente de correo del propio Android creando un correo nuevo.} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
@@ -1126,15 +1126,17 @@ El segmento con 5 min de captura se envía al proceso de cálculos. Se procesa dic
 						\endlastfoot
 														
             \hline
-							\multicolumn{2}{|p{8cm}|}{1. El usuario se encuentra en la pantalla principal de la aplicación y hace uso del «CU12 - Consultando menú de opciones» para luego hacer uso del CU actual del cual extiende.} & 
+							\multicolumn{2}{|p{8cm}|}{1. El paciente hace uso del «CU12 - Consultando menú de opciones».} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{2. El usuario es dirigido a una nueva pantalla donde se encuentran todos los datos que debe ingresar, separados entre datos personales y datos del médico. El usuario cuenta con: Nombre, Apellido, Edad y Sexo. Por otro lado, el médico cuenta con el campo Email únicamente.} & 
+							\multicolumn{2}{|p{8cm}|}{2. El paciente elige la opción «Configuraciones».} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{3. El usuario guarda la información haciendo clic en un botón Guardar (preferentemente).} & 
-							\multicolumn{2}{p{8cm}|}{3.1 Si el usuario no desea guardar la información almacenada, debe poder hacer clic en una flecha de regreso (volver) ubicada a la izquierda del título o bien mediante la acción “volver” del dispositivo en uso, descartando todo lo introducido y dirigiendolo hacia la pantalla principal.} \hline
-							\multicolumn{2}{|p{8cm}|}{4. La información ingresada es almacenada en variables de Shared Preferences de Android.} & 
-							\multicolumn{2}{p{8cm}|}{4.1 Si alguno de los campos introducidos falla el sistema de validación (principalmente el email) se debe informar al usuario de tal fallo y se cancela el guardado de los datos hasta corregir el error y que se vuelva a proceder normalmente.} \hline
-							\multicolumn{2}{|p{8cm}|}{5. El usuario es redirigido hacia la pantalla principal.} & 
+							\multicolumn{2}{|p{8cm}|}{3. El usuario es dirigido a una nueva pantalla donde ingresa: Nombre, Apellido, Edad, Sexo y el Email del médico.} & 
+							\multicolumn{2}{p{8cm}|}{} \hline
+							\multicolumn{2}{|p{8cm}|}{4. El usuario presiona el boton guardar.} & 
+							\multicolumn{2}{p{8cm}|}{4.1 Si el usuario no desea guardar la información almacenada, vuelve a la pantalla principal haciendo clic en la flecha de regreso (volver) ubicada a la izquierda del título o bien mediante la acción “volver” del dispositivo en uso.} \hline
+							\multicolumn{2}{|p{8cm}|}{5. La información ingresada es almacenada en variables de Shared Preferences de Android.} & 
+							\multicolumn{2}{p{8cm}|}{5.1 Si alguno de los campos introducidos falla el sistema de validación (principalmente el email) se debe informar al usuario de tal fallo y se cancela el guardado de los datos hasta corregir el error y que se vuelva a proceder normalmente.} \hline
+							\multicolumn{2}{|p{8cm}|}{6. El usuario es redirigido hacia la pantalla principal.} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
                 %\multicolumn{2}{|p{8cm}|}{\centering 
                     %\begin{enumerate}
@@ -1190,7 +1192,7 @@ El usuario ingresa los datos personales más el email del médico. Luego hace clic
 						\endlastfoot
 														
             \hline
-							\multicolumn{2}{|p{8cm}|}{1. El usuario se encuentra en la pantalla de grabación (captura de datos) y ejecuta el «CU2 - Finalizando captura de datos».} & 
+							\multicolumn{2}{|p{8cm}|}{1. El paciente hace uso de «CU2 - Finalizando captura de datos».} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
 							\multicolumn{2}{|p{8cm}|}{2. La información almacenada temporalmente en variables (vectores) es serializada para formar un único dato por cada variable.} & 
 							\multicolumn{2}{p{8cm}|}{2.1 Si las variables temporales que almacenan información están vacías, no se debe hacer uso de las conexiones y métodos de la base de datos, además de informar acerca de lo sucedido.} \hline
@@ -1248,9 +1250,9 @@ El sistema toma las variables con la información obtenida y las serializa para f
 						\endlastfoot
 														
             \hline
-								\multicolumn{2}{|p{8cm}|}{1. El usuario acaba de terminar una grabación y fue redirigido hacia la pantalla de presentación de información gráfica o bien accedió desde la pantalla principal haciendo clic en un item de grabación.} & 
-								\multicolumn{2}{p{8cm}|}{} \hline
-								\multicolumn{2}{|p{8cm}|}{2. Allí hace clic en un botón de acción llamado "`Generar informe y enviar"' o "`Generar PDF y enviar"' como nombres tentativos.} & 
+								\multicolumn{2}{|p{8cm}|}{1. El caso de uso inicia cuando el paciente elige detener la captura de datos.} & 
+								\multicolumn{2}{p{8cm}|}{1.1 El caso de uso inicia cuando el paciente selecciona un item de la lista de resultados.} \hline
+								\multicolumn{2}{|p{8cm}|}{2. El paciente hace clic en el botón de acción llamado "`Generar PDF y enviar"'.} & 
 								\multicolumn{2}{p{8cm}|}{} \hline
 								\multicolumn{2}{|p{8cm}|}{3. El sistema recoge toda la información personal del usuario ingresada, además de todos los gráficos y tablas generados con la información obtenida del análisis y confecciona un archivo en formato PDF que es almacenado en el dispositivo de manera permanente.} & 
 								\multicolumn{2}{p{8cm}|}{3.1 Si el sistema no puede generar el archivo PDF, debe informar al usuario lo sucedido.} \hline
@@ -1364,8 +1366,8 @@ Una vez que el usuario inicia la aplicación y se encuentra en la pantalla princi
 						\endlastfoot
 														
             \hline
-							\multicolumn{2}{|p{8cm}|}{1. El usuario se encuentra capturando y decide detener la misma.} & 
-							\multicolumn{2}{p{8cm}|}{1.1 El usuario puede seleccionar una captura de la lista de resultados.} \hline
+							\multicolumn{2}{|p{8cm}|}{1. El paciente hace uso del «CU2 - Finalizando captura de datos».} & 
+							\multicolumn{2}{p{8cm}|}{1.1 El paciente hace uso del «CU3 - Consultando lista de resultados».} \hline
 							\multicolumn{2}{|p{8cm}|}{2. La aplicación recupera los datos del procesamiento y los almacena en variables temporales.} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
 							\multicolumn{2}{|p{8cm}|}{3. Se calculan los porcentajes de Ronquidos, No ronquidos y distribución por intensidad.} & 
@@ -1539,9 +1541,9 @@ El usuario, ubicado en la pantalla principal, hace clic en el ícono que represen
 						\endlastfoot
 														
             \hline
-								\multicolumn{2}{|p{8cm}|}{1. El usuario ubicado en la pantalla principal, hace clic en el ícono de menú, haciendo uso del «CU12 - Consultando menú de opciones» donde se despliega el menú correspondiente.} & 
+								\multicolumn{2}{|p{8cm}|}{1. El usuario hace uso del «CU12 - Consultando menú de opciones» donde se despliega el menú correspondiente.} & 
 								\multicolumn{2}{p{8cm}|}{} \hline
-								\multicolumn{2}{|p{8cm}|}{2. El usuario hace clic en la opción "`Ingresar/editar información"' (nombre sugerido), donde es redirigido hacia una nueva pantalla.} & 
+								\multicolumn{2}{|p{8cm}|}{2. El usuario hace clic en la opción "`Ayuda"', donde es redirigido hacia una nueva pantalla.} & 
 								\multicolumn{2}{p{8cm}|}{} \hline
 								\multicolumn{2}{|p{8cm}|}{3. El sistema despliega la ayuda en forma de texto y gráficos, donde el usuario puede navegar libremente.} & 
 								\multicolumn{2}{p{8cm}|}{3.1 Si la ayuda no puede ser mostrada al usuario debido a un error, debe informarse al usuario de lo sucedido.} \hline
