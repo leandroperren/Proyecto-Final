@@ -806,24 +806,26 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 						\endlastfoot							
             \hline
                 
-								\multicolumn{2}{|p{8cm}|}{1. El caso de uso comienza cuando el Paciente hace uso del «CU9 - Iniciando interfaz de grabación» que aquí llamamos "`Iniciar grabación"', donde hace clic en el botón llamado "`Iniciar"'.} 
-								& \multicolumn{2}{p{8cm} |}{1.1 Si la batería no cumple con el mínimo establecido, se le debe informar al usuario con una advertencia, iniciando igualmente el proceso de captura.}
+								\multicolumn{2}{|p{8cm}|}{1. El paciente inicia la captura presionando el boton llamado "`Iniciar"'.} 
+								& \multicolumn{2}{p{8cm} |}{1.1 Si la batería no cumple con el mínimo establecido, la aplicacion devuelve el mensaje "`Debe conectar el cargador del dispositivo"'.}
 								\\
 								\multicolumn{2}{|p{8cm}|}{} 
-								& \multicolumn{2}{p{8cm}|}{1.2 Si la memoria es inferior al mínimo sugerido, se debe informar al usuario y no debe continuar con la inicialización del proceso de captura.} \hline
-                \multicolumn{2}{|p{8cm}|}{2. El sistema setea la frecuencia de muestreo de 8000Hz y el tamaño de la ventana en 5 min, e inicia el proceso de captura de datos mediante el micrófono del dispositivo.} 
+								& \multicolumn{2}{p{8cm}|}{1.2 Si la memoria es inferior al mínimo sugerido, la aplicación muestra el mensaje "`Memoria insuficiente"'.} \\
+								\multicolumn{2}{|p{8cm}|}{} 
+								& \multicolumn{2}{p{8cm}|}{1.3 La aplicación no comienza la captura y despliega la pantalla inicial "`Lista de resultados"'.} \hline
+                \multicolumn{2}{|p{8cm}|}{2. La aplicación setea la frecuencia de muestreo de 8000Hz y el tamaño de la ventana en 5 min, e inicia el proceso de captura de datos mediante el micrófono del dispositivo.} 
 								& \multicolumn{2}{p{8cm} |}{}
 								\hline
-                \multicolumn{2}{|p{8cm}|}{3. El sistema informa al usuario que ha iniciado mediante un mensaje visible temporalmente.} 
+                \multicolumn{2}{|p{8cm}|}{3. La aplicación muestra el mensaje "`Grabando"'.} 
 								& \multicolumn{2}{p{8cm} |}{}
 								\hline
-                \multicolumn{2}{|p{8cm}|}{4. Las muestras obtenidas desde el micrófono son almacenadas en una variable hasta alcanzar el límite de 5 min.} 
+                \multicolumn{2}{|p{8cm}|}{4. La aplicación almacena las muestras obtenidas desde el micrófono en una variable hasta alcanzar el límite de 5 min.} 
 								& \multicolumn{2}{p{8cm} |}{}
 								\hline
-                \multicolumn{2}{|p{8cm}|}{5. Se invoca el caso de uso «CU5 - Procesando la señal capturada».} 
+                \multicolumn{2}{|p{8cm}|}{5. La aplicación invoca el caso de uso «CU5 - Procesando la señal capturada».} 
 								& \multicolumn{2}{p{8cm} |}{} \\
 								\hline
-                \multicolumn{2}{|p{8cm}|}{6. El proceso se repite hasta que se llame al «CU2 - Finalizando captura de datos»} 
+                \multicolumn{2}{|p{8cm}|}{6. El paciente llama al «CU2 - Finalizando captura de datos»} 
 								& \multicolumn{2}{p{8cm} |}{}\hline                
                     %\begin{description}
                         %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
