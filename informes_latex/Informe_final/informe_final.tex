@@ -946,7 +946,7 @@ Los datos capturados son enviados al sistema de procesamiento solo si completan 
 								\multicolumn{2}{|p{8cm}|}{1. El caso de uso se inicia cuando el paciente accede a la lista de resultados.} & 
 								\multicolumn{2}{p{8cm}|}{} \hline
 								\multicolumn{2}{|p{8cm}|}{2. La aplicación muestra una lista de items. Cada item representa una grabación previa indicando: cantidad de detecciones, hora de inicio y fin, duración total y el color representativo de la cantidad de detecciones.} 
-								& \multicolumn{2}{p{8cm}|}{2.1 Si la aplicación no posee grabaciones previas, muestra el mensaje "`No posee grabaciones"', Continuando con el curso normal.} \hline						
+								& \multicolumn{2}{p{8cm}|}{2.1 Si la aplicación no posee grabaciones previas, muestra el mensaje "`No posee grabaciones"'.} \hline						
 								\multicolumn{2}{|p{8cm}|}{3. El paciente presiona sobre un item.} & 
 								\multicolumn{2}{p{8cm}|}{} \hline
 								
@@ -1020,7 +1020,7 @@ Se presenta al usuario una lista de grabaciones. El usuario hace clic en uno de 
 							\multicolumn{2}{p{8cm}|}{3.2 En caso de no estar cargado el mail del médico, la aplicación muestra el mensaje "`Debe cargar el mail del médico"'.} \\
 							\multicolumn{2}{|p{8cm}|}{} & 
 							\multicolumn{2}{p{8cm}|}{3.3 La aplicación retorna a la pantalla "`Lista de resultados"'.} \hline
-							\multicolumn{2}{|p{8cm}|}{4. El paciente presiona "`Enviar"' para terminar el caso de uso.} & 
+							\multicolumn{2}{|p{8cm}|}{4. El paciente presiona "`Enviar"' para realizar el envío.} & 
 							\multicolumn{2}{p{8cm}|}{4.1 El sistema de correo de Android asignará el correo a "`No enviados"' si el mismo falla por algún motivo.} \\
 							\multicolumn{2}{|p{8cm}|}{} & 
 							\multicolumn{2}{p{8cm}|}{4.2 La aplicación muestra el mensaje "`El correo no pudo ser enviado"', continuando con el paso 5 del curso normal.} \hline							
@@ -1143,7 +1143,9 @@ El segmento con 5 min de captura se envía al proceso de cálculos. Se procesa dic
 	\multicolumn{2}{|p{8cm}|}{4. El paciente presiona el botón guardar.} & 
 	\multicolumn{2}{p{8cm}|}{4.1 Si el usuario no desea guardar la información almacenada, vuelve a la pantalla principal haciendo clic en la fecha de regreso (volver) ubicada a la izquierda del título o bien mediante la acción volver del dispositivo en uso.} \hline
 	\multicolumn{2}{|p{8cm}|}{5. La aplicación verifica los datos ingresados y si son correctos, los almacena en variables de Shared Preferences de Android.} & 
-	\multicolumn{2}{p{8cm}|}{5.1 Si hay sólo un dato ingresado incorrectamente, la aplicación muestra el mensaje «El valor ingresado en *** es incorrecto. Por favor verifíquelo e intente nuevamente», donde *** es el nombre del campo ingresado incorrectamente.\\ 5.2 Si hay más de un dato ingresado incorrectamente, la aplicación muestra el mensaje «Hay datos ingresados incorrectamente».} \hline
+	\multicolumn{2}{p{8cm}|}{5.1 Si hay sólo un dato ingresado incorrectamente, la aplicación muestra el mensaje «El valor ingresado en *** es incorrecto. Por favor verifíquelo e intente nuevamente», donde *** es el nombre del campo ingresado incorrectamente.} \\
+	\multicolumn{2}{|p{8cm}|}{} & 
+	\multicolumn{2}{p{8cm}|}{5.2 Si hay más de un dato ingresado incorrectamente, la aplicación muestra el mensaje «Hay datos ingresados incorrectamente».} \hline
 	\multicolumn{2}{|p{8cm}|}{6. La aplicación muestra el mensaje «Datos almacenados correctamente» y redirige al paciente hacia la pantalla principal.} & 
 	\multicolumn{2}{p{8cm}|}{} \hline
                 %\multicolumn{2}{|p{8cm}|}{\centering 
