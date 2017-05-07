@@ -780,11 +780,11 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 \end{figure}
 
 
-%******************************************************
+%------------------------------------------------------
 %
 %   Tablas con descripciones de los CU
 %
-%******************************************************
+%------------------------------------------------------
 \begin{longtable}{|l|l|l|l|}
 			\hline
             \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU1} \\
@@ -1118,37 +1118,34 @@ El segmento con 5 min de captura se envía al proceso de cálculos. Se procesa dic
 \end{longtable}
 
 \begin{longtable}{|l|l|l|l|}
-			\hline
-            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU6} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Ingresando información para el mail}} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual, el usuario ingresa toda la información de interés que se adjuntará al informe en formato PDF.} \\
-            \hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario hace uso del «CU12 - Consultando menú de opciones» para luego darle curso al CU actual. La aplicación debe guardar los datos en variables locales, como por ejemplo las SHARED\_PREFERENCES en Android.} \\														
-						\hline
-									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
-						\endfirsthead									
-						\endhead
-						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
-						\endfoot
-						\endlastfoot
+	\hline
+    \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU6} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Ingresando información para el mail}} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual, el usuario ingresa toda la información de interés que se adjuntará al informe en formato PDF.} \\
+    \hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario hace uso del «CU12 - Consultando menú de opciones» para luego darle curso al CU actual. La aplicación debe guardar los datos en variables locales, como por ejemplo las SHARED\_PREFERENCES en Android.} \\														
+	\hline
+	\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+	\endfirsthead									
+	\endhead
+	\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+	\endfoot
+	\endlastfoot
 														
-            \hline
-							\multicolumn{2}{|p{8cm}|}{1. El paciente hace uso del «CU12 - Consultando menú de opciones».} & 
-							\multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{2. El paciente elige la opción «Configuraciones».} & 
-							\multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{3. El usuario es dirigido a una nueva pantalla donde ingresa: Nombre, Apellido, Edad, Sexo y el Email del médico.} & 
-							\multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{4. El usuario presiona el boton guardar.} & 
-							\multicolumn{2}{p{8cm}|}{4.1 Si el usuario no desea guardar la información almacenada, vuelve a la pantalla principal haciendo clic en la flecha de regreso (volver) ubicada a la izquierda del título o bien mediante la acción “volver” del dispositivo en uso.} \hline
-							\multicolumn{2}{|p{8cm}|}{5. La información ingresada es almacenada en variables de Shared Preferences de Android.} & 
-							\multicolumn{2}{p{8cm}|}{5.1 Si alguno de los campos introducidos falla el sistema de validación (principalmente el email) se debe informar al usuario de tal fallo y se cancela el guardado de los datos hasta corregir el error y que se vuelva a proceder normalmente.} \hline
-							\multicolumn{2}{|p{8cm}|}{6. El usuario es redirigido hacia la pantalla principal.} & 
-							\multicolumn{2}{p{8cm}|}{} \hline
+    \hline
+	\multicolumn{2}{|p{8cm}|}{1. El paciente da inicio haciendo uso del «CU12 - consultando menú de opciones».} & \multicolumn{2}{p{8cm}|}{} \hline
+	\multicolumn{2}{|p{8cm}|}{2. El paciente elige la opción «Configuraciones».} & \multicolumn{2}{p{8cm}|}{} \hline
+	\multicolumn{2}{|p{8cm}|}{3. La aplicación redirige al usuario (paciente) hacia una nueva pantalla donde ingresa: Nombre, Apellido, Edad y Sexo propios, y además, el Email del médico.} & \multicolumn{2}{p{8cm}|}{} \hline
+	\multicolumn{2}{|p{8cm}|}{4. El paciente presiona el botón guardar.} & 
+	\multicolumn{2}{p{8cm}|}{4.1 Si el usuario no desea guardar la información almacenada, vuelve a la pantalla principal haciendo clic en la fecha de regreso (volver) ubicada a la izquierda del título o bien mediante la acción volver del dispositivo en uso.} \hline
+	\multicolumn{2}{|p{8cm}|}{5. La aplicación verifica los datos ingresados y si son correctos, los almacena en variables de Shared Preferences de Android.} & 
+	\multicolumn{2}{p{8cm}|}{5.1 Si hay sólo un dato ingresado incorrectamente, la aplicación muestra el mensaje «El valor ingresado en *** es incorrecto. Por favor verifíquelo e intente nuevamente», donde *** es el nombre del campo ingresado incorrectamente.\\ 5.2 Si hay más de un dato ingresado incorrectamente, la aplicación muestra el mensaje «Hay datos ingresados incorrectamente».} \hline
+	\multicolumn{2}{|p{8cm}|}{6. La aplicación muestra el mensaje «Datos almacenados correctamente» y redirige al paciente hacia la pantalla principal.} & 
+	\multicolumn{2}{p{8cm}|}{} \hline
                 %\multicolumn{2}{|p{8cm}|}{\centering 
                     %\begin{enumerate}
                         %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
@@ -1483,31 +1480,37 @@ El usuario accede a la pantalla de presentación de información mediante uno de l
 		\label{tabla:caso_uso_visualizando_resultados_tablas}
 \end{longtable}
 
+%------------------------
+%
+%	CASO DE USO 12
+%
+%------------------------
 \begin{longtable}{|l|l|l|l|}
-			\hline
-            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU12} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Consultando menú de opciones}} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual el usuario accede a una lista de opciones que puede seleccionar para llevar a cabo alguna acción definida.} \\
-            \hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario se encuentra en la pantalla principal de la aplicación. El menú debe estar ubicado en la barra de título y en forma de 3 mini-cuadrados dispuestos en forma vertical uno debajo del otro.} \\														
-						\hline
-									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
-						\endfirsthead									
-						\endhead
-						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
-						\endfoot
-						\endlastfoot
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU12} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Consultando menú de opciones}} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual el usuario accede a una lista de opciones que puede seleccionar para llevar a cabo alguna acción definida.} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario se encuentra en la pantalla principal de la aplicación. El menú debe estar ubicado en la barra de título y en forma de 3 mini-cuadrados dispuestos en forma vertical uno debajo del otro.} \\														
+	\hline
+	% Inicio curso normal y alternativo
+	\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+	\endfirsthead									
+	\endhead
+	\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+	\endfoot
+	\endlastfoot
 														
-            \hline
-							\multicolumn{2}{|p{8cm}|}{1. El usuario inicia la aplicación y se ubica en la pantalla principal.} & \multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{2. El usuario hace clic en un botón tipo ícono (en forma de 3 mini-cuadrados dispuestos en forma vertical uno debajo del otro).} & \multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{3. Se despliega un menú superpuesto a los elementos de tal pantalla con las opciones disponibles.} & \multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{4. El usuario puede hacer clic nuevamente sobre el ícono para cerrar el menú.} & 
-							\multicolumn{2}{p{8cm}|}{4.1 El usuario puede invocar el «CU6 - Ingresando información para el mail» o bien invocar el «CU13 - Consultando ayuda»} 
+	\hline
+	\multicolumn{2}{|p{8cm}|}{1. El paciente inicia la aplicación y ésta lo dirige hacia la pantalla principal.} & \multicolumn{2}{p{8cm}|}{} \hline
+	\multicolumn{2}{|p{8cm}|}{2. El paciente hace clic en un botón tipo ícono (en forma de 3 mini-cuadrados dispuestos en forma vertical uno debajo del otro) situado sobre la barra de acciones de la aplicación.} & \multicolumn{2}{p{8cm}|}{} \hline
+	\multicolumn{2}{|p{8cm}|}{3. La aplicación despliega un menú superpuesto sobre todos los elementos de la pantalla actual con las opciones disponibles.} & \multicolumn{2}{p{8cm}|}{} \hline
+	\multicolumn{2}{|p{8cm}|}{4. El paciente puede hacer clic nuevamente sobre el ícono para cerrar el menú.} & 
+	\multicolumn{2}{p{8cm}|}{4.1 Opcionalmente, el paciente puede invocar el «CU6 - Ingresando información para el mail» o por otro lado invocar el «CU13 - Consultando ayuda»} 
                 %\multicolumn{2}{|p{8cm}|}{\centering 
                     %\begin{enumerate}
                         %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
@@ -1526,48 +1529,54 @@ El usuario accede a la pantalla de presentación de información mediante uno de l
 										%\item 4.b.  Ver ayuda: extiende «CU13 - Consultando ayuda»								
 									%\end{list_type}
 								%} \\										
-            \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm}|}{
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm}|}{
 El usuario, ubicado en la pantalla principal, hace clic en el ícono que representa el menú. Se despliegan las opciones disponibles. El usuario puede optar por hace uso de alguna de las opciones disponibles o no. Si desea cerrar el menú, hace clic nuevamente en el ícono correspondiente.
-								} \\
-            \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm}|}{														
-										\centering \\ 		
-										\includegraphics[width=3.5cm]{img/mockups1_CU12.png}	
-								} \\
-            \hline
-		\caption{Caso de uso Consultando menú de opciones}
-		\label{tabla:caso_uso_consultando_opciones}
+		} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm}|}{														
+		\centering \\ 		
+		\includegraphics[width=3.5cm]{img/mockups1_CU12.png}	
+		} \\
+	\hline
+	\caption{Caso de uso Consultando menú de opciones}
+	\label{tabla:caso_uso_consultando_opciones}
 \end{longtable}
 
+%------------------------
+%
+%	CASO DE USO 13
+%
+%------------------------
 \begin{longtable}{|l|l|l|l|}
-			\hline
-            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU13} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Consultando ayuda}} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual el usuario accede a la ayuda de la aplicación.} \\
-            \hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario debe estar ubicado en la pantalla principal y hacer uso del «CU12 - Consultando menú de opciones», del cual extiende éste caso de uso.} \\														
-						\hline
-									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
-						\endfirsthead									
-						\endhead
-						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
-						\endfoot
-						\endlastfoot
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU13} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Consultando ayuda}} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual el usuario accede a la ayuda de la aplicación.} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{El usuario debe estar ubicado en la pantalla principal y hacer uso del «CU12 - Consultando menú de opciones», del cual extiende éste caso de uso.} \\														
+	\hline
+	% Inicio curso normal y alternativo
+	\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+	\endfirsthead									
+	\endhead
+	\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
+	\endfoot
+	\endlastfoot
 														
-            \hline
-								\multicolumn{2}{|p{8cm}|}{1. El usuario hace uso del «CU12 - Consultando menú de opciones» donde se despliega el menú correspondiente.} & 
-								\multicolumn{2}{p{8cm}|}{} \hline
-								\multicolumn{2}{|p{8cm}|}{2. El usuario hace clic en la opción "`Ayuda"', donde es redirigido hacia una nueva pantalla.} & 
-								\multicolumn{2}{p{8cm}|}{} \hline
-								\multicolumn{2}{|p{8cm}|}{3. El sistema despliega la ayuda en forma de texto y gráficos, donde el usuario puede navegar libremente.} & 
-								\multicolumn{2}{p{8cm}|}{3.1 Si la ayuda no puede ser mostrada al usuario debido a un error, debe informarse al usuario de lo sucedido.} \hline
-								\multicolumn{2}{|p{8cm}|}{4. El usuario hace clic en "`Volver/Salir"' o bien en el botón volver del dispositivo, para poder ser redirigido hacia la pantalla principal.} & 
-								\multicolumn{2}{p{8cm}|}{} \hline
+	\hline
+	\multicolumn{2}{|p{8cm}|}{1. El paciente da inicio haciendo uso del «CU12 - Consultando menú de opciones», donde la aplicación se despliega el menú correspondiente.} & 
+	\multicolumn{2}{p{8cm}|}{} \hline
+	\multicolumn{2}{|p{8cm}|}{2. El paciente hace clic en la opción «Ayuda», donde la aplicación lo redirige hacia una nueva pantalla.} & 
+	\multicolumn{2}{p{8cm}|}{} \hline
+	\multicolumn{2}{|p{8cm}|}{3. La aplicación despliega la ayuda en forma de texto y gráficos, donde el paciente puede navegarla libremente.} & 
+	\multicolumn{2}{p{8cm}|}{3.1 Si la aplicación no puede desplegar la ayuda al paciente debido a un error, debe mostrar el mensaje «Ocurrió un error al cargar la información de ayuda».} \hline
+	\multicolumn{2}{|p{8cm}|}{4. El paciente hace clic en «Volver/Salir» o bien en el botón volver del dispositivo (luego de consultar la ayuda necesaria), para que la aplicación pueda redirigirlo hacia la pantalla principal.} & 
+	\multicolumn{2}{p{8cm}|}{} \hline
                 %\multicolumn{2}{|p{8cm}|}{\centering 
                     %\begin{enumerate}
                         %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
@@ -1583,18 +1592,18 @@ El usuario, ubicado en la pantalla principal, hace clic en el ícono que represen
                         %\item Si la ayuda no puede ser mostrada al usuario debido a un error, debe informarse al usuario de lo sucedido.
 										%\end{enumerate}								
                 %} \\
-            \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm}|}{
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm}|}{
 El usuario accede al menú de opciones desde la pantalla principal y allí hace clic en la opción “Ingresar/editar información”. Se redirige al usuario hacia una nueva pantalla con ayuda acerca de la aplicación y sus componentes principales. El usuario decide cuándo volver a la pantalla principal.
-								} \\
-            \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm}|}{														
-										\centering \\ 		
-										\includegraphics[width=3.5cm]{img/mockups1_CU13.png}	
-								} \\
-            \hline
-		\caption{Caso de uso Consultando ayuda}
-		\label{tabla:caso_uso_consultando_ayuda}
+		} \\
+	\hline
+	\multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm}|}{														
+		\centering \\ 		
+		\includegraphics[width=3.5cm]{img/mockups1_CU13.png}	
+		} \\
+	\hline
+	\caption{Caso de uso Consultando ayuda}
+	\label{tabla:caso_uso_consultando_ayuda}
 \end{longtable}
 
 \subsection{Diagrama de secuencia}
