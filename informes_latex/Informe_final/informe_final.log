@@ -1,19 +1,13 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.27)  7 MAY 2017 15:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.30)  15 MAY 2017 19:35
 entering extended mode
 **informe_final.tex
-(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\Informe_final\informe_final.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, arabic, armenian, assamese, basque, bengali
-, bokmal, bulgarian, catalan, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, galic
-ian, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, icelandic, indonesian, interlingua, irish, italian,
- kannada, kurmanji, latin, latvian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, ngerman
--x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, romanian, russian, sanskrit, serbian, slovak, sloven
-ian, spanish, swedish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usenglishmax, w
-elsh, loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\book.cls"
-Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\bk12.clo"
-File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(informe_final.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk12.clo"
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -27,54 +21,50 @@ File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin1.def"
-File: latin1.def 2008/03/30 v1.1d Input encoding file
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+)) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2015/08/03 3.9m The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
-Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-spanish\spanish.ldf"
+Language: spanish.ldf 2014/04/24 v5.0n Spanish support from the babel system
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2015/08/03 3.9m Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
-\es@datefmt=\count89
 \es@quottoks=\toks16
-\es@quotdepth=\count90
-Package babel Info: Making " an active character on input line 492.
-Package babel Info: Making . an active character on input line 585.
-Package babel Info: Making < an active character on input line 630.
-Package babel Info: Making > an active character on input line 630.
-))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count91
-\calc@Bcount=\count92
+\es@quotdepth=\count89
+Package babel Info: Making " an active character on input line 516.
+Package babel Info: Making . an active character on input line 617.
+Package babel Info: Making < an active character on input line 662.
+Package babel Info: Making > an active character on input line 662.
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count90
+\calc@Bcount=\count91
 \calc@Adimen=\dimen104
 \calc@Bdimen=\dimen105
 \calc@Askip=\skip43
 \calc@Bskip=\skip44
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count93
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count92
 \calc@Cskip=\skip45
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip46
 \f@ncyO@elh=\skip47
 \f@ncyO@erh=\skip48
@@ -85,76 +75,73 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \f@ncyO@olf=\skip53
 \f@ncyO@orf=\skip54
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count94
+\Gread@gobject=\count93
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count95
+\c@float@type=\count94
 \float@exts=\toks18
 \float@box=\box26
 \@float@everytoks=\toks19
 \@floatcapt=\box27
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen108
 \extrarowheight=\dimen109
 \NC@list=\toks20
 \extratabsurround=\skip55
 \backup@length=\skip56
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -163,10 +150,10 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -179,19 +166,19 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count96
-\Gm@cntv=\count97
-\c@Gm@tempcnt=\count98
+\Gm@cnth=\count95
+\Gm@cntv=\count96
+\c@Gm@tempcnt=\count97
 \Gm@bindingoffset=\dimen110
 \Gm@wd@mp=\dimen111
 \Gm@odd@mp=\dimen112
@@ -202,35 +189,33 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen117
 \Gm@dimlist=\toks21
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
-Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip57
 \LTright=\skip58
 \LTpre=\skip59
 \LTpost=\skip60
-\LTchunksize=\count99
+\LTchunksize=\count98
 \LTcapwidth=\dimen118
 \LT@head=\box28
 \LT@firsthead=\box29
 \LT@foot=\box30
 \LT@lastfoot=\box31
-\LT@cols=\count100
-\LT@rows=\count101
-\c@LT@tables=\count102
-\c@LT@chunks=\count103
+\LT@cols=\count99
+\LT@rows=\count100
+\c@LT@tables=\count101
+\c@LT@chunks=\count102
 \LT@p@ftn=\toks22
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count104
-\c@@ppsavesec=\count105
-\c@@ppsaveapp=\count106
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+\c@@pps=\count103
+\c@@ppsavesec=\count104
+\c@@ppsaveapp=\count105
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -244,42 +229,42 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks23
 \minrowclearance=\skip61
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty"
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup4
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\cite\cite.sty"
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
-Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+Package: enumerate 2014/10/28 v3.00 enumerate extensions (DPC)
 \@enLab=\toks24
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titling\titling.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\titling\titling.sty"
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip62
 \thanksmargin=\skip63
 \droptitle=\skip64
-)
-(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\Informe_final\informe_final.aux
+) (informe_final.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+
 
 LaTeX Warning: Label `tabla:caso_uso_lista_resultados' multiply defined.
 
 ! Missing \endcsname inserted.
 <to be read again> 
-                   \penalty 
-l.139 ...a:caso_uso_procesando_se\~nal}{{3.5}{47}}
+                   \unhbox 
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{46}}
                                                   
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -289,8 +274,8 @@ LaTeX Warning: Label `tabla:caso_uso_procesando_se\~nal' multiply defined.
 
 ! Missing \endcsname inserted.
 <to be read again> 
-                   \penalty 
-l.139 ...a:caso_uso_procesando_se\~nal}{{3.5}{47}}
+                   \unhbox 
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{46}}
                                                   
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -302,17 +287,44 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 ...a:caso_uso_procesando_se\~nal}{{3.5}{47}}
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{46}}
                                                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+! Missing number, treated as zero.
+<to be read again> 
+                   \accent@spacefactor 
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{46}}
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Bad space factor (0).
+<to be read again> 
+                   \accent@spacefactor 
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{46}}
+                                                  
+I allow only values in the range 1..32767 here.
+
 ! Extra \endcsname.
 \@namedef ...xpandafter \def \csname #1\endcsname 
                                                   
-l.139 ...a:caso_uso_procesando_se\~nal}{{3.5}{47}}
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{46}}
                                                   
 I'm ignoring this, since I wasn't doing a \csname.
+
+! Extra }, or forgotten \endgroup.
+\@newl@bel ...ined}}\global \@namedef {#1@#2}{#3}}
+                                                  
+l.134 ...a:caso_uso_procesando_se\~nal}{{3.5}{46}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
@@ -327,23 +339,25 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-Overfull \hbox (91.91257pt too wide) in paragraph at lines 139--13
-[]\OT1/cmr/m/n/12 nal3.547                                                                                              
-                                                                                                  [][][][] 
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+Overfull \hbox (94.52365pt too wide) in paragraph at lines 134--13
+[]\OT1/cmr/m/n/12 ~nal3.546                                                                                             
+                                                                                                    [][][][] 
  []
 
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
+\scratchcounter=\count106
 \scratchdimen=\dimen119
 \scratchbox=\box32
-\nofMPsegments=\count108
-\nofMParguments=\count109
+\nofMPsegments=\count107
+\nofMParguments=\count108
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count110
+\MPscratchCnt=\count109
 \MPscratchDim=\dimen120
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
 \everyMPtoPDFconversion=\toks26
 )
 *geometry* driver: auto-detecting
@@ -387,12 +401,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+[1{C:/Users/Leandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-] <img/fich_logo_classic.png, id=9, 426.59375pt x 426.59375pt>
+]
+<img/fich_logo_classic.png, id=9, 426.59375pt x 426.59375pt>
 File: img/fich_logo_classic.png Graphic file (type png)
-
-<use img/fich_logo_classic.png>
+ <use img/fich_logo_classic.png>
 Package pdftex.def Info: img/fich_logo_classic.png used on input line 83.
 (pdftex.def)             Requested size: 106.64816pt x 106.64816pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -400,12 +414,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 83.
 LaTeX Font Info:    Try loading font information for U+rsfs on input line 83.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
- <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/fich_logo_classic.png>]
-(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\Informe_final\informe_final.toc
+ <./img/fich_logo_classic.png>] (informe_final.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -414,8 +430,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
@@ -427,15 +443,22 @@ LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <8> not available
 
 ])
 \tf@toc=\write3
- [2]
-(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\Informe_final\informe_final.lof)
+ [2] (informe_final.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
 \tf@lof=\write4
  [3
 
-]
-(C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\Informe_final\informe_final.lot [4
+] (informe_final.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [4
 
 ]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -451,6 +474,9 @@ Cap\'{\i }tulo 1.
 [8
 
 ]
+LaTeX Info: Redefining \. on input line 154.
+LaTeX Info: Redefining \% on input line 154.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -458,6 +484,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [9]
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -465,6 +494,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10]
+LaTeX Info: Redefining \. on input line 168.
+LaTeX Info: Redefining \% on input line 168.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -472,6 +504,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11]
+LaTeX Info: Redefining \. on input line 184.
+LaTeX Info: Redefining \% on input line 184.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -479,6 +514,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12]
+LaTeX Info: Redefining \. on input line 209.
+LaTeX Info: Redefining \% on input line 209.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -486,6 +524,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13]
+LaTeX Info: Redefining \. on input line 220.
+LaTeX Info: Redefining \% on input line 220.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -501,9 +542,11 @@ Package pdftex.def Info: img/figure1.png used on input line 229.
 (pdftex.def)             Requested size: 469.47049pt x 132.64566pt.
  [15
 
- <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/figure1.png>]
+ <./img/figure1.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <17.28> on input line 255.
+LaTeX Info: Redefining \. on input line 263.
+LaTeX Info: Redefining \% on input line 263.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -516,6 +559,8 @@ File: img/figure2.png Graphic file (type png)
  <use img/figure2.png>
 Package pdftex.def Info: img/figure2.png used on input line 265.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
+LaTeX Info: Redefining \. on input line 290.
+LaTeX Info: Redefining \% on input line 290.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -523,7 +568,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/figure2.png (PNG copy)>]
+[17 <./img/figure2.png (PNG copy)>]
+LaTeX Info: Redefining \. on input line 314.
+LaTeX Info: Redefining \% on input line 314.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -531,6 +579,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [18]
+LaTeX Info: Redefining \. on input line 355.
+LaTeX Info: Redefining \% on input line 355.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -538,6 +589,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19]
+LaTeX Info: Redefining \. on input line 376.
+LaTeX Info: Redefining \% on input line 376.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -545,6 +599,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [20]
+LaTeX Info: Redefining \. on input line 417.
+LaTeX Info: Redefining \% on input line 417.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -552,6 +609,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [21]
+LaTeX Info: Redefining \. on input line 446.
+LaTeX Info: Redefining \% on input line 446.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -563,6 +623,8 @@ File: img/figure3.png Graphic file (type png)
  <use img/figure3.png>
 Package pdftex.def Info: img/figure3.png used on input line 454.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
+LaTeX Info: Redefining \. on input line 458.
+LaTeX Info: Redefining \% on input line 458.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -581,6 +643,8 @@ File: img/figure5.png Graphic file (type png)
  <use img/figure5.png>
 Package pdftex.def Info: img/figure5.png used on input line 468.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
+LaTeX Info: Redefining \. on input line 472.
+LaTeX Info: Redefining \% on input line 472.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -588,19 +652,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/figure3.png (PNG copy)> <C:/Users/Leandro/
-Desktop/Proyecto-final/informes_latex/Informe_final/img/figure4.png (PNG copy)>]
-<img/figure6.png, id=110, 1445.4pt x 724.95844pt>
+[24 <./img/figure3.png (PNG copy)> <./img/figure4.png (PNG copy)>] <img/figure6.png, id=110, 1445.4pt x 724.95844pt>
 File: img/figure6.png Graphic file (type png)
- <use img/figure6.png>
+
+<use img/figure6.png>
 Package pdftex.def Info: img/figure6.png used on input line 475.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
-
-<img/figure7.png, id=111, 1199.98312pt x 596.98032pt>
+ <img/figure7.png, id=111, 1199.98312pt x 596.98032pt>
 File: img/figure7.png Graphic file (type png)
  <use img/figure7.png>
 Package pdftex.def Info: img/figure7.png used on input line 484.
 (pdftex.def)             Requested size: 469.47049pt x 233.55922pt.
+LaTeX Info: Redefining \. on input line 487.
+LaTeX Info: Redefining \% on input line 487.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -608,19 +672,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/figure5.png (PNG copy)> <C:/Users/Leandro/
-Desktop/Proyecto-final/informes_latex/Informe_final/img/figure6.png (PNG copy)>]
-<img/figure8.png, id=115, 1445.4pt x 724.95844pt>
+[25 <./img/figure5.png (PNG copy)> <./img/figure6.png (PNG copy)>] <img/figure8.png, id=115, 1445.4pt x 724.95844pt>
 File: img/figure8.png Graphic file (type png)
- <use img/figure8.png>
+
+<use img/figure8.png>
 Package pdftex.def Info: img/figure8.png used on input line 493.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
-
-<img/figure9.png, id=116, 1445.4pt x 724.95844pt>
+ <img/figure9.png, id=116, 1445.4pt x 724.95844pt>
 File: img/figure9.png Graphic file (type png)
  <use img/figure9.png>
 Package pdftex.def Info: img/figure9.png used on input line 500.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
+LaTeX Info: Redefining \. on input line 504.
+LaTeX Info: Redefining \% on input line 504.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -628,13 +692,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/figure7.png> <C:/Users/Leandro/Desktop/Pro
-yecto-final/informes_latex/Informe_final/img/figure8.png (PNG copy)>]
-<img/figure10.png, id=120, 1445.4pt x 724.95844pt>
+[26 <./img/figure7.png> <./img/figure8.png (PNG copy)>] <img/figure10.png, id=120, 1445.4pt x 724.95844pt>
 File: img/figure10.png Graphic file (type png)
- <use img/figure10.png>
+
+<use img/figure10.png>
 Package pdftex.def Info: img/figure10.png used on input line 507.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
+LaTeX Info: Redefining \. on input line 514.
+LaTeX Info: Redefining \% on input line 514.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -642,13 +707,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/figure9.png (PNG copy)> <C:/Users/Leandro/
-Desktop/Proyecto-final/informes_latex/Informe_final/img/figure10.png (PNG copy)>]
+[27 <./img/figure9.png (PNG copy)> <./img/figure10.png (PNG copy)>]
 <img/figure11.png, id=124, 328.22626pt x 405.01312pt>
 File: img/figure11.png Graphic file (type png)
  <use img/figure11.png>
 Package pdftex.def Info: img/figure11.png used on input line 526.
 (pdftex.def)             Requested size: 196.93727pt x 243.00974pt.
+LaTeX Info: Redefining \. on input line 530.
+LaTeX Info: Redefining \% on input line 530.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -661,6 +727,8 @@ File: img/figure12.png Graphic file (type png)
  <use img/figure12.png>
 Package pdftex.def Info: img/figure12.png used on input line 533.
 (pdftex.def)             Requested size: 469.47049pt x 360.52498pt.
+LaTeX Info: Redefining \. on input line 539.
+LaTeX Info: Redefining \% on input line 539.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -668,8 +736,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/figure11.png> <C:/Users/Leandro/Desktop/Pr
-oyecto-final/informes_latex/Informe_final/img/figure12.png>] <img/figure13.png, id=135, 1445.4pt x 724.95844pt>
+[29 <./img/figure11.png> <./img/figure12.png>] <img/figure13.png, id=135, 1445.4pt x 724.95844pt>
 File: img/figure13.png Graphic file (type png)
 
 <use img/figure13.png>
@@ -680,6 +747,8 @@ File: img/figure14.png Graphic file (type png)
  <use img/figure14.png>
 Package pdftex.def Info: img/figure14.png used on input line 550.
 (pdftex.def)             Requested size: 469.47049pt x 235.46489pt.
+LaTeX Info: Redefining \. on input line 554.
+LaTeX Info: Redefining \% on input line 554.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -687,14 +756,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/figure13.png>]
+[30 <./img/figure13.png>]
+LaTeX Info: Redefining \. on input line 585.
+LaTeX Info: Redefining \% on input line 585.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/figure14.png>]
+[31 <./img/figure14.png>]
+LaTeX Info: Redefining \. on input line 607.
+LaTeX Info: Redefining \% on input line 607.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -702,6 +777,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [32]
+LaTeX Info: Redefining \. on input line 619.
+LaTeX Info: Redefining \% on input line 619.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -709,6 +787,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33]
+LaTeX Info: Redefining \. on input line 680.
+LaTeX Info: Redefining \% on input line 680.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -716,6 +797,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [34]
+LaTeX Info: Redefining \. on input line 704.
+LaTeX Info: Redefining \% on input line 704.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -731,6 +815,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [36
 
 ]
+LaTeX Info: Redefining \. on input line 749.
+LaTeX Info: Redefining \% on input line 749.
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 749.
 
@@ -742,10 +828,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [37]
 Package epstopdf Info: Source file: <img/flujo.eps>
-(epstopdf)                    date: 2017-02-27 17:46:52
+(epstopdf)                    date: 2017-02-23 18:48:37
 (epstopdf)                    size: 19377 bytes
 (epstopdf)             Output file: <img/flujo-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-02-27 17:46:52
+(epstopdf)                    date: 2017-02-23 18:48:37
 (epstopdf)                    size: 4196 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/flujo-eps-converted-to.pdf img/flujo.eps>
 (epstopdf)             \includegraphics on input line 767.
@@ -755,6 +841,8 @@ File: img/flujo-eps-converted-to.pdf Graphic file (type pdf)
  <use img/flujo-eps-converted-to.pdf>
 Package pdftex.def Info: img/flujo-eps-converted-to.pdf used on input line 767.
 (pdftex.def)             Requested size: 299.11676pt x 539.51431pt.
+LaTeX Info: Redefining \. on input line 771.
+LaTeX Info: Redefining \% on input line 771.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -772,13 +860,15 @@ Overfull \hbox (22.32565pt too wide) in paragraph at lines 777--778
  [][] 
  []
 
+LaTeX Info: Redefining \. on input line 781.
+LaTeX Info: Redefining \% on input line 781.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/flujo-eps-converted-to.pdf>]
+[39 <./img/flujo-eps-converted-to.pdf>]
 Overfull \hbox (10.97357pt too wide) in alignment at lines 788--801
  [] [] [] [] 
  []
@@ -799,13 +889,13 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 805--806
  []
 
 LaTeX Font Info:    Try loading font information for U+lasy on input line 809.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.815 ...inicial "`Lista de grabaciones"'.} \hline
+l.815 ...iones"'. Finaliza el caso de uso.} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -907,52 +997,32 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.829 								& \multicolumn{2}{p{8cm} |}{}\hline
-                                                 
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.850             \hline
-                        
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.850             \hline
-                        
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
 <img/mockups1_CU1.png, id=176, 171.64125pt x 302.63063pt>
 File: img/mockups1_CU1.png Graphic file (type png)
  <use img/mockups1_CU1.png>
-Package pdftex.def Info: img/mockups1_CU1.png used on input line 859.
+Package pdftex.def Info: img/mockups1_CU1.png used on input line 857.
 (pdftex.def)             Requested size: 113.81102pt x 200.665pt.
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 806--863
+Overfull \hbox (10.97357pt too wide) in alignment at lines 806--861
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 863
+Underfull \vbox (badness 10000) detected at line 861
  []
 
+LaTeX Info: Redefining \. on input line 861.
+LaTeX Info: Redefining \% on input line 861.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/CU_new.png>]
+[40 <./img/CU_new.png>]
+LaTeX Info: Redefining \. on input line 861.
+LaTeX Info: Redefining \% on input line 861.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -960,24 +1030,49 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 865--878
+Overfull \hbox (10.97357pt too wide) in alignment at lines 863--876
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 878--879
+Overfull \hbox (10.97357pt too wide) in alignment at lines 876--877
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 879--881
+Overfull \hbox (10.97357pt too wide) in alignment at lines 877--879
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 881--882
+Overfull \hbox (10.97357pt too wide) in alignment at lines 879--880
  [] [] [] [] 
  []
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.884 							& \multicolumn{2}{p{8cm}|}{} \hline
+                                                
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.885 							\multicolumn
+                         {2}{|p{8cm}|}{2. La aplicación detiene la captura d...
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.885 							\multicolumn
+                         {2}{|p{8cm}|}{2. La aplicación detiene la captura d...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
 
 ! Misplaced \noalign.
 \hline ->\noalign 
@@ -991,7 +1086,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.887 							\multicolumn
-                         {2}{|p{8cm}|}{2. La aplicación detiene la captura d...
+                         {2}{|p{8cm}|}{3. La aplicación muestra el mensaje "...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -999,10 +1094,15 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.887 							\multicolumn
-                         {2}{|p{8cm}|}{2. La aplicación detiene la captura d...
+                         {2}{|p{8cm}|}{3. La aplicación muestra el mensaje "...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 887--887
+[]|\OT1/cmr/m/n/12 3. La apli-ca-cion mues-tra el men-sa-je
+ []
 
 ! Misplaced \noalign.
 \hline ->\noalign 
@@ -1016,7 +1116,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.889 							\multicolumn
-                         {2}{|p{8cm}|}{3. La aplicación muestra el mensaje "...
+                         {2}{|p{8cm}|}{4. La aplicación invoca el «CU7 - Gua...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -1024,15 +1124,10 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.889 							\multicolumn
-                         {2}{|p{8cm}|}{3. La aplicación muestra el mensaje "...
+                         {2}{|p{8cm}|}{4. La aplicación invoca el «CU7 - Gua...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 889--889
-[]|\OT1/cmr/m/n/12 3. La apli-ca-cion mues-tra el men-sa-je
- []
 
 ! Misplaced \noalign.
 \hline ->\noalign 
@@ -1046,7 +1141,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.891 							\multicolumn
-                         {2}{|p{8cm}|}{4. La aplicación invoca el «CU7 - Gua...
+                         {2}{|p{8cm}|}{5. La aplicación invoca el «CU10 - Vi...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -1054,31 +1149,6 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.891 							\multicolumn
-                         {2}{|p{8cm}|}{4. La aplicación invoca el «CU7 - Gua...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.892 							& \multicolumn{2}{p{8cm}|}{} \hline
-                                                
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.893 							\multicolumn
-                         {2}{|p{8cm}|}{5. La aplicación invoca el «CU10 - Vi...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Extra alignment tab has been changed to \cr.
-<template> \endtemplate 
-                        
-l.893 							\multicolumn
                          {2}{|p{8cm}|}{5. La aplicación invoca el «CU10 - Vi...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1087,7 +1157,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.911             \hline
+l.909             \hline
                         
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1095,7 +1165,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.912                 \multicolumn
+l.910                 \multicolumn
                                   {1}{|p{4cm}|}{\textbf{Postcondiciones}} & ...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1103,7 +1173,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.912                 \multicolumn
+l.910                 \multicolumn
                                   {1}{|p{4cm}|}{\textbf{Postcondiciones}} & ...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1111,52 +1181,54 @@ So I'll assume that you meant to type \cr instead.
 
 File: img/mockups1_CU1.png Graphic file (type png)
 <use img/mockups1_CU1.png>
-Package pdftex.def Info: img/mockups1_CU1.png used on input line 920.
+Package pdftex.def Info: img/mockups1_CU1.png used on input line 918.
 (pdftex.def)             Requested size: 113.81102pt x 200.665pt.
  <img/mockups1_CU2.png, id=186, 173.89969pt x 307.90031pt>
 File: img/mockups1_CU2.png Graphic file (type png)
  <use img/mockups1_CU2.png>
-Package pdftex.def Info: img/mockups1_CU2.png used on input line 920.
+Package pdftex.def Info: img/mockups1_CU2.png used on input line 918.
 (pdftex.def)             Requested size: 113.81102pt x 201.50938pt.
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 882--924
+Overfull \hbox (10.97357pt too wide) in alignment at lines 880--922
  [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 924
+Underfull \vbox (badness 10000) detected at line 922
  []
 
+LaTeX Info: Redefining \. on input line 922.
+LaTeX Info: Redefining \% on input line 922.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/mockups1_CU1.png>]
-Overfull \hbox (10.97357pt too wide) in alignment at lines 926--939
+[42 <./img/mockups1_CU1.png>]
+Overfull \hbox (10.97357pt too wide) in alignment at lines 924--937
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 939--940
+Overfull \hbox (10.97357pt too wide) in alignment at lines 937--938
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 940--942
+Overfull \hbox (10.97357pt too wide) in alignment at lines 938--940
  [] [] [] [] 
  []
 
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 942--943
+Overfull \hbox (10.97357pt too wide) in alignment at lines 940--941
  [] [] [] [] 
  []
 
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.947 								\multicolumn{2}{p{8cm}|}{} \hline
+l.945 								\multicolumn{2}{p{8cm}|}{} \hline
                                                
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1164,7 +1236,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \omit.
 \multispan ->\omit 
                    \@multispan 
-l.948 								\multicolumn
+l.946 								\multicolumn
                           {2}{|p{8cm}|}{2. La aplicación muestra una lista d...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1172,7 +1244,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra alignment tab has been changed to \cr.
 <template> \endtemplate 
                         
-l.948 								\multicolumn
+l.946 								\multicolumn
                           {2}{|p{8cm}|}{2. La aplicación muestra una lista d...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -1181,7 +1253,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.949 ...mensaje "`No posee grabaciones"'.} \hline
+l.949 ...abación. Finaliza el caso de uso.} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1190,7 +1262,7 @@ an alignment. Proceed, and I'll ignore this case.
 \multispan ->\omit 
                    \@multispan 
 l.950 								\multicolumn
-                          {2}{|p{8cm}|}{3. El paciente presiona sobre un ite...
+                          {2}{|p{8cm}|}{3. El paciente presiona sobre una gr...
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
@@ -1198,7 +1270,7 @@ an alignment. Proceed, and I'll ignore this case.
 <template> \endtemplate 
                         
 l.950 								\multicolumn
-                          {2}{|p{8cm}|}{3. El paciente presiona sobre un ite...
+                          {2}{|p{8cm}|}{3. El paciente presiona sobre una gr...
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
@@ -1231,7 +1303,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.954 ...isualizando resultados en tablas»} \hline
+l.954 ...tablas». Finaliza el caso de uso.} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1271,7 +1343,7 @@ File: img/mockups3_CU3.png Graphic file (type png)
 Package pdftex.def Info: img/mockups3_CU3.png used on input line 987.
 (pdftex.def)             Requested size: 99.58464pt x 175.23706pt.
 
-Overfull \hbox (10.97357pt too wide) in alignment at lines 943--991
+Overfull \hbox (10.97357pt too wide) in alignment at lines 941--991
  [] [] [] [] 
  []
 
@@ -1279,20 +1351,15 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 943--991
 Underfull \vbox (badness 10000) detected at line 991
  []
 
+LaTeX Info: Redefining \. on input line 991.
+LaTeX Info: Redefining \% on input line 991.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/mockups1_CU2.png>]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[44]
+[43 <./img/mockups1_CU2.png>]
 Overfull \hbox (10.97357pt too wide) in alignment at lines 993--1006
  [] [] [] [] 
  []
@@ -1365,7 +1432,7 @@ So I'll assume that you meant to type \cr instead.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.1022 ...antalla "`Lista de resultados"'.} \hline
+l.1022 ...ados"'. Finaliza el caso de uso.} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1472,15 +1539,25 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1010--1057
 Underfull \vbox (badness 10000) detected at line 1057
  []
 
+LaTeX Info: Redefining \. on input line 1057.
+LaTeX Info: Redefining \% on input line 1057.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/mockups1_CU3.png> <C:/Users/Leandro/Deskto
-p/Proyecto-final/informes_latex/Informe_final/img/mockups2_CU3.png> <C:/Users/Leandro/Desktop/Proyecto-final/informes_la
-tex/Informe_final/img/mockups3_CU3.png>]
+[44 <./img/mockups1_CU3.png> <./img/mockups2_CU3.png> <./img/mockups3_CU3.png>]
+LaTeX Info: Redefining \. on input line 1057.
+LaTeX Info: Redefining \% on input line 1057.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45]
 Overfull \hbox (10.97357pt too wide) in alignment at lines 1059--1072
  [] [] [] [] 
  []
@@ -1639,6 +1716,8 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1076--1118
 Underfull \vbox (badness 10000) detected at line 1118
  []
 
+LaTeX Info: Redefining \. on input line 1118.
+LaTeX Info: Redefining \% on input line 1118.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1866,6 +1945,8 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1137--1182
 Underfull \vbox (badness 10000) detected at line 1182
  []
 
+LaTeX Info: Redefining \. on input line 1182.
+LaTeX Info: Redefining \% on input line 1182.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2001,14 +2082,15 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1202--1245
 Underfull \vbox (badness 10000) detected at line 1245
  []
 
+LaTeX Info: Redefining \. on input line 1245.
+LaTeX Info: Redefining \% on input line 1245.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/mockups1_CU6.png> <C:/Users/Leandro/Deskto
-p/Proyecto-final/informes_latex/Informe_final/img/mockups2_CU6.png>]
+[48 <./img/mockups1_CU6.png> <./img/mockups2_CU6.png>]
 Overfull \hbox (10.97357pt too wide) in alignment at lines 1247--1260
  [] [] [] [] 
  []
@@ -2146,6 +2228,8 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1264--1308
 Underfull \vbox (badness 10000) detected at line 1308
  []
 
+LaTeX Info: Redefining \. on input line 1308.
+LaTeX Info: Redefining \% on input line 1308.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2153,6 +2237,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [49]
+LaTeX Info: Redefining \. on input line 1308.
+LaTeX Info: Redefining \% on input line 1308.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2315,13 +2402,15 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1327--1365
 Underfull \vbox (badness 10000) detected at line 1365
  []
 
+LaTeX Info: Redefining \. on input line 1365.
+LaTeX Info: Redefining \% on input line 1365.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/mockups2_CU8.png>]
+[51 <./img/mockups2_CU8.png>]
 Overfull \hbox (10.97357pt too wide) in alignment at lines 1367--1380
  [] [] [] [] 
  []
@@ -2479,6 +2568,8 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1384--1427
 Underfull \vbox (badness 10000) detected at line 1427
  []
 
+LaTeX Info: Redefining \. on input line 1427.
+LaTeX Info: Redefining \% on input line 1427.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2619,6 +2710,8 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1447--1483
 Underfull \vbox (badness 10000) detected at line 1483
  []
 
+LaTeX Info: Redefining \. on input line 1483.
+LaTeX Info: Redefining \% on input line 1483.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2759,6 +2852,8 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1508--1546
 Underfull \vbox (badness 10000) detected at line 1546
  []
 
+LaTeX Info: Redefining \. on input line 1546.
+LaTeX Info: Redefining \% on input line 1546.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2925,13 +3020,18 @@ Overfull \hbox (10.97357pt too wide) in alignment at lines 1571--1609
 Underfull \vbox (badness 10000) detected at line 1609
  []
 
+LaTeX Info: Redefining \. on input line 1609.
+LaTeX Info: Redefining \% on input line 1609.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/mockups1_CU12.png>]
+[55 <./img/mockups1_CU12.png>]
+LaTeX Info: Redefining \. on input line 1609.
+LaTeX Info: Redefining \% on input line 1609.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2940,10 +3040,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [56]
 Package epstopdf Info: Source file: <img/secuencia.eps>
-(epstopdf)                    date: 2017-02-27 17:46:54
+(epstopdf)                    date: 2017-02-23 18:48:38
 (epstopdf)                    size: 19304 bytes
 (epstopdf)             Output file: <img/secuencia-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-02-27 17:46:54
+(epstopdf)                    date: 2017-02-23 18:48:38
 (epstopdf)                    size: 4333 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/secuencia-eps-converted-to.pdf img/secuencia.eps>
 (epstopdf)             \includegraphics on input line 1616.
@@ -2953,6 +3053,8 @@ File: img/secuencia-eps-converted-to.pdf Graphic file (type pdf)
  <use img/secuencia-eps-converted-to.pdf>
 Package pdftex.def Info: img/secuencia-eps-converted-to.pdf used on input line 1616.
 (pdftex.def)             Requested size: 469.47049pt x 334.3264pt.
+LaTeX Info: Redefining \. on input line 1620.
+LaTeX Info: Redefining \% on input line 1620.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2960,19 +3062,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/mockups1_CU13.png>]
+[57 <./img/mockups1_CU13.png>]
+LaTeX Info: Redefining \. on input line 1625.
+LaTeX Info: Redefining \% on input line 1625.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/secuencia-eps-converted-to.pdf>]
-<img/DClases_placeholder.png, id=263, 351.3125pt x 351.3125pt>
+[58 <./img/secuencia-eps-converted-to.pdf>] <img/DClases_placeholder.png, id=263, 351.3125pt x 351.3125pt>
 File: img/DClases_placeholder.png Graphic file (type png)
- <use img/DClases_placeholder.png>
+
+<use img/DClases_placeholder.png>
 Package pdftex.def Info: img/DClases_placeholder.png used on input line 1628.
 (pdftex.def)             Requested size: 245.91707pt x 245.91707pt.
+LaTeX Info: Redefining \. on input line 1632.
+LaTeX Info: Redefining \% on input line 1632.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2980,8 +3087,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/DClases_placeholder.png>]
-<img/screen1.png, id=269, 239.39438pt x 398.23781pt>
+[59 <./img/DClases_placeholder.png>] <img/screen1.png, id=269, 239.39438pt x 398.23781pt>
 File: img/screen1.png Graphic file (type png)
  <use img/screen1.png>
 Package pdftex.def Info: img/screen1.png used on input line 1641.
@@ -2992,6 +3098,8 @@ File: img/screen2.png Graphic file (type png)
  <use img/screen2.png>
 Package pdftex.def Info: img/screen2.png used on input line 1648.
 (pdftex.def)             Requested size: 179.54533pt x 298.67761pt.
+LaTeX Info: Redefining \. on input line 1652.
+LaTeX Info: Redefining \% on input line 1652.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2999,8 +3107,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/screen1.png>]
-<img/screen3.png, id=274, 241.65282pt x 401.24907pt>
+[60 <./img/screen1.png>] <img/screen3.png, id=274, 241.65282pt x 401.24907pt>
 File: img/screen3.png Graphic file (type png)
  <use img/screen3.png>
 Package pdftex.def Info: img/screen3.png used on input line 1655.
@@ -3011,6 +3118,8 @@ File: img/screen4.png Graphic file (type png)
  <use img/screen4.png>
 Package pdftex.def Info: img/screen4.png used on input line 1662.
 (pdftex.def)             Requested size: 179.54533pt x 296.41919pt.
+LaTeX Info: Redefining \. on input line 1666.
+LaTeX Info: Redefining \% on input line 1666.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3018,13 +3127,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/screen2.png> <C:/Users/Leandro/Desktop/Pro
-yecto-final/informes_latex/Informe_final/img/screen3.png>] <img/screen5.png, id=279, 451.6875pt x 770.88pt>
+[61 <./img/screen2.png> <./img/screen3.png>] <img/screen5.png, id=279, 451.6875pt x 770.88pt>
 File: img/screen5.png Graphic file (type png)
-
-<use img/screen5.png>
+ <use img/screen5.png>
 Package pdftex.def Info: img/screen5.png used on input line 1671.
 (pdftex.def)             Requested size: 234.73524pt x 400.62466pt.
+LaTeX Info: Redefining \. on input line 1675.
+LaTeX Info: Redefining \% on input line 1675.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3032,12 +3141,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/screen4.png>]
-<img/screen6.png, id=283, 451.6875pt x 770.88pt>
+[62 <./img/screen4.png>] <img/screen6.png, id=283, 451.6875pt x 770.88pt>
 File: img/screen6.png Graphic file (type png)
  <use img/screen6.png>
 Package pdftex.def Info: img/screen6.png used on input line 1678.
 (pdftex.def)             Requested size: 234.73524pt x 400.62466pt.
+LaTeX Info: Redefining \. on input line 1682.
+LaTeX Info: Redefining \% on input line 1682.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3045,12 +3155,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/screen5.png>]
-<img/screen_grafico1.png, id=288, 451.6875pt x 274.02374pt>
+[63 <./img/screen5.png>] <img/screen_grafico1.png, id=288, 451.6875pt x 274.02374pt>
 File: img/screen_grafico1.png Graphic file (type png)
  <use img/screen_grafico1.png>
 Package pdftex.def Info: img/screen_grafico1.png used on input line 1689.
 (pdftex.def)             Requested size: 234.73524pt x 142.40953pt.
+LaTeX Info: Redefining \. on input line 1693.
+LaTeX Info: Redefining \% on input line 1693.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3058,12 +3169,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/screen6.png>]
-<img/screen_grafico3.png, id=293, 450.9347pt x 527.72156pt>
+[64 <./img/screen6.png>] <img/screen_grafico3.png, id=293, 450.9347pt x 527.72156pt>
 File: img/screen_grafico3.png Graphic file (type png)
  <use img/screen_grafico3.png>
 Package pdftex.def Info: img/screen_grafico3.png used on input line 1698.
 (pdftex.def)             Requested size: 234.73524pt x 274.70668pt.
+LaTeX Info: Redefining \. on input line 1705.
+LaTeX Info: Redefining \% on input line 1705.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3071,19 +3183,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[65 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/screen_grafico1.png> <C:/Users/Leandro/Des
-ktop/Proyecto-final/informes_latex/Informe_final/img/screen_grafico3.png>]
-<img/screen_grafico4.png, id=300, 450.9347pt x 643.6547pt>
+[65 <./img/screen_grafico1.png> <./img/screen_grafico3.png>] <img/screen_grafico4.png, id=300, 450.9347pt x 643.6547pt>
 File: img/screen_grafico4.png Graphic file (type png)
- <use img/screen_grafico4.png>
+
+<use img/screen_grafico4.png>
 Package pdftex.def Info: img/screen_grafico4.png used on input line 1708.
 (pdftex.def)             Requested size: 234.73524pt x 335.05594pt.
-
-<img/screen_grafico5.png, id=301, 433.62pt x 488.57532pt>
+ <img/screen_grafico5.png, id=301, 433.62pt x 488.57532pt>
 File: img/screen_grafico5.png Graphic file (type png)
  <use img/screen_grafico5.png>
 Package pdftex.def Info: img/screen_grafico5.png used on input line 1718.
 (pdftex.def)             Requested size: 234.73524pt x 264.49023pt.
+LaTeX Info: Redefining \. on input line 1722.
+LaTeX Info: Redefining \% on input line 1722.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3091,12 +3203,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/screen_grafico4.png>]
-<img/screen_grafico6.png, id=306, 432.11438pt x 590.95781pt>
+[66 <./img/screen_grafico4.png>] <img/screen_grafico6.png, id=306, 432.11438pt x 590.95781pt>
 File: img/screen_grafico6.png Graphic file (type png)
- <use img/screen_grafico6.png>
+
+<use img/screen_grafico6.png>
 Package pdftex.def Info: img/screen_grafico6.png used on input line 1725.
 (pdftex.def)             Requested size: 234.73524pt x 321.02412pt.
+LaTeX Info: Redefining \. on input line 1734.
+LaTeX Info: Redefining \% on input line 1734.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3104,10 +3218,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[67 <C:/Users/Leandro/Desktop/Proyecto-final/informes_latex/Informe_final/img/screen_grafico5.png> <C:/Users/Leandro/Des
-ktop/Proyecto-final/informes_latex/Informe_final/img/screen_grafico6.png>]
+[67 <./img/screen_grafico5.png> <./img/screen_grafico6.png>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1747.
+LaTeX Info: Redefining \. on input line 1764.
+LaTeX Info: Redefining \% on input line 1764.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3116,6 +3231,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [68]
+LaTeX Info: Redefining \. on input line 1799.
+LaTeX Info: Redefining \% on input line 1799.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3123,6 +3241,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [69]
+LaTeX Info: Redefining \. on input line 1843.
+LaTeX Info: Redefining \% on input line 1843.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3130,6 +3251,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [70]
+LaTeX Info: Redefining \. on input line 1882.
+LaTeX Info: Redefining \% on input line 1882.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3137,6 +3261,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [71]
+LaTeX Info: Redefining \. on input line 1919.
+LaTeX Info: Redefining \% on input line 1919.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3161,6 +3288,8 @@ Overfull \hbox (12.21251pt too wide) in paragraph at lines 1970--1971
 /cmtt/m/n/12 <[]https :
  []
 
+LaTeX Info: Redefining \. on input line 1981.
+LaTeX Info: Redefining \% on input line 1981.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3172,6 +3301,9 @@ Ap\'{e}ndice A.
 [77
 
 ]
+LaTeX Info: Redefining \. on input line 2100.
+LaTeX Info: Redefining \% on input line 2100.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3179,6 +3311,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [78]
+LaTeX Info: Redefining \. on input line 2154.
+LaTeX Info: Redefining \% on input line 2154.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3186,6 +3321,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [79]
+LaTeX Info: Redefining \. on input line 2208.
+LaTeX Info: Redefining \% on input line 2208.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3193,6 +3331,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [80]
+LaTeX Info: Redefining \. on input line 2262.
+LaTeX Info: Redefining \% on input line 2262.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3200,6 +3341,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [81]
+LaTeX Info: Redefining \. on input line 2316.
+LaTeX Info: Redefining \% on input line 2316.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3207,6 +3351,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [82]
+LaTeX Info: Redefining \. on input line 2370.
+LaTeX Info: Redefining \% on input line 2370.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3214,6 +3361,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [83]
+LaTeX Info: Redefining \. on input line 2424.
+LaTeX Info: Redefining \% on input line 2424.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3221,6 +3371,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [84]
+LaTeX Info: Redefining \. on input line 2481.
+LaTeX Info: Redefining \% on input line 2481.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3228,6 +3381,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [85]
+LaTeX Info: Redefining \. on input line 2520.
+LaTeX Info: Redefining \% on input line 2520.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3235,6 +3391,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [86]
+LaTeX Info: Redefining \. on input line 2559.
+LaTeX Info: Redefining \% on input line 2559.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3242,6 +3401,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [87]
+LaTeX Info: Redefining \. on input line 2598.
+LaTeX Info: Redefining \% on input line 2598.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3249,6 +3411,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [88]
+LaTeX Info: Redefining \. on input line 2622.
+LaTeX Info: Redefining \% on input line 2622.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3256,6 +3421,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [89]
+LaTeX Info: Redefining \. on input line 2676.
+LaTeX Info: Redefining \% on input line 2676.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3263,6 +3431,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [90]
+LaTeX Info: Redefining \. on input line 2730.
+LaTeX Info: Redefining \% on input line 2730.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3270,6 +3441,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [91]
+LaTeX Info: Redefining \. on input line 2784.
+LaTeX Info: Redefining \% on input line 2784.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3277,6 +3451,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [92]
+LaTeX Info: Redefining \. on input line 2838.
+LaTeX Info: Redefining \% on input line 2838.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3284,6 +3461,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [93]
+LaTeX Info: Redefining \. on input line 2892.
+LaTeX Info: Redefining \% on input line 2892.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3291,6 +3471,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [94]
+LaTeX Info: Redefining \. on input line 2946.
+LaTeX Info: Redefining \% on input line 2946.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3298,6 +3481,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [95]
+LaTeX Info: Redefining \. on input line 3000.
+LaTeX Info: Redefining \% on input line 3000.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3305,6 +3491,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [96]
+LaTeX Info: Redefining \. on input line 3054.
+LaTeX Info: Redefining \% on input line 3054.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3312,6 +3501,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [97]
+LaTeX Info: Redefining \. on input line 3093.
+LaTeX Info: Redefining \% on input line 3093.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3319,6 +3511,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [98]
+LaTeX Info: Redefining \. on input line 3132.
+LaTeX Info: Redefining \% on input line 3132.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3326,6 +3521,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [99]
+LaTeX Info: Redefining \. on input line 3171.
+LaTeX Info: Redefining \% on input line 3171.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3333,6 +3531,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [100]
+LaTeX Info: Redefining \. on input line 3210.
+LaTeX Info: Redefining \% on input line 3210.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3340,6 +3541,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [101]
+LaTeX Info: Redefining \. on input line 3249.
+LaTeX Info: Redefining \% on input line 3249.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -3347,16 +3551,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [102]
+LaTeX Info: Redefining \. on input line 3252.
+LaTeX Info: Redefining \% on input line 3252.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[103] (C:\Users\Leandro\Desktop\Proyecto-final\informes_latex\Informe_final\informe_final.aux
+[103] (informe_final.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+
 ! Missing \endcsname inserted.
 <to be read again> 
-                   \penalty 
+                   \unhbox 
 l.139 ...a:caso_uso_procesando_se\~nal}{{3.5}{47}}
                                                   
 The control sequence marked <to be read again> should
@@ -3375,27 +3585,26 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4379 strings out of 493921
- 63503 string characters out of 3144870
- 151567 words of memory out of 3000000
- 7532 multiletter control sequences out of 15000+200000
+ 4539 strings out of 493673
+ 64476 string characters out of 3143953
+ 159861 words of memory out of 3000000
+ 7743 multiletter control sequences out of 15000+200000
  16676 words of font info for 62 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 42i,20n,43p,2118b,663s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on informe_final.pdf (105 pages, 1628042 bytes).
+ 1025 hyphenation exceptions out of 8191
+ 42i,20n,43p,2118b,724s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
+Output written on informe_final.pdf (105 pages, 1618906 bytes).
 PDF statistics:
  492 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

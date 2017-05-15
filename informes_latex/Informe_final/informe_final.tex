@@ -812,7 +812,7 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
 								\multicolumn{2}{|p{8cm}|}{} 
 								& \multicolumn{2}{p{8cm}|}{1.2 Si la memoria es inferior al mínimo sugerido, la aplicación muestra el mensaje "`Memoria insuficiente"'.} \\
 								\multicolumn{2}{|p{8cm}|}{} 
-								& \multicolumn{2}{p{8cm}|}{1.3 La aplicación no comienza la captura y despliega la pantalla inicial "`Lista de grabaciones"'.} \hline
+								& \multicolumn{2}{p{8cm}|}{1.3 La aplicación no comienza la captura y despliega la pantalla inicial "`Lista de grabaciones"'. Finaliza el caso de uso.} \hline
                 \multicolumn{2}{|p{8cm}|}{2. La aplicación setea la frecuencia de muestreo de 8000Hz y el tamaño de la ventana en 5 min, e inicia el proceso de captura de datos mediante el micrófono del dispositivo.} 
 								& \multicolumn{2}{p{8cm} |}{}
 								\hline
@@ -822,11 +822,9 @@ A continuación, en la figura \ref{figura:caso_uso} se presenta el gráfico de cas
                 \multicolumn{2}{|p{8cm}|}{4. La aplicación almacena las muestras obtenidas desde el micrófono en una variable hasta alcanzar el límite de 5 min.} 
 								& \multicolumn{2}{p{8cm} |}{}
 								\hline
-                \multicolumn{2}{|p{8cm}|}{5. La aplicación invoca el caso de uso «CU5 - Procesando la señal capturada».} 
+                \multicolumn{2}{|p{8cm}|}{5. La aplicación invoca el caso de uso «CU5 - Procesando la señal capturada». Finaliza el caso de uso.} 
 								& \multicolumn{2}{p{8cm} |}{} \\
-								\hline
-                \multicolumn{2}{|p{8cm}|}{6. El paciente llama al «CU2 - Finalizando captura de datos»} 
-								& \multicolumn{2}{p{8cm} |}{}\hline                
+								\hline            
                     %\begin{description}
                         %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
                         %\item[1] Éste caso de uso comienza cuando el usuario se encuentre ubicado en la pantalla dedicada a la grabación, habiendo hecho uso del «CU9 - Iniciando interfaz de grabación» que aquí llamamos "`Iniciar grabación"', donde hace clic en el botón llamado "`Iniciar"'.
@@ -882,7 +880,7 @@ Cuando el segmento de datos capturados (señal) con una duración de 5 min es conf
 						\endlastfoot
 														
             \hline
-							\multicolumn{2}{|p{8cm}|}{1. El paciente presiona el boton "`Detener"'.} 
+							\multicolumn{2}{|p{8cm}|}{1. El caso de uso comienza cuando el paciente presiona el boton "`Detener"'.} 
 							& \multicolumn{2}{p{8cm}|}{} \hline
 							\multicolumn{2}{|p{8cm}|}{2. La aplicación detiene la captura de datos a través del micrófono del dispositivo.} 
 							& \multicolumn{2}{p{8cm}|}{} \hline
@@ -890,8 +888,8 @@ Cuando el segmento de datos capturados (señal) con una duración de 5 min es conf
 							& \multicolumn{2}{p{8cm}|}{} \hline
 							\multicolumn{2}{|p{8cm}|}{4. La aplicación invoca el «CU7 - Guardando datos procesados».} 
 							& \multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{5. La aplicación invoca el «CU10 - Visualizando resultados en gráficos».} 
-							& \multicolumn{2}{p{8cm}|}{5.1 Si no hay datos procesados al momento de detener la captura, la aplicación muestra el mensaje "`No hay datos para guardar y graficar"' y redirige a la pantalla inicial "`Lista de grabaciones"'.}
+							\multicolumn{2}{|p{8cm}|}{5. La aplicación invoca el «CU10 - Visualizando resultados en gráficos». Finaliza el caso de uso.} 
+							& \multicolumn{2}{p{8cm}|}{5.1 Si no hay datos procesados al momento de detener la captura, la aplicación muestra el mensaje "`No hay datos para guardar y graficar"' y redirige a la pantalla inicial "`Lista de grabaciones"'. Finaliza el caso de uso.}
                 %\multicolumn{2}{|p{8cm}|}{\centering 
                     %\begin{enumerate}
                         %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
@@ -931,9 +929,9 @@ Los datos capturados son enviados al sistema de procesamiento solo si completan 
 						\hline
 									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación)}} \\
 						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es funcionalidad por la cual el paciente puede visualizar una lista con todas las grabaciones realizadas, donde en cada uno de los ítems de la lista presenta a priori información de interés.} \\
+									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual el paciente puede visualizar una lista con todas las grabaciones realizadas, donde en cada uno de los ítems de la lista presenta a priori información de interés.} \\
             \hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{La aplicación debe estar iniciada y el usuario debe estar ubicado en la pantalla principal. El sistema debe contar con al menos una grabación en la base de datos para poder visualizar un ítem en la lista.} \\														
+									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{La aplicación debe estar iniciada y el usuario ubicado en la pantalla principal. El sistema debe contar con al menos una grabación en la base de datos para poder visualizar un ítem en la lista.} \\														
 						\hline
 									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
 						\endfirsthead									
@@ -943,15 +941,17 @@ Los datos capturados son enviados al sistema de procesamiento solo si completan 
 						\endlastfoot
 														
             \hline
-								\multicolumn{2}{|p{8cm}|}{1. El caso de uso se inicia cuando el paciente accede a la lista de resultados.} & 
+								\multicolumn{2}{|p{8cm}|}{1. El caso de uso se inicia cuando el paciente selecciona la opción lista de resultados.} & 
 								\multicolumn{2}{p{8cm}|}{} \hline
-								\multicolumn{2}{|p{8cm}|}{2. La aplicación muestra una lista de items. Cada item representa una grabación previa indicando: cantidad de detecciones, hora de inicio y fin, duración total y el color representativo de la cantidad de detecciones.} 
-								& \multicolumn{2}{p{8cm}|}{2.1 Si la aplicación no posee grabaciones previas, muestra el mensaje "`No posee grabaciones"'.} \hline						
-								\multicolumn{2}{|p{8cm}|}{3. El paciente presiona sobre un item.} & 
+								\multicolumn{2}{|p{8cm}|}{2. La aplicación muestra una lista de grabaciones previas indicando para cada una: cantidad de detecciones, hora de inicio y fin, duración total y el color representativo de la cantidad de detecciones.} 
+								& \multicolumn{2}{p{8cm}|}{2.1 Si la aplicación no posee grabaciones previas, muestra el mensaje "`No posee grabaciones"'.} \\
+								\multicolumn{2}{|p{8cm}|}{} 
+								& \multicolumn{2}{p{8cm}|}{2.2 El paciente presiona el boton (+) ubicado en la parte inferior para crear una nueva grabación. Finaliza el caso de uso.} \hline						
+								\multicolumn{2}{|p{8cm}|}{3. El paciente presiona sobre una grabación.} & 
 								\multicolumn{2}{p{8cm}|}{} \hline
 								
-								\multicolumn{2}{|p{8cm}|}{4. La aplicación hace uso del «CU10 - Visualizando resultados en gráficos».} & 
-								\multicolumn{2}{p{8cm}|}{4.1 El paciente selecciona la pestaña Tablas invocando el «CU11 - Visualizando resultados en tablas»} \hline
+								\multicolumn{2}{|p{8cm}|}{4. La aplicación hace uso del «CU10 - Visualizando resultados en gráficos». Finaliza el caso de uso.} & 
+								\multicolumn{2}{p{8cm}|}{4.1 El paciente selecciona la pestaña Tablas invocando el «CU11 - Visualizando resultados en tablas». Finaliza el caso de uso.} \hline
                 %\multicolumn{2}{|p{8cm}|}{\centering 
                     %\begin{enumerate}
                         %\itemsep-1mm            % esto es para que no queden tan separadas las numeraciones
@@ -1010,21 +1010,21 @@ Se presenta al usuario una lista de grabaciones. El usuario hace clic en uno de 
 						\endlastfoot
 														
             \hline
-							\multicolumn{2}{|p{8cm}|}{1. Comienza cuando el Paciente hace uso del «CU8 - Generando informe de resultados», mediante el cual se genera el reporte en formato PDF.} & 
+							\multicolumn{2}{|p{8cm}|}{1. El caso de uso comienza cuando es invocado por el «CU8 - Generando informe de resultados», mediante el cual se genera el reporte en formato PDF.} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
 							\multicolumn{2}{|p{8cm}|}{2. La aplicación abre el asistente de correo del propio Android creando un correo nuevo.} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
 							\multicolumn{2}{|p{8cm}|}{3. La aplicación adjunta el archivo PDF, recupera el mail del médico y se lo asigna como destinatario del correo.} & 
-							\multicolumn{2}{p{8cm}|}{3.1 En caso de no poder recuperar el archivo PDF, la aplicación muestra el mensaje "`Error al recuperar el archivo PDF"'.} \\
+							\multicolumn{2}{p{8cm}|}{3.1 Si la aplicación no puede recuperar el archivo PDF, muestra el mensaje "`Error al recuperar el archivo PDF"'.} \\
 							\multicolumn{2}{|p{8cm}|}{} & 
-							\multicolumn{2}{p{8cm}|}{3.2 En caso de no estar cargado el mail del médico, la aplicación muestra el mensaje "`Debe cargar el mail del médico"'.} \\
+							\multicolumn{2}{p{8cm}|}{3.2 Si no esta cargado el mail del médico, la aplicación muestra el mensaje "`Debe cargar el mail del médico"'.} \\
 							\multicolumn{2}{|p{8cm}|}{} & 
-							\multicolumn{2}{p{8cm}|}{3.3 La aplicación retorna a la pantalla "`Lista de resultados"'.} \hline
+							\multicolumn{2}{p{8cm}|}{3.3 La aplicación retorna a la pantalla "`Lista de resultados"'. Finaliza el caso de uso.} \hline
 							\multicolumn{2}{|p{8cm}|}{4. El paciente presiona "`Enviar"' para realizar el envío.} & 
-							\multicolumn{2}{p{8cm}|}{4.1 El sistema de correo de Android asignará el correo a "`No enviados"' si el mismo falla por algún motivo.} \\
+							\multicolumn{2}{p{8cm}|}{4.1 Si falla el envío del mail el sistema de correo de Android asignará el correo a "`No enviados"'.} \\
 							\multicolumn{2}{|p{8cm}|}{} & 
 							\multicolumn{2}{p{8cm}|}{4.2 La aplicación muestra el mensaje "`El correo no pudo ser enviado"', continuando con el paso 5 del curso normal.} \hline							
-							\multicolumn{2}{|p{8cm}|}{5. La aplicación retorna a la pantalla inicial "`Lista de grabaciones"'.} & 
+							\multicolumn{2}{|p{8cm}|}{5. La aplicación retorna a la pantalla inicial "`Lista de grabaciones"'. Finaliza el caso de uso.} & 
 							\multicolumn{2}{p{8cm}|}{} \hline
                 %\multicolumn{2}{|p{8cm}|}{\centering 
                     %\begin{enumerate}
