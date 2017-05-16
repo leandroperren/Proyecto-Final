@@ -1056,36 +1056,41 @@ En caso de generar correctamente el archivo PDF con los resultados, el sistema a
 		\label{tabla:caso_uso_lista_resultados}
 \end{longtable}
 
+%--------------------------------
+%   CU 5
+%--------------------------------
 \begin{longtable}{|l|l|l|l|}
-			\hline
-            \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU5} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Procesando la señal capturada}} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación), Sistema base de la app}} \\
-						\hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual la señal capturada en un segmento de 5 min, es sub-muestreada y posteriormente analizada en búsqueda de información de interés. } \\
-            \hline
-									\multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{} \\														
-						\hline
-									\multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
-						\endfirsthead									
-						\endhead
-						\hline \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ \hline
-						\endfoot
-						\endlastfoot
+    \hline
+    \multicolumn{1}{|p{4cm}|}{\textbf{ID}} & \multicolumn{3}{p{12cm} |}{CU5} \\
+    \hline
+    \multicolumn{1}{|p{4cm}|}{\textbf{Nombre}} & \multicolumn{3}{p{12cm} |}{\textbf{Procesando la señal capturada}} \\
+    \hline
+    \multicolumn{1}{|p{4cm}|}{\textbf{Actores}} & \multicolumn{3}{p{12cm} |}{\textbf{Paciente (usuario de la aplicación), Sistema base de la app}} \\
+    \hline
+    \multicolumn{1}{|p{4cm}|}{\textbf{Descripción}} & \multicolumn{3}{p{12cm} |}{Es la funcionalidad por la cual la señal capturada en un segmento de 5 min, es sub-muestreada y posteriormente analizada en búsqueda de información de interés. } \\
+    \hline
+    \multicolumn{1}{|p{4cm}|}{\textbf{Precondición}} & \multicolumn{3}{p{12cm} |}{} \\														
+    \hline
+    \multicolumn{2}{|p{8cm}|}{\centering \textbf{Curso Normal}} & \multicolumn{2}{p{8cm} |}{\centering \textbf{Curso Alternativo}} \\	
+    \endfirsthead									
+    \endhead
+    \hline
+    \multicolumn{4}{|p{12cm}|}{Continúa en la siguiente página} \\ 
+    \hline
+    \endfoot
+    \endlastfoot
 														
-            \hline
-							\multicolumn{2}{|p{8cm}|}{1. El caso de uso inicia cuando el paciente invoca el «CU1 - Iniciando captura de datos».} & 
-							\multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{2. La aplicación toma cada segmento formado para sub-muestrearlo hasta la frecuencia buscada (100Hz).} & 
-							\multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{3. La aplicación toma el segmento sub-muestreado y le calcula la energía y el T0 en base a la autocorrelación.} & 
-							\multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{4. En base al T0 y la energía la aplicación determina si hay presencia de roncopatias o no.} & 
-							\multicolumn{2}{p{8cm}|}{} \hline
-							\multicolumn{2}{|p{8cm}|}{5. La aplicación almacena temporalmente en vectores la información obtenida.} & 
-							\multicolumn{2}{p{8cm}|}{} 
+    \hline
+    \multicolumn{2}{|p{8cm}|}{1. El caso de uso inicia luego de que el paciente invoca al «CU1 - Iniciando captura de datos».} & 
+    \multicolumn{2}{p{8cm}|}{} \hline
+    \multicolumn{2}{|p{8cm}|}{2. La aplicación toma un segmento formado para sub-muestrearlo hasta la frecuencia buscada (100Hz).} & 
+    \multicolumn{2}{p{8cm}|}{} \hline
+    \multicolumn{2}{|p{8cm}|}{3. La aplicación toma el segmento sub-muestreado y calcula su energía y T0 en base a la autocorrelación.} & 
+    \multicolumn{2}{p{8cm}|}{} \hline
+    \multicolumn{2}{|p{8cm}|}{4. En base al T0 y la energía la aplicación determina si hay presencia de roncopatias o no.} & 
+    \multicolumn{2}{p{8cm}|}{4.1 Si la aplicación no detecta roncopatías retorna al paso 2.} \hline
+    \multicolumn{2}{|p{8cm}|}{5. La aplicación almacena temporalmente en vectores la información obtenida. Finaliza el caso de uso.} & 
+    \multicolumn{2}{p{8cm}|}{} 
 							
                 %\multicolumn{2}{|p{8cm}|}{\centering 
                     %\begin{enumerate}
@@ -1103,18 +1108,18 @@ En caso de generar correctamente el archivo PDF con los resultados, el sistema a
                         %\item Si la captura de datos no es posible debido a algún fallo de software/hardware, debe ser informado debidamente al usuario.												
                     %\end{enumerate}
                 %} \\						
-            \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm}|}{
+    \hline
+    \multicolumn{1}{|p{4cm}|}{\textbf{Postcondiciones}} & \multicolumn{3}{p{12cm}|}{
 El segmento con 5 min de captura se envía al proceso de cálculos. Se procesa dicho segmento y se obtiene la información que se requiere. La información es almacenada temporalmente en vectores junto a información antes obtenida y junto a información futura de posteriores capturas.
-								} \\
-            \hline
-                \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm}|}{
-												\centering 		
-												Este CU no posee detalle de pantalla.
-								} \\
-            \hline
-		\caption{Caso de uso Procesando la señal capturada}
-		\label{tabla:caso_uso_procesando_señal}
+        } \\
+    \hline
+    \multicolumn{1}{|p{4cm}|}{\textbf{Detalle de pantalla}} & \multicolumn{3}{p{12cm}|}{
+        \centering 		
+        Este CU no posee detalle de pantalla.
+    } \\
+    \hline
+    \caption{Caso de uso Procesando la señal capturada}
+    \label{tabla:caso_uso_procesando_señal}
 \end{longtable}
 
 \begin{longtable}{|l|l|l|l|}
