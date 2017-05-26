@@ -75,6 +75,7 @@ public class tabs extends AppCompatActivity {
     private String horaFin2;
     private String duracionTotal;
     private Long CantidadPeriodosTotal;
+    private String HORAMAYORRONQUIDOS;
 
 
     @Override
@@ -125,7 +126,7 @@ public class tabs extends AppCompatActivity {
         amplitudes = helper.getDoubleFromString(amplitud);
         tiempos = helper.getDoubleFromString(tiempo);
 
-        cantidadPeriodos = (tiempos.get(tiempos.size()-1).intValue());
+        cantidadPeriodos = (tiempos.get(tiempos.size()-1).intValue())+1;
 
         muestras = new float[cantidadPeriodos];
         int [] barColorArray1 = new int[cantidadPeriodos];
@@ -139,7 +140,7 @@ public class tabs extends AppCompatActivity {
         int indiceTiempo = 0;
         for (int i = 0; i<tiempos.size(); i++){
             indiceTiempo = tiempos.get(i).intValue();
-            indiceTiempo = indiceTiempo-1;
+            //indiceTiempo = indiceTiempo-1;
             if (indiceTiempo < cantidadPeriodos) {
                 muestras[indiceTiempo] = amplitudes.get(i).floatValue();
             }
@@ -149,6 +150,11 @@ public class tabs extends AppCompatActivity {
         int cant_ron = 0;
         int cant_ron_simple = 0;
         int cant_ron_alto = 0;
+
+        int CANT_RONQ_PREVIA = 0;
+        int CANT_RON_HORA = 0;
+        int NRO_SEG = 1;
+        HORAMAYORRONQUIDOS = "--";
 
         //seteo los colores de las barras segun intensidad de tres niveles HARCODEADO POR AHORA.
         for (int i=0; i<muestras.length; i++) {
@@ -170,8 +176,25 @@ public class tabs extends AppCompatActivity {
                     barColorArray1[i] = Color.RED;
                     cant_ron_alto++;
                 }
+
+                CANT_RON_HORA ++;
             }
-            calendar.add(calendar.MINUTE,5);
+
+            if ( NRO_SEG == 12 ){
+                if ( CANT_RON_HORA > CANT_RONQ_PREVIA ){
+                    CANT_RONQ_PREVIA = CANT_RON_HORA;
+                    calendar.add(calendar.MINUTE,-55);
+                    HORAMAYORRONQUIDOS  = formato.format(calendar.getTime())+" - ";
+                    calendar.add(calendar.MINUTE,60);
+                    HORAMAYORRONQUIDOS  = HORAMAYORRONQUIDOS + formato.format(calendar.getTime());
+                }
+                CANT_RON_HORA = 0;
+                NRO_SEG = 1;
+            }else{
+                NRO_SEG++;
+                calendar.add(calendar.MINUTE,5);
+            }
+
         }
 
         //porcentaje de segmentos con ronquidos
@@ -297,7 +320,7 @@ public class tabs extends AppCompatActivity {
         String horaFin = "Hora de finalización: "+horaFin2;
         String duracion = "Duración: "+duracionTotal;
         String cantidadSegmentos = "Cantidad de segmentos con ronquido:" +canSegRonquidos;
-        String mayorCantidad = "Hora con mayor cantidad de ronquidos: "+formato.format(horaActual)+"--"+formato.format(calendar.getTime());
+        String mayorCantidad = "Hora con mayor cantidad de ronquidos: "+HORAMAYORRONQUIDOS;
         String promedioRonquidos = "Promedio de ronquidos/hora: 5 ronquidos por hora";
 
         txtTab1.setText(horaInicio+"\n"+horaFin+"\n"+duracion+"\n"+cantidadSegmentos+"\n"+mayorCantidad+"\n"+promedioRonquidos+"\n");
@@ -388,7 +411,7 @@ public class tabs extends AppCompatActivity {
                     String horaFin = "Hora de finalización: "+horaFin2;
                     String duracion = "Duración: "+duracionTotal;
                     String cantidadSegmentos = "Cantidad de segmentos con ronquido:" +canSegRonquidos;
-                    String mayorCantidad = "Hora con mayor cantidad de ronquidos: "+formato.format(horaActual)+"--"+formato.format(calendar.getTime());
+                    String mayorCantidad = "Hora con mayor cantidad de ronquidos: "+HORAMAYORRONQUIDOS;
                     String promedioRonquidos = "Promedio de ronquidos/hora: 5 ronquidos por hora";
 
                     PdfPTable tablaheader = new PdfPTable(1);

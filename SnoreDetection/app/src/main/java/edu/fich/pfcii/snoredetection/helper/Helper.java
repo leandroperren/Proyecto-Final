@@ -67,8 +67,8 @@ public class Helper
 
         long diffMinutes = diff/60 % 60;
         //Cambiar por cuando se establezca a 5 minutos
-        //long cantidad = diffMinutes/5;
-        long cantidad = diffMinutes;
+        long cantidad = diffMinutes/5;
+        //long cantidad = diffMinutes;
 
         return cantidad;
     }

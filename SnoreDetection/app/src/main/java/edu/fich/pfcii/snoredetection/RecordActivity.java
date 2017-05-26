@@ -41,7 +41,7 @@ public class RecordActivity extends AppCompatActivity {
 
     /// PARTE NUEVA
     static final int SAMPLES_PER_SECOND_AT_8K = 480000;
-    static final int SIZE_SEGMENTO            = 1*SAMPLES_PER_SECOND_AT_8K;
+    static final int SIZE_SEGMENTO            = 5*SAMPLES_PER_SECOND_AT_8K;
     static final int SIZE_AT_100HZ            = SIZE_SEGMENTO/80;
 
     private TextView resultados_parciales;
