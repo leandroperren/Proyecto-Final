@@ -62,13 +62,18 @@ public class Helper
         return diffHours + "h " +  diffMinutes + "' " + diffSeconds + "''";
     }
 
-    public Long getCantidadPeriodos(long timestamp_ini, long timestamp_fin) {
+    public long getCantidadPeriodos(long timestamp_ini, long timestamp_fin) {
         long diff = (timestamp_fin - timestamp_ini);
 
         long diffMinutes = diff/60 % 60;
         //Cambiar por cuando se establezca a 5 minutos
         long cantidad = diffMinutes/5;
         //long cantidad = diffMinutes;
+        long diffHours   = diff/(60*60) % 60;
+
+        if (diffHours > 0) {
+            cantidad = cantidad + (12*diffHours);
+        }
 
         return cantidad;
     }

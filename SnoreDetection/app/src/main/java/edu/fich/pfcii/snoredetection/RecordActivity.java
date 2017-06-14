@@ -129,7 +129,8 @@ public class RecordActivity extends AppCompatActivity {
                         ronquido = "No ronquido";
                     }*/
                     boolean is_snore = false;
-                    if ((periodo_value > 3.05f) && (periodo_value < 5.9f) && amplitud_value > 0.25f) {
+                    //if ((periodo_value > 3.05f) && (periodo_value < 5.9f) && amplitud_value > 0.25f) {
+                    if ((periodo_value > 3.5f) && (periodo_value < 4.7f) && amplitud_value >= 0.3f) {
                         is_snore = true;
 
                         // Salvar los valores anteriores en sus vectores

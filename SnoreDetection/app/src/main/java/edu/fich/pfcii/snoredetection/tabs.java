@@ -74,7 +74,7 @@ public class tabs extends AppCompatActivity {
     private String horaInicio2;
     private String horaFin2;
     private String duracionTotal;
-    private Long CantidadPeriodosTotal;
+    private long CantidadPeriodosTotal;
     private String HORAMAYORRONQUIDOS;
 
 
@@ -162,12 +162,12 @@ public class tabs extends AppCompatActivity {
             entradas.add(new BarEntry(valor, i));
             etiquetas.add(formato.format(calendar.getTime())+" ");
 
-            if (valor<0.10) {
+            if (valor<0.30) {
                 //para segmentos de no ronquidos
                 barColorArray1[i] = Color.CYAN;
             }else {
                 cant_ron++;
-                if (valor >= 0.10 && valor < 0.30) {
+                if (valor >= 0.30 && valor < 0.40) {
                     //nivel simple menor a 40% de la energía
                     barColorArray1[i] = Color.YELLOW;
                     cant_ron_simple++;
@@ -300,11 +300,11 @@ public class tabs extends AppCompatActivity {
 
         for(int i=0; i<cantidadPeriodos; i++) {
             float valor=muestras[i];
-            if (valor<0.10) {
+            if (valor<0.30) {
                 salida[i] = formato.format(calendar.getTime())+"  --  No ronquidos";
             }else {
                 canSegRonquidos++;
-                if (valor >= 0.10 && valor < 0.30) {
+                if (valor >= 0.30 && valor < 0.40) {
                     salida[i] = formato.format(calendar.getTime())+"  --  Simple";
                 } else {
                     salida[i] = formato.format(calendar.getTime())+"  --  Alto";
@@ -389,12 +389,12 @@ public class tabs extends AppCompatActivity {
 
                     for(int i=0; i<cantidadPeriodos; i++) {
                         float valor=muestras[i];
-                        if (valor<0.10) {
+                        if (valor<0.30) {
                             tabla.addCell(formato.format(calendar.getTime()));
                             tabla.addCell("No ronquidos");
                         }else {
                             canSegRonquidos++;
-                            if (valor >= 0.10 && valor < 0.30) {
+                            if (valor >= 0.30 && valor < 0.40) {
                                 tabla.addCell(formato.format(calendar.getTime()));
                                 tabla.addCell("Simple");
                             } else {
