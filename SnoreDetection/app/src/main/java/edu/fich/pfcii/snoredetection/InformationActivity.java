@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
@@ -45,7 +44,7 @@ import edu.fich.pfcii.snoredetection.helper.Helper;
 /**
  * Created by Leandro on 05/12/2016.
  */
-public class tabs extends AppCompatActivity {
+public class InformationActivity extends AppCompatActivity {
 
     private TextView txtTab1;
     private TextView txtTab2;
@@ -76,6 +75,7 @@ public class tabs extends AppCompatActivity {
     private String duracionTotal;
     private long CantidadPeriodosTotal;
     private String HORAMAYORRONQUIDOS;
+    private float promronqhora;
 
 
     @Override
@@ -126,7 +126,8 @@ public class tabs extends AppCompatActivity {
         amplitudes = helper.getDoubleFromString(amplitud);
         tiempos = helper.getDoubleFromString(tiempo);
 
-        cantidadPeriodos = (tiempos.get(tiempos.size()-1).intValue())+1;
+        //cantidadPeriodos = (tiempos.get(tiempos.size()-1).intValue())+1;
+        cantidadPeriodos = (int) CantidadPeriodosTotal;
 
         muestras = new float[cantidadPeriodos];
         int [] barColorArray1 = new int[cantidadPeriodos];
@@ -196,6 +197,9 @@ public class tabs extends AppCompatActivity {
             }
 
         }
+
+        //promedio ronquidos por hora
+        promronqhora = cant_ron / (float) (CantidadPeriodosTotal/12);
 
         //porcentaje de segmentos con ronquidos
         //float por_ron = (cant_ron/(float)cantidadPeriodos)*100f;
@@ -321,7 +325,7 @@ public class tabs extends AppCompatActivity {
         String duracion = "Duración: "+duracionTotal;
         String cantidadSegmentos = "Cantidad de segmentos con ronquido:" +canSegRonquidos;
         String mayorCantidad = "Hora con mayor cantidad de ronquidos: "+HORAMAYORRONQUIDOS;
-        String promedioRonquidos = "Promedio de ronquidos/hora: 5 ronquidos por hora";
+        String promedioRonquidos = "Promedio de ronquidos/hora: " + promronqhora;
 
         txtTab1.setText(horaInicio+"\n"+horaFin+"\n"+duracion+"\n"+cantidadSegmentos+"\n"+mayorCantidad+"\n"+promedioRonquidos+"\n");
         //txtTab2.setText(horaInicio+"\n"+horaFin+"\n"+duracion+"\n"+cantidadSegmentos+"\n"+mayorCantidad+"\n"+promedioRonquidos+"\n");
@@ -362,10 +366,10 @@ public class tabs extends AppCompatActivity {
                     documento.open();
 
                     //Recupera datos personales
-                    String nombre = helper.getNombrePaciente(tabs.this);
-                    String apellido = helper.getApellidoPaciente(tabs.this);
-                    Integer edad = helper.getEdadPaciente(tabs.this);
-                    String sexo = helper.getSexoPaciente(tabs.this);
+                    String nombre = helper.getNombrePaciente(InformationActivity.this);
+                    String apellido = helper.getApellidoPaciente(InformationActivity.this);
+                    Integer edad = helper.getEdadPaciente(InformationActivity.this);
+                    String sexo = helper.getSexoPaciente(InformationActivity.this);
 
                     documento.add(new Paragraph("Datos del paciente", boldFont));
                     documento.add(new Paragraph("Nombre: "+nombre));
@@ -412,7 +416,7 @@ public class tabs extends AppCompatActivity {
                     String duracion = "Duración: "+duracionTotal;
                     String cantidadSegmentos = "Cantidad de segmentos con ronquido:" +canSegRonquidos;
                     String mayorCantidad = "Hora con mayor cantidad de ronquidos: "+HORAMAYORRONQUIDOS;
-                    String promedioRonquidos = "Promedio de ronquidos/hora: 5 ronquidos por hora";
+                    String promedioRonquidos = "Promedio de ronquidos/hora: " + promronqhora;
 
                     PdfPTable tablaheader = new PdfPTable(1);
                     tablaheader.addCell(horaInicio);
@@ -450,9 +454,9 @@ public class tabs extends AppCompatActivity {
                     documento.close();
 
                     // Reemplazamos el email por el del médico
-                    String[] to = { helper.getEmailMedico(tabs.this)};
+                    String[] to = { helper.getEmailMedico(InformationActivity.this)};
                     String[] cc = { "" };
-                    enviar(to, cc, "Envio PDF",
+                    enviarEmailMedico(to, cc, "Envio PDF",
                             "Resultado del análisis de SnoreDetection");
 
                 } catch (Exception e) { //Catch de excepciones
@@ -463,7 +467,7 @@ public class tabs extends AppCompatActivity {
         });
 
 
-        //---------------Seteo las tabs------------------------------
+        //---------------Seteo las InformationActivity------------------------------
         TabHost tabs=(TabHost)findViewById(android.R.id.tabhost);
         tabs.setup();
 
@@ -480,7 +484,7 @@ public class tabs extends AppCompatActivity {
         tabs.setCurrentTab(0);
     }
 
-    private void enviar(String[] to, String[] cc,
+    private void enviarEmailMedico(String[] to, String[] cc,
                         String asunto, String mensaje) {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));

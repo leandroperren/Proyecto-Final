@@ -12,8 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.AnimationSet;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -310,7 +308,7 @@ public class MainActivity extends AppCompatActivity implements SnoreAdapter.Item
 
         //startActivity(intent);
 
-        Intent tabsresultados = new Intent(this, tabs.class);
+        Intent tabsresultados = new Intent(this, InformationActivity.class);
         tabsresultados.putExtra("ITEM_ID", position);
         startActivity(tabsresultados);
     }

@@ -389,7 +389,7 @@ public class RecordActivity extends AppCompatActivity {
                 //@@@@  Aqui se deberia llamar al intent con los resultados graficos
                 //@@@@  pasandole el ID de la inserción realizada como parametro extra
                 //@@@@  y allí levantar el registro desde la BBDD y realizar todos calculos
-                Intent tabsresultados = new Intent(RecordActivity.this, tabs.class);
+                Intent tabsresultados = new Intent(RecordActivity.this, InformationActivity.class);
                 Integer itemid;
                 id = id -1;
                 itemid = (int) id;
@@ -426,7 +426,7 @@ public class RecordActivity extends AppCompatActivity {
 
                     // Creamos en instanciamos el Intent hacia los resultados graficos
                     // ver de hacer esto mismo en 376-378
-                    /*Intent intent = new Intent(RecordActivity.this, tabs.class);
+                    /*Intent intent = new Intent(RecordActivity.this, InformationActivity.class);
                     startActivity(intent);
                     */
                     break;
