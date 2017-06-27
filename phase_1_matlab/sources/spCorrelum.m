@@ -30,22 +30,26 @@ function [r] = spCorrelum(x, fs, maxlag, show)
  %% Auto-correlation
  r = xcorr(x, maxlag, 'coeff');
 
+ fontSize = 16
+ 
  if show
      %% plot waveform
      t=(0:length(x)-1)/fs;        % times of sampling instants
      subplot(2,1,1);
      plot(t,x);
-     legend('Waveform');
-     xlabel('Time (s)');
-     ylabel('Amplitude');
+     legend('Oscilograma','FontSize',fontSize);
+     xlabel('Tiempo (s)','FontSize',fontSize);
+     ylabel('Amplitud','FontSize',fontSize);
+     set(gca, 'fontsize', fontSize) 
      xlim([t(1) t(end)]);
 
      %% plot autocorrelation
      d=(-maxlag:maxlag)/fs;
      subplot(2,1,2);
      plot(d,r);
-     legend('Auto-correlation');
-     xlabel('Lag (s)');
-     ylabel('Correlation coef');
+     legend('Auto correlación','FontSize',fontSize);
+     xlabel('Desplazamiento (s)','FontSize',fontSize);
+     ylabel('Coeficientes de corr','FontSize',fontSize);
+     set(gca, 'fontsize', fontSize) 
  end
 end
